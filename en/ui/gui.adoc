@@ -1,3 +1,5 @@
-# Chapter 2
+= The Development Environment
 
-und hier das wie man [Document](GLOSSARY.md#Document) sehen kann. Root Document Patch Cast and Node and Pin, Link.
+This is how we reference glossary items: Property
+
+[Document](GLOSSARY.adoc#Document) sehen kann. Root Document Patch Cast and Node and Pin, Link.
