@@ -1,5 +1,6 @@
-# Summary
+= Summary
 
+. link:chapter-1/README.adoc[Introduction]
 * [Introduction](README.md)
 * [The Language](language.md)
    * [Looking at Things](lookingAtThings.md)
