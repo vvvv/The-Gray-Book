@@ -2,7 +2,7 @@
 
 . link:README.adoc[Introduction]
 . link:language/language.adoc[The Language]
-   * [Looking at Things](lookingAtThings.md)
+.. link:language/lookingAtThings.md[Looking at Things]
        * [Data and Data Hubs](dataHubs.md)
        * [Data and Data Types](data.md)
        * [Data Flow](dataflow.md)
