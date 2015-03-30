@@ -3,81 +3,22 @@
 . link:README.adoc[Introduction]
 . link:language/language.adoc[The Language]
 .. link:language/lookingAtThings.md[Looking at Things]
-       * [Data and Data Hubs](dataHubs.md)
-       * [Data and Data Types](data.md)
-       * [Data Flow](dataflow.md)
-       * [Defining versus Using](defAndUse.md)
-       * [Nodes](lookingAtNodes.md)
-       * [The running System](defaultRuntime.md)
-       * [Regions](regions.md)
-       * [Categories and Versions](catAndVers.md)
-       * [Documents, Dependencies and Scopes](docAndscope.md)
-       * [Basic Nodes and Data Types](basictypes.md)
-           * Numeric Values
-           * Text
-           * Spreads and Other Collections
-   * [More On Data](data2.md)
-       * [Data and Mutability](mut.md)
-       * [DataFlow and Mutability](mut2.md)
-       * [Sub Types](subtypes.md)
-   * [Patches as Defining Constructs](patchDef.md)
-       * [Operation Definitions](operationDef.md)
-       * [Helper Patches](helperPatches.md)
-       * [Data Type Definitions](dataTypeDef.md)
-       * [Patch and Data Type Settings](PatchSettings.md)
-   * [Inside Patches](patches.md)
-       * [Operation Definitions again](operationDefs2.md)
-       * [IO Boxes](constants.md)
-       * [Pads](pads.md)
-       * [Nodes](nodes.md)
-           * Operation Applications
-           * Instance Nodes
-           * Process Applications
-           * Adaptive Nodes
-       * [Regions](regions.md)
-           * Loops
-           * IFs
-           * Delegates
-           * In Place Delegates
-   * [Inside Data Type Patches](insideDataType.md)
-       * [Properties](properties.md)
-       * [Process Applications again]
-       * [Process Definitions](processes.md)
-   * [Implementing an Adaptive Operation](implAdaptive.md)
-   * Interfaces
-       * Defining Interfaces
-       * Implementing Interfaces
-       * Using Interfaces
-   * Events/Observables
-
 . link:ui/gui.adoc[The Development Environment]
 .. link:ui/project_structure.adoc[Project Structure]
-       * documents
-       * dependencies
-       * patches
-       * executables
-       * categories
 .. link:ui/navigating_a_project.adoc[Navigating a Project]
 .. link:ui/the_nodebrowser.adoc[The NodeBrowser]
 .. link:ui/patching.adoc[Patching]
-       * connecting pins
-       * code completion
-       * Tooltips
 .. link:ui/debugging.adoc[Debugging]
-       * Logging
 .. link:ui/profiling.adoc[Profiling]
 .. link:ui/version_control.adoc[Version Control]
 .. link:ui/globals_settings.adoc[Global Settings]
-
 . link:libraries/libraries.adoc[Libraries]
 .. link:libraries/standard_libraries.adoc[Standard Libraries]
 .. link:libraries/importing_libraries.adoc[Importing Libraries]
 .. link:libraries/nugets.adoc[Nugets]
-
 . link:deployment/deployment.doc[Deployment]
 .. link:deployment/exporting_executables.adoc[Exporting Executables]
 .. link:deployment/exporting_libraries.adoc[Exporting Libraries]
-
 . link:50_for_45_users.adoc[50 for 45 users]
 . link:GLOSSARY.adoc[Glossary]
 
