@@ -15,9 +15,6 @@ Has a list of patches and a list of dependencies
 == Executable Patch
 A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
 
-== Executable Patch
-A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
-
 == Getter
 Patchcast that reads from a property
 
