@@ -1,8 +1,7 @@
 = Summary
 
-. link:chapter-1/README.adoc[Introduction]
-* [Introduction](README.md)
-* [The Language](language.md)
+. link:README.adoc[Introduction]
+. link:language/language.adoc[The Language]
    * [Looking at Things](lookingAtThings.md)
        * [Data and Data Hubs](dataHubs.md)
        * [Data and Data Types](data.md)
@@ -50,31 +49,35 @@
        * Implementing Interfaces
        * Using Interfaces
    * Events/Observables
-* [The Development Environment](gui.md)
-   * [Project Structure](project_structure.md)
+
+. link:ui/gui.adoc[The Development Environment]
+.. link:ui/project_structure.adoc[Project Structure]
        * documents
        * dependencies
        * patches
        * executables
        * categories
-   * [Navigating a Project](navigating_a_project.md)
-   * [The NodeBrowser](the_nodebrowser.md)
-   * [Patching](patching.md)
+.. link:ui/navigating_a_project.adoc[Navigating a Project]
+.. link:ui/the_nodebrowser.adoc[The NodeBrowser]
+.. link:ui/patching.adoc[Patching]
        * connecting pins
        * code completion
        * Tooltips
-   * Debugging
+.. link:ui/debugging.adoc[Debugging]
        * Logging
-   * Profiling
-   * Version Control
-   * Global Settings
-* [Libraries](libraries.md)
-   * [Standard Libraries](standard_libraries.md)
-   * [Importing Libraries](importing_libraries.md)
-   * Nugets
-* [Deployment](deployment.md)
-   * [Exporting Executables](exporting_executables.md)
-   * [Exporting Libraries](exporting_libraries.md)
-* [50 for 45 users](50_for_45_users.md)
-* [Glossary](GLOSSARY.md)
+.. link:ui/profiling.adoc[Profiling]
+.. link:ui/version_control.adoc[Version Control]
+.. link:ui/globals_settings.adoc[Global Settings]
+
+. link:libraries/libraries.adoc[Libraries]
+.. link:libraries/standard_libraries.adoc[Standard Libraries]
+.. link:libraries/importing_libraries.adoc[Importing Libraries]
+.. link:libraries/nugets.adoc[Nugets]
+
+. link:deployment/deployment.doc[Deployment]
+.. link:deployment/exporting_executables.adoc[Exporting Executables]
+.. link:deployment/exporting_libraries.adoc[Exporting Libraries]
+
+. link:50_for_45_users.adoc[50 for 45 users]
+. link:GLOSSARY.adoc[Glossary]
 
