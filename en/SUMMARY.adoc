@@ -1,6 +1,5 @@
 = Summary
 
-. introduction
 . link:README.adoc[Introduction]
 . link:ui/gui.adoc[The Development Environment]
 .. link:ui/project_structure.adoc[Project Structure]
