@@ -1,2 +1,0 @@
-# Documents, Dependencies and Scopes
-

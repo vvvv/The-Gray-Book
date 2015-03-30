@@ -1,2 +1,0 @@
-# Data Type Definitions
-
