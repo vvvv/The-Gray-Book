@@ -46,7 +46,7 @@
 ... link:intro/language/processes.md[Process Definitions]
 .. link:intro/language/implAdaptive.md[Implementing an Adaptive Operation]
 . link:reference.adoc[Reference]
-.. link:ref/ui/gui.adoc[The Development Environment]
+.. link:ref/ui/gui.adoc[The HDE]
 ... link:ref/ui/project_structure.adoc[Project Structure]
 ... link:ref/ui/navigating_a_project.adoc[Navigating a Project]
 ... link:ref/ui/the_nodebrowser.adoc[The NodeBrowser]
@@ -65,5 +65,4 @@
 ... link:ref/deployment/exporting_libraries.adoc[Exporting Libraries]
 . link:50_for_45_users.adoc[50 for 45 users]
 . link:GLOSSARY.adoc[Glossary]
-
 
