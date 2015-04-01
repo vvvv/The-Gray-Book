@@ -7,22 +7,22 @@ Has a list of patches and a list of dependencies, that can be other VL Documents
 A VL Document opened directly as opposed to being referenced as a Dependency of another VL Document
 
 == Dependency
-Reference to a VL Document, Import (.vlimport) or dynamic-link-library (.dll)
+Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
 
 == Import
-A file that defines how an associated dynamic-link-library is being imported
+A .json file that defines how an associated Dynamic-Link Library is being imported
 
 == Patch
 Short for _Helper Patch_ or _Class Patch_
 
 == Helper Patch
-Patch that defines one or more Operations. Can not contain properties
+Patch that defines one or more Operations. Can not contain Properties
 
 == Class Patch
 Patch that defines a datatype. Contains at least a _create_ and an _update_ operation and may contain properties 
 
 == Category
-Property of a patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
+Feature of a Patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
 
 == Version
 An identifier used to distinguish Patches or Operations in the same hierarchy that share the same name.
@@ -70,6 +70,7 @@ Visual element in a Patch that allows for setting a constant value
 A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
 
 == Region
+Visual element in Patch that defines a area of a subgraph
 
 == Loop Region
 Calls the operation defined in its body _count_ times
