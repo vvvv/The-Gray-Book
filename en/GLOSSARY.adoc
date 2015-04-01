@@ -19,7 +19,7 @@ Short for _Helper Patch_ or _Class Patch_
 Patch which defines one or more Operations. Can not contain Properties
 
 == Class Patch
-Patch that defines a datatype. Contains at least a _create_ and an _update_ operation and may contain properties 
+Patch which defines a datatype. Contains at least a _create_ and an _update_ operation and may contain properties 
 
 == Category
 Feature of a Patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
