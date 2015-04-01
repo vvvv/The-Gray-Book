@@ -1,5 +1,4 @@
 # Data and Mutability
-![alt text](../../../jo.png)
 
 There are basically two different ways to think about data. You might state: "Data is immutable. Red will be always red. And 15 will always be 15. The number 15 doesn't mutate, age or transform. Neither does Pi." But you may also think about data as something that is stored in some memory of the computer. Isn't this also data? Something that can be stored in memory? Of course. So what if the value changes that is stored at that particular place in memory. Didn't the data itself change?
 
