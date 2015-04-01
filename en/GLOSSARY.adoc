@@ -77,7 +77,7 @@ Calls the operation defined in its body _count_ times
 
 == Foreach Region
 
-== IF Region
+== If Region
 
 == Type 
 Synonym for Class Patch
