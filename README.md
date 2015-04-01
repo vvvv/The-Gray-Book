@@ -2,9 +2,9 @@
 
 image::./images/jo.png[asdf]
 
-![alt text](./images/jo.png)
+![alt text](eliasLookingAtWaves.png)
 
-
+![](sunset.jpg)
 An introduction to software development using the development environment 50.
 
 50 is: 
