@@ -10,13 +10,13 @@ A VL Document opened directly as opposed to being referenced as a Dependency of 
 Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
 
 == Import
-A .json file that defines how an associated Dynamic-Link Library is being imported
+A .json file which defines how an associated Dynamic-Link Library is being imported
 
 == Patch
 Short for _Helper Patch_ or _Class Patch_
 
 == Helper Patch
-Patch that defines one or more Operations. Can not contain Properties
+Patch which defines one or more Operations. Can not contain Properties
 
 == Class Patch
 Patch that defines a datatype. Contains at least a _create_ and an _update_ operation and may contain properties 
@@ -28,7 +28,7 @@ Feature of a Patch used to organize multiple patches into groups. Can be nested 
 An identifier used to distinguish Patches or Operations in the same hierarchy that share the same name.
 
 == Node
-Visual element in a Patch that represents the call of an Operation or instance of a Class Patch
+Visual element in a Patch which represents the call of an Operation or instance of a Class Patch
 
 == Pin
 Visual input or output element of a Node. Comparable to function argument or return parameter in other programming languages
@@ -37,13 +37,13 @@ Visual input or output element of a Node. Comparable to function argument or ret
 Connection between two Pins. Comparable to a value assignment in other programming languages
 
 == Operation Node
-Node that calls an Operation
+Node which calls an Operation
 
 == Instance Node
-Node that represents a fixed instance of a Class Patch
+Node which represents a fixed instance of a Class Patch
 
 == Instance Operation Node
-Node that calls an Operation that is part of a Class Patch
+Node which calls an Operation that is part of a Class Patch
 
 == Operation (Definition!)
 Functionality defined via a graph of interconnected Nodes. Comparable to functions, methods, procedures, ... in other programming languages
@@ -70,7 +70,7 @@ Visual element in a Patch that allows for setting a constant value
 A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
 
 == Region
-Visual element in Patch that defines a area of a subgraph
+Visual element in Patch which defines a area of a subgraph
 
 == Loop Region
 Calls the operation defined in its body _count_ times
