@@ -1,66 +1,88 @@
 = Glossary
 
-== Category
-Property of a patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
+== VL Document
+Has a list of patches and a list of dependencies, that can be other VL Documents or Imports
+
+== Root Document
+A VL Document opened directly as opposed to being referenced as a Dependency of another VL Document
+
+== Dependency
+Reference to a VL Document, Import (.vlimport) or dynamic-link-library (.dll)
+
+== Import
+A file that defines how an associated dynamic-link-library is being imported
+
+== Patch
+Short for _Helper Patch_ or _Class Patch_
+
+== Helper Patch
+Patch that defines one or more Operations. Can not contain properties
 
 == Class Patch
 Patch that defines a datatype. Contains at least a _create_ and an _update_ operation and may contain properties 
 
-== Dependency
-Reference to a document, nuget or dynamic library (.dll)
+== Category
+Property of a patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
 
-== Document
-Has a list of patches and a list of dependencies
+== Version
+An identifier used to distinguish Patches or Operations in the same hierarchy that share the same name.
 
-== Executable Patch
-A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
+== Node
+Visual element in a Patch that represents the call of an Operation or instance of a Class Patch
 
-== Getter
-Patchcast that reads from a property
-
-== Helper Patch
-Patch that defines one or more operations. Can not contain properties
-
-== Instance Node
-Node that represents a static instance of a class
-
-== Instance Operation Node
-Node that calls in operation that is part of class
+== Pin
+Visual input or output element of a Node. Comparable to function argument or return parameter in other programming languages
 
 == Link
-Connection between two pins. Comparable to a value assignment in other programming languages
+Connection between two Pins. Comparable to a value assignment in other programming languages
+
+== Operation Node
+Node that calls an Operation
+
+== Instance Node
+Node that represents a fixed instance of a Class Patch
+
+== Instance Operation Node
+Node that calls an Operation that is part of a Class Patch
+
+== Operation (Definition!)
+Functionality defined via a graph of interconnected Nodes. Comparable to functions, methods, procedures, ... in other programming languages
+
+== Inlet
+Visual element in an Operation that represents an input parameter
+
+== Outlet
+Visual element in an Operation that represents a return parameter
+
+== Property
+Data-field of a Patch
+
+== Setter	
+Visual element in a Patch that writes to a Property
+
+== Getter
+Visual element in a Patch that reads from a Property
+
+== Constant
+Visual element in a Patch that allows for setting a constant value 
+
+== Executable
+A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
+
+== Region
 
 == Loop Region
 Calls the operation defined in its body _count_ times
 
-== Node
-Patchcast that represents the call of an operation or instance of a class
+== Foreach Region
+
+== IF Region
+
+== Type 
+Synonym for Class Patch
+
+== Spread
+The default collection type
 
 == Nuget
-A packaged library including import instructions for 50
 
-== Operation
-Functionality defined via a graph of interconnected nodes. Comparable to functions, methods, procedures, ... in other programming languages
-
-== Operation Node
-Node that calls an operation
-
-== Patch
-Can be either of type _helper_ or _class_
-
-== Patchcast
-Visual element in a patch, like: Node, Link, Getter, Setter
-
-== Pin
-Input or output of a node. Comparable to function argument or return parameter in other programming languages
-
-== Property
-Data-field in a patch
-
-== Region
-
-== Root Document
-A document opened directly in the development environment as opposed to being referenced as a dependency of another document
-
-== Setter	
-Patchcast that writes to a property
