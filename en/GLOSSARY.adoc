@@ -13,40 +13,34 @@ Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
 A .json file which defines how an associated Dynamic-Link Library is being imported
 
 == Patch
-Short for _Helper Patch_ or _Class Patch_
+Short for _Function Patch_ or _Datatype Patch_
 
-== Helper Patch
-Patch which defines one or more Operations. Can not contain Properties
+== Function Patch
+Patch which defines one or more Functions. Can not contain Properties
 
-== Class Patch
-Patch which defines a datatype. Contains at least a _create_ and an _update_ operation and may contain properties 
+== Datatype Patch
+Patch which defines a datatype. Contains at least a _create_ and an _update_ method and may contain properties 
 
-== Category
-Feature of a Patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
-
-== Version
-An identifier used to distinguish Patches or Operations in the same hierarchy that share the same name.
+== Operation
+Functionality defined via a graph of interconnected Nodes. Umbrella term for Function and Method
 
 == Node
-Visual element in a Patch which represents the call of an Operation or instance of a Class Patch
+Short for either _Function Node_, _Method Node_ or _Process Node_
+
+== Function Node
+Node representing a call to an Operation defined in a Function Patch
+
+== Method Node
+Node representing a call to an Operation of a Datatype
+
+== Process Node
+Node which represents a fixed instance of a Datatype Patch
 
 == Pin
 Visual input or output element of a Node. Comparable to function argument or return parameter in other programming languages
 
 == Link
 Connection between two Pins. Comparable to a value assignment in other programming languages
-
-== Operation Node
-Node which calls an Operation
-
-== Instance Node
-Node which represents a fixed instance of a Class Patch
-
-== Instance Operation Node
-Node which calls an Operation that is part of a Class Patch
-
-== Operation (Definition!)
-Functionality defined via a graph of interconnected Nodes. Comparable to functions, methods, procedures, ... in other programming languages
 
 == Inlet
 Visual element in an Operation that represents an input parameter
@@ -66,6 +60,12 @@ Visual element in a Patch that reads from a Property
 == Constant
 Visual element in a Patch that allows for setting a constant value 
 
+== Category
+Feature of a Patch used to organize multiple patches into groups. Can be nested by separating multiple categories via a single dot. Comparable to the idea of a namespace in other programming languages
+
+== Version
+An identifier used to distinguish Patches or Operations in the same hierarchy that share the same name.
+
 == Executable
 A patch marked as being executable. Can be exported as .exe or used as a node in vvvv45
 
@@ -78,9 +78,6 @@ Calls the operation defined in its body _count_ times
 == Foreach Region
 
 == If Region
-
-== Type 
-Synonym for Class Patch
 
 == Spread
 The default collection type
