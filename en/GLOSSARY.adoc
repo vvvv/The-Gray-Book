@@ -15,7 +15,7 @@ A .json file that defines how an associated Dynamic-Link Library is being import
 == Patch
 Short for _Function Patch_ or _Datatype Patch_
 
-== Function Patch
+== Funk Patch
 Patch that defines one or more Functions. Can not contain Properties
 
 == Datatype Patch
