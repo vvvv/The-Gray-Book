@@ -13,9 +13,9 @@ Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
 A .json file that defines how an associated Dynamic-Link Library is being imported
 
 == Patch
-Short for _Function Patch_ or _Datatype Patch_
+Short for _Utility Patch_ or _Datatype Patch_
 
-== Funk Patch
+== Utility Patch
 Patch that defines one or more Functions. Can not contain Properties
 
 == Datatype Patch
