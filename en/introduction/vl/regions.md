@@ -34,4 +34,4 @@ You may have zero to many outlets to make nodes outside the region use the data 
  
  [TODO. snapshot]
  
- The "Where [Spread]" region allows you to decide for each element if it shall be included in the resulting spread or not.
+ The "Where [Spread]" region allows you to decide for each item if this item shall be included in the resulting spread or not. Taking the perspective of the where node: it calls the body of the region for each item.
