@@ -1,6 +1,6 @@
 = The Language
 
-This chapter will explain the basic building blocks of a program patched in 50. We'll focus on what is expressible and what every programming language is about: telling the computer what to do. We'll only briefly touch how to edit or even refactor programs. See "The Development Environment" for getting started with the UI. We'll only discuss some basic nodes and data types that are central or work for illustration purposes. For more about nodes see "Libraries".
+This chapter will explain the basic building blocks of a program patched in VL. We'll focus on what is expressible and what every programming language is about: telling the computer what to do. We'll only briefly touch how to edit or even refactor programs. See "The Development Environment" for getting started with the UI. We'll only discuss some basic nodes and data types that are central or work for illustration purposes. For more about nodes see "Libraries".
 
 ==== Looking at Things
 A rough overview laying out the groundwork for later chapters that look **into** things.
