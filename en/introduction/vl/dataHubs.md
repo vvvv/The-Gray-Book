@@ -34,3 +34,5 @@ Both let you link to.
 Well, actually data flow programming is mainly about linking data sources to data sinks. The idea being that the data flows from a data source into a data sink.
 
 Here we are looking at a data source linked to a data sink:
+
+[TODO: snapshot]
