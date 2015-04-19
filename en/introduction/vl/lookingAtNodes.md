@@ -2,7 +2,7 @@
 
 As already stated: Nodes are all about using functionality that is already available. When talking about usage we often also use the term application. By using a node you're applying an available functionality in a certain way.
 
-50 offers different flavors of nodes. Let's have a look:
+VL offers different flavors of nodes. Let's have a look:
 
 #### Operation Applications
 
