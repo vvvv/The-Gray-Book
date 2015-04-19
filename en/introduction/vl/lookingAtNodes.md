@@ -16,6 +16,8 @@ You feed data to an operation application via its input pins. It computes and ha
 
 Here are some operation applications:
 
+[TODO: snapshot]
+
 #### Process Applications
 
 A process application applies a process.
@@ -25,6 +27,8 @@ A process is something persistent. It sticks.
 Think of the whole program as a process. It sticks around for a while and evolves. Process Applications are modeled by this idea. They can be thought as little programs that stay around.
 
 Here are some process nodes:
+
+[TODO: snapshot]
 
 Compare their look with the operation applications. It is just a small difference that may help you when reasoning about a patch in the future.
 
