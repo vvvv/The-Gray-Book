@@ -29,9 +29,9 @@ Since data and data types are everywhere people started  calling a data type jus
 #### Instances
 Data of a certain data type also is called an instance of that data type.
 
-*For the vvvv45 user:*
+*For the vvvv user:*
 
-*In 50 we even distinguish one color from many colors. This lets you build more complex systems and thus help you in the long run. Just keep in mind that a color in 50 is something different than a spread of colors.*
+*In VL we even distinguish one color from many colors. This lets you build more complex systems and thus help you in the long run. Just keep in mind that a color in VL is something different than a spread of colors.*
 
 More about data: [Basic Nodes and Data Types](basictypes.md) and [More On Data](data2.md)
 
