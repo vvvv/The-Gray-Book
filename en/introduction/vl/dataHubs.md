@@ -1,6 +1,6 @@
 # Data and Data Hubs
 
-Big data, small data, Mr. Data.
+Small data, big data, Mr. Data.
 Data is everywhere. And programming pretty much is all about dealing with data. 
 
 Programming is creating a description for a machine how exactly to deal with some potentially given data in the future. 
