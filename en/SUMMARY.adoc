@@ -20,7 +20,7 @@
 .. link:introduction/vl/data2.md[More On Data]
 ... link:introduction/vl/mut.md[Data and Mutability]
 ... link:introduction/vl/mut2.md[DataFlow and Mutability]
-.... Generics
+... Generics
 ... link:introduction/vl/subtypes.md[Sub Types]
 .. link:introduction/vl/patchDef.md[Patches as Defining Constructs]
 ... link:introduction/vl/operationDef.md[Operation Definitions]
