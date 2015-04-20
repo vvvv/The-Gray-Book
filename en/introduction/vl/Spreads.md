@@ -34,4 +34,8 @@ But from the start: there are different ways of storing items in different colle
 
 That is what the sequence type is for. To offer a common ground. If a data sink only needs to sequentailly look through all items it may accept a sequence. If a you create node for others to use you might also just accept a sequence. The user of your node which might be yourself might be happy to be able to feed any collection he/she wants to.
 
+#### List
+The Loop Region accepts lists. A list is also an abstraction, like a sequence is. It is any collection that has a count. 
 
+**Spread, SpreadBuilder and HashSet are all sequences and lists.
+**
