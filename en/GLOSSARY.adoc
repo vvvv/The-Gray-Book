@@ -28,7 +28,7 @@ Short for _Utility Patch_ or _Datatype Patch_
 Patch that defines one or more Functions. Can not contain Properties
 
 == Datatype Patch
-Patch that defines a datatype. Contains at least a _Create_ and an _Update_ method and may contain properties 
+Patch that defines a datatype. Contains at least a _Create_ and an _Update_ method and may contain properties
 
 == Operation
 Functionality defined via a graph of interconnected Nodes. Umbrella term for Function and Method
@@ -57,13 +57,13 @@ Visual element in an Operation that represents an input parameter
 == Outlet
 Visual element in an Operation that represents a return parameter
 
-== Property
+== Field
 Data-field of a Patch
 
-== Setter	
+== Reader	
 Visual element in a Patch that writes to a Property
 
-== Getter
+== Writer
 Visual element in a Patch that reads from a Property
 
 == Constant
