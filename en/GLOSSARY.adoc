@@ -36,6 +36,9 @@ Functionality defined via a graph of interconnected Nodes. Umbrella term for Fun
 == Node
 Short for either _Function Node_, _Method Node_ or _Process Node_
 
+== Nodes
+Plural of Node
+
 == Node List
 The list of available nodes in a VL Document. The list consists of all nodes defined in the Dependencies as well as the nodes defined in the VL Document itself 
 
@@ -51,8 +54,14 @@ Node that represents a fixed instance of a Datatype Patch
 == Pin
 Visual input or output element of a Node. Comparable to function argument or return parameter in other programming languages
 
+== Pins
+Plural of Pin
+
 == Link
 Connection between two Pins. Comparable to a value assignment in other programming languages
+
+== Links
+Plural of Link
 
 == Inlet
 Visual element in an Operation that represents an input parameter
@@ -62,6 +71,9 @@ Visual element in an Operation that represents a return parameter
 
 == Field
 Data-field of a Patch
+
+== Fields
+Plural of Field
 
 == Reader	
 Visual element in a Patch that writes to a Field
