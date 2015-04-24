@@ -16,7 +16,7 @@ A VL Document opened directly as opposed to being referenced as a Dependency of 
 Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
 
 == Library
-Library files contain a set of types and operations which are designed in a reusable and modular manner
+A library is a dependency that contains a set of types and operations which are designed in a reusable and modular manner
 
 == Import
 A .json file that defines how an associated Dynamic-Link Library is being imported
