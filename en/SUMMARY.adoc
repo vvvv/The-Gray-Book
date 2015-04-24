@@ -57,7 +57,7 @@
 ... link:reference/hde/version_control.adoc[Version Control]
 ... link:reference/hde/globals_settings.adoc[Global Settings]
 .. link:reference/vl/language.adoc[The Language]
-.. link:reference/libraries/libraries.adoc[Libraries]
+.. link:reference/libraries/libraries.adoc[Library]
 ... link:reference/libraries/standard_libraries.adoc[Standard Libraries]
 ... link:reference/libraries/importing_libraries.adoc[Importing Libraries]
 ... link:reference/libraries/nugets.adoc[Nugets]
