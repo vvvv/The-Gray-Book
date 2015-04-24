@@ -1,6 +1,6 @@
 # Standard Library
 
-The default library of VL. It consists of patches, import files and DLLs which contain the basic set of nodes in VL. A new VL document references the standard library by default.
+The default library of VL. It consists of patches, import files and DLLs which contain the basic set of nodes of VL. A new VL document references the standard library by default.
 
 = Overview
 == Basics
@@ -11,6 +11,9 @@ Files named _Standalone_ contain types and nodes which are specific for the stan
 
 == Integration
 Files name _Integration_ contain types and nodes which only make sense when VL is hosted in the vvvv environment.
+
+== Experimental
+Contains proof of concept types and nodes which are not ready for production.
 
 == Files
 The files of the standard library are located in the folder resources/library. The subfolders sort the library files by their type:
