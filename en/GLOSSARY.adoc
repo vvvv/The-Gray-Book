@@ -1,7 +1,10 @@
 = Glossary
 
 == VL Component
-A component is any delimited entity which is part of VL
+A component is any delimited entity that is part of VL
+
+== Identifier
+An identifier is a text of one or more names that uniquely identifies a particular component in VL
 
 == VL Document
 Has a list of patches and a list of dependencies, that can be other VL Documents or Imports
@@ -91,3 +94,5 @@ The default collection type
 
 == Nuget
 
+== Pascal Case
+A casing convention that differentiates words in an identifier. Every first letter of a word in the identifier is capitalized. See: [Capitalization Conventions](https://msdn.microsoft.com/en-us/library/ms229043.aspx)
