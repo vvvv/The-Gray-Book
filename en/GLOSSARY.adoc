@@ -16,7 +16,7 @@ A VL Document opened directly as opposed to being referenced as a Dependency of 
 Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
 
 == Library
-A library is file that can be used as dependency. It contains a set of types and operations which are designed in a reusable and modular manner
+A file that can be used as dependency. It contains a set of types and operations which are designed in a reusable and modular manner
 
 == Import
 A .json file that defines how an associated Dynamic-Link Library is being imported
@@ -35,6 +35,9 @@ Functionality defined via a graph of interconnected Nodes. Umbrella term for Fun
 
 == Node
 Short for either _Function Node_, _Method Node_ or _Process Node_
+
+== Node List
+The list of available nodes in a VL Document. The list consists of all nodes defined in the Dependencies as well as the nodes defined in the VL Document itself 
 
 == Function Node
 Node representing a call to an Operation defined in a Function Patch
