@@ -67,7 +67,7 @@ Connection between two Pins. Comparable to a value assignment in other programmi
 Visual element in an Operation that represents an input parameter
 
 == Outlet
-Visual element in an Operation that represents a return parameter
+Visual element in an Operation that represents a output parameter
 
 == Field
 Data-field of a Patch
@@ -103,6 +103,7 @@ Calls the operation defined in its body _count_ times
 Calls the operation defined in its body for each element in a collection. The current element is passed as inlet into the region body.
 
 == If Region
+Executes the code in its body when the _Condition_ pin is true
 
 == Spread
 The default collection type
