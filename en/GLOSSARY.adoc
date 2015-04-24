@@ -61,10 +61,10 @@ Visual element in an Operation that represents a return parameter
 Data-field of a Patch
 
 == Reader	
-Visual element in a Patch that writes to a Property
+Visual element in a Patch that writes to a Field
 
 == Writer
-Visual element in a Patch that reads from a Property
+Visual element in a Patch that reads from a Field
 
 == Constant
 Visual element in a Patch that allows for setting a constant value 
