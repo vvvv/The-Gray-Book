@@ -1,6 +1,6 @@
 # Standard Library
 
-The default library of VL. It is referenced by default when a new VL document is created. It consists of patches, import files and DLLs which contain the basic set of nodes in VL.
+The default library of VL. It consists of patches, import files and DLLs which contain the basic set of nodes in VL. A new VL document references the standard library by default.
 
 = Overview
 == Basics
