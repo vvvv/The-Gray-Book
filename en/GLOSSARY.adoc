@@ -25,10 +25,10 @@ A .json file that defines how an associated Dynamic-Link Library is being import
 Short for _Utility Patch_ or _Datatype Patch_
 
 == Utility Patch
-Patch that defines one or more Functions. Can not contain Properties
+Patch that defines one or more Functions. Can not contain Fields
 
 == Datatype Patch
-Patch that defines a datatype. Contains at least a _Create_ and an _Update_ method and may contain properties
+Patch that defines a datatype. Contains at least a _Create_ and an _Update_ method and may contain Fields
 
 == Operation
 Functionality defined via a graph of interconnected Nodes. Umbrella term for Function and Method
