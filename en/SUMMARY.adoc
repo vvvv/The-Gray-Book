@@ -58,7 +58,7 @@
 ... link:reference/hde/globals_settings.adoc[Global Settings]
 .. link:reference/vl/language.adoc[The Language]
 .. link:reference/libraries/libraries.adoc[Libraries]
-... link:reference/libraries/standard_libraries.adoc[Standard Libraries]
+... link:reference/libraries/standard_libraries.adoc[Standard Library]
 ... link:reference/libraries/importing_libraries.adoc[Importing Libraries]
 ... link:reference/libraries/nugets.adoc[Nugets]
 .. link:reference/deployment/deployment.adoc[Deployment]
