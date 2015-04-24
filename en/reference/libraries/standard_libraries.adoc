@@ -12,13 +12,14 @@ Files named _Standalone_ contain types and nodes which are specific for the stan
 == Integration
 Files name _Integration_ contain types and nodes which only make sense when VL is hosted in the vvvv environment.
 
+== Files
 The files of the standard library are located in the folder resources/library. The subfolders sort the library files by their type:
 
-== Binaries
+=== Binaries
 DLLs which have type and node attributes compiled into it.
 
-== Imports
+=== Imports
 Import files which import types and operations from third party DLLs. Most of it from the .NET framework binaries.
 
-== Patches
-Patches
+=== Patches
+Patches are the part of the standard library that is programmed in VL itself.
