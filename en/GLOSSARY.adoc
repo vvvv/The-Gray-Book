@@ -1,7 +1,7 @@
 = Glossary
 
 == VL Component
-A component is any delimited entity that is part of VL
+Any entity that is part of VL
 
 == Identifier
 An identifier is a text of one or more names that uniquely identifies a particular component in VL
