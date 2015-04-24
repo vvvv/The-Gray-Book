@@ -42,7 +42,7 @@
 .... link:introduction/vl/delegates.md[Delegates]
 .... link:introduction/vl/inplaceDelegates.md[In Place Delegates]
 .. link:introduction/vl/insideDataType.md[Inside Data Type Patches]
-... link:introduction/vl/properties.md[Properties]
+... link:introduction/vl/properties.md[Fields]
 ... link:introduction/vl/procNodes2.md[Process Applications again]
 ... link:introduction/vl/processes.md[Process Definitions]
 .. link:introduction/vl/implAdaptive.md[Implementing an Adaptive Operation]
