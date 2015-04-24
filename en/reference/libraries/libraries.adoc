@@ -1,4 +1,12 @@
 = Libraries
+A library is a set of types and nodes which are designed in a reuseable and modular manner. 
+
+A VL document has three methods to extend its node list:
+
+* Referencing another VL files as dependency
+* Referencing .vlimport files which extend binaries with type and node attributes
+* Referencing binaries which have type and node attributes compiled into it
+
 
 
 
