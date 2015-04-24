@@ -1,4 +1,6 @@
 = Glossary
+== VL Component
+A component is any delimited entity which is part of VL
 
 == VL Document
 Has a list of patches and a list of dependencies, that can be other VL Documents or Imports
@@ -8,6 +10,9 @@ A VL Document opened directly as opposed to being referenced as a Dependency of 
 
 == Dependency
 Reference to a VL Document, Import (.vlimport) or Dynamic-Link Library (.dll)
+
+== Library
+A file
 
 == Import
 A .json file that defines how an associated Dynamic-Link Library is being imported
