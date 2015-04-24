@@ -1,9 +1,24 @@
-# Standard Libraries
+# Standard Library
 
-The standard library is the default library of VL and referenced by default when a new VL document is created. It consists of patches, import files and DLLs which provide the basic set of nodes in VL.
+The standard library is the default library of VL and referenced by default when a new VL document is created. It consists of patches, import files and DLLs which contain the basic set of nodes in VL.
 
 = Overview
+== Basics
+Files named _Basics_ contain fundamental types and nodes.
 
+== Standalone
+Files named _Standalone_ contain types and nodes which are specific for the standalone VL development environment.
 
+== Integration
+Files name _Integration_ contain types and nodes which only make sense when VL is hosted in the vvvv environment.
 
+The files of the standard library are located in the folder resources/library. The subfolders sort the library files by their type:
 
+== Binaries
+DLLs which have type and node attributes compiled into it.
+
+== Imports
+Import files which import types and operations from third party DLLs. Most of it from the .NET framework binaries.
+
+== Patches
+Patches
