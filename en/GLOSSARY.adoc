@@ -1,4 +1,5 @@
 = Glossary
+
 == VL Component
 A component is any delimited entity which is part of VL
 
