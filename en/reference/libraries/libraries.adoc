@@ -1,5 +1,6 @@
 = Libraries
-A library is a set of types and nodes which are designed in a reuseable and modular manner to extend the node list in a VL document. Libraries can be referenced as dependencies of a VL document.
+
+A library is a set of types and nodes which are designed in a reuseable and modular manner to extend the node list in a VL document.
 
 A VL document has three methods to extend its node list:
 
