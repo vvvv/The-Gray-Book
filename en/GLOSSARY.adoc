@@ -33,6 +33,9 @@ Patch that defines a datatype. Contains at least a _Create_ and an _Update_ meth
 == Operation
 Functionality defined via a graph of interconnected Nodes. Umbrella term for Function and Method
 
+== Operations
+Functionality defined via a graph of interconnected Nodes. Umbrella term for Function and Method
+
 == Node
 Calls an operation defined in a Patch. There are _Function Nodes_, _Method Nodes_ and _Process Nodes_
 
