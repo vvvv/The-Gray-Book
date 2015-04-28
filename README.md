@@ -1,4 +1,4 @@
-= 50 - Serious Visual Programming
+50 - Serious Visual Programming
 
 image::./images/jo.png[asdf]
 
