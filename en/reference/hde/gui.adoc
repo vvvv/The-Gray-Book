@@ -4,11 +4,17 @@ This is how we reference glossary items: Property
 
 Link auf <<language.adoc#Looking at Things,LAT>>. Root Document Patch Cast and Node and Pin, Link.
 
-image::_root-NABLA_2014.02.09-21.32.01.png
+image::_root-NABLA_2014.02.09-21.32.01.png[]
 
-image::images\jo.png
-image::sunset.jpg
+image::/images/jo.png[]
 
-image:images\jo.png
-image:sunset.jpg
+image::sunset.jpg[]
+
+image:/images/jo.png[]
+
+image:images/jo.png[]
+
+image:images\jo.png[]
+
+image:sunset.jpg[]
 
