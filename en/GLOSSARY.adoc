@@ -114,4 +114,4 @@ The default collection type
 == Nuget
 
 == Pascal Case
-A casing convention that differentiates words in an identifier. Every first letter of a word in the identifier is capitalized. See: [Capitalization Conventions](https://msdn.microsoft.com/en-us/library/ms229043.aspx)
+A casing convention that differentiates words in an identifier. Every first letter of a word in the identifier is capitalized. See: https://msdn.microsoft.com/en-us/library/ms229043.aspx[Capitalization Conventions]
