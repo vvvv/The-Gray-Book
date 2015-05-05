@@ -1,4 +1,4 @@
-= VL - visual programming
+= VL - Visual Programming
 
 An introduction to software development using VL.
 
