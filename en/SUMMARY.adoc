@@ -57,6 +57,7 @@
 ... link:reference/hde/version_control.adoc[Version Control]
 ... link:reference/hde/globals_settings.adoc[Global Settings]
 .. link:reference/vl/language.adoc[The Language]
+... Regions
 .. link:reference/libraries/libraries.adoc[Libraries]
 ... link:reference/libraries/standard_libraries.adoc[Standard Library]
 ... link:reference/libraries/importing_libraries.adoc[Importing Libraries]
