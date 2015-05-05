@@ -24,7 +24,7 @@
 ... link:introduction/vl/subtypes.md[Sub Types]
 .. link:introduction/vl/patchDef.md[Patches as Defining Constructs]
 ... link:introduction/vl/operationDef.md[Operation Definitions]
-... link:introduction/vl/helperPatches.md[Helper Patches]
+... link:introduction/vl/helperPatches.md[Utility Patches]
 ... link:introduction/vl/dataTypeDef.md[Data Type Definitions]
 ... link:introduction/vl/PatchSettings.md[Patch and Data Type Settings]
 .. link:introduction/vl/patches.md[Inside Patches]
