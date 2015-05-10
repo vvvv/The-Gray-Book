@@ -21,7 +21,7 @@ Naming Conventions
 
 Distinguish between Inlet and Constant, Outlet and OutBox
 
-Spreads
+Spreads vs. single values
 
 The NodeBrowser
 
