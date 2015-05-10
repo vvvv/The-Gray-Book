@@ -66,6 +66,6 @@
 .. link:reference/deployment/deployment.adoc[Deployment]
 ... link:reference/deployment/exporting_executables.adoc[Exporting Executables]
 ... link:reference/deployment/exporting_libraries.adoc[Exporting Libraries]
-. link:50_for_45_users.adoc[50 for 45 users]
+. link:VL_for_vvvv_users.adoc[VL for vvvv users]
 . link:GLOSSARY.adoc[Glossary]
 
