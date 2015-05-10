@@ -19,3 +19,5 @@ What happened to framedelays?
 
 Naming Conventions
 
+Distinguish between Inlet and Constant, Outlet and OutBox
+
