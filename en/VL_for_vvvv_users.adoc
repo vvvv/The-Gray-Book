@@ -25,3 +25,5 @@ Spreads vs. single values
 
 The NodeBrowser
 
+Distinguish between Operation and Process nodes
+
