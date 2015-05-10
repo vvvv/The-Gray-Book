@@ -1,6 +1,6 @@
 # Defining versus Using
 
-Up to know we looked at what happens inside a patch. We were using nodes, applying nodes, calling nodes. All these terms mean the same thing: usage.
+Up to now we looked at what happens inside a patch. We were using nodes, applying nodes, calling nodes. All these terms mean the same thing: usage.
 
 But while patching we built up new functionality. So we should be able to use that somewhere else. And of course this is possible. Like in vvvv patches define new nodes.
 
