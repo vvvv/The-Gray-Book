@@ -1,7 +1,6 @@
 = Summary
 
 . link:README.adoc[Introduction]
-. link:introduction/hde/hde.adoc[Getting Started with the HDE]
 . link:introduction/vl/language.adoc[Getting Started with the Language]
 .. link:introduction/vl/lookingAtThings.adoc[Looking at Things]
 ... link:introduction/vl/dataHubs.md[Data and Data Hubs]
