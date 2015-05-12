@@ -25,4 +25,4 @@ VL is targeted at developers who
 We'll mainly be looking at things pure VL, and still see the differences to vvvv here and there. The focus yet is on explaining pure VL from the ground up, thus working as a guide for the still to upcoming standalone system. A special chapter will show how to integrate VL-nodes into your vvvv projects.
 
 
-image::./../eliasLookingAtWaves.png[uh]
+image::./eliasLookingAtWaves.png[uh]
