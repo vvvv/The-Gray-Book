@@ -1,3 +1,0 @@
-= Looking at Things
-
-image::../../../images/jo.png[Somebody looking at breaking waves]
