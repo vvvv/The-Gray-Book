@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-* [VL Concepts](language.md)
-   * [Looking at Things](lookingAtThings.md)
-       * [Data and Data Hubs](dataHubs.md)
+* [VL Concepts](introduction/vl/language.md)
+   * [Looking at Things](introduction/vl/lookingAtThings.md)
+       * [Data and Data Hubs](introduction/vl/dataHubs.md)
        * [Data and Data Types](data.md)
        * [Data Flow](dataflow.md)
        * [Defining versus Using](defAndUse.md)

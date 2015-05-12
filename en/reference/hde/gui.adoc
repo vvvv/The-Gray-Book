@@ -1,5 +1,0 @@
-= The Development Environment
-
-image::./50-patch.png[imagetest]
-
-
