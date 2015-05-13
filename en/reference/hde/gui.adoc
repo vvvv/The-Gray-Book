@@ -1,11 +1,4 @@
 = The Development Environment
-This is how we reference glossary items: Field
- 
-Link auf <<language.adoc#Looking at Things,LAT>>. Root Document Patch Cast and Node and Pin, Link.!
-
-[test](EqualSliceCounts5.png) 
-
-[Test Image](http://upload.wikimedia.org/wikipedia/commons/d/d9/Test.png)
  
 image::_root-NABLA_2014.02.09-21.32.01.png[imagetest]
 image::50-patch.png[imagetest]
