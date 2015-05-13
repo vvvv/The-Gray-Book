@@ -1,3 +1,4 @@
 = Looking at Things
 
-image::waves.png[Somebody looking at breaking waves]
+image::eliasLookingAtWaves.png[Somebody looking at breaking waves]
+
