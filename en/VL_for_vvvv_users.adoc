@@ -2,28 +2,49 @@
 
 _randomly collecting topics here..._
 
-There are now two different types of patches
+## Project Structure
+* In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
 
-* Utility Patches
-* Datatype Patches
+* In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and is assigned a random color to be able to distinguish them visually. The color has no further meaning.
 
-You now open a patch via middleclick (as you would open a link in a browser)
+* In vvvv each patch is the same. VL for now has two different types of patches:
 
-One .vl document can now hold multiple patches
+** Utility Patches
+*** can define multiple operations
+*** can't have fields
+** Datatype Patches
+*** define a datatype
+*** can define multiple operations for that datatype
+*** can have fields to store data
 
-No more Inspektor
 
-No more hidden values in pins
+
+Distinguish between Inlet and Constant, Outlet and OutBox
+
+Distinguish between Operation and Process nodes
+
+## Language
+Spreads vs. single values vs. other collections
 
 What happened to framedelays?
 
 Naming Conventions
 
-Distinguish between Inlet and Constant, Outlet and OutBox
-
-Spreads vs. single values vs. other collections
-
+## User Interface
 The NodeBrowser
 
-Distinguish between Operation and Process nodes
+You now open a patch via middleclick (as you would open a link in a browser)
+
+No more Inspektor
+
+No more hidden values in pins
+
+
+
+
+
+
+
+
+
 
