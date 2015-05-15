@@ -1,2 +1,8 @@
 # Identifier Naming Convetions
 
+In general following characters are allowed, not stating with a number or space:
+
+**a-z A-Z 0-9 + - * = ~ < >**
+
+Pads also allow spaces, for categories dots are allowed.
+
