@@ -56,7 +56,7 @@
 ... link:reference/hde/version_control.adoc[Version Control]
 ... link:reference/hde/globals_settings.adoc[Global Settings]
 .. link:reference/vl/language.adoc[The Language]
-... Namings
+... link:reference/vl/namings.adoc[Identifier Naming Convetions]
 ... Regions
 ... Loops
 .. link:reference/libraries/libraries.adoc[Libraries]
