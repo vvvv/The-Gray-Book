@@ -1,6 +1,6 @@
 # Identifier Naming Convetions
 
-In general following characters are allowed, not stating with a number or space:
+In general the following characters are allowed, not stating with a number or space:
 
 **a-z A-Z 0-9 + - * = ~ < >**
 
