@@ -3,11 +3,11 @@
 _randomly collecting topics here..._
 
 ## Project Structure
-* In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
+### .v4p versus .vl
+In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
 
-* In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and is assigned a random color to be able to distinguish them visually. The color has no further meaning.
-
-* In vvvv each patch is the same. VL for now has two different types of patches:
+### Patches
+In vvvv each patch is the same. VL for now has two different types of patches:
 
 ** Utility Patches
 *** can define multiple operations
@@ -17,10 +17,13 @@ _randomly collecting topics here..._
 *** can define multiple operations for that datatype
 *** can have fields to store data
 
+### Operations
+In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and is assigned a random color to be able to distinguish them visually. The color has no further meaning.
 
+### IOBoxes
+In vvvv an IOBox can be used to set or display values. By giving an IOBox a descriptive name you turn it into an inlet of the patch. In VL we distinguish between Inlets and Constants, Outlets and OutBoxes. 
 
-Distinguish between Inlet and Constant, Outlet and OutBox
-
+### Nodes
 Distinguish between Operation and Process nodes
 
 ## Language
