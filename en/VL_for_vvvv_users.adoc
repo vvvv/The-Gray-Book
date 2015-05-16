@@ -47,7 +47,7 @@ In VL this is more defined: You need to understand three things:
 * A Spread is only one type of collection. Another common type of collection would be a Sequence or a HashSet, but we can imagine many different types of collections. Anyway for a start you'll mostly use Spreads and only sometimes Sequences.
 
 ### No more framedelay
-Instead of a FrameDelay in VL you'll create a field and use a Reader to read from and a Writer to write to it. See link:reference/vl/fields.adoc[Fields].
+Instead of a FrameDelay in VL you'll create a field and use a Reader to read from and a Writer to write to it. See link:reference/vl/fields.adoc[About Fields].
 
 ### Naming Conventions
 Name [Category.Subcategory] (Version1 Version2)
