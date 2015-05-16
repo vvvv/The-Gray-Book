@@ -57,9 +57,9 @@
 ... link:reference/hde/globals_settings.adoc[Global Settings]
 .. link:reference/vl/language.adoc[The Language]
 ... link:reference/vl/namings.adoc[Identifier Naming Convetions]
+... link:reference/vl/fields.adoc[Fields]
 ... Regions
 ... Loops
-... Fields
 .. link:reference/libraries/libraries.adoc[Libraries]
 ... link:reference/libraries/standard_libraries.adoc[Standard Library]
 ... link:reference/libraries/importing_libraries.adoc[Importing Libraries]
