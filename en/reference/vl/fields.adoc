@@ -16,3 +16,5 @@ By default a field does not have a datatype assigned and  therefore is generic. 
 
 If you manually need to specify a type for a field you can annotate its Reader/Writer by middleclicking and entering any type in the editor that pops up. As an alternative to the middleclick you can rightclick the Reader/Writers label and choose -> Configure
 
+You can recognize a reader/writer that has been annotated manually as they have a whole in their circle. 
+
