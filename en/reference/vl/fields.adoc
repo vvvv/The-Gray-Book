@@ -9,12 +9,14 @@ In a patch you can read from or write to a field by using a Reader or Writer res
 
 Reader/Writer are being created via the nodebrowser. In its left column with buttons choose either Reader or Writer, then enter a name for the field and press OK. Fields and their Reader/Writer are matched by name, so make sure to always be specific about naming, including casing. Rename a Reader/Writer by doubleclicking its label and pressing Enter when finished. 
 
-While you can read from a field multiple times in one operation you can obviously only write to the same field once per operation. Different operations can of course write to the same field. 
+You can only have one Reader/Writer per field per operation. Different operations can of course read/write from/to the same field. 
 
-## A fields datatype
+In an operation you can assume that first always all fields are read from and only as the last step all fields are written to.
+
+## The datatype of a field
 By default a field does not have a datatype assigned and  therefore is generic. You see this because a Reader/Writer at first is only an outlined circle. If the circle is filled, it means that the compilier has inferred a type for it which you can see in the tooltip by hovering it. 
 
 If you manually need to specify a type for a field you can annotate its Reader/Writer by middleclicking and entering any type in the editor that pops up. As an alternative to the middleclick you can rightclick the Reader/Writers label and choose -> Configure
 
-You can recognize a reader/writer that has been annotated manually as they have a whole in their circle. 
+You can recognize a reader/writer that has been annotated manually as they have a dot in their circle. 
 
