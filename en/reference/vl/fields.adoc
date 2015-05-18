@@ -11,10 +11,10 @@ Reader/Writer are being created via the nodebrowser. In its left column with but
 
 While you can read from a field multiple times in one operation you can obviously only write to the same field once per operation. Different operations can of course write to the same field. 
 
-## A fields datatype
+## The datatype of a field
 By default a field does not have a datatype assigned and  therefore is generic. You see this because a Reader/Writer at first is only an outlined circle. If the circle is filled, it means that the compilier has inferred a type for it which you can see in the tooltip by hovering it. 
 
 If you manually need to specify a type for a field you can annotate its Reader/Writer by middleclicking and entering any type in the editor that pops up. As an alternative to the middleclick you can rightclick the Reader/Writers label and choose -> Configure
 
-You can recognize a reader/writer that has been annotated manually as they have a whole in their circle. 
+You can recognize a reader/writer that has been annotated manually as they have a dot in their circle. 
 
