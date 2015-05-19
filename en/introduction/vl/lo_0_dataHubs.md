@@ -1,7 +1,7 @@
 # Data and Data Hubs
 <img src="small.bmp" width="150" title="small data" />
 <img src="big.bmp" width="150" title="big data"/>
-<img src="brentspiner1.png" width="150" title="Mr. Data"/>
+<img src="BrentSpiner1.png" width="150" title="Mr. Data"/>
 
 Data is everywhere. And programming pretty much is all about dealing with data. 
 
