@@ -1,8 +1,37 @@
 # Identifier Naming Convetions
 
+VL uses Pascal Case as casing convention. Examples:
+
+Data types:
+
+    Particle
+    ParticleSystem
+    AlignedBox
+
+Operations:
+    
+    Update
+    GetPosition
+    SplitCurve
+
 In general the following characters are allowed, not stating with a number or space:
 
 **a-z A-Z 0-9 + - * / = ~ < >**
 
-Pads also allow spaces, for categories dots are allowed.
+Pads also allow spaces, for categories dots are allowed. Examples:
+
+Pads:
+
+    Velocity
+    Map Mode
+    Word List
+
+Categories:
+    
+    Math
+    Collections.Spread
+    Animation.FrameBased
+    
+    
+    
 
