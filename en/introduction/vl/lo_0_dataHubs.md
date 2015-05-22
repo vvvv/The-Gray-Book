@@ -5,7 +5,7 @@
 
 Data is everywhere. And programming pretty much is all about dealing with data. 
 
-Programming is creating a description for a machine how exactly to deal with some potentially given data in the future. 
+Programming is creating a description for a machine how to deal with some potentially given data in the future. 
 In a rapid prototyping system like this you often also have actual current data at hand and are able to inspect that data here and there. 
 
 Looking at data:

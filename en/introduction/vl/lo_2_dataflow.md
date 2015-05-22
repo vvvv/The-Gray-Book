@@ -6,7 +6,7 @@ In the beginning after placing some nodes you'll encounter a whole lot of possib
 
 Typically you'll be helped by the programming environment to know which links will make any sense. Throughout the system a data source can only be connected to a data sink (and vice versa). All data hubs also have a currently associated data type. That is: the system knows which data to expect. This will help you to some degree to prevent some errors which would be hard to find otherwise.
 
-Programming may feel like playing, constructing or like a jam session. You are in the middle of creating something! To help you within the process of creating, you may force a connection with CTRL-Click, even if the system currently thinks it doesn't make sense. It may make sense a few clicks later after disconnecting another link!
+Programming may feel like playing. You are in the middle of creating something! To help you within the process of creating, you may force a connection with CTRL-Click, even if the system currently thinks it doesn't make sense. It may make sense a few clicks later after disconnecting another link!
 
 For more on patching experience and work flow see "The Development Environment".
 

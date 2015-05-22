@@ -18,6 +18,6 @@ Because of the fact that we are looking at quite different things at the same ti
 
 We'll have a brief look at nodes in the next chapter, but postpone defining nodes to [Patches as Defining Constructs](patches.md).
 
-*One Note for users coming from vvvv: *
+*One Note for users coming from vvvv:*
 
 *In vvvv a sub patch behaves like a new instance of the patch. Using the sub patch several times leads to several patch windows docked into each other, right? Right clicking the node representing a sub patch opened up the particular instance. In VL this is different. There is one place to define the functionality, not several synced places for the same patch.*
