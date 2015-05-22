@@ -1,0 +1,4 @@
+# Loops
+
+To get the iteration index in a loop, you can create any pad and replace it by an 'Iteration' pad in the context menu. For example, double right click to create a constant and then rightclick on it to open the context menu. In the context menu select Replace -> "Iteration".
+
