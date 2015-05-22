@@ -6,7 +6,7 @@
  
  The body of the region is called as long as each of the upstream connected sequences still have data. Meaning: If one input has nothing attached to it it won't iterate.
  
-<img src="foreach.png" />
+<img src="forEach.png" />
  #### Loop
  A loop region let's you define how many times the body should be called. This is done via the Iteration Count Pin.
  

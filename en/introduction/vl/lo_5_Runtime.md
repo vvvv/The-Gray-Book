@@ -13,7 +13,7 @@ The root patch defines the process.
 Within the root patch you define what's happening for when the system starts and when the system runs. For that you may place nodes onto "Create" and onto "Update". 
 
 As we are still looking at things: 
-<img src="createandupdate.png" />
+<img src="createAndUpdate.png" />
 
 Again: a part of the patch is only executed once when the system start. The other part is then called over and over again. Can you tell which is which?
 
