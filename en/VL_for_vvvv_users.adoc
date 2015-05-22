@@ -31,17 +31,20 @@ In vvvv all nodes look the same. Distinguish between Operation and Process nodes
 In vvvv there is only one numerical type. It is called simply "Value" and it is internally represented by a Float64. Any output of type Value can be connected to any input of type value even though they may have different subtypes, like Integer, Boolean, or Bang. 
 
 In VL there are many different types for values:
+
 * Float32
 * Float64
 * Integer32
 * Integer64
 * Boolean
+
 and for now you can only connect from lower to higher precision, eg. from Integer32 to Float32 (or Float64) but not the other way round.
 
 ### Spreads
 In vvvv every connection between two pins is a spread. A spread can have 0 or 1 slices but still it would be a spread. 
 
 In VL this is more defined: You need to understand three things:
+
 * There is a difference between a single value or a spread with a single value. 
 * When we talk of a spread of Integer32, strings or colors, we write: Spread<Integer32>, Spread<String>, Spread<RGBA>
 * A Spread is only one type of collection. Another common type of collection would be a Sequence or a HashSet, but we can imagine many different types of collections. Anyway for a start you'll mostly use Spreads and only sometimes Sequences.
