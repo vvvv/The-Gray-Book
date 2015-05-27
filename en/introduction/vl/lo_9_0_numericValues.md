@@ -16,16 +16,16 @@ Surprisingly with integers there are even more different types. All just for sto
 * Integer32
 * Integer64
 
-Where any other language would need to explain the names and what precision they stand for i guess i don't need to elaborate on this given their names.
+Where any other language would need to explain the names and what precision they stand for I guess I don't need to elaborate on this given their names.
 
 #### Boolean
 
-A boolean value is either 0 or 1 a.ka. false and true.
+A boolean value is either 0 or 1 a.k.a. false and true.
 
 #### Compatibility
 A boolean is either 0 or 1. But these are whole numbers also! So booleans are integers? Yes. When a data sink needs an integer value, you may link boolean data to it.
 
-A number 5 is an integer but it also is a real number. Whole numbers are part of all the real numbers. Real numbers are not defined to be fractional, they can be just whole. It's fine. Because if this you may feed integer data into a float data sink. 
+A number 5 is an integer but it also is a real number. Whole numbers are part of all the real numbers. Real numbers are not defined to be fractional, they can be just whole. It's fine. Because of this you may feed integer data into a float data sink. 
 
 In both cases an implicit conversion is happening.
 
