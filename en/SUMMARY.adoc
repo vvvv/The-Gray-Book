@@ -52,7 +52,7 @@
 ... link:reference/hde/version_control.adoc[Version Control]
 ... link:reference/hde/globals_settings.adoc[Global Settings]
 .. link:reference/vl/language.adoc[The Language]
-... link:reference/vl/namings.adoc[Identifier Naming Convetions]
+... link:reference/vl/namings.adoc[Identifier Naming Conventions]
 ... link:reference/vl/fields.adoc[Fields]
 ... link:reference/vl/loops.adoc[Loops]
 ... Regions
