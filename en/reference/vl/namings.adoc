@@ -1,4 +1,4 @@
-# Identifier Naming Convetions
+# Identifier Naming Conventions
 
 VL uses Pascal Case as casing convention. Examples:
 
