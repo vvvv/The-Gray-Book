@@ -13,6 +13,6 @@ Dependenices may be other .vl-files or .vlimport-files.
 #### Scopes
 Each document sees different nodes depending on its dependencies. 
 
-What's good: it doesn't matter if you open several documents at the same time. They don't influence each other as long they don't reference each other. Each document can only see the nodes that can be found in the list of ifs dependecies.
+What's good: it doesn't matter if you open several documents at the same time. They don't influence each other as long they don't reference each other. Each document can only see the nodes that can be found in the list of its dependecies.
 
 That way you may open several versions of your document. All the nodes and types that you define in there very likely have the same name in the different versions of your document. But since they don't see each other, both can live besides each other at the same time.
