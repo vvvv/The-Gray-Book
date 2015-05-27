@@ -6,7 +6,7 @@ We won't solve the issue of confusion. We can just try to be as precise as possi
 
 By doing this, we are separating the differing ideas of what data is again with the same approach that helped us to separate all the possible data earlier on: via data types. Mutability or immutability is just something that can be said about a type: 
 
-A color is immutable. A number is a immutable. A string (text) is immutable. And your own data types will also be immutable by default.
+A color is immutable. A number is immutable. A string (text) is immutable. And your own data types will also be immutable by default.
 
 #### The default
 When talking about data later on in the book you should always think of that data as being immutable. Most of our basic data types are immutable. As soon as we encounter mutable types we'll also use the term reference (to some location in memory) or (shared) memory to underline the difference to the default.
