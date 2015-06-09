@@ -60,6 +60,12 @@ Visual input or output element of a Node. Comparable to function argument or ret
 == Pins
 Visual input or output element of a Node. Comparable to function argument or return parameter in other programming languages
 
+== Pad
+Common term for visual elements which represent a single data source or sink. Namely Inlet/Outlet, Reader/Writer, Accumulator Reader/Writer and constants.
+
+== Pads
+Common term for visual elements which represent a single data source or sink. Namely Inlet/Outlet, Reader/Writer, Accumulator Reader/Writer and constants.
+
 == Link
 Connection between two Pins. Comparable to a value assignment in other programming languages
 
