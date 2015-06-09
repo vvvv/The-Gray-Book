@@ -1,2 +1,4 @@
 # Project Structure
 
+image::"VL Component Hierarchy.png"[Components]
+
