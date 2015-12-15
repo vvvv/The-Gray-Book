@@ -1,2 +1,15 @@
 # Navigating a Project
 
+A project in VL typically consists of a single .vl document that holds one ore more patches. In addition a document can depend on other documents or Nugets that provide it with  
+
+In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
+
+## Patches
+Next to the filename you see two pulldowns labeled "P" (Patches) and "C" (Categories). Navigate to either of the two pulldowns to see the content of the active document. Both give you essentially the same information only sorted by different Aspects:
+
+- Use the P pulldown to navigate an alphabetically sorted list of patches 
+
+- alphabetical patchnames
+- categories
+
+## Dependencies
