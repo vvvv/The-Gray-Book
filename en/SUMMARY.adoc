@@ -1,5 +1,6 @@
 = Summary
 
+. link:README.md[Introduction]
 . link:README.adoc[Introduction]
 . link:introduction/vl/_language.md[The Language]
 .. link:introduction/vl/lo___lookingAtThings.adoc[Looking At Things]
@@ -44,7 +45,7 @@
 . link:reference.adoc[Reference]
 .. link:reference/hde/gui.adoc[The Development Environment]
 ... link:reference/hde/project_structure.adoc[Project Structure]
-... link:reference/hde/navigating_a_project.adoc[Navigating a Project]
+... link:../reference/hde/navigatinga_project.adoc[Navigating a Project]
 ... link:reference/hde/the_nodebrowser.adoc[The NodeBrowser]
 ... link:reference/hde/patching.adoc[Patching]
 ... link:reference/hde/debugging.adoc[Debugging]
