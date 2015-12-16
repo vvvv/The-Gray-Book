@@ -1,2 +1,41 @@
 # The NodeBrowser
 
+The NodeBrowser has 3 sections:
+
+* topleft: shortcuts to pads 
+* bottomleft: shortcuts to regions
+* center: listing of available nodes
+
+## Shortcuts to Pads
+First enter a name and then double click the button of the type of pad you want to create. 
+
+## Shortcuts to Regions
+Click the region you want to create.
+
+## Available Nodes
+There are different ways to navigate the list of available nodes:
+
+* by categories
+* by tags
+
+In both cases it helps to be familiar with the icons: 
+
+- Category
+- Type Category
+- Process Node
+- Operation Node
+
+Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available. 
+
+When you're clicking an entry that represents a node two things may happen:
+
+* if your selection is unambiguous the node will be created
+* there are situations where a selection is ambiguous in which case the NodeBrowser prompts you to specify more details be choosing from the offered options
+
+### Search By Category
+Nodes in VL are organised in a hierarchical structure of categories. When opening the NodeBrowser you're being presented with a list of available toplevel categories. Click any of the categories to enter it. 
+
+Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it.
+
+### Search By Tag
+Enter any search term and see the list filtered by it. Click any of the entries. 
