@@ -15,20 +15,28 @@ Since typically in a normal project you won't use too many categories the alphab
 ## Dependencies
 Click the active documents filename in the menubar to manage its dependencies. There are three different types of dependencies:
 
-- Nugets
-- Files
+* Nugets
+* Files
 
 ### Nugets
 Navigate to Nugets to see a list of all available nugets that you can check or uncheck by rightclicking them.
 
 Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document. By selecting a nuget you'll have access to all nodes in that package via the nodebrowser in the active document. 
 
+In the "Other" section you find all nugets that are not relevant for VL in that they don't expose nodes. Selecting them does not do anything to your document for now. 
+
 ### Files
 In addition to nugets you can also reference individual files of the following types:
 
-- .vl
-- .dll
-- .vlimport
+* .vl
+* .dll
+* .vlimport
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
+### Forward
+In this section you see a listing of all nugets and files combined. Here you can specify if the nodes of a specific dependency will be forwarded or not.
+
+By default if you add a dependency to a document you get only the nodes the dependency exposes directly. Dependencies can depend on other dependencies which you don't see by default. 
+
+Only if you check a dependency as "Forward" it will also be seen by documents that only include their parent document. 
