@@ -24,6 +24,7 @@ In both cases it helps to be familiar with the icons:
 - Type Category
 - Process Node
 - Operation Node
+- Nuget
 
 Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available. 
 
@@ -39,3 +40,8 @@ Note that when entering a category a tag appears in the bottom right part of the
 
 ### Search By Tag
 Enter any search term and see the list filtered by it. 
+
+## Available Nugets
+Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
+
+If you want to get rid of a nuget again you have uncheck it in the documents list of dependencies. 
