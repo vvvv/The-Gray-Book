@@ -38,4 +38,4 @@ Nodes in VL are organised in a hierarchical structure of categories. When openin
 Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it.
 
 ### Search By Tag
-Enter any search term and see the list filtered by it. Click any of the entries. 
+Enter any search term and see the list filtered by it. 
