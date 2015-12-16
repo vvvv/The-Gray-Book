@@ -16,16 +16,19 @@ Since typically in a normal project you won't use too many categories the alphab
 Click the active documents filename in the menubar to manage its dependencies. There are three different types of dependencies:
 
 - Nugets
-- Imports
-- Documents
+- Files
 
 ### Nugets
 Navigate to Nugets to see a list of all available nugets that you can check or uncheck by rightclicking them.
 
 Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document. By selecting a nuget you'll have access to all nodes in that package via the nodebrowser in the active document. 
 
-### Imports and Documents
-In addition to nugets you can also reference individual .dll, .vlimport or .vl documents. 
+### Files
+In addition to nugets you can also reference individual files of the following types:
+
+- .vl
+- .dll
+- .vlimport
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
