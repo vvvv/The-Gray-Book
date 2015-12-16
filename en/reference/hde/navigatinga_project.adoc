@@ -5,7 +5,7 @@ A project in VL typically consists of a single .vl document that holds one ore m
 In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
 
 ## Patches
-Next to the filename you see two pulldowns labeled "P" (Patches) and "C" (Categories). Navigate to either of the two pulldowns to see the content of the active document. Both give you access to all patches in the active document only sorted by different aspects:
+Next to the active document you see two pulldowns labeled "P" (Patches) and "C" (Categories). Navigate to either of the two pulldowns to see the content of the active document. Both give you access to all patches in the active document only sorted by different aspects:
 
 - use the P pulldown to navigate an alphabetically sorted list of patches 
 - use the C pulldown to navigate a the list of patches sorted by categories
@@ -13,3 +13,19 @@ Next to the filename you see two pulldowns labeled "P" (Patches) and "C" (Catego
 Since typically in a normal project you won't use too many categories the alphabetical list will be more convenient to use. But in documents that you use to structure a more extensive library with nodes sorted in many categories the C pulldown will be more helpful.
 
 ## Dependencies
+Click the active documents filename in the menubar to manage its dependencies. There are three different types of dependencies:
+
+- Nugets
+- Imports
+- Documents
+
+### Nugets
+Navigate to Nugets to see a list of all available nugets that you can check or uncheck by rightclicking them.
+
+Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document. By selecting a nuget you'll have access to all nodes in that package via the nodebrowser in the active document. 
+
+### Imports and Documents
+In addition to nugets you can also reference individual .dll, .vlimport or .vl documents. 
+
+Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
+
