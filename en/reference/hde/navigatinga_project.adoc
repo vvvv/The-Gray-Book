@@ -19,9 +19,9 @@ Click the active documents filename in the menubar to manage its dependencies. T
 * Files
 
 ### Nugets
-Navigate to Nugets to see a list of all available nugets that you can check or uncheck by rightclicking them.
+Navigate to Nugets to see a list of all available nugets (and their versions). Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document.
 
-Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document. By selecting a nuget you'll have access to all nodes in that package via the nodebrowser in the active document. 
+By rightclicking a nuget you'll have access to all nodes in that package via the nodebrowser in that document. 
 
 In the "Other" section you find all nugets that are not relevant for VL in that they don't expose nodes. Selecting them does not do anything to your document for now. 
 
