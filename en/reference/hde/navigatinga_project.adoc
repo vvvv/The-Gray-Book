@@ -4,6 +4,7 @@ A project in VL typically consists of a single .vl document that holds one ore m
 
 In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
 
+# Active Document
 ## Patches
 Next to the active document you see two pulldowns labeled "P" (Patches) and "C" (Categories). Navigate to either of the two pulldowns to see the content of the active document. Both give you access to all patches in the active document only sorted by different aspects:
 
@@ -40,3 +41,12 @@ In this section you see a listing of all nugets and files combined. Here you can
 By default if you add a dependency to a document you get only the nodes the dependency exposes directly. Dependencies can depend on other dependencies which you don't see by default. 
 
 Only if you check a dependency as "Forward" it will also be seen by documents that only include their parent document. 
+
+# Other Documents
+By clicking the active document in the main menubar you also get a listing of all other documents that are open at the moment. 
+
+## Root Documents
+Here you see all documents that have been opened manually. 
+
+## Referenced Documents
+In this section you see documents that have not been loaded directly but only via being a dependency to any of the root documents. 
