@@ -69,6 +69,7 @@ In vvvv every node can automatically be spreaded, meaning the node is executed f
 
 ### Framedelay
 In vvvv there were two reasons to use framedelays
+
 * to make sure one thing happens after the other
 * to store a value for the next frame
 
