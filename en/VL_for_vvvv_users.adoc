@@ -2,29 +2,42 @@
 
 WARNING: Images missing!
 
+## Patches
+In vvvv every patch is just a patch. In VL there are different types of patches:
+
+### The Document Patch
+Every vl document has one toplevel patch that provides an overview of its content. You can always reach it by pressing ALT+P
+
+### Utility Patches
+* are merely organisational elements in that hey have no purpose other than letting you structure/modularize your program 
+* can define multiple operations which can reference each other as long as no recursive calls are made. 
+* cannot have Fields.  
+* have one Category that applies to all its operations
+
+### Datatype Patches
+* define a data type
+* can have Fields to store data
+* can define multiple operations for that datatype
+
 ## Project Structure
 ### .v4p versus .vl
 In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
 
-### Patches
-In vvvv each patch is the same. VL for now has two different types of patches:
-
-** Utility Patches
-*** can define multiple operations
-*** can't have fields
-** Datatype Patches
-*** define a datatype
-*** can define multiple operations for that datatype
-*** can have fields to store data
 
 ### Operations
-In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and is assigned a random color to be able to distinguish them visually. The color has no further meaning.
+In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and version and inherits the category of its patch.
 
-### IOBoxes
-In vvvv an IOBox can be used to set or display values. By giving an IOBox a descriptive name you turn it into an inlet of the patch. In VL we distinguish between Inlets and Constants, Outlets and OutBoxes. 
+### IOBoxes vs Pins
+In vvvv an IOBox can be used to set or display values. By giving an IOBox a descriptive name you turn it into an input- or output-pin of its patch. In VL we distinguish between IOBoxes and Pins. While IOBoxes can be used to set or display values you now use explicit Pin elements to specify Inlets and Outlets for operations.
+
+Just like in vvvv create an IOBox by pressing the middle mousebutton while making a connection. If instead you doubleclick while making a connection you create an Inlet or Outlet. 
+
+Both Pins and IOBoxes can be configured via a middleclick on them. Input Pins can also be given a default value.
 
 ### Nodes
-In vvvv all nodes look the same. Distinguish between Operation and Process nodes: 
+In vvvv all nodes look the same. In VL we distinguish between Operation and Process nodes: 
+* Process nodes hold state (FlipFlop, LFO, ...)
+* Operation nodes do not hold state (Length, Separate, ...)
 
 ## Language
 ### Values
@@ -41,19 +54,28 @@ In VL there are many different types for values:
 and for now you can only connect from lower to higher precision, eg. from Integer32 to Float32 (or Float64) but not the other way round.
 
 ### Spreads
-In vvvv every connection between two pins is a spread. A spread can have 0 or 1 slices but still it would be a spread. 
+In vvvv there are spread generators (like LinearSpread,...) spread operators (like GetSlice, Zip,...) and spread sinks (like Bounds, Mean, ...). The same and more are available in VL with the additional advantage that in VL all spread operations are always available for all datatypes without adding more nodes to the NodeBrowser. See Generics.
+
+In vvvv every connection between two pins is a spread. A spread can have 0, 1 or more slices but still it would be a spread in all cases.  
 
 In VL this is more defined: You need to understand three things:
 
-* There is a difference between a single value or a spread with a single value. 
+* There is a difference between a single value and a spread with a single value. 
 * When we talk of a spread of Integer32, strings or colors, we write: Spread<Integer32>, Spread<String>, Spread<RGBA>
 * A Spread is only one type of collection. Another common type of collection would be a Sequence or a HashSet, but we can imagine many different types of collections. Anyway for a start you'll mostly use Spreads and only sometimes Sequences.
 
-### No more framedelay
-Instead of a FrameDelay in VL you'll create a field and use a Reader to read from and a Writer to write to it. See link:reference/vl/fields.adoc[About Fields].
+### Spreading
+In vvvv every node can automatically be spreaded, meaning the node is executed for every slice. This convenience feature is not (yet) available in VL. We're still thinking about implementing something similar for VL.
+
+### Framedelay
+In vvvv there were two reasons to use framedelays
+* to make sure one thing happens after the other
+* to store a value for the next frame
+
+In VL you'll only use a FrameDelay node for the first use-case. If your patch needs to store a value for the next frame you're creating a datatype in which case you can now use proper Fields and Pads to access those Fields. See link:reference/vl/fields.adoc[About Fields].
 
 ### Naming Conventions
-Name [Category.Subcategory] (Version1 Version2)
+Name (Version1 Version2) [Category.Subcategory]
 
 ## User Interface
 ### The NodeBrowser
