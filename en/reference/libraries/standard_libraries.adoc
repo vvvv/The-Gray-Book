@@ -1,28 +1,47 @@
-# Standard Library
+# The VL.CoreLib
 
-The default library of VL. It consists of patches, import files and DLLs which contain the basic set of nodes of VL. A new VL document references the standard library by default.
+The default library of VL that provides nodes and type for the most basic patching needs. Here is an overview of the Categories it adds to a document that references it. 
 
-= Overview
-== Basics
-Files named _Basics_ contain fundamental types and nodes.
+== 2D
+2d primitives like Vector2, Rectangle, Circle,... and 2d transformation and collision nodes. Further any 2d related math nodes.
 
-== Standalone
-Files named _Standalone_ contain types and nodes which are specific for the standalone VL development environment.
+== 3D
+3d primitives like Vector3, Box, Sphere,... and 3d transformation and collision nodes. Further any 3d related math nodes.
 
-== Integration
-Files name _Integration_ contain types and nodes which only make sense when VL is hosted in the vvvv environment.
+== Adaptive
+Nodes that can oerate on different datatypes, like a + [Adaptive] that can operate on numbers, strings, colors ... or a Length [Adaptive] that works for strings and vectors.
 
-== Experimental
-Contains proof of concept types and nodes which are not ready for production.
+== Animation
+Timebased nodes like time-generators (LFO, Stopwatch, ...) and filters (Damper, Oscillator, ...). Also has a subcategory *FrameBased* that contains similar nodes that operate framebased instead.
 
-== Files
-The files of the standard library are located in the folder resources/library. The subfolders sort the library files by their type:
+== Collections
+Contains most notably the Spread, but also other simple collections like the Dictionary and Queue. 
 
-=== Binaries
-DLLs which have type and node attributes compiled into it.
+== Color
+The RGBA color type and operations to convert to/from different color spaces. 
 
-=== Imports
-Import files which import types and operations from third party DLLs. Most of it from the .NET framework binaries.
+== Control
+Nodes to patch control flow, like FlipFlop, MonoFlop,...
 
-=== Patches
-Patches are the part of the standard library that is programmed in VL itself.
+== Devices
+Mouse, Keyobard and Touch nodes and nodes that represent a specific hardware product that interfaces with the VL, like Leap, TheEyeTribe,...
+
+== IO
+Nodes for file IO, Path (directory, filename) and Stream handling. Further nodes that implement input/output protocols and standards in subcategories:
+*IO.Network* for UDP, TCP,...
+*IO.OSC* OpenSoundControl protocol
+*IO.TUIO* Tangible User Interface Objects protocol
+*IO.ArtNet* The ArtNet DMX protocol
+...
+
+== Math
+General math, algorithms,...
+
+== Primitive
+Contains the primitive datatypes, like Bool, Byte, Integer32/64 Float32/64, Char, String
+
+== System
+DateTime
+
+== Text
+
