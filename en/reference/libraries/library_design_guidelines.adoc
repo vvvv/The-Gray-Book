@@ -26,11 +26,9 @@ During the design of a library a lot of choices have to be made. Be it regarding
 * "Enabled" pins of process operations are called like the operation
 * see below: Pin Groups
 
-
 === Outputs
 * Output vs. Result
 * see below: Nodes that work async
-
 
 = Datatypes
 In order to keep the number of datatypes a user typically has to deal with at a managable level here is a list of datatypes that we use on inputs and outputs of nodes:
@@ -41,9 +39,11 @@ In order to keep the number of datatypes a user typically has to deal with at a 
 * Float32/64
 * Char
 * String
+* Path
 * Spread<T>
 
 Note that in the implementation of a node you can of course use any datatype you want. 
+
 = Patterns
 == Pin Groups
 the rules to get free pingroups
