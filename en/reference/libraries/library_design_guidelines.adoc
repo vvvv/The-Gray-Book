@@ -1,2 +1,96 @@
 = Library Design Guidelines
 
+During the design of a library a lot of choices have to be made. Be it regarding namings or patterns being used or datatypes that are being exposed. Here is a collection of guidelines that we followed when we created the VL.CoreLib and other libraries we ship with VL. 
+
+= Namings
+== Categories
+
+* Prefer existing Categories over inventing your own
+* Avoid extensive use of Subcategories 
+
+== Nodes
+* use CamelCasing, no spaces
+* use optional versions in round brackets only to denote more specific versions of an already existing node with the same name. i.e. the simpler one of two nodes with the same name should always have no version while the more specific one has a version that describes its speciality
+* for process nodes use nouns: Sequencer, FlipFlop, Copier
+* for operation nodes prefer verbs
+* for tags use any words not yet used in the nodes name, version or category that will help people find the node in the node browser
+
+== Pins
+* use spaces to separate words all starting with upper case
+* avoid using generic names like "Do", "Update", ...
+
+=== Inputs
+* Apply vs. Enabled
+** how to get them for free
+** when to create them manually
+* "Enabled" pins of process operations are called like the operation
+* see below: Pin Groups
+
+
+=== Outputs
+* Output vs. Result
+* see below: Nodes that work async
+
+
+= Datatypes
+In order to keep the number of datatypes a user typically has to deal with at a managable level here is a list of datatypes that we use on inputs and outputs of nodes:
+
+* Boolean
+* Byte
+* Integer32/64
+* Float32/64
+* Char
+* String
+* Spread<T>
+
+Note that in the implementation of a node you can of course use any datatype you want. 
+= Patterns
+== Pin Groups
+the rules to get free pingroups
+
+== Adaptive Nodes
+how to create an adaptive
+
+* definition
+* implementation
+
+== Reset Inputs
+Reset always takes precedence over other inputs (is lowest in process explorer)
+∘ eg: FlipFlop
+
+== Join/Split
+vs. from/to vs. As.. vs. create
+
+== Nodes that operate async
+* typical outputs
+** In Progress
+** On Completed
+** Success
+** Error
+
+== Exception Handling
+Still to be defined:
+
+* simply throw errors as they occur
+* test input ranges to prevent errors (e.g clamp or wrap incoming values to a save range,...). optionally report overflow via an Overflow (Bool) output
+* return Default if operation fails and report Success
+* use try/catch and report errors via a set of standard pins: Success (Bang), Error (Bang) and Error Message (String) 
+
+== Resource Providers
+
+= Nugets
+Don't reference your own nuget in any .vl documents that contribute to a nuget other than: demo, test and help patches
+
+[NOTE]
+====
+When using a .vlimport file for a managed .dll beware that there can only be one such file per .dll! Thus if you need to import any type from e.g. the mscorelib.dll that needs to be added to the VL.CoreLib project.
+====
+
+== Demo Patches
+still to be defined: in what form to provide demo patches
+
+== Tests
+still to be defined: in what form to provide tests (patches, code,..) that can be run automated
+
+== Help Patches
+still to be defined: in what form to provide help patches
