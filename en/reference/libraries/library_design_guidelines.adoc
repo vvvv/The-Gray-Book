@@ -38,7 +38,9 @@ Such join/split nodes must not do anything with the data except setting it to re
 
 
 === Converters (From.../To...)
+When to name nodes "From.." or "To..".
 
+If a converter merely converts between units, like from cycles to radians but the data-type of the input and output pins is the same the node name has to mention both units, like: CyclesToRadians. Since the data-type does not change here even hovering the pins wouldn't give sufficient information to understand what the node is doing.
 
 == Pins
 * use spaces to separate words all starting with upper case
