@@ -36,6 +36,7 @@ Both Pins and IOBoxes can be configured via a middleclick on them. Input Pins ca
 
 ### Nodes
 In vvvv all nodes look the same. In VL we distinguish between Operation and Process nodes: 
+
 * Process nodes hold state (FlipFlop, LFO, ...)
 * Operation nodes do not hold state (Length, Separate, ...)
 
@@ -45,11 +46,12 @@ In vvvv there is only one numerical type. It is called simply "Value" and it is 
 
 In VL there are many different types for values:
 
-* Float32
-* Float64
+* Boolean
+* Byte
 * Integer32
 * Integer64
-* Boolean
+* Float32
+* Float64
 
 and for now you can only connect from lower to higher precision, eg. from Integer32 to Float32 (or Float64) but not the other way round.
 
@@ -62,10 +64,10 @@ In VL this is more defined: You need to understand three things:
 
 * There is a difference between a single value and a spread with a single value. 
 * When we talk of a spread of Integer32, strings or colors, we write: Spread<Integer32>, Spread<String>, Spread<RGBA>
-* A Spread is only one type of collection. Another common type of collection would be a Sequence or a HashSet, but we can imagine many different types of collections. Anyway for a start you'll mostly use Spreads and only sometimes Sequences.
+* A Spread is only one type of collection. Another common type of collection would be a Dictionary or a HashSet, but we can imagine many different types of collections. Anyway for a start you'll mostly use Spreads.
 
 ### Spreading
-In vvvv every node can automatically be spreaded, meaning the node is executed for every slice. This convenience feature is not (yet) available in VL. We're still thinking about implementing something similar for VL.
+In vvvv every node can automatically be spreaded, meaning the node is executed for every slice on its inputs. This convenience feature is not (yet) available in VL. We're still thinking about implementing something similar though.
 
 ### Framedelay
 In vvvv there were two reasons to use framedelays
@@ -89,7 +91,7 @@ When in vvvv you'd rightclick a node to open its corresponding patch in VL you m
 Middleclick a Constant or rightclick on its label -> Configure to bring up the configuration for the constant.
 
 ### No more hidden values in pins
-In vvvv you can change the value on a pin directly. This can be confusing, because when looking at a node you don't see which pin has a value other than its default. In VL you can only change a pins value by connecting a Constant. 
+In vvvv you can change the value on a pin directly. This can be confusing, because when looking at a node you don't see which pin has a value other than its default. In VL you can only change a pins value by connecting an IOBox. 
 
 
 
