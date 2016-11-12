@@ -1,6 +1,6 @@
 # The VL.CoreLib
 
-The default library of VL that provides nodes and type for the most basic patching needs. Here is an overview of the Categories it adds to a document that references it. 
+The default library of VL that provides nodes and types for the most basic patching needs. Here is an overview of the Categories it adds to a document that references it. 
 
 == 2D
 2d primitives like Vector2, Rectangle, Circle,... and 2d transformation and collision nodes. Further any 2d related math nodes.
