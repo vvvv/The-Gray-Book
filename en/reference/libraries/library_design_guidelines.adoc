@@ -13,6 +13,7 @@ During the design of a library a lot of choices have to be made. Be it regarding
 * for process nodes use nouns: Sequencer, FlipFlop, Copier
 * for operation nodes prefer verbs
 * for tags use any words not yet used in the nodes name, version or category that will help people find the node in the node browser
+* avoid node names starting in "As.." like "AsString", use "To.." or "From.." instead
 
 === Versions
 * use optional versions in round brackets only to denote more specific versions of an already existing node with the same name. i.e. the simpler one of two nodes with the same name should always have no version while the more specific one has a version that describes its speciality
@@ -21,6 +22,23 @@ VL does not support function overloading but uses “Versions” instead. So whe
 ** first try to provide meaningful unique names
 ** if not possible, try to provide meaningful unique version names
 ** if still not possible, use numbered versions starting with (1). These numbered versions will be hidden in the nodebrowser - differentiation will then be possible via the signature of inputs and outputs
+
+=== Join/Split as Versions
+For data-types it often makes sense to have a pair of join/split nodes that let you set/get the individual properties that make it. e.g:
+
+* Vector2 (Join) takes X and Y as inputs
+* Vector2 (Split) returns X and Y via its outputs
+* RGBA (Join) takes Red, Green, Blue, Alpha as inputs
+* RGBA (Split) returns Red, Green, Blue, Alpha via its outputs
+
+[NOTE]
+Such join/split nodes must not do anything with the data except setting it to respectively getting it from the internal fields of the datatype.
+
+=== Constructors (Create)
+
+
+=== Converters (From.../To...)
+
 
 == Pins
 * use spaces to separate words all starting with upper case
@@ -71,9 +89,6 @@ how to create an adaptive
 Reset always takes precedence over other inputs (is lowest in process explorer)
 ∘ eg: FlipFlop
 
-== Join/Split
-vs. from/to vs. As.. vs. create
-
 == Nodes that operate async
 * typical outputs
 ** In Progress
@@ -105,9 +120,7 @@ When importing types with generic type parameters, you need to write restore met
 Don't reference your own nuget in any .vl documents that contribute to a nuget other than: demo, test and help patches
 
 [NOTE]
-====
 When using a .vlimport file for a managed .dll beware that there can only be one such file per .dll! Thus if you need to import any type from e.g. the mscorelib.dll that needs to be added to the VL.CoreLib project.
-====
 
 == Demo Patches
 still to be defined: in what form to provide demo patches
