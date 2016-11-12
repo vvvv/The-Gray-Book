@@ -45,7 +45,7 @@
 . link:reference.adoc[Reference]
 .. link:reference/hde/gui.adoc[The Development Environment]
 ... link:reference/hde/project_structure.adoc[Project Structure]
-... link:/reference/hde/navigatinga_project.adoc[Navigating a Project]
+... link:reference/hde/navigatinga_project.adoc[Navigating a Project]
 ... link:reference/hde/the_nodebrowser.adoc[The NodeBrowser]
 ... link:reference/hde/patching.adoc[Patching]
 ... link:reference/hde/debugging.adoc[Debugging]
@@ -58,7 +58,7 @@
 ... link:reference/vl/loops.adoc[Loops]
 ... Regions
 .. link:reference/libraries/libraries.adoc[Libraries]
-... link:reference/libraries/standard_libraries.adoc[Standard Library]
+... link:reference/libraries/standard_libraries.adoc[The VL.CoreLib]
 ... link:reference/libraries/importing_libraries.adoc[Importing Libraries]
 ... link:reference/libraries/nugets.adoc[Nugets]
 .. link:reference/deployment/deployment.adoc[Deployment]
