@@ -28,7 +28,7 @@ In vvvv a each patch has its own .v4p file. This is different with VL. Here many
 In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and version and inherits the category of its patch.
 
 ### IOBoxes vs Pins
-In vvvv an IOBox can be used to set or display values. By giving an IOBox a descriptive name you turn it into an input- or output-pin of its patch. In VL we distinguish between IOBoxes and Pins. While IOBoxes can be used to set or display values you now use explicit Pin elements to specify Inlets and Outlets for operations.
+In vvvv an IOBox can be used to set or display values. By giving an IOBox a descriptive name you turn it into an input- or output-pin of its patch. In VL we distinguish between IOBoxes and Pins. While IOBoxes can still be used to set or display values you now use explicit Pin elements to specify Inlets and Outlets for operations.
 
 Just like in vvvv create an IOBox by pressing the middle mousebutton while making a connection. If instead you doubleclick while making a connection you create an Inlet or Outlet. 
 
