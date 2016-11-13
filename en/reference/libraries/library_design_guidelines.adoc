@@ -90,7 +90,8 @@ how to create an adaptive
 * definition
 * implementation
 
-== Reset Inputs
+== Process Nodes
+=== Reset Inputs
 Reset always takes precedence over other inputs (is lowest in process explorer)
 ∘ eg: FlipFlop
 
@@ -111,7 +112,6 @@ Still to be defined:
 
 == Observables
 If you are dealing with asynchronous datasources - async await, task, events - always hand them to your users as Observables. You might, for example, use Observable.FromEventPattern....
-
 
 == Resource Providers
 Libraries that make use of unmanaged code often require to make use of the Dispose functionality in C#. There are multiple ways to approach this issue. If you are importing a library, your users should not have to worry about disposing objects, you should take care of that in the wrapper...
