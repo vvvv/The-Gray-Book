@@ -103,7 +103,7 @@ Reset always takes precedence over other inputs (is lowest in process explorer)
 ** Error
 
 == Exception Handling
-Still to be defined:
+Still to be defined (see internal issue #1511):
 
 * simply throw errors as they occur
 * test input ranges to prevent errors (e.g clamp or wrap incoming values to a save range,...). optionally report overflow via an Overflow (Bool) output
