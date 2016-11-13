@@ -116,6 +116,11 @@ Libraries that make use of unmanaged code often require to make use of the Dispo
 == Restore Methods
 When importing types with generic type parameters, you need to write restore methods for them.
 
+== Default Values
+Define default values for imported types in the TypeImporter or via the property “IsDefault” in the Node attribute. This is desirable to avoid NULL values in a patch. If you know what you’re doing, you can still have a type without default value and handle NULL values in a patch correctly.
+
+The node marked as default must not have a side-effect. This may not always be possible/make sense, then we’ll still have to deal with null
+
 == Immutability
 
 = Nugets
