@@ -87,8 +87,8 @@ The VL nodebrowser is a totally different beast. See See link:reference/hde/the_
 === Open a patch
 When in vvvv you'd rightclick a node to open its corresponding patch in VL you middleclick it instead as you would in a browser to open a link in a new tab. 
 
-=== No more Inspektor
-Middleclick a Constant or rightclick on its label -> Configure to bring up the configuration for the constant.
+=== Inspektor
+Middleclick a Constant or rightclick on its label -> Configure to bring up the Inspektor for the constant.
 
 === No more hidden values in pins
 In vvvv you can change the value on a pin directly. This can be confusing, because when looking at a node you don't see which pin has a value other than its default. In VL you can only change a pins value by connecting an IOBox. 
