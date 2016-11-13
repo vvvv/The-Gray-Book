@@ -1,18 +1,12 @@
-# The NodeBrowser
+= The NodeBrowser
 
-The NodeBrowser has 3 sections:
+When opening the NodeBrowser via a left double-click anywhere on a patch what you see is:
 
-* topleft: shortcuts to pads 
-* bottomleft: shortcuts to regions
-* center: listing of available nodes
+* a list of top-level node categories
+* language primitives
+* a list of available nugets
 
-## Shortcuts to Pads
-First enter a name and then double click the button of the type of pad you want to create. 
-
-## Shortcuts to Regions
-Click the region you want to create.
-
-## Available Nodes
+== Available Nodes
 There are different ways to navigate the list of available nodes:
 
 * by categories
@@ -31,17 +25,34 @@ Hovering any entry that represents a node will show you the nodes Inputs and Out
 When you're clicking an entry that represents a node two things may happen:
 
 * if your selection is unambiguous the node will be created
-* there are situations where a selection is ambiguous in which case the NodeBrowser prompts you to specify more details be choosing from the offered options
+* there are situations where a selection is ambiguous in which case the NodeBrowser prompts you to specify more details by choosing from the offered options
 
-### Search By Category
-Nodes in VL are organised in a hierarchical structure of categories. When opening the NodeBrowser you're being presented with a list of available toplevel categories. Click any of the categories to enter it. 
+=== Search By Category
+Nodes in VL are organized in a hierarchical structure of categories. Click any of the categories to enter it. 
 
-Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it.
+Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it. Pressing the ESC button always removes the last tag.
 
-### Search By Tag
-Enter any search term and see the list filtered by it. 
+=== Search By Tag
+Enter any search
 
-## Available Nugets
+== Language Primitives
+Click any of the language Primitives to create it or search for a property you already created before to get a pad for it.
+
+* IOBox
+* Pad
+* Pins (Input, Output)
+* Patch Definition
+* Canvas
+* Record Definition
+* Class Definition
+* Operation Definition
+* Delegate
+* Regions (Loop, Foreach, If)
+
+Many of the primitives can be given a name directly after choosing to create them via the NodeBrowser.
+
+
+== Available Nugets
 Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
 
 If you want to get rid of a nuget again you have uncheck it in the documents list of dependencies. 
