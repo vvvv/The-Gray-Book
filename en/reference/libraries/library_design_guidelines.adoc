@@ -8,20 +8,23 @@ During the design of a library a lot of choices have to be made. Be it regarding
 * Prefer existing Categories over inventing your own
 * Avoid extensive use of Subcategories 
 
-== Nodes
+== Node Names
 * use CamelCasing, no spaces
 * for process nodes use nouns: Sequencer, FlipFlop, Copier
 * for operation nodes prefer verbs
-* for tags use any words not yet used in the nodes name, version or category that will help people find the node in the node browser
+
 * avoid node names starting in "As.." like "AsString", use "To.." or "From.." instead
 
-=== Versions
+=== Node Versions
 * use optional versions in round brackets only to denote more specific versions of an already existing node with the same name. i.e. the simpler one of two nodes with the same name should always have no version while the more specific one has a version that describes its speciality
 * Versions are used as an alternative to overloads.
 VL does not support function overloading but uses “Versions” instead. So when creating/importing multiple overloads of a function:
 ** first try to provide meaningful unique names
 ** if not possible, try to provide meaningful unique version names
 ** if still not possible, use numbered versions starting with (1). These numbered versions will be hidden in the nodebrowser - differentiation will then be possible via the signature of inputs and outputs
+
+=== Node Tags
+Use any words not yet used in the nodes name, version or category that will help people find the node in the node browser
 
 === Join/Split as Versions
 For data-types it often makes sense to have a pair of join/split nodes that let you set/get the individual properties that make it. e.g:
