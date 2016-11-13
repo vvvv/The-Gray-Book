@@ -1,4 +1,13 @@
 # Loops
 
-To get the iteration index in a loop, you can create any pad and replace it by an 'Iteration' pad in the context menu. For example, double right click to create a constant and then right click on it to open the context menu. In the context menu select Replace -> "Iteration".
+There are two different Loops in VL:
+
+* Loop: a classic for-loop with an _Iteration Count_ input to specify the number of iterations the loop executes
+* ForEach: executes for each slice of the 
+
+There are three special Pins which you can create in loops via the NodeBrowser:
+
+* _Index_: to get the current loop iteration count
+* _Break_: set to true to break out of the loop at any time before its actual iteration count is reached
+* _Keep_: set to true or false for each loop to specify whether outputs of this slice will be part of the loop output spread or not
 
