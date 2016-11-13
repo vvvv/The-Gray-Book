@@ -122,6 +122,7 @@ Define default values for imported types in the TypeImporter or via the property
 The node marked as default must not have a side-effect. This may not always be possible/make sense, then we’ll still have to deal with null
 
 == Immutability
+Mark types as immutable in the TypeImporter or via the property “IsImmutable” in the Node attribute, if applicable. .NET does not yet have an understanding of immutability, we therefore need to tell VL which things are immutable.
 
 = Nugets
 Don't reference your own nuget in any .vl documents that contribute to a nuget other than: demo, test and help patches
