@@ -96,6 +96,7 @@ In vvvv you can change the value on a pin directly. This can be confusing, becau
 === Adding pins to nodes
 Nodes like +, *, Cons,  that have a dynamic pin-count can have pins added/removed by selecting them and pressing CTRL + or CTRL -
 
+== Individual Nodes
 === Cons
 In vvvv you can connect single values as well as spreads to a cons node. Since VL distinguishes between single values and spreads (see the section on Spreads above) there are now two nodes:
 
@@ -104,9 +105,19 @@ In vvvv you can connect single values as well as spreads to a cons node. Since V
 
 In case you want to combine single values with spreads you first have to convert the single values to spreads using the ToSpread node.
 
+=== Map and MapRange
+Instead of having one node with an enum to choose between different map-modes, in vl there are now distinct nodes for doing only:
 
+* Clamp
+* Mirror
+* Wrap
+* Map
 
+And then there are distinct nodes for applying a simple map in combination with a specific map-mode:
 
+* MapClamp
+* MapMirror
+* MapWrap
 
 
 
