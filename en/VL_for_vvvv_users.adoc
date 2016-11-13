@@ -1,47 +1,47 @@
-# VL for vvvv users
+= VL for vvvv users
 
 WARNING: Images missing!
 
-## Patches
+== Patches
 In vvvv every patch is just a patch. In VL there are different types of patches:
 
-### The Document Patch
+=== The Document Patch
 Every vl document has one toplevel patch that provides an overview of its content. You can always reach it by pressing ALT+P
 
-### Utility Patches
+=== Utility Patches
 * are merely organisational elements in that hey have no purpose other than letting you structure/modularize your program 
 * can define multiple operations which can reference each other as long as no recursive calls are made. 
 * cannot have Fields.  
 * have one Category that applies to all its operations
 
-### Datatype Patches
+=== Datatype Patches
 * define a data type
 * can have Fields to store data
 * can define multiple operations for that datatype
 
-## Project Structure
-### .v4p versus .vl
+== Project Structure
+=== .v4p versus .vl
 In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
 
 
-### Operations
+=== Operations
 In vvvv each patch defines exactly one operation. In VL a patch can define any number of operations. Each operation has a user-specified name and version and inherits the category of its patch.
 
-### IOBoxes vs Pins
+=== IOBoxes vs Pins
 In vvvv an IOBox can be used to set or display values. By giving an IOBox a descriptive name you turn it into an input- or output-pin of its patch. In VL we distinguish between IOBoxes and Pins. While IOBoxes can still be used to set or display values you now use explicit Pin elements to specify Inlets and Outlets for operations.
 
 Just like in vvvv create an IOBox by pressing the middle mousebutton while making a connection. If instead you doubleclick while making a connection you create an Inlet or Outlet. 
 
 Both Pins and IOBoxes can be configured via a middleclick on them. Input Pins can also be given a default value.
 
-### Nodes
+=== Nodes
 In vvvv all nodes look the same. In VL we distinguish between Operation and Process nodes: 
 
 * Process nodes hold state (FlipFlop, LFO, ...)
 * Operation nodes do not hold state (Length, Separate, ...)
 
-## Language
-### Values
+== Language
+=== Values
 In vvvv there is only one numerical type. It is called simply "Value" and it is internally represented by a Float64. Any output of type Value can be connected to any input of type value even though they may have different subtypes, like Integer, Boolean, or Bang. 
 
 In VL there are many different types for values:
@@ -55,7 +55,7 @@ In VL there are many different types for values:
 
 and for now you can only connect from lower to higher precision, eg. from Integer32 to Float32 (or Float64) but not the other way round.
 
-### Spreads
+=== Spreads
 In vvvv there are spread generators (like LinearSpread,...) spread operators (like GetSlice, Zip,...) and spread sinks (like Bounds, Mean, ...). The same and more are available in VL with the additional advantage that in VL all spread operations are always available for all datatypes without adding more nodes to the NodeBrowser. See Generics.
 
 In vvvv every connection between two pins is a spread. A spread can have 0, 1 or more slices but still it would be a spread in all cases.  
@@ -66,10 +66,10 @@ In VL this is more defined: You need to understand three things:
 * When we talk of a spread of Integer32, strings or colors, we write: Spread<Integer32>, Spread<String>, Spread<RGBA>
 * A Spread is only one type of collection. Another common type of collection would be a Dictionary or a HashSet, but we can imagine many different types of collections. Anyway for a start you'll mostly use Spreads.
 
-### Spreading
+=== Spreading
 In vvvv every node can automatically be spreaded, meaning the node is executed for every slice on its inputs. This convenience feature is not (yet) available in VL. We're still thinking about implementing something similar though.
 
-### Framedelay
+=== Framedelay
 In vvvv there were two reasons to use framedelays
 
 * to make sure one thing happens after the other
@@ -77,22 +77,32 @@ In vvvv there were two reasons to use framedelays
 
 In VL you'll only use a FrameDelay node for the first use-case. If your patch needs to store a value for the next frame you're creating a datatype in which case you can now use proper Fields and Pads to access those Fields. See link:reference/vl/fields.adoc[About Fields].
 
-### Naming Conventions
+=== Naming Conventions
 Name (Version1 Version2) [Category.Subcategory]
 
-## User Interface
-### The NodeBrowser
-The VL nodebrowser is a totally different beast. 
+== User Interface
+=== The NodeBrowser
+The VL nodebrowser is a totally different beast. See See link:reference/hde/the_nodebrowser.adoc[The NodeBrowser].
 
-### Open a patch
+=== Open a patch
 When in vvvv you'd rightclick a node to open its corresponding patch in VL you middleclick it instead as you would in a browser to open a link in a new tab. 
 
-### No more Inspektor
+=== No more Inspektor
 Middleclick a Constant or rightclick on its label -> Configure to bring up the configuration for the constant.
 
-### No more hidden values in pins
+=== No more hidden values in pins
 In vvvv you can change the value on a pin directly. This can be confusing, because when looking at a node you don't see which pin has a value other than its default. In VL you can only change a pins value by connecting an IOBox. 
 
+=== Adding pins to nodes
+Nodes like +, *, Cons,  that have a dynamic pin-count can have pins added/removed by selecting them and pressing CTRL + or CTRL -
+
+=== Cons
+In vvvv you can connect single values as well as spreads to a cons node. Since VL distinguishes between single values and spreads (see the section on Spreads above) there are now two nodes:
+
+* Cons: combines single values to a spread
+* Concat: concatenates multiple spreads to a single spread
+
+In case you want to combine single values with spreads you first have to convert the single values to spreads using the ToSpread node.
 
 
 
