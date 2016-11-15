@@ -55,9 +55,8 @@ If a converter merely converts between units, like from cycles to radians but th
 ==== Operations
 Any operation (both utility or member) that has 
 
-* no output 
-* or exactly one output whose type is the same as the 
-type of its first input
+* either no output at all
+* or one input named "Input" and one output named "Output" whose type is the same as the type of its "Input" and no further outputs
 
 automatically gets an "Apply" input. The "Apply" pin is hidden by default and can be shown via the -> Configure menu on the node. It is set to "true" by default. Setting it to "false" will bypass the operation and simply pass the input value through to the output
 
@@ -96,7 +95,7 @@ Note that in the implementation of a node you can of course use any datatype you
 
 = Patterns
 == Dynamic Pin Counts
-Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing kbd:[Ctrl + +] or kbd:[Ctrl + +] with such a selected node will add/remove inputs accordingly. 
+Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing kbd:[Ctrl + +] or kbd:[Ctrl + -] with such a selected node will add/remove inputs accordingly. 
 
 Any operation that has exactly two inputs and one output whose type is the same as the first input gets this functionality automatically.
 
