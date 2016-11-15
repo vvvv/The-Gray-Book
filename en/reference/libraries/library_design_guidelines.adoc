@@ -95,8 +95,10 @@ Note that in the implementation of a node you can of course use any datatype you
 * Angles are specified in cycles (a range from 0 to 1 counter clock-wise)
 
 = Patterns
-== Pin Groups
-the rules to get free pingroups
+== Dynamic Pin Counts
+Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing kbd:[Ctrl + +] or kbd:[Ctrl + +] with such a selected node will add/remove inputs accordingly. 
+
+Any operation that has exactly two inputs and one output whose type is the same as the first input gets this functionality automatically.
 
 == Adaptive Nodes
 how to create an adaptive
