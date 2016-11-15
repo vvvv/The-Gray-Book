@@ -59,7 +59,7 @@ Any operation (both utility or member) that has
 * or exactly one output whose type is the same as the 
 type of its first input
 
-automatically gets an "Apply" input. The "Apply" pin is hidden by default and can be shown via the -> Configure menu on the node. The "Apply" pin is set to "true" by default. Setting it to "false" will bypass the operation and simply pass the input value through to the output
+automatically gets an "Apply" input. The "Apply" pin is hidden by default and can be shown via the -> Configure menu on the node. It is set to "true" by default. Setting it to "false" will bypass the operation and simply pass the input value through to the output
 
 ==== Process Nodes
 Any operation of a process node that has
