@@ -50,11 +50,25 @@ If a converter merely converts between units, like from cycles to radians but th
 * avoid using generic names like "Do", "Update", ...
 
 === Inputs
-* Apply vs. Enabled
-** how to get them for free
-** when to create them manually
-* "Enabled" pins of process operations are called like the operation
-* see below: Pin Groups
+"Apply" is a reserved word for pin-names and therefore the compilier will complain when a user chooses this name manually for a pin. The reason for this is that there is  a pattern where an "Apply" pin will automatically be created for operations. Like this, whenever we encounter an "Apply" pin we can be sure that this pattern is applied.
+
+==== Operations
+Any operation (both utility or member) that has 
+
+* no output 
+* or exactly one output whose type is the same as the 
+type of its first input
+
+automatically gets an "Apply" input. The "Apply" pin is hidden by default and can be shown via the -> Configure menu on the node. The "Apply" pin is set to "true" by default. Setting it to "false" will bypass the operation and simply pass the input value through to the output
+
+==== Process Nodes
+Any operation of a process node that has
+
+* no output
+
+automatically gets an input that is named after the operation. This pin is set to "false" by default meaning the operation is not executed. Setting the pin to "true" will execute the operation.
+
+Also see Pin Groups below.
 
 === Outputs
 * Output vs. Result
