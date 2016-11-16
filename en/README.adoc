@@ -22,5 +22,3 @@ VL is targeted at developers who
 * prefer interactive prototyping programming over edit/compile/fix error/compile/run
 * are looking for data flow, object oriented and functional style programming metaphors 
 
-We'll mainly be looking at things pure VL, and still see the differences to vvvv here and there. The focus yet is on explaining pure VL from the ground up, thus working as a guide for the still to upcoming standalone system. A special chapter will show how to integrate VL-nodes into your vvvv projects.
-
