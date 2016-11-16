@@ -87,7 +87,7 @@
 |*IOBox (Color)*: RightDrag Up/Down to change the alpha channel
 |===
 
-=== Selctions
+=== Selections
 [cols="1,5", options="header"] 
 |===
 |Key
