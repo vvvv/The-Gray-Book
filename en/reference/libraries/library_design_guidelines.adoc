@@ -1,10 +1,10 @@
 = Library Design Guidelines
 :experimental:
-:icons: font
 
 During the design of a library a lot of choices have to be made. Be it regarding namings or patterns being used or datatypes that are being exposed. Here is a collection of guidelines that we followed when we created the VL.CoreLib and other libraries we ship with VL. 
 
-icon:heart[2x]
+icon:heart
+
 
 = Namings
 == Categories
