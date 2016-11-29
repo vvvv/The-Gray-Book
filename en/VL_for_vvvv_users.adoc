@@ -34,6 +34,8 @@ Just like in vvvv create an IOBox by pressing the middle mousebutton while makin
 
 Both Pins and IOBoxes can be configured via a middleclick on them. Input Pins can also be given a default value.
 
+Another note on pins is that in vvvv you're used to when removing a link that goes into an input pin of a primitive type (value, string, color, enum) that the input pin will store the last values that came in via the link. This is not happening in VL, where input pins cannot store values.
+
 === Nodes
 In vvvv all nodes look the same. In VL we distinguish between Operation and Process nodes: 
 
