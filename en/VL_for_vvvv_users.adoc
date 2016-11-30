@@ -8,13 +8,14 @@ In vvvv every patch is just a patch. In VL there are different types of patches:
 === The Document Patch
 Every vl document has one toplevel patch that provides an overview of its content. You can always reach it by pressing ALT+P
 
-=== Utility Patches
+=== Group Patches
 * are merely organisational elements in that hey have no purpose other than letting you structure/modularize your program 
 * can define multiple operations which can reference each other as long as no recursive calls are made. 
 * cannot have Fields.  
 * have one Category that applies to all its operations
 
 === Datatype Patches
+* Patch (default), Record or Class
 * define a data type
 * can have Fields to store data
 * can define multiple operations for that datatype
@@ -71,6 +72,12 @@ In VL this is more defined: You need to understand three things:
 === Spreading
 In vvvv every node can automatically be spreaded, meaning the node is executed for every slice on its inputs. This convenience feature is not (yet) available in VL. We're still thinking about implementing something similar though.
 
+=== Bin Size
+Bin Sizes are vvvv's workaround to no having multi-dimensional spreads. As with a Bin Size pin associated with a spreaded pin you can specify how the spreads individual bins are to be interpreted by a node. Since in VL spreads can now contain other spreads the concept of Bin Sizes is no longer necessary.
+
+=== Vectors
+In vvvv there is no difference between a 2/3/4-dimensional vector and a spread with 2/3/4 slices. In VL we have explicit types for vectors, ie: Vector2, Vector3 and Vector4. 
+
 === Framedelay
 In vvvv there were two reasons to use framedelays
 
@@ -87,16 +94,16 @@ Name (Version1 Version2) [Category.Subcategory]
 In vl the main menu hides behind the little gray quad in the topleft corner. 
 
 === The NodeBrowser
-The VL nodebrowser is a totally different beast. See See link:reference/hde/the_nodebrowser.adoc[The NodeBrowser].
+The VL nodebrowser is a totally different beast. See link:reference/hde/the_nodebrowser.adoc[The NodeBrowser].
 
 === Inspektor
-Middleclick a Constant or rightclick on its label -> Configure to bring up the Inspektor for the constant.
+Middleclick a Constant or rightclick on its label -> Configure to bring up the Inspektor for an IOBox, Pad or Input/Output.
 
 === Finder
 There is no finder yet in vl.
 
 === TTY Renderer
-There is no TTY or Console yet in vl.
+There is no TTY or error console yet in vl.
 
 === Docking Patches
 In vl all open patches are docked by default. The order of tabs can be changed by draging tabs with the ALT key pressed. A session of open tabs cannot be saved.
