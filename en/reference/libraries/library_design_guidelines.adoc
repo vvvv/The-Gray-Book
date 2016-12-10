@@ -1,6 +1,4 @@
-=
-Library Design Guidelines
-:experimental:
+= Library Design Guidelines
 
 During the design of a library a lot of choices have to be made. Be it regarding namings or patterns being used or datatypes that are being exposed. Here is a collection of guidelines that we followed when we created the VL.CoreLib and other libraries we ship with VL. In order to provide users of VL with a consistent look/feel/behavior of libraries/nodes we recommend you follow these guidelines for the design of your own libraries.
 
@@ -74,23 +72,23 @@ There is a special category of nodes that are typically called "constructors" as
 Agreed, the boundaries between them are a bit blurry but here is how we go about deciding which naming scheme to use:
 
 === Create
-When you patch your own datatype in VL it comes with a "Create" operation by default. We keep that default for complex datatypes, like a Particle, that are more than containers for a bunch of properties, that have some functionality. In those cases it feels right to see a node named Create [Particle] when we use it in a patch to understand what's happening.
+When you patch your own datatype in VL it comes with a "Create" operation by default. We keep that default for complex datatypes, like eg. Particle, that are more than containers for a bunch of properties in that they have some functionality. In those cases it feels right to see a node named Create [Particle] when we use it in a patch to understand that at this point a particle is being created.
 
 === Join and Split
-If the datatype you create is moreless used as a container for a bunch of properties, it is often useful to have a pair of join/split nodes: The join-node has one input-pin for each property allowing you to create an instance of the datatype while the split-node is its inverse in that it has one output-pin for each property allowing you to split the datatype into its individual components. For those cases we don't use the default "Create" operation but instead rename it to "MyDatatype (Join)" and create a "MyDatatype (Split)" operation that each do nothing more than writing/reading to the internal properties of the datatype.
+If the datatype you create is moreless used as a container for a bunch of properties, it is often useful to have a pair of join/split nodes: The join-node has one input-pin for each property allowing you to create an instance of the datatype while the split-node is its inverse in that it has one output-pin for each property allowing you to split the datatype into its individual components. For those cases we don't use the default "Create" operation but instead rename it to "MyDatatype (Join)" and create a "MyDatatype (Split)" operation that each do nothing more than writing to/reading from the internal properties of the datatype.
 
 .Examples for Join/Split noes
 ==========================
 * Vector2 (Join) takes X and Y as inputs
-* Vector2 (Split) returns X and Y via its outputs
+* Vector2 (Split) returns X and Y as outputs
 * RGBA (Join) takes Red, Green, Blue, Alpha as inputs
-* RGBA (Split) returns Red, Green, Blue, Alpha via its outputs
+* RGBA (Split) returns Red, Green, Blue, Alpha as outputs
 ==========================
 
 === From.. and To..
-Nodes starting in From.. or To.. create and instance of a datatype by converting from a given one to the desired one. It could be argued that we should decide on naming all of those nodes either From.. or To.. for simplicity. But our rational for allowing both is that both variants make sense in terms of where the nodes are defined.
+Nodes starting in "From.." or "To.." create and instance of a datatype by converting from a given one to the desired one. It could be argued that we should decide on naming all of those nodes either "From.." or "To.." for simplicity. But our rational for allowing both is that both variants make sense in terms of where the nodes are defined.
 
-If you have a library called "FooStuff", that defines a datatype "Foo" it could make sense to have the following "construtor" operation for Foo:
+If you have a library called "FooStuff", that defines a datatype "Foo" it could make sense to have the following "constructor" operation for Foo:
 
 - FromBar [Foo]
 
