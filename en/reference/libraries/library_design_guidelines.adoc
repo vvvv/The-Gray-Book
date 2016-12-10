@@ -1,60 +1,122 @@
-= Library Design Guidelines
+=
+Library Design Guidelines
 :experimental:
 
-During the design of a library a lot of choices have to be made. Be it regarding namings or patterns being used or datatypes that are being exposed. Here is a collection of guidelines that we followed when we created the VL.CoreLib and other libraries we ship with VL. 
+During the design of a library a lot of choices have to be made. Be it regarding namings or patterns being used or datatypes that are being exposed. Here is a collection of guidelines that we followed when we created the VL.CoreLib and other libraries we ship with VL. In order to provide users of VL with a consistent look/feel/behavior of libraries/nodes we recommend you follow these guidelines for the design of your own libraries.
 
 = Namings
-== Categories
+== Documents
+The name of the main document of a library should hint at the category the library introduces. If a library introduces more than one categories (like, eg. the VL.CoreLib) choose a broader term that identifies the library.
 
-* Prefer existing Categories over inventing your own
-* Avoid extensive use of Subcategories 
+.Document names
+==========================
+- VL.CoreLib.vl
+- VL.Devices.Leap.vl
+- VL.EditingFramework.vl
+==========================
 
 == Node Names
+A nodes name consists of 3 components:
+
+- Name
+- (Version)
+- [Category]
+
+=== Name
+When choosing the name part of a node follow these rules:
+
 * use CamelCasing, no spaces
 * for process nodes use nouns: Sequencer, FlipFlop, Copier
-* for operation nodes prefer verbs
+* for operation nodes prefer verbs: Map, Copy, Sample
+* avoid node names starting in "As.." like "AsString". Use "To.." or "From.." instead (see below for more rules on To/From nodes)
 
-* avoid node names starting in "As.." like "AsString", use "To.." or "From.." instead
+=== Version
+Versions are optional and most nodes should not have a version. When versions are needed they can also consist of multiple space-separated words. Use the following rules to decide on a nodes version(s):
 
-=== Node Versions
-* use optional versions in round brackets only to denote more specific versions of an already existing node with the same name. i.e. the simpler one of two nodes with the same name should always have no version while the more specific one has a version that describes its speciality
+* need to denote more specific versions of an already existing node with the same name. i.e. the simpler one of two nodes with the same name should always have no version while the more specific one has a version that describes its speciality
 * Versions are used as an alternative to overloads.
 VL does not support function overloading but uses “Versions” instead. So when creating/importing multiple overloads of a function:
 ** first try to provide meaningful unique names
 ** if not possible, try to provide meaningful unique version names
 ** if still not possible, use numbered versions starting with (1). These numbered versions will be hidden in the nodebrowser - differentiation will then be possible via the signature of inputs and outputs
 
-=== Node Tags
-Use any words not yet used in the nodes name, version or category that will help people find the node in the node browser
+=== Category
+Just like a nodes name, the category is obligatory. Subcategories can be created by dot-separated terms. Further follow these rules when deciding about the category of a node:
 
-=== Join/Split as Versions
-For data-types it often makes sense to have a pair of join/split nodes that let you set/get the individual properties that make it. e.g:
+* Prefer existing Categories over inventing your own
+* Avoid excessive use of Subcategories
 
+.Node names
+==========================
+- LFO [Animation]
+- Copier [IO]
+- Map (Range) [Math.Ranges]
+- RGBA (Join) [Color.RGBA]
+- RGBA (Join Vector4) [Color.RGBA]
+==========================
+
+== Node Tags
+Tags are additional search-terms you can equip nodes with that will help people find them in the nodebrowser. The following rules apply:
+
+- a list of lower-case space-separated terms
+- don't use any term that is already part of the nodes name, version or category.
+
+== Create vs. (Join) vs. From...
+There is a special category of nodes that are typically called "constructors" as they create an instance of a datatype. Instead of naming all those nodes "Create" or calling them simply by their datatype name, eg. "Rectangle" we identified 3 different types of such constructor nodes that we each intuitifely want to name differently.
+
+.Constructor names
+==========================
+- Create [Particle]
+- RGBA (Join) [Color.RGBA]
+- FromHSL [Color.RGBA]
+==========================
+
+Agreed, the boundaries between them are a bit blurry but here is how we go about deciding which naming scheme to use:
+
+=== Create
+When you patch your own datatype in VL it comes with a "Create" operation by default. We keep that default for complex datatypes, like a Particle, that are more than containers for a bunch of properties, that have some functionality. In those cases it feels right to see a node named Create [Particle] when we use it in a patch to understand what's happening.
+
+=== Join and Split
+If the datatype you create is moreless used as a container for a bunch of properties, it is often useful to have a pair of join/split nodes: The join-node has one input-pin for each property allowing you to create an instance of the datatype while the split-node is its inverse in that it has one output-pin for each property allowing you to split the datatype into its individual components. For those cases we don't use the default "Create" operation but instead rename it to "MyDatatype (Join)" and create a "MyDatatype (Split)" operation that each do nothing more than writing/reading to the internal properties of the datatype.
+
+.Examples for Join/Split noes
+==========================
 * Vector2 (Join) takes X and Y as inputs
 * Vector2 (Split) returns X and Y via its outputs
 * RGBA (Join) takes Red, Green, Blue, Alpha as inputs
 * RGBA (Split) returns Red, Green, Blue, Alpha via its outputs
+==========================
 
-[NOTE]
-Such join/split nodes must not do anything with the data except setting it to respectively getting it from the internal fields of the datatype.
+=== From.. and To..
+Nodes starting in From.. or To.. create and instance of a datatype by converting from a given one to the desired one. It could be argued that we should decide on naming all of those nodes either From.. or To.. for simplicity. But our rational for allowing both is that both variants make sense in terms of where the nodes are defined.
 
-=== Constructors (Create)
+If you have a library called "FooStuff", that defines a datatype "Foo" it could make sense to have the following "construtor" operation for Foo:
 
+- FromBar [Foo]
 
-=== Converters (From.../To...)
-When to name nodes "From.." or "To..".
+Also the following converter operation could make sense:
 
+- ToBar [Foo]
+
+If two nodes doing exactly the same thing as the two just mentioned would instead be defined in a library called "BarStuff" they'd be named:
+
+- ToFoo [Bar]
+- FromFoo [Bar]
+
+=== ..To.. Converters
 If a converter merely converts between units, like from cycles to radians but the data-type of the input and output pins is the same the node name has to mention both units, like: CyclesToRadians. Since the data-type does not change here even hovering the pins wouldn't give sufficient information to understand what the node is doing.
 
 == Pins
 * use spaces to separate words all starting with upper case
 * avoid using generic names like "Do", "Update", ...
 
+=== Order of Pins
+
 === Inputs
-"Apply" is a reserved word for pin-names and therefore the compilier will complain when a user chooses this name manually for a pin. The reason for this is that there is  a pattern where an "Apply" pin will automatically be created for operations. Like this, whenever we encounter an "Apply" pin we can be sure that this pattern is applied.
+"Apply" is a reserved word for pin-names and therefore the compilier will complain when a user chooses this name manually for a pin. The reason for this is that there is a pattern where an "Apply" pin will automatically be created for operations. Like this, whenever we encounter an "Apply" pin we can be sure that this pattern is applied.
 
 ==== Operations
-Any operation (both utility or member) that has 
+Any operation (both utility or member) that has
 
 * either no output at all
 * or one input named "Input" and one output named "Output" whose type is the same as the type of its "Input" and no further outputs
@@ -88,7 +150,7 @@ In order to keep the number of datatypes a user typically has to deal with at a 
 * Path
 * Spread<T>
 
-Note that in the implementation of a node you can of course use any datatype you want. 
+Note that in the implementation of a node you can of course use any datatype you want.
 
 = Standard Units
 * Color Components (red, green, blue, alpha, hue, saturation, lightness) range from 0 to 1
@@ -96,7 +158,7 @@ Note that in the implementation of a node you can of course use any datatype you
 
 = Patterns
 == Dynamic Pin Counts
-Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing kbd:[Ctrl + +] or kbd:[Ctrl - -] with such a selected node will add/remove inputs accordingly. 
+Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing kbd:[Ctrl + +] or kbd:[Ctrl - -] with such a selected node will add/remove inputs accordingly.
 
 Any operation that has exactly two inputs and one output whose type is the same as the first input gets this functionality automatically.
 
@@ -124,7 +186,7 @@ Still to be defined (see internal issue #1511):
 * simply throw errors as they occur
 * test input ranges to prevent errors (e.g clamp or wrap incoming values to a save range,...). optionally report overflow via an Overflow (Bool) output
 * return Default if operation fails and report Success
-* use try/catch and report errors via a set of standard pins: Success (Bang), Error (Bang) and Error Message (String) 
+* use try/catch and report errors via a set of standard pins: Success (Bang), Error (Bang) and Error Message (String)
 
 == Observables
 If you are dealing with asynchronous datasources - async await, task, events - always hand them to your users as Observables. You might, for example, use Observable.FromEventPattern....
