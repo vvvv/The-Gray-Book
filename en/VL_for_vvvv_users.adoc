@@ -43,6 +43,8 @@ In vvvv all nodes look the same. In VL we distinguish between Operation and Proc
 * Process nodes hold state (FlipFlop, LFO, ...)
 * Operation nodes do not hold state (Length, Separate, ...)
 
+== Evaluation
+
 == Language
 === Values
 In vvvv there is only one numerical type. It is called simply "Value" and it is internally represented by a Float64. Any output of type Value can be connected to any input of type value even though they may have different subtypes, like Integer, Boolean, or Bang. 
