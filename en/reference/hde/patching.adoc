@@ -113,10 +113,10 @@
 |Hover a link to show its tooltip
 
 |kbd:[Ctrl]
-|When finishing a connection: force to non-accepting datahub
+|When finishing a connection: force the connection to a datahub that would otherwise not accept it
 
 |kbd:[Shift]
-|When making a marquee selection: include links despite nodes or pads are part of selection
+|When making a marquee selection: include links in the selection despite nodes or pads are part of selection already
 
 |
 |MiddleClick when starting or finishing a connection on a pad or pin to immediately start a new connection from the same source-hub
@@ -124,7 +124,18 @@
 |
 |MiddleClick in the patch to finish a connection with an IOBox
 
+|
 |DoubleClick in the patch to finish a connection with an input or output pin
+
+|
+|DoubleClick a link to insert a node or pad
+
+|
+|RightClick a selected link to delete it
+
+|
+|RightClick an un-selected link to bring up its ContextMenu
+
 |===
 
 === Moving Nodes
@@ -134,6 +145,6 @@
 |Mouse
 
 |kbd:[Ctrl]
-|Cross region borders
+|Press kbd:[Ctrl] while draging a node to move it out of or into a region
 |===
 
