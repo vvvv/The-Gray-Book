@@ -122,10 +122,11 @@
 |MiddleClick when starting or finishing a connection on a pad or pin to immediately start a new connection from the same source-hub
 
 |
-|MiddleClick in the patch to finish a connection with an IOBox
+|Finish a connection by:
 
-|
-|DoubleClick in the patch to finish a connection with an input or output pin
+- MiddleClick in the patch to create an IOBox
+
+- DoubleClick in the patch to create input or output pin
 
 |
 |DoubleClick a link to insert a node or pad
