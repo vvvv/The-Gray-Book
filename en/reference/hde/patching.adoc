@@ -138,6 +138,18 @@
 
 |===
 
+=== Creating Nodes
+[cols="1,5", options="header"] 
+|===
+|Key
+|Mouse
+
+|
+|DoubleClick in an empty area of a patch to bring up the NodeBrowser where you can choose to create a node. 
+
+Note that you can also DoubleClick an existing node to replace it with another one while keeping links to/from it that also make sense on the new node.
+|===
+
 === Moving Nodes
 [cols="1,5", options="header"] 
 |===
@@ -148,3 +160,18 @@
 |Press kbd:[Ctrl] while draging a node to move it out of or into a region
 |===
 
+=== Assigning Nodes
+[cols="1,5", options="header"] 
+|===
+|Key
+|Mouse
+
+|
+|Select a group of nodes, links or pads and then rightclick in the patch to bring up the ContextMenu where you can choose to assign the selection to:
+
+- one of the existing operations
+
+- a new operation
+
+or "pop" it which means to remove any assignments.
+|===
