@@ -6,9 +6,11 @@ There are two different Loops in VL:
 * ForEach: executes for each slice of entering the loop via a splicer. If multiple spreads with different counts are connected via splicers, the lowest of their slice-counts is used.
 
 There are 3 different ways of getting data into a loop
+
 == Direct Connection
 
 == Splicer
+SpreadMin behavior!
 
 == Accumulator
 
