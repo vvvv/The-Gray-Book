@@ -75,7 +75,7 @@ Agreed, the boundaries between them are a bit blurry but here is how we go about
 When you patch your own datatype in VL it comes with a "Create" operation by default. We keep that default for complex datatypes, like eg. Particle, that are more than containers for a bunch of properties in that they have some functionality. In those cases it feels right to see a node named Create [Particle] when we use it in a patch to understand that at this point a particle is being created.
 
 === Join and Split
-If the datatype you create is moreless used as a container for a bunch of properties, it is often useful to have a pair of join/split nodes: The join-node has one input-pin for each property allowing you to create an instance of the datatype while the split-node is its inverse in that it has one output-pin for each property allowing you to split the datatype into its individual components. For those cases we don't use the default "Create" operation but instead rename it to "MyDatatype (Join)" and create a "MyDatatype (Split)" operation that each do nothing more than writing to/reading from the internal properties of the datatype.
+If the datatype you create is more or less used as a container for a bunch of properties, it is often useful to have a pair of join/split nodes: The join-node has one input-pin for each property allowing you to create an instance of the datatype while the split-node is its inverse in that it has one output-pin for each property allowing you to split the datatype into its individual components. For those cases we don't use the default "Create" operation but instead rename it to "MyDatatype (Join)" and create a "MyDatatype (Split)" operation that each do nothing more than writing to/reading from the internal properties of the datatype.
 
 .Examples for Join/Split noes
 ==========================
@@ -84,6 +84,11 @@ If the datatype you create is moreless used as a container for a bunch of proper
 * RGBA (Join) takes Red, Green, Blue, Alpha as inputs
 * RGBA (Split) returns Red, Green, Blue, Alpha as outputs
 ==========================
+
+[NOTE]
+===============================
+For now you'll have to patch such join/split nodes manually. When you do so you'll notice an unwanted Input pin on the Join node and an unwanted Output pin on the Split node which you'll have to ignore for now. Later there'll be an option to get join/split nodes automatically for each datatype patch which will not have those unwanted pins.
+===============================
 
 === From.. and To..
 Nodes starting in "From.." or "To.." create and instance of a datatype by converting from a given one to the desired one. It could be argued that we should decide on naming all of those nodes either "From.." or "To.." for simplicity. But our rational for allowing both is that both variants make sense in terms of where the nodes are defined.
