@@ -66,10 +66,10 @@
 ... link:reference/deployment/exporting_executables.adoc[Exporting Executables]
 ... link:reference/deployment/exporting_libraries.adoc[Exporting Libraries]
 . link:VL_for_vvvv_users.adoc[VL for VVVV users]
-.. link:VL_for_vvvv_users/nodes.adoc[Nodes]
 .. link:VL_for_vvvv_users/user-interface.adoc[User Interface]
-. link:GLOSSARY.adoc[Glossary]
-.. link:VL_for_vvvv_users/patching.adoc[Patching]
 .. link:VL_for_vvvv_users/documentstructure.adoc[DocumentStructure]
+.. link:VL_for_vvvv_users/patching.adoc[Patching]
 .. link:VL_for_vvvv_users/evaluation.adoc[Evaluation]
+.. link:VL_for_vvvv_users/nodes.adoc[Nodes]
+. link:GLOSSARY.adoc[Glossary]
 
