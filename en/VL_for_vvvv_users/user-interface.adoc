@@ -1,5 +1,5 @@
 === Main Menu
-In VL the Main Menu hides behind the little gray quad in the topleft corner. Next to it is the Document Menu with entries concerning the active document. 
+There is no middleclick main menu in VL. Instead all main functions hide behind the little gray quad in the topleft corner. Next to the quad menu is the Document Menu with entries concerning the active document. 
 
 === The NodeBrowser
 The VL nodebrowser is a totally different beast. See link:reference/hde/the_nodebrowser.adoc[The NodeBrowser].
