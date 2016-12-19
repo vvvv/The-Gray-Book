@@ -1,2 +1,4 @@
 Evaluation in vvvv is framebased. Each frame the whole graph is being evaluated starting from sinks, like Renderers or Writers.
 
+strict calls now, vs. pull-logic (switch node vs. if-region)
+
