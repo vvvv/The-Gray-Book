@@ -16,7 +16,7 @@ Instead of having one node with an enum to choose between different map-modes, i
 * Wrap
 * Map
 
-And then there are distinct nodes for applying a simple map in combination with a specific map-mode:
+And besides the simple Map node there are distinct nodes for applying map in combination with a specific map-mode:
 
 * MapClamp
 * MapMirror
