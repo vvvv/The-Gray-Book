@@ -1,0 +1,23 @@
+=== Cons
+In vvvv you can connect single values as well as spreads to a cons node. Since VL distinguishes between single values and spreads (see the section on Spreads above) there are now two nodes:
+
+* Cons: combines single values to a spread
+* Concat: concatenates multiple spreads to a single spread
+
+In case you want to combine single values with spreads you first have to convert the single values to spreads using the ToSpread node. See "Adding Pins to Nodes" above to learn how to increase/decrease the pin count for those nodes. 
+
+=== Map and MapRange
+Instead of having one node with an enum to choose between different map-modes, in vl there are now distinct nodes for doing only:
+
+* Clamp
+* Mirror
+* Wrap
+* Map
+
+And then there are distinct nodes for applying a simple map in combination with a specific map-mode:
+
+* MapClamp
+* MapMirror
+* MapWrap
+
+
