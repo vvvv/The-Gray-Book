@@ -1,5 +1,3 @@
 = VL for vvvv users
 
 At first glance VL looks very similar to vvvv: There are gray nodes, links and IOBoxes and you can basically work with those a usual. But of course it wouldn't make much sense to create a new visual programming language if it was just a copy of vvvv. So we tried to keep the good stuff and added a bunch of new features. In this chapter we try to list concepts that look and sound familiar to vvvv but are in fact different in VL.
-
-WARNING: Images missing!
