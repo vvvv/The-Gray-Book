@@ -65,7 +65,7 @@
 .. link:reference/deployment/deployment.adoc[Deployment]
 ... link:reference/deployment/exporting_executables.adoc[Exporting Executables]
 ... link:reference/deployment/exporting_libraries.adoc[Exporting Libraries]
-. link:VL_for_vvvv_users.adoc[VL for vvvv users]
-. link:nodes.adoc[Nodes]
+. link:VL_for_vvvv_users.adoc[VL for VVVV users]
+.. link:VL_for_vvvv_users/nodes.adoc[Nodes]
 . link:GLOSSARY.adoc[Glossary]
 
