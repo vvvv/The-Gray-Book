@@ -1,0 +1,23 @@
+== Patches
+In vvvv every patch is just a patch. In VL there are different types of patches:
+
+=== The Document Patch
+Every vl document has one toplevel patch that provides an overview of its content. You can always reach it by pressing ALT+P
+
+=== Group Patches
+* are merely organisational elements in that hey have no purpose other than letting you structure/modularize your program 
+* can define multiple operations which can reference each other as long as no recursive calls are made. 
+* cannot have Fields.  
+* have one Category that applies to all its operations
+
+=== Datatype Patches
+* Patch (default), Record or Class
+* define a data type
+* can have Fields to store data
+* can define multiple operations for that datatype
+
+== Project Structure
+=== .v4p versus .vl
+In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
+
+

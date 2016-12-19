@@ -69,4 +69,6 @@
 .. link:VL_for_vvvv_users/nodes.adoc[Nodes]
 . link:user-interface.adoc[User Interface]
 . link:GLOSSARY.adoc[Glossary]
+. Patching
+. link:documentstructure.adoc[DocumentStructure]
 
