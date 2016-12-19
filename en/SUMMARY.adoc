@@ -67,5 +67,6 @@
 ... link:reference/deployment/exporting_libraries.adoc[Exporting Libraries]
 . link:VL_for_vvvv_users.adoc[VL for VVVV users]
 .. link:VL_for_vvvv_users/nodes.adoc[Nodes]
+. link:user-interface.adoc[User Interface]
 . link:GLOSSARY.adoc[Glossary]
 
