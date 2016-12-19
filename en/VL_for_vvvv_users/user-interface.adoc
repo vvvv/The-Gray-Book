@@ -17,5 +17,5 @@ There is no TTY or error console yet.
 In VL all open patches are docked by default. A session of open tabs cannot be saved.
 
 === Open a patch
-When in vvvv you'd rightclick a node to open its corresponding patch in VL you middleclick it instead as you would in a browser to open a link in a new tab. 
+Nodes that have a little right-pointing arrow symbol can be entered with a middleclick or rightclick -> Open.
 
