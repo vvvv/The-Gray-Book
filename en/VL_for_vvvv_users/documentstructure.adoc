@@ -1,7 +1,8 @@
 == .v4p versus .vl
 In vvvv a each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches. 
 
-Then there are 3 different types of patches in vvvv:
+Then there are 3 different types of patches in vl:
+
 * Datatype Patches
 * The Document Patch
 * Group Patches
