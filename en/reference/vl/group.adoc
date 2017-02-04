@@ -1,0 +1,15 @@
+Groups allow you to organize operations and datatypes in a document. Instead of placing all elements directly in a Document Patch you can use groups to structure your program.
+
+*Image:The VL.CoreLib organize in groups*
+
+Create a group via the Nodebrowser and give it a name. By default a group opens a new category with its name. Placing operations or datatypes within a group thus automatically sets their category accordingly.
+
+*Image:Name of group spawns new subcategory for all its elements*
+
+Changing a groups name therefore automatically changes the category for all the elements it contains (as long as they don't override it)
+
+In the patch tabs group patches can be recognized by their icon.
+
+*Image:The group 'Foo' among other tabs*
+
+Groups can be nested.
