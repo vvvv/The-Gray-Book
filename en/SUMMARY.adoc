@@ -1,6 +1,5 @@
 = Summary
 
-. link:README.md[Introduction]
 . link:README.adoc[Introduction]
 . link:introduction/vl/_language.md[The Language]
 .. link:introduction/vl/lo___lookingAtThings.adoc[Looking At Things]
@@ -60,7 +59,6 @@
 ... link:reference/vl/loops.adoc[Loops]
 ... link:reference/vl/groups.adoc[Groups]
 ... link:reference/vl/namings.adoc[Identifier Naming Conventions]
-... Regions
 .. link:reference/libraries/libraries.adoc[Libraries]
 ... link:reference/libraries/standard_libraries.adoc[The VL.CoreLib]
 ... link:reference/libraries/library_design_guidelines.adoc[Library Design Guidelines]
