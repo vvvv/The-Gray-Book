@@ -1,5 +1,3 @@
 {
-    "structure": {
-        "readme": "README.adoc"
-    }
+    "structure.readme": "README.adoc"
 }
