@@ -1,6 +1,15 @@
-The blank canvas we can place nodes onto. There are different types of patches:
+Patches are where we put nodes. There are different types of patches:
 
 * Document Patch
 * Datatype Patch 
-* Group Patch 
+* link:/en/reference/vl/groups.adoc[Group Patch]
+
+== Datatype Patch
+Patch that defines a datatype. Contains at least a _Create_ and an _Update_ method and may contain Properties. Can be one of 3 types:
+
+* Patch (default): to define a Process Node
+* Record: to define an immutable datatype
+* Class: to define a mutable datatype
+
+
 

@@ -39,7 +39,7 @@ Patch that defines a datatype. Contains at least a _Create_ and an _Update_ meth
 
 * Patch (default): to define a Process Node
 * Record: to define an immutable datatype
-* Class: to define a mutabel datatype
+* Class: to define a mutable datatype
 
 == Record
 A patch can be set to be a Record, meaning that it defines an immutable Datatype
