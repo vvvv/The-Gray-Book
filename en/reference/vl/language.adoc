@@ -18,7 +18,7 @@ Patches can also contain _regions_. A region defines a new computational context
 
 Nodes and regions can have inputs and outputs calles _pins_. A pin can be defined in an operation or region by a _pad_.
 
-Static data can be entered into an operation using _constants_. Constants are little editors for basic types like numbers, text, color…
+Static data can be entered into an operation using _IOBoxes_. IOBoxes are little editors for basic types like numbers, text, color…
 
 Links transport data from outputs to inputs. Therefore they define the data flow and execution order of the nodes in an operation.
 
