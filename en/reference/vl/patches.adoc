@@ -1,0 +1,6 @@
+The blank canvas we can place nodes onto. There are different types of patches:
+
+* Document Patch
+* Datatype Patch 
+* Group Patch 
+
