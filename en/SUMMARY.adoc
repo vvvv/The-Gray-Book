@@ -21,6 +21,7 @@
 ... link:introduction/vl/mut2.md[DataFlow And Mutability]
 ... link:introduction/vl/generics.md[Generics]
 ... link:introduction/vl/subtypes.md[Sub Types]
+////
 .. link:introduction/vl/patchDef.md[Patches as Defining Constructs]
 ... link:introduction/vl/operationDef.md[Operation Definitions]
 ... link:introduction/vl/utilityPatches.md[Utility Patches]
@@ -41,6 +42,7 @@
 .... link:introduction/vl/operationRegions.md[Operation Regions]
 ... link:introduction/vl/properties.md[Fields]
 .. link:introduction/vl/implAdaptive.md[Implementing an Adaptive Operation]
+////
 . link:reference.adoc[Reference]
 .. link:reference/hde/gui.adoc[The Development Environment]
 ... link:reference/hde/project_structure.adoc[Project Structure]
