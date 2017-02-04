@@ -49,10 +49,12 @@
 ... link:reference/hde/navigatinga_project.adoc[Navigating a Project]
 ... link:reference/hde/the_nodebrowser.adoc[The NodeBrowser]
 ... link:reference/hde/patching.adoc[Patching]
+////
 ... link:reference/hde/debugging.adoc[Debugging]
 ... link:reference/hde/profiling.adoc[Profiling]
 ... link:reference/hde/version_control.adoc[Version Control]
 ... link:reference/hde/globals_settings.adoc[Global Settings]
+////
 .. link:reference/vl/language.adoc[The Language]
 ... link:reference/vl/patches.adoc[Patches]
 ... link:reference/vl/nodes.adoc[Nodes]
@@ -66,9 +68,11 @@
 ... link:reference/libraries/library_design_guidelines.adoc[Library Design Guidelines]
 ... link:reference/libraries/importing_libraries.adoc[Importing Libraries]
 ... link:reference/libraries/nugets.adoc[Nugets]
+////
 .. link:reference/deployment/deployment.adoc[Deployment]
 ... link:reference/deployment/exporting_executables.adoc[Exporting Executables]
 ... link:reference/deployment/exporting_libraries.adoc[Exporting Libraries]
+////
 . link:VL_for_vvvv_users/VL_for_vvvv_users.adoc[VL for VVVV users]
 .. link:VL_for_vvvv_users/user-interface.adoc[User Interface]
 .. link:VL_for_vvvv_users/documentstructure.adoc[DocumentStructure]
