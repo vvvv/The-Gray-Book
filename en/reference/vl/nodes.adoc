@@ -12,6 +12,8 @@ Record and class nodes are part of a record or class respectively, on which they
 ## Process Nodes
 A process node represents a single instance of a patch. The name _Process_ comes from the fact that it can be understood like a little machine that continues to run (update) after it was created and saves its state from one frame to the next.
 
+See also link:/en/reference/vl/patches.adoc[Datatype Patch].
+
 ---
 
 Any node that spots an arrow icon has a patch behind it which can be reached by a simple middle-click or via the context-menu: Open.
