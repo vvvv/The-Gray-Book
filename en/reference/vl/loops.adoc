@@ -51,7 +51,7 @@ Use an outgoing accumulator to receive the final value as modified by all iterat
 There are three special Pins which you can create only inside loops via the NodeBrowser:
 
 ## Index 
-Returns the current loop iteration index.
+Returns the current loop iteration number.
 
 ## Break
 Set it to true to break out of the loop at any time before its actual iteration count is reached. Note that the breaking iteration is still fully executed, resulting in output splicers to include the result and accumulators to be modified by this iteration.
