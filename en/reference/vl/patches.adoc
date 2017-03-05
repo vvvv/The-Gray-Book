@@ -4,7 +4,7 @@ Patches are where we put nodes. There are different types of patches:
 * Datatype Patch 
 * link:/en/reference/vl/groups.adoc[Group Patch]
 
-== Document Patch
+# Document Patch
 Every .vl document has at least one patch, the document patch which gives an overview of the content in the document. The document patch of the active document can always be reached via the shortcut ALT+P.
 
 *Image:Section of the document patch of VL.CoreLib.vl*
@@ -15,7 +15,7 @@ The document patch can set or omit a base category.
 
 *Image:Document base category set to 'Foo'*
 
-== Datatype Patch
+# Datatype Patch
 The most common type of patch is a datatype patch. It roughly corresponds to what other programming languages call a "class". Every datatype patch has a corresponding type-definition in the document patch. 
 
 There are two ways to create a new datatype patch:
