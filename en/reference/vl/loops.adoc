@@ -26,7 +26,7 @@ Multiple spreads can go into the same loop via splicers. In case of a ForEach lo
 
 In case of a classic Loop the iteration count determines the number of iterations ignoring the slice-counts of the spreads coming in via splicers. When the iteration count is higher than a spreads slice-count, slices of the spread are being repeatedly accessed with the loops index taken modulo the spreads slice-count.
 
-*Image:A classic loop has its Iteration Count set to  and receives a spread with 2 slices and another one with 3 slices via spliers causing it to execute 5 times.*
+*Image:A classic loop has its Iteration Count set to 5 and receives a spread with 2 slices and another one with 3 slices via splicers causing it to execute 5 times.*
 
 By default splicers have no names. Sometimes it may help to label a splicer for clarity in which case you simply doubleclick the area right of it to enter a name. 
 
@@ -53,7 +53,7 @@ Use an outgoing accumulator to receive the final value as modified by all iterat
 There are three special Pins which you can create only inside loops via the NodeBrowser:
 
 * _Index_: Returns the current loop iteration count
-* _Break_: Set it to true to break out of the loop at any time before its actual iteration count is reached. Note that the breaking iteation is still fully executed and part of the output spread! To then find out if a loop executed to the end or it was interrupted by a break, the _Break_ output can be tested.
+* _Break_: Set it to true to break out of the loop at any time before its actual iteration count is reached. Note that the breaking iteration is still fully executed and part of the output spread! To then find out if a loop executed to the end or it was interrupted by a break, the _Break_ output can be tested.
 * _Keep_: Set it to true or false in each iteration to specify whether results of this iteration will be included in a spread returned by an outgoing splicer.
 
 == Other Loops
