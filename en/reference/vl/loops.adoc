@@ -52,9 +52,18 @@ Use an outgoing accumulator to receive the final value as modified by all iterat
 
 There are three special Pins which you can create only inside loops via the NodeBrowser:
 
-* _Index_: Returns the current loop iteration count
-* _Break_: Set it to true to break out of the loop at any time before its actual iteration count is reached. Note that the breaking iteration is still fully executed and part of the output spread! To then find out if a loop executed to the end or it was interrupted by a break, the _Break_ output can be tested.
-* _Keep_: Set it to true or false in each iteration to specify whether results of this iteration will be included in a spread returned by an outgoing splicer.
+=== Index 
+Returns the current loop iteration count
+
+=== Break
+Set it to true to break out of the loop at any time before its actual iteration count is reached. Note that the breaking iteration is still fully executed, resulting in output splicers to include the result and accumulators to be modified by this iteration.
+
+To find out if a loop executed to the end or it was interrupted by a break, the _Break_ output can be tested.
+
+=== Keep
+Set it to true or false in each iteration to specify whether results of this iteration will be included in a spread returned by an outgoing splicer.
+
+Note that the keep has no influence on accumulators, meaning that accumulators will still be changed for iterations that are not 'kept'.
 
 == Other Loops
 === While 
