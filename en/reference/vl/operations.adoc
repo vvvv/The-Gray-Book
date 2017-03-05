@@ -14,13 +14,33 @@ Using the term "operation" alone can be ambiguous if not from the context it wil
 *Image:A member operation definition and its application as a node*
 
 ## Static operation definitions
-is generic
+Static operation definitions can be created directly in a document patch or in a group patch. 
 
+By default static operations have their _Is Generic_ property set to true. Disabling it shows errors for all inputs and outputs of the operation whose datatype is not specified. 
 
 ## Member operation definitions
+Any operation defined as part of a datatype patch is a member operation. 
+
+Member operations are not surrounded by a rectangular definition region because they can interact with each other via pads and can in fact be quite distributed over a patch which would potentially result in many overlapping regions in a patch. Therefore instead member operations are distinguished by color.
+
+*Image:Two member operations exchanging data via a pad*
 
 # Operation Applications
 As mentioned above the term _operation application_ is synonymous with the term _node_ and therefore we're here referring you to the chapter link:/en/reference/vl/nodes.adoc[Nodes] for further details.
+
+# Operation Signature 
+The signature of an operation comprises of its input- and output-pins and defines the order in which they show up on corresponding nodes. 
+
+For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the patch explorer.
+
+*Image:Signature of a static and a member operation*
+
+By default the order of pins is defined by their left-to-right placement in the patch. To override that behavior uncheck the "pin order" toggle and arrange the pins by drag-dropping them directly in the signature. 
+
+Doubleclicking a pins name allows you to rename it. A middle-click on a pin allows you to annotate it with a type. 
+
+
+
 
 
 
