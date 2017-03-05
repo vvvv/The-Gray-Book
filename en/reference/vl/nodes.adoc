@@ -1,6 +1,6 @@
 Nodes are the main building blocks of a patch. There are different types of nodes:
 
-*Image:Static Operation node, process node, record node, class class node*
+*Image:Static Operation node, process node, record node, class node*
 
 ## Operation Nodes
 Operation nodes are nodes representing a single operation.
