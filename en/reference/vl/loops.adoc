@@ -32,8 +32,9 @@ By default splicers have no names. Sometimes it may help to label a splicer for 
 
 === Accumulator
 
-There are 2 different ways of getting data into a loop. They work for both the classic and the ForEach loop:
-Accumulators allow you to hand data over between iterations of a loop. Once initialized from outside of the region, the accumulator can be accessed, modified and passed on in each iteration of a loop. The final value is then available via the accumulator output.
+Accumulators allow you to hand data over between iterations of a loop. Once initialized from outside of the region, the accumulator can be accessed and modified in each iteration and is then passed on to the next iteration of a loop. The final value is then available via the accumulator output.
+
+An accumulator can thus be understood as a variable declared outside and then modified in each iteration of a loop. 
 
 *Image:An accumulator is modified in each iteration.*
 
