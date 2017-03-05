@@ -1,0 +1,26 @@
+There are two different types of operations in vl:
+
+- Static operations
+- Member operations
+
+While _static_ operations are on their own, operating only on data they are being fed with, the term _member_ refers to the fact that those operations belong to and operate on a datatype.
+
+# Definition vs. Application
+
+Using the term "operation" alone can be ambiguous if not from the context it will be clear whether we actually mean an "operation definition" or an "application of the operation definition" which again is synonymous with "node". 
+
+*Image:A static operation definition and its application as a node*
+
+*Image:A member operation definition and its application as a node*
+
+## Static operation definitions
+is generic
+
+
+## Member operation definitions
+
+# Operation Applications
+As mentioned above the term _operation application_ is synonymous with the term _node_ and therefore we're here referring you to the chapter link:/en/reference/vl/nodes.adoc[Nodes] for further details.
+
+
+
