@@ -10,7 +10,7 @@ There are 3 different ways of getting data into a loop. All of them work for bot
 
 === Direct Connection
 
-Data can be linked directly into a loop which results in each of the loops iterations accessing to the same data.
+Data can be linked directly into a loop which results in each of the loops iterations receiving the same data.
 
 *Image:A direct connection into a loop region*
 
