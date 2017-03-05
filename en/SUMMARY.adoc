@@ -57,11 +57,13 @@
 ////
 .. link:reference/vl/language.adoc[The Language]
 ... link:reference/vl/patches.adoc[Patches]
+... link:reference/vl/operations.adoc[Operations]
 ... link:reference/vl/nodes.adoc[Nodes]
 ... link:reference/vl/links.adoc[Links]
 ... link:reference/vl/properties.adoc[Properties]
 ... link:reference/vl/loops.adoc[Loops]
 ... link:reference/vl/groups.adoc[Groups]
+... link:reference/vl/delegates.adoc[Delegates]
 ... link:reference/vl/namings.adoc[Identifier Naming Conventions]
 .. link:reference/libraries/libraries.adoc[Libraries]
 ... link:reference/libraries/standard_libraries.adoc[The VL.CoreLib]
