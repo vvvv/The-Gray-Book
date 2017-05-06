@@ -1,24 +1,24 @@
-# Navigating a Project
+= Navigating a Project
 
 A project in VL typically consists of a single .vl document that holds one ore more patches. In addition a document can depend on other documents or Nugets whose nodes it can access.
 
 In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
 
-# Active Document
-## Dependencies
+= Active Document
+== Dependencies
 Click the active documents filename in the menubar to manage its dependencies. There are three different types of dependencies:
 
 * Nugets
 * Files
 
-### Nugets
+=== Nugets
 Navigate to Nugets to see a list of all available nugets (and their versions). Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document.
 
 By rightclicking a nuget you'll have access to all nodes in that package via the nodebrowser in that document. 
 
 In the "Other" section you find all nugets that are not relevant for VL in that they don't expose nodes. Selecting them does not do anything to your document for now. 
 
-### Files
+=== Files
 In addition to nugets you can also reference individual files of the following types:
 
 * .vl
@@ -27,7 +27,7 @@ In addition to nugets you can also reference individual files of the following t
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
-### Forward
+=== Forward
 In this section you see a listing of all nugets and files combined. Here you can specify if the nodes of a specific dependency will be forwarded or not.
 
 By default if you add a dependency to a document you get only the nodes the dependency exposes directly. Dependencies can depend on other dependencies which you don't see by default. 
