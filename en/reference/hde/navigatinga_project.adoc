@@ -6,7 +6,7 @@ In the main menubar you always see the filename of the document you're currently
 
 = Active Document
 == Dependencies
-Click the active documents filename in the menubar to manage its dependencies. There are three different types of dependencies:
+Click the active documents filename in the menubar to manage its dependencies. There are two different types of dependencies:
 
 * Nugets
 * Files
