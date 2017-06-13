@@ -16,7 +16,7 @@ One VL document A can reference another VL document B to use its data types and 
 
 Patches can also contain _regions_. A region defines a new computational context. There are different kinds of regions.
 
-Nodes and regions can have inputs and outputs calles _pins_. A pin can be defined in an operation or region by a _pad_.
+Nodes and regions can have inputs and outputs called _pins_. A pin can be defined in an operation or region by a _pad_.
 
 Static data can be entered into an operation using _IOBoxes_. IOBoxes are little editors for basic types like numbers, text, color…
 
