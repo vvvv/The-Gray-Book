@@ -14,25 +14,25 @@ The default library of VL that provides nodes and types for the most basic patch
 |3d primitives like Vector3, Box, Sphere,... and 3d transformation and collision nodes. Further any 3d related math nodes.
 
 |*Adaptive*
-|Nodes that can operate on different datatypes, like a + [Adaptive] that can operate on numbers, strings, colors ... or a Length [Adaptive] that works for strings and vectors.
+|Nodes that can operate on different datatypes, like a + [Adaptive] that can operate on numbers, strings, colors ... or a Length [Adaptive] that works for 2D and 3D vectors.
 
 |*Animation*
 |Timebased nodes like time-generators (LFO, Stopwatch, ...) and filters (Damper, Oscillator, ...). Also has a subcategory *FrameBased* that contains similar nodes that operate framebased instead.
 
 |*Collections*
-|Contains most notably the Spread, but also other simple collections like the Dictionary and Queue.
+|Contains most notably the Spread, but also other simple collections like the Sequence, Dictionary and HashSet.
 
 |*Color*
-|The RGBA color type and operations to convert to/from different color spaces. 
+|Contains the RGBA color type and operations to convert to/from different color spaces. 
 
 |*Control*
 |Nodes to patch control flow, like FlipFlop, MonoFlop,...
 
 |*Devices*
-|Mouse, Keyobard and Touch nodes and nodes that represent a specific hardware product that interfaces with the VL, like Leap, TheEyeTribe,...
+|Nodes that represent a specific hardware product that interfaces with the VL, like Leap, TheEyeTribe,...
 
 |*IO*
-|Nodes for file IO, Path (directory, filename) and Stream handling. Further nodes that implement input/output protocols and standards in subcategories:
+|Mouse, Keyobard and Touch nodes as well as nodes for file IO, Path (directory, filename) and Stream handling. Further nodes that implement input/output protocols and standards in subcategories:
 * *IO.Network* for UDP, TCP,...
 * *IO.OSC* OpenSoundControl protocol
 * *IO.TUIO* Tangible User Interface Objects protocol
@@ -45,9 +45,15 @@ The default library of VL that provides nodes and types for the most basic patch
 |*Primitive*
 |Contains the primitive datatypes, like Bool, Byte, Integer32/64 Float32/64, Char, String
 
+|*Reactive*
+|Nodes for reactive programming
+
 |*System*
-|DateTime
+|DateTime,..
 
 |*Text*
 |TypeWriter
+
+|*XML*
+|Nodes for XML and JSON parsing and handling
 |===
