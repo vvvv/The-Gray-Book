@@ -1,178 +1,170 @@
 = Patching
 :experimental:
 
-== Keyboard Only Shortcuts
-[cols="1,5", options="header"] 
+NOTE: Middleclick alternative: kbd:[ALT] + leftclick
+
+[cols="1,1", options="header"] 
 |===
-|Shortcut
 |Description
+|Action
 
-|kbd:[Ctrl + S]
 |Save active document
+|kbd:[Ctrl + S]
 
-|kbd:[Ctrl + P]
 |New patch
+|kbd:[Ctrl + P]
 
+|Create new patch and place node at cursor
 |kbd:[Ctrl + Shift + P]
-|Create node of new patch at cursor
 
-|kbd:[Ctrl + L]
-|Align selected nodes
-
-|kbd:[Ctrl + Shift + L]
-|Evenly distribute selected nodes between left/top-most and right/bottom-most node in selection
-
-|kbd:[Ctrl + ALT + L]
-|Evenly distribute selected nodes taking the gap between the left/top-most two nodes as a measure for the rest
-
-|kbd:[Ctrl + E]
 |Remove Errors
-
-|kbd:[Ctrl + +]
-|Increase count of input pins for nodes like +, Cons, ...
-
-|kbd:[Ctrl + -]
-|Decrease count of input pins for nodes like +, Cons, ...
-
-|kbd:[Arrows]
-|Move selected nodes
-
-|kbd:[Ctrl + Arrows]
-|Move selected nodes faster
+|kbd:[Ctrl + E]
 |===
 
-== Mouse + Keyboard Actions
+=== Selecting elements in a patch
+[cols="1,1", options="header"] 
+|===
+|Description
+|Action
+
+|Select an Element
+|left click
+
+|Add an element to the selection
+|kbd:[Ctrl] + leftclick
+
+|Force to include links in a marquee selection despite nodes or pads are already part of it
+|kbd:[Shift]
+|===
+
+=== Nodes
+[cols="1,1", options="header"] 
+|===
+|Description
+|Action
+
+|Bring up the NodeBrowser to choose node to create
+|Double leftclick in an empty area of a patch or on a link
+
+|Replace a node
+|Double leftclick it to bring up the NodeBrowser and choose a different node. You may need to press ESC to remove existing choices
+
+|Move a node (or selection of nodes) into or out of a region
+|Press kbd:[SPACE] while draging a node
+
+|Assign a node to an operation
+|Rightclick -> Assign -> _operation_
+
+|Remove the operation-assignment of a node
+|Rightclick -> Assign -> Pop
+
+|Align selected nodes
+|kbd:[Ctrl + L]
+
+|Evenly distribute selected nodes between left/top-most and right/bottom-most node in selection
+|kbd:[Ctrl + Shift + L]
+
+|Evenly distribute selected nodes taking the gap between the left/top-most two nodes as a measure for the rest
+|kbd:[Ctrl + ALT + L]
+
+|Increase count of input pins for nodes like +, Cons, ...
+|kbd:[Ctrl + +]
+
+|Decrease count of input pins for nodes like +, Cons, ...
+|kbd:[Ctrl + -]
+
+|Move selected nodes
+|kbd:[Arrows]
+
+|Move selected nodes faster
+|kbd:[Ctrl + Arrows]
+|===
 
 === IOBoxes
-
-[cols="1,5", options="header"] 
+[cols="1,1", options="header"] 
 |===
 |Key
 |Mouse
 
-|kbd:[ALT]
-|RightClick to reset to default
+|Reset to default
+|kbd:[ALT] + rightclick
 
-|
-|Double leftclick to edit value
+|Edit the value
+|Double leftclick
 
-|
-|*IOBox (Value)*: RightDrag Up/Down to change value
+|Edit *IOBox (Value)*
+|Rightdrag up/down to change value
 
-|kbd:[Ctrl]
-|*IOBox (Value)*: RightDrag Up/Down to change value with with stepsize divided by 10
+|Edit *IOBox (Value)*
+|kbd:[Ctrl] + Rightdrag up/down to change value with stepsize divided by 10
 
-|kbd:[Shift]
-|*IOBox (Value)*: RightDrag Up/Down to change value with with stepsize divided by 10
+|Edit *IOBox (Value)*
+|kbd:[Shift] + Rightdrag up/down to change value with stepsize divided by 10
 
-|kbd:[ALT]
-|*IOBox (Value)*: RightDrag Up/Down and combine with kbd:[Ctrl] and kbd:[Shift] to change values with stepsize multiplied by 10
+|Edit *IOBox (Value)*
+|kbd:[Alt] + Rightdrag up/down and combine with kbd:[Ctrl] and/or kbd:[Shift] to multiply stepsize by 10 or 100
 
-|kbd:[Ctrl]
-|*IOBox (String)*: RightClick to bring up FileOpenDialog
+|*IOBox (String)*: Bring up FileOpenDialog
+|Rightclick + kbd:[Ctrl]
 
-|kbd:[Shift]
-|*IOBox (String)*: RightClick to bring up DirectoryOpenDialog
+|*IOBox (String)*: Bring up DirectoryOpenDialog
+|Rightclick + kbd:[Shift]
 
-|
-|*IOBox (Color)*: RightDrag Up/Down to change the brightness
+|*IOBox (Path)*: Bring up DirectoryOpenDialog
+|Rightclick + kbd:[Shift]
 
-|
-|*IOBox (Color)*: RightDrag Left/Right to change the hue
+|*IOBox (Color)*: Change brightness
+|Rightdrag up/down
 
-|kbd:[Ctrl]
-|*IOBox (Color)*: RightDrag Up/Down to change the saturation
+|*IOBox (Color)*: Change hue
+|Rightdrag left/right
 
-|kbd:[Shift]
-|*IOBox (Color)*: RightDrag Up/Down to change the alpha channel
-|===
+|*IOBox (Color)*: Change saturation
+|kbd:[Ctrl] + Rightdrag up/down
 
-=== Selections
-[cols="1,5", options="header"] 
-|===
-|Key
-|Mouse
-
-|kbd:[Ctrl]
-|Click an element in the patch to add it to the selection
-
-|kbd:[Ctrl]
-|When starting a marquee selection: add to existing selection
-
-|kbd:[Shift]
-|When making a marquee selection: include links despite nodes or pads are part of selection
+|*IOBox (Color)*: Change the alpha channel
+|kbd:[Shift] + Rightdrag up/down
 |===
 
 === Links
-[cols="1,5", options="header"] 
+[cols="1, 1", options="header"] 
 |===
-|Key
-|Mouse
+|Description
+|Action
 
+|Show a links tooltip while hovering it 
 |kbd:[Ctrl]
-|Hover a link to show its tooltip
 
-|kbd:[Ctrl]
-|When finishing a connection: force the connection to a datahub that would otherwise not accept it
+|Force a connection to a datahub that would otherwise not accept it
+|kbd:[SPACE]
 
+|Force to include links in a marquee selection despite nodes or pads are already part of it
 |kbd:[Shift]
-|When making a marquee selection: include links in the selection despite nodes or pads are part of selection already
 
-|
-|MiddleClick when starting or finishing a connection on a pad or pin to immediately start a new connection from the same source-hub
+|Start a new link from the same source after finishing a connection
+|finish with middleclick
 
-|
-|Finish a connection by:
+|Create an IOBox while linking
+|finish with middleclick in the patch
 
-- MiddleClick in the patch to create an IOBox
+|Create an input or output pin while linking
+|finish with kbd:[Ctrl] + leftclick in the patch
 
-- DoubleClick in the patch to create input or output pin
+|Create a pad while linking
+|finish with kbd:[Shift] + leftclick in the patch
 
-|
-|DoubleClick a link to insert a node or pad
+|Create a node while linking
+|finish with a doubleclick
 
-|
-|RightClick a selected link to delete it
+|Delete a link
+|middleclick it
 
-|
-|RightClick an un-selected link to bring up its ContextMenu
+|Assign a link to an operation
+|rightclick -> Assign
 
-|===
+|Insert a pad into an existing link
+|double rightclick the link
 
-=== Creating Nodes
-[cols="1,5", options="header"] 
-|===
-|Key
-|Mouse
-
-|
-|DoubleClick in an empty area of a patch to bring up the NodeBrowser where you can choose to create a node. 
-
-Note that you can also DoubleClick an existing node to replace it with another one while keeping links to/from it that also make sense on the new node.
-|===
-
-=== Moving Nodes
-[cols="1,5", options="header"] 
-|===
-|Key
-|Mouse
-
-|kbd:[Ctrl]
-|Press kbd:[Ctrl] while draging a node to move it out of or into a region
-|===
-
-=== Assigning Nodes
-[cols="1,5", options="header"] 
-|===
-|Key
-|Mouse
-
-|
-|Select a group of nodes, links or pads and then rightclick in the patch to bring up the ContextMenu where you can choose to assign the selection to:
-
-- one of the existing operations
-
-- a new operation
-
-or "pop" it which means to remove any assignments.
+|Insert a node into an existing link
+|double leftclick the link
 |===
