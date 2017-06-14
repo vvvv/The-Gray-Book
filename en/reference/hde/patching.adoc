@@ -92,16 +92,16 @@ NOTE: Middleclick alternative: kbd:[ALT] + leftclick
 |Edit the value
 |Double leftclick
 
-|Edit *IOBox (Value)*
-|Rightdrag up/down to change value
+|*IOBox (Value)*: Change value
+|Rightdrag up/down
 
-|Edit *IOBox (Value)*
+|*IOBox (Value)*: Change value finer
 |kbd:[Ctrl] + Rightdrag up/down to change value with stepsize divided by 10
 
-|Edit *IOBox (Value)*
+|*IOBox (Value)*: Change value finer
 |kbd:[Shift] + Rightdrag up/down to change value with stepsize divided by 10
 
-|Edit *IOBox (Value)*
+|*IOBox (Value)*: Change value coarser
 |kbd:[Alt] + Rightdrag up/down and combine with kbd:[Ctrl] and/or kbd:[Shift] to multiply stepsize by 10 or 100
 
 |*IOBox (String)*: Bring up FileOpenDialog
