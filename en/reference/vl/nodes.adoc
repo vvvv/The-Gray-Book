@@ -1,3 +1,4 @@
+:experimental:
 Nodes are the main building blocks of a patch. There are different types of nodes:
 
 *Image:Static Operation node, process node, record node, class node*
@@ -5,7 +6,7 @@ Nodes are the main building blocks of a patch. There are different types of node
 ## Operation Nodes
 Operation nodes are nodes representing a single operation.
 
-It is useful to distinguish static operation nodes from all other operation nodes. They have a lighter look that indicates that they are not operating on a state, ie. they take their inputs, operate, then return outputs and do not store any information for the next frame.
+It is useful to distinguish static operation nodes from all other operation nodes. They have a lighter look that indicates that they are not operating on a state, ie. they do not store any data between consecutive calls.
 
 Record and class nodes are part of a record or class respectively, on which they operate. The name of the datatype is what is written in smaller letters below the nodes name.
 
@@ -21,7 +22,7 @@ Any node that spots an arrow icon has a patch behind it which can be reached by 
 *Image:Node with a patch behind it*
 
 ## Pin group
-Nodes with exactly two inputs named _Input_ and _Input 2_ and one output named _Output_ can automatically have additional inputs added/removed by pressing CTRL + or CTRL - respectively.
+Nodes with exactly two inputs named _Input_ and _Input 2_ and one output named _Output_ can automatically have additional inputs added/removed by pressing kbd:[CTRL +] or kbd:[CTRL -] respectively.
 
 ## Apply pin
 Nodes whose first input and first output share the same datatype can have an _Apply_ pin added via the context-menu -> Configure. If apply is set to false, the operation is bypassed and the input returned unchanged as the output.
