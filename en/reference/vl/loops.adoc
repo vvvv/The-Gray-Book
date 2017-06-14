@@ -1,10 +1,10 @@
 There are two different Loops in VL:
 
-* Loop: a classic for-loop with an _Iteration Count_ input to specify the number of iterations the loop executes
+* Repeat: a classic for-loop with an _Iteration Count_ input to specify the number of iterations the loop executes
 * ForEach: executes for each slice of a spread entering the loop via a splicer. 
 
 # Getting data into a loop
-There are 3 different ways of getting data into a loop. All of them work for both the classic and the ForEach loop:
+There are 3 different ways of getting data into a loop. All of them work for both the Repeat and the ForEach loop:
 
 ## Direct Connection
 
@@ -18,13 +18,13 @@ Splicers allow you to access consecutive slices of a spread in consecutive itera
 
 *Image:A spread connects into a loop using a splicer*
 
-Multiple spreads can go into the same loop via splicers. In case of a ForEach loop the number of its iterations is then determined by the lowest of the slice-counts of all incoming spreads. 
+Multiple spreads can go into the same loop via splicers. In case of a ForEach loop the number of its iterations is then determined by the lowest of the slice-counts of all incoming spreads! 
 
 *Image:A foreach loop receives a spread with 20 slices and another one with 15 slices via splicers causing it to execute 15 times.*
 
-In case of a classic Loop the iteration count determines the number of iterations ignoring the slice-counts of the spreads coming in via splicers. When the iteration count is higher than a spreads slice-count, slices of the spread are being repeatedly accessed with the loops index taken modulo the spreads slice-count.
+In case of a Repeat Loop the iteration count determines the number of iterations ignoring the slice-counts of the spreads coming in via splicers. When the iteration count is higher than a spreads slice-count, slices of the spread are being repeatedly accessed with the loops index taken modulo the spreads slice-count.
 
-*Image:A classic loop has its Iteration Count set to 5 and receives a spread with 2 slices and another one with 3 slices via splicers causing it to execute 5 times.*
+*Image:A Repeat loop has its Iteration Count set to 5 and receives a spread with 2 slices and another one with 3 slices via splicers causing it to execute 5 times.*
 
 By default splicers have no names. Sometimes it may help to label a splicer for clarity in which case you simply doubleclick the area right of it to enter a name. 
 
@@ -40,7 +40,7 @@ By default accumulators don't have a name. Only to distinguish multiple accumula
 
 # Getting data out of a loop
 
-Since you can never link directly out of any region, there are only two different ways of getting data out of a loop. They work for both the classic and the ForEach loop:
+Since you can never link directly out of any region, there are only two different ways of getting data out of a loop. They work for both the Repeat and the ForEach loop:
 
 Use an outgoing splicer to collect the results of all iterations and return them as one spread. 
 
@@ -49,6 +49,8 @@ Use an outgoing accumulator to receive the final value as modified by all iterat
 # Special Pins
 
 There are three special Pins which you can create only inside loops via the NodeBrowser:
+
+*Image:The Index, Break and Keep pins in a loop*
 
 ## Index 
 Returns the current loop iteration number.
@@ -65,8 +67,8 @@ Note that the keep has no influence on accumulators, meaning that accumulators w
 
 # Other Loops
 ## While 
-Use a classic loop with its _Iteration Count_ set to a very high number which in this case you can consider as the maximum iteration count you specify in order to make sure your patch can never hang indefinitely. Inside the loop you specify the condition that needs to be met for the loop to continue to execute and connect its negation to the loops _Break_ output.
+Use a Repeat loop with its _Iteration Count_ set to a very high number which in this case you can consider as the maximum iteration count you specify in order to make sure your patch can never hang indefinitely. Inside the loop you specify the condition that needs to be met for the loop to continue to execute and connect its negation to the loops _Break_ output.
 
-*Image:Simulating a while loop using a classic loop*
+*Image:Simulating a while loop using a Repeat loop*
 
 
