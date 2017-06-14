@@ -4,17 +4,31 @@ A project in VL typically consists of a single .vl document that holds one ore m
 
 In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
 
+*Image:The main menubar with the Active Document Template.vl*
+
 = Active Document
+A little green symbol next to the documents name is a hint that the document had to be upgraded to the currently running version, which is usually just fine.
+
+*Image:HInt: The document was upgraded to the running version*
+
+A red symbol is a warning that the document was last saved with a newer version and therefore things may not look/work as expected. 
+
+*Image:Warning: The document was last saved with a newer version than is currently running*
+
 == Dependencies
 Click the active documents filename in the menubar to manage its dependencies. There are two different types of dependencies:
 
 * Nugets
 * Files
 
-=== Nugets
-Navigate to Nugets to see a list of all available nugets (and their versions). Each nuget is a collection of documents (.vl, .cs,..) that provide nodes for your document.
+*Image:A documents dependencies*
 
-By rightclicking a nuget you'll have access to all nodes in that package via the nodebrowser in that document. 
+=== Nugets
+Navigate to Nugets to see a list of all available nugets. Each nuget is a collection of documents (.vl, .dll,..) that provide nodes for a document. A version in brackets next to a nuget means that the currently loaded version of the nuget is different to the version that was originally referenced. > meaning the referenced version being smaller, < meaning the referenced version being bigger than the currently loaded version.
+
+*Image:Available Nugets*
+
+Rightclick a nuget to select it. Selected nugets provide access to all their nodes via the nodebrowser in that document. 
 
 In the "Other" section you find all nugets that are not relevant for VL in that they don't expose nodes. Selecting them does not do anything to your document for now. 
 
@@ -23,7 +37,6 @@ In addition to nugets you can also reference individual files of the following t
 
 * .vl
 * .dll
-* .vlimport
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
