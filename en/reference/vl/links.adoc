@@ -14,6 +14,7 @@ By default links are not included in a marquee-selection when other elements (no
 By doubleclicking an existing link you bring up the NodeBrowser to choose a node that will be inserted in the link.
 
 While making a link you can:
+
 - doubleclick to bring up the NodeBrowser and choose a node to be connected to the link
 - kbd:[Ctrl] click to create in input or output pin
 - kbd:[Shift] click to create a pad
