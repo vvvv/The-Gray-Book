@@ -1,9 +1,7 @@
 = Debugging
 
 == Timings
-The tooltip shows timings if the *TooltipShowTimings* setting is set to _true_ in the settings file. 
-
-*Image:Open the settings file to tweak some debugging settings*
+The tooltip shows timings if the *TooltipShowTimings* setting is set to _true_ in the link:reference/hde/settings.adoc[Settings] file. 
 
 == Tooltip
 shows first slice only
