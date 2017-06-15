@@ -33,6 +33,7 @@
 *** link:reference/hde/finders.adoc[Finders]
 *** link:reference/hde/patching.adoc[Patching]
 *** link:reference/hde/debugging.adoc[Debugging]
+*** link:reference/hde/settings.adoc[Settings]
 ** link:reference/vl/language.adoc[The Language]
 *** link:reference/vl/patches.adoc[Patches]
 *** link:reference/vl/operations.adoc[Operations]
