@@ -1,0 +1,11 @@
+= Debugging
+
+settings
+
+*Image:Open the settings file to tweak some debugging settings*
+
+== Tooltip
+shows first slice only
+
+== IOBoxes
+not spreadable yet

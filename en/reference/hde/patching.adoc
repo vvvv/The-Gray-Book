@@ -19,6 +19,26 @@ NOTE: Middleclick alternative: kbd:[ALT] + leftclick
 
 |Remove Errors
 |kbd:[Ctrl + E]
+
+|Pan the patch
+|Rightdrag in an empty area
+
+|Zoom the patch
+|Mousewheel
+|===
+
+If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
+
+[cols="1,1", options="header"] 
+|===
+|Pan the patch vertically
+|Mousewheel
+
+|Pan the patch horizontally
+|kbd:[Shift] + Mousewheel
+
+|Zoom the patch
+|kbd:[Ctrl] + Mousewheel
 |===
 
 === Selecting elements in a patch
