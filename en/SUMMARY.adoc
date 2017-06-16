@@ -46,6 +46,7 @@
 *** link:reference/vl/namings.adoc[Identifier Naming Conventions]
 ** link:reference/libraries/libraries.adoc[Libraries]
 *** link:reference/libraries/standard_libraries.adoc[The VL.CoreLib]
+*** link:collections.adoc[Collections]
 *** link:reference/libraries/library_design_guidelines.adoc[Library Design Guidelines]
 *** link:reference/libraries/importing_libraries.adoc[Importing Libraries]
 *** link:reference/libraries/nugets.adoc[Nugets]
@@ -59,6 +60,7 @@
 ** link:VL_for_vvvv_users/language.adoc[Language]
 ** link:VL_for_vvvv_users/evaluation.adoc[Evaluation]
 ** link:VL_for_vvvv_users/nodes.adoc[Nodes]
+** link:VL_for_vvvv_users/vl-templates.adoc[VL Templates]
 * link:GLOSSARY.adoc[Glossary]
 
 

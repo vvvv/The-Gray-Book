@@ -125,13 +125,16 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |kbd:[Alt] + Rightdrag up/down and combine with kbd:[Ctrl] and/or kbd:[Shift] to multiply stepsize by 10 or 100
 
 |*IOBox (String)*: Bring up FileOpenDialog
-|Rightclick + kbd:[Ctrl]
+|kbd:[Ctrl] + Rightclick
 
 |*IOBox (String)*: Bring up DirectoryOpenDialog
-|Rightclick + kbd:[Shift]
+|kbd:[Shift] + Rightclick
+
+|*IOBox (Path)*: Bring up FileOpenDialog
+|Rightclick
 
 |*IOBox (Path)*: Bring up DirectoryOpenDialog
-|Rightclick + kbd:[Shift]
+|kbd:[Shift] + Rightclick
 
 |*IOBox (Color)*: Change brightness
 |Rightdrag up/down
