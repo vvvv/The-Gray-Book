@@ -33,4 +33,5 @@ Spreadable IOBoxes are yet to come!
 *Image:A link showing a warning*
 
 *Image:A pin showing a warning*
+
 To get rid of pin-warnings after you've acknowledged them, press kbd:[Ctrl+E].
