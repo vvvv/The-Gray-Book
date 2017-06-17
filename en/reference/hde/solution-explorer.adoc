@@ -1,0 +1,6 @@
+:experimental:
+= Solution Explorer
+
+kbd:[Ctrl + J]
+
+*Image:The Solution Explorer*

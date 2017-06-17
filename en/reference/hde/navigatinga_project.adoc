@@ -9,7 +9,7 @@ In the main menubar you always see the filename of the document you're currently
 = Active Document
 A little green symbol next to the documents name is a hint that the document had to be upgraded to the currently running version, which is usually just fine.
 
-*Image:HInt: The document was upgraded to the running version*
+*Image:Hint: The document was upgraded to the running version*
 
 A red symbol is a warning that the document was last saved with a newer version and therefore things may not look/work as expected. 
 
