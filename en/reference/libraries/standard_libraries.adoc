@@ -33,10 +33,15 @@ The default library of VL that provides nodes and types for the most basic patch
 
 |*IO*
 |Mouse, Keyobard and Touch nodes as well as nodes for file IO, Path (directory, filename) and Stream handling. Further nodes that implement input/output protocols and standards in subcategories:
+
 * *IO.Network* for UDP, TCP,...
+
 * *IO.OSC* OpenSoundControl protocol
+
 * *IO.TUIO* Tangible User Interface Objects protocol
+
 * *IO.ArtNet* The ArtNet DMX protocol
+
 ...
 
 |*Math*
