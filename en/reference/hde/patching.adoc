@@ -185,10 +185,10 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |Create a node while linking
 |finish with a double leftclick
 
-|Create an accumulator input or output in IF or LOOP while linking
+|Create an accumulator input or output proxy in IF or LOOP while linking
 |finish with kbd:[Ctrl] + leftclick in the region
 
-|Create an splicer input or output in LOOP while linking
+|Create an splicer input or output proxy in LOOP while linking
 |finish with kbd:[Ctrl] + kbd:[Ctrl] + leftclick in the region
 
 |Assign a link to an operation
