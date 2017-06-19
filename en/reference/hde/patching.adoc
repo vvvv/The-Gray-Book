@@ -25,6 +25,9 @@ NOTE: Middleclick alternative: kbd:[ALT] + leftclick
 
 |Zoom the patch
 |Mousewheel
+
+|Reset pan and zoom of the patch
+|kbd:[Ctrl + 0]
 |===
 
 If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
