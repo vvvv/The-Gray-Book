@@ -46,7 +46,7 @@ Note that when entering a category a tag appears in the bottom right part of the
 Enter any word to search for it.
 
 == Language Primitives
-Click any of the language Primitives to create it or search for a property you already created before to get a pad for it.
+The language primitives are written in _italic_: 
 
 * IOBox
 * Pad
@@ -59,7 +59,7 @@ Click any of the language Primitives to create it or search for a property you a
 * Delegate
 * Regions (Repeat, Foreach, If)
 
-Many of the primitives can be given a name directly after choosing to create them via the NodeBrowser.
+Many of the primitives can be given a name directly after choosing to create them via the NodeBrowser. For Pins and Pads it also works the other way round: type a name into the NodeBrowser and then click Pin/Pad to create the respective element with already the desired name set. 
 
 == Available Nugets
 Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
