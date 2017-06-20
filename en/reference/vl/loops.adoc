@@ -4,7 +4,7 @@ There are two different Loops in VL:
 * Repeat: a classic for-loop with an _Iteration Count_ input to specify the number of iterations the loop executes
 * ForEach: executes for each slice of a spread entering the loop via a splicer. 
 
-In the NodeBrowser you'll find different nodes named Repeat and ForEach. To get these primitive ones choose the versions written in _italic_
+In the NodeBrowser you'll find different nodes named Repeat and ForEach. To get these primitive ones, choose the versions written in _italic_.
 
 *Image:Choosing Repeat or ForEach from the NodeBrowser*
 
