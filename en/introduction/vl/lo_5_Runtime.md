@@ -15,7 +15,7 @@ Within the root patch you define what's happening for when the system starts and
 As we are still looking at things: 
 <img src="createAndUpdate.png" />
 
-Again: a part of the patch is only executed once when the system start. The other part is then called over and over again. Can you tell which is which?
+Again: a part of the patch is only executed once when the system starts. The other part is then called over and over again. Can you tell which is which?
 
 *vvvv user: when creating or resetting the node from within vvvv the process gets reset: "Create" is called. From then on "Update" is called each vvvv frame.*
 
