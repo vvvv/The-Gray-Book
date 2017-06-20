@@ -57,7 +57,7 @@ Click any of the language Primitives to create it or search for a property you a
 * Class Definition
 * Operation Definition
 * Delegate
-* Regions (Loop, Foreach, If)
+* Regions (Repeat, Foreach, If)
 
 Many of the primitives can be given a name directly after choosing to create them via the NodeBrowser.
 
