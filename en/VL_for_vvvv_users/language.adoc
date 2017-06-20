@@ -12,7 +12,7 @@ In that sense all nodes in vvvv were potentially stateful but there wasn't any s
 
 The reason for why it is important to distinguish is that it greatly improves the way you can build your patches by making deliberate decisions about which parts of your patch holds state and which do not. This improves readability and most of all simplifies debugging as certain types of problems can only occur with state involved. So with a runtime/logic problem at hand it is always wise to first start looking into Process nodes.
 
-=== Namving Conventions
+=== Naming Conventions
 Naming conventions have slightly changed and are now as follows:
 
 Name (Version1 Version2 ..) [Category.Subcategory]
