@@ -168,39 +168,39 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |kbd:[Shift]
 
 |Delete a link
-|middleclick it
+|Middleclick it
 
 |Start a new link from the same source after finishing a connection
-|finish with middleclick
+|Finish with middleclick
 
 |Create an IOBox while linking
-|finish with middleclick in the patch
+|Finish with middleclick in the patch
 
 |Create an input or output pin while linking
-|finish with kbd:[Ctrl] + leftclick in the patch
+|Finish with kbd:[Ctrl] + leftclick in the patch
 
 |Create a pad while linking
-|finish with kbd:[Shift] + leftclick in the patch
+|Finish with kbd:[Shift] + leftclick in the patch
 
 |Create a node while linking
-|finish with a double leftclick
+|Finish with a double leftclick
 
 |Create an accumulator input or output proxy in IF or LOOP while linking
-|finish with kbd:[Ctrl] + leftclick in the region
+|Finish with kbd:[Ctrl] + leftclick in the region
 
 |Create an splicer input or output proxy in LOOP while linking
-|finish with kbd:[Ctrl] + kbd:[Ctrl] + leftclick in the region
+|Finish with kbd:[Ctrl] + kbd:[Ctrl] + leftclick in the region
 
 |Assign a link to an operation
-|rightclick -> Assign
+|Rightclick -> Assign
 
 |Insert a IOBox into an existing link
-|double rightclick the link
+|Double rightclick the link
 
 |Insert a pad into an existing link
-|kbd:[Shift] + double click or double right click the link
+|kbd:[Shift] + double leftclick or double rightclick the link
 
 |Insert a node into an existing link
-|double leftclick the link
+|Double leftclick the link
 
 |===
