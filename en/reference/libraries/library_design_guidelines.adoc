@@ -166,10 +166,22 @@ Nodes like the "Cons" or the "+" can have their input count set on demand by the
 Any operation that has exactly two inputs and one output whose type is the same as the first input gets this functionality automatically.
 
 == Adaptive Nodes
-how to create an adaptive
+Adaptive nodes allow you to define the signature (ie. names and order of input and output pins) of a node and then provide concrete implementations for different datatypes. 
 
-* definition
-* implementation
+In the NodeBrowser you'll only see one option instead of all the implementations and typically this choice will be fine because now the compiler will choose the correct implementation for you as soon as you connect any links to it. 
+
+Example: Think of a LinearInterpolation (Lerp) node that can have concrete implementations for different datatypes like Float32, Vector2,... one could even think of an implementation for strings but the signature of such a node would always be the same: Input 1, Input 2, Scalar, Output. 
+
+=== Adaptive Definition
+Create an operation and make sure to put it in the toplevel ''Adaptive'' category. Add input and output pins and name them to your liking. You can even annotate individual pins but at least one of the pins should be left generic otherwise you cannot provide different implementations for this definition. 
+
+=== Adaptive Implementations
+Create an operation in any other category using the same signature and implement it in a non-generic way, ie. this time all in- and outputs need to have a datatype infered or annotated.
+
+When creating multiple implementations (for different datatypes) make sure you put the operations in different categories. 
+
+=== Replace an adaptive node with a specific implementation
+There are cases where you'll want to make sure the compiler uses one specific implementation for an adaptive node. To choose a specific version for an adaptive node, first place the node via the NodeBrowser, then doubleclick it and remove the ''Adaptive'' choice in the lower right section of the NodeBrowser. Now you'll see all available implementations in the main panel from which you can simply choose one.
 
 == Process Nodes
 === Reset Inputs
