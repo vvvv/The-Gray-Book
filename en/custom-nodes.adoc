@@ -1,0 +1,151 @@
+= Writing nodes using C#
+
+Writing your own nodes for VL using C# requires no VL specific knowledge or preparation. Essentially you’re writing plain C# code that VL then turns into nodes. Here is a step by step guide to get you started:
+
+== Start from a Template
+In VisualStudio (2015 or 2017) create a new project by choosing the “Visual C# > Class Library (.NET Framework)” template. 
+
+*Image:Screenshot of template chooser*
+
+This will create a .sln, a .csproj and a Class1.cs file which looks like this:
+
+*Image:Screenshot of empty class1*
+
+The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly. 
+
+Now any static operation and every member operation of a class you write will turn into a VL node. The most simple node you can write is therefore:
+
+----
+namespace MyCustomNodes
+{
+    public static class MyStaticNodes
+    { 
+        public static float Add(float input, float input2)
+        {
+            return input + input2;
+        }
+    }
+}
+----
+
+This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/importing_nodes.adoc[Importing Nodes] to use those operations as nodes in VL.
+
+*Image:Resulting Node in VL*
+
+== More Details
+
+Here are some simple examples and a few more details that will help you create your own nodes:
+
+=== Pin Names
+For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
+
+----
+public static float Foo(float firstInput, float secondInput)
+{
+    return firstInput + secondInput;
+}
+----
+*Image:Tooltip shows pin name*
+
+=== Default Values
+Simply use the c# notation for defaults to define defaults for inputs in VL.
+
+----
+public static float Defaults(float firstInput=44f, float secondInput=0.44f)
+{
+    return firstInput + secondInput;
+}
+----
+*Image:Default on Input*
+
+=== Multiple Outputs
+Instead of returning a single value you can also use one or even multiple out parameters that will show up as output pins on the VL node:
+
+----
+public static void MultipleOutputs(float firstInput, float secondInput, out float added, out float multiplied)
+{
+    added = firstInput + secondInput;
+    multiplied = firstInput * secondInput;
+}
+----
+*Image:A node with multiple outputs*
+
+=== Function Overloading
+You can write multiple operations with the same name that only differ in the number of input parameters:
+
+----
+public static float MyAddition(float input, float input2)
+{
+    return input + input2;
+}
+
+public static float MyAddition(float input, float input2, float input3)
+{
+    return input + input2 + input3;
+}
+----
+
+Choosing the respective node in the NodeBrowser will then ask you for a further choice to specify the which version you want to use.
+*Image:NodeBrowser shows two nodes*
+
+=== Using Generics
+VL embraces generics, so of course you can write generic nodes easily:
+
+----
+public static string Generic<T>(T input)
+{
+    return input.ToString();
+}
+----
+*Image:Generic pin out of node*
+
+=== Operating on Spreads
+The c# IEnumerable<> appears as Sequence<> in VL:
+
+----
+public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
+{
+    return input.Reverse();
+}
+----
+*Image:Spread node*
+
+=== Documentation
+Use XML documentation in C# to provide some information about your nodes:
+
+- Summary: A one-liner info about the node
+- Remarks: Some additional remarks, like usage instructions, warnings,.. can be multi-line
+- Tags: A list of space-separated tags to find the node in the NodeBrowser (only include terms that are not already part of the nodes name and category
+- Param name: Short info for each Input
+- Returns: Short info about the result of the node
+      
+----
+///<summary>Multiplies input by two</summary>
+///<remarks>Some additional remarks</remarks>
+///<tags>space separated tags</tags>
+///<param name="a">The A Parameter</param>
+///<returns>Returns 2 a</returns>
+public static int HTMLDocuTest(int a)
+{
+    return a*2;
+}
+----
+*Image:Documentation shows up in NodeBrowser and Tooltip*
+
+NOTE: Don't forget to enable "XML Documentation File" in the c# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
+
+=== C# Ref Paramters
+C# _ref_ parameters are simply ignored and the parameter is treated as a normal one
+
+----
+public static int RefParams(ref int firstInput)
+{
+    return firstInput + 4444;
+}
+----
+
+
+
+
+
+
