@@ -173,11 +173,18 @@ public class MyDataType
         FX = x;
     }
 
-    public float Update(float factor)
+    public float Update(float factor=1f)
     {
         FX *= factor;
         return FX;
     }
+    
+    public float AnotherNode(float factor=1f)
+    {
+        FX /= factor;
+        return FX;
+    }
+
 }
 ----
 *Image:Corresponding nodes*
