@@ -22,6 +22,7 @@
 *** link:introduction/vl/generics.md[Generics]
 *** link:introduction/vl/subtypes.md[Sub Types]
 
+
 '''
 
 * link:reference.adoc[Reference]
@@ -52,6 +53,7 @@
 **** link:reference/libraries/reactive.adoc[Reactive]
 *** link:custom-nodes.adoc[Custom Nodes]
 *** link:reference/libraries/importing_nodes.adoc[Importing Nodes]
+*** link:building-libraries.adoc[Building Libraries]
 *** link:reference/libraries/library_design_guidelines.adoc[Design Guidelines]
 *** link:reference/libraries/nugets.adoc[Nugets]
 

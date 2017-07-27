@@ -1,0 +1,29 @@
+= Importing Nodes
+Any static operation or member of a class defined in a .net .dll (library) can be used as a node in VL. To get access to the content of a library in a patch you only need to reference it as a dependency in the .vl document. Here are 3 ways to do so:
+
+* Go to the document menu > Dependencies > Files > Add Existing...
+* Press CTRL+R
+* Drop the .dll onto the patch 
+
+You can also reference any library from the link:https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac[GAC] (Global Assembly Cache) that also holds all the main libraries shipping with .net:
+
+* Go to the document menu > Dependencies > Files > Add Existing...
+* Or press CTRL+SHIFT+R
+
+Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter it to explore the libraries namespaces, types and operations. Hover the individual operations to read their associated xml-documentation. Click any operation to use it in the patch as a node.
+
+*Image:NodeBrowser with a .dll showing up as a toplevel category*
+
+Like this you can use practically any thirdparty .net library and start patching with it immediately. Simple things will be simple to do but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
+
+So while it is indeed quite convenient to have access to just about any .net library directly in VL, this is more a feature for advanced users. To make those libraries also accessible to more casual users, wrapper libraries need to be created. Those can be of course done in C# but in many cases it will be enough to again patch those in VL. See Building Libraries for a few features we build into VL to make it easy to create such wrappers.
+
+
+Problems you’ll face
+Mutable vs. immutable: .NET does not have an understanding of immutability, we therefore need to tell VL which things are immutable.
+Any node you place in a patch is immediately executed. Many nodes will rely on a valid input and throw an error if they don’t get it
+Incompatible types (like Vector,...) 
+Cannot yet be imported:
+Nested Types (nested classes, structs or enums)
+Asynchronous datasources that do not use the Observable pattern, like .NET events
+Types with generic type parameters what’s the problem here?
