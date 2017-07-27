@@ -9,7 +9,7 @@ In VisualStudio (2015 or 2017) create a new project by choosing the “Visual C#
 
 This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
-*Image:Screenshot of empty class1*
+*Image:Screenshot of empty Class1*
 
 The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly. 
 
@@ -143,6 +143,36 @@ public static int RefParams(ref int firstInput)
     return firstInput + 4444;
 }
 ----
+
+=== Datatypes
+
+Any constructor will be available as a Create node. 
+Any public member operation will be available as an individual node in VL. Private or Protected operations will be ignored.
+
+
+
+----
+public class MyDataType
+{
+    float FX;
+
+    public MyDataType(float x)
+    {
+        FX = x;
+    }
+
+    public float Update(float factor)
+    {
+        FX *= factor;
+        return FX;
+    }
+}
+----
+
+
+Do public fields/properties turn into getters?
+Provide a default constructor?
+
 
 
 
