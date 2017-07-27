@@ -147,10 +147,10 @@ public static int RefParams(ref int firstInput)
 === Datatypes
 In VL you can also use any datatype you define as a class or struct in c#. 
 
-- Any constructor will be available as a Create node. 
+- Any constructor will be available as a Create node
 - Any get-property will show up as a node returning the properties value
 - Any set-property will show up as a node called Set.. allowing you to set the properties value
-- Any public member operation will be available as an individual node in VL. Private or Protected operations will be ignored.
+- Any public member operation will be available as a node in VL. Private or Protected operations will be ignored.
 
 ----
 public class MyDataType
