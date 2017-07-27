@@ -16,14 +16,24 @@ Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter i
 
 Like this you can use practically any thirdparty .net library and start patching with it immediately. Simple things will be simple to do but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
 
-So while it is indeed quite convenient to have access to just about any .net library directly in VL, this is more a feature for advanced users. To make those libraries also accessible to more casual users, wrapper libraries need to be created. Those can be of course done in C# but in many cases it will be enough to again patch those in VL. See Building Libraries for a few features we build into VL to make it easy to create such wrappers.
+== Typical problems with thirdparty Libraries
+=== Incompatible types
+Libraries often use their own types for Vectors, Matrices,.. which will not be compatible directly with the corresponding VL types. You'll need to find a way to convert between those. 
 
+Sometimes it may only be value ranges, like: angles or colorcomponents in VL go from 0..1 while other libraries often use different ranges. 
 
-Problems you’ll face
-Mutable vs. immutable: .NET does not have an understanding of immutability, we therefore need to tell VL which things are immutable.
-Any node you place in a patch is immediately executed. Many nodes will rely on a valid input and throw an error if they don’t get it
-Incompatible types (like Vector,...) 
-Cannot yet be imported:
-Nested Types (nested classes, structs or enums)
-Asynchronous datasources that do not use the Observable pattern, like .NET events
-Types with generic type parameters what’s the problem here?
+Wrappers can do those conversions for you. 
+
+=== Mutability
+In a dataflow context it is most usable to deal with immutable datatypes. Since .net does not have have an understanding of immutability (yet), when importing nodes from thirdparty libraries by default we have to work with mutable datatypes. VL can do that and there are cases where this is even preferred, but more often than not it is also annoying. 
+
+By wrapping originally mutable datatypes in VL we can decide to make them immutable and prepare them for convenient use in VL's dataflow context. 
+
+=== Error Handling
+There are different ways libraries can deal with errors but typically as users we want to have one consistent way. 
+
+Building a wrapper around a library allows us to adopt the VL way of handling errors and expose that to the end-user. 
+
+== Wrappers
+So while it is indeed quite convenient to have access to just about any .net library directly in VL, this is more a feature for advanced users. To make those libraries also accessible to more casual users, wrapper libraries need to be created. Those can be of course done in C# but in many cases it will be enough to again patch those in VL. See link:/building-libraries.adoc[Building Libraries] for a few features we built into VL to make it easy to create such wrappers.
+
