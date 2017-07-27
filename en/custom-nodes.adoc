@@ -13,7 +13,7 @@ This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
 The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly. 
 
-Now any static operation and every member operation of a class you write will turn into a VL node. The most simple node you can write is therefore:
+Now *any static operation and every member operation of a class you write will turn into a VL node*. The most simple node you can write is therefore:
 
 ----
 namespace MyCustomNodes
@@ -145,11 +145,9 @@ public static int RefParams(ref int firstInput)
 ----
 
 === Datatypes
-
+In VL you can also use any datatype you define as a class or struct in c#. in your can also understand your datatypes 
 Any constructor will be available as a Create node. 
 Any public member operation will be available as an individual node in VL. Private or Protected operations will be ignored.
-
-
 
 ----
 public class MyDataType
@@ -169,7 +167,7 @@ public class MyDataType
 }
 ----
 
-
+properties, public fields?
 Do public fields/properties turn into getters?
 Provide a default constructor?
 
