@@ -23,12 +23,27 @@ In VL we can therefore say that a patch acts as a type-fowarding-wrapper or simp
 
 *Image:Set patch-type to 'Forward' and specify original type*
 
-Show Category: if the “memberness” of the operation is important
-Is Public: if you want to have this operation show up for everyone referencing this document
+*Image:Type Foward*
+Is Public: if you want to have this type show up for everyone referencing this document
+
 What happens when the library changes
 Use it to selectively expose stuff of your library to the user
 
-renaming pins, hiding pins, converting types
+
+=== Operation Forwards
+*Image:Operation Foward*
+
+Is Public: if you want to have this operation show up for everyone referencing this document
+
+Show Category: if the “memberness” of the operation is important
+
+Forward Pins
+
+*Image:Renaming a Pin*
+
+*Image:Hiding a Pin* usin an IOBox
+
+*Image:Converting a type*
 
 == Solution Explorer
 Ctrl+M
