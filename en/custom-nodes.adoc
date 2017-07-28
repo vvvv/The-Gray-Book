@@ -3,6 +3,7 @@
 Writing your own nodes for VL using C# requires no VL specific knowledge or preparation. Essentially you’re writing plain C# code that VL then turns into nodes. Here is a step by step guide to get you started:
 
 == Start from a Template
+
 In VisualStudio (2015 or 2017) create a new project by choosing the “Visual C# > Class Library (.NET Framework)” template. 
 
 *Image:Screenshot of template chooser*
@@ -37,6 +38,7 @@ This is basically it. Now build the project and you'll get a managed .dll contai
 Here are some simple examples and a few more details that will help you create your own nodes:
 
 === Pin Names
+
 For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
 
 ```csharp
@@ -48,6 +50,7 @@ public static float Foo(float firstInput, float secondInput)
 *Image:Tooltip shows pin name*
 
 === Default Values
+
 Simply use the c# notation for defaults to define defaults for inputs in VL.
 
 ```csharp
@@ -59,6 +62,7 @@ public static float Defaults(float firstInput=44f, float secondInput=0.44f)
 *Image:Default on Input*
 
 === Multiple Outputs
+
 Instead of returning a single value you can also use one or even multiple out parameters that will show up as output pins on the VL node:
 
 ```csharp
@@ -71,6 +75,7 @@ public static void MultipleOutputs(float firstInput, float secondInput, out floa
 *Image:A node with multiple outputs*
 
 === Function Overloading
+
 You can write multiple operations with the same name that only differ in the number of input parameters:
 
 ```csharp
@@ -89,6 +94,7 @@ Choosing the respective node in the NodeBrowser will then ask you for a further 
 *Image:NodeBrowser shows two nodes*
 
 === Using Enums
+
 You can use custom c# enums as input or output types to operations:
 ```csharp
 //the enum itself needs to be declared outside of the static class
@@ -103,6 +109,7 @@ public static string StaticEnumDemo(DemoEnum e)
 *Image:Enum IOBox in VL patch*
 
 === Using Generics
+
 VL embraces generics, so of course you can write generic nodes easily:
 
 ```csharp
@@ -114,6 +121,7 @@ public static string Generic<T>(T input)
 *Image:Generic pin out of node*
 
 === Operating on Spreads
+
 The c# IEnumerable<> appears as Sequence<> in VL:
 
 ```csharp
@@ -125,6 +133,7 @@ public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
 *Image:Spread node*
 
 === Documentation
+
 Use XML documentation in C# to provide some information about your nodes:
 
 - Summary: A one-liner info about the node
@@ -149,6 +158,7 @@ public static int HTMLDocuTest(int a)
 NOTE: Don't forget to enable "XML Documentation File" in the c# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
 
 === C# Ref Paramters
+
 C# _ref_ parameters are simply ignored and the parameter is treated as a normal one
 
 ```csharp
@@ -159,6 +169,7 @@ public static int RefParams(ref int firstInput)
 ```
 
 === Datatypes
+
 In VL you can also use any datatype you define as a class or struct in c#. 
 
 - Any constructor will be available as a Create node
@@ -203,9 +214,11 @@ public class MyDataType
 *Image:Corresponding nodes*
 
 === Observables
+
 If you are dealing with asynchronous datasources - async await, task, events, delegates - always expose them to VL as Observables. 
 
 ==== From Events
+
 Here is how you can convert a c# event to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
 
 Let's assume you have a datatype `Camera` that has an event like:
@@ -251,7 +264,8 @@ public static IObservable<MyNotification<Camera, EventArgs>> OnEvent(this Camera
 *Image:How this looks in VL*
 
 ==== From Delegates
-Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEventPattern()` that comes with the VL.Core nuget:
+
+Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
 
 Let's assume you have a datatype `Body` that has a delegate like:
 

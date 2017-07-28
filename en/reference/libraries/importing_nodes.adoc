@@ -1,4 +1,5 @@
 = Importing Nodes
+
 Any static operation or member of a class defined in a .net .dll (library) can be used as a node in VL. To get access to the content of a library in a patch you only need to reference it as a dependency in the .vl document. Here are 3 ways to do so:
 
 * Go to the document menu > Dependencies > Files > Add Existing...
