@@ -286,7 +286,7 @@ public static IObservable<CollisionEvent> OnCollision(this Body body)
 ```
 *Image:How this looks in VL*
 
-=== Enums
+=== Dynamic Enums
 
 
 
