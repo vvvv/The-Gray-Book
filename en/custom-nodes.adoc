@@ -88,6 +88,20 @@ public static float MyAddition(float input, float input2, float input3)
 Choosing the respective node in the NodeBrowser will then ask you for a further choice to specify the which version you want to use.
 *Image:NodeBrowser shows two nodes*
 
+=== Using Enums
+You can use custom c# enums as input or output types to operations:
+```csharp
+//the enum itself needs to be declared outside of the static class
+//it doesn't work nested in a class yet!
+public enum DemoEnum { Foo, Bar };
+    
+public static string StaticEnumDemo(DemoEnum e)
+{
+    return e.ToString();
+}
+```
+*Image:Enum IOBox in VL patch*
+
 === Using Generics
 VL embraces generics, so of course you can write generic nodes easily:
 

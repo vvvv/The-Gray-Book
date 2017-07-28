@@ -53,7 +53,7 @@
 **** link:reference/libraries/reactive.adoc[Reactive]
 *** link:custom-nodes.adoc[Writing Nodes]
 *** link:reference/libraries/importing_nodes.adoc[Importing Nodes]
-*** link:building-libraries.adoc[Building Libraries]
+*** link:building-libraries.adoc[Patching Libraries]
 *** link:reference/libraries/library_design_guidelines.adoc[Design Guidelines]
 *** link:reference/libraries/nugets.adoc[Nugets]
 
