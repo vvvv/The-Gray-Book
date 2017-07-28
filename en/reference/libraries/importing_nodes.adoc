@@ -8,7 +8,7 @@ Any static operation or member of a class defined in a .net .dll (library) can b
 
 You can also reference any library from the link:https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac[GAC] (Global Assembly Cache) that also holds all the main libraries shipping with .net:
 
-* Go to the document menu > Dependencies > Files > Add Existing...
+* Go to the document menu > Dependencies > Files > Add .NET Framework Assembly...
 * Or press CTRL+SHIFT+R
 
 Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter it to explore the libraries namespaces, types and operations. Hover the individual operations to read their associated xml-documentation. Click any operation to use it in the patch as a node.
