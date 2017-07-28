@@ -22,7 +22,6 @@
 *** link:introduction/vl/generics.md[Generics]
 *** link:introduction/vl/subtypes.md[Sub Types]
 
-
 '''
 
 * link:reference.adoc[Reference]
@@ -51,6 +50,7 @@
 *** link:reference/libraries/standard_libraries.adoc[The VL.CoreLib]
 **** link:reference/libraries/collections.adoc[Collections]
 **** link:reference/libraries/reactive.adoc[Reactive]
+*** link:dependencies.adoc[Dependencies]
 *** link:custom-nodes.adoc[Writing Nodes]
 *** link:reference/libraries/importing_nodes.adoc[Importing Nodes]
 *** link:building-libraries.adoc[Patching Libraries]
