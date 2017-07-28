@@ -15,7 +15,7 @@ The Namespace you specify here will turn into the nodes category in VL. Nested n
 
 Now *any static operation and every member operation of a class you write will turn into a VL node*. The most simple node you can write is therefore:
 
-----
+```csharp
 namespace MyCustomNodes
 {
     public static class MyStaticNodes
@@ -26,7 +26,7 @@ namespace MyCustomNodes
         }
     }
 }
-----
+```
 
 This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/importing_nodes.adoc[Importing Nodes] to use those operations as nodes in VL.
 
@@ -39,41 +39,41 @@ Here are some simple examples and a few more details that will help you create y
 === Pin Names
 For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
 
-----
+```csharp
 public static float Foo(float firstInput, float secondInput)
 {
     return firstInput + secondInput;
 }
-----
+```
 *Image:Tooltip shows pin name*
 
 === Default Values
 Simply use the c# notation for defaults to define defaults for inputs in VL.
 
-----
+```csharp
 public static float Defaults(float firstInput=44f, float secondInput=0.44f)
 {
     return firstInput + secondInput;
 }
-----
+```
 *Image:Default on Input*
 
 === Multiple Outputs
 Instead of returning a single value you can also use one or even multiple out parameters that will show up as output pins on the VL node:
 
-----
+```csharp
 public static void MultipleOutputs(float firstInput, float secondInput, out float added, out float multiplied)
 {
     added = firstInput + secondInput;
     multiplied = firstInput * secondInput;
 }
-----
+```
 *Image:A node with multiple outputs*
 
 === Function Overloading
 You can write multiple operations with the same name that only differ in the number of input parameters:
 
-----
+```csharp
 public static float MyAddition(float input, float input2)
 {
     return input + input2;
@@ -83,7 +83,7 @@ public static float MyAddition(float input, float input2, float input3)
 {
     return input + input2 + input3;
 }
-----
+```
 
 Choosing the respective node in the NodeBrowser will then ask you for a further choice to specify the which version you want to use.
 *Image:NodeBrowser shows two nodes*
@@ -91,23 +91,23 @@ Choosing the respective node in the NodeBrowser will then ask you for a further 
 === Using Generics
 VL embraces generics, so of course you can write generic nodes easily:
 
-----
+```csharp
 public static string Generic<T>(T input)
 {
     return input.ToString();
 }
-----
+```
 *Image:Generic pin out of node*
 
 === Operating on Spreads
 The c# IEnumerable<> appears as Sequence<> in VL:
 
-----
+```csharp
 public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
 {
     return input.Reverse();
 }
-----
+```
 *Image:Spread node*
 
 === Documentation
@@ -119,7 +119,7 @@ Use XML documentation in C# to provide some information about your nodes:
 - Param name: Short info for each Input
 - Returns: Short info about the result of the node
       
-----
+```csharp
 ///<summary>Multiplies input by two</summary>
 ///<remarks>Some additional remarks</remarks>
 ///<tags>space separated tags</tags>
@@ -129,7 +129,7 @@ public static int HTMLDocuTest(int a)
 {
     return a*2;
 }
-----
+```
 *Image:Documentation shows up in NodeBrowser and Tooltip*
 
 NOTE: Don't forget to enable "XML Documentation File" in the c# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
@@ -137,12 +137,12 @@ NOTE: Don't forget to enable "XML Documentation File" in the c# projects propert
 === C# Ref Paramters
 C# _ref_ parameters are simply ignored and the parameter is treated as a normal one
 
-----
+```csharp
 public static int RefParams(ref int firstInput)
 {
     return firstInput + 4444;
 }
-----
+```
 
 === Datatypes
 In VL you can also use any datatype you define as a class or struct in c#. 
@@ -152,7 +152,7 @@ In VL you can also use any datatype you define as a class or struct in c#.
 - Any set-property will show up as a node called Set.. allowing you to set the properties value
 - Any public member operation will be available as a node in VL. Private or Protected operations will be ignored.
 
-----
+```csharp
 public class MyDataType
 {
     float FX;
@@ -184,14 +184,111 @@ public class MyDataType
         FX /= factor;
         return FX;
     }
-
 }
-----
+```
 *Image:Corresponding nodes*
 
 === Observables
+If you are dealing with asynchronous datasources - async await, task, events, delegates - always expose them to VL as Observables. 
+
+==== From Events
+Here is how you can convert a c# event to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
+
+Let's assume you have a datatype `Camera` that has an event like:
+
+```csharp
+public event EventHandler EventFrame;`
+```
+
+and you want to receive notifications of that event via the output of a node in VL. 
+
+First you need to create a class for the type of notification you want to receive in VL which will typically look like this:
+
+```csharp
+public class MyNotification<T, U>
+{
+    public readonly T Sender;
+    public readonly U EventArgs;
+
+    public MyNotification(T sender, U eventArgs)
+    {
+        Sender = sender;
+        EventArgs = eventArgs;
+    }
+}
+```
+
+Next you can create e.g. a static operation node that receives an instance of the `Camera` in VL and returns an `Observable<MyNotification>` on its output:
+
+```csharp
+public static IObservable<MyNotification<Camera, EventArgs>> OnEvent(this Camera cam)
+{
+    return ObservableNodes.FromEvent<EventHandler, MyNotification<Camera, EventArgs>>(
+        cam,
+        addHandler: handler => cam.EventFrame += handler,
+        removeHandler: handler => cam.EventFrame -= handler,
+        conversion: notificationProcessor => (_, e) =>
+        {
+            var cn = new MyNotification<Camera, EventArgs>(cam, e);
+            notificationProcessor(cn);
+        });
+}
+```
+*Image:How this looks in VL*
+
+==== From Delegates
+Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEventPattern()` that comes with the VL.Core nuget:
+
+Let's assume you have a datatype `Body` that has a delegate like:
+
+```csharp
+public delegate bool OnCollisionEventHandler (Fixture fixtureA, Fixture fixtureB, Collision collision);
+```
+
+and you want to receive a notifications of when that delegate is called via the output of a node in VL. 
+
+First you need to create a class for the type of notification you want to receive in VL which in this case may look like this:
+
+```csharp
+public class CollisionEvent
+{
+    public readonly Contact Contact;
+    public readonly Fixture FixtureA;
+    public readonly Fixture FixtureB;
+
+    public CollisionEvent(Fixture fixtureA, Fixture fixtureB, Contact contact)
+    {
+        FixtureA = fixtureA;
+        FixtureB = fixtureB;
+        Contact = contact;
+    }
+
+    public bool CancelCollision { get; set; }
+}
+```
+
+Next you can create e.g. a static operation node that receives an instance of the `Body` in VL and returns an `Observable<CollisionEvent>` on its output:
+
+```csharp
+public static IObservable<CollisionEvent> OnCollision(this Body body)
+{
+    return ObservableNodes.FromEvent<OnCollisionEventHandler, CollisionEvent>(
+        body,
+        addHandler: handler => body.OnCollision += handler,
+        removeHandler: handler => body.OnCollision -= handler)
+        conversion: handler => (fixtureA, fixtureB, contact) =>
+        {
+            var e = new CollisionEvent(fixtureA, fixtureB, contact);
+            handler(e);
+            return !e.CancelCollision;
+        });
+}
+```
+*Image:How this looks in VL*
 
 === Enums
+
+
 
 
 
