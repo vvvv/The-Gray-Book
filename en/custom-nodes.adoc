@@ -318,22 +318,117 @@ public static IObservable<CollisionEvent> OnCollision(this Body body)
 
 === Dynamic Enums
 
-Dynamic enums are useful in cases where you want to offer a user a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime.  
+Dynamic enums are useful in cases where you want to offer a user a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 
 
 Consider a normal enum in c#:
 ```csharp
 enum MyEnum = { Foo, Bar }
 ```
+Here `MyEnum` is what we call the type and `{ Foo, Bar }` makes its definition.
 
-Here `MyEnum` is what we call the type and `{ Foo, Bar }` makes its definition. In order to create a dynamic enum for VL we also need those two elements. Both need to be implemented as classes in c#:
+And the way we want to use such an enum in our code is to have it as the type of an input parameter to one of our operations,  like this:
+```csharp
+public static string EnumDemo(MyEnum e)
+{
+    return e.ToString();
+}
+```
+
+Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
 
 - The type needs to implement `IDynamicEnum` 
 - The definition needs to implment `IDynamicEnumDefinition`
 
-both of which come with the VL.Core nuget. To make their use easier there are also two baseclass implementations available
+both of which come with the VL.Core nuget. To make their use easier there are also two baseclass implementations available:
 
 - `DynamicEnumBase<T, U>`
 - `DynamicEnumDefinitionBase<U>`
+
+Using these, an implmentation of your own dynamic enum could look like this:
+
+First derive from the `DynamicEnumBase` to create your own enum type. 
+
+```csharp
+[Serializable]
+public class MyEnum: DynamicEnumBase<MyEnum, MyEnumDefinition>
+{
+    public MyEnum(string value) : base(value)
+    {
+    }
+
+    public static MyEnum Default
+    {
+        get
+        {
+            if (MyEnumDefinition.Instance.Entries.Count > 0)
+            {
+                return new MyEnum(MyEnumDefinition.Instance.Entries[0]);
+            }
+            else
+            {
+                return new MyEnum("No Entries");
+            }
+        }
+    }
+}
+```
+
+The code above most likely doesn't need many changes for your own implementation except:
+
+- Give it a proper name instead of "MyEnum", something like e.g. "MidiInputDevice". Note the singular in the naming: This type represents one entry in the enumeration. 
+- Note the second type parameter `MyEnumDefinition` which connects your enum to its definition and should similarly be called "MidiInputDeviceDefinition"
+
+Next derive from `DynamicEnumDefinitionBase` to implement the class that provides the available entries of your enum to the system. Here you only have to override two functions: One that can return a list of current enum-entries as strings and another one that tells the system when your enum-entries have changed. 
+
+```csharp
+public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
+{
+    //return the current enum entries
+    protected override IReadOnlyList<string> GetEntries()
+    {
+    }
+
+    //inform the system that the enum has changed
+    protected override IObservable<object> GetEntriesChangedObservable()
+    {
+    }
+}
+```
+
+Implementations here will vary depending on your usecase. A simple example could look like this:
+
+```csharp
+public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
+{
+    ObservableCollection<string> FMyEntries = new ObservableCollection<string>();
+
+    //return the current enum entries
+    protected override IReadOnlyList<string> GetEntries()
+    {
+        return FMyEntries;
+    }
+
+    //inform the system that the enum has changed
+    protected override IObservable<object> GetEntriesChangedObservable()
+    {
+        return Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
+                h => FMyEntries.CollectionChanged += h,
+                h => FMyEntries.CollectionChanged -= h);
+    }
+
+    public void AddEntry(string entry)
+    {
+        FMyEntries.Add(entry);
+    }
+
+    public void RemoveEntry(string entry)
+    {
+        FMyEntries.Remove(entry);
+    }
+}
+```
+
+*Image:How this looks in VL*
 
 
 
