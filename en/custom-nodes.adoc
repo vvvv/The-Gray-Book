@@ -108,6 +108,8 @@ public static string StaticEnumDemo(DemoEnum e)
 ```
 *Image:Enum IOBox in VL patch*
 
+For an example of a dynamic enum (ie, one whose entries change during runtime), see below.
+
 === Using Generics
 
 VL embraces generics, so of course you can write generic nodes easily:
@@ -315,6 +317,26 @@ public static IObservable<CollisionEvent> OnCollision(this Body body)
 *Image:How this looks in VL*
 
 === Dynamic Enums
+
+Dynamic enums are useful in cases where you want to offer a user a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime.  
+
+Consider a normal enum in c#:
+```csharp
+enum MyEnum = { Foo, Bar }
+```
+
+Here `MyEnum` is what we call the type and `{ Foo, Bar }` makes its definition. In order to create a dynamic enum for VL we also need those two elements. Both need to be implemented as classes in c#:
+
+- The type needs to implement `IDynamicEnum` 
+- The definition needs to implment `IDynamicEnumDefinition`
+
+both of which come with the VL.Core nuget. To make their use easier there are also two baseclass implementations available
+
+- `DynamicEnumBase<T, U>`
+- `DynamicEnumDefinitionBase<U>`
+
+
+
 
 
 
