@@ -162,7 +162,7 @@ NOTE: Don't forget to enable "XML Documentation File" in the c# projects propert
 
 === C# Ref Paramters
 
-C# _ref_ parameters are simply ignored and the parameter is treated as a normal one
+You can use C# _ref_ parameters, but beware: Assigning the parameter leads to undefined behavior in VL (for now), so only make use of it in a readonly fashion!
 
 ```csharp
 public static int RefParams(ref int firstInput)
