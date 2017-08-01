@@ -339,7 +339,11 @@ Now in order to create a dynamic enum for VL we also need those two elements, th
 - The type needs to implement `IDynamicEnum` 
 - The definition needs to implment `IDynamicEnumDefinition`
 
-both of which come with the VL.Core nuget. To make their use easier there are also two baseclass implementations available:
+both of which come with the VL.Core nuget. 
+
+NOTE: For now the VL.Core nuget is only available as pre-release via http://vvvv.org:8111/guestAuth/app/nuget/v1/FeedService.svc/
+
+To make their use easier there are also two baseclass implementations available:
 
 - `DynamicEnumBase<T, U>`
 - `DynamicEnumDefinitionBase<U>`
