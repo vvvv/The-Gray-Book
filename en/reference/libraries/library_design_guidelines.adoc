@@ -211,7 +211,7 @@ This is not possible yet. For now you need to use absolute filenames.
 There is no way yet for a node to save data with a patch. For now you need to save anything in an extra file.
 
 == Events/Observables
-If you are dealing with asynchronous datasources - async await, task, events - always hand them to your users as Observables. See link:/reference/libraries/writing-nodes.adoc#_Observables[Writing Nodes].
+If you are dealing with asynchronous datasources - async await, task, events - always hand them to your users as Observables. See link:/reference/libraries/writing-nodes.adoc#_observables[Writing Nodes].
 
 == Resource Providers
 Many thirdparty libraries we can use rely on unmanaged resources under the hood which requires the manual handling of their disposal when they are no longer needed. An example for such a resource type would be the Bitmap or usually any type that gives you access to a physical device. Forgetting to dispose such a resource usually quickly lead to errors. 
