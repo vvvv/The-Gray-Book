@@ -37,6 +37,8 @@ This is basically it. Now build the project and you'll get a managed .dll contai
 
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VLDemoLib
+ 
+For more general considerations also see: link:/reference/libraries/library_design_guidelines.adoc[Library Design Guidelines]
 
 === Pin Names
 
