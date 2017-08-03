@@ -1,40 +1,33 @@
 = Importing Nodes
 
-Any static operation or member of a class defined in a .net .dll (library) can be used as a node in VL. To get access to the content of a library in a patch you only need to reference it as a dependency in the .vl document. Here are 3 ways to do so:
+== Referencing
 
-* Go to the document menu > Dependencies > Files > Add Existing...
-* Press CTRL+R
-* Drop the .dll onto the patch 
 
-You can also reference any library from the link:https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac[GAC] (Global Assembly Cache) that also holds all the main libraries shipping with .net:
+== Importing
+So while it is indeed quite convenient to have access to just about any .net library directly in VL, referencing into dlls is more a feature for advanced users. To make those libraries also accessible to more casual users we want to import them. 
 
-* Go to the document menu > Dependencies > Files > Add .NET Framework Assembly...
-* Or press CTRL+SHIFT+R
+With importing we mean designing the API for the end user:
 
-Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter it to explore the libraries namespaces, types and operations. Hover the individual operations to read their associated xml-documentation. Click any operation to use it in the patch as a node.
+* Choosing a proper VL Category for your nodes and types. Think from a user standpoint, not from an implementors standpoint when choosing the Category. Align it to the Categories that already exist.
+* Choosing which types are needed for the VL user and how they should be named.
+* Adjusting VL relevant meta information on the types (like mutability, default value, known type structure).
+* Choosing which nodes should be handed to the VL user, categorization, naming, default values of pins, data conversion to align with established VL libraries.
+* Designing lifetime management of disposables. See resource providers.
+* Adding convenience high level nodes and conversions.
+* Putting some thought into where additional records could help out to make the library easier to use.
 
-*Image:NodeBrowser with a .dll showing up as a toplevel category*
+=== Forwarding a type
 
-Like this you can use practically any thirdparty .net library and start patching with it immediately. Simple things will be simple to do but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
+==== Adjusting mutability
+Dlls don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL.
 
-== Typical problems with thirdparty Libraries
-=== Incompatible types
-Libraries often use their own types for Vectors, Matrices,.. which will not be compatible directly with the corresponding VL types. You'll need to find a way to convert between those. 
+*Image: Show mutable button*
 
-Sometimes it may only be value ranges, like: angles or colorcomponents in VL go from 0..1 while other libraries often use different ranges. 
+As already stated most .net types are mutable. So here is how to detect a .net type that is immutable:
 
-Wrappers can do those conversions for you. 
+* it only has readonly fields
+* each field is of a immutable type again
+* optional: have `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field Foo is set to the newValue 
 
-=== Mutability
-In a dataflow context it is most usable to deal with immutable datatypes. Since .net does not have have an understanding of immutability (yet), when importing nodes from thirdparty libraries by default we have to work with mutable datatypes. VL can do that and there are cases where this is even preferred, but more often than not it is also annoying. 
-
-By wrapping originally mutable datatypes in VL we can decide to make them immutable and prepare them for convenient use in VL's dataflow context. 
-
-=== Error Handling
-There are different ways libraries can deal with errors but typically as users we want to have one consistent way. 
-
-Building a wrapper around a library allows us to adopt the VL way of handling errors and expose that to the end-user. 
-
-== Wrappers
-So while it is indeed quite convenient to have access to just about any .net library directly in VL, this is more a feature for advanced users. To make those libraries also accessible to more casual users, wrapper libraries need to be created. Those can be of course done in C# but in many cases it will be enough to again patch those in VL. See link:/building-libraries.adoc[Patching Libraries] for a few features we built into VL to make it easy to create such wrappers.
-
+Now you know how to detect a foreign immutable type, but also how to write such a type in C#.
+In an upcoming version of C# watch out for records. They should ease the pain for writing them.
