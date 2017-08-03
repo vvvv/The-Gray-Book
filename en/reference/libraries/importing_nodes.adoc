@@ -1,4 +1,4 @@
-= Importing Nodes
+= Importing Libraries
 
 So while it is indeed quite convenient to have access to just about any .net library directly in VL, referencing into dlls is more a feature for advanced users. To make those libraries also accessible to more casual users we want to import them. 
 
@@ -12,7 +12,12 @@ With importing we mean designing the API for the end user:
 * Adding convenience high level nodes and conversions.
 * Putting some thought into where additional records could help out to make the library easier to use.
 
-=== Forwarding a type
+== Forwarding a type
+* Reference a dll as you did in the last chapter 
+* Open the solution explorer
+* Choose Imports
+* Choose the referenced dll 
+* Drag your type into a canvas
 
 ==== Adjusting mutability
 Dlls don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL.

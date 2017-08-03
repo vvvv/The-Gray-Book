@@ -1,4 +1,4 @@
-= Referencing into dlls
+= Referencing into Foreign Libraries
 
 Any static operation or member of a class defined in a .net .dll (library) can be used as a node in VL. To get access to the content of a library in a patch you only need to reference it as a dependency in the .vl document. Here are 3 ways to do so:
 
@@ -15,26 +15,24 @@ Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter i
 
 *Image:NodeBrowser with a .dll showing up as a toplevel category*
 
-Like this you can use practically any thirdparty .net library and start patching with it immediately. 
+Like this you can use practically any third party .net library and start patching with it immediately. 
 
-== Typical problems with thirdparty Libraries
+== Typical problems with third party Libraries
 
-Simple things will be simple to do but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
+Simple things will be simple to do, but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
 
-==== Incompatible types
+=== Incompatible types
 Libraries often use their own types for Vectors, Matrices,.. which will not be compatible directly with the corresponding VL types. You'll need to find a way to convert between those. 
-
 Sometimes it may only be value ranges, like: angles or color components in VL go from 0..1 while other libraries often use different ranges. 
-
-Wrappers can do those conversions for you. 
 
 ==== Mutability
 In a dataflow context it is most usable to deal with immutable datatypes. However most types from .net libraries are mutable. 
 
 ==== Error Handling
-There are different ways libraries can deal with errors but typically as users we want to have one consistent way. 
+There are different ways libraries can deal with errors but typically as users we want to have one consistent way. Building a wrapper around a library allows us to adopt the VL way of handling errors and expose that to the end-user. 
 
-Building a wrapper around a library allows us to adopt the VL way of handling errors and expose that to the end-user. 
+==== Too Low-level
+In general you might want to start top down. Offer some useful high level nodes (like process nodes) and add the low level only if it feels like valuable for the VL user. Starting from the top gives you control over the way the library is perceived in VL.
 
 === Conclusion
 These problems are the reason why in the long run you want to explicitly import the dll into VL and not just reference into it. 
