@@ -17,7 +17,8 @@ Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter i
 
 Like this you can use practically any thirdparty .net library and start patching with it immediately. 
 
-=== Typical problems with thirdparty Libraries
+== Typical problems with thirdparty Libraries
+
 Simple things will be simple to do but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
 
 ==== Incompatible types
