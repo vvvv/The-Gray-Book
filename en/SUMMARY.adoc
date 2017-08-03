@@ -53,7 +53,7 @@
 **** link:reference/libraries/reactive.adoc[Reactive]
 *** link:reference/libraries/dependencies.adoc[Dependencies]
 *** link:reference/libraries/writing-nodes.adoc[Writing Nodes]
-*** link:reference/libraries/referencing-nodes.adoc[Referencing Nodes]
+*** link:reference/libraries/referencing-nodes.adoc[Referencing into dlls]
 *** link:reference/libraries/importing_nodes.adoc[Importing Nodes]
 *** link:reference/libraries/patching-libraries.adoc[Patching Libraries]
 *** link:reference/libraries/library_design_guidelines.adoc[Design Guidelines]

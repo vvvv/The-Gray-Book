@@ -1,9 +1,4 @@
 = Importing Nodes
-
-== Referencing
-
-
-== Importing
 So while it is indeed quite convenient to have access to just about any .net library directly in VL, referencing into dlls is more a feature for advanced users. To make those libraries also accessible to more casual users we want to import them. 
 
 With importing we mean designing the API for the end user:
