@@ -12,13 +12,19 @@ With importing we mean designing the API for the end user:
 * Adding convenience high level nodes and conversions.
 * Putting some thought into where additional records could help out to make the library easier to use.
 
+== Prepare
+Drop some Groups onto your document canvas and name them to make up the main categories.
+Navigate into them.
+
 == Forwarding a type
 
 * Reference a dll as you did in the last chapter 
 * Open the solution explorer
 * Choose Imports
 * Choose the referenced dll 
-* Drag your type into a canvas
+* Drag your type into a group patch
+
+You now can navigate into the forwarded type to adjust which nodes should get imported or to adjust further details of the type.
 
 === Adjusting mutability
 
