@@ -13,13 +13,15 @@ With importing we mean designing the API for the end user:
 * Putting some thought into where additional records could help out to make the library easier to use.
 
 == Forwarding a type
+
 * Reference a dll as you did in the last chapter 
 * Open the solution explorer
 * Choose Imports
 * Choose the referenced dll 
 * Drag your type into a canvas
 
-==== Adjusting mutability
+=== Adjusting mutability
+
 Dlls don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL.
 
 *Image: Show mutable button*
