@@ -1,42 +1,54 @@
 = Patching Libraries
 
-By importing nodes from .net libraries we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be optimized for use in a dataflow context. They will provide a rather low-level set of nodes that we can typically structure/combine/wrap in a way that a VL user gets a more convenient high-level access to the library.
+By link:/reference/libraries/importing_nodes.adoc[importing nodes] from .net libraries we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be optimized for use in a dataflow context. They will provide a rather low-level set of nodes that we can typically structure/combine/wrap in a way that a VL user gets a more convenient high-level access to the library. 
 
-One important aspect when creating such a wrapper for a library is that we don’t want to introduce new wrapper-types. We want to stay type-compatible to the original library where applicable in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the high-level wrapper.
+One important aspect when creating such a wrapper for a library is that we don't want to introduce new wrapper-types. We want to stay type-compatible to the original library where applicable in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the high-level wrapper. 
 
 == Example Scenario
+As an example let's have a look at the Farseer 2d Physics library. By directly importing its nodes we can immediately create functional patches with just a few clicks: 
 
-As an example let’s have a look at the Farseer 2d Physics library. By directly importing its nodes we can immediately create functional patches with just a few clicks:
+*Image:A world with circles*
+*Image:Schematic: User Document > Original Library*
 
-Image:A world with circles Image:Schematic: User Document > Original Library
+But also we quickly see that the way the World has to be created is a bit cumbersome. Ideally we'd want to have a single node called World, that handles the life-time of the type World and runs the Step operation periodically. 
 
-But also we quickly see that the way the World has to be created is a bit cumbersome. Ideally we’d want to have a single node called World, that handles the life-time of the type World and runs the Step operation periodically.
-This is the point where instead of referencing the original library directly in our user document, we’re introducing an extra wrapper .vl document. In it we have access to the original library, wrap it nicely and expose only that higher-level view to the user document.
+This is the point where instead of referencing the original library directly in our user document, we're introducing an extra wrapper .vl document. In it we have access to the original library, wrap it nicely and expose only that higher-level view to the user document. 
 
-Image:Schematic: User Document > Library Wrapper Document > Original Library
+*Image:Schematic: User Document > Library Wrapper Document > Original Library*
 
-Now we could simply create a normal (Process) patch called World that handles the world object for us. But this would introduce a new type World in VL that is incompatible with the original Farseer World which in the long run is not desired as mentioned above.
+Now we could simply create a normal (Process) patch called World that handles the world object for us. But this would introduce a new type World in VL that is incompatible with the original Farseer World which in the long run is not desired as mentioned above. 
 
 == Forward Wrappers
+In VL we can therefore say that a patch acts as a type-fowarding-wrapper or simply a 'Forward'. 
 
-In VL we can therefore say that a patch acts as a type-fowarding-wrapper or simply a 'Forward'.
-Image:Set patch-type to 'Forward' and specify original type
-Image:Type Foward Is Public: if you want to have this type show up for everyone referencing this document
-What happens when the library changes Use it to selectively expose stuff of your library to the user
+*Image:Set patch-type to 'Forward' and specify original type*
+
+*Image:Type Foward*
+Is Public: if you want to have this type show up for everyone referencing this document
+
+What happens when the library changes
+Use it to selectively expose stuff of your library to the user
+
 
 === Operation Forwards
-
-Image:Operation Foward
+*Image:Operation Foward*
 
 Is Public: if you want to have this operation show up for everyone referencing this document
-Show Category: if the “memberness” of the operation is important
-Forward Pins
-Image:Renaming a Pin
-Image:Hiding a Pin usin an IOBox
-Image:Converting a type
-Solution Explorer
 
-Ctrl+M Use the Solution Explorer to
-drop Type on the main patch → creates a forward patch
-Drop member operations in type patch
-drop enum on main patch
+Show Category: if the “memberness” of the operation is important
+
+Forward Pins
+
+*Image:Renaming a Pin*
+
+*Image:Hiding a Pin* usin an IOBox
+
+*Image:Converting a type*
+
+== Solution Explorer
+Ctrl+M
+Use the Solution Explorer to
+
+- drop Type on the main patch -> creates a forward patch
+- Drop member operations in type patch
+- drop enum on main patch
