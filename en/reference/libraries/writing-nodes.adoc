@@ -100,8 +100,6 @@ Choosing the respective node in the NodeBrowser will then ask you for a further 
 
 You can use custom c# enums as input or output types to operations:
 ```csharp
-//the enum itself needs to be declared outside of the static class
-//it doesn't work nested in a class yet!
 public enum DemoEnum { Foo, Bar };
     
 public static string StaticEnumDemo(DemoEnum e)
