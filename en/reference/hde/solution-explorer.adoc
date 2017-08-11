@@ -3,5 +3,5 @@
 
 The Solution Explorer can be opened by pressing kbd:[Ctrl + J] and allows you to get an alternative view on your project. 
 
-*Image:The Solution Explorer*
+image:/en/reference/hde/vl-graybook-SolutionExplorer.png[alt="The Solution Explorer"]
 
