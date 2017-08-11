@@ -10,12 +10,12 @@ The development environment offers 3 different ways to find stuff quickly
 == Finder
 Press kbd:[Ctrl + F] in any patch to search for local occurances of strings. Type a string and then use kbd:[F3] or kbd:[Enter] to navigate through the results. Press kbd:[ESC] to hide the results again.
 
-*Image:The Finder looking for LFO*
+image:/en/reference/hde/vl-graybook-Finder-Finder.png[alt=""]
 
 == SymbolFinder
 Press kbd:[Ctrl + Shift + F] to globally search for any symbol including the given string. Use the shortcuts below followed by a " " (space) to narrow down your search:
 
-*Image:The SymbolFinder looking for CoreLib*
+image:/en/reference/hde/vl-graybook-Finder-SymbolFinder.png[alt=""]
 
 [cols="1,5", options="header"] 
 |===

@@ -6,7 +6,7 @@ When opening the NodeBrowser via a left double-click anywhere on a patch what yo
 * language primitives
 * a list of available nugets
 
-*Image:The NodeBrowser*
+image:/en/reference/hde/vl-graybook-Nodebrowser-Nodebrowser.png[alt="The NodeBrowser"]
 
 You can also bring up the NodeBrowser:
 
