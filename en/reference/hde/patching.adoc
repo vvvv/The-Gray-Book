@@ -28,6 +28,12 @@ NOTE: Middleclick alternative: kbd:[ALT] + leftclick
 
 |Reset pan and zoom of the patch
 |kbd:[Ctrl + 0]
+
+|Navigate back in Tab history
+|kbd:[Ctrl + <]
+
+|Navigate forward in Tab history
+|kbd:[Ctrl + >]
 |===
 
 If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
