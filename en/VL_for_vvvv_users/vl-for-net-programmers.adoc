@@ -1,0 +1,34 @@
+VL is a visual programming language for the link:https://en.wikipedia.org/wiki/.NET_Framework[.NET Framework]. It combines dataflow with features known from object-oriented programming and builds directly to the link:https://en.wikipedia.org/wiki/Common_Intermediate_Language[.NET Intermediate Language].
+
+With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document. The VL.CoreLib is built on top of link:https://docs.microsoft.com/en-us/dotnet/standard/net-standard[.NET Standard].
+
+## Renamings
+When assembling the VL.CoreLib we took a few curatorial decisions that may confuse .NET developers, so here we want to give you an overview of some renamings we did:
+
+[cols="1,1", options="header"] 
+|===
+|Original Name 
+|VL Name
+
+|IEnumerable
+|Sequence
+
+|IEnumerable.Select
+|Sequence.Project
+|===
+
+## Language Features
+If you're familiar with programming C#, you'll mostly find yourself around with VL. Here are a few things things that will be new to you though:
+
+### Spreads
+The main collection type in VL is called __Spread__ and its individual entries are called __Slices__. The Spread is an immutable collection with one special feature: If you're calling `GetSlice(Index)` on it, with an index that exceeds its count, instead of an error you get the slice with the index taken module the count.
+
+E.g. if you have a spread with 5 slice and you're asking for slice 7, you get slice 2.
+
+### Generic By Default
+
+### Process Nodes
+
+### Foreach with Multiple Inputs
+
+
