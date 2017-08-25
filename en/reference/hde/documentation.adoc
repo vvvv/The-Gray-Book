@@ -9,7 +9,7 @@ Using the documentation window you can add documentation to all your elements. P
 
 As long as the _Attach_ checkbox is not activated navigating between the patchs in the editor lets the documentation window follow the active patch. 
 
-image:/en/reference/hde/vl-graybook-DocumentationWindow.png[alt="The Documentation Window"]
+image::vl-graybook-DocumentationWindow.png[alt="The Documentation Window"]
 
 Specifying documentation is mostly useful when preparing libraries that you want to share with others. When working on documents for your own projects you'll hardly ever use it. 
 
