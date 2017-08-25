@@ -4,7 +4,7 @@ A project in VL typically consists of a single .vl document that holds one ore m
 
 In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
 
-*Image:The main menubar with the Active Document Template.vl*
+image:/en/reference/hde/vl-graybook-MainMenu.png[alt="The main menubar with the Active Document Template.vl"]
 
 == Active Document
 A little green symbol next to the documents name is a hint that the document had to be upgraded to the currently running version, which is usually just fine.
@@ -21,12 +21,12 @@ Click the active documents filename in the menubar to manage its dependencies. T
 * Nugets
 * Files
 
-*Image:A documents dependencies*
+image:/en/reference/hde/vl-graybook-Dependencies.png[alt="Document's dependencies"]
 
 === Nugets
 Navigate to Nugets to see a list of all available nugets. Each nuget is a collection of documents (.vl, .dll,..) that provide nodes for a document. A version in brackets next to a nuget means that the currently loaded version of the nuget is different to the version that was originally referenced. > meaning the referenced version being smaller, < meaning the referenced version being bigger than the currently loaded version.
 
-*Image:Available Nugets*
+image:/en/reference/hde/vl-graybook-Dependencies-Nuget.png[alt="Available Nugets"]
 
 Rightclick a nuget to select it. Selected nugets provide access to all their nodes via the nodebrowser in that document. 
 
@@ -37,6 +37,8 @@ In addition to nugets you can also reference individual files of the following t
 
 * .vl
 * .dll
+
+image:/en/reference/hde/vl-graybook-Dependencies-File.png[alt="Add Files"]
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
