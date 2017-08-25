@@ -1,5 +1,6 @@
 = Finders
 :experimental:
+:figure-caption!:
 
 The development environment offers 3 different ways to find stuff quickly
 
@@ -8,17 +9,19 @@ The development environment offers 3 different ways to find stuff quickly
 - Show All References: show all applications of a definition
 
 == Finder
-Press kbd:[Ctrl + F] in any patch to search for local occurances of strings. Type a string and then use kbd:[F3] or kbd:[Enter] to navigate through the results. Press kbd:[ESC] to hide the results again.
+Press kbd:[Ctrl + F] in any patch to search for local occurrences of strings. Type a string and then use kbd:[F3] or kbd:[Enter] to navigate through the results. Press kbd:[ESC] to hide the results again.
 
-image:/en/reference/hde/vl-graybook-Finder-Finder.png[Finder]
+.Finder
+image::/en/reference/hde/vl-graybook-Finder-Finder.png[Finder]
 
 == SymbolFinder
 Press kbd:[Ctrl + Shift + F] to globally search for any symbol including the given string.
 
-image:/en/reference/hde/vl-graybook-Finder-SymbolFinder.png[alt="SymbolFinder"]
+.Symbol Finder
+image::/en/reference/hde/vl-graybook-Finder-SymbolFinder.png[Symbol Finder]
 
 Use the shortcuts below followed by a " " (space) to narrow down your search:
-[cols="1,5", options="header"] 
+[cols="1,5", options="header"]
 |===
 |Shortcut
 |Description
