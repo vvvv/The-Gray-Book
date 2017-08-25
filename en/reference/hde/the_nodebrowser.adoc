@@ -3,10 +3,10 @@
 When opening the NodeBrowser via a left double-click anywhere on a patch what you see is:
 
 * a list of top-level node categories
-* language primitives
+* language primitives (_written in italic_)
 * a list of available nugets
 
-image:/en/reference/hde/vl-graybook-Nodebrowser-Nodebrowser.png[alt="The NodeBrowser"]
+image::/en/reference/hde/vl-graybook-Nodebrowser-Nodebrowser.png[alt="The NodeBrowser"]
 
 You can also bring up the NodeBrowser:
 
@@ -22,13 +22,11 @@ There are different ways to navigate the list of available nodes:
 
 In both cases it helps to be familiar with the icons: 
 
-**Images for the icons**
-
-- Category
-- Type Category
-- Process Node
-- Operation Node
-- Nuget
+- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Category.png[alt="Category"] Category
+- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Type.png[alt="Type Category"] Type Category
+- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Process.png[alt="Process Node"] Process Node
+- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Operation.png[alt="Operation"] Operation Node
+- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Nuget.png[alt="Nuget"] Nuget
 
 Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available. 
 
