@@ -12,7 +12,7 @@ The development environment offers 3 different ways to find stuff quickly
 Press kbd:[Ctrl + F] in any patch to search for local occurrences of strings. Type a string and then use kbd:[F3] or kbd:[Enter] to navigate through the results. Press kbd:[ESC] to hide the results again.
 
 .Finder
-image::/en/reference/hde/vl-graybook-Finder-Finder.png[Finder]
+image::vl-graybook-Finder-Finder.png[Finder]
 
 == SymbolFinder
 Press kbd:[Ctrl + Shift + F] to globally search for any symbol including the given string.
