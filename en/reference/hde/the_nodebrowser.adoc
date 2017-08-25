@@ -22,11 +22,15 @@ There are different ways to navigate the list of available nodes:
 
 In both cases it helps to be familiar with the icons: 
 
-- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Category.png[alt="Category"] Category
-- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Type.png[alt="Type Category"] Type Category
-- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Process.png[alt="Process Node"] Process Node
-- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Operation.png[alt="Operation"] Operation Node
-- image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Nuget.png[alt="Nuget"] Nuget
+image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Category.png[alt="Category"] - Category
+
+image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Type.png[alt="Type Category"] - Type Category
+
+image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Process.png[alt="Process Node"] - Process Node
+
+image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Operation.png[alt="Operation"] - Operation Node
+
+image:/en/reference/hde/vl-graybook-Nodebrowser-Icon-Nuget.png[alt="Nuget"] - Nuget
 
 Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available. 
 
