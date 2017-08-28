@@ -363,19 +363,11 @@ public class MyEnum: DynamicEnumBase<MyEnum, MyEnumDefinition>
     {
     }
 
-    public static MyEnum Default
+    //this method needs to be imported in VL to set the default
+    public static MyEnum CreateDefault()
     {
-        get
-        {
-            if (MyEnumDefinition.Instance.Entries.Count > 0)
-            {
-                return new MyEnum(MyEnumDefinition.Instance.Entries[0]);
-            }
-            else
-            {
-                return new MyEnum("No Entries");
-            }
-        }
+        //use method of base class if nothing special required
+        return CreateDefaultBase();
     }
 }
 ```
@@ -409,6 +401,14 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
 {
     ObservableCollection<string> FMyEntries = new ObservableCollection<string>();
 
+    //this is optional an can be used if any initialization before the call to GetEntries is needed
+    protected override void Initialize()
+    {
+        //add two default entries on initialization
+        FMyEntries.Add("abara");
+        FMyEntries.Add("kadabara");
+    }
+
     //return the current enum entries
     protected override IReadOnlyList<string> GetEntries()
     {
@@ -419,8 +419,8 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
     protected override IObservable<object> GetEntriesChangedObservable()
     {
         return Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
-                h => FMyEntries.CollectionChanged += h,
-                h => FMyEntries.CollectionChanged -= h);
+            h => FMyEntries.CollectionChanged += h,
+            h => FMyEntries.CollectionChanged -= h);
     }
 
     public void AddEntry(string entry)
@@ -428,22 +428,22 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
         FMyEntries.Add(entry);
     }
 
-    public void RemoveEntry(string entry)
+    public bool RemoveEntry(string entry)
     {
-        FMyEntries.Remove(entry);
+        return FMyEntries.Remove(entry);
     }
 }
 ```
 
-NOTE: For the `Observable` type in this example implementation you need to install the 'RX-Main' nuget. 
+NOTE: For the `Observable` type in this example implementation you need to install the 'System.Reactive' nuget.
 
 Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your ''MyEnum'', the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of ''MyEnum'' whenever it encounters it. 
 
 For this to happen we have to specify a default constructor for ''MyEnum'' and this can only be done using a Typeforward in VL!
 
-In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (Ctrl+J), choose 'Imports' in the dropdown and use the treeview to navigate to your 'MyEnum' class. Unfolding it you should see the 'Default' operation which you can take and drag-drop onto the document canvas. Renaming this operation to 'CreateDefault' will hint to the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'. 
+In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (Ctrl+J), choose 'Imports' in the dropdown and use the treeview to navigate to your 'MyEnum' class. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
 
-For now this also needs a restart but then you should see a valid instance in the pin that uses 'MyEnum' and you can now create an IOBox to control it. 
+For now this also needs a restart but then you should see a valid instance in the pin that uses 'MyEnum' and you can now create an IOBox to control it.
 
 *Image:How this looks in VL*
 
