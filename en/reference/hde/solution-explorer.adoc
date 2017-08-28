@@ -1,7 +1,7 @@
 :experimental:
 = Solution Explorer
 
-The Solution Explorer can be opened by pressing kbd:[Ctrl + J] and allows you to get an alternative view on your project. 
+The Solution Explorer can be opened by pressing kbd:[Ctrl + J] and allows you to get an alternative overview view and navigation for your project.
 
 image::vl-graybook-SolutionExplorer.png[alt="The Solution Explorer"]
 
