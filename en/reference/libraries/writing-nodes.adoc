@@ -255,6 +255,8 @@ In case your event does not have any arguments but simply sends a bang when some
 
 If your event does have arguments...(TODO)
 
+For general information on workig with Observables see the chapter about link:/reference/libraries/reactive.adoc[Reactive Programming].
+
 === Delegates
 
 Delegates do not yet get translated to Observables automatically yet. Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
