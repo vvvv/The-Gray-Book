@@ -7,13 +7,18 @@ In the main menubar you always see the filename of the document you're currently
 image::vl-graybook-MainMenu.png[alt="The main menubar with the Active Document Template.vl"]
 
 == Active Document
-A little green symbol next to the documents name is a hint that the document had to be upgraded to the currently running version, which is usually just fine.
 
-*Image:Hint: The document was upgraded to the running version*
+image::vl-graybook-ActiveDocument-UpgradeOrNewerVersion.png[alt="Green: the document was upgraded to the running version. Red: the document was last saved with a newer version than is currently running"]
+
+Assume that current VL version is: 56.
+
+==== A Green symbol
+
+A little green symbol next to the document's name is a hint that the document had to be upgraded to the currently running version, which is usually just fine.
+
+==== A Red symbol
 
 A red symbol is a warning that the document was last saved with a newer version and therefore things may not look/work as expected. 
-
-*Image:Warning: The document was last saved with a newer version than is currently running*
 
 == Dependencies
 Click the active documents filename in the menubar to manage its dependencies. There are two different types of dependencies:
