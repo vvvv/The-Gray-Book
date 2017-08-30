@@ -216,59 +216,48 @@ public class MyDataType
 ```
 *Image:Corresponding nodes*
 
-=== Observables
+=== Events/Observables
 
-If you are dealing with asynchronous datasources - async await, task, events, delegates - always expose them to VL as Observables. 
+VL translates .net events to Observables. So you can simply use events in your code and then access them in VL via the Observable pattern. 
 
-==== From Events
-
-Here is how you can convert a c# event to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
-
-Let's assume you have a datatype `Camera` that has an event like:
+Here is an example of c# events without and with event arguments:
 
 ```csharp
-public event EventHandler EventFrame;`
-```
-
-and you want to receive notifications of that event via the output of a node in VL. 
-
-First you need to create a class for the type of notification you want to receive in VL which will typically look like this:
-
-```csharp
-public class MyNotification<T, U>
+public class MyDataType
 {
-    public readonly T Sender;
-    public readonly U EventArgs;
-
-    public MyNotification(T sender, U eventArgs)
-    {
-        Sender = sender;
-        EventArgs = eventArgs;
-    }
+    public event EventHandler OnValueChanged;
+    public event EventHandler<float> OnValueExceeded;
+    ...
 }
 ```
 
-Next you can create e.g. a static operation node that receives an instance of the `Camera` in VL and returns an `Observable<MyNotification>` on its output:
+In your code those could be called like this:
 
 ```csharp
-public static IObservable<MyNotification<Camera, EventArgs>> OnEvent(this Camera cam)
+public float AddValue(float value)
 {
-    return ObservableNodes.FromEvent<EventHandler, MyNotification<Camera, EventArgs>>(
-        cam,
-        addHandler: handler => cam.EventFrame += handler,
-        removeHandler: handler => cam.EventFrame -= handler,
-        conversion: notificationProcessor => (_, e) =>
-        {
-            var cn = new MyNotification<Camera, EventArgs>(cam, e);
-            notificationProcessor(cn);
-        });
+    var lastFX = FX;
+    FX += value;
+    if (FX != lastFX)
+        OnValueChanged?.Invoke(this, EventArgs.Empty);
+
+    if (FX > FThreshold)
+        OnValueExceeded?.Invoke(this, FX);
+
+    return FX;
 }
 ```
-*Image:How this looks in VL*
+In VL those events are available as nodes of the same name that return an `Observable<EventPattern<>>`:
 
-==== From Delegates
+**Image:How this looks in VL**
 
-Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
+In case your event does not have any arguments but simply sends a bang when something happend, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
+
+If your event does have arguments...(TODO)
+
+=== Delegates
+
+Delegates do not yet get translated to Observables automatically yet. Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
 
 Let's assume you have a datatype `Body` that has a delegate like:
 
