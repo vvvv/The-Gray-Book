@@ -263,7 +263,7 @@ In VL those events are available as nodes of the same name that return an `Obser
 
 In case your event does not have any arguments but simply sends a bang when something happend, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
 
-If your event does have arguments you'll receive an `Observable<EventPattern<CustomEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which gives you access to the Sender and Value of the EventArgs.
+If your event does have arguments you'll receive an `Observable<EventPattern<CustomEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which is available via the VL.DevLib package. The node then gives you access to the Sender and Value of the EventArgs.
 
 **Image:How this looks in VL**
 
