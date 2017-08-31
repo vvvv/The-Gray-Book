@@ -14,7 +14,7 @@ VL version which is currenlty running: 56.
 
 *Green*
 
-A little green symbol next to the document's name is a hint that the document had to be upgraded to the currently running version, which is usually just fine.
+A little green symbol next to the document's name is a hint that the document was upgraded to the currently running version, which is usually just fine.
 
 *Red*
 

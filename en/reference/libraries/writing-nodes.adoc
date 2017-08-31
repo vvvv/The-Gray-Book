@@ -220,14 +220,24 @@ public class MyDataType
 
 VL translates .net events to Observables. So you can simply use events in your code and then access them in VL via the Observable pattern. 
 
-Here is an example of c# events without and with event arguments:
+Here is an example of c# events without and with event arguments conforming to the link:https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines[.NET Framework Guidelines for Publishing Events]:
 
 ```csharp
 public class MyDataType
 {
     public event EventHandler OnValueChanged;
-    public event EventHandler<float> OnValueExceeded;
+    public event EventHandler<CustomEventArgs<float>> OnValueExceeded;
     ...
+}
+
+public class CustomEventArgs<T> : EventArgs
+{
+    public CustomEventArgs(T value)
+    {
+        Value = value;
+    }
+
+    public T Value { get; }
 }
 ```
 
@@ -242,7 +252,7 @@ public float AddValue(float value)
         OnValueChanged?.Invoke(this, EventArgs.Empty);
 
     if (FX > FThreshold)
-        OnValueExceeded?.Invoke(this, FX);
+        OnValueExceeded?.Invoke(this, new CustomEventArgs<float>(FX));
 
     return FX;
 }
@@ -253,7 +263,9 @@ In VL those events are available as nodes of the same name that return an `Obser
 
 In case your event does not have any arguments but simply sends a bang when something happend, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
 
-If your event does have arguments...(TODO)
+If your event does have arguments you'll receive an `Observable<EventPattern<CustomEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which gives you access to the Sender and Value of the EventArgs.
+
+**Image:How this looks in VL**
 
 For general information on workig with Observables see the chapter about link:/reference/libraries/reactive.adoc[Reactive Programming].
 
