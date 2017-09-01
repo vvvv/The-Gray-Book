@@ -1,4 +1,5 @@
 :experimental:
+= Patches
 
 Patches are where we put nodes. There are different types of patches:
 
@@ -6,18 +7,18 @@ Patches are where we put nodes. There are different types of patches:
 * Datatype Patch 
 * link:/en/reference/vl/groups.adoc[Group Patch]
 
-# Document Patch
+== Document Patch
 Every .vl document has at least one patch, the document patch which gives an overview of the content in the document. The document patch of the active document can always be reached via the shortcut kbd:[Alt+P].
 
-*Image:Section of the document patch of VL.CoreLib.vl*
+image::vl-graybook-DocumentPatch.png[alt="Section of the document patch of VL.CoreLib.vl"]
 
 Here we typically see a range of type-definitions and groups though a document patch can also directly hold operation-definitions.
 
 The document patch can set or omit a base category.
 
-*Image:Document base category set to 'Foo'*
+image::vl-graybook-DocumentPatch-BaseCategory.png[alt="Document base category set to 'Foo'"]
 
-# Datatype Patch
+== Datatype Patch
 The most common type of patch is a datatype patch. It roughly corresponds to what other programming languages call a "class". Every datatype patch has a corresponding type-definition in the document patch. 
 
 There are two ways to create a new datatype patch:
@@ -30,6 +31,8 @@ In both cases the corresponding type-definition is automatically placed in the d
 A datatype patch can have properties and contains at least a _Create_ and an _Update_ operation but can contain any number of additional operations. 
 
 By default a datatype patch defines a link:/en/reference/vl/nodes.adoc[Process Node]. 
+
+image::vl-graybook-DatatypePatch.png[alt="Datatypes: Process, Record and Class"]
 
 * Process (default): to define a Process Node
 * Record: to define an immutable datatype
