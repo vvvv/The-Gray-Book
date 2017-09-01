@@ -17,20 +17,20 @@ Using the term "operation" alone can be ambiguous if not from the context it wil
 
 *Image:A member operation definition and its application as a node*
 
-## Static operation definitions
+== Static operation definitions
 Static operation definitions can be created directly in a document patch or in a group patch via the NodeBrowser. 
 
-*Image:Choose to create an operation definition in the NodeBrowser*
+image::vl-graybook-Operations-Static-NodeBrowser.png[alt="Choose to create an operation definition in the NodeBrowser"]
 
 By default static operations have their _Is Generic_ property set to true. Disabling it shows errors for all inputs and outputs of the operation whose datatype is not specified or cannot be infered. 
 
-*Image:The _Is Generic_ toggle of an operation definition is on by default*
+image::vl-graybook-Utils-StaticOperation-GenericToggle.png[alt="The _Is Generic_ toggle of an operation definition is on by default"]
 
 Once created, the operation definition shows up in the NodeBrowser and can now be created as a node.
 
-*Image:The newly created operation can now be selected via the NodeBrowser*
+image::vl-graybook-Operations-Static-MyOperation-NodeBrowser.png[alt="The newly created operation can now be selected via the NodeBrowser"]
 
-## Member operation definitions
+== Member operation definitions
 Any operation defined as part of a datatype patch is a member operation. 
 
 Member operations are not surrounded by a rectangular definition region because they can interact with each other via pads and can in fact be quite distributed over a patch which would potentially result in many overlapping regions in a patch. Therefore instead member operations are distinguished by color.
