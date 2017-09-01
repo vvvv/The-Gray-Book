@@ -1,3 +1,5 @@
+= Operations
+
 Operations define a simple functionality. They take input, apply their function to it and return a result. Operations cannot hold state, meaning they cannot store any data between consecutive calls. This also means that you cannot use any Process nodes (e.g. LFO, Damper,...) in them as those are stateful and therefore can only be used in a stateful context which an operation does not provide.
 
 There are two different types of operations in vl:
@@ -7,7 +9,7 @@ There are two different types of operations in vl:
 
 While _static_ operations are on their own, operating only on data they are being fed with, the term _member_ refers to the fact that those operations belong to and operate on the data of  a datatype.
 
-# Definition vs. Application
+== Definition vs. Application
 
 Using the term "operation" alone can be ambiguous if not from the context it will be clear whether we actually mean an "operation definition" or an "application of the operation definition" which again is synonymous with "node". 
 
@@ -43,10 +45,10 @@ Member operations in a patch can be defined either via the PatchExplorer...
 
 *Image:Assigning a selection of inputs to a new operation* 
 
-# Operation Applications
+== Operation Applications
 As mentioned above the term _Operation Application_ is synonymous with the term _Node_ and therefore we're here referring you to the chapter link:/en/reference/vl/nodes.adoc[Nodes] for further details.
 
-# Operation Signature 
+== Operation Signature 
 The signature of an operation comprises of its input- and output-pins and defines the order in which they show up on corresponding nodes. 
 
 For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the PatchExplorer.
