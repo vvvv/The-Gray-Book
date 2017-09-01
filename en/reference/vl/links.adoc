@@ -1,4 +1,6 @@
 :experimental:
+= Links
+
 Links are the connections between pins. There are 3 different kinds of links.
 
 *Image:Normal Link, Reference Link, Delegate Link*
