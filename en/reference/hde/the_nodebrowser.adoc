@@ -6,7 +6,9 @@ When opening the NodeBrowser via a left double-click anywhere on a patch what yo
 * language primitives (_written in italic_)
 * a list of available nugets
 
-image::vl-graybook-Nodebrowser-Nodebrowser.png[alt="The NodeBrowser"]
+.The NodeBrowser
+[caption=""]
+image::vl-graybook-Nodebrowser-Nodebrowser.png[]
 
 You can also bring up the NodeBrowser:
 
@@ -42,7 +44,9 @@ When you're clicking an entry that represents a node two things may happen:
 === Search By Category
 Nodes in VL are organized in a hierarchical structure of categories. Click any of the categories to enter it. 
 
-image::vl-graybook-Nodebrowser-Tags.png[alt="Selected Tags"]
+.Selected Tags
+[caption=""]
+image::vl-graybook-Nodebrowser-Tags.png[]
 
 Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it. Pressing the ESC button always removes the last tag.
 
@@ -68,6 +72,8 @@ Many of the primitives can be given a name directly after choosing to create the
 == Available Nugets
 Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
 
-image::vl-graybook-Nodebrowser-Nugets.png[alt="Nugets in the NodeBrowser"]
+.Nugets in the NodeBrowser
+[caption=""]
+image::vl-graybook-Nodebrowser-Nugets.png[]
 
 If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies. 

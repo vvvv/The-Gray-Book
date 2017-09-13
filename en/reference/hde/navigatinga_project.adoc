@@ -4,11 +4,15 @@ A project in VL typically consists of a single .vl document that holds one ore m
 
 In the main menubar you always see the filename of the document you're currently working on, ie. the "Active Document". 
 
-image::vl-graybook-MainMenu.png[alt="The main menubar with the Active Document Template.vl"]
+.The main menubar with the Active Document Template.vl
+[caption=""]
+image::vl-graybook-MainMenu.png[]
 
 == Active Document
 
-image::vl-graybook-ActiveDocument-UpgradeOrNewerVersion.png[alt="Green: the document was upgraded to the running version. Red: the document was last saved with a newer version than is currently running"]
+.Green: the document was upgraded to the running version. Red: the document was last saved with a newer version than is currently running
+[caption=""]
+image::vl-graybook-ActiveDocument-UpgradeOrNewerVersion.png[]
 
 VL version which is currenlty running: 56.
 
@@ -26,12 +30,16 @@ Click the active documents filename in the menubar to manage its dependencies. T
 * Nugets
 * Files
 
-image::vl-graybook-Dependencies.png[alt="Document's dependencies"]
+.Document's dependencies
+[caption=""]
+image::vl-graybook-Dependencies.png[]
 
 === Nugets
 Navigate to Nugets to see a list of all available nugets. Each nuget is a collection of documents (.vl, .dll,..) that provide nodes for a document. A version in brackets next to a nuget means that the currently loaded version of the nuget is different to the version that was originally referenced. > meaning the referenced version being smaller, < meaning the referenced version being bigger than the currently loaded version.
 
-image::vl-graybook-Dependencies-Nuget.png[alt="Available Nugets"]
+.Available Nugets
+[caption=""]
+image::vl-graybook-Dependencies-Nuget.png[]
 
 Rightclick a nuget to select it. Selected nugets provide access to all their nodes via the nodebrowser in that document. 
 
@@ -43,7 +51,9 @@ In addition to nugets you can also reference individual files of the following t
 * .vl
 * .dll
 
-image::vl-graybook-Dependencies-File.png[alt="Add Files"]
+.Add Files
+[caption=""]
+image::vl-graybook-Dependencies-File.png[]
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
