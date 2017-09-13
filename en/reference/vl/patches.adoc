@@ -36,7 +36,9 @@ A datatype patch can have properties and contains at least a _Create_ and an _Up
 
 By default a datatype patch defines a link:/en/reference/vl/nodes.adoc[Process Node]. 
 
-image::vl-graybook-DatatypePatch.png[alt="Datatypes: Process, Record and Class"]
+.Datatypes: Process, Record and Class
+[caption=""]
+image::vl-graybook-DatatypePatch.png[]
 
 * Process (default): to define a Process Node
 * Record: to define an immutable datatype
