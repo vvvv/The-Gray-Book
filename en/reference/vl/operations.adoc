@@ -26,7 +26,7 @@ By default static operations have their _Is Generic_ property set to true. Disab
 
 .The _Is Generic_ toggle of an operation definition is on by default
 [caption=""]
-image::vl-Graybook-Utils-StaticOperation-GenericToggle.png
+image::vl-Graybook-Utils-StaticOperation-GenericToggle.png[]
 
 Once created, the operation definition shows up in the NodeBrowser and can now be created as a node.
 
