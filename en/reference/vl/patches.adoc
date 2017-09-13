@@ -17,7 +17,9 @@ Here we typically see a range of type-definitions and groups though a document p
 
 The document patch can set or omit a base category.
 
-image::vl-graybook-DocumentPatch-BaseCategory.png[alt="Document base category set to 'Foo'"]
+.Document base category set to "Foo"
+[caption=""]
+image::vl-graybook-DocumentPatch-BaseCategory.png[]
 
 == Datatype Patch
 The most common type of patch is a datatype patch. It roughly corresponds to what other programming languages call a "class". Every datatype patch has a corresponding type-definition in the document patch. 
