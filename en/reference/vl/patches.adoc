@@ -11,6 +11,7 @@ Patches are where we put nodes. There are different types of patches:
 Every .vl document has at least one patch, the document patch which gives an overview of the content in the document. The document patch of the active document can always be reached via the shortcut kbd:[Alt+P].
 
 .Section of the document patch of VL.CoreLib.vl
+[caption=""]
 image::vl-graybook-DocumentPatch.png[]
 
 Here we typically see a range of type-definitions and groups though a document patch can also directly hold operation-definitions.
