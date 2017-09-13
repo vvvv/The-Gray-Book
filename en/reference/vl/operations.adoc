@@ -24,7 +24,7 @@ image::vl-graybook-Operations-Static-NodeBrowser.png[alt="Choose to create an op
 
 By default static operations have their _Is Generic_ property set to true. Disabling it shows errors for all inputs and outputs of the operation whose datatype is not specified or cannot be infered. 
 
-image::vl-graybook-Utils-StaticOperation-GenericToggle.png[alt="The _Is Generic_ toggle of an operation definition is on by default"]
+image::vl-Graybook-Utils-StaticOperation-GenericToggle.png[alt="The _Is Generic_ toggle of an operation definition is on by default"]
 
 Once created, the operation definition shows up in the NodeBrowser and can now be created as a node.
 
