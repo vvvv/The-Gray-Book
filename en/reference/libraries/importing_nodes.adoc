@@ -37,5 +37,5 @@ There are different ways libraries can deal with errors but typically as users w
 Building a wrapper around a library allows us to adopt the VL way of handling errors and expose that to the end-user. 
 
 == Wrappers
-So while it is indeed quite convenient to have access to just about any .net library directly in VL, this is more a feature for advanced users. To make those libraries also accessible to more casual users, wrapper libraries need to be created. Those can be of course done in C# but in many cases it will be enough to again patch those in VL. See link:/building-libraries.adoc[Patching Libraries] for a few features we built into VL to make it easy to create such wrappers.
+So while it is indeed quite convenient to have access to just about any .NET library directly in VL, this is more a feature for advanced users. To make those libraries also accessible to more casual users, wrapper libraries need to be created. Those can be of course done in C# but in many cases it will be enough to again patch those in VL. See link:/building-libraries.adoc[Patching Libraries] for a few features we built into VL to make it easy to create such wrappers.
 
