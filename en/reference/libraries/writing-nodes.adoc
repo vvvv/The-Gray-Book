@@ -94,6 +94,7 @@ public static float MyAddition(float input, float input2, float input3)
 ```
 
 Choosing the respective node in the NodeBrowser will then ask you for a further choice to specify the which version you want to use.
+
 *Image:NodeBrowser shows two nodes*
 
 === Using Enums
@@ -141,7 +142,7 @@ Use XML documentation in C# to provide some information about your nodes:
 
 - Summary: A one-liner info about the node
 - Remarks: Some additional remarks, like usage instructions, warnings,.. can be multi-line
-- Tags: A list of space-separated tags to find the node in the NodeBrowser (only include terms that are not already part of the nodes name and category
+- Tags: A list of space-separated tags to find the node in the NodeBrowser (only include terms that are not already part of the nodes name and category!)
 - Param name: Short info for each Input
 - Returns: Short info about the result of the node
       
@@ -150,7 +151,7 @@ Use XML documentation in C# to provide some information about your nodes:
 ///<remarks>Some additional remarks</remarks>
 ///<tags>space separated tags</tags>
 ///<param name="a">The A Parameter</param>
-///<returns>Returns 2 a</returns>
+///<returns>Returns 2 times a</returns>
 public static int HTMLDocuTest(int a)
 {
     return a*2;
@@ -162,7 +163,7 @@ NOTE: Don't forget to enable "XML Documentation File" in the c# projects propert
 
 === C# Ref Paramters
 
-You can use C# _ref_ parameters, but beware: Assigning the parameter leads to undefined behavior in VL (for now), so only make use of it in a readonly fashion!
+You can use C# _ref_ parameters, but beware: Assigning the parameter leads to undefined behavior in VL (for now), so never write to but only read from _ref_ parameters!
 
 ```csharp
 public static int RefParams(ref int firstInput)
@@ -173,7 +174,7 @@ public static int RefParams(ref int firstInput)
 
 === Datatypes
 
-In VL you can also use any datatype you define as a class or struct in c#. 
+Any datatype that you define as class or strcut in c# can be used in VL: 
 
 - Any constructor will be available as a Create node
 - Any get-property will show up as a node returning the properties value
@@ -183,33 +184,21 @@ In VL you can also use any datatype you define as a class or struct in c#.
 ```csharp
 public class MyDataType
 {
-    float FX;
-    
-    public float X
-    {
-        get { return FX; }
-        set
-        {
-            if (value < 100)
-                    FX = value;
-            }
-        }
-    }
+    private float FX;
+    private float FThreshold = 10f;
+
+    public float Y { get; set; }
 
     public MyDataType(float x)
     {
         FX = x;
     }
 
-    public float Update(float factor=1f)
+    public float AddValue(float value)
     {
-        FX *= factor;
-        return FX;
-    }
-    
-    public float AnotherNode(float factor=1f)
-    {
-        FX /= factor;
+        var lastFX = FX;
+        FX += value;
+
         return FX;
     }
 }
@@ -279,7 +268,7 @@ Let's assume you have a datatype `Body` that has a delegate like:
 public delegate bool OnCollisionEventHandler (Fixture fixtureA, Fixture fixtureB, Collision collision);
 ```
 
-and you want to receive a notifications of when that delegate is called via the output of a node in VL. 
+and you want to receive a notification when that delegate is called, via the output of a node in VL. 
 
 First you need to create a class for the type of notification you want to receive in VL which in this case may look like this:
 
@@ -322,7 +311,7 @@ public static IObservable<CollisionEvent> OnCollision(this Body body)
 
 === Dynamic Enums
 
-Dynamic enums are useful in cases where you want to offer a user a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 
+Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 
 
 Consider a normal enum in c#:
 ```csharp
