@@ -40,9 +40,9 @@ kbd {
     border-radius: 5px;
     }
     
-.glossary-term {
+a.glossary-term {
     cursor: help;
-    text-decoration: underline;
+    text-decoration: none;
     color: inherit;
     border-bottom: 1px dotted #555;
 }
