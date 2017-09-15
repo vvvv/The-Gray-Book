@@ -6,7 +6,7 @@ In the main menubar you always see the filename of the document you're currently
 
 .The main menubar with the Active Document "callmenames.vl"
 [caption=""]
-image::/images/vl-MainMenu.png[]
+image::../../images/vl-MainMenu.png[]
 
 == Active Document Menu
 Clicking on the active document opens its menu. At the bottom of the menu you see the VL version the document was last saved with. If there is a little green or red icon before the document name, this means that the document has been saved with a version different to the one currently running. :
