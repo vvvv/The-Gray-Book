@@ -13,7 +13,7 @@ Clicking on the active document opens its menu. At the bottom of the menu you se
 
 .In this example VL version 56 is running
 [caption=""]
-image::/images/vl-ActiveDocument-UpgradeOrNewerVersion.png[]
+image::../../images/vl-ActiveDocument-UpgradeOrNewerVersion.png[]
 
 *Green*
 
@@ -31,14 +31,14 @@ A document can reference two different types of dependencies:
 
 .Document's dependencies
 [caption=""]
-image::/images/vl-Dependencies.png[]
+image::../../images/vl-Dependencies.png[]
 
 ==== Nugets
 Navigate to Nugets to see a list of all available nugets. Each nuget is a collection of documents (.vl, .dll,..) that provide nodes for a document. A version in brackets next to a nuget means that the currently loaded version of the nuget is different to the version that was originally referenced. > meaning the referenced version being smaller, < meaning the referenced version being bigger than the currently loaded version.
 
 .Available Nugets
 [caption=""]
-image::/images/vl-Dependencies-Nuget.png[]
+image::../../images/vl-Dependencies-Nuget.png[]
 
 Rightclick a nuget to select it. Selected nugets provide access to all their nodes via the nodebrowser in that document. 
 
@@ -52,7 +52,7 @@ In addition to nugets you can also reference individual files of the following t
 
 .Add Files
 [caption=""]
-image::/images/vl-Dependencies-File.png[]
+image::../../images/vl-Dependencies-File.png[]
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
