@@ -15,8 +15,6 @@ Clicking on the active document opens its menu. At the bottom of the menu you se
 [caption=""]
 image::vl-graybook-ActiveDocument-UpgradeOrNewerVersion.png[]
 
-
-
 *Green*
 
 A little green symbol next to the document's name is a hint that the document was upgraded to the currently running version, which is usually just fine. Still this hint is given so you know that if you save the document in this version it may have troubles being loaded in an older version.
