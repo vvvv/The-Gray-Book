@@ -8,7 +8,7 @@ When opening the NodeBrowser via a left double-click anywhere on a patch what yo
 
 .The NodeBrowser
 [caption=""]
-image::/images/vl-Nodebrowser-Nodebrowser.png[]
+image::../../images/vl-Nodebrowser-Nodebrowser.png[]
 
 You can also bring up the NodeBrowser:
 
@@ -24,15 +24,15 @@ There are different ways to navigate the list of available nodes:
 
 In both cases it helps to be familiar with the icons: 
 
-image:/images/vl-Nodebrowser-Icon-Category.png[alt="Category"] - Category
+image:../../images/vl-Nodebrowser-Icon-Category.png[alt="Category"] - Category
 
-image:/images/vl-Nodebrowser-Icon-Type.png[alt="Type Category"] - Type Category
+image:../../images/vl-Nodebrowser-Icon-Type.png[alt="Type Category"] - Type Category
 
-image:/images/vl-Nodebrowser-Icon-Process.png[alt="Process Node"] - Process Node
+image:../../images/vl-Nodebrowser-Icon-Process.png[alt="Process Node"] - Process Node
 
-image:/images/vl-Nodebrowser-Icon-Operation.png[alt="Operation"] - Operation Node
+image:../../images/vl-Nodebrowser-Icon-Operation.png[alt="Operation"] - Operation Node
 
-image:/images/vl-Nodebrowser-Icon-Nuget.png[alt="Nuget"] - Nuget
+image:../../images/vl-Nodebrowser-Icon-Nuget.png[alt="Nuget"] - Nuget
 
 Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available. 
 
@@ -46,7 +46,7 @@ Nodes in VL are organized in a hierarchical structure of categories. Click any o
 
 .Selected Tags
 [caption=""]
-image::/images/vl-Nodebrowser-Tags.png[]
+image::../../images/vl-Nodebrowser-Tags.png[]
 
 Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it. Pressing the ESC button always removes the last tag.
 
@@ -74,6 +74,6 @@ Nugets that are available for VL but not referenced by the active document show 
 
 .Nugets in the NodeBrowser
 [caption=""]
-image::/images/vl-Nodebrowser-Nugets.png[]
+image::../../images/vl-Nodebrowser-Nugets.png[]
 
 If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies. 
