@@ -6,16 +6,18 @@ The Reactive category gives you tools to handle asynchronous events, background 
 == Processing Events
 The go to node for handling events is the ForEach Region in the category Reactive. This region allows you to place any node inside and can also remember any data between two events. There is also one with version _Keep_ that can filter out events using a boolean output. This region is very similar to the ForEach region for spreads, only that its input and output is event values in time instead of slices of a spread.
 
-
-*Image:Refresh web data every 30 seconds in the background and pass the result on to the mainloop.*
+.Refresh web data every 30 seconds in the background and pass the result on to the mainloop.
+image::/en/images/vl-libraries-reactive-refreshEvery30secInBackground.PNG[]
 
 You can switch or merge event sources:
 
-*Image:Switching or merging midi events.*
+.Switching or merging midi events.
+image::/en/images/vl-libraries-reactive-switchingAndMerging.PNG[]
 
 There are also filtering options with OfType or Where:
 
-*Image:Only get TouchDown events from a combined event stream*
+.Only get TouchDown events from a combined event stream.
+image::/en/images/vl-libraries-reactive-onlyGetTouchDown.PNG[]
 
 Other nodes include Skip, Delay, Delay (Selector), Scan, Switch, ...
 
@@ -29,11 +31,13 @@ If you want to leave the observable world and pass event values to the mainloop 
 
 which all behave a little bit different. Depends on what you need:
 
-*Image:Three ways to get event values to the mainloop.*
+.Three ways to get event values to the mainloop.
+image::/en/images/vl-libraries-reactive-3waysToGetEventValuesToMainloop.PNG[]
 
 == Creating Events
 It's also easy to generate event sources of your own:
 
-*Image:Different ways to create observable event sources.*
+.Different ways to create observable event sources.
+image::/en/images/vl-libraries-reactive-waysToCreateObservableSources.PNG[]
 
 NOTE: Only send values of type Record as event data because they are thread safe. If you send values of any Class type be sure that you know exactly what you are doing!
