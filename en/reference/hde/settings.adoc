@@ -1,6 +1,7 @@
+:experimental:
 = Settings
 
-Go to menu:Quad[Settings > Open] in Editor_ to open the settings.xml file in the program you have assigned to open .xml files with. 
+Go to menu:Quad[Settings > Open in Editor] to open the settings.xml file in the program you have assigned to open .xml files with. 
 
 If that program does not allow you to edit the file, choose menu:Quad[Settings > Show in explorer] instead to locate the file in explorer from where you can open it in your preferred editor. 
 
