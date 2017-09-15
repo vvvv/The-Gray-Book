@@ -31,3 +31,11 @@ kbd {
     padding-top: 0.2em;
     text-align: center;
 }
+
+.menuseq {
+    background-color: #efefee;
+    padding: 0.2em 0.5em;
+    font-style: italic;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    }
