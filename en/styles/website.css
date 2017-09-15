@@ -41,16 +41,13 @@ kbd {
     }
 
 
-a.glossary-term {
-	text-decoration: none;
+.markdown-section .glossary-term {
+    text-decoration: none;
     color: inherit;
-}
-    
-.glossary-term {
     cursor: help;
-    border-bottom: 1px dotted #555;
+    border-bottom: 1px dotted #888;
 }
 
-a.glossary-term:hover {
+.markdown-section .glossary-term:hover {
     text-decoration: none;
 }
