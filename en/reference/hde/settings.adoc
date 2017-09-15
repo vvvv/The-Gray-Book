@@ -4,6 +4,8 @@ Go to _Quad > Settings > Open in Editor_ to open the settings.xml file in the pr
 
 If that program does not allow you to edit the file, choose _Quad > Settings > Show in explorer_ instead to locate the file in explorer from where you can open it in your preferred editor. 
 
-image::vl-graybook-Settings.png[alt="Settings file"]
+.A Settings file
+[caption=""]
+image::../../images/vl-graybook-Settings.png[]
 
 After changing any setting simply save the file and go back to the vl editor. Changes are applied immediately, no need to restart!
