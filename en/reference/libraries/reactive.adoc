@@ -1,9 +1,11 @@
+:figure-caption!:
 = Reactive
 
 The Reactive category gives you tools to handle asynchronous events, background calculations and even enables you to build your own mainloop that runs on a different CPU core.
 
 == Processing Events
 The go to node for handling events is the ForEach Region in the category Reactive. This region allows you to place any node inside and can also remember any data between two events. There is also one with version _Keep_ that can filter out events using a boolean output. This region is very similar to the ForEach region for spreads, only that its input and output is event values in time instead of slices of a spread.
+
 
 *Image:Refresh web data every 30 seconds in the background and pass the result on to the mainloop.*
 
