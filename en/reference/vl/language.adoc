@@ -1,5 +1,6 @@
-= Overview
+= VL
 
+== Overview
 The most important components of VL are *_Nodes_* and *_Links_*.
 
 Nodes and links live on a canvas called *_Patch_*.
