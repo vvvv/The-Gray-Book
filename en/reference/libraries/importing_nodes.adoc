@@ -18,7 +18,7 @@ Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter i
 
 Like this you can use practically any thirdparty .NET library and start patching with it immediately. Simple things will be simple to do but obviously most libraries you'll find are not designed to be used in a dataflow context like VL and patching with them will require a better understanding of things than we'd normally want to ask from our users. 
 
-== Typical problems with thirdparty Libraries
+== Common issues with thirdparty Libraries
 === Incompatible types
 Libraries often use their own types for Vectors, Matrices,.. which will not be compatible directly with the corresponding VL types. You'll need to find a way to convert between those. 
 
