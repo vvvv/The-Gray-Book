@@ -1,3 +1,4 @@
+:figure-caption!:
 = Operations
 
 Operations define a simple functionality. They take input, apply their function to it and return a result. Operations cannot hold state, meaning they cannot store any data between consecutive calls. This also means that you cannot use any Process nodes (e.g. LFO, Damper,...) in them as those are stateful and therefore can only be used in a stateful context which an operation does not provide.
