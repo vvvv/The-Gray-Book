@@ -1,4 +1,4 @@
 = Project Structure
 
-image::/images/vl_component_hierarchy.png[Components]
+image::/en/images/vl_component_hierarchy.png[Components]
 
