@@ -7,21 +7,21 @@ The Reactive category gives you tools to handle asynchronous events, background 
 The go to node for handling events is the _ForEach Region_ in the category _Reactive_. This region allows you to place any node inside and can also remember any data between two events. There is also one with version _Keep_ that can filter out events using a boolean output. This region is very similar to the ForEach region for spreads, only that its input and output is event values in time instead of slices of a spread.
 
 .Refresh web data every 30 seconds in the background and pass the result on to the mainloop.
-image::/en/images/vl-libraries-reactive-refreshEvery30secInBackground.PNG[]
+image::../../images/vl-libraries-reactive-refreshEvery30secInBackground.PNG[]
 
 === Switching or merging event sources
 
 You can switch or merge event sources:
 
 .Switching or merging midi events.
-image::/en/images/vl-libraries-reactive-switchingAndMerging.PNG[]
+image::../../images/vl-libraries-reactive-switchingAndMerging.PNG[]
 
 === Filtering
 
 There are also filtering options with _OfType_ or _Where_:
 
 .Only get TouchDown events from a combined event stream.
-image::/en/images/vl-libraries-reactive-onlyGetTouchDown.PNG[]
+image::../../images/vl-libraries-reactive-onlyGetTouchDown.PNG[]
 
 Other nodes include 
 
@@ -42,12 +42,12 @@ If you want to leave the observable world and pass event values to the mainloop 
 which all behave a little bit different. Depends on what you need:
 
 .Three ways to get event values to the mainloop.
-image::/en/images/vl-libraries-reactive-3waysToGetEventValuesToMainloop.PNG[]
+image::../../images/vl-libraries-reactive-3waysToGetEventValuesToMainloop.PNG[]
 
 == Creating Events
 It's also easy to generate event sources of your own:
 
 .Different ways to create observable event sources.
-image::/en/images/vl-libraries-reactive-waysToCreateObservableSources.PNG[]
+image::../../images/vl-libraries-reactive-waysToCreateObservableSources.PNG[]
 
 NOTE: Only send values of type Record as event data because they are thread safe. If you send values of any Class type be sure that you know exactly what you are doing!
