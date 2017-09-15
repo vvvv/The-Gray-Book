@@ -2,5 +2,5 @@
 
 .Components
 [caption=""]
-image::/images/vl_component_hierarchy.png[]
+image::../../images/vl_component_hierarchy.png[]
 
