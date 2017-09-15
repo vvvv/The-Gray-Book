@@ -1,1 +1,3 @@
-* [English](en)
+= Languages
+
+. link:en/[English]
