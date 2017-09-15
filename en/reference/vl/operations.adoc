@@ -1,3 +1,4 @@
+:figure-caption!:
 = Operations
 
 Operations define a simple functionality. They take input, apply their function to it and return a result. Operations cannot hold state, meaning they cannot store any data between consecutive calls. This also means that you cannot use any Process nodes (e.g. LFO, Damper,...) in them as those are stateful and therefore can only be used in a stateful context which an operation does not provide.
@@ -21,20 +22,17 @@ Using the term "operation" alone can be ambiguous if not from the context it wil
 Static operation definitions can be created directly in a document patch or in a group patch via the NodeBrowser. 
 
 .Choose to create an operation definition in the NodeBrowser
-[caption=""]
-image::vl-graybook-Operations-Static-NodeBrowser.png[]
+image::../../images/vl-Operations-Static-NodeBrowser.png[]
 
 By default static operations have their _Is Generic_ property set to true. Disabling it shows errors for all inputs and outputs of the operation whose datatype is not specified or cannot be infered. 
 
 .The "Is Generic" toggle of an operation definition is on by default
-[caption=""]
-image::vl-Graybook-Utils-StaticOperation-GenericToggle.png[]
+image::../../images/vl-Utils-StaticOperation-GenericToggle.png[]
 
 Once created, the operation definition shows up in the NodeBrowser and can now be created as a node.
 
 .The newly created operation can now be selected via the NodeBrowser
-[caption=""]
-image::vl-graybook-Operations-Static-MyOperation-NodeBrowser.png[]
+image::../../images/vl-Operations-Static-MyOperation-NodeBrowser.png[]
 
 == Member operation definitions
 Any operation defined as part of a datatype patch is a member operation. 
