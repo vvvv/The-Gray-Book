@@ -39,3 +39,14 @@ kbd {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     }
+    
+.glossary-term {
+    cursor: help;
+    text-decoration: underline;
+    color: inherit;
+    border-bottom: 1px dotted #555;
+}
+
+a.glossary-term:hover {
+    text-decoration: none;
+}
