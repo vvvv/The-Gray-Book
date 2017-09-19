@@ -7,6 +7,6 @@ If that program does not allow you to edit the file, choose menu:Quad[Settings >
 
 .A Settings file
 [caption=""]
-image::../../images/vl-graybook-Settings.png[]
+image::../../images/vl-Settings.png[]
 
 After changing any setting simply save the file and go back to the vl editor. Changes are applied immediately, no need to restart!
