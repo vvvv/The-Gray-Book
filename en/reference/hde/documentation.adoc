@@ -11,7 +11,7 @@ As long as the _Attach_ checkbox is not activated navigating between the patchs 
 
 .The Documentation Window
 [caption=""]
-image::../../images/vl-graybook-DocumentationWindow.png[]
+image::../../images/vl-DocumentationWindow.png[]
 
 Specifying documentation is mostly useful when preparing libraries that you want to share with others. When working on documents for your own projects you'll hardly ever use it. 
 
