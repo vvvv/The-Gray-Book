@@ -5,5 +5,5 @@ The Solution Explorer can be opened by pressing kbd:[Ctrl + J] and allows you to
 
 .The Solution Explorer
 [caption=""]
-image::../../images/vl-graybook-SolutionExplorer.png[]
+image::../../images/vl-SolutionExplorer.png[]
 
