@@ -1,4 +1,6 @@
 :experimental:
+:figure-caption!:
+
 = Writing nodes using C#
 
 Writing your own nodes for VL using C# requires no VL specific knowledge or preparation. Essentially you’re writing plain C# code that VL then turns into nodes. Here is a step by step guide to get you started:
@@ -12,13 +14,15 @@ In Visual Studio 2017 create a new project by choosing either of those two templ
 
 As a rule of thumb: Use .NET Standard as long as you can, use .NET Framework if you need. For more confusing information on this, read this link:https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project[Stackoverflow discussion].
 
-*Image:Visualstudio Template Chooser*
+.Visual Studio Template Chooser.
+image::../../images/vl-libraries-writingNodes-vs2017.PNG[]
 
 NOTE: If you are using Visual Studio 2015 choose menu:Visual C#[Class Library].
 
 This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
-*Image:Empty generated Class1.cs*  
+.Empty generated Class1.cs.
+image::../../images/vl-libraries-writingNodes-vs2017-emptyClass.PNG[]
 
 The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly. 
 

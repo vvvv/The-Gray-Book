@@ -11,8 +11,6 @@ image::../../images/vl-libraries-reactive-refreshEvery30secInBackground.PNG[]
 
 === Switching or merging event sources
 
-You can switch or merge event sources:
-
 .Switching or merging midi events.
 image::../../images/vl-libraries-reactive-switchingAndMerging.PNG[]
 
