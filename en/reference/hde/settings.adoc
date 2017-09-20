@@ -5,7 +5,7 @@ Go to menu:Quad[Settings > Open in Editor] to open the settings.xml file in the 
 
 If that program does not allow you to edit the file, choose menu:Quad[Settings > Show in explorer] instead to locate the file in explorer from where you can open it in your preferred editor. 
 
-.A Settings file
+.The Settings file
 [caption=""]
 image::../../images/vl-Settings.png[]
 
