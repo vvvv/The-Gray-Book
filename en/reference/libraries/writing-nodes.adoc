@@ -163,9 +163,8 @@ public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
 }
 ```
 
-.Spread node
+.Spread node.
 image::../../images/vl-libraries-writingNodes-Spreads.png[]
-
 
 
 
@@ -190,7 +189,10 @@ public static int HTMLDocuTest(int a)
     return a*2;
 }
 ```
-*Image:Documentation shows up in NodeBrowser and Tooltip*
+
+.Documentation shows up in NodeBrowser and Tooltip.
+image::../../images/vl-libraries-writingNodes-Documentation.png[]
+
 
 NOTE: Don't forget to enable "XML Documentation File" in the c# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
 
@@ -204,6 +206,10 @@ public static int RefParams(ref int firstInput)
     return firstInput + 4444;
 }
 ```
+
+.A node with _ref_ parameter as an Input.
+image::../../images/vl-libraries-writingNodes-Spreads.png[]
+
 
 === Datatypes
 
