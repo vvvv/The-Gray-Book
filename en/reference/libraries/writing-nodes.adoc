@@ -224,9 +224,6 @@ Any datatype that you define as class or strcut in c# can be used in VL:
 public class MyDataType
 {
     private float FX;
-    private float FThreshold = 10f;
-
-    public float Y { get; set; }
 
     public MyDataType(float x)
     {
@@ -247,9 +244,6 @@ public class MyDataType
 image::../../images/vl-libraries-writingNodes-Datatypes.png[]
 
 
-
-*Image:Corresponding nodes*
-
 === Events/Observables
 
 VL translates .net events to Observables. So you can simply use events in your code and then access them in VL via the Observable pattern. 
@@ -260,18 +254,18 @@ Here is an example of c# events without and with event arguments conforming to t
 public class MyDataType
 {
     public event EventHandler OnValueChanged;
-    public event EventHandler<CustomEventArgs<float>> OnValueExceeded;
+    public event EventHandler<MyGenericEventArgs<float>> OnValueExceeded;
     ...
 }
 
-public class CustomEventArgs<T> : EventArgs
+public class MyGenericEventArgs<T> : EventArgs
 {
-    public CustomEventArgs(T value)
+    public readonly T Value;
+
+    public MyGenericEventArgs(T value)
     {
         Value = value;
     }
-
-    public T Value { get; }
 }
 ```
 
@@ -280,26 +274,29 @@ In your code those could be called like this:
 ```csharp
 public float AddValue(float value)
 {
-    var lastFX = FX;
-    FX += value;
-    if (FX != lastFX)
+    if (value != 0)
+    {
+        FX += value;
         OnValueChanged?.Invoke(this, EventArgs.Empty);
+    }
 
     if (FX > FThreshold)
-        OnValueExceeded?.Invoke(this, new CustomEventArgs<float>(FX));
+        OnValueExceeded?.Invoke(this, new MyGenericEventArgs<float>(FX));
 
     return FX;
 }
 ```
 In VL those events are available as nodes of the same name that return an `Observable<EventPattern<>>`:
 
-**Image:How this looks in VL**
+.How this looks in VL: a) Member Operations, b) ValueChanged event without any arguments, c) ValueExceeded event with an argument.
+image::../../images/vl-libraries-writingNodes-Observables.png[]
 
-In case your event does not have any arguments but simply sends a bang when something happend, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
+* In case your event does not have any arguments _(section 'b' on the image above)_, but simply sends a bang when something happens, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
 
-If your event does have arguments you'll receive an `Observable<EventPattern<CustomEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which is available via the VL.DevLib package. The node then gives you access to the Sender and Value of the EventArgs.
+* If your event does have arguments _(section 'c' on the image above)_ you'll receive an `Observable<EventPattern<MyGenericEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which is available via the VL.DevLib package. The node then gives you access to the Sender and Value of the EventArgs.
 
-**Image:How this looks in VL**
+.Unpacking using EventArgs.
+image::../../images/vl-libraries-writingNodes-Observables-EventArgs.png[]
 
 For general information on workig with Observables see the chapter about link:/reference/libraries/reactive.adoc[Reactive Programming].
 
