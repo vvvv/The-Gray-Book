@@ -78,7 +78,10 @@ public static float Defaults(float firstInput=44f, float secondInput=0.44f)
     return firstInput + secondInput;
 }
 ```
-*Image:Default on Input*
+
+.Default on Input.
+image::../../images/vl-libraries-writingNodes-Defaults.png[]
+
 
 === Multiple Outputs
 
