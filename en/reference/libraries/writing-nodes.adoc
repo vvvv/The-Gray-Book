@@ -33,7 +33,7 @@ namespace MyCustomNodes
 {
     public static class MyStaticNodes
     { 
-        public static float Add(float input, float input2)
+        public static float MyAddition(float input, float input2)
         {
             return input + input2;
         }
@@ -43,7 +43,9 @@ namespace MyCustomNodes
 
 This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/importing_nodes.adoc[Importing Nodes] to use those operations as nodes in VL.
 
-*Image:Resulting Node in VL*
+.Resulting Node in VL.
+image::../../images/vl-libraries-writingNodes-MyAdditionNode.png[]
+
 
 == More Details
 
