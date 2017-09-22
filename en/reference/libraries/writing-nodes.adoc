@@ -242,6 +242,12 @@ public class MyDataType
     }
 }
 ```
+
+.Corresponding nodes.
+image::../../images/vl-libraries-writingNodes-Datatypes.png[]
+
+
+
 *Image:Corresponding nodes*
 
 === Events/Observables
@@ -472,7 +478,7 @@ Lastly there is one thing you'll have to do in VL to get your dynamic enum worki
 
 For this to happen we have to specify a default constructor for ''MyEnum'' and this can only be done using a Typeforward in VL!
 
-In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (Ctrl+J), choose 'Imports' in the dropdown and use the treeview to navigate to your 'MyEnum' class. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
+In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]), choose 'Imports' in the dropdown and use the treeview to navigate to your 'MyEnum' class. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
 
 For now this also needs a restart but then you should see a valid instance in the pin that uses 'MyEnum' and you can now create an IOBox to control it.
 
