@@ -291,9 +291,9 @@ In VL those events are available as nodes of the same name that return an `Obser
 .How this looks in VL: a) Member Operations, b) ValueChanged event without any arguments, c) ValueExceeded event with an argument.
 image::../../images/vl-libraries-writingNodes-Observables.png[]
 
-* In case your event does not have any arguments (section 'b' on the image above), but simply sends a bang when something happens, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
+* In case your event does not have any arguments _(section 'b' on the image above)_, but simply sends a bang when something happens, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
 
-* If your event does have arguments (section 'c' on the image above) you'll receive an `Observable<EventPattern<MyGenericEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which is available via the VL.DevLib package. The node then gives you access to the Sender and Value of the EventArgs.
+* If your event does have arguments _(section 'c' on the image above)_ you'll receive an `Observable<EventPattern<MyGenericEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which is available via the VL.DevLib package. The node then gives you access to the Sender and Value of the EventArgs.
 
 .Unpacking using EventArgs.
 image::../../images/vl-libraries-writingNodes-Observables-EventArgs.png[]
