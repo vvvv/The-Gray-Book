@@ -22,11 +22,11 @@ NOTE: If you are using Visual Studio 2015 choose menu:Visual C#[Class Library].
 This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
 .Empty generated Class1.cs.
-image::../../images/vl-libraries-writingNodes-vs2017-emptyClass.PNG[]
+image::../../images/vl-libraries-writingNodes-vs2017.PNG[]
 
 The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly. 
 
-Now *any pulibc static operation and every member operation of a public class you write will turn into a VL node*. The most simple node you can write is therefore:
+Now *any public static operation and every member operation of a public class you write will turn into a VL node*. The most simple node you can write is therefore:
 
 ```csharp
 namespace MyCustomNodes
