@@ -94,7 +94,10 @@ public static void MultipleOutputs(float firstInput, float secondInput, out floa
     multiplied = firstInput * secondInput;
 }
 ```
-*Image:A node with multiple outputs*
+
+.A node with multiple outputs.
+image::../../images/vl-libraries-writingNodes-MultipleOutputs.png[]
+
 
 === Function Overloading
 
@@ -127,7 +130,10 @@ public static string StaticEnumDemo(DemoEnum e)
     return e.ToString();
 }
 ```
-*Image:Enum IOBox in VL patch*
+
+.Enum IOBox in VL patch.
+image::../../images/vl-libraries-writingNodes-StaticEnum.png[]
+
 
 For an example of a dynamic enum (ie, one whose entries change during runtime), see below.
 
