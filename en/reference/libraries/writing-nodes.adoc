@@ -59,12 +59,14 @@ For more general considerations also see: link:/reference/libraries/library_desi
 For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
 
 ```csharp
-public static float Foo(float firstInput, float secondInput)
+public static float PinNames(float firstInput, float secondInput)
 {
     return firstInput + secondInput;
 }
 ```
-*Image:Tooltip shows pin name*
+
+.Tooltip shows pin name.
+image::../../images/vl-libraries-writingNodes-PinNames.png[]
 
 === Default Values
 
