@@ -207,8 +207,8 @@ public static int RefParams(ref int firstInput)
 }
 ```
 
-.A node with _ref_ parameter as an Input.
-image::../../images/vl-libraries-writingNodes-Spreads.png[]
+.A node with a _ref_ parameter as an Input.
+image::../../images/vl-libraries-writingNodes-RefParam.png[]
 
 
 === Datatypes
