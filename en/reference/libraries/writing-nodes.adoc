@@ -147,7 +147,10 @@ public static string Generic<T>(T input)
     return input.ToString();
 }
 ```
-*Image:Generic pin out of node*
+
+.Generic pin out of node.
+image::../../images/vl-libraries-writingNodes-Generic.png[]
+
 
 === Operating on Spreads
 
@@ -159,7 +162,12 @@ public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
     return input.Reverse();
 }
 ```
-*Image:Spread node*
+
+.Spread node
+image::../../images/vl-libraries-writingNodes-Spreads.png[]
+
+
+
 
 === Documentation
 
