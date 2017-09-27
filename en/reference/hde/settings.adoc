@@ -1,4 +1,4 @@
-:experimental:
+NET:experimental:
 = Settings
 
 Go to menu:Quad[Settings > Open in Editor] to open the settings.xml file in the program you have assigned to open .xml files with. 
