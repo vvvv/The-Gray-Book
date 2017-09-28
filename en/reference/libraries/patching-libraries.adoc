@@ -1,6 +1,6 @@
 = Wrapping .NET Libraries
 
-By link:/reference/libraries/importing_nodes.adoc[Using .NET Libraries] we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be optimized for use in a dataflow context. They will provide a rather low-level set of nodes that we can typically structure/combine/wrap in a way that a VL user gets a more convenient high-level access to the library. 
+By link:/reference/libraries/using_net_libraries.adoc[Using .NET Libraries] we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be optimized for use in a dataflow context. They will provide a rather low-level set of nodes that we can typically structure/combine/wrap in a way that a VL user gets a more convenient high-level access to the library. 
 
 One important aspect when creating such a wrapper for a library is that we don't want to introduce new wrapper-types. We want to stay type-compatible to the original library where applicable in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the high-level wrapper. 
 
