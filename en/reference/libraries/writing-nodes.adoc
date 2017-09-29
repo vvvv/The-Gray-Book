@@ -1,4 +1,4 @@
-:experimental:
+image:/assets/vl-libraries-writingNodes-DynamicEnums.png[alt=""]:experimental:
 :figure-caption!:
 
 = Writing nodes using C#
