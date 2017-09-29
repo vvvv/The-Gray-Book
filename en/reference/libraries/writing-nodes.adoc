@@ -477,9 +477,9 @@ NOTE: For the `Observable` type in this example implementation you need to insta
 
 ===== 4. Specify a default constructor
 
-Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your ''MyEnum'', the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of ''MyEnum'' whenever it encounters it. 
+Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your 'MyEnum', the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of 'MyEnum' whenever it encounters it. 
 
-For this to happen we have to specify a default constructor for ''MyEnum'' and this can only be done using a Typeforward in VL!
+For this to happen we have to specify a default constructor for 'MyEnum' and this can only be done using a Typeforward in VL!
 
 . In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]).
 . Choose _'Imports'_ in the dropdown and use the treeview to navigate to your 'MyEnum' class. 
