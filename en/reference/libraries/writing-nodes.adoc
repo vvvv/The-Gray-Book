@@ -367,12 +367,12 @@ public static string EnumDemo(MyEnum e)
 }
 ```
 
-==== Implementing dynamic Enums in VL
+==== Implementing dynamic Enums for VL
 
 Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
 
 - The type needs to implement `IDynamicEnum` 
-- The definition needs to implment `IDynamicEnumDefinition`
+- The definition needs to implement `IDynamicEnumDefinition`
 
 both of which come with the VL.Core nuget. 
 
