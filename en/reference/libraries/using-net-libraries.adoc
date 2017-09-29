@@ -29,7 +29,7 @@ image::../../images/vl-libraries-using-GACWindow.png[]
 
 == Accessing nodes
 
-Each referenced .dll shows up as a toplevel category in the NodeBrowser. Enter it to explore the libraries namespaces, types and operations. Hover the individual operations to read their associated xml-documentation. Click any operation to use it as a node in the patch.
+Each referenced .dll shows up as a top-level category in the NodeBrowser. Enter it to explore the libraries' namespaces, types and operations. Hover the individual operations to read their associated xml-documentation. Click any operation to use it as a node in the patch.
 
 .NodeBrowser with the namespace 'DemoLib' from the VL.DemoLib.dll showing up as a toplevel category.
 image::../../images/vl-libraries-using-NodeBrowser.png[]
@@ -37,7 +37,7 @@ image::../../images/vl-libraries-using-NodeBrowser.png[]
 Like this you can use practically any thirdparty .NET library and start patching with it immediately. 
 
 == For your Consideration
-Having access to just about any .NET library directly in VL is indeed quite convenient and powerful. With many simple libraries you'll have instant success. But obviously most libraries you'll find in the wild are not designed to be used in a dataflow context like VL. Patching with those is still possible but will require a better understanding of things than we'd normally want to ask from our users. Therefore we consider this feature of "using .NET libraries directly" to be for the more advanced audience. 
+Having access to just about any .NET library directly in VL is indeed quite convenient and powerful. With many simple libraries you'll have instant success. But obviously most libraries you'll find in the wild are not designed to be used in a dataflow context like VL. Patching with those is still possible but will require a better understanding of things than we'd normally want to ask from our users. Therefore we consider this feature of _"using .NET libraries directly"_ to be for the more advanced audience. 
 
 Below is a list of typical issues you'll encounter with third-party libraries which are often reasons for wrapping them into a more VL friendly form. See link:/reference/libraries/patching-libraries.adoc[Wrapping .NET Libraries] for a few features we built into VL to make it easy to create such wrappers.
 
@@ -55,7 +55,7 @@ There are different ways libraries can deal with errors but typically as users w
 Building a wrapper around a library allows us to adopt the VL way of handling errors and expose that to the end-user. 
 
 === Too Low-level
-Thirdparty libraries are often rather low-level in the functionality they provide. In a visual language like VL we prefer to use more high-level nodes that already combine some features of a library to reusable building blocks. 
+Third-party libraries are often rather low-level in the functionality they provide. In a visual language like VL we prefer to use more high-level nodes that already combine some features of a library to reusable building blocks. 
 
-Wrappers can be useful to combine often used low-level functionality into convenient hight-level nodes.
+Wrappers can be useful to combine often used low-level functionality into convenient high-level nodes.
 
