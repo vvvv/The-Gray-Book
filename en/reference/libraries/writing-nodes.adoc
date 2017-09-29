@@ -302,7 +302,7 @@ For general information on workig with Observables see the chapter about link:/r
 
 === Delegates
 
-Delegates do not yet get translated to Observables automatically yet. Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
+Delegates do not get translated to Observables automatically yet. Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
 
 Let's assume you have a datatype `Body` that has a delegate like:
 
@@ -312,7 +312,7 @@ public delegate bool OnCollisionEventHandler (Fixture fixtureA, Fixture fixtureB
 
 and you want to receive a notification when that delegate is called, via the output of a node in VL. 
 
-First you need to create a class for the type of notification you want to receive in VL which in this case may look like this:
+First you need to create a class for the type of notification you want to receive in VL. It may look like this:
 
 ```csharp
 public class CollisionEvent
@@ -340,7 +340,7 @@ public static IObservable<CollisionEvent> OnCollision(this Body body)
     return ObservableNodes.FromEvent<OnCollisionEventHandler, CollisionEvent>(
         body,
         addHandler: handler => body.OnCollision += handler,
-        removeHandler: handler => body.OnCollision -= handler)
+        removeHandler: handler => body.OnCollision -= handler,
         conversion: handler => (fixtureA, fixtureB, contact) =>
         {
             var e = new CollisionEvent(fixtureA, fixtureB, contact);
@@ -349,8 +349,6 @@ public static IObservable<CollisionEvent> OnCollision(this Body body)
         });
 }
 ```
-*Image:How this looks in VL*
-
 === Dynamic Enums
 
 Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 
@@ -369,6 +367,8 @@ public static string EnumDemo(MyEnum e)
 }
 ```
 
+==== Implementing dynamic Enums in VL
+
 Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
 
 - The type needs to implement `IDynamicEnum` 
@@ -385,7 +385,9 @@ To make their use easier there are also two baseclass implementations available:
 
 Note that the DynamicEnumDefinitionBase is a Singleton, meaning that its implementation takes care that always only one instance exists of it globally. We want this because it is important that any node that is referring to a specific enum definition always gets exactly the same entries!
 
-Using the above two baseclasses, an implmentation of your own dynamic enum could look like this:
+Using the above two baseclasses, an implementation of your own dynamic enum could look like this:
+
+===== 1. Create an enum type
 
 First derive from the `DynamicEnumBase` to create your own enum type. 
 
@@ -411,7 +413,9 @@ The code above most likely doesn't need many changes for your own implementation
 - Give it a proper name instead of "MyEnum", something like e.g. "MidiInputDevice". Note the singular in the naming: This type represents one entry in the enumeration. 
 - Note the second type parameter `MyEnumDefinition` which connects your enum to its definition and should similarly be called "MidiInputDeviceDefinition"
 
-Next derive from `DynamicEnumDefinitionBase` to implement the class that provides the available entries of your enum to the system. Here you only have to override two functions: One that can return a list of current enum-entries as strings and another one that tells the system when your enum-entries have changed. 
+===== 2. Provide available entries
+
+Derive from `DynamicEnumDefinitionBase` to implement the class that provides the available entries of your enum to the system. Here you only have to override two functions: One that can return a list of current enum-entries as strings and another one that tells the system when your enum-entries have changed. 
 
 ```csharp
 public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
@@ -471,15 +475,34 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
 
 NOTE: For the `Observable` type in this example implementation you need to install the 'System.Reactive' nuget.
 
+===== 4. Specify a default constructor
+
 Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your ''MyEnum'', the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of ''MyEnum'' whenever it encounters it. 
 
 For this to happen we have to specify a default constructor for ''MyEnum'' and this can only be done using a Typeforward in VL!
 
-In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]), choose 'Imports' in the dropdown and use the treeview to navigate to your 'MyEnum' class. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
+. In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]).
+. Choose _'Imports'_ in the dropdown and use the treeview to navigate to your 'MyEnum' class. 
+. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
+
+.Specifying a default constructor for 'MyEnum'.
+image::/assets/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
 
 For now this also needs a restart but then you should see a valid instance in the pin that uses 'MyEnum' and you can now create an IOBox to control it.
 
-*Image:How this looks in VL*
+.How this looks in VL.
+image::/assets/vl-libraries-writingNodes-DynamicEnums.png[]
+
+
+
+
+
+
+
+
+
+
+
 
 
 
