@@ -475,7 +475,7 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
 
 NOTE: For the `Observable` type in this example implementation you need to install the 'System.Reactive' nuget.
 
-===== 4. Specify a default constructor
+===== 3. Specify a default constructor
 
 Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your 'MyEnum', the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of 'MyEnum' whenever it encounters it. 
 
