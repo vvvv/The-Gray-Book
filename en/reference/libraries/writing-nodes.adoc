@@ -486,12 +486,12 @@ For this to happen we have to specify a default constructor for 'MyEnum' and thi
 . Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
 
 .Specifying a default constructor for 'MyEnum'.
-image::../../vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
+image::../../images/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
 
 For now this also needs a restart but then you should see a valid instance in the pin that uses 'MyEnum' and you can now create an IOBox to control it.
 
 .How this looks in VL.
-image::../../vl-libraries-writingNodes-DynamicEnums.png[]
+image::../../images/vl-libraries-writingNodes-DynamicEnums.png[]
 
 
 
