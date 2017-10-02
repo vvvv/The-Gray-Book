@@ -4,7 +4,7 @@ By link:/reference/libraries/using_net_libraries.adoc[Using .NET Libraries] we h
 
 To make those libraries accessible to more casual users we often want to curate exactly what nodes and types of the original library are seen by them. Forwarding allows us to insert a very thin wrapper layer to conveniently provide such curation and do things like the following:
 
-== Forwarding is used to
+== Reasons to Forward
 - Selectively forward types and operations of .NET .dlls
 - Adjust VL relevant meta information on the types (like mutability and known type structure)
 - Choose a relevant category for the nodes and types in VL
@@ -15,27 +15,87 @@ To make those libraries accessible to more casual users we often want to curate 
 - Design lifetime management of disposables
 
 .NOTE:
-An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the high-level wrapper. 
+An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
 
-TODO:
+Also the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases. 
 
-== Fowarding a Type
-- place it in category/group
-- dragdrop from solution explorer 
-- create manually: forward, set type annotation
-- rename type
-- wildcard forwards all operations, vs. selective fwd
-- mutability
-- known type structure
-- create default 
-operations:
+== Fowarding Types
+The typical scenario will have you create one .vl document to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
+
+=== Referencing the .NET .dll
+In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See Dependencies.
+
+=== Prepare a Category Group
+The category an imported type will show-up in is defined by the group you place it in. In your documents main patch create groups for all the categories you want your library to introduce.
+
+*Image:Categories in a documents main patch*
+
+=== Create Type Forward
+There are two ways to create a type forward:
+
+1. Via Drag-Drop from the Solution Explorer
+2. Manually 
+
+*ad 1) Drop a type from the Solution Explorer*
+
+- Open the group you want to drop the type into
+- Open the Solution Explorer
+- Choose 'Imports'
+- Find the type you want to import
+- Drag-Drop the type into the group
+
+*Image:Drag-Drop type from Solution Explorer into group*
+
+*ad 2) Manually create a forward patch*
+
+- Open the group you want to drop the type into
+- Create a new patch
+- Set the patches type to 'Forward'
+- Set a type annotation on the patch
+
+*Image:Set patch type to Forward*
+*Image:Set type annotation*
+
+==== Rename Type
+Typically you may want to keep the name of a type as it is set in the original library. If you have a good reason to rename it, simply do so.
+
+*Image:Renaming a Type*
+
+==== Forward All Nodes
+When you create a type forward, all of the types operations are forwarded as nodes by default. If you prefer to selectively forward only a subset of a types operations, uncheck the 'Forward All Nodes' option.
+
+*Image:Forward All Nodes*
+ 
+Note that even while the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
+
+==== Mutability
+.NET Libraries don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
+
+*Image: Mutable checkbox*
+
+Since most .NET types are mutable this flag is activated by default. Here is how to detect whether a .NET type is immutable:
+
+* It only has readonly fields
+* Each of its fields is of an immutable type
+* Optional: have `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field Foo is set to the newValue 
+
+In an upcoming version of C# watch out for 'Records'. They should ease the pain for writing immutable types.
+
+==== Known Type Structure
+
+*Image: Known Type Structure*
+
+==== Create Default
+
+=== Create Operation Forward
+
 - rename pins
 - set default 
 - hide pins
 - type conversions
 - show category
 
-== Forwarding Enums
+=== Create Enum Forward
 
 
 == Forward Wrappers
