@@ -2,31 +2,31 @@
 
 By link:/reference/libraries/using_net_libraries.adoc[Using .NET Libraries] we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be very convenient to use in the dataflow context of VL. 
 
-To make those libraries accessible to more casual users we often want to curate exactly what nodes and types of the original library are seen by them. Forwarding allows us to insert a very thin wrapper layer to conveniently provide such curation and do things like the following:
+To make those libraries accessible to more casual users we often want to curate exactly what nodes and types of the original library are seen by them. Forwarding allows us to insert a very thin wrapper layer to conveniently provide such curation.
 
 == Reasons to Forward
 - Selectively forward types and operations of .NET .dlls
 - Adjust VL relevant meta information on the types (like mutability and known type structure)
 - Choose a relevant category for the nodes and types in VL
-- Do simple type conversions (e.g. from angles in radians to angles in cycles)
+- Do simple unit or type conversions (e.g. from angles in radians to angles in cycles)
 - Rename pins, operations, types
 - Set default values for input pins
 - Provide convenience process nodes that wrap some low-level functionality into more high-level nodes
-- Design lifetime management of disposables
+- Design lifetime management of disposable objects
 
 .NOTE:
 An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
 
-Also the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases. 
+Also, the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases. 
 
-== Fowarding Types
+== Forwarding Types
 The typical scenario will have you create one .vl document to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
 
 === Referencing the .NET .dll
 In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
 === Prepare a Category Group
-The category an imported type will show-up in is defined by the group you place it in. In your documents main patch create groups for all the categories you want your library to introduce.
+The category an imported type will show-up in, is defined by the group you place it in. In your documents main patch create groups for all the categories you want your library to introduce.
 
 *Image:Categories in a documents main patch*
 
@@ -40,8 +40,8 @@ There are two ways to create a type forward:
 
 - Open the group you want to drop the type into
 - Open the Solution Explorer
-- Choose 'Imports'
-- Find the type you want to import
+- Choose '.NET Dependencies'
+- Find the type you want to forward
 - Drag-Drop the type into the group
 
 *Image:Drag-Drop type from Solution Explorer into group*
@@ -62,7 +62,7 @@ Typically you may want to keep the name of a type as it is set in the original l
 *Image:Renaming a Type*
 
 ==== Forward All Nodes
-When you create a type forward, all of the types operations are forwarded as nodes by default. If you prefer to selectively forward only a subset of a types operations, uncheck the 'Forward All Nodes' option.
+When you create a type forward, all of the types operations are forwarded as nodes by default. If you prefer to selectively forward only a subset of a types' operations, uncheck the 'Forward All Nodes' option.
 
 *Image:Forward All Nodes*
  
@@ -73,61 +73,80 @@ Note that even while the option is activated you can still adjust the forwarding
 
 *Image: Mutable checkbox*
 
-Since most .NET types are mutable this flag is activated by default. Here is how to detect whether a .NET type is immutable:
+Since most .NET types are mutable, this flag is activated by default. Here is how to detect whether a .NET type is immutable:
 
 * It only has readonly fields
 * Each of its fields is of an immutable type
-* Optional: have `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field Foo is set to the newValue 
+* Optional: it has `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field Foo is set to the newValue 
 
 In an upcoming version of C# watch out for 'Records'. They should ease the pain for writing immutable types.
 
 ==== Known Type Structure
+TODO
 
 *Image: Known Type Structure*
 
 ==== Create Default
+Member operation nodes often expect a type on their main input and throw an 'Access Violation' as long as nothing is connected to their input. In order to prevent this, we need to tell vl how it can construct a default instance of a type whenever needed. 
 
-*Image:Create Default*
+To do so, simply create an operation called 'CreateDefault' in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
 
-=== Create Operation Forward
+*Image:Creating a Default for a type*
+
+==== Process Node
+Each type forward can also directly expose a process node. This is exactly the same as exposing a process node from an ordinary patch. See..
+
+If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operatios to create the desired process.
+
+== Forwarding Operations
 To create forwards for individual operations:
+
 - Open the type you want to drop the operation into
 - Open the Solution Explorer
-- Choose 'Imports'
-- Find the type/operation you want to import
+- Choose '.NET Dependencies'
+- Find the operation you want to import
 - Drag-Drop the operation into the type
 
 *Image:Drop the operation into type*
-Note that you can also select multiple operations and drop those in the type at once. 
 
-==== Forward All Pins
-By default all pins of an operation are forwarded with their original name.
+Note that you can also select multiple operations and drop those into the patch at once. 
 
-*Image:Forward Pins checkbox*
-
-==== Show Category
-whats the default here?
-if the “memberness” of the operation is important
-
-
+=== Show Category
 *Image:Show Category checkbox*
 
-==== Rename Pins
-If you have a good reason to change the name of a pin, e.g. in order to have it conform to the vl link:/reference/vl/namings.adoc[naming conventions], then do so by manually creating an input or output for this particular pin.
+With this flag you can specify whether or not a node shows its type category. Compare the following:
 
-*Image:Renaming a Pin*
+*Image:Vector (Join) [2D.Vector2] does not show its category, while GetSlice [Collections.Spreads] does.*
 
-==== Setting a default
-Parameters of operations hardly ever have meaningful defaults set. In order to forward a pin with a proper default, manually creat an input for a particular pin and set a default for it. 
+By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch.
 
-*Image:Setting a default*
+=== Forward All Pins
+*Image:Forward Pins checkbox*
 
-==== Hiding Pins
+By default all pins of an operation are forwarded with their original name. You can disable the automatic forwarding of all pins and only selectively forward pins by manually creating inputs or outputs for them.
+
+*Image:RandomSpread with only its 'Count' input and its output forwarded*
+
+You can override forwarding of individual pins by simply connecting an IOBox to them. 
 
 *Image:Hiding a Pin*
 
-==== Type or Unit Conversions
+=== Renaming a Pin
+If you have a good reason to change the name of a pin, e.g. in order to have it conform to the vl link:/reference/vl/namings.adoc[naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
 
+*Image:Renaming a Pin*
 
-=== Create Enum Forward
+=== Setting a default
+Parameters of operations hardly ever have meaningful defaults set. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
 
+*Image:Setting a default on an input via Middleclick or Rightclick->Configure*
+
+=== Type or Unit Conversions
+Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians but you want to return vl conform cycles or similar.
+
+*Image:SineWave takes the angle in cycles*
+
+== Forwarding Enums
+In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch. 
+
+*Image:Enum Forward* 
