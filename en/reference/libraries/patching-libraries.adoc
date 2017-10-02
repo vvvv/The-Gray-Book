@@ -87,7 +87,7 @@ TODO
 *Image: Known Type Structure*
 
 ==== Create Default
-Member operation nodes often expect a type on their main input and throw an 'Access Violation' as long as nothing is connected to their input. In order to prevent this, we need to tell vl how it can construct a default instance of a type whenever needed. 
+Member operation nodes often expect a type on their main input and throw a 'Null Pointer Exception' as long as nothing is connected to it. In order to prevent this, we need to tell vl how it can construct a default instance of a type whenever needed. 
 
 To do so, simply create an operation called 'CreateDefault' in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
 
