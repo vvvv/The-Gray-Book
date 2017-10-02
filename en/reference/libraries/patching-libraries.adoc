@@ -1,22 +1,42 @@
-= Wrapping .NET Libraries
+= Forwarding .NET Libraries
 
-By link:/reference/libraries/using_net_libraries.adoc[Using .NET Libraries] we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be optimized for use in a dataflow context. They will provide a rather low-level set of nodes that we can typically structure/combine/wrap in a way that a VL user gets a more convenient high-level access to the library. 
+By link:/reference/libraries/using_net_libraries.adoc[Using .NET Libraries] we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be very convenient to use in the dataflow context of VL. 
 
-One important aspect when creating such a wrapper for a library is that we don't want to introduce new wrapper-types. We want to stay type-compatible to the original library where applicable in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the high-level wrapper. 
+To make those libraries accessible to more casual users we often want to curate exactly what nodes and types of the original library are seen by them. Forwarding allows us to insert a very thin wrapper layer to conveniently provide such curation and do things like the following:
 
-== Example Scenario
-As an example let's have a look at the Farseer 2d Physics library. By directly importing its nodes we can immediately create functional patches with just a few clicks: 
+== Forwarding is used to
+- Selectively forward types and operations of .NET .dlls
+- Adjust VL relevant meta information on the types (like mutability and known type structure)
+- Choose a relevant category for the nodes and types in VL
+- Do simple type conversions (e.g. from angles in radians to angles in cycles)
+- Rename pins, operations, types
+- Set default values for input pins
+- Provide convenience process nodes that wrap some low-level functionality into more high-level nodes
+- Design lifetime management of disposables
 
-*Image:A world with circles*
-*Image:Schematic: User Document > Original Library*
+.NOTE:
+An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the high-level wrapper. 
 
-But also we quickly see that the way the World has to be created is a bit cumbersome. Ideally we'd want to have a single node called World, that handles the life-time of the type World and runs the Step operation periodically. 
+TODO:
 
-This is the point where instead of referencing the original library directly in our user document, we're introducing an extra wrapper .vl document. In it we have access to the original library, wrap it nicely and expose only that higher-level view to the user document. 
+== Fowarding a Type
+- place it in category/group
+- dragdrop from solution explorer 
+- create manually: forward, set type annotation
+- rename type
+- wildcard forwards all operations, vs. selective fwd
+- mutability
+- known type structure
+- create default 
+operations:
+- rename pins
+- set default 
+- hide pins
+- type conversions
+- show category
 
-*Image:Schematic: User Document > Library Wrapper Document > Original Library*
+== Forwarding Enums
 
-Now we could simply create a normal (Process) patch called World that handles the world object for us. But this would introduce a new type World in VL that is incompatible with the original Farseer World which in the long run is not desired as mentioned above. 
 
 == Forward Wrappers
 In VL we can therefore say that a patch acts as a type-fowarding-wrapper or simply a 'Forward'. 
