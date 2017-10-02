@@ -23,7 +23,7 @@ Also the wrapper can act as a useful layer to shield the end-user of a vl-librar
 The typical scenario will have you create one .vl document to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
 
 === Referencing the .NET .dll
-In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See Dependencies.
+In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
 === Prepare a Category Group
 The category an imported type will show-up in is defined by the group you place it in. In your documents main patch create groups for all the categories you want your library to introduce.
@@ -87,48 +87,47 @@ In an upcoming version of C# watch out for 'Records'. They should ease the pain 
 
 ==== Create Default
 
+*Image:Create Default*
+
 === Create Operation Forward
+To create forwards for individual operations:
+- Open the type you want to drop the operation into
+- Open the Solution Explorer
+- Choose 'Imports'
+- Find the type/operation you want to import
+- Drag-Drop the operation into the type
 
-- rename pins
-- set default 
-- hide pins
-- type conversions
-- show category
+*Image:Drop the operation into type*
+Note that you can also select multiple operations and drop those in the type at once. 
 
-=== Create Enum Forward
+==== Forward All Pins
+By default all pins of an operation are forwarded with their original name.
 
+*Image:Forward Pins checkbox*
 
-== Forward Wrappers
-In VL we can therefore say that a patch acts as a type-fowarding-wrapper or simply a 'Forward'. 
-
-*Image:Set patch-type to 'Forward' and specify original type*
-
-*Image:Type Foward*
-Is Public: if you want to have this type show up for everyone referencing this document
-
-What happens when the library changes
-Use it to selectively expose stuff of your library to the user
+==== Show Category
+whats the default here?
+if the “memberness” of the operation is important
 
 
-=== Operation Forwards
-*Image:Operation Foward*
+*Image:Show Category checkbox*
 
-Is Public: if you want to have this operation show up for everyone referencing this document
-
-Show Category: if the “memberness” of the operation is important
-
-Forward Pins
+==== Rename Pins
+If you have a good reason to change the name of a pin, e.g. in order to have it conform to the vl link:/reference/vl/namings.adoc[naming conventions], then do so by manually creating an input or output for this particular pin.
 
 *Image:Renaming a Pin*
 
-*Image:Hiding a Pin* usin an IOBox
+==== Setting a default
+Parameters of operations hardly ever have meaningful defaults set. In order to forward a pin with a proper default, manually creat an input for a particular pin and set a default for it. 
 
-*Image:Converting a type*
+*Image:Setting a default*
 
-== Solution Explorer
-Ctrl+M
-Use the Solution Explorer to
+==== Hiding Pins
 
-- drop Type on the main patch -> creates a forward patch
-- Drop member operations in type patch
-- drop enum on main patch
+*Image:Hiding a Pin*
+
+==== Type or Unit Conversions
+
+
+=== Create Enum Forward
+
