@@ -130,24 +130,33 @@ image::../../images/vl-libraries-wrapping-DroppingOperation.png[]
 NOTE: You can also select multiple operations and drop those into the patch at once. 
 
 === Show Category
-*Image:Show Category checkbox*
+
+Rightclick on the header of the operation you're forwarding and choose menu:Configure[Show Category]
+
+.Show Category checkbox
+image::../../images/vl-libraries-wrapping-ShowCategory.png[]
 
 With this flag you can specify whether or not a node shows its type category. Compare the following:
 
-*Image:Vector (Join) [2D.Vector2] does not show its category, while GetSlice [Collections.Spreads] does.*
+.Vector (Join) [2D.Vector2] does not show its category, while GetSlice [Collections.Spreads] does.
+image::../../images/vl-libraries-wrapping-ShowCategory-Compare.png[]
 
 By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch.
 
 === Forward All Pins
-*Image:Forward Pins checkbox*
+.Rightclick on the node you're forwarding and choose menu:Configure[Forward Pins]
+image::../../images/vl-libraries-wrapping-ForwardPins.png[]
 
 By default all pins of an operation are forwarded with their original name. You can disable the automatic forwarding of all pins and only selectively forward pins by manually creating inputs or outputs for them.
 
-*Image:RandomSpread with only its 'Count' input and its output forwarded*
+.RandomSpread with only its 'Count' input and its 'Output' forwarded
+image::../../images/vl-libraries-wrapping-ForwardPins-Selectively.png[]
 
-You can override forwarding of individual pins by simply connecting an IOBox to them. 
+Even if the automatic forwarding of all pins is on, you can override forwarding of individual pins by simply connecting an IOBox to them. 
 
-*Image:Hiding a Pin*
+.Hiding a Pin
+image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png
+[]
 
 === Renaming a Pin
 If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
