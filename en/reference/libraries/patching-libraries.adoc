@@ -79,7 +79,7 @@ image::../../images/vl-libraries-wrapping-rename.png[]
 When you create a type forward, every operation of the type is forwarded as a node by default. If you prefer to selectively forward only a subset of a types' operations, uncheck the 'Forward All Nodes' option.
 
 .Forward All Nodes
-image::../../images/vl-libraries-wrapping-forwardall.png[]
+image::../../images/vl-libraries-wrapping-ForwardAll.png[]
  
 NOTE: Even if the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
 
@@ -105,7 +105,7 @@ TODO
 ==== Create Default
 Member operation nodes often expect a type on their main input and throw a 'Null Pointer Exception' as long as nothing is connected to it. In order to prevent this, we need to tell vl how it can construct a default instance of a type whenever needed. 
 
-To do so, simply create an operation called 'CreateDefault' in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
+To do so, simply create an operation called `CreateDefault` in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
 
 *Image:Creating a Default for a type*
 
