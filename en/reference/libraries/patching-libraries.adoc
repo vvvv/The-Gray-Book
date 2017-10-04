@@ -53,7 +53,7 @@ There are two ways to create a type forward:
 . Find the type you want to forward
 . Drag-Drop the type into the group
 
-.Drag-Drop type from Solution Explorer into group
+.Drag-Drop type from Solution Explorer into group.
 image::../../images/vl-libraries-wrapping-dragndrop.png[]
 
 
@@ -65,29 +65,29 @@ image::../../images/vl-libraries-wrapping-dragndrop.png[]
 . Set a `type-annotation` on the patch
 
 .Left: Click the `patch type` drop-down and set 'Forward'. Right: Click the `type-annotation` and choose a type from the NodeBrowser.
-image::../../images/vl-libraries-wrapping-manually.png[]
+image::../../images/vl-libraries-wrapping-Manually.png[]
 
 
 === Configure Type Forward
 ==== Rename Type
 Typically you may want to keep the name of a type from the original library. If you have a good reason to rename it, simply do so.
 
-.Renaming a Type
-image::../../images/vl-libraries-wrapping-rename.png[]
+.Renaming a Type.
+image::../../images/vl-libraries-wrapping-Rename.png[]
 
 ==== Forward All Nodes
 When you create a type forward, every operation of the type is forwarded as a node by default. If you prefer to selectively forward only a subset of a types' operations, uncheck the 'Forward All Nodes' option.
 
-.Forward All Nodes
-image::../../images/vl-libraries-wrapping-forwardall.png[]
+.Forward All Nodes.
+image::../../images/vl-libraries-wrapping-ForwardAll.png[]
  
 NOTE: Even if the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
 
 ==== Mutability
 +++.NET Libraries+++ don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
 
-.Mutable checkbox
-image::../../images/vl-libraries-wrapping-mutable.png[]
+.Mutable checkbox.
+image::../../images/vl-libraries-wrapping-Mutable.png[]
 
 Since most .NET types are mutable, this flag is activated by default. Here is how to detect whether a .NET type is immutable:
 
@@ -105,9 +105,10 @@ TODO
 ==== Create Default
 Member operation nodes often expect a type on their main input and throw a 'Null Pointer Exception' as long as nothing is connected to it. In order to prevent this, we need to tell vl how it can construct a default instance of a type whenever needed. 
 
-To do so, simply create an operation called 'CreateDefault' in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
+To do so, simply create an operation called `CreateDefault` in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
 
-*Image:Creating a Default for a type*
+.Creating a Default for a type.
+image::../../images/vl-libraries-wrapping-CreateDefault.png[]
 
 ==== Process Node
 Each type forward can also directly expose a process node. This is exactly the same as exposing a process node from an ordinary patch. See..
@@ -123,7 +124,8 @@ To create forwards for individual operations:
 - Find the operation you want to import
 - Drag-Drop the operation into the type
 
-*Image:Drop the operation into type*
+.Dropping the operation into type
+image::../../images/vl-libraries-wrapping-DroppingOperation.png[]
 
 NOTE: You can also select multiple operations and drop those into the patch at once. 
 
