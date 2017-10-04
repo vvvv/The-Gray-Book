@@ -124,7 +124,7 @@ To create forwards for individual operations:
 - Find the operation you want to import
 - Drag-Drop the operation into the type
 
-.Dropping the operation into type
+.Dropping the operation into type.
 image::../../images/vl-libraries-wrapping-DroppingOperation.png[]
 
 NOTE: You can also select multiple operations and drop those into the patch at once. 
@@ -144,17 +144,17 @@ image::../../images/vl-libraries-wrapping-ShowCategory-Compare.png[]
 By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch.
 
 === Forward All Pins
-.Rightclick on the node you're forwarding and choose menu:Configure[Forward Pins]
+.Rightclick on the node you're forwarding and choose menu:Configure[Forward Pins].
 image::../../images/vl-libraries-wrapping-ForwardPins.png[]
 
 By default all pins of an operation are forwarded with their original name. You can disable the automatic forwarding of all pins and only selectively forward pins by manually creating inputs or outputs for them.
 
-.RandomSpread with only its 'Count' input and its 'Output' forwarded
+.RandomSpread with only its 'Count' input and its 'Output' forwarded.
 image::../../images/vl-libraries-wrapping-ForwardPins-Selectively.png[]
 
 Even if the automatic forwarding of all pins is on, you can override forwarding of individual pins by simply connecting an IOBox to them. 
 
-.Hiding a Pin
+.Hiding a Pin.
 image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png[]
 
 === Renaming a Pin
