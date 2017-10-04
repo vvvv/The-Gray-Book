@@ -1,3 +1,6 @@
+:experimental:
+:figure-caption!:
+
 = Forwarding .NET Libraries
 
 By link:/reference/libraries/using_net_libraries.adoc[Using .NET Libraries] we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be very convenient to use in the dataflow context of VL. 
@@ -32,7 +35,10 @@ In a blank .vl document set a reference to the .NET .dll(s) you want to forward 
 === 2. Prepare a Category Group
 An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the main patch of your document.
 
-*Image:Categories in a documents main patch*
+.Groups (representing categories) in a document's main patch.
+image::../../images/vl-libraries-wrapping-CategoryGroups.png[]
+
+NOTE: Empty categories are not showing-up in the NodeBrowser.
 
 === 3. Create Type Forward
 There are two ways to create a type forward:
@@ -70,7 +76,7 @@ When you create a type forward, every operation of the type is forwarded as a no
 NOTE: Even if the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
 
 ==== Mutability
-.NET Libraries don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
++++.NET+++ Libraries don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
 
 *Image: Mutable checkbox*
 
