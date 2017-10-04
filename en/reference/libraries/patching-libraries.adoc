@@ -105,7 +105,7 @@ To do so, simply create an operation called 'CreateDefault' in a type forward pa
 ==== Process Node
 Each type forward can also directly expose a process node. This is exactly the same as exposing a process node from an ordinary patch. See..
 
-If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operatios to create the desired process.
+If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operations to create the desired process.
 
 == Forwarding Operations
 To create forwards for individual operations:
@@ -118,7 +118,7 @@ To create forwards for individual operations:
 
 *Image:Drop the operation into type*
 
-Note that you can also select multiple operations and drop those into the patch at once. 
+NOTE: You can also select multiple operations and drop those into the patch at once. 
 
 === Show Category
 *Image:Show Category checkbox*
@@ -141,7 +141,7 @@ You can override forwarding of individual pins by simply connecting an IOBox to 
 *Image:Hiding a Pin*
 
 === Renaming a Pin
-If you have a good reason to change the name of a pin, e.g. in order to have it conform to the vl link:/reference/vl/namings.adoc[naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
+If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
 
 *Image:Renaming a Pin*
 
@@ -151,7 +151,7 @@ Parameters of operations hardly ever have meaningful defaults set. In order to f
 *Image:Setting a default on an input via Middleclick or Rightclick->Configure*
 
 === Type or Unit Conversions
-Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians but you want to return vl conform cycles or similar.
+Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians, but you want to return vl-conform cycles.
 
 *Image:SineWave takes the angle in cycles*
 
