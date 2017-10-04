@@ -14,44 +14,45 @@ To make those libraries accessible to more casual users we often want to curate 
 - Provide convenience process nodes that wrap some low-level functionality into more high-level nodes
 - Design lifetime management of disposable objects
 
-.NOTE:
-An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
+[NOTE]
+====
+An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! 
+
+Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
 
 Also, the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases. 
+====
 
 == Forwarding Types
-The typical scenario will have you create one .vl document to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
+In a typical scenario you create _one .vl document_ to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
 
-=== Referencing the .NET .dll
+=== 1. Set a reference to the .NET .dll
 In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
-=== Prepare a Category Group
-The category an imported type will show-up in, is defined by the group you place it in. In your documents main patch create groups for all the categories you want your library to introduce.
+=== 2. Prepare a Category Group
+An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the main patch of your document.
 
 *Image:Categories in a documents main patch*
 
-=== Create Type Forward
+=== 3. Create Type Forward
 There are two ways to create a type forward:
 
-1. Via Drag-Drop from the Solution Explorer
-2. Manually 
+*1. Via Drag-Drop from the Solution Explorer*
 
-*ad 1) Drop a type from the Solution Explorer*
-
-- Open the group you want to drop the type into
-- Open the Solution Explorer
-- Choose '.NET Dependencies'
-- Find the type you want to forward
-- Drag-Drop the type into the group
+.. Open the group you want to drop the type into
+.. Open the Solution Explorer
+.. Choose '.NET Dependencies'
+.. Find the type you want to forward
+.. Drag-Drop the type into the group
 
 *Image:Drag-Drop type from Solution Explorer into group*
 
-*ad 2) Manually create a forward patch*
+*2. Manually* 
 
-- Open the group you want to drop the type into
-- Create a new patch
-- Set the patches type to 'Forward'
-- Set a type annotation on the patch
+.. Open the group you want to drop the type into
+.. Create a new patch
+.. Set the patches type to 'Forward'
+.. Set a type annotation on the patch
 
 *Image:Set patch type to Forward*
 *Image:Set type annotation*
