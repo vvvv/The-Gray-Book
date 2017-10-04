@@ -61,11 +61,12 @@ image::../../images/vl-libraries-wrapping-dragndrop.png[]
 
 . Open the group you want to drop the type into
 . Create a new _Process_ patch
-. Set the `type` of the patch to 'Forward'
+. Set the `patch type` to 'Forward'
 . Set a `type annotation` on the patch
 
-*Image:Set patch type to Forward*
-*Image:Set type annotation*
+.Left: Rightclick and set `patch type` 'to Forward'. Right: Rightclick and choose `type-annotation` from the NodeBrowser.
+image::../../images/vl-libraries-wrapping-manually.png[]
+
 
 === Configure Type Forward
 ==== Rename Type
