@@ -367,12 +367,12 @@ public static string EnumDemo(MyEnum e)
 }
 ```
 
-==== Implementing dynamic Enums in VL
+==== Implementing dynamic Enums for VL
 
 Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
 
 - The type needs to implement `IDynamicEnum` 
-- The definition needs to implment `IDynamicEnumDefinition`
+- The definition needs to implement `IDynamicEnumDefinition`
 
 both of which come with the VL.Core nuget. 
 
@@ -475,23 +475,23 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
 
 NOTE: For the `Observable` type in this example implementation you need to install the 'System.Reactive' nuget.
 
-===== 4. Specify a default constructor
+===== 3. Specify a default constructor
 
-Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your ''MyEnum'', the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of ''MyEnum'' whenever it encounters it. 
+Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it. 
 
-For this to happen we have to specify a default constructor for ''MyEnum'' and this can only be done using a Typeforward in VL!
+For this to happen we have to specify a default constructor for `MyEnum` and this can only be done using a Typeforward in VL!
 
 . In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]).
-. Choose _'Imports'_ in the dropdown and use the treeview to navigate to your 'MyEnum' class. 
-. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type 'MyEnum'.
+. Choose _'Imports'_ in the dropdown and use the treeview to navigate to your `MyEnum` class. 
+. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type `MyEnum`.
 
-.Specifying a default constructor for 'MyEnum'.
-image::../../vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
+.Specifying a default constructor for `MyEnum`.
+image::../../images/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
 
-For now this also needs a restart but then you should see a valid instance in the pin that uses 'MyEnum' and you can now create an IOBox to control it.
+For now this also needs a restart but then you should see a valid instance in the pin that uses `MyEnum` and you can now create an IOBox to control it.
 
 .How this looks in VL.
-image::../../vl-libraries-writingNodes-DynamicEnums.png[]
+image::../../images/vl-libraries-writingNodes-DynamicEnums.png[]
 
 
 
