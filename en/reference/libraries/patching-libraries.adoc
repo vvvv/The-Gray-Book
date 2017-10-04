@@ -29,10 +29,12 @@ Also, the wrapper can act as a useful layer to shield the end-user of a vl-libra
 == Forwarding Types
 In a typical scenario you create _one .vl document_ to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
 
-=== 1. Set a reference to the .NET .dll
+=== Create Type Forward
+
+==== 1. Set a reference to the .NET .dll
 In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
-=== 2. Prepare a Category Group
+==== 2. Prepare a Category Group
 An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the main patch of your document.
 
 .Groups (representing categories) in a document's main patch.
@@ -40,29 +42,32 @@ image::../../images/vl-libraries-wrapping-CategoryGroups.png[]
 
 NOTE: Empty categories are not showing-up in the NodeBrowser.
 
-=== 3. Create Type Forward
+==== 3. Create Type Forward
 There are two ways to create a type forward:
 
-*1. Via Drag-Drop from the Solution Explorer*
+===== Drag-Drop from the Solution Explorer
 
-.. Open the group you want to drop the type into
-.. Open the Solution Explorer
-.. Choose '.NET Dependencies'
-.. Find the type you want to forward
-.. Drag-Drop the type into the group
+. Open the group you want to drop the type into
+. Open the Solution Explorer
+. Choose '.NET Dependencies'
+. Find the type you want to forward
+. Drag-Drop the type into the group
 
-*Image:Drag-Drop type from Solution Explorer into group*
+.Drag-Drop type from Solution Explorer into group
+image::../../images/vl-libraries-wrapping-dragndrop.png[]
 
-*2. Manually* 
 
-.. Open the group you want to drop the type into
-.. Create a new patch
-.. Set the patches type to 'Forward'
-.. Set a type annotation on the patch
+===== Manually
+
+. Open the group you want to drop the type into
+. Create a new _Process_ patch
+. Set the `type` of the patch to 'Forward'
+. Set a `type annotation` on the patch
 
 *Image:Set patch type to Forward*
 *Image:Set type annotation*
 
+=== Configure Type Forward
 ==== Rename Type
 Typically you may want to keep the name of a type from the original library. If you have a good reason to rename it, simply do so.
 
@@ -76,7 +81,7 @@ When you create a type forward, every operation of the type is forwarded as a no
 NOTE: Even if the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
 
 ==== Mutability
-+++.NET+++ Libraries don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
++++.NET Libraries+++ don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
 
 *Image: Mutable checkbox*
 
@@ -84,7 +89,7 @@ Since most .NET types are mutable, this flag is activated by default. Here is ho
 
 * It only has readonly fields
 * Each of its fields is of an immutable type
-* Optional: it has `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field Foo is set to the newValue 
+* Optional: it has `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field `Foo` is set to the `newValue`.
 
 In an upcoming version of C# watch out for 'Records'. They should ease the pain for writing immutable types.
 
@@ -103,7 +108,7 @@ To do so, simply create an operation called 'CreateDefault' in a type forward pa
 ==== Process Node
 Each type forward can also directly expose a process node. This is exactly the same as exposing a process node from an ordinary patch. See..
 
-If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operatios to create the desired process.
+If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operations to create the desired process.
 
 == Forwarding Operations
 To create forwards for individual operations:
@@ -116,7 +121,7 @@ To create forwards for individual operations:
 
 *Image:Drop the operation into type*
 
-Note that you can also select multiple operations and drop those into the patch at once. 
+NOTE: You can also select multiple operations and drop those into the patch at once. 
 
 === Show Category
 *Image:Show Category checkbox*
@@ -139,7 +144,7 @@ You can override forwarding of individual pins by simply connecting an IOBox to 
 *Image:Hiding a Pin*
 
 === Renaming a Pin
-If you have a good reason to change the name of a pin, e.g. in order to have it conform to the vl link:/reference/vl/namings.adoc[naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
+If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
 
 *Image:Renaming a Pin*
 
@@ -149,7 +154,7 @@ Parameters of operations hardly ever have meaningful defaults set. In order to f
 *Image:Setting a default on an input via Middleclick or Rightclick->Configure*
 
 === Type or Unit Conversions
-Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians but you want to return vl conform cycles or similar.
+Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians, but you want to return vl-conform cycles.
 
 *Image:SineWave takes the angle in cycles*
 
