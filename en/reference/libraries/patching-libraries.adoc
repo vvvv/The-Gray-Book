@@ -51,13 +51,15 @@ There are two ways to create a type forward:
 .. Find the type you want to forward
 .. Drag-Drop the type into the group
 
-*Image:Drag-Drop type from Solution Explorer into group*
+.Drag-Drop type from Solution Explorer into group
+image::../../images/vl-libraries-wrapping-dragndrop.png[]
+
 
 *2. Manually* 
 
 .. Open the group you want to drop the type into
 .. Create a new patch
-.. Set the patches type to 'Forward'
+.. Set the type of the patch to 'Forward'
 .. Set a type annotation on the patch
 
 *Image:Set patch type to Forward*
@@ -76,7 +78,7 @@ When you create a type forward, every operation of the type is forwarded as a no
 NOTE: Even if the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
 
 ==== Mutability
-+++.NET+++ Libraries don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
++++.NET Libraries+++ don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
 
 *Image: Mutable checkbox*
 
@@ -84,7 +86,7 @@ Since most .NET types are mutable, this flag is activated by default. Here is ho
 
 * It only has readonly fields
 * Each of its fields is of an immutable type
-* Optional: it has `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field Foo is set to the newValue 
+* Optional: it has `WithFoo(TFoo newValue)` methods to get a new instance (= a new immutable snapshot) of that type, where all fields are set to the values as in this instance, but only the field `Foo` is set to the `newValue`.
 
 In an upcoming version of C# watch out for 'Records'. They should ease the pain for writing immutable types.
 
