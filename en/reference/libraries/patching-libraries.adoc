@@ -155,8 +155,7 @@ image::../../images/vl-libraries-wrapping-ForwardPins-Selectively.png[]
 Even if the automatic forwarding of all pins is on, you can override forwarding of individual pins by simply connecting an IOBox to them. 
 
 .Hiding a Pin
-image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png
-[]
+image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png[]
 
 === Renaming a Pin
 If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
