@@ -58,16 +58,16 @@ There are two ways to create a type forward:
 *Image:Set type annotation*
 
 ==== Rename Type
-Typically you may want to keep the name of a type as it is set in the original library. If you have a good reason to rename it, simply do so.
+Typically you may want to keep the name of a type from the original library. If you have a good reason to rename it, simply do so.
 
 *Image:Renaming a Type*
 
 ==== Forward All Nodes
-When you create a type forward, all of the types operations are forwarded as nodes by default. If you prefer to selectively forward only a subset of a types' operations, uncheck the 'Forward All Nodes' option.
+When you create a type forward, every operation of the type is forwarded as a node by default. If you prefer to selectively forward only a subset of a types' operations, uncheck the 'Forward All Nodes' option.
 
 *Image:Forward All Nodes*
  
-Note that even while the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
+NOTE: Even if the option is activated you can still adjust the forwarding of individual operations by simply creating an operation forward for them, see below.
 
 ==== Mutability
 .NET Libraries don't come with meta information of whether a type is mutable or not. Because of this we need to tell VL manually by setting the mutable flag accordingly.
