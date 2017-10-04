@@ -1,5 +1,6 @@
 :experimental:
 :figure-caption!:
+:toc: right
 
 = Forwarding .NET Libraries
 
