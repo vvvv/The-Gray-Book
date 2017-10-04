@@ -64,7 +64,7 @@ image::../../images/vl-libraries-wrapping-dragndrop.png[]
 . Set the `patch type` to 'Forward'
 . Set a `type-annotation` on the patch
 
-.Left: Rightclick the `patch type` drop-down and set 'Forward'. Right: Rightclick `type-annotation` and choose a type from the NodeBrowser.
+.Left: Click the `patch type` drop-down and set 'Forward'. Right: Click the `type-annotation` and choose a type from the NodeBrowser.
 image::../../images/vl-libraries-wrapping-manually.png[]
 
 
