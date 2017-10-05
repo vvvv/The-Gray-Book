@@ -35,7 +35,7 @@ In a typical scenario you create _one .vl document_ to forward types from one or
 In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
 ==== 2. Prepare a Category Group
-An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the Document's Patch.
+An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the Document Patch.
 
 .Groups (representing categories) in a document's main patch.
 image::../../images/vl-libraries-wrapping-CategoryGroups.png[]
@@ -160,19 +160,23 @@ image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png[]
 === Renaming a Pin
 If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
 
-*Image:Renaming a Pin*
+.Renaming a Pin.
+image::../../images/vl-libraries-wrapping-ForwardPins-Rename.png[]
 
 === Setting a default
-Parameters of operations hardly ever have meaningful defaults set. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
+Parameters of operations rarely have meaningful defaults. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
 
-*Image:Setting a default on an input via Middleclick or Rightclick->Configure*
+.Setting a default on an input via Middleclick or menu:Rightclick[Configure]
+image::../../images/vl-libraries-wrapping-ForwardPins-Default.png[]
 
 === Type or Unit Conversions
-Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians, but you want to return vl-conform cycles.
+Forwards are a good place to do simple type or unit conversions. Consider an operation that takes angles in radians, but you want to use vl-conform cycles.
 
-*Image:SineWave takes the angle in cycles*
+.SineWave takes the angle in cycles
+image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 
 == Forwarding Enums
 In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch. 
 
-*Image:Enum Forward* 
+.Enum Forward
+image::../../images/vl-libraries-wrapping-Enum.png[]
