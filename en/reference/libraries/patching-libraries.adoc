@@ -172,7 +172,7 @@ image::../../images/vl-libraries-wrapping-ForwardPins-Default.png[]
 === Type or Unit Conversions
 Forwards are a good place to do simple type or unit conversions. Consider an operation that takes angles in radians, but you want to use vl-conform cycles.
 
-.SineWave takes the angle in cycles.
+.SineWave takes an angle in cycles.
 image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 
 == Forwarding Enums
