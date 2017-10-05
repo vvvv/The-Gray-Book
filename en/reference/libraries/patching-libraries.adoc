@@ -166,17 +166,17 @@ image::../../images/vl-libraries-wrapping-ForwardPins-Rename.png[]
 === Setting a default
 Parameters of operations rarely have meaningful defaults. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
 
-.Setting a default on an input via Middleclick or menu:Rightclick[Configure]
+.Setting a default on an input via Middleclick or menu:Rightclick[Configure].
 image::../../images/vl-libraries-wrapping-ForwardPins-Default.png[]
 
 === Type or Unit Conversions
 Forwards are a good place to do simple type or unit conversions. Consider an operation that takes angles in radians, but you want to use vl-conform cycles.
 
-.SineWave takes the angle in cycles
+.SineWave takes the angle in cycles.
 image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 
 == Forwarding Enums
 In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch. 
 
-.Enum Forward
+.Enum Forward.
 image::../../images/vl-libraries-wrapping-Enum.png[]
