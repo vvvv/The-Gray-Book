@@ -21,7 +21,7 @@ To make those libraries accessible to more casual users we often want to curate 
 ====
 An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! 
 
-Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
+Forwarded types are compatible to the original library in order to allow users to fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
 
 Also, the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases. 
 ====
@@ -35,7 +35,7 @@ In a typical scenario you create _one .vl document_ to forward types from one or
 In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
 ==== 2. Prepare a Category Group
-An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the main patch of your document.
+An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the Document Patch.
 
 .Groups (representing categories) in a document's main patch.
 image::../../images/vl-libraries-wrapping-CategoryGroups.png[]
@@ -124,7 +124,7 @@ To create forwards for individual operations:
 - Find the operation you want to import
 - Drag-Drop the operation into the type
 
-.Dropping the operation into type
+.Dropping the operation into type.
 image::../../images/vl-libraries-wrapping-DroppingOperation.png[]
 
 NOTE: You can also select multiple operations and drop those into the patch at once. 
@@ -144,36 +144,39 @@ image::../../images/vl-libraries-wrapping-ShowCategory-Compare.png[]
 By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch.
 
 === Forward All Pins
-.Rightclick on the node you're forwarding and choose menu:Configure[Forward Pins]
+.Rightclick on the node you're forwarding and choose menu:Configure[Forward Pins].
 image::../../images/vl-libraries-wrapping-ForwardPins.png[]
 
 By default all pins of an operation are forwarded with their original name. You can disable the automatic forwarding of all pins and only selectively forward pins by manually creating inputs or outputs for them.
 
-.RandomSpread with only its 'Count' input and its 'Output' forwarded
+.RandomSpread with only its 'Count' input and its 'Output' forwarded.
 image::../../images/vl-libraries-wrapping-ForwardPins-Selectively.png[]
 
 Even if the automatic forwarding of all pins is on, you can override forwarding of individual pins by simply connecting an IOBox to them. 
 
-.Hiding a Pin
-image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png
-[]
+.Hiding a Pin.
+image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png[]
 
 === Renaming a Pin
 If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
 
-*Image:Renaming a Pin*
+.Renaming a Pin.
+image::../../images/vl-libraries-wrapping-ForwardPins-Rename.png[]
 
 === Setting a default
-Parameters of operations hardly ever have meaningful defaults set. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
+Parameters of operations rarely have meaningful defaults. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
 
-*Image:Setting a default on an input via Middleclick or Rightclick->Configure*
+.Setting a default on an input via Middleclick or menu:Rightclick[Configure].
+image::../../images/vl-libraries-wrapping-ForwardPins-Default.png[]
 
 === Type or Unit Conversions
-Forwards are a good place to do simple type or unit conversions. Consider an operation that returns angles in radians, but you want to return vl-conform cycles.
+Forwards are a good place to do simple type or unit conversions. Consider an operation that takes angles in radians, but you want to use vl-conform cycles.
 
-*Image:SineWave takes the angle in cycles*
+.SineWave takes an angle in cycles.
+image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 
 == Forwarding Enums
 In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch. 
 
-*Image:Enum Forward* 
+.Enum Forward.
+image::../../images/vl-libraries-wrapping-Enum.png[]
