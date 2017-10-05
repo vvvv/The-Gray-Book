@@ -179,4 +179,4 @@ image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch. 
 
 .Enum Forward.
-image::../../images/vl-libraries-wrapping-Enum.png[]
+image::../../images/vl-libraries-wrapping-Enums.png[]
