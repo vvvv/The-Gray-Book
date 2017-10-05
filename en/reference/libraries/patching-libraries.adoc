@@ -21,7 +21,7 @@ To make those libraries accessible to more casual users we often want to curate 
 ====
 An important aspect when forwarding types from a library is that we don't want to introduce new wrapper-types. Therefore using Forwarding does not introduce new types! 
 
-Forwarded types are compatible to the original library in order to allow users to still fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
+Forwarded types are compatible to the original library in order to allow users to fall back to low-level functionality of the original library and combine that with the use of the higher-level wrapper. 
 
 Also, the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases. 
 ====
@@ -35,7 +35,7 @@ In a typical scenario you create _one .vl document_ to forward types from one or
 In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See link:/reference/libraries/dependencies.adoc[Dependencies].
 
 ==== 2. Prepare a Category Group
-An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the main patch of your document.
+An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the Document's Patch.
 
 .Groups (representing categories) in a document's main patch.
 image::../../images/vl-libraries-wrapping-CategoryGroups.png[]
