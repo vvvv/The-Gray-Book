@@ -380,8 +380,8 @@ NOTE: For now the VL.Core nuget is only available as pre-release via http://vvvv
 
 To make their use easier there are also two baseclass implementations available:
 
-- `DynamicEnumBase<T, U>`
-- `DynamicEnumDefinitionBase<U>`
+- `VL.Lib.Collections.DynamicEnumBase<T, U>`
+- `VL.Lib.Collections.DynamicEnumDefinitionBase<U>`
 
 Note that the DynamicEnumDefinitionBase is a Singleton, meaning that its implementation takes care that always only one instance exists of it globally. We want this because it is important that any node that is referring to a specific enum definition always gets exactly the same entries!
 
@@ -479,7 +479,7 @@ NOTE: For the `Observable` type in this example implementation you need to insta
 
 Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it. 
 
-For this to happen we have to specify a default constructor for `MyEnum` and this can only be done using a Typeforward in VL!
+For this to happen we have to specify a default constructor for `MyEnum` and this can only be done using a Typeforward in VL:
 
 . In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]).
 . Choose _'.NET Dependencies'_ in the dropdown and use the treeview to navigate to your `MyEnum` class. 
@@ -488,7 +488,7 @@ For this to happen we have to specify a default constructor for `MyEnum` and thi
 .Specifying a default constructor for `MyEnum`.
 image::../../images/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
 
-For now this also needs a restart but then you should see a valid instance in the pin that uses `MyEnum` and you can now create an IOBox to control it.
+Now you will see a valid instance in any pin that uses `MyEnum` and you can create an IOBox to control it.
 
 .How this looks in VL.
 image::../../images/vl-libraries-writingNodes-DynamicEnums.png[]
