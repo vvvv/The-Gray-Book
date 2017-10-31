@@ -37,4 +37,4 @@ At first glance VL looks rather familiar to vvvv users: There are gray nodes, li
 • PADS: instead of FrameDelay nodes in vl you can use named pads to denote the handing of state from one frame to the next
 • NODEBROWSER: vl has different kinds of nodes which makes it a bit different to navigate the nodebrowser
 
-These are only the most striking differences that former vvvv users will detect, vl has many more features to be disovered and applied as needed. More details about these and some more of the things that will look and sound familiar to vvvv users can be found in the following chapter.
+These are only the most striking differences that former vvvv users will detect, vl has many more features to be disovered and applied as needed. More details about these and some more of the things that will look and sound familiar to vvvv users can be found in the following chapters.
