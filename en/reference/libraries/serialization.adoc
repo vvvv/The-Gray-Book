@@ -50,10 +50,8 @@ In case you want to learn more about their inner workings, check the documentati
 
 == Serializing into a given format
  
-build structure using xml nodes
+build structure using xml nodes then use ToJSON [XML] ToString [XML]
 
 == Deserializing from a given format
 
-ParseJson [XML], Parse [XML]
-
-xElement (split), xpath..
+ParseJson [XML], Parse [XML] the use xElement (split), xpath..
