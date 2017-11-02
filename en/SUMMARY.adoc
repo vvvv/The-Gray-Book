@@ -51,6 +51,7 @@
 *** link:reference/libraries/standard_libraries.adoc[The VL.CoreLib]
 **** link:reference/libraries/collections.adoc[Collections]
 **** link:reference/libraries/reactive.adoc[Reactive]
+**** link:reference/libraries/serialization.adoc[Serialization]
 *** link:reference/libraries/dependencies.adoc[Dependencies]
 *** link:reference/libraries/writing-nodes.adoc[Writing Nodes]
 *** link:reference/libraries/using-net-libraries.adoc[Using .NET Libraries]

@@ -1,0 +1,59 @@
+= Serialization and Deserialization
+
+[quote]
+Serialization is the process of translating data structures into a format (text or series of bytes) that can be stored (for example, in a file) or transmitted (for example, across a network) and reconstructed later. The opposite operation, extracting a data structure from a serialized format, is called deserialization
+
+-- compare link:https://en.wikipedia.org/wiki/Serialization[Wikipedia]
+
+There are two commonly used text formats for serialization, called link:https://en.wikipedia.org/wiki/XML[XML] and link:https://en.wikipedia.org/wiki/JSON[JSON] and another common binary format called link:https://en.wikipedia.org/wiki/BSON[BSON].
+
+Depending on your scenario there are different ways to go about de/serialization:
+
+== Controlling both the serialization and deserialization
+If you can define the format you basically have two choices:
+
+=== The slow, persistent way
+When you're saving data to disk you often want to make sure that it can also be loaded correctly later. Maybe even think about different versions of your file-format because the data-structure you're saving may evolve over time but you may still want your application to be able to load files saved with earlier versions.
+
+In this case you'll want to define the format yourself as it is then in your hand to change the format whenever needed, adapt the serialization and deserialization process accordingly and have the option to retain backwards-compatibility by providing different de/serializers for different versions of your format.
+
+==== Nodes to use
+The following nodes allow you to build data-structures
+
+XElement (Join) [XML]
+
+XAttribute (Join) [XML]
+
+that can then be serialized to a string format using:
+
+ToJSON [XML]
+
+ToString [XML]
+
+**image: example data-structure and its serialization as XML and JSON strings**
+
+
+=== The quick, volatile way
+When you need to send data from one instance of your application to another over a network and the data is never persisted to disk chances are that you don't care about the actual format. 
+
+In this case you can make use one of the runtime serializers provided:
+
+Serialize (JSON) [Runtime.Serialization] -> Deserialize (JSON) [Runtime.Serialization]
+
+Serialize (BSON) [Runtime.Serialization] -> Deserialize (BSON) [Runtime.Serialization]
+
+Serialize (Binary) [Runtime.Serialization] -> Deserialize (Binary) [Runtime.Serialization]
+
+Serialize (XML) [Runtime.Serialization] -> Deserialize (XML) [Runtime.Serialization]
+
+In case you want to learn more about their inner workings, check the documentation of the link:https://mbraceproject.github.io/FsPickler/[FSPickler] library on which they are based on. 
+
+== Serializing into a given format
+ 
+build structure using xml nodes
+
+== Deserializing from a given format
+
+ParseJson [XML], Parse [XML]
+
+xElement (split), xpath..
