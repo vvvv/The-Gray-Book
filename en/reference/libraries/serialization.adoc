@@ -9,35 +9,10 @@ Serialization is the process of translating data structures into a format (text 
 
 There are three commonly used text formats for serialization, called link:https://en.wikipedia.org/wiki/XML[XML], link:https://en.wikipedia.org/wiki/JSON[JSON] and link:https://en.wikipedia.org/wiki/Comma-separated_values[CSV] and another common binary format called link:https://en.wikipedia.org/wiki/BSON[BSON]. While binary formats are typically smaller, which results in faster read/write times, the advantage of text formats is human readability which helps with debugging. Also, when interacting with the web it is common to choose JSON as this can be easily parsed and created from java-script.
 
-== Usage scenarios
-Depending on your scenario there are different ways to go about de/serialization:
+== Automatic
+When you need to send data-structures from one instance of your application to another over a network and the data-format does not have to be persistent, chances are that you don't care about the actual format.
 
-=== Controlling both the serialization and deserialization
-If you can define the format yourself, you basically have two choices:
-
-==== The slow, persistent way
-When you're saving the state of a program to disk, you may want think about different versions of your file-format because the data-structure you're saving may evolve over time but you may still want your application to be able to load files saved with earlier versions.
-
-In this case you'll want to define the format yourself as it is then in your hand to change the format whenever needed, adapt the serialization and deserialization process accordingly and have the option to retain backwards-compatibility by providing different de/serializers for different versions of your format.
-
-The following nodes allow you to build data-structures
-
-- XElement (Join) [XML]
-- XAttribute (Join) [XML]
-
-that can then be serialized to a string format using:
-
-- ToJSON [XML]
-- ToString [XML]
-
-Building an extra data-structure that is only used for serialization is an overhead but also has the advantage that you can leave things out that you don't need to serialize and define exactly how the resulting format will look like. 
-
-**image: example data-structure and its serialization as XML and JSON strings**
-
-=== The quick, volatile way
-When you need to send data from one instance of your application to another over a network and the data is never persisted to disk chances are that you don't care about the actual format.
-
-In this case you can use one of the runtime serializers provided that can serialize most datatypes directly without the need for building an extra data-structure for serialization as in the example above. While this saves time it, comes with the disadvantage that you cannot leave things out that don't need to be serialized and thus may have some overhead in the formats size.
+In this case you can use one of the runtime serializers provided that can serialize most datatypes directly without the need for building an extra data-structure for serialization as in the example above. While this is quick and easy, it comes at the cost of not having any control over the format and thus may have some overhead in the formats size.
 
 - Serialize (JSON) [Runtime.Serialization] -> Deserialize (JSON) [Runtime.Serialization]
 - Serialize (BSON) [Runtime.Serialization] -> Deserialize (BSON) [Runtime.Serialization]
@@ -48,10 +23,50 @@ In this case you can use one of the runtime serializers provided that can serial
 
 In case you want to learn more about the inner workings of those nodes, check the documentation of the link:https://mbraceproject.github.io/FsPickler/[FSPickler] library on which they are based on. 
 
-== Serializing into a given format
- 
-build structure using xml nodes then use ToJSON [XML] ToString [XML]
+== Manual
+When you're saving the state of a program to disk, you may want think about different versions of your file-format because the data-structure you're saving may evolve over time and you may still want your application to be able to load files saved with earlier versions.
 
-== Deserializing from a given format
+In this case you'll want to define the format yourself as it is then in your hand to change the format whenever needed, adapt the serialization and deserialization process accordingly and have the option to retain backwards-compatibility by providing different de/serializers for different versions of your format.
 
-ParseJson [XML], Parse [XML] the use xElement (split), xpath..
+=== Custom Serialization
+The following nodes allow you to build data-structures
+
+- XElement (Join) [XML]
+- XAttribute (Join) [XML]
+
+that can then be serialized to a string format using:
+
+- ToJSON [XML]
+- ToString [XML]
+
+or can be directly laved to disk using:
+
+- FileWriter (JSON) [IO]
+- FileWriter (XML) [IO]
+
+Building an extra data-structure that is only used for serialization is an overhead but also has the advantage that you can leave things out that you don't need to serialize and define exactly how the resulting format will look like. 
+
+**image: example data-structure and its serialization as XML and JSON strings**
+
+=== Custom Deserialization
+
+The following nodes allow you to read JSON or XML files from disk:
+
+- FileReader (JSON) [IO]
+- FileReader (XML) [IO]
+
+or parse JSON or XML strings into a an XElement structure:
+
+- ParseJson [XML]
+- Parse [XML]
+
+Then use the following nodes to access individual fields of the data-structure:
+
+- XElement (Split) [XML]
+- XAttribute (Split) [XML]
+- XElementsByName [XML]
+- XPathSelectElement [XML]
+- XPathSelectElements [XML]
+- XPathEvaluate [XML]
+
+**image: deserializing a given example json/xml**
