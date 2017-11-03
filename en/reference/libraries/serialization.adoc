@@ -7,7 +7,7 @@ Serialization is the process of translating data structures into a format (text 
 
 == Common Formats
 
-There are three commonly used text formats for serialization, called link:https://en.wikipedia.org/wiki/XML[XML], link:https://en.wikipedia.org/wiki/JSON[JSON] and link:https://en.wikipedia.org/wiki/Comma-separated_values[CSV] and another common binary format called link:https://en.wikipedia.org/wiki/BSON[BSON]. While binary formats are typically smaller, which results in faster read/write times, the advantage of text formats is human readability which helps with debugging. Also, when interacting with the web it is common to choose JSON as this can be easily parsed and created from java-script.
+There are three commonly used text formats for serialization, called link:https://en.wikipedia.org/wiki/XML[XML], link:https://en.wikipedia.org/wiki/JSON[JSON] and link:https://en.wikipedia.org/wiki/Comma-separated_values[CSV] and another common binary format called link:https://en.wikipedia.org/wiki/BSON[BSON]. While binary formats are typically smaller, which results in faster read/write times, the advantage of text formats is human readability which helps with debugging and version-control. Also, when interacting with the web it is common to choose JSON as this can be easily parsed and created from java-script.
 
 == Automatic
 When you need to send data-structures from one instance of your application to another over a network and the data-format does not have to be persistent, chances are that you don't care about the actual format.
