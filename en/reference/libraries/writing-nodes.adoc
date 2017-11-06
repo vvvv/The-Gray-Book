@@ -246,9 +246,9 @@ image::../../images/vl-libraries-writingNodes-Datatypes.png[]
 
 === Events/Observables
 
-VL translates .net events to Observables. So you can simply use events in your code and then access them in VL via the Observable pattern. 
+VL translates .net events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[Updated .NET Core Event Pattern] to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern. 
 
-Here is an example of c# events without and with event arguments conforming to the link:https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines[.NET Framework Guidelines for Publishing Events]:
+Here is an example of c# events without and with event arguments:
 
 ```csharp
 public class MyDataType
