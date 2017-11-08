@@ -180,3 +180,88 @@ In order to forward an enum from a .dll to the user of a .vl document simply dra
 
 .Enum Forward.
 image::../../images/vl-libraries-wrapping-Enums.png[]
+
+== Wrapping Non-Standard Events or Delegates
+Events or delegates in third-party libraries are often a reason for writing a little c# wrapper. While events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[.NET Core Event Pattern] are conveniently translated to observables in vl automatically, many libraries use non-standard events or delegates in which case you'll have to write a conversion to observable in c# manually using link:https://msdn.microsoft.com/en-us/library/system.reactive.linq.observable.fromevent(v=vs.103).aspx[Observable.FromEvent] that comes with the System.Reactive nuget.
+
+Here is an example. Let's assume the library has a datatype `Tablet` that has an event defined like this:
+
+```csharp
+public event PacketArrivalEventHandler (int x, int y, int z);
+```
+
+and you want to receive a notification when that event is fired, via the output of a node in VL. 
+
+First you need to create a class for the type of notification you want to receive in VL. It may look like this:
+
+```csharp
+public class PackageArgs: EventArgs
+{
+    public readonly int X;
+    public readonly int Y;
+    public readonly int Z;
+
+    public PackageArgs(int x, int y, int z)
+    {
+        X = x;
+        Y = y;
+        Z = z;
+    }
+}
+```
+
+Then you can create a static operation node that receives an instance of the `Tablet` in VL and returns an `Observable<PackageArgs>` on its output:
+
+```csharp
+public static class TabletHelper
+{
+    public static IObservable<PackageArgs> PackageArrived(Tablet tablet)
+    {
+        return Observable.FromEvent<Tablet.PacketArrivalEventHandler, PackageArgs>(handler =>
+                {
+                    Tablet.PacketArrivalEventHandler paHandler = (x, y, z) =>
+                    {
+                        handler(new PackageArgs(x, y, z));
+                    };
+
+                    return paHandler;
+                },
+                paHandler => tablet.PacketArrival += paHandler,
+                paHandler => tablet.PacketArrival -= paHandler);
+    }
+}
+```
+
+
+*Image: how this looks in vl*
+
+Note how the node is placed on Create here and saved in a pad, instead of Update in order to have the Observable only created once, which is what we want. If for some reason you need to place the node on Update (e.g. because the Tablet on its input may change), here is a little trick you can add to cache the observable and only re-create it when the input changes:
+
+```csharp
+public static class TabletHelper
+{
+    public static IObservable<PackageArgs> PackageArrived(Tablet tablet)
+    {
+        return CachedObservables.GetValue(tablet, x => PackageArrived_((Tablet)x))
+    }
+        
+    static IObservable<PackageArgs> PackageArrived_(Tablet tablet)
+    {
+        return Observable.FromEvent<Tablet.PacketArrivalEventHandler, PackageArgs>(handler =>
+                {
+                    Tablet.PacketArrivalEventHandler paHandler = (x, y, z) =>
+                    {
+                        handler(new PackageArgs(x, y, z));
+                    };
+
+                    return paHandler;
+                },
+                paHandler => tablet.PacketArrival += paHandler,
+                paHandler => tablet.PacketArrival -= paHandler);
+    }
+}
+```
+
+
+
+

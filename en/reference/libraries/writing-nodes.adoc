@@ -246,7 +246,7 @@ image::../../images/vl-libraries-writingNodes-Datatypes.png[]
 
 === Events/Observables
 
-VL translates .net events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[Updated .NET Core Event Pattern] to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern. 
+VL translates .net events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[.NET Core Event Pattern] to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern. 
 
 Here is an example of c# events without and with event arguments:
 
@@ -300,55 +300,6 @@ image::../../images/vl-libraries-writingNodes-Observables-EventArgs.png[]
 
 For general information on workig with Observables see the chapter about link:/reference/libraries/reactive.adoc[Reactive Programming].
 
-=== Delegates
-
-Delegates do not get translated to Observables automatically yet. Here is how you can convert a c# delegate to an Observable using a helper function called `Observable.FromEvent()` that comes with the VL.Core nuget:
-
-Let's assume you have a datatype `Body` that has a delegate like:
-
-```csharp
-public delegate bool OnCollisionEventHandler (Fixture fixtureA, Fixture fixtureB, Collision collision);
-```
-
-and you want to receive a notification when that delegate is called, via the output of a node in VL. 
-
-First you need to create a class for the type of notification you want to receive in VL. It may look like this:
-
-```csharp
-public class CollisionEvent
-{
-    public readonly Contact Contact;
-    public readonly Fixture FixtureA;
-    public readonly Fixture FixtureB;
-
-    public CollisionEvent(Fixture fixtureA, Fixture fixtureB, Contact contact)
-    {
-        FixtureA = fixtureA;
-        FixtureB = fixtureB;
-        Contact = contact;
-    }
-
-    public bool CancelCollision { get; set; }
-}
-```
-
-Next you can create e.g. a static operation node that receives an instance of the `Body` in VL and returns an `Observable<CollisionEvent>` on its output:
-
-```csharp
-public static IObservable<CollisionEvent> OnCollision(this Body body)
-{
-    return ObservableNodes.FromEvent<OnCollisionEventHandler, CollisionEvent>(
-        body,
-        addHandler: handler => body.OnCollision += handler,
-        removeHandler: handler => body.OnCollision -= handler,
-        conversion: handler => (fixtureA, fixtureB, contact) =>
-        {
-            var e = new CollisionEvent(fixtureA, fixtureB, contact);
-            handler(e);
-            return !e.CancelCollision;
-        });
-}
-```
 === Dynamic Enums
 
 Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 

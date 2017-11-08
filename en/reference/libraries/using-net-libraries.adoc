@@ -50,7 +50,7 @@ Wrappers can hide those conversions from the user.
 In a dataflow context it is most usable to deal with immutable datatypes. However most types from .NET libraries are mutable.
 
 === Events
-Many .NET libraries expose events that do not conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[Updated .NET Core Event Pattern], which means that they cannot be automatically translated to Observables in VL. For those cases you'll have to write a wrapper in C# that converts the event to an observable manually, see link:https://msdn.microsoft.com/en-us/library/system.reactive.linq.observable.fromevent(v=vs.103).aspx[Observable.FromEvent].
+Many .NET libraries expose events that do not conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[.NET Core Event Pattern], which means that they cannot be automatically translated to Observables in VL. For those cases you'll have to write a wrapper in C# that converts the event to an observable manually, see link:https://msdn.microsoft.com/en-us/library/system.reactive.linq.observable.fromevent(v=vs.103).aspx[Observable.FromEvent].
 
 === Error Handling
 There are different ways libraries can deal with errors but typically as users we want to have one consistent way. 
