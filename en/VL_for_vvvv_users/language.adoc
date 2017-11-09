@@ -39,9 +39,6 @@ Both Pins and IOBoxes can be configured via a middleclick on them. Input Pins ca
 
 Another note on pins is that in vvvv you're used to when removing a link that goes into an input pin of a primitive type (value, string, color, enum) that the input pin will store the last values that came in via the link. This is not happening in VL, where input pins cannot store values.
 
-=== No more hidden values in pins
-In vvvv you can change the value on a pin directly. This can be confusing, because when looking at a node you don't see which pin has a value other than its default. In VL you can only change a pins value by connecting an IOBox.
-
 === Values
 In vvvv there is only one numerical type. It is called simply "Value" and it is internally represented by a Float64 (which you as a user hardly ever have to worry about). Any output of type Value can be connected to any input of type value even though they may have different subtypes, like Integer, Boolean, or Bang.
 
