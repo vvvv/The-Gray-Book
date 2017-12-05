@@ -17,7 +17,7 @@ NOTE: Middleclick alternative: kbd:[ALT] + leftclick
 |Create new patch and place node at cursor
 |kbd:[Ctrl + Shift + P]
 
-|Remove Errors
+|Remove Errors (from current level downwards)
 |kbd:[Ctrl + E]
 
 |Pan the patch

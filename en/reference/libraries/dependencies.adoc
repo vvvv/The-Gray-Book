@@ -1,0 +1,18 @@
+= Dependencies
+
+VL Documents can reference 2 different types of dependencies:
+
+* Nugets
+* Files
+
+When a document references a dependency, it means that all public nodes in the dependency will be available in the nodebrowser of the referencing document. 
+
+== Nugets
+Nugets are packages of nodes that in turn can contain many .dll and/or .vl files. To reference a nuget go to:
+
+
+== Files
+
+=== From Disk
+
+=== From the .NET Framework GAC
