@@ -329,12 +329,13 @@ both of which come with the VL.Core nuget.
 
 NOTE: For now the VL.Core nuget is only available as pre-release via http://vvvv.org:8111/guestAuth/app/nuget/v1/FeedService.svc/
 
-To make their use easier there are also two baseclass implementations available:
+To make their use easier there are also baseclass implementations available:
 
 - `VL.Lib.Collections.DynamicEnumBase<T, U>`
 - `VL.Lib.Collections.DynamicEnumDefinitionBase<U>`
+- `VL.Lib.Collections.ManualDynamicEnumDefinitionBase<U>`
 
-Note that the DynamicEnumDefinitionBase is a Singleton, meaning that its implementation takes care that always only one instance exists of it globally. We want this because it is important that any node that is referring to a specific enum definition always gets exactly the same entries!
+Note that the definition base classes are Singleton, meaning that its implementation takes care that always only one instance exists of it globally. We want this because it is important that any node that is referring to a specific enum definition always gets exactly the same entries!
 
 Using the above two baseclasses, an implementation of your own dynamic enum could look like this:
 
@@ -372,7 +373,7 @@ Derive from `DynamicEnumDefinitionBase` to implement the class that provides the
 public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
 {
     //return the current enum entries
-    protected override IReadOnlyList<string> GetEntries()
+    protected override IReadOnlyDictionary<string, object> GetEntries()
     {
     }
 
@@ -380,61 +381,68 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
     protected override IObservable<object> GetEntriesChangedObservable()
     {
     }
+    
+    //optionally disable alphabetic sorting
+    protected override bool AutoSortAlphabetically => false; //true is the default
 }
 ```
 
 Implementations here will vary depending on your usecase. A simple example could look like this:
 
 ```csharp
-public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
+public class ComPortDefinition : DynamicEnumDefinitionBase<ComPortDefinition>
 {
-    ObservableCollection<string> FMyEntries = new ObservableCollection<string>();
-
-    //this is optional an can be used if any initialization before the call to GetEntries is needed
-    protected override void Initialize()
-    {
-        //add two default entries on initialization
-        FMyEntries.Add("abara");
-        FMyEntries.Add("kadabara");
-    }
-
-    //return the current enum entries
-    protected override IReadOnlyList<string> GetEntries()
-    {
-        return FMyEntries;
-    }
-
-    //inform the system that the enum has changed
     protected override IObservable<object> GetEntriesChangedObservable()
     {
-        return Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
-            h => FMyEntries.CollectionChanged += h,
-            h => FMyEntries.CollectionChanged -= h);
+        return HardwareChangedEvents.HardwareChanged;
     }
-
-    public void AddEntry(string entry)
+    
+    protected override IReadOnlyDictionary<string, object> GetEntries()
     {
-        FMyEntries.Add(entry);
-    }
+        Dictionary<string, object> portNames = new Dictionary<string, object>();
 
-    public bool RemoveEntry(string entry)
-    {
-        return FMyEntries.Remove(entry);
+        foreach(var portName in NetSerialPort.GetPortNames()
+            .Where(n => n.StartsWith("com", StringComparison.InvariantCultureIgnoreCase)))
+        {
+            //the return dictionary holds the names of the entries as key with an optional "tag"
+            //here the tag is null but you can provide any object that you want to associate with the entry
+            portNames[portName] = null;
+        }
+
+        return portNames;
     }
 }
 ```
 
-NOTE: For the `Observable` type in this example implementation you need to install the 'System.Reactive' nuget.
+The ManualDynamicEnumDefinitionBase can be used if you need to add and remove entries in a VL patch. It comes with nodes like AddEntry, RemoveEntry and Clear:
 
-===== 3. Specify a default constructor
+```csharp
+public class MyEnumDefinition : ManualDynamicEnumDefinitionBase<MyEnumDefinition>
+{
+    //this is optional an can be used if any initialization before the call to GetEntries is needed
+    protected override void Initialize()
+    {
+        //add two default entries on initialization
+        AddEntry("abara", null);
+        AddEntry("kadabara", null);
+    }
+
+    //add this to get a node that can access the singleton instance from everywhere
+    public static MyEnumDefinition Instance => ManualDynamicEnumDefinitionBase<MyEnumDefinition>.Instance;
+}
+
+```
+
+NOTE: For the `Observable` type you need to install the 'System.Reactive' nuget.
+
+===== 3. Specify a default value
 
 Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it. 
 
 For this to happen we have to specify a default constructor for `MyEnum` and this can only be done using a Typeforward in VL:
 
-. In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+J]).
-. Choose _'.NET Dependencies'_ in the dropdown and use the treeview to navigate to your `MyEnum` class. 
-. Unfolding it you should see the 'CreateDefault' operation which you can take and drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type `MyEnum`.
+. In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+Shift+J]).
+. Unfolding it you should see the 'CreateDefault' operation which you can drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type `MyEnum`.
 
 .Specifying a default constructor for `MyEnum`.
 image::../../images/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
