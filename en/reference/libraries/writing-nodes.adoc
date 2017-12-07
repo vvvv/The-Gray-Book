@@ -174,7 +174,6 @@ Use XML documentation in C# to provide some information about your nodes:
 
 - Summary: A one-liner info about the node
 - Remarks: Some additional remarks, like usage instructions, warnings,.. can be multi-line
-- Tags: A list of space-separated tags to find the node in the NodeBrowser (only include terms that are not already part of the nodes name and category!)
 - Param name: Short info for each Input
 - Returns: Short info about the result of the node
       
