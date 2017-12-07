@@ -181,7 +181,6 @@ Use XML documentation in C# to provide some information about your nodes:
 ```csharp
 ///<summary>Multiplies input by two</summary>
 ///<remarks>Some additional remarks</remarks>
-///<tags>space separated tags</tags>
 ///<param name="a">The A Parameter</param>
 ///<returns>Returns 2 times a</returns>
 public static int HTMLDocuTest(int a)
