@@ -1,6 +1,24 @@
 :experimental:
 = Debugging
 
+== Stepping Execution
+[cols="1,1", options="header"] 
+|===
+|Description
+|Action
+
+|Pause/Step execution
+|kbd:[F6]
+
+|Run 
+|kbd:[F5]
+|===
+
+The execution of vl can be paused by pressing kbd:[F6]. Pressing kbd:[F6] repeatedly, causes the execution to make one step at a time. To get back into run mode press kbd:[F5]. 
+
+You can also choose to auto-pause whenever an error occurs and jump to the node that threw the exception by setting *RuntimePauseOnError* to _true_ in the the link:reference/hde/settings.adoc[Settings] file. 
+
+
 == Timings
 The tooltip shows timings if the *TooltipShowTimings* setting is set to _true_ in the link:reference/hde/settings.adoc[Settings] file. 
 

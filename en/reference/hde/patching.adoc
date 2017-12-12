@@ -90,6 +90,9 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |Align selected nodes
 |kbd:[Ctrl + L]
 
+|Line up selected nodes
+|kbd:[Alt + L]
+
 |Evenly distribute selected nodes between left/top-most and right/bottom-most node in selection
 |kbd:[Ctrl + Shift + L]
 
