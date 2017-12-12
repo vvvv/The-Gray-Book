@@ -55,7 +55,7 @@
 *** link:reference/libraries/dependencies.adoc[Dependencies]
 *** link:reference/libraries/writing-nodes.adoc[Writing Nodes]
 *** link:reference/libraries/using-net-libraries.adoc[Using .NET Libraries]
-*** link:reference/libraries/patching-libraries.adoc[Wrapping .NET Libraries]
+*** link:reference/libraries/patching-libraries.adoc[Forwarding .NET Libraries]
 *** link:reference/libraries/library_design_guidelines.adoc[Design Guidelines]
 *** link:reference/libraries/nugets.adoc[Nugets]
 
