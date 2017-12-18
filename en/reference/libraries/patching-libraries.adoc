@@ -115,7 +115,7 @@ If you want to expose more than one process node from a single type forward, you
 
 == Forwarding Operations
 
-As shown above, a type forward can easily forward all of its operations automatically. Even with "Forward All Nodes" activated though, it can make sense to manually forward some operations to tweak some settings. 
+As shown above, a type forward can easily forward all of its operations automatically. Even with "Forward All Nodes" activated though, it can make sense to manually forward some operations to tweak their pins. 
 
 To create forwards for individual operations:
 
