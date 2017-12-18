@@ -177,6 +177,8 @@ When forwarding a node, you'll usually want to automatically sync its signature 
 
 A reason to disable these would be if you want to create a stable API for a vl library that you don't want to be automatically adapting to changes in the underlying .NET library. Since a change in the .NET library may cause an incompatibility for users of your vl library you'll want to have the chance to review such changes and decide how to forward them to your API. 
 
+NOTE: Both features "Automatic Signature" and "Connect to Signature" are not limited to usage in forwarding definitions. There are other scenarios where they may be useful.
+
 === Automatic Signature
 Unchecking "Automatic Signature" has two implications:
 
