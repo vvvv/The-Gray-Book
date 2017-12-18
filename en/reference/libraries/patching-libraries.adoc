@@ -115,6 +115,8 @@ If you want to expose more than one process node from a single type forward, you
 
 == Forwarding Operations
 
+As shown above, a type forward can easily forward all of its operations automatically. Even with "Forward All Nodes" activated though, it can make sense to manually forward some operations to tweak some settings. 
+
 To create forwards for individual operations:
 
 . Open the type you want to drop the operation into
@@ -128,7 +130,7 @@ image::../../images/vl-libraries-wrapping-DroppingOperation.png[]
 
 NOTE: You can also select multiple operations and drop those into the patch at once. 
 
-You now have a forwarding operation definition that wraps around the node you want to forward. And all pins of the forwarded node are  automatically reflected in the signature of the forwarding definition.  That also means that any change to the signature of the node (ie. pin added/renamed/removed in its C# code) will also be automatically reflected in the forwarding definitions signature. If for some reason this behavior is not desired, see "Manually managing the Signature" below.
+You now have a forwarding operation definition wrapped around the node you want to forward. All pins of the forwarded node are  automatically reflected in the signature of the forwarding definition.  That also means that any change to the signature of the node (ie. pin added/renamed/removed in its underlying .NET code) will also be automatically reflected in the forwarding definitions signature. If for some reason this behavior is not desired, see "Manually managing the Signature" below.
 
 Still you can apply the following modifications to a forward without manually managing its signature:
 
@@ -157,20 +159,18 @@ Forwards are a good place to do simple type or unit conversions. Consider an ope
 image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 
 === Show Category
-Rightclick on the header of the operation you're forwarding and choose menu:Configure[Show Category]
-
-.Show Category checkbox
-image::../../images/vl-libraries-wrapping-ShowCategory.png[]
-
-With this flag you can specify whether or not a node shows its type category. Compare the following:
+By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch. Compare the following:
 
 .Vector (Join) [2D.Vector2] does not show its category, while GetSlice [Collections.Spreads] does.
 image::../../images/vl-libraries-wrapping-ShowCategory-Compare.png[]
 
-By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch.
+Rightclick on the header of the operation you're forwarding and choose menu:Configure[Show Category] to specify whether or not a node shows its type category. 
+
+.Show Category checkbox
+image::../../images/vl-libraries-wrapping-ShowCategory.png[]
 
 == Manually managing the Signature
-When forwarding a node you'll usually want to automatically sync its signature to the one of its surrounding definition. This is why by default the two options which manage this behavior are on:
+When forwarding a node, you'll usually want to automatically sync its signature to the one of its surrounding definition. This is why by default the two options which manage this behavior are on:
 
 - Automatic Signature
 - Connect to Signature
@@ -183,8 +183,10 @@ Unchecking "Automatic Signature" has two implications:
 - pins in the signature will now no longer automatically be sorted by the x-position of their representations in the patch
 - pins will not be automatically added to/removed from the signature for nodes that have "Connect to Signature" activated, if their signature changed. Instead, the signature will now show warnings which allow you to inspect those changes and react to them
 
+*Image:The "Automatic Signature" toggle*
+
 === Connect to Signature
-Connect to Signature is enabled by default for nodes dropped in from the solution explorer for being forwarded. But the feature is actually independent of the topic of forwarding and can be used in other scenarios as well. 
+Connect to Signature is enabled by default for nodes dropped in from the solution explorer for being forwarded. It can be disabled if you want to have more manual control over which pins of a node are being forwarded. 
 
 .Rightclick on the node you're forwarding and choose menu:Configure[Connect to Signature].
 image::../../images/vl-libraries-wrapping-ForwardPins.png[]
