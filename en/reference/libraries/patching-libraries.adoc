@@ -56,7 +56,6 @@ There are two ways to create a type forward:
 .Drag-Drop type from Solution Explorer into group.
 image::../../images/vl-libraries-wrapping-dragndrop.png[]
 
-
 ===== Manually
 
 . Open the group you want to drop the type into
@@ -66,7 +65,6 @@ image::../../images/vl-libraries-wrapping-dragndrop.png[]
 
 .Left: Click the `patch type` drop-down and set 'Forward'. Right: Click the `type-annotation` and choose a type from the NodeBrowser.
 image::../../images/vl-libraries-wrapping-Manually.png[]
-
 
 === Configure Type Forward
 ==== Rename Type
@@ -116,21 +114,49 @@ Each type forward can also directly expose a process node. This is exactly the s
 If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operations to create the desired process.
 
 == Forwarding Operations
+
 To create forwards for individual operations:
 
-- Open the type you want to drop the operation into
-- Open the Solution Explorer
-- Choose '.NET Dependencies'
-- Find the operation you want to import
-- Drag-Drop the operation into the type
+. Open the type you want to drop the operation into
+. Open the Solution Explorer
+. Choose '.NET Dependencies'
+. Find the operation you want to import
+. Drag-Drop the operation into the type
 
 .Dropping the operation into type.
 image::../../images/vl-libraries-wrapping-DroppingOperation.png[]
 
 NOTE: You can also select multiple operations and drop those into the patch at once. 
 
-=== Show Category
+You now have a forwarding operation definition that wraps around the node you want to forward. And all pins of the forwarded node are  automatically reflected in the signature of the forwarding definition.  That also means that any change to the signature of the node (ie. pin added/renamed/removed in its C# code) will also be automatically reflected in the forwarding definitions signature. If for some reason this behavior is not desired, see "Manually managing the Signature" below.
 
+Still you can apply the following modifications to a forward without manually managing its signature:
+
+=== Renaming a Pin
+If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
+
+.Renaming a Pin.
+image::../../images/vl-libraries-wrapping-ForwardPins-Rename.png[]
+
+=== Setting a Default
+Parameters of operations rarely have meaningful defaults. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
+
+.Setting a default on an input via Middleclick or menu:Rightclick[Configure].
+image::../../images/vl-libraries-wrapping-ForwardPins-Default.png[]
+
+=== Hiding a Pin
+Even if the automatic forwarding of all pins is on, you can override forwarding of individual pins by simply connecting an IOBox to them. 
+
+.Hiding a Pin.
+image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png[]
+
+=== Type or Unit Conversions
+Forwards are a good place to do simple type or unit conversions. Consider an operation that takes angles in radians, but you want to use vl-conform cycles.
+
+.SineWave takes an angle in cycles.
+image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
+
+=== Show Category
 Rightclick on the header of the operation you're forwarding and choose menu:Configure[Show Category]
 
 .Show Category checkbox
@@ -143,37 +169,28 @@ image::../../images/vl-libraries-wrapping-ShowCategory-Compare.png[]
 
 By default member operations have this activated while static operations don't. The only reason to change this default should be nodes like the Vector (Join) where the fact that they are members is not relevant to the readability of a patch.
 
-=== Forward All Pins
-.Rightclick on the node you're forwarding and choose menu:Configure[Forward Pins].
-image::../../images/vl-libraries-wrapping-ForwardPins.png[]
+== Manually managing the Signature
+When forwarding a node you'll usually want to automatically sync its signature to the one of its surrounding definition. This is why by default the two options which manage this behavior are on:
 
-By default all pins of an operation are forwarded with their original name. You can disable the automatic forwarding of all pins and only selectively forward pins by manually creating inputs or outputs for them.
+- Automatic Signature
+- Connect to Signature
+
+A reason to disable these would be if you want to create a stable API for a vl library that you don't want to be automatically adapting to changes in the underlying .NET library. Since a change in the .NET library may cause an incompatibility for users of your vl library you'll want to have the chance to review such changes and decide how to forward them to your API. 
+
+=== Automatic Signature
+Unchecking "Automatic Signature" has two implications:
+
+- pins in the signature will now no longer automatically be sorted by the x-position of their representations in the patch
+- pins will not be automatically added to/removed from the signature for nodes that have "Connect to Signature" activated, if their signature changed. Instead, the signature will now show warnings which allow you to inspect those changes and react to them
+
+=== Connect to Signature
+Connect to Signature is enabled by default for nodes dropped in from the solution explorer for being forwarded. But the feature is actually independent of the topic of forwarding and can be used in other scenarios as well. 
+
+.Rightclick on the node you're forwarding and choose menu:Configure[Connect to Signature].
+image::../../images/vl-libraries-wrapping-ForwardPins.png[]
 
 .RandomSpread with only its 'Count' input and its 'Output' forwarded.
 image::../../images/vl-libraries-wrapping-ForwardPins-Selectively.png[]
-
-Even if the automatic forwarding of all pins is on, you can override forwarding of individual pins by simply connecting an IOBox to them. 
-
-.Hiding a Pin.
-image::../../images/vl-libraries-wrapping-ForwardPins-HidingPins.png[]
-
-=== Renaming a Pin
-If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
-
-.Renaming a Pin.
-image::../../images/vl-libraries-wrapping-ForwardPins-Rename.png[]
-
-=== Setting a default
-Parameters of operations rarely have meaningful defaults. In order to forward a pin with a proper default, manually create an input for a particular pin and set a default for it. 
-
-.Setting a default on an input via Middleclick or menu:Rightclick[Configure].
-image::../../images/vl-libraries-wrapping-ForwardPins-Default.png[]
-
-=== Type or Unit Conversions
-Forwards are a good place to do simple type or unit conversions. Consider an operation that takes angles in radians, but you want to use vl-conform cycles.
-
-.SineWave takes an angle in cycles.
-image::../../images/vl-libraries-wrapping-ForwardPins-Conversion.png[]
 
 == Forwarding Enums
 In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch. 
