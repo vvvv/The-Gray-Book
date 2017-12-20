@@ -191,7 +191,7 @@ Unchecking "Automatic Signature" has two implications:
 Connect to Signature is enabled by default for nodes dropped in from the solution explorer for being forwarded. This helps saving some clicks in that it automatically connects the node to the surrounding signature, just as if for each pin you would have created a link to an own pin with the same name. If you want to have more manual control over which pins of a node are being forwarded you can disable the feature. 
 
 .Rightclick on the node you're forwarding and choose menu:Configure[Connect to Signature].
-image::../../images/vl-libraries-wrapping-ForwardPins.png[]
+*Image:The "Connect to Signature"*
 
 .RandomSpread with only its 'Count' input and its 'Output' forwarded.
 image::../../images/vl-libraries-wrapping-ForwardPins-Selectively.png[]
