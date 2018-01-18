@@ -12,9 +12,6 @@ When assembling the VL.CoreLib we took a few curatorial decisions that may confu
 
 |IEnumerable
 |Sequence
-
-|IEnumerable.Select
-|Sequence.Project
 |===
 
 ## Language Features
