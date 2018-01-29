@@ -1,15 +1,31 @@
 = Dependencies
 
-VL Documents can reference 2 different types of dependencies:
+VL Documents can reference 3 different types of dependencies:
 
-* Nugets
+* VL Nugets
+* .NET Nugets
 * Files
 
 When a document references a dependency, it means that all public nodes in the dependency will be available in the nodebrowser of the referencing document. 
 
 == Nugets
-Nugets are packages of nodes that in turn can contain many .dll and/or .vl files. To reference a nuget go to:
+link:https://www.nuget.org/[NuGet] is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document
 
+=== VL vs. .NET Nugets
+A VL Nuget is a nuget specifically created for use with vl that won't work for any other link:https://en.wikipedia.org/wiki/List_of_CLI_languages[.NET language]. It is still a valid nuget in the original terms of NuGet but since it contains .vl documents it will not be useable outside of vl. 
+
+A .NET Nuget on the other hand is more generally targetting any .NET language.
+
+You can reference either VL or .NET nugets via the menu by navigating to it and pressing the right mousebutton to toggle its selection:
+
+*Image:referencing a nuget*
+
+=== Unmanaged/Native dependencies
+Some nugets are shipping with or depending on unmanaged/native .dlls which cannot be picked up by vl automatically since there isn't a pattern in the nuget specification as to how those should be handled. So in order to get such unmanaged dependencies of a nuget picked up, for now you'll have to add a search-path for vl via a batch file, like so:
+
+----
+SET PATH=%PATH%;c:\path\to\nugets\nativelibs
+----
 
 == Files
 
