@@ -6,26 +6,9 @@
 Any static operation or member of a class defined in a .NET .dll (library) can be used as a node in VL.
 
 == Referencing Libraries
+To get access to the content of a library in a patch you only need to _reference_ it as a dependency in the .vl document. 
 
-=== Local .NET libraries
-To get access to the content of a library in a patch you only need to _reference_ it as a dependency in the .vl document. Here are 3 ways to do so:
-
-* Drop a .dll onto the patch 
-* Press kbd:[Ctrl + R]
-* Via menu:Document[Dependencies > Files > Add Existing...]
-
-.Add existing File as dependency.
-image::../../images/vl-Dependencies-File.png[]
-
-=== Libraries from the GAC (Global Assembly Cache)
-
-Instead of a local .dll you can also reference any library from the link:https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac[GAC] that also holds all the main libraries shipping with .NET:
-
-* Press kbd:[Ctrl + Shift + R]
-* via menu:Document[Dependencies > Files > Add .NET Framework Assembly...]
-
-.Use kbd:[Ctrl + F] in this window to find libraries in the GAC.
-image::../../images/vl-libraries-using-GACWindow.png[]
+Please refer to the chapter link:/reference/libraries/dependencies.adoc[Dependencies] to learn about the different options there are to adding dependencies to a document. 
 
 == Accessing nodes
 
