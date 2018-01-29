@@ -9,7 +9,7 @@ VL Documents can reference 3 different types of dependencies:
 When a document references a dependency, it means that all public nodes in the dependency will be available in the nodebrowser of the referencing document. 
 
 == Nugets
-link:https://www.nuget.org/[NuGet] is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document
+link:https://www.nuget.org/[NuGet] is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document.
 
 === VL vs. .NET Nugets
 A VL Nuget is a nuget specifically created for use with vl that won't work for any other link:https://en.wikipedia.org/wiki/List_of_CLI_languages[.NET language]. It is still a valid nuget in the original terms of NuGet but since it contains .vl documents it will not be useable outside of vl. 
@@ -28,7 +28,25 @@ SET PATH=%PATH%;c:\path\to\nugets\nativelibs
 ----
 
 == Files
+A vl document can reference other .vl documents and managed .dll files. 
 
 === From Disk
+Here are 3 ways to reference local files:
 
-=== From the .NET Framework GAC
+* Drop a .vl or .dll file onto the patch 
+* Press kbd:[Ctrl + R] to select files via a file browser
+* Via menu:Document[Dependencies > Files > Add Existing...]
+
+.Add existing File as dependency.
+image::../../images/vl-Dependencies-File.png[]
+
+=== Libraries from the GAC (Global Assembly Cache)
+
+By default .NET comes with a large number of assemblies that can be referenced. They are stored in the link:https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac[GAC] on all machines that have .NET installed and can be referenced from there via:
+
+* Press kbd:[Ctrl + Shift + R]
+* via menu:Document[Dependencies > Files > Add .NET Framework Assembly...]
+
+.Use kbd:[Ctrl + F] in this window to find libraries in the GAC.
+image::../../images/vl-libraries-using-GACWindow.png[]
+
