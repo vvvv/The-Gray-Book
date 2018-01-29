@@ -21,7 +21,7 @@ A .NET Nuget on the other hand is more generally targetting any .NET language.
 
 You can reference either VL or .NET nugets via the menu by navigating to it and pressing the right mousebutton to toggle its selection:
 
-*Image:referencing a nuget*
+*Image:Referencing a nuget via Rightclick*
 
 === Unmanaged/Native dependencies
 Some nugets are shipping with or depending on unmanaged/native .dlls which cannot be picked up by vl automatically since there isn't a pattern in the nuget specification as to how those should be handled. So in order to get such unmanaged dependencies of a nuget picked up, for now you'll have to add a search-path for vl via a batch file, like so:
