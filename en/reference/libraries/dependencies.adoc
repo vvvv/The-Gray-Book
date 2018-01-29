@@ -1,3 +1,6 @@
+:experimental:
+:figure-caption!:
+
 = Dependencies
 
 VL Documents can reference 3 different types of dependencies:
@@ -6,7 +9,7 @@ VL Documents can reference 3 different types of dependencies:
 * .NET Nugets
 * Files
 
-When a document references a dependency, it means that all public nodes in the dependency will be available in the nodebrowser of the referencing document. 
+When a document references a dependency, it means that all public nodes in that dependency will be available in the nodebrowser of the referencing document. 
 
 == Nugets
 link:https://www.nuget.org/[NuGet] is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document.
@@ -33,7 +36,7 @@ A vl document can reference other .vl documents and managed .dll files.
 === From Disk
 Here are 3 ways to reference local files:
 
-* Drop a .vl or .dll file onto the patch 
+* Drop a .vl or .dll file onto a patch 
 * Press kbd:[Ctrl + R] to select files via a file browser
 * Via menu:Document[Dependencies > Files > Add Existing...]
 
@@ -46,6 +49,8 @@ By default .NET comes with a large number of assemblies that can be referenced. 
 
 * Press kbd:[Ctrl + Shift + R]
 * via menu:Document[Dependencies > Files > Add .NET Framework Assembly...]
+
+In the dialog you need to double-click entries that you want to add as references.
 
 .Use kbd:[Ctrl + F] in this window to find libraries in the GAC.
 image::../../images/vl-libraries-using-GACWindow.png[]
