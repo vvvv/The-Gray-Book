@@ -41,7 +41,8 @@ If a nuget that is referenced by a document cannot be found,  it will be listed 
 
 Note that you can rightlclick to select multiple red entries and then choose to apply either install or remove to all of them at once.
 
-*Image:Missing nuget options*
+.Missing nuget options.
+image::../../images/vl-Dependencies-MissingNuget.png[]
 
 === Unmanaged/Native dependencies
 Some nugets are shipping with or depending on unmanaged/native .dlls which cannot be picked up by vl automatically since there isn't a pattern in the nuget specification as to how those should be handled. So in order to get such unmanaged dependencies of a nuget picked up, for now you'll have to add a search-path for vl via a batch file, like so:
@@ -66,8 +67,8 @@ image::../../images/vl-Dependencies-File.png[]
 ==== Missing Files
 Files that are showing up in red cannot be found on disk. You can Rightlcick to remove their reference. Note that you can also rightclick to select multiple files in a row and then apply "Remove" to all of them at once.
  
-can select multiple files to be removed at once
-*Image:Remove files*
+.Remove files.
+image::../../images/vl-Dependencies-File-Remove.png[]
 
 === Libraries from the GAC (Global Assembly Cache)
 
