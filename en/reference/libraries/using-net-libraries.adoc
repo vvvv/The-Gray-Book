@@ -22,7 +22,8 @@ Like this you can use practically any thirdparty .NET library and start patching
 === Hiding dependencies from the Nodebrowser
 At times it may be overwhelming to see all nodes from all dependencies in the nodebrowser. Use the toggle next to the edit-field to include or hide nodes from all dependencies in the nodebrowser.
 
-*Image:toggle to show/hide nodes of dependencies*
+.Toggle to show/hide nodes of dependencies.
+image::../../images/vl-libraries-using-NodeBrowser-hideDependencies.png[]
 
 == For your Consideration
 Having access to just about any .NET library directly in VL is indeed quite convenient and powerful. With many simple libraries you'll have instant success. But obviously most libraries you'll find in the wild are not designed to be used in a dataflow context like VL. Patching with those is still possible but will require a better understanding of things than we'd normally want to ask from our users. Therefore we consider this feature of _"using .NET libraries directly"_ to be for the more advanced audience. 
