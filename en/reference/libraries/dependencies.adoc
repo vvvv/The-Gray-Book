@@ -21,14 +21,14 @@ A .NET Nuget on the other hand is more generally targetting any .NET language.
 
 You can reference either VL or .NET nugets via the menu by navigating to it and pressing the right mousebutton to toggle its selection:
 
-.Referencing a nuget via Rightclick.
+.Rightclick toggles adding/removing a nuget reference.
 image::../../images/vl-Dependencies-Nuget.png[]
 
 === Manage Nugets
 
 - *Find on nuget.org* opens a webbrowser and lets you search for nugets in the online repository. Note that for now, after you've found what you're looking for, you'll still have to install a nuget manually via the commandline
 - *Show installed* opens a file explorer at the path all your nugets are installed locally
-- *Commandline* Opens a commandline from which you can install nugets
+- *Commandline* Opens a commandline from which you can run link:https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference[nuget commands] like "install"
 
 .Installing a nuget via the commandline.
 image::../../images/vl-Dependencies-ManageNugets-Commandline.png[]
