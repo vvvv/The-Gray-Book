@@ -21,7 +21,8 @@ A .NET Nuget on the other hand is more generally targetting any .NET language.
 
 You can reference either VL or .NET nugets via the menu by navigating to it and pressing the right mousebutton to toggle its selection:
 
-*Image:Referencing a nuget via Rightclick*
+.Referencing a nuget via Rightclick.
+image::../../images/vl-Dependencies-Nuget.png[]
 
 === Manage Nugets
 
@@ -29,7 +30,8 @@ You can reference either VL or .NET nugets via the menu by navigating to it and 
 - *Show installed* opens a file explorer at the path all your nugets are installed locally
 - *Commandline* Opens a commandline from which you can install nugets
 
-*Image:Installing a nuget via the commandline*
+.Installing a nuget via the commandline.
+image::../../images/vl-Dependencies-ManageNugets-Commandline.png[]
 
 === Missing Nugets
 If a nuget that is referenced by a document cannot be found,  it will be listed in red in the Dependencies menu. In such a case a rightclick on a red entry allows you to:
