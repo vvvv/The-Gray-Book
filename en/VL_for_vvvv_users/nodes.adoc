@@ -28,4 +28,10 @@ And besides the simple Map node there are distinct nodes for applying map in com
 * MapMirror
 * MapWrap
 
+== InputMorph
+Looking for the InputMorph (Animation) node? This one is now called Lerp which is short for link:https://en.wikipedia.org/wiki/Linear_interpolation[Linear Interpolation]. 
 
+But beware of two differences:
+
+* While on the InputMorph the first input is the morph factor ("Switch" pin), the respective "Scalar" input on the Lerp node is its rightmost!
+* The InputMorph can have any number of inputs and morph between all those, while the Lerp only has two inputs!
