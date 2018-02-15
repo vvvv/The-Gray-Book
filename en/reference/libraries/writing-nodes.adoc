@@ -412,6 +412,8 @@ public class ComPortDefinition : DynamicEnumDefinitionBase<ComPortDefinition>
 }
 ```
 
+In VL you can then access the tag of the selected enum entry using the Tag [Collections.DynamicEnum] node.
+
 The ManualDynamicEnumDefinitionBase can be used if you need to add and remove entries in a VL patch. It comes with nodes like AddEntry, RemoveEntry and Clear:
 
 ```csharp
