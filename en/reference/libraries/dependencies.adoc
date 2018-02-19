@@ -33,6 +33,10 @@ image::../../images/vl-Dependencies-Nuget.png[]
 .Installing a nuget via the commandline.
 image::../../images/vl-Dependencies-ManageNugets-Commandline.png[]
 
+NOTE: After installing a nuget via the commandline it is not yet automatically referenced by the current document! It is now merely available among the Nugets via the Dependencies menu from where it can be added as a reference as shown above.
+
+NOTE: To update to the latest version of a nuget you have already installed, simply run the install command again. Your package directory can contain multiple versions of the same nuget and vl will always use the newest. Older versions have to be removed manually if no longer needed.
+
 === Missing Nugets
 If a nuget that is referenced by a document cannot be found,  it will be listed in red in the Dependencies menu. In such a case a rightclick on a red entry allows you to:
 
