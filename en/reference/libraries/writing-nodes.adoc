@@ -435,16 +435,16 @@ public class MyEnumDefinition : ManualDynamicEnumDefinitionBase<MyEnumDefinition
 
 NOTE: For the `Observable` type you need to install the 'System.Reactive' nuget.
 
-===== 3. Specify a default value
+===== 3. Introduce the enum to VL
 
-Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it. 
+Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want, is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it. 
 
-For this to happen we have to specify a default constructor for `MyEnum` and this can only be done using a Typeforward in VL:
+For this to happen we have to introduce the enum to VL which has to be done using a Typeforward:
 
 . In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (kbd:[Ctrl+Shift+J]).
-. Unfolding it you should see the 'CreateDefault' operation which you can drag-drop onto the document canvas. The name 'CreateDefault' will hint the type-system to use this operation to initialize the type, whenever it encounters the type `MyEnum`.
+. Unfolding it you should see the 'MyEnum' type which you can drag-drop onto the document patch. This makes the enum available for the VL type system and allows it to initialize the type, whenever it encounters the type `MyEnum`.
 
-.Specifying a default constructor for `MyEnum`.
+.Creating a TypeForward for `MyEnum`.
 image::../../images/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png[]
 
 Now you will see a valid instance in any pin that uses `MyEnum` and you can create an IOBox to control it.
