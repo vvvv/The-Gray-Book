@@ -1,4 +1,6 @@
 :experimental:
+:figure-caption!:
+
 = VL Templates
 
 When creating a VL node from vvvv you have the choice between two available templates for cloning them via kbd:[Ctrl] + Leftclick
