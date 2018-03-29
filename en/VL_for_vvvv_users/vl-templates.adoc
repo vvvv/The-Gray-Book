@@ -22,7 +22,7 @@ and either:
 - a ProcessDefinition with ProcessNode enabled
 
 .Preparing a vl process for use as a node in vvvv
-image:../../images/ProcessNode.png[]
+image:../images/ProcessNode.png[]
 
 
 
