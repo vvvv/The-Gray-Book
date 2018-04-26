@@ -14,10 +14,10 @@ When you need to send data-structures from one instance of your application to a
 
 In this case you can use one of the runtime serializers provided that can serialize most datatypes directly without the need for building an extra data-structure for serialization as in the example above. While this is quick and easy, it comes at the cost of not having any control over the format and thus may have some overhead in the formats size.
 
-- Serialize (JSON) [Runtime.Serialization] -> Deserialize (JSON) [Runtime.Serialization]
-- Serialize (BSON) [Runtime.Serialization] -> Deserialize (BSON) [Runtime.Serialization]
-- Serialize (Binary) [Runtime.Serialization] -> Deserialize (Binary) [Runtime.Serialization]
-- Serialize (XML) [Runtime.Serialization] -> Deserialize (XML) [Runtime.Serialization]
+- Serialize (JSON) [System.Serialization] -> Deserialize (JSON) [System.Serialization]
+- Serialize (BSON) [System.Serialization] -> Deserialize (BSON) [System.Serialization]
+- Serialize (Binary) [System.Serialization] -> Deserialize (Binary) [System.Serialization]
+- Serialize (XML) [System.Serialization] -> Deserialize (XML) [System.Serialization]
 
 **image: example MyType automatically serialized and deserialized**
 
