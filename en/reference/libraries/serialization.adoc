@@ -25,6 +25,9 @@ The following nodes can be used:
 
 In case you want to learn more about the inner workings of those nodes, check the documentation of the link:https://mbraceproject.github.io/FsPickler/[FSPickler] library on which they are based on. 
 
+.NOTE
+Deserializing JSON or XML that was not generated with the corresponding Serialize nodes will fail, if the individual attributes are not ordered alphabetically! This is a peculiarity of FsPickler and we'll therefore probably have to replace it at some point. Meanwhile you may want to have a look at using nodes from the link:https://www.newtonsoft.com/json[Json.NET] library for such cases.
+
 == Manual
 When you're saving the state of a program to disk, you may want think about different versions of your file-format because the data-structure you're saving may evolve over time and you may still want your application to be able to load files saved with earlier versions.
 
