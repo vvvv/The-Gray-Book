@@ -35,3 +35,6 @@ But beware of two differences:
 
 * While on the InputMorph the first input is the morph factor ("Switch" pin), the respective "Scalar" input on the Lerp node is its rightmost!
 * The InputMorph can have any number of inputs and morph between all those, while the Lerp only has two inputs!
+
+== Quaternions
+There is one difference to take care of: The multiplication order is inverted. VL uses the textbook convention of the quaternion multiplication whereas vvvv is using the DirectX implementation which deviates from the official convention so that quaternions behave in the same way as rotation matrices. But most 3D engines nowadays use the textbook convention and we comply in order to make it easier to read foreign documentation/code that also uses quaternions.
