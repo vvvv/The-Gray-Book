@@ -12,7 +12,22 @@ When assembling the VL.CoreLib we took a few curatorial decisions that may confu
 
 |IEnumerable
 |Sequence
+
+|IReadOnlyList
+|List
+
+|ImmutableDictionary
+|Dictionary
+
+|IDisposable
+|Disposable
+
+|Dispose
+|Destroy
 |===
+
+
+
 
 ## Language Features
 If you're familiar with programming C#, you'll mostly find yourself around with VL. Here are a few things things that will be new to you though:
