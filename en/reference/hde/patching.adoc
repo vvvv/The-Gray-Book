@@ -40,6 +40,8 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 
 [cols="1,1", options="header"] 
 |===
+|Description
+|Action
 
 |Pan the patch vertically
 |Mousewheel
