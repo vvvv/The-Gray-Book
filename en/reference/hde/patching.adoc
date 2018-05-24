@@ -1,7 +1,7 @@
 = Patching
 :experimental:
 
-NOTE: Middleclick alternative: kbd:[ALT] + leftclick
+NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
 
 [cols="1,1", options="header"] 
 |===
@@ -115,11 +115,30 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |kbd:[Ctrl + Arrows]
 |===
 
+=== Pads
+[cols="1,1", options="header"] 
+|===
+|Description
+|Action
+
+|Create via Nodebrowser
+|double leftclick in patch, type name of pad, choose _Pad_ 
+
+|Create while linking
+|Finish with kbd:[Shift] + leftclick in the patch
+|===
+
 === IOBoxes
 [cols="1,1", options="header"] 
 |===
 |Description
 |Action
+
+|Create via Nodebrowser
+|right doubleclick in the patch
+
+|Create while linking
+|Middleclick (or kbd:[ALT] + leftclick) in the patch
 
 |Reset to default
 |kbd:[ALT] + rightclick
