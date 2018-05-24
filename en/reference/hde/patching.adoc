@@ -169,7 +169,7 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |Action
 
 |Create an IOBox while linking
-|Finish with middleclick (or kbd:[Shift] + leftclick) in the patch
+|Finish with middleclick (or kbd:[Altt] + leftclick) in the patch
 
 |Create an input or output pin while linking
 |Finish with kbd:[Ctrl] + leftclick in the patch
