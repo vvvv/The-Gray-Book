@@ -49,7 +49,7 @@ Nodes that are not yet finished or are proof of concept for a new technology sho
 _Obsolete_ is quite self explanatory, nodes with this aspect are only there to maintain backwards compatibility and should not be used anymore because there is probably newer/better version available. In vvvv this was know as 'Legacy'.
 
 === Adaptive
-You can create an _adaptive_ category anywhere and it will add all node signatures inside it to the adaptive system, so every type can implement such a node. e.g. the adaptive operators +, -, *, /, =, ... are placed in the *Math.Adaptive* category, which makes them show up under Math in the NodeBrowser. 
+You can create an _adaptive_ category anywhere and it will add all node signatures inside it to the adaptive system, so every type can implement such a node. e.g. the adaptive operators +, -, \*, /, =, ... are placed in the *Math.Adaptive* category, which makes them show up under *Math* in the NodeBrowser. 
 
 === Aspects as Version
 Aspects also work as version, if you put any of the keywords into the version of a type or operation VL will pick that up as well. e.g. *GetBytes (Advanced)* or *Transform (Normal Advanced)*.
