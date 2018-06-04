@@ -1,4 +1,4 @@
-Aspects can help a library developer to get a better document structure and have a much cleaner looking NodeBrowser.
+Aspects help a library or project developer to get a better document structure and have a much cleaner looking NodeBrowser.
 
 To add an aspect to a node, you simply put the node into *special categories* created via the Group element in the NodeBrowser. If you create such a category the VL system will pick it up by it's name. It gets removed from the full node category and added as an aspect to all nodes and types anywhere inside it. So for example *MyLibrary.Value.Advanced* or *MyLibrary.Advanced.Value* will simply become *MyLibrary.Value*.
 
@@ -14,7 +14,7 @@ So in other words, these special categories will not show up in the NodeBrowser 
 The NodeBrowser then has buttons to show/hide nodes with certain aspects:
 image:/images/0pk9wLIrxq.gif[alt=""]
 
-As of writing this blog post we have the following keywords for categories that get converted into an aspect:
+VL has the following keywords for categories that get converted into an aspect:
 
 *Advanced*
 
@@ -25,7 +25,6 @@ As of writing this blog post we have the following keywords for categories that 
 *Obsolete*
 
 *Adaptive*
-
 
 These keywords can appear anywhere in the node path, it doesn't matter whether you create them as top-level categories in your document or as sub category in a data type. They can also be combined in any way to make e.g. advanced adaptive nodes.
 
@@ -49,7 +48,7 @@ Nodes that are not yet finished or are proof of concept for a new technology sho
 _Obsolete_ is quite self explanatory, nodes with this aspect are only there to maintain backwards compatibility and should not be used anymore because there is probably newer/better version available. In vvvv this was know as 'Legacy'.
 
 === Adaptive
-You can create an _adaptive_ category anywhere and it will add all node signatures inside it to the adaptive system, so every type can implement such a node. e.g. the adaptive operators +, -, \*, /, =, ... are placed in the *Math.Adaptive* category, which makes them show up under *Math* in the NodeBrowser. 
+You can create an _adaptive_ category anywhere and it will add all node signatures inside it to the adaptive system, so every type can implement such a node. e.g. the adaptive operators +, -, \*, /, =, ... are placed in the *Math.Adaptive* category, which makes them show up under *Math* in the NodeBrowser.
 
 === Aspects as Version
 Aspects also work as version, if you put any of the keywords into the version of a type or operation VL will pick that up as well. e.g. *GetBytes (Advanced)* or *Transform (Normal Advanced)*.
