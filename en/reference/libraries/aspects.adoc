@@ -52,3 +52,6 @@ You can create an _adaptive_ category anywhere and it will add all node signatur
 
 === Aspects as Version
 Aspects also work as version, if you put any of the keywords into the version of a type or operation VL will pick that up as well. e.g. *GetBytes (Advanced)* or *Transform (Normal Advanced)*.
+
+=== NodeBrowser Defaults
+The default setting for the filter buttons for Advanced, Experimental and External can be adjusted in the settings.xml file. If you are working a lot with .dlls for example, you probably want to enable the 'External' button by default.
