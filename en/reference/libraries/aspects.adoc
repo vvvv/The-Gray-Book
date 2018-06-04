@@ -2,17 +2,17 @@ Aspects can help a library developer to get a better document structure and have
 
 To add an aspect to a node, you simply put the node into *special categories* created via the Group element in the NodeBrowser. If you create such a category the VL system will pick it up by it's name. It gets removed from the full node category and added as an aspect to all nodes and types anywhere inside it. So for example *MyLibrary.Value.Advanced* or *MyLibrary.Advanced.Value* will simply become *MyLibrary.Value*.
 
-image:/assets/special _cat.PNG[alt=""]
-image:/assets/special _cat_inside.PNG[alt=""]
+image:/images/special _cat.PNG[alt=""]
+image:/images/special _cat_inside.PNG[alt=""]
 
 The tooltip then adds the aspect with a '-' behind the node or type name like this:
 
-image:/assets/aspect_tooltip.PNG[alt=""]
+image:/images/aspect_tooltip.PNG[alt=""]
 
 So in other words, these special categories will not show up in the NodeBrowser but rather inform the NodeBrowser on how to handle the visibility of the nodes in such a special category. Pretty much like a filter on the node list.
 
 The NodeBrowser then has buttons to show/hide nodes with certain aspects:
-image:/assets/0pk9wLIrxq.gif[alt=""]
+image:/images/0pk9wLIrxq.gif[alt=""]
 
 As of writing this blog post we have the following keywords for categories that get converted into an aspect:
 
