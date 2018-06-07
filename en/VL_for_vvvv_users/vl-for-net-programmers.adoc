@@ -3,31 +3,11 @@ VL is a visual programming language for the link:https://en.wikipedia.org/wiki/.
 With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document. The VL.CoreLib is built on top of link:https://docs.microsoft.com/en-us/dotnet/standard/net-standard[.NET Standard].
 
 ## Renamings
-When assembling the VL.CoreLib we took a few curatorial decisions that may confuse .NET developers, so here we want to give you an overview of some renamings we did:
+In general we try to do as little renaming as possible when importing data types. But for collections we took the liberty to do the following renamings from the original ones:
 
-[cols="1,1", options="header"] 
-|===
-|Original Name 
-|VL Name
-
-|IEnumerable
-|Sequence
-
-|IReadOnlyList
-|List
-
-|ImmutableDictionary
-|Dictionary
-
-|IDisposable
-|Disposable
-
-|Dispose
-|Destroy
-|===
-
-
-
+* All immutable .NET collections drop the *Immutable* pre-fix since it's the default in VL
+* All mutable .NET collections get a *Mutable* pre-fix
+* IEnumerable is called Sequence
 
 ## Language Features
 If you're familiar with programming C#, you'll mostly find yourself around with VL. Here are a few things things that will be new to you though:
