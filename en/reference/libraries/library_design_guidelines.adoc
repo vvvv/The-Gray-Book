@@ -140,8 +140,8 @@ In order to keep the number of datatypes a user typically has to deal with at a 
 
 * Boolean
 * Byte
-* Integer32/64
-* Float32/64
+* Integer32
+* Float32
 * Vector2/3/4
 * Matrix
 * Char
@@ -216,7 +216,7 @@ If you are dealing with asynchronous datasources - async await, task, events - a
 == Resource Providers
 Many thirdparty libraries we can use rely on unmanaged resources under the hood which requires the manual handling of their disposal when they are no longer needed. An example for such a resource type would be the Bitmap or usually any type that gives you access to a physical device. Forgetting to dispose such a resource usually quickly lead to errors. 
 
-Taking care of the disposal is not a big deal though as long as you only need access to such resources within on operation. Simply use Destroy [IDisposable] to free them when no longer needed. 
+Taking care of the disposal is not a big deal though as long as you only need access to such resources within on operation. Simply use Dispose [IDisposable] to free them when no longer needed. 
 
 Only when resouces need to be saved in fields for being accessed over time and thus they are leaving the scope of where they’ve been created things become more tricky.
 
