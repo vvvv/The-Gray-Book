@@ -42,7 +42,7 @@
 *** link:reference/vl/nodes.adoc[Nodes]
 *** link:reference/vl/links.adoc[Links]
 *** link:reference/vl/properties.adoc[Properties]
-*** link:reference/vl/groups.adoc[Groups]
+*** link:reference/vl/groups.adoc[Groups and Categories]
 *** link:reference/vl/loops.adoc[Loops]
 *** link:reference/vl/delegates.adoc[Delegates]
 *** link:reference/vl/generics.adoc[Generics]
