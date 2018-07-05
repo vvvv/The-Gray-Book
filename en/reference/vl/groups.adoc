@@ -8,7 +8,7 @@ VL 3 structural patches that help you structure your documents:
 Group patches simply allow you to create more space in a document by opening a new canvas. The groups name is merely used for human readability, vl doesn't care about it at all. Create a group by typing "group" in the NodeBrowser.
 
 image:/images/GroupsAndCategories/02_GroupInside.PNG[alt=""]
-image:/images/GroupsAndCategories/01_GroupOutside.PNG[alt=""]
+image:/images/01_GroupOutside.PNG[alt=""]
 
 
 *Image:The VL.CoreLib organize in groups*
