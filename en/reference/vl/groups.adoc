@@ -42,9 +42,9 @@ You can easily convert a group patch into a category patch and vice versa by the
 .Converting a group into a category.
 image::../../images/GroupsAndCategories/08_ChangePatchType.gif[]
 
-== Setting Categories on Node-Definitions
+== Setting Categories on Definitions
 As if the above didn't offer enough options already there is one more way to specify a category for an operation or a datatype definition:
 
-.Setting a Category on an datatype or operation-definition.
+.Setting a Category on an datatype or operation definition.
 image::../../images/GroupsAndCategories/09_SetCategoryOnDef.gif[]
 
