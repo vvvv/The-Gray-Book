@@ -1,11 +1,11 @@
-VL 3 structural patches that help you structure your documents:
+VL has 3 patch types that help you structure your documents:
 
 * Group
 * Category
 * FullCategory
 
 == Group
-Group patches simply allow you to create more space in a document by opening a new canvas. The groups name is merely used for human readability, vl doesn't care about it at all. Create a group by typing "group" in the NodeBrowser.
+Group patches simply allow you to create more space in a document by opening a new canvas. The groups name is merely used for human readability, vl doesn't care about it at all. Create a group by typing "group" in the NodeBrowser. Groups can be nested.
 
 .Inside a group patch.
 image::../../images/GroupsAndCategories/02_GroupInside.PNG[]
@@ -13,17 +13,38 @@ image::../../images/GroupsAndCategories/02_GroupInside.PNG[]
 .Group patch from the outside.
 image::../../images/GroupsAndCategories/01_GroupOutside.PNG[]
 
+== Category
+A Category patch looks quite similar to the group, only its name has a meaning: The name appends itself to the category of its parent patch. That way you can build up any category hierarchy, that you then see in the NodeBrowser. Multiple category levels are allowed with dot notation. e.g. _MyCat1.MyCat2_ etc.
 
-*Image:The VL.CoreLib organize in groups*
+.Inside a category patch.
+image::../../images/GroupsAndCategories/04_CategoryInside.PNG[]
 
-Create a group via the Nodebrowser and give it a name. By default a group opens a new category with its name. Placing operations or datatypes within a group thus automatically sets their category accordingly.
+.Category patch from the outside.
+image::../../images/GroupsAndCategories/03_CategoryOutside.PNG[]
 
-*Image:Name of group spawns new subcategory for all its elements*
+== Full Category
+A Full Category patch is similar to the Category patch, only that it doesn't add its category to the parent. By that you can place nodes in any category, regardless of the parent patch. It's considered bad practice to do that, but is useful to add nodes to an existing category like Collections.Spread, for example. Multiple category levels are allowed with dot notation. e.g. _MyParentCat.MySubCat_ etc.
 
-Changing a groups name therefore automatically changes the category for all the elements it contains (as long as they don't override it)
+.Inside a category patch.
+image::../../images/GroupsAndCategories/06_FullCategoryInside.PNG[]
 
-In the patch tabs group patches can be recognized by their icon.
+.Category patch from the outside.
+image::../../images/GroupsAndCategories/05_FullCategoryOutside.PNG[]
 
-*Image:The group 'Foo' among other tabs*
+Each vl document can directly start a category, which you can define in the angular brackets in the top left corner of the document patch.
 
-Groups can be nested.
+."Voo" specified as a documents category.
+image::../../images/GroupsAndCategories/07_DocPatch.png[]
+
+== Changing the Patch Type
+You can easily convert a group patch into a category patch and vice versa by the patch type enum. Note how the label changes and represents the actual category structure:
+
+.Converting a group into a category.
+image::../../images/GroupsAndCategories/08_ChangePatchType.gif[]
+
+== Setting Categories on Node-Definitions
+As if the above didn't offer enough options already there is one more way to specify a category for an operation or a datatype definition:
+
+.Setting a Category on an datatype or operation-definition.
+image::../../images/GroupsAndCategories/09_SetCategoryOnDef.gif[]
+
