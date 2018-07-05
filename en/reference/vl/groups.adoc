@@ -9,6 +9,7 @@ Group patches simply allow you to create more space in a document by opening a n
 
 .Inside a group patch.
 image::../../images/GroupsAndCategories/02_GroupInside.PNG[]
+
 .Group patch from the outside.
 image::../../images/GroupsAndCategories/01_GroupOutside.PNG[]
 
