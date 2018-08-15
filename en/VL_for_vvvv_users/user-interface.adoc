@@ -19,3 +19,6 @@ In VL all open patches are docked by default. A session of open tabs cannot be s
 === Open a patch
 Nodes that have a little right-pointing arrow symbol can be entered with a middleclick or rightclick -> Open.
 
+=== Patching
+Removing a link to a pin in vvvv would copy the current value into the pin. This is not happening in VL. 
+
