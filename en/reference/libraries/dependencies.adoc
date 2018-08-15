@@ -53,6 +53,7 @@ Some nugets are shipping with or depending on unmanaged/native .dlls which canno
 
 ----
 SET PATH=%PATH%;c:\path\to\nugets\nativelibs
+vvvv.exe
 ----
 
 == Files
