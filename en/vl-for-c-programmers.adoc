@@ -130,7 +130,7 @@ Called _Integer64_ in vl, part of category _Primitives_.
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
 === namespace
-The concept of _namespaces_ is called link:reference/vl/groups.html#_category[Category] in vl.
+The concept of a _namespace_ is called link:reference/vl/groups.html#_category[Category] in vl.
 
 === new
 
