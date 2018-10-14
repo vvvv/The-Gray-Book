@@ -1,0 +1,281 @@
+= VL for C# Programmers
+
+CAUTION: Work in Progress...
+
+== C# Keywords
+
+=== abstract
+About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract[_abstract_ in C#]
+
+[source,csharp]
+----
+abstract class Foo
+{
+  abstract public int Bar();
+}
+----
+
+vl does not support class inheritance and therefore also not the concept that comes with this keyword.
+
+=== as
+About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/as[_as_ in C#]
+[source,csharp]
+----
+object foo = 1;
+var foo = foo as int;
+----
+
+Use the *CastAs* node.
+
+=== base
+About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base[_base_ in C#]
+
+vl does not support class inheritance and therefore also not the concept that comes with this keyword.
+
+=== break
+About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/break[_break_ in C#]
+
+[source,csharp]
+----
+for (int i = 0; i < 10; i++)
+{
+  if (i % 2 == 0)
+    break;
+  Console.Beep();
+}
+----
+
+See link:reference/vl/loops.html#_break[Break Output] for how to use a _Break_ output, to break out of a loop in vl:
+
+=== case https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/case[in C#]
+See xref:_switch[]
+
+=== catch
+See xref:_try[]
+
+=== checked
+About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/checked[_checked_ in C#]
+
+CAUTION: TODO?
+
+=== class
+About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class[_class_ in C#]
+
+See *link*
+
+=== const
+
+=== continue
+
+=== decimal
+
+=== default
+
+=== delegate
+See *link*
+
+=== do
+See xref:_while[]
+
+=== double
+Called _Float64_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== else
+See xref:_if[]
+
+=== enum
+
+=== event
+
+=== explicit
+
+=== extern
+
+=== finally
+See xref:_try[]
+
+=== fixed
+
+=== float
+Called _Float32_ in vl, part of category _Primitives_.
+
+=== for
+
+=== foreach
+
+=== goto
+
+=== if
+
+=== implicit
+
+=== in
+
+=== int
+Called _Integer32_ in vl, part of category _Primitives_.
+
+=== interface
+
+=== internal
+
+=== is
+
+=== lock
+
+=== long
+Called _Integer64_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== namespace
+The concept of _namespaces_ is called _Categories_ in vl.
+
+=== new
+
+=== null
+
+=== operator
+
+=== out
+
+=== override
+
+=== params
+
+=== private
+
+=== protected
+
+=== public
+
+=== readonly
+
+=== ref
+
+=== return
+
+=== sbyte
+Called _Integer8_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== sealed
+
+=== short
+Called _Integer16_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== sizeof
+
+=== stackalloc
+
+=== static
+
+=== struct
+
+=== switch
+
+=== this
+
+=== throw
+See xref:_try[]
+
+=== try
+
+=== typeof
+
+=== uint
+Called _Integer32 (Unsigned)_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== ulong
+Called _Integer64 (Unsigned)_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== unchecked
+
+=== unsafe
+
+=== ushort
+Called _Integer16 (Unsigned)_ in vl, part of category _Primitives_.
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
+
+=== using
+
+=== virtual
+
+=== void
+
+=== volatile
+
+=== while
+
+== Contextual Keywords
+
+=== add
+
+=== alias
+
+=== async/await
+
+=== by
+
+=== descending
+
+=== dynamic
+
+=== equals
+
+=== from
+
+=== get
+
+=== global
+
+=== group
+
+=== into
+
+=== join
+
+=== let
+
+=== nameof
+
+=== on
+
+=== orderby
+
+=== partial
+
+=== remove
+
+=== select
+
+=== set
+
+=== value
+
+=== var
+
+=== when
+
+=== where
+
+=== yield
+
+== Concepts
+
+=== Variables
+
+=== Lambda
+
+=== Observable
+
+=== Task
