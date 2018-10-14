@@ -61,7 +61,7 @@ CAUTION: TODO?
 === class
 About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class[_class_ in C#]
 
-See *link*
+See link:reference/vl/patches.html#_datatype_patch[Datatype Patch].
 
 === const
 
@@ -75,7 +75,7 @@ See *link*
 See link:reference/vl/delegates.html[Delegates].
 
 === do
-See xref:_while[]
+See xref:_switch[]
 
 === double
 Called _Float64_ in vl, part of category _Primitives_.
@@ -88,6 +88,8 @@ See xref:_if[]
 === enum
 
 === event
+
+See link:reference/libraries/reactive.html[Reactive].
 
 === explicit
 
@@ -102,8 +104,10 @@ See xref:_try[]
 Called _Float32_ in vl, part of category _Primitives_.
 
 === for
+See link:reference/vl/loops.html[Loops].
 
 === foreach
+See link:reference/vl/loops.html[Loops].
 
 === goto
 
@@ -184,6 +188,7 @@ NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 See xref:_try[]
 
 === try
+NOTE: Only showing in the nodebrowser, if the _Experimental_ aspect is activated.
 
 === typeof
 
@@ -215,6 +220,7 @@ NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 === volatile
 
 === while
+See link:reference/vl/loops.html#_while[Loops].
 
 == Contextual Keywords
 
@@ -277,5 +283,6 @@ NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 === Lambda
 
 === Observable
+See link:reference/libraries/reactive.html[Reactive].
 
 === Task
