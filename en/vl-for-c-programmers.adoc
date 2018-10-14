@@ -45,7 +45,7 @@ for (int i = 0; i < 10; i++)
 }
 ----
 
-See link:reference/vl/loops.html#special_pins[Special Loop Pins] for how to use a _Break_ output, to break out of a loop in vl:
+See link:reference/vl/loops.html#_special_pins[Special Loop Pins] for how to use a _Break_ output, to break out of a loop in vl:
 
 === case https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/case[in C#]
 See xref:_switch[]
