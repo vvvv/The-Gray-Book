@@ -1,12 +1,13 @@
-= VL for C# Programmers
+CAUTION: this page is work in progress
 
-CAUTION: Work in Progress...
+:not-supported: This keyword does not have an equivalent in vl. If you find it necessary to use its functionality, you can still write C# code that can be used in vl, see link:/reference/libraries/writing-nodes.adoc[Writing Nodes in C#].
+:no-inheritance: VL does not support class inheritance and therefore also not the concept that comes with this keyword.
+
+= VL for C# Programmers
 
 == C# Keywords
 
-=== abstract
-About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract[_abstract_ in C#]
-
+=== abstract image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract"]
 [source,csharp]
 ----
 abstract class Foo
@@ -14,11 +15,9 @@ abstract class Foo
   abstract public int Bar();
 }
 ----
+{no-inheritance}
 
-vl does not support class inheritance and therefore also not the concept that comes with this keyword.
-
-=== as
-About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/as[_as_ in C#]
+=== as image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/as"]
 [source,csharp]
 ----
 object foo = 1;
@@ -27,14 +26,10 @@ var foo = foo as int;
 
 Use the *CastAs* node.
 
-=== base
-About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base[_base_ in C#]
+=== base image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base"]
+{no-inheritance}
 
-vl does not support class inheritance and therefore also not the concept that comes with this keyword.
-
-=== break
-About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/break[_break_ in C#]
-
+=== break image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/break"]
 [source,csharp]
 ----
 for (int i = 0; i < 10; i++)
@@ -45,182 +40,199 @@ for (int i = 0; i < 10; i++)
 }
 ----
 
-See link:reference/vl/loops.html#_special_pins[Special Loop Pins] for how to use a _Break_ output, to break out of a loop in vl.
+See link:reference/vl/loops.html#\_special_pins[Special Loop Pins] for how to use a _Break_ output, to break out of a loop in vl.
 
-=== case https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/case[in C#]
-See xref:_switch[]
+=== case image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/case"]
+See xref:_switch[switch]
 
-=== catch
-See xref:_try[]
+=== catch image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/catch"]
+See xref:_try[try]
 
-=== checked
-About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/checked[_checked_ in C#]
+=== checked image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/checked"]
+{not-supported}
 
-CAUTION: TODO?
-
-=== class
-About https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class[_class_ in C#]
-
+=== class image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class"]
 See link:reference/vl/patches.html#_datatype_patch[Datatype Patch].
 
-=== const
+=== const image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const"]
+{not-supported}
 
-=== continue
+=== continue image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/continue"]
+{not-supported}
 
-=== decimal
+=== decimal image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/decimal"]
 
-=== default
+=== default image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/default"]
+See xref:_switch[switch]
 
-=== delegate
+=== delegate image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/delegate"]
 See link:reference/vl/delegates.html[Delegates].
 
-=== do
-See xref:_switch[]
+=== do image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/do"]
+See xref:_while[while]
 
-=== double
+=== double image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/double"]
 Called _Float64_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== else
-See xref:_if[]
+=== else image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/else"]
+See xref:_if[if]
 
-=== enum
+=== enum image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/enum"]
 
-=== event
-
+=== event image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event"]
 See link:reference/libraries/reactive.html[Reactive].
 
-=== explicit
+=== explicit image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/explicit"]
+{not-supported}
 
-=== extern
+=== extern image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern"]
+{not-supported}
 
-=== finally
-See xref:_try[]
+=== finally image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/finally"]
+See xref:_try[try]
 
-=== fixed
+=== fixed image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/fixed"]
+{not-supported}
 
-=== float
+=== float image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/float"]
 Called _Float32_ in vl, part of category _Primitives_.
 
-=== for
+=== for image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for"]
 See link:reference/vl/loops.html[Loops].
 
-=== foreach
+=== foreach image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach"]
 See link:reference/vl/loops.html[Loops].
 
-=== goto
+=== goto image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto"]
+{not-supported}
 
-=== if
+=== if image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if"]
+See link:reference/vl/conditions.html[Conditions].
 
-=== implicit
+=== implicit image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/implicit"]
+{not-supported}
 
-=== in
+=== in image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in"]
+{not-supported}
 
-=== int
+=== int image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int"]
 Called _Integer32_ in vl, part of category _Primitives_.
 
-=== interface
+=== interface image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"]
 
-=== internal
+=== internal image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/internal"]
 
-=== is
+=== is image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/is"]
+{not-supported}
 
-=== lock
+=== lock image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock"]
+{not-supported}
 
-=== long
+=== long image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/long"]
 Called _Integer64_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== namespace
+=== namespace image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace"]
 The concept of a _namespace_ is called link:reference/vl/groups.html#_category[Category] in vl.
 
-=== new
+=== new image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new"]
 
-=== null
+=== null image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null"]
 
-=== operator
+=== operator image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/operator"]
 
-=== out
+=== out image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out"]
 
-=== override
+=== override image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override"]
+{no-inheritance}
 
-=== params
+=== params image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/param"]
 
-=== private
+=== private image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private"]
 
-=== protected
+=== protected image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected"]
 
-=== public
+=== public image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/public"]
 
-=== readonly
+=== readonly image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly"]
+{not-supported}
 
-=== ref
+=== ref image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref"]
 
-=== return
+=== return image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/return"]
 
-=== sbyte
+=== sbyte image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sbyte"]
 Called _Integer8_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== sealed
+=== sealed image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed"]
+{not-supported}
 
-=== short
+=== short image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/short"]
 Called _Integer16_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== sizeof
+=== sizeof image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sizeof"]
 
-=== stackalloc
+=== stackalloc image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/stackalloc"]
+{not-supported}
 
-=== static
+=== static image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static"]
+{not-supported}
 
-=== struct
+=== struct image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/struct"]
 
-=== switch
+=== switch image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/switch"]
+VL does not have a _switch_ statement yet. See link:reference/vl/conditions.html[Conditions] for workarounds.
 
-=== this
+=== this image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/this"]
 
-=== throw
-See xref:_try[]
+=== throw image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw"]
 
-=== try
+=== try image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try"]
+Support for exception handling using _try/catch/finally_ is still experimental in VL.
 NOTE: Only showing in the nodebrowser, if the _Experimental_ aspect is activated.
 
-=== typeof
+=== typeof image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/typeof"]
 
-=== uint
+=== uint image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint"]
 Called _Integer32 (Unsigned)_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== ulong
+=== ulong image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ulong"]
 Called _Integer64 (Unsigned)_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== unchecked
+=== unchecked image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unchecked"]
+{not-supported}
 
-=== unsafe
+=== unsafe image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe"]
+{not-supported}
 
-=== ushort
+=== ushort image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ushort"]
 Called _Integer16 (Unsigned)_ in vl, part of category _Primitives_.
 
 NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
-=== using
+=== using image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using"]
 
-=== virtual
+=== virtual image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual"]
+{no-inheritance}
 
-=== void
+=== void image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/void"]
 
-=== volatile
+=== volatile image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/volatile"]
+{not-supported}
 
-=== while
-See link:reference/vl/loops.html#_while[Loops].
+=== while image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while"]
+VL doesn't have a _while_ loop yet. See link:reference/vl/loops.html#_while[Loops] for an easy workaround.
 
 == Contextual Keywords
 
