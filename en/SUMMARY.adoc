@@ -52,7 +52,7 @@
 **** link:reference/libraries/collections.adoc[Collections]
 **** link:reference/libraries/reactive.adoc[Reactive]
 **** link:reference/libraries/serialization.adoc[Serialization]
-**** link:reference/libraries/json.adoc[JSON]
+**** link:reference/libraries/json2.adoc[JSON]
 *** link:reference/libraries/dependencies.adoc[Dependencies]
 *** link:reference/libraries/aspects.adoc[Aspects]
 *** link:reference/libraries/writing-nodes.adoc[Writing Nodes]
