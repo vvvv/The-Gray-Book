@@ -52,6 +52,7 @@
 **** link:reference/libraries/collections.adoc[Collections]
 **** link:reference/libraries/reactive.adoc[Reactive]
 **** link:reference/libraries/serialization.adoc[Serialization]
+**** link:reference/libraries/json.adoc[JSON]
 *** link:reference/libraries/dependencies.adoc[Dependencies]
 *** link:reference/libraries/aspects.adoc[Aspects]
 *** link:reference/libraries/writing-nodes.adoc[Writing Nodes]
@@ -73,5 +74,3 @@
 * link:VL_for_vvvv_users/vl-for-net-programmers.adoc[VL for .NET Programmers]
 * link:vl-for-c-programmers.adoc[VL for CSharp Programmers]
 * link:GLOSSARY.adoc[Glossary]
-
-
