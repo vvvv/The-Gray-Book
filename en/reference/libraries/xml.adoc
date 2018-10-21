@@ -14,13 +14,13 @@ The examples on this page refer to the following XML structure:
     <id>1</id>
     <label>Foo</label>
     <description>A Thing</description>
-    <position>2,4</position>
+    <speed>2.4</speed>
   </entry>
   <entry visible="false">
     <id>2</id>
     <label>Bar</label>
     <description>Another Thing</description>
-    <position>4,2</position>
+    <speed>4.2</speed>
   </entry>
 </entries>
 ----
