@@ -4,7 +4,7 @@ Instead of operating on a JSON object directly, in VL by default the JSON is con
 
 [NOTE]
 ====
-If in an advanced usecase you find yourself in a situation where this conversion from JSON to XElement is not feasible, you can still operate on JSON directly by referencing a library like https://www.newtonsoft.com/json[JSON.NET], as described in link:using-net-libraries.adoc[Using .NET Libraries].
+If in an advanced use case you find yourself in a situation where this conversion from JSON to XElement is not feasible, you can still operate on JSON directly by referencing a library like https://www.newtonsoft.com/json[JSON.NET], as described in link:using-net-libraries.adoc[Using .NET Libraries].
 ====
 
 == Loading a JSON file
