@@ -1,0 +1,66 @@
+= XML
+
+The datatype for handling XML data in VL is called *XElement*.
+
+In the nodebrowser explore the category *System.XML* to get an overview of all the nodes available for operating on XElements.
+
+The examples on this page refer to the following XML structure:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<entries>
+  <entry visible="true" >
+    <id>1</id>
+    <label>Foo</label>
+    <description>A Thing</description>
+    <position>2,4</position>
+  </entry>
+  <entry visible="false">
+    <id>2</id>
+    <label>Bar</label>
+    <description>Another Thing</description>
+    <position>4,2</position>
+  </entry>
+</entries>
+----
+
+== Extracting data from an XElement using XPath queries
+
+General information about XPath can be found at W3CSchools: https://www.w3schools.com/xml/xml_xpath.asp[XML and XPath]
+
+Each XElement can have:
+
+- a value
+- a list of XAttributes
+- a list of child XElements
+
+Referring to the example above:
+
+- the value of the first "label" element is "Foo"
+- the element "entry" has one attribute with the name "visible". the value of the first entries "visible" attribute is "true"
+- the child elements of the "entry" element are: "id", "label", "description" and "position"
+
+=== Accessing an elements value
+
+To access the value of only the first occurrence of an element, use the *XPathGetValue [System.XML]* node:
+
+.The first XPathGetValue node is grayed out (ie. not in use), because it does not yet have anything connected to its output. The second node has an IOBox connected that is configured to type 'String' which tells the XPathGetValue node to interpret the XElements value as a string
+image::..\..\images\xml-1a41f.png[]
+
+To get the values of all occurrences of an element, use the *XPathGetValues [System.XML]* node:
+
+.XPathGetValues returns the values of all queried elements as spread of whatever type is connected
+image::..\..\images\xml-a7e85.png[]
+
+=== Accessing an elements attributes
+
+To access an attribute of only the first occurrence of an element, use the  *XPathGetAttributeValue [System.XML]* node:
+
+.The first XPathGetAttributeValue node is grayed out (ie. not in use), because it does not yet have anything connected to its output. The second node has an IOBox connected that is configured to type 'Boolean' which tells the XPathGetAttributeValue node to interpret the XElements value as a boolean
+image::..\..\images\xml-cc084.png[]
+
+To get the attributes of all occurrences of an element, use the *XPathGetAttributeValues [System.XML]* node:
+
+.XPathGetAttributeValues returns the values of all queried attributes as spread of whatever type is connected
+image::..\..\images\xml-028d5.png[]
