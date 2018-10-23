@@ -40,7 +40,7 @@ for (int i = 0; i < 10; i++)
 }
 ----
 
-See link:reference/vl/loops.html#\_special_pins[Special Loop Pins] for how to use a _Break_ output, to break out of a loop in vl.
+See link:reference/vl/loops.html#\_special_pins[Special Loop Pins] for how to use a __Break__ output, to break out of a loop in vl.
 
 === case image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/case"]
 See xref:_switch[switch]
@@ -81,8 +81,15 @@ See xref:_if[if]
 
 === enum image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/enum"]
 
+[source,csharp]
+----
+enum Alignment {Left, Middle, Right};
+----
+
+While existing enums can certainly be used in VL, one thing you cannot yet do in VL, is define a custom enum. If you need a custom enum, for now you'll have to define it using C# code. See  link:/reference/libraries/writing-nodes.adoc[Writing Nodes in C#] for how to do this.
+
 === event image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event"]
-See link:reference/libraries/reactive.html[Reactive].
+Instead of events, VL uses a similar concept called __Observables__. See link:reference/libraries/reactive.html[Reactive] for details.
 
 === explicit image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/explicit"]
 {not-supported}
@@ -122,6 +129,8 @@ Called _Integer32_ in vl, part of category _Primitives_.
 
 === interface image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface"]
 
+See link:reference/vl/interfaces.html[Interfaces].
+
 === internal image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/internal"]
 
 === is image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/is"]
@@ -140,7 +149,22 @@ The concept of a _namespace_ is called link:reference/vl/groups.html#_category[C
 
 === new image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new"]
 
+[source,csharp]
+----
+var date = new DateTime(2002, 12, 24);
+----
+
+The new keyword denotes a constructor, meaning the operation that creates a new instance of a object. In VL all constructors of classes and records are called __Create__.
+
+The equivalent of creating an instance of the DateTime class, in VL looks like this:name:
+
+image::..\..\images\vl-for-c-programmers-79579.png[]
+
 === null image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null"]
+
+Part of the category __Primitive.Object__
+
+NOTE: Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
 === operator image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/operator"]
 
@@ -154,6 +178,8 @@ The concept of a _namespace_ is called link:reference/vl/groups.html#_category[C
 === private image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private"]
 
 === protected image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected"]
+
+{no-inheritance}
 
 === public image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/public"]
 
@@ -196,6 +222,7 @@ VL does not have a _switch_ statement yet. See link:reference/vl/conditions.html
 
 === try image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try"]
 Support for exception handling using _try/catch/finally_ is still experimental in VL.
+
 NOTE: Only showing in the nodebrowser, if the _Experimental_ aspect is activated.
 
 === typeof image:images\vl-for-c-programmers-b4959.png[title="View original C# reference for this keyword", link="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/typeof"]
@@ -290,6 +317,14 @@ VL doesn't have a _while_ loop yet. See link:reference/vl/loops.html#_while[Loop
 
 == Concepts
 
+=== Nullable
+When referencing an external library, you may encounter input or output pins of type __Nullable<T>__. To deal with them you need to link:reference/vl/using-net-libraries[reference] the __System.Runtime__ assembly from the GAC.
+
+This gives you access to the nodes HasValue and Value to read from nullable outputs. To set a value to an input that requires a Nullable<T>, it is enough to put a CastAs node in between the value and the nullable input.
+
+NOTE: CastAs only shows up with the __Advanced__ aspect enabled in the nodebrowser.
+
+
 === Variables
 
 === Lambda
@@ -298,3 +333,10 @@ VL doesn't have a _while_ loop yet. See link:reference/vl/loops.html#_while[Loop
 See link:reference/libraries/reactive.html[Reactive].
 
 === Task
+
+=== Enumerator
+When referencing an external library, you may encounter collection types, that do not inherit from Sequence and as such cannot simply be used with VL's ForEach loop.
+
+Most likely those collections will still support an Enumerator. Here is how you can deal with an enumerator in VL:
+
+MoveNext, Current
