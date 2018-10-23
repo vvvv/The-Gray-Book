@@ -142,8 +142,8 @@ In order to keep the number of datatypes a user typically has to deal with at a 
 * Byte
 * Integer32
 * Float32
-* Vector2/3/4
-* Matrix
+* Vector2/3/4 of https://www.nuget.org/packages/SharpDX.Mathematics/[SharpDX.Mathematics]
+* Matrix of https://www.nuget.org/packages/SharpDX.Mathematics/[SharpDX.Mathematics]
 * Char
 * String
 * Path
