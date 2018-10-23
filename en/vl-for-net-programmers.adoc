@@ -13,7 +13,7 @@ In general we try to do as little renaming as possible when importing data types
 If you're familiar with programming C#, you'll mostly find yourself around with VL. Here are a few things things that will be new to you though:
 
 ### Spreads
-The main collection type in VL is called __Spread__ and its individual entries are called __Slices__. The Spread is an immutable collection with one special feature: If you're calling `GetSlice(Index)` on it, with an index that exceeds its count, instead of an error you get the slice with the index taken module the count.
+The main collection type in VL is called __Spread__ and its individual entries are called __Slices__. The Spread is an immutable collection with one special feature: If you're calling `GetSlice(Index)` on it, with an index that exceeds its count, instead of an error you get the slice with the index taken modulo the count.
 
 E.g. if you have a spread with 5 slice and you're asking for slice 7, you get slice 2.
 
@@ -22,5 +22,3 @@ E.g. if you have a spread with 5 slice and you're asking for slice 7, you get sl
 ### Process Nodes
 
 ### Foreach with Multiple Inputs
-
-

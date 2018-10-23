@@ -72,6 +72,6 @@
 ** link:VL_for_vvvv_users/evaluation.adoc[Evaluation]
 ** link:VL_for_vvvv_users/nodes.adoc[Nodes]
 ** link:VL_for_vvvv_users/vl-templates.adoc[VL Templates]
-* link:VL_for_vvvv_users/vl-for-net-programmers.adoc[VL for .NET Programmers]
+* link:vl-for-net-programmers.adoc[VL for .NET Programmers]
 * link:vl-for-c-programmers.adoc[VL for CSharp Programmers]
 * link:GLOSSARY.adoc[Glossary]
