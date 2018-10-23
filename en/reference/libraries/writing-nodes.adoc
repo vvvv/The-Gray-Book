@@ -54,6 +54,10 @@ Here are some simple examples and a few more details that will help you create y
  
 For more general considerations also see: link:/reference/libraries/library_design_guidelines.adoc[Library Design Guidelines]
 
+=== Vectors and Matrices
+
+In order to create pins of type Vector/Matrix that are compatible with the ones in VL you have to use the types coming with the https://www.nuget.org/packages/SharpDX.Mathematics/[SharpDX.Mathematics] nuget.
+
 === Pin Names
 
 For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
@@ -451,25 +455,4 @@ Now you will see a valid instance in any pin that uses `MyEnum` and you can crea
 
 .How this looks in VL.
 image::../../images/vl-libraries-writingNodes-DynamicEnums.png[]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
