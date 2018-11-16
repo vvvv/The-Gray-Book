@@ -3,7 +3,7 @@
 
 NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
 
-[cols="1,1", options="header"] 
+[cols="1,1", options="header"]
 |===
 |Description
 |Action
@@ -38,7 +38,7 @@ NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
 
 If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
 
-[cols="1,1", options="header"] 
+[cols="1,1", options="header"]
 |===
 |Description
 |Action
@@ -54,7 +54,7 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |===
 
 === Selecting elements in a patch
-[cols="1,1", options="header"] 
+[cols="1,1", options="header"]
 |===
 |Description
 |Action
@@ -70,7 +70,7 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |===
 
 === Nodes
-[cols="1,1", options="header"] 
+[cols="1,1", options="header"]
 |===
 |Description
 |Action
@@ -116,20 +116,20 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |===
 
 === Pads
-[cols="1,1", options="header"] 
+[cols="1,1", options="header"]
 |===
 |Description
 |Action
 
 |Create via Nodebrowser
-|double leftclick in patch, type name of pad, choose _Pad_ 
+|double leftclick in patch, type name of pad, choose _Pad_
 
 |Create while linking
 |Finish with kbd:[Shift] + leftclick in the patch
 |===
 
 === IOBoxes
-[cols="1,1", options="header"] 
+[cols="1,1", options="header"]
 |===
 |Description
 |Action
@@ -184,13 +184,13 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |===
 
 === Links
-[cols="1, 1", options="header"] 
+[cols="1, 1", options="header"]
 |===
 |Description
 |Action
 
 |Create an IOBox while linking
-|Finish with middleclick (or kbd:[Altt] + leftclick) in the patch
+|Finish with middleclick (or kbd:[Alt] + leftclick) in the patch
 
 |Create an input or output pin while linking
 |Finish with kbd:[Ctrl] + leftclick in the patch
@@ -225,7 +225,7 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |Insert a node into an existing link
 |Double leftclick the link
 
-|Show a links tooltip while hovering it 
+|Show a links tooltip while hovering it
 |kbd:[Ctrl]
 
 |Force a connection to a datahub that would otherwise not accept it
