@@ -9,13 +9,13 @@ VL Documents can reference 3 different types of dependencies:
 * .NET Nugets
 * Files
 
-When a document references a dependency, it means that all public nodes in that dependency will be available in the nodebrowser of the referencing document. 
+When a document references a dependency, it means that all public nodes in that dependency will be available in the nodebrowser of the referencing document.
 
 == Nugets
 link:https://www.nuget.org/[NuGet] is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document.
 
 === VL vs. .NET Nugets
-A VL Nuget is a nuget specifically created for use with vl that won't work for any other link:https://en.wikipedia.org/wiki/List_of_CLI_languages[.NET language]. It is still a valid nuget in the original terms of NuGet but since it contains .vl documents it will not be useable outside of vl. 
+A VL Nuget is a nuget specifically created for use with vl that won't work for any other link:https://en.wikipedia.org/wiki/List_of_CLI_languages[.NET language]. It is still a valid nuget in the original terms of NuGet but since it contains .vl documents it will not be useable outside of vl.
 
 A .NET Nuget on the other hand is more generally targetting any .NET language.
 
@@ -32,6 +32,8 @@ image::../../images/vl-Dependencies-Nuget.png[]
 
 .Installing a nuget via the commandline.
 image::../../images/vl-Dependencies-ManageNugets-Commandline.png[]
+
+NOTE: Some packages may only be available as a "prerelease". To install those, add the commandline argument "-prerelease" when running "nuget install".
 
 NOTE: After installing a nuget via the commandline it is not yet automatically referenced by the current document! It is now merely available among the Nugets via the Dependencies menu from where it can be added as a reference as shown above.
 
@@ -57,12 +59,12 @@ vvvv.exe
 ----
 
 == Files
-A vl document can reference other .vl documents and managed .dll files. 
+A vl document can reference other .vl documents and managed .dll files.
 
 === From Disk
 Here are 3 ways to reference local files:
 
-* Drop a .vl or .dll file onto a patch 
+* Drop a .vl or .dll file onto a patch
 * Press kbd:[Ctrl + R] to select files via a file browser
 * Via menu:Document[Dependencies > Files > Add Existing...]
 
@@ -71,7 +73,7 @@ image::../../images/vl-Dependencies-File.png[]
 
 ==== Missing Files
 Files that are showing up in red cannot be found on disk. You can Rightlcick to remove their reference. Note that you can also rightclick to select multiple files in a row and then apply "Remove" to all of them at once.
- 
+
 .Remove files.
 image::../../images/vl-Dependencies-File-Remove.png[]
 
@@ -86,4 +88,3 @@ In the dialog you need to double-click entries that you want to add as reference
 
 .Use kbd:[Ctrl + F] in this window to find libraries in the GAC.
 image::../../images/vl-libraries-using-GACWindow.png[]
-
