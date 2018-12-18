@@ -24,7 +24,7 @@ NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
 |Rightdrag in an empty area
 
 |Zoom the patch
-|Mousewheel
+|Mousewheel or kbd:[Ctrl + +] & kbd:[Ctrl + -]
 
 |Reset pan and zoom of the patch
 |kbd:[Ctrl + 0]
