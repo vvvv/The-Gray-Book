@@ -41,7 +41,7 @@ namespace MyCustomNodes
 }
 ```
 
-This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/using-net-librariesnodes.adoc[Using .NET Libraries] to use those operations as nodes in VL.
+This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/using-net-libraries.adoc[Using .NET Libraries] to use those operations as nodes in VL.
 
 .Resulting Node in VL.
 image::../../images/vl-libraries-writingNodes-MyAdditionNode.png[]
