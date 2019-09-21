@@ -24,7 +24,7 @@ This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 .Empty generated Class1.cs.
 image::../../images/vl-libraries-writingNodes-vs2017-emptyClass.PNG[]
 
-The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly. 
+The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
 
 Now *any public static operation and every member operation of a public class you write will turn into a VL node*. The most simple node you can write is therefore:
 
@@ -32,7 +32,7 @@ Now *any public static operation and every member operation of a public class yo
 namespace MyCustomNodes
 {
     public static class MyStaticNodes
-    { 
+    {
         public static float MyAddition(float input, float input2)
         {
             return input + input2;
@@ -41,7 +41,7 @@ namespace MyCustomNodes
 }
 ```
 
-This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/importing_nodes.adoc[Importing Nodes] to use those operations as nodes in VL.
+This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with link:/reference/libraries/using-net-librariesnodes.adoc[Using .NET Libraries] to use those operations as nodes in VL.
 
 .Resulting Node in VL.
 image::../../images/vl-libraries-writingNodes-MyAdditionNode.png[]
@@ -51,7 +51,7 @@ image::../../images/vl-libraries-writingNodes-MyAdditionNode.png[]
 
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
- 
+
 For more general considerations also see: link:/reference/libraries/library_design_guidelines.adoc[Library Design Guidelines]
 
 === Vectors and Matrices
@@ -128,7 +128,7 @@ Choosing the respective node in the NodeBrowser will then ask you for a further 
 You can use custom c# enums as input or output types to operations:
 ```csharp
 public enum DemoEnum { Foo, Bar };
-    
+
 public static string StaticEnumDemo(DemoEnum e)
 {
     return e.ToString();
@@ -180,7 +180,7 @@ Use XML documentation in C# to provide some information about your nodes:
 - Remarks: Some additional remarks, like usage instructions, warnings,.. can be multi-line
 - Param name: Short info for each Input
 - Returns: Short info about the result of the node
-      
+
 ```csharp
 ///<summary>Multiplies input by two</summary>
 ///<remarks>Some additional remarks</remarks>
@@ -215,7 +215,7 @@ image::../../images/vl-libraries-writingNodes-RefParam.png[]
 
 === Datatypes
 
-Any datatype that you define as class or strcut in c# can be used in VL: 
+Any datatype that you define as class or strcut in c# can be used in VL:
 
 - Any constructor will be available as a Create node
 - Any get-property will show up as a node returning the properties value
@@ -248,7 +248,7 @@ image::../../images/vl-libraries-writingNodes-Datatypes.png[]
 
 === Events/Observables
 
-VL translates .net events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[.NET Core Event Pattern] to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern. 
+VL translates .net events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[.NET Core Event Pattern] to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern.
 
 Here is an example of c# events without and with event arguments:
 
@@ -293,7 +293,7 @@ In VL those events are available as nodes of the same name that return an `Obser
 .How this looks in VL: a) Member Operations, b) ValueChanged event without any arguments, c) ValueExceeded event with an argument.
 image::../../images/vl-libraries-writingNodes-Observables.png[]
 
-* In case your event does not have any arguments _(section 'b' on the image above)_, but simply sends a bang when something happens, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event. 
+* In case your event does not have any arguments _(section 'b' on the image above)_, but simply sends a bang when something happens, use the `On Data` output of the HoldLatest [Reactive] node to be informed of the event.
 
 * If your event does have arguments _(section 'c' on the image above)_ you'll receive an `Observable<EventPattern<MyGenericEventArgs<>>>` which you'll have to unpack using the EventArgs [Reactive.EventPattern] node, which is available via the VL.DevLib package. The node then gives you access to the Sender and Value of the EventArgs.
 
@@ -304,7 +304,7 @@ For general information on workig with Observables see the chapter about link:/r
 
 === Dynamic Enums
 
-Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 
+Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime.
 
 Consider a normal enum in c#:
 ```csharp
@@ -324,10 +324,10 @@ public static string EnumDemo(MyEnum e)
 
 Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
 
-- The type needs to implement `IDynamicEnum` 
+- The type needs to implement `IDynamicEnum`
 - The definition needs to implement `IDynamicEnumDefinition`
 
-both of which come with the VL.Core nuget. 
+both of which come with the VL.Core nuget.
 
 NOTE: For now the VL.Core nuget is only available as pre-release package!
 
@@ -343,7 +343,7 @@ Using the above two baseclasses, an implementation of your own dynamic enum coul
 
 ===== 1. Create an enum type
 
-First derive from the `DynamicEnumBase` to create your own enum type. 
+First derive from the `DynamicEnumBase` to create your own enum type.
 
 ```csharp
 [Serializable]
@@ -364,12 +364,12 @@ public class MyEnum: DynamicEnumBase<MyEnum, MyEnumDefinition>
 
 The code above most likely doesn't need many changes for your own implementation except:
 
-- Give it a proper name instead of "MyEnum", something like e.g. "MidiInputDevice". Note the singular in the naming: This type represents one entry in the enumeration. 
+- Give it a proper name instead of "MyEnum", something like e.g. "MidiInputDevice". Note the singular in the naming: This type represents one entry in the enumeration.
 - Note the second type parameter `MyEnumDefinition` which connects your enum to its definition and should similarly be called "MidiInputDeviceDefinition"
 
 ===== 2. Provide available entries
 
-Derive from `DynamicEnumDefinitionBase` to implement the class that provides the available entries of your enum to the system. Here you only have to override two functions: One that can return a list of current enum-entries as strings and another one that tells the system when your enum-entries have changed. 
+Derive from `DynamicEnumDefinitionBase` to implement the class that provides the available entries of your enum to the system. Here you only have to override two functions: One that can return a list of current enum-entries as strings and another one that tells the system when your enum-entries have changed.
 
 ```csharp
 public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
@@ -383,7 +383,7 @@ public class MyEnumDefinition : DynamicEnumDefinitionBase<MyEnumDefinition>
     protected override IObservable<object> GetEntriesChangedObservable()
     {
     }
-    
+
     //optionally disable alphabetic sorting
     protected override bool AutoSortAlphabetically => false; //true is the default
 }
@@ -398,7 +398,7 @@ public class ComPortDefinition : DynamicEnumDefinitionBase<ComPortDefinition>
     {
         return HardwareChangedEvents.HardwareChanged;
     }
-    
+
     protected override IReadOnlyDictionary<string, object> GetEntries()
     {
         Dictionary<string, object> portNames = new Dictionary<string, object>();
@@ -441,7 +441,7 @@ NOTE: For the `Observable` type you need to install the 'System.Reactive' nuget.
 
 ===== 3. Introduce the enum to VL
 
-Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want, is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it. 
+Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want, is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it.
 
 For this to happen we have to introduce the enum to VL which has to be done using a Typeforward:
 
@@ -455,4 +455,3 @@ Now you will see a valid instance in any pin that uses `MyEnum` and you can crea
 
 .How this looks in VL.
 image::../../images/vl-libraries-writingNodes-DynamicEnums.png[]
-
