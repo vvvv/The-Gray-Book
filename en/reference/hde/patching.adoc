@@ -115,6 +115,19 @@ If you prefer to use the mousewheel for panning vertically instead of zooming ch
 |kbd:[Ctrl + Arrows]
 |===
 
+=== Pin Groups
+[cols="1,1", options="header"]
+|===
+|Description
+|Action
+
+|Add Pin
+|kbd:[Ctrl] + kbd:[+]
+
+|Remove Pin
+|kbd:[Ctrl] + kbd:[-]
+
+|===
 === Pads
 [cols="1,1", options="header"]
 |===
