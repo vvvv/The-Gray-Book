@@ -1,8 +1,7 @@
 = Patching
 :experimental:
 
-NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
-
+=== Basics
 [cols="1,1", options="header"]
 |===
 |Description
@@ -17,8 +16,25 @@ NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
 |Create new patch and place node at cursor
 |kbd:[Ctrl + Shift + P]
 
+|General _middleclick_ alternative
+|kbd:[ALT] + leftclick
+
 |Remove Errors (from current level downwards)
 |kbd:[Ctrl + E]
+
+|Navigate back in Tab history
+|kbd:[Ctrl + <]
+
+|Navigate forward in Tab history
+|kbd:[Ctrl + >]
+|===
+
+
+=== Pan & Zoom
+[cols="1,1", options="header"]
+|===
+|Description
+|Action
 
 |Pan the patch
 |Rightdrag in an empty area
@@ -28,20 +44,16 @@ NOTE: General _middleclick_ alternative: kbd:[ALT] + leftclick
 
 |Reset pan and zoom of the patch
 |kbd:[Ctrl + 0]
-
-|Navigate back in Tab history
-|kbd:[Ctrl + <]
-
-|Navigate forward in Tab history
-|kbd:[Ctrl + >]
 |===
 
-If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
-
+=== Alternative Pan & Zoom
 [cols="1,1", options="header"]
 |===
 |Description
 |Action
+
+|If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
+|
 
 |Pan the patch vertically
 |Mousewheel
