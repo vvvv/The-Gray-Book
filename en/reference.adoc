@@ -1,0 +1,7 @@
+# The vvvv Reference Guide
+
+A technical description of the innards of vvvv, structured into 3 parts:
+
+- The Development Environment
+- The Language VL
+- Core Libraries
