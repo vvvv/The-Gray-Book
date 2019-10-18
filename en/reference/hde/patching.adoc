@@ -339,10 +339,10 @@
 |Action
 
 |Create a Frame from Marquee selection
-|Make Marquee selection and press kbd:[Alt]
+|Hold kbd:[Alt] while making a marquee selection
 
 |Screenshot of Marquee selection to clipboard
-|Make Marquee selection and press kbd:[S]
+|Hold kbd:[S] while making a marquee selection
 
 |Surround selected nodes with a frame
 |kbd:[Alt + F]
