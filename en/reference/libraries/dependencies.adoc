@@ -9,7 +9,7 @@ VL Documents can reference 3 different types of dependencies:
 * .NET Nugets
 * Files
 
-When a document references a dependency, it means that all public nodes in that dependency will be available in the nodebrowser of the referencing document.
+When a document references a dependency, it means that all public nodes in that dependency will be available to it via the NodeBrowser.
 
 == Nugets
 link:https://www.nuget.org/[NuGet] is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document.
@@ -33,9 +33,9 @@ image::../../images/vl-Dependencies-Nuget.png[]
 .Installing a nuget via the commandline.
 image::../../images/vl-Dependencies-ManageNugets-Commandline.png[]
 
-NOTE: Some packages may only be available as a "prerelease". To install those, add the commandline argument "-prerelease" when running "nuget install".
+NOTE: Some packages may only be available as a "prerelease". To install those, add the commandline argument "-pre" when running "nuget install".
 
-NOTE: After installing a nuget via the commandline it is not yet automatically referenced by the current document! It is now merely available among the Nugets via the Dependencies menu from where it can be added as a reference as shown above.
+NOTE: After installing a nuget via the commandline it is not yet automatically referenced by the current document! It is now merely available among the Nugets via the Dependencies menu. But if an installed nuget contains any help files, those will already show up in the HelpBrowser.
 
 NOTE: To update to the latest version of a nuget you have already installed, simply run the install command again. Your package directory can contain multiple versions of the same nuget and vl will always use the newest. Older versions have to be removed manually if no longer needed.
 
