@@ -1,20 +1,72 @@
 = Patching
 :experimental:
 
-=== Basics
+=== Quad Menu
 [cols="1,1", options="header"]
 |===
 |Description
 |Action
 
-|Save active document
-|kbd:[Ctrl + S]
+|New Document
+|kbd:[Ctrl + N]
 
-|New patch
+|Open Document
+|kbd:[Ctrl + O]
+
+|Save All Documents
+|kbd:[Alt + Ctrl + S]
+
+|===
+
+=== Document Menu
+[cols="1,1", options="header"]
+|===
+|Description
+|Action
+
+|Open Application Patch
+|kbd:[Alt + A]
+
+|Open Definitions Patch
+|kbd:[Alt + Shift + A]
+
+|New Patch (=Process Node at Cursor)
 |kbd:[Ctrl + P]
 
-|Create new patch and place node at cursor
+|New Process Definition in Definitions
 |kbd:[Ctrl + Shift + P]
+
+|Save Active Document
+|kbd:[Ctrl + S]
+
+|Save Active Document As...
+|kbd:[Ctrl + Shift + S]
+
+|Reload Active Document discarding unsaved changes
+|kbd:[Ctrl + R]
+
+|Close Active Document
+|kbd:[Ctrl + W]
+
+|Show Active Document in Explorer
+|kbd:[Alt + E]
+
+|View Active Document as Text
+|kbd:[Alt + Shift + E]
+
+|Add Existing Dependency
+|kbd:[Control + E]
+
+|Add .NET Framework Assembly
+|kbd:[Control + Shift + E]
+
+|===
+
+=== Basics
+[cols="1,1", options="header"]
+|===
+|Description
+|Action
 
 |General _middleclick_ alternative
 |kbd:[ALT] + leftclick
@@ -27,8 +79,17 @@
 
 |Navigate forward in Tab history
 |kbd:[Ctrl + >]
-|===
 
+|Navigate forward in Tab history
+|kbd:[Ctrl + >]
+
+|Navigate one level Up in application
+|kbd:[Ctrl + ^] (where ^ is the Key below kbd:[ESC])
+
+|Navigate one level Up in definition
+|kbd:[Ctrl + Shift + ^] (where ^ is the Key below kbd:[ESC])
+
+|===
 
 === Pan & Zoom
 [cols="1,1", options="header"]
@@ -120,6 +181,9 @@
 |Decrease count of input pins for nodes like +, Cons, ...
 |kbd:[Ctrl + -]
 
+|Expose Pins
+|kbd:[Ctrl + K]
+
 |Move selected nodes
 |kbd:[Arrows]
 
@@ -140,6 +204,7 @@
 |kbd:[Ctrl] + kbd:[-]
 
 |===
+
 === Pads
 [cols="1,1", options="header"]
 |===
@@ -151,6 +216,12 @@
 
 |Create while linking
 |Finish with kbd:[Shift] + leftclick in the patch
+
+|Bake current type annotation
+|kbd:[Ctrl + T]
+
+|Clear type annotation
+|kbd:[Ctrl + Shift + T]
 |===
 
 === IOBoxes
@@ -258,5 +329,65 @@
 
 |Force to include links in a marquee selection despite nodes or pads are already part of it
 |kbd:[Shift]
+
+|===
+
+=== Frames
+[cols="1, 1", options="header"]
+|===
+|Description
+|Action
+
+|Create a Frame from Marquee selection
+|Make Marquee selection and press kbd:[Alt]
+
+|Screenshot of Marquee selection to clipboard
+|Make Marquee selection and press kbd:[S]
+
+|Surround selected nodes with a frame
+|kbd:[Alt + F]
+
+|Surround selected nodes with a frame in viewspace
+|kbd:[Alt + Shift + F]
+
+|Screenshot of Marquee selection
+|Make Marquee selection and press kbd:[S]
+
+|===
+
+=== Runtime
+[cols="1, 1", options="header"]
+|===
+|Description
+|Action
+
+|Run
+|kbd:[F5]
+
+|Step
+|kbd:[F6]
+
+|Pause
+|kbd:[F7]
+
+|Stop
+|kbd:[F8]
+
+|===
+
+=== Windows
+[cols="1, 1", options="header"]
+|===
+|Description
+|Action
+
+|Patch Documentation
+|kbd:[Ctrl+M]
+
+|Solution Explorer
+|kbd:[Ctrl+J]
+
+|Help Browser
+|kbd:[F1]
 
 |===
