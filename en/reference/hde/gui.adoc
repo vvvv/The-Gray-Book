@@ -1,3 +1,4 @@
 = The Development Environment
 
-image::..\..\images\gui-781b5.png[vvvv - distraction-free development since 2002]
+.vvvv - distraction-free development since 2002.
+image::..\..\images\gui-781b5.png[]
