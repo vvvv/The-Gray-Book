@@ -1,24 +1,17 @@
-= VL - Visual Programming
+= vvvv - Visual Programming for .NET
 
-An introduction to software development using VL.
+vvvv:
 
-VL is: 
+* a visual live programming environment for VL
+* uses state hot-reload to modify the running program
 
-* a statically typed visual programming language
-* a development environment for the same
-* a node and data type library
+VL:
 
-VL can
+* is a visual programming language for .NET
+* combines aspects of dataflow and object oriented programming
+* is statically typed
 
-* compile and run code dynamically
-
-VL is available as
-
-* a package for vvvv
-
-VL is targeted at developers who 
+vvvv is targeted at developers who
 
 * prefer visual over textual code
 * prefer interactive prototyping programming over edit/compile/fix error/compile/run
-* are looking for data flow, object oriented and functional style programming metaphors 
-
