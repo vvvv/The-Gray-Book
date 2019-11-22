@@ -60,7 +60,9 @@
 *** link:reference/libraries/using-net-libraries.adoc[Using .NET Libraries]
 *** link:reference/libraries/patching-libraries.adoc[Forwarding .NET Libraries]
 *** link:reference/libraries/library_design_guidelines.adoc[Design Guidelines]
-*** link:reference/libraries/nugets.adoc[Nugets]
+*** link:reference/libraries/contributing.adoc[Contributing to Libraries]
+*** link:reference/libraries/creating.adoc[Creating new Libraries]
+*** link:reference/libraries/publishing.adoc[Publishing NuGets]
 
 
 '''
