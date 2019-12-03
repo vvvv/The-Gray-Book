@@ -1,5 +1,5 @@
 :experimental:
-= Exporting an Application
+= Exporting Applications
 
 vvvv allows you to export a patch into an executable, standalone program. In order to do so, open the Application Exporter via menu:Quad[Export...]
 
@@ -26,4 +26,4 @@ In case the export fails, the console will be opened to show there was an error.
 .The Application Exporter reporting a problem
 image::..\..\images\exporting-8e993.png[]
 
-The error output will at this point already be copied to your clipboard. Please send it to us via forum or chat. 
+The error output will at this point already be copied to your clipboard. Please send it to us via forum or chat.
