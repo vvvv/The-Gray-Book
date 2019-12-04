@@ -16,6 +16,21 @@
 |Save All Documents
 |kbd:[Alt + Ctrl + S]
 
+|Run
+|kbd:[F5]
+
+|Step
+|kbd:[F6]
+
+|Pause
+|kbd:[F7]
+
+|Stop
+|kbd:[F8]
+
+|Export...
+|kbd:[F9]
+
 |===
 
 === Document Menu
