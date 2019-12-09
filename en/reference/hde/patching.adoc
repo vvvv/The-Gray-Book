@@ -104,6 +104,9 @@
 |Navigate one level Up in definition
 |kbd:[Ctrl + Shift + ^] (where ^ is the Key below kbd:[ESC])
 
+|Copy content of tooltip showing an error
+|kbd:[Ctrl + Shift + C]
+
 |===
 
 === Pan & Zoom
