@@ -157,7 +157,7 @@
 |kbd:[Ctrl] + leftclick
 
 |Force to include links in a marquee selection despite nodes or pads are already part of it
-|kbd:[Shift]
+|kbd:[SPACE]
 |===
 
 === Nodes
