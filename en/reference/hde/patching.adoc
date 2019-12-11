@@ -158,6 +158,9 @@
 
 |Force to include links in a marquee selection despite nodes or pads are already part of it
 |kbd:[SPACE]
+
+|Force to only select links when making a marquee selection
+|kbd:[L]
 |===
 
 === Nodes
