@@ -41,6 +41,7 @@
 *** link:reference/vl/patches.adoc[Patches]
 *** link:reference/vl/operations.adoc[Operations]
 *** link:reference/vl/nodes.adoc[Nodes]
+*** link:reference/vl/ioboxes.adoc[IOBoxes]
 *** link:reference/vl/links.adoc[Links]
 *** link:reference/vl/properties.adoc[Properties]
 *** link:reference/vl/groups.adoc[Groups and Categories]
