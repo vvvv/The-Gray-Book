@@ -219,7 +219,7 @@
 |Action
 
 |Add Pin
-|kbd:[Ctrl] + kbd:[+]
+|kbd:[Ctrl + +]
 
 |Remove Pin
 |kbd:[Ctrl] + kbd:[-]
