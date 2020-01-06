@@ -22,7 +22,7 @@ VL has the following keywords for categories that get converted into an aspect:
 
 *Experimental*
 
-*Obsolete*
+*Legacy*
 
 *Adaptive*
 
@@ -40,12 +40,12 @@ With this aspect the library developer can fine grain the node visibility even f
 
 _Internal_ makes nodes and types only available inside the .vl document that defines them. It can be used for all little utils and helpers that wouldn't make sense in a different context and should not be "exposed" by the document when it gets referenced by another document.
 
-=== Experimental and Obsolete
+=== Legacy and Experimental
 These two should be used for past and future nodes.
 
 Nodes that are not yet finished or are proof of concept for a new technology should be placed in the category _Experimental_. These nodes have to be used with care since they might be unstable or will have breaking changes in the future.
 
-_Obsolete_ is quite self explanatory, nodes with this aspect are only there to maintain backwards compatibility and should not be used anymore because there is probably newer/better version available. In vvvv this was know as 'Legacy'.
+_Legacy_ is quite self explanatory, nodes with this aspect are only there to maintain backwards compatibility and should not be used anymore because there is probably newer/better version available. 
 
 === Adaptive
 You can create an _adaptive_ category anywhere and it will add all node signatures inside it to the adaptive system, so every type can implement such a node. e.g. the adaptive operators +, -, \*, /, =, ... are placed in the *Math.Adaptive* category, which makes them show up under *Math* in the NodeBrowser.
