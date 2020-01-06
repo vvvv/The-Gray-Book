@@ -317,6 +317,29 @@ VL doesn't have a _while_ loop yet. See link:reference/vl/loops.html#_while[Loop
 
 == Concepts
 
+== foo++
+How to translate an expression like the following to VL:
+[source,csharp]
+----
+var foo = 1;
+foo++;
+----
+
+First we need to agree that the above is only a shortcut to writing:
+[source,csharp]
+----
+var foo = 1;
+foo = foo + 1;
+----
+
+Then the below patch should be read as: The lower foo pad corresponds to the left side of the assignment (foo =) and the upper pad
+
+.Note how the link from the IOBox to the foo pad is white, meaning it is assigned to the constructor
+image::..\..\images\vl-for-c-programmers-2e149.png[]
+
+.Shortcut for + 1: Use the Inc node
+image::..\..\images\vl-for-c-programmers-23458.png[]
+
 === Nullable
 When referencing an external library, you may encounter input or output pins of type __Nullable<T>__. To deal with them you need to link:reference/vl/using-net-libraries[reference] the __System.Runtime__ assembly from the GAC.
 
