@@ -27,7 +27,9 @@ image::..\..\images\ioboxes-e0989.png[]
 Number IOBoxes work the same for whole (integer32, byte, ...) and real (float32, ...) numbers:
 
 * Doubleclick to enter a value via keyboard
-** You can also enter math formulas like, e.g.: "1/3" that will be immediately be evaluated and fill the IOBox with the result
+
+NOTE: You can also enter math formulas like, e.g.: "1/3" that will be immediately be evaluated and fill the IOBox with the result
+
 * Right-drag up and down to change the value gradually
 ** hold kbd:[SHIFT] while dragging, to divide the step-size by 10
 ** hold kbd:[CTRL] while dragging, to divide the step-size by (another) 10
