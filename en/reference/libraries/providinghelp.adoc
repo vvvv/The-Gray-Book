@@ -1,0 +1,44 @@
+:experimental:
+:figure-caption!:
+
+= Providing Help
+
+Library developers can provide patches demonstrating different aspects of the library.
+
+We distinguish 2 types of patches:
+
+- Overview: Typically a single patch per library giving an overview of the whole set of nodes the library provides
+- HowTo: A series of patches demonstrating how to achieve specific things using certain nodes provided by the library
+
+In order to be picked up by the helpbrowser, those need to be put in the right place and follow the naming convention:
+
+    \help\Topic\Overview.vl
+    \help\Topic\HowTo Do Something.vl
+
+== Help Flags
+A help flag is used to specify which how-to patch should open when a user presses kbd:[F1] on a selected node.
+
+In a how-to patch select the node you want this patch to open for as a help patch and press kbd:[Ctrl + H]. This sets a high-priority help flag. Press a second time to change it to low-priority, press a third time, to clear the help flag again.
+
+.FileReader with a high-priority help flag, SplitToLines with low-priority
+image::..\..\images\helpflags-a2c55.png[]
+
+=== High vs. Low Priority
+When pressing kbd:[F1] on a node, the system will go through all help flags in all how-to patches of a library. If it encounters a high-priority help flag for the given node in a how-to patch, this patch will be displayed as the help patch. Therefore it only makes sense to specify a high-priority help flag once for each node!
+
+.The bubble indicating which node the help patch was opened for
+image::..\..\images\helpflags-7a40e.png[]
+
+After pressing kbd:[F1], when the user decides to also view the Node Info for the node, the help browser will display a list of how-to patches that include the node with a low-priority help flag set. Therefor it makes sense to specify multiple low-priority help flags for the same node in different how-to patches to indicate that those could also be interesting when looking for use-cases of the given node.
+
+=== Help flag indicator
+Since the end-user doesn't need to see the help flags, by default they are invisible when a help patch is opened. You can toggle the help flag indicator to show/hide help flags in this patch.
+
+.The help flag indicator indicating that this how-to patch has help flags set.
+image::..\..\images\helpflags-21aea.png[]
+
+=== Context
+Help flags can only be set on nodes that are defined in the same package as the one the how-to patch belongs to. If you try to set a help flag on a node that is not defined in the same package as the how-to patch you're working on, you'll see the following warning:
+
+.Warning: Help flag cannot be set on this node
+image::..\..\images\helpflags-79980.png[]
