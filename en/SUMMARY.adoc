@@ -34,7 +34,7 @@
 *** link:reference/hde/solution-explorer.adoc[Solution Explorer]
 *** link:reference/hde/documentation.adoc[Documentation Window]
 *** link:reference/hde/patching.adoc[Patching]
-*** link:reference/libraries/findinghelp.adoc[Finding Help]
+*** link:reference/hde/findinghelp.adoc[Finding Help]
 *** link:reference/hde/debugging.adoc[Debugging]
 *** link:reference/hde/settings.adoc[Settings]
 *** link:reference/hde/exporting.adoc[Exporting Applications]
