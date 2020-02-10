@@ -11,7 +11,7 @@ image::../../images/vl-Settings.png[]
 
 After changing any setting simply save the file and go back to the vl editor. Changes are applied immediately, no need to restart!
 
-.Local Settings
+== Local Settings
 You can also provide a local settings file via commandline options when you start up vvvv.exe:
 
     --settings C:\path\to\setings.xml
