@@ -104,9 +104,6 @@
 |Navigate one level Up in definition
 |kbd:[Ctrl + Shift + ^] (where ^ is the Key below kbd:[ESC])
 
-|Copy content of tooltip showing an error
-|kbd:[Ctrl + Shift + C]
-
 |===
 
 === Pan & Zoom
@@ -373,6 +370,23 @@
 
 |Screenshot of Marquee selection
 |Make Marquee selection and press kbd:[S]
+
+|===
+
+=== Tooltips
+[cols="1, 1", options="header"]
+|===
+|Description
+|Action
+
+|Copy content when showing an error
+|kbd:[Ctrl + Shift + C]
+
+|Toggle showing more infos for infos, warnings or errors
+|kbd:[Space]
+
+|Detach from currently inspected instance
+|kbd:[Tab]
 
 |===
 
