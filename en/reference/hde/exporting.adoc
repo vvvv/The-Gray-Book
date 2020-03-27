@@ -31,6 +31,15 @@ image::..\..\images\exporting-1837f.png[]
 
 NOTE: During development a path created like that will be relative to your main .vl document. When exported, it will be relative to the executable.
 
+== Configuring a renderers appearance
+
+Referencing the nuget VL.CoreLib.Windows adds the following nodes:
+
+* SetWindowState and WindowState
+* SetWindowMode
+
+These allow you to configure the renderers caption, controlbox, framing and more.
+
 == Problems
 In case the export fails, the console will be opened to show there was an error.
 
