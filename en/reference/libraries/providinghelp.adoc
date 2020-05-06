@@ -5,16 +5,35 @@
 
 Library developers can provide patches demonstrating different aspects of the library.
 
-We distinguish 2 types of patches:
+We distinguish 4 types of patches:
 
-- Overview: Typically a single patch per library giving an overview of the whole set of nodes the library provides
+- Explanation: Typically a single patch per library giving an overview of the whole set of nodes the library provides
 - HowTo: A series of patches demonstrating how to achieve specific things using certain nodes provided by the library
 
 In order to be picked up by the helpbrowser, those need to be put in the right place and follow the naming convention:
 
-    \help\Topic\Overview.vl
-    \help\Topic\HowTo Do Something.vl
+    \help\Explanation Overview of available nodes.vl
+    \help\HowTo Do something.vl
 
+In case a library has a lot of help patches, you can also use up to two levels of subdirectories to structure them, like so:
+
+    \help\Topic\Subtopic\HowTo Do something.vl
+
+By default the helpbrowser will display those patches in alphabetical order. If you want to change that, you can provide a Help.xml file in the \help directory that allows you to structure and order the content independent of their order in the filesystem. This also allows you to add additional help content in the form of links to online resources, like so:
+
+    <?xml version="1.0" encoding="utf-8" standalone="yes"?>
+    <Pack>
+      <Topic title="Overview">
+        <UriItem title="Explanation An Introduction to VL.OpenCV" link="https://youtu.be/4hPH5CokxwQ" mediaType="video"/>
+        <UriItem title="Reference Finders" link="https://vvvv.gitbooks.io/the-gray-book/content/en/reference/hde/finders.html" mediaType="text"/>
+      </Topic>
+      <Topic title="Topics">
+		    <Subtopic title="Images">
+			     <VLDocument link="Topics\Images\HowTo Draw images.vl"/>
+        </Subtopic>
+      </Topic>
+    </Pack>
+    
 == Help Flags
 A help flag is used to specify which how-to patch should open when a user presses kbd:[F1] on a selected node.
 
