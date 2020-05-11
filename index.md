@@ -5,7 +5,7 @@
 * a visual live-programming environment for VL
 * uses state hot-reload to modify the running program
 
-# VL
+## VL
 
 * is a visual programming language for .NET
 * combines aspects of dataflow and object oriented programming

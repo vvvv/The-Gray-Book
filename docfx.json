@@ -24,10 +24,12 @@
       {
         "files": [
           "introduction/**.md",
-          "introduction/**/toc.yml",
-		  "reference/**.md",
-          "reference/**/toc.yml",
-          "toc.yml",
+          "introduction/**/toc.md",
+		      "reference/**.md",
+          "reference/**/toc.md",
+          "changelog/**.md",
+          "changelog/**/toc.md",
+          "toc.md",
           "*.md"
         ]
       }
