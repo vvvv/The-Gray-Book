@@ -1,4 +1,0 @@
-= Looking at Things
-
-image::eliasLookingAtWaves.png[Somebody looking at breaking waves]
-

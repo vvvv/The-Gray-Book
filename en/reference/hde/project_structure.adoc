@@ -1,6 +1,0 @@
-= Project Structure
-
-.Components
-[caption=""]
-image::../../images/vl_component_hierarchy.png[]
-

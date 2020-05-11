@@ -1,9 +1,0 @@
-:experimental:
-= Solution Explorer
-
-The Solution Explorer can be opened by pressing kbd:[Ctrl + J] and allows you to get an alternative overview view and navigation for your project.
-
-.The Solution Explorer
-[caption=""]
-image::../../images/vl-SolutionExplorer.png[]
-

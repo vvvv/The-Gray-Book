@@ -1,5 +1,0 @@
-= The Development Environment
-
-.vvvv - distraction-free development since 2002
-[caption=""]
-image::..\..\images\gui-781b5.png[]

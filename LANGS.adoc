@@ -1,3 +1,0 @@
-= Languages
-
-. link:en/[English]
