@@ -1,3 +1,3 @@
 # Looking at Things
 
-![](../../introduction/eliasLookingAtWaves.png)
+![](../../images/introduction/eliasLookingAtWaves.png)

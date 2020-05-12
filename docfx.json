@@ -55,6 +55,14 @@
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
+    "globalMetadata": {
+      "_appTitle": "vvvv gamma documentation",
+      "_appFooter": "Brought to you by vvvv.org",
+      "_enableSearch": true,
+      "_enableNewTab": true,
+      "_appLogoPath": "/images/logo.svg",
+      "_appFaviconPath": "/images/favicon.ico"
+    },
     "template": [
       "default"
     ],
