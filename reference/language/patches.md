@@ -26,8 +26,8 @@ The most common type of patch is a datatype patch. It roughly corresponds to wha
 
 There are two ways to create a new datatype patch:
 
-* Press `Ctrl+P` to create and open the new patch
-* Press `Ctrl+Shift+P` to create a new patch and place a node of it at the cursors position
+* Press `Ctrl + P` to create a process node at the cursor and open the new patch
+* Press `Ctrl + Shift + P` to create a process definition in Definitions and open the new patch
 
 In both cases the corresponding type-definition is automatically placed in the document patch of the active document.
 
