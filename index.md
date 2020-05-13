@@ -1,17 +1,14 @@
-# vvvv - visual live-programming for .NET
+---
+_disableAffix: true
+_disableBreadcrumb: true
+---
 
-## vvvv
+# The Gray Book
 
-* a visual live-programming environment for VL
-* uses state hot-reload to modify the running program
+Documentation for [vvvv gamma](http://visualprogramming.net), the visual live-programming environment for .NET
 
-## VL
+## Reference
+Technical descriptions in detail.
 
-* is a visual programming language for .NET
-* combines aspects of dataflow and object oriented programming
-* is statically typed
-
-## vvvv is targeted at developers who
-
-* prefer visual over textual code
-* prefer interactive prototyping programming over edit/compile/fix error/compile/run
+## Explanations
+The bigger picture: Providing background and context.

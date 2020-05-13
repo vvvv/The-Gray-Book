@@ -61,7 +61,8 @@
       "_enableSearch": true,
       "_enableNewTab": true,
       "_appLogoPath": "/images/logo.svg",
-      "_appFaviconPath": "/images/favicon.ico"
+      "_appFaviconPath": "/images/favicon.ico",
+      "_disableContribution": false
     },
     "template": [
       "default"
