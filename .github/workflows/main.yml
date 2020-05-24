@@ -14,12 +14,11 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v1
       with:
-        path: docs
         fetch-depth: 1
 
     - uses: nikeee/docfx-action@master
       with:
-        args: ./docs/docfx.json
+        args: docfx.json
     
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.0
