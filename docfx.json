@@ -62,7 +62,13 @@
       "_enableNewTab": true,
       "_appLogoPath": "/images/logo.svg",
       "_appFaviconPath": "/images/favicon.ico",
-      "_disableContribution": false
+      "_disableContribution": false,
+      "_disableAffix": false,
+      "_gitContribute": {
+        "repo": "https://github.com/vvvv/The-Gray-Book.git",
+        "branch": "master"
+      },
+      "_gitUrlPattern": "github"
     },
     "template": [
       "default"
