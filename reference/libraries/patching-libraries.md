@@ -98,7 +98,7 @@ TODO
 *Image: Known Type Structure*
 
 #### Create Default
-Member operation nodes often expect a type on their main input and throw a 'Null Pointer Exception' as long as nothing is connected to it. In order to prevent this, we need to tell vl how it can construct a default instance of a type whenever needed.
+Member operation nodes often expect a type on their main input and throw a 'Null Pointer Exception' as long as nothing is connected to it. In order to prevent this, we need to tell VL how it can construct a default instance of a type whenever needed.
 
 To do so, simply create an operation called `CreateDefault` in a type forward patch and implement it so that it returns an instance of the type. Often this requires nothing more than returning the result of a constructor of the type.
 
@@ -133,7 +133,7 @@ You now have a forwarding operation definition wrapped around the node you want 
 Still you can apply the following modifications to a forward without manually managing its signature:
 
 ### Renaming a Pin
-If you have a good reason to change the name of a pin, e.g. in order to have it conform to the link:/reference/vl/namings.adoc[vl naming conventions], then do so by manually creating an input or output for a particular pin and renaming it.
+If you have a good reason to change the name of a pin, e.g. in order to have it conform to the [VL naming conventions](/reference/language/namings.md), then do so by manually creating an input or output for a particular pin and renaming it.
 
 ![](../../images/libraries/vl-libraries-wrapping-ForwardPins-Rename.png)
 <center>Renaming a Pin</center>
@@ -202,7 +202,7 @@ In order to forward an enum from a .dll to the user of a .vl document simply dra
 <center>Enum Forward</center>
 
 ## Wrapping Non-Standard Events or Delegates
-Events or delegates in third-party libraries are often a reason for writing a little c# wrapper. While events that conform to the link:https://docs.microsoft.com/en-us/dotnet/csharp/modern-events[.NET Core Event Pattern] are conveniently translated to observables in vl automatically, many libraries use non-standard events or delegates in which case you'll have to write a conversion to observable in c# manually using link:https://msdn.microsoft.com/en-us/library/system.reactive.linq.observable.fromevent(v=vs.103).aspx[Observable.FromEvent] that comes with the System.Reactive nuget.
+Events or delegates in third-party libraries are often a reason for writing a little c# wrapper. While events that conform to the [.NET Core Event Pattern](https://docs.microsoft.com/en-us/dotnet/csharp/modern-events) are conveniently translated to observables in vl automatically, many libraries use non-standard events or delegates in which case you'll have to write a conversion to observable in c# manually using [Observable.FromEvent](https://msdn.microsoft.com/en-us/library/system.reactive.linq.observable.fromevent(v=vs.103).aspx) that comes with the System.Reactive nuget.
 
 Here is an example. Let's assume the library has a datatype `Tablet` that has an event defined like this:
 
