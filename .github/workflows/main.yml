@@ -19,7 +19,7 @@ jobs:
 
     - uses: nikeee/docfx-action@master
       with:
-        args: docs/docfx.json
+        args: ./docs/docfx.json
     
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.0
