@@ -318,9 +318,6 @@ Now in order to create a dynamic enum for VL we also need those two elements, th
 
 both of which come with the VL.Core nuget.
 
-> [!NOTE]
-> For now the VL.Core nuget is only available as pre-release package!
-
 To make their use easier there are also baseclass implementations available:
 
 * `VL.Lib.Collections.DynamicEnumBase<T, U>`
