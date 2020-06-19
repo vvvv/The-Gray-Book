@@ -47,7 +47,7 @@ Rightclick a nuget to select it. Selected nugets provide access to all their nod
 
 #### .NET Nugets
 
-In the ".NET Nugets" section you find all nugets that are not relevant for VL in that they don't expose nodes. Selecting them does not do anything to your document for now.
+In the ".NET Nugets" section you find all nugets that are not tailored for VL. That means you can still absolutely use them, but depending on the complexity of the library this may be a bit more advanced endeavor.
 
 #### Files
 In addition to nugets you can also reference individual files of the following types:
@@ -60,7 +60,7 @@ In addition to nugets you can also reference individual files of the following t
 
 Choose "Add Existing..." to select a file via the file browser. All nodes that are exposed by those files will be available in your active document via the nodebrowser.
 
-#### Forward
+#### Forward Dependencies
 In this section you see a listing of all nugets and files combined. Here you can specify if the nodes of a specific dependency will be forwarded or not.
 
 By default if you add a dependency to a document you get only the nodes the dependency exposes directly. Dependencies can depend on other dependencies which you don't see by default.
