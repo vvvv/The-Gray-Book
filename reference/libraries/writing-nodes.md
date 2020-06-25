@@ -9,7 +9,7 @@ In Visual Studio 2017 create a new project by choosing either of those two templ
 * `Visual C#[Class Library (.NET Standard)`
 * `Visual C#[Class Library (.NET Framework)`
 
-As a rule of thumb: Use .NET Standard as long as you can, use .NET Framework if you need. For more confusing information on this, read this [Stackoverflow discussion])https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project).
+As a rule of thumb: Use .NET Standard as long as you can, use .NET Framework if you need. For more confusing information on this, read this [Stackoverflow discussion](https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project).
 
 ![](../../images/libraries/vl-libraries-writingNodes-vs2017.PNG)
 <center>Visual Studio Template Chooser</center>
