@@ -12,11 +12,15 @@ For more on patching experience and work flow see "The Development Environment".
 
 #### Meaning?
 
-When programming visually with data flow you can link some data from one node to the other. All these nodes are doing their thing and together they form something new, a new functionality. At times this is fun, at times this is hard work and needs some thinking. But one way or the other: your goal should always be to strive for a patch that not only solves a particular task and is able to be executed by the machine but also is readable for you later on. Practice making notes and explaining the patch to yourself.
+When programming visually with data flow you can link some data from one node to the other. All these nodes are doing their thing and together they form something new, a new functionality. 
+
+At times this is fun, at times this is hard work and needs some thinking. But one way or the other: your goal should always be to strive for a patch that not only solves a particular task and is able to be executed by the machine but also is readable for you later on. Practice making notes and explaining the patch to yourself.
 
 For now of course we'll try to do the job of explaining. Here is an example patch:
 
-TODO: small example with explanation and picture and a HSV node output pin linked to two other nodes.
+<p style="text-align:center">
+<img src="../images/introduction/datatype-color-operation-example.png">
+</br>color-data getting processed with operations</p>
 
-The color constant is also a data source.
+The color constant in the top-left is a data source and holds our data we want to process. As you can see the output of the color is connected to two inputs. On the left side it is connected down to a node which will compute the comlementary color and on the right side you see it connected to a node which is used to adjust the saturation. Finally the two data-paths get joined again in the Lerp-node which will give you a color in between the two, positioned by the scalar-input. (0.0 - would give you the first color, 1.0 - would give you the secound color)
 
