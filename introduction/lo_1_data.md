@@ -2,23 +2,16 @@
 
 Let's look at some more data:
 
-A color:
-[TODO: color image]
-
-A number:
-[TODO: PI image]
-
-A boolean (true or false):
-[TODO: Boolean image]
-
-A string (aka a text):
-[TODO: string image]
-
-A 3d vector:
-[TODO: a Vector]
-
-A particle:
-[TODO: a Particle with Position, Velocity and Color]
+|Type|Data-Pad|
+|---|---|
+|Color (RGBA)|<img src="../images/introduction/datatype-color.png" style="height: 1.5em"/>|
+|Number (Integer32)|<img src="../images/introduction/datatype-integer32.png" style="height: 1.5em"/>|
+|Number (Float32)|<img src="../images/introduction/datatype-float32.png" style="height: 1.5em"/>|
+|Boolean (true or false)|<img src="../images/introduction/datatype-boolean.png" style="height: 1.5em"/>|
+|String (aka a text)|<img src="../images/introduction/datatype-string.png" style="height: 1.5em"/>|
+|Vector2|<img src="../images/introduction/datatype-vector2.png" style="height: 1.5em"/>|
+|Vector3|<img src="../images/introduction/datatype-vector3.png" style="height: 1.5em"/>|
+|Vector4|<img src="../images/introduction/datatype-vector4.png" style="height: 1.5em"/>|
 
 You get the picture. All of this above is called data. But still all this data differs a lot and often you need to know where to expect which "type of data". Luckily people refer to the "type of data" as the "data type", which just captures this very basic idea of ordering the mess by separating all possible data into different types of data, which themselves refer to all possible data of that type of data. 
 
