@@ -34,9 +34,8 @@ Description|Action
 -|-
 General _middleclick_ alternative|`ALT` + leftclick
 Remove Errors (from current level downwards)|`Ctrl + E`
-Navigate back in Tab history|`Ctrl + <`
-Navigate forward in Tab history|`Ctrl + >`
-Navigate forward in Tab history|`Ctrl + >`
+Navigate back in Tab history|`Ctrl + <` or `Alt + Left`
+Navigate forward in Tab history|`Ctrl + >`  or `Alt + Right`
 Navigate one level Up in application|`Ctrl + ^` (where ^ is the Key below `ESC`)
 Navigate one level Up in definition|`Ctrl + Shift + ^` (where ^ is the Key below `ESC`)
 
