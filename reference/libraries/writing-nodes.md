@@ -433,7 +433,7 @@ Lastly there is one thing you'll have to do in VL to get your dynamic enum worki
 
 For this to happen we have to introduce the enum to VL which has to be done using a Typeforward:
 
-1. In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (`Ctrl+Shift+J`).
+1. In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (<kbd>Ctrl+Shift+J</kbd>).
 2. Unfolding it, you should see the `MyEnum` type which you can drag-drop onto the document patch. This makes the enum available for the VL type system and allows it to initialize the type, whenever it encounters it.
 
 ![](../../images/libraries/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png)

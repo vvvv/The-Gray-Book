@@ -1,6 +1,6 @@
 # VL Templates
 
-When creating a VL node from vvvv beta you have the choice between two available templates for cloning them via `Ctrl + Leftclick`
+When creating a VL node from vvvv beta you have the choice between two available templates for cloning them via <kbd>Ctrl</kbd> + Leftclick
 
 * Template (Value)
 * Template (Value Stateless)

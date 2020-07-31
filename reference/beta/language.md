@@ -31,7 +31,7 @@ In vvvv beta an IOBox can be used to set or display values. By giving an IOBox a
 
 *Image:IOBox vs. Pin*
 
-Just like in vvvv beta create an IOBox by pressing the middle mousebutton while making a connection. If instead you `CTRL + Leftclick` while making a connection you create an Inlet or Outlet.
+Just like in vvvv beta create an IOBox by pressing the middle mousebutton while making a connection. If instead you <kbd>CTRL</kbd> + Leftclick while making a connection you create an Inlet or Outlet.
 
 Both Pins and IOBoxes can be configured via a middleclick on them. Input Pins can also be given a default value.
 
@@ -87,4 +87,4 @@ In vvvv beta there were two reasons to use framedelays
 In VL you'll only use a FrameDelay node for the first use-case. If your patch needs to store a value for the next frame you're creating a datatype in which case you can now use proper Fields and Pads to access those Fields.
 
 ## Adding pins to nodes
-Nodes like +, \*, Cons, that have a dynamic pin-count can have pins added/removed by selecting them and pressing `CTRL +` or `CTRL -`.
+Nodes like +, \*, Cons, that have a dynamic pin-count can have pins added/removed by selecting them and pressing <kbd>CTRL +</kbd> or <kbd>CTRL -</kbd>.

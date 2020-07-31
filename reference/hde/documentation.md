@@ -1,6 +1,6 @@
 # Documentation Window
 
-Using the documentation window you can add documentation to all your elements. Press `Ctrl + M` to open it and then use the 3 pulldowns on top to navigate:
+Using the documentation window you can add documentation to all your elements. Press <kbd>Ctrl + M</kbd> to open it and then use the 3 pulldowns on top to navigate:
 
 * Documents
 * Patches in the selected document

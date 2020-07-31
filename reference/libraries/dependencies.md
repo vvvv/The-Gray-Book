@@ -63,7 +63,7 @@ A vl document can reference other .vl documents and managed .dll files.
 Here are 3 ways to reference local files:
 
 * Drop a .vl or .dll file onto a patch
-* Press kbd:[Ctrl + R] to select files via a file browser
+* Press <kbd>Ctrl + R</kbd> to select files via a file browser
 * Via menu:Document[Dependencies > Files > Add Existing...]
 
 ![](../../images/libraries/vl-Dependencies-File.png)
@@ -79,10 +79,10 @@ Files that are showing up in red cannot be found on disk. You can Rightlcick to 
 
 By default .NET comes with a large number of assemblies that can be referenced. They are stored in the [GAC](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) on all machines that have .NET installed and can be referenced from there via:
 
-* Press `Ctrl + Shift + R`
+* Press <kbd>Ctrl + Shift + R</kbd>
 * via `Document > Dependencies > Files > Add .NET Framework Assembly...`
 
 In the dialog you need to double-click entries that you want to add as references.
 
 ![](../../images/libraries/vl-libraries-using-GACWindow.png)
-<center>Use `Ctrl + F` in this window to find libraries in the GAC</center>
+<center>Use <kbd>Ctrl + F</kbd> in this window to find libraries in the GAC</center>

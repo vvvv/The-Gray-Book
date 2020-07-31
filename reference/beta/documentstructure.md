@@ -8,10 +8,10 @@ Then there are 3 different types of patches in VL:
 * Group Patches
 
 ## Datatype Patches
-Datatype Patches are the ones that most closely correspond to what you're familiar with from vvvv beta. A new datatype patch is created by pressing `CTRL+P` or `CTRL+Shift+P`. Here you can patch as usual.
+Datatype Patches are the ones that most closely correspond to what you're familiar with from vvvv beta. A new datatype patch is created by pressing <kbd>CTRL+P</kbd> or <kbd>CTRL+Shift+P</kbd>. Here you can patch as usual.
 
 ## The Document Patch
-Every VL document has one toplevel patch that provides an overview of its content. You can always reach it by pressing `ALT+P`
+Every VL document has one toplevel patch that provides an overview of its content. You can always reach it by pressing <kbd>ALT+P</kbd>
 
 ## Group Patches
 You can create a new Group patch by typing 'Group' in the Nodebrowser. Group patches are merely organisational elements in that hey have no purpose other than letting you structure/modularize your program.

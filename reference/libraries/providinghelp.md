@@ -38,20 +38,20 @@ Note how for UriItem elements you can provide a "mediaType" attribute that allow
 The search will work on all words in items titles. If you want to add more search terms that don't fit in an items title, use the "tags" attribute to add a list of space-separated search terms.
 
 ## Help Flags
-A help flag is used to specify which how-to patch should open when a user presses `F1` on a selected node.
+A help flag is used to specify which how-to patch should open when a user presses <kbd>F1</kbd> on a selected node.
 
-In a how-to patch, select the node you want this patch to open for as a help patch and press `Ctrl + H`. This sets a high-priority help flag. Press a second time to change it to low-priority, press a third time, to clear the help flag again.
+In a how-to patch, select the node you want this patch to open for as a help patch and press <kbd>Ctrl + H</kbd>. This sets a high-priority help flag. Press a second time to change it to low-priority, press a third time, to clear the help flag again.
 
 ![](../../images/libraries/helpflags-a2c55.png)
 <center>FileReader with a high-priority help flag, SplitToLines with low-priority</center>
 
 ### High vs. Low Priority
-When pressing `F1` on a node, the system will go through all help flags in all how-to patches of a library. If it encounters a high-priority help flag for the given node in a how-to patch, this patch will be displayed as the help patch. Therefore it only makes sense to specify a high-priority help flag once for each node!
+When pressing <kbd>F1</kbd> on a node, the system will go through all help flags in all how-to patches of a library. If it encounters a high-priority help flag for the given node in a how-to patch, this patch will be displayed as the help patch. Therefore it only makes sense to specify a high-priority help flag once for each node!
 
 ![](../../images/libraries/helpflags-7a40e.png)
 <center>The bubble indicating which node the help patch was opened for</center>
 
-After pressing `F1`, when the user decides to also view the Node Info for the node, the help browser will display a list of how-to patches that include the node with a low-priority help flag set. Therefore it makes sense to specify multiple low-priority help flags for the same node in different how-to patches to indicate that those could also be interesting when looking for use-cases of the given node.
+After pressing <kbd>F1</kbd>, when the user decides to also view the Node Info for the node, the help browser will display a list of how-to patches that include the node with a low-priority help flag set. Therefore it makes sense to specify multiple low-priority help flags for the same node in different how-to patches to indicate that those could also be interesting when looking for use-cases of the given node.
 
 ### Help flag indicator
 Since the end-user doesn't need to see the help flags, by default they are invisible when a help patch is opened. You can toggle the help flag indicator to show/hide help flags in this patch.

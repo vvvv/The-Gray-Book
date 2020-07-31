@@ -7,13 +7,13 @@ The development environment offers 3 different ways to find stuff quickly
 * Show All References: show all applications of a definition
 
 ## Finder
-Press `Ctrl + F` in any patch to search for local occurrences of strings. Type a string and then use `F3` or `Enter` to navigate through the results. Press `ESC` to hide the results again.
+Press <kbd>Ctrl + F</kbd> in any patch to search for local occurrences of strings. Type a string and then use <kbd>F3</kbd> or <kbd>Enter</kbd> to navigate through the results. Press <kbd>ESC</kbd> to hide the results again.
 
 ![](../../images/hde/vl-Finder-Finder.png)
 <center>Finder</center>
 
 ## SymbolFinder
-Press `Ctrl + Shift + F` to globally search for any symbol including the given string.
+Press <kbd>Ctrl + Shift + F</kbd> to globally search for any symbol including the given string.
 
 ![](../../images/hde/vl-Finder-SymbolFinder.png)
 <center>Symbol Finder</center>
