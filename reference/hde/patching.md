@@ -43,7 +43,7 @@ Navigate one level Up in definition|<kbd>Ctrl + Shift + ^</kbd> (where <kbd>^</k
 Description|Action
 -|-
 Pan the patch|Rightdrag in an empty area
-Zoom the patch|Mousewheel or <kbd>Ctrl + +</kbd> & <kbd>Ctrl + -</kbd>
+Zoom the patch|Mousewheel or <kbd>Ctrl</kbd><kbd>+</kbd> & <kbd>Ctrl</kbd><kbd>-</kbd>
 Reset pan and zoom of the patch|<kbd>Ctrl + 0</kbd>
 
 ## Alternative Pan & Zoom
@@ -75,8 +75,8 @@ Align selected nodes|<kbd>Ctrl + L</kbd>
 Line up selected nodes|<kbd>Alt + L</kbd>
 Evenly distribute selected nodes between left/top-most and right/bottom-most node in selection|<kbd>Ctrl + Shift + L</kbd>
 Evenly distribute selected nodes taking the gap between the left/top-most two nodes as a measure for the rest|<kbd>Ctrl + ALT + L</kbd>
-Increase count of input pins for nodes like +, Cons, ...|<kbd>Ctrl + +</kbd>
-Decrease count of input pins for nodes like +, Cons, ...|<kbd>Ctrl + -</kbd>
+Increase count of input pins for nodes like +, Cons, ...|<kbd>Ctrl</kbd><kbd>+</kbd>
+Decrease count of input pins for nodes like +, Cons, ...|<kbd>Ctrl</kbd><kbd>-</kbd>
 Expose Pins|<kbd>Ctrl + K</kbd>
 Move selected nodes|<kbd>Arrows</kbd>
 Move selected nodes faster|<kbd>Ctrl + Arrows</kbd>
@@ -84,8 +84,8 @@ Move selected nodes faster|<kbd>Ctrl + Arrows</kbd>
 ## Pin Groups
 Description|Action
 -|-
-Add Pin|<kbd>Ctrl + +</kbd>
-Remove Pin|<kbd>Ctrl + -</kbd>
+Add Pin|<kbd>Ctrl</kbd><kbd>+</kbd>
+Remove Pin|<kbd>Ctrl</kbd><kbd>-</kbd>
 
 ## Pads
 Description|Action
