@@ -4,10 +4,10 @@
 
 Description | Action
 -|-
-Pause/Step execution|<kbd>F6</kbd>
-Run|<kbd>F5</kbd>
+Pause/Step execution|<span class="keyseq"><kbd>F6</kbd></span>
+Run|<span class="keyseq"><kbd>F5</kbd></span>
 
-The execution of vl can be paused by pressing <kbd>F6</kbd>. Pressing <kbd>f6</kbd> repeatedly, causes the execution to make one step at a time. To get back into run mode press <kbd>f5</kbd>.
+The execution of vl can be paused by pressing <span class="keyseq"><kbd>F6</kbd></span>. Pressing <span class="keyseq"><kbd>f6</kbd></span> repeatedly, causes the execution to make one step at a time. To get back into run mode press <span class="keyseq"><kbd>f5</kbd></span>.
 
 You can also choose to auto-pause whenever an error occurs and jump to the node that threw the exception by setting *RuntimePauseOnError* to _true_ in the [Settings](settings.md) file.
 
@@ -45,4 +45,4 @@ Spreadable IOBoxes are yet to come!
 
 *Image:A pin showing a warning*
 
-To get rid of pin-warnings after you've acknowledged them, press <kbd>Ctrl+E</kbd>.
+To get rid of pin-warnings after you've acknowledged them, press <span class="keyseq"><kbd>Ctrl</kbd><kbd>E</kbd></span>.

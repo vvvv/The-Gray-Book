@@ -5,7 +5,7 @@ Short for "Input/Output boxes", they allow you to _input_ constant data into you
 ![](../../images/language/ioboxes-8e444.png)
 <center>Some IOBoxes of different types</center>
 
-You typically create an IOBox by starting a link from an input or output pin and then using a Middleclick (or <kbd>ALT</kbd> + leftclick) to create the according IOBox. Alternatively you can create an IOBox by selecting one from the nodebrowser popping up when you right doubleclick in the patch.
+You typically create an IOBox by starting a link from an input or output pin and then using a Middleclick (or <span class="keyseq"><kbd>ALT</kbd></span> + leftclick) to create the according IOBox. Alternatively you can create an IOBox by selecting one from the nodebrowser popping up when you right doubleclick in the patch.
 
 ![](../../images/language/ioboxes-fb5fa.png)
 <center>Choose an IOBox from the nodebrowser after double rightclick</center>
@@ -31,10 +31,10 @@ Number IOBoxes work the same for whole (integer32, byte, ...) and real (float32,
 > You can also enter math formulas like, e.g.: "1/3" that will be immediately be evaluated and fill the IOBox with the result
 
 * Right-drag up and down to change the value gradually
-** hold <kbd>SHIFT</kbd> while dragging, to divide the step-size by 10
-** hold <kbd>CTRL</kbd> while dragging, to divide the step-size by (another) 10
-** hold <kbd>ALT</kbd> in combination with the above to multiply instead of divide the stepsize
-* <kbd>ALT</kbd> + Rightclick to reset the value to its default
+** hold <span class="keyseq"><kbd>SHIFT</kbd></span> while dragging, to divide the step-size by 10
+** hold <span class="keyseq"><kbd>CTRL</kbd></span> while dragging, to divide the step-size by (another) 10
+** hold <span class="keyseq"><kbd>ALT</kbd></span> in combination with the above to multiply instead of divide the stepsize
+* <span class="keyseq"><kbd>ALT</kbd></span> + Rightclick to reset the value to its default
 
 Via the inspector you can configure the IOBox:
 
@@ -66,9 +66,9 @@ A boolean IOBox has three different button modes:
 Changing values in string IOBoxes works as follows:
 
 * Doubleclick to enter text via the keyboard
-  * While entering text press <kbd>CTRL + ENTER</kbd> to add a new line
-* <kbd>CTRL</kbd> + Rightclick to open the file chooser dialog
-* <kbd>SHIFT</kbd> + Rightclick to open the directory chooser dialog
+  * While entering text press <span class="keyseq"><kbd>CTRL</kbd><kbd>ENTER</kbd></span> to add a new line
+* <span class="keyseq"><kbd>CTRL</kbd></span> + Rightclick to open the file chooser dialog
+* <span class="keyseq"><kbd>SHIFT</kbd></span> + Rightclick to open the directory chooser dialog
 
 Via the inspector you can configure the IOBox:
 
@@ -96,17 +96,17 @@ Description | Action
 -|-
 Change brightness|Rightdrag up/down
 Change hue|Rightdrag left/right
-Change saturation|<kbd>Ctrl</kbd> + Rightdrag up/down
-Change the alpha channel|<kbd>Shift</kbd> + Rightdrag up/down
+Change saturation|<span class="keyseq"><kbd>Ctrl</kbd></span> + Rightdrag up/down
+Change the alpha channel|<span class="keyseq"><kbd>Shift</kbd></span> + Rightdrag up/down
 
 ## Paths
 
 Path IOBoxes can be used to enter filenames or directories. By default they always assume you want to choose a filename!
 
 * Rightclick to open open the file chooser dialog
-* <kbd>SHIFT</kbd> + Rightclick to open the directory chooser dialog
+* <span class="keyseq"><kbd>SHIFT</kbd></span> + Rightclick to open the directory chooser dialog
 * Click the [O] icon to open the currently selected file with its associated application
-* <kbd>ALT</kbd> + click the [O] icon to view the file/directory in windows explorer
+* <span class="keyseq"><kbd>ALT</kbd></span> + click the [O] icon to view the file/directory in windows explorer
 
 Via the inspector you can configure the IOBox:
 

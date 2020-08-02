@@ -10,13 +10,13 @@ Links can be deleted with a `middle-click`.
 
 Finishing a link on an input with a middle-click starts a new link from the same source.
 
-By default links are not included in a marquee-selection when other elements (nodes, pads, regions) are already in the selection. To force the selection of links in such scenarios press <kbd>SHIFT</kbd>.
+By default links are not included in a marquee-selection when other elements (nodes, pads, regions) are already in the selection. To force the selection of links in such scenarios press <span class="keyseq"><kbd>SHIFT</kbd></span>.
 
 By doubleclicking an existing link you bring up the NodeBrowser to choose a node that will be inserted in the link.
 
 While making a link you can:
 
 * doubleclick to bring up the NodeBrowser and choose a node to be connected to the link
-* <kbd>Ctrl</kbd> + click to create in input or output pin
-* <kbd>Shift</kbd> + click to create a pad
-* <kbd>Alt</kbd> + click or middleclick to create an IOBox.
+* <span class="keyseq"><kbd>Ctrl</kbd></span> + click to create in input or output pin
+* <span class="keyseq"><kbd>Shift</kbd></span> + click to create a pad
+* <span class="keyseq"><kbd>Alt</kbd></span> + click or middleclick to create an IOBox.

@@ -23,7 +23,7 @@ Any node that spots an arrow icon has a patch behind it which can be reached by 
 *Image:Node with a patch behind it*
 
 ## Pin group
-Nodes with exactly two inputs named _Input_ and _Input 2_ and one output named _Output_ can automatically have additional inputs added/removed by pressing <kbd>CTRL +</kbd> or <kbd>CTRL -</kbd> respectively.
+Nodes with exactly two inputs named _Input_ and _Input 2_ and one output named _Output_ can automatically have additional inputs added/removed by pressing <span class="keyseq"><kbd>CTRL</kbd></span> or <span class="keyseq"><kbd>CTRL</kbd></span> respectively.
 
 ## Apply pin
 Nodes whose first input and first output share the same datatype can have an _Apply_ pin added via the `context-menu > Configure`. If apply is set to false, the operation is bypassed and the input returned unchanged as the output.

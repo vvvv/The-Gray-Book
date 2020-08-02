@@ -2,7 +2,7 @@ Properties are where datatype patches store data. A datatype patch can have any 
 
 *Image:Properties listed in the PatchExplorer*
 
-Properties can be added and removed via the explorer or simply by adding a Pad via the Nodebrowser. Pads are used in a patch to read from or write to a property. Properties and their pads are matched by name, so make sure to always be specific about naming, including casing. Rename a Pad by doubleclicking its label and pressing <kbd>Enter</kbd> when finished.
+Properties can be added and removed via the explorer or simply by adding a Pad via the Nodebrowser. Pads are used in a patch to read from or write to a property. Properties and their pads are matched by name, so make sure to always be specific about naming, including casing. Rename a Pad by doubleclicking its label and pressing <span class="keyseq"><kbd>Enter</kbd></span> when finished.
 
 Any number of different operations can write to the same pad but each operation can only write to a pad once. A little triangle above a pad is a hint that there is a pad with the same name in the patch that is also written to.
 

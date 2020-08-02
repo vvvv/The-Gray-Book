@@ -7,7 +7,7 @@ Patches are where we put nodes. There are different types of patches:
 * [Group Patch](groups.md)
 
 ## Document Patch
-Every .vl document has at least one patch, the document patch which gives an overview of the content in the document. The document patch of the active document can always be reached via the shortcut <kbd>Alt+P</kbd>.
+Every .vl document has at least one patch, the document patch which gives an overview of the content in the document. The document patch of the active document can always be reached via the shortcut <span class="keyseq"><kbd>Alt</kbd><kbd>P</kbd></span>.
 
 ![](../../images/language/vl-DocumentPatch.png)
 <center>Section of the document patch of VL.CoreLib.vl</center>
@@ -26,8 +26,8 @@ The most common type of patch is a datatype patch. It roughly corresponds to wha
 
 There are two ways to create a new datatype patch:
 
-* Press <kbd>Ctrl + P</kbd> to create a process node at the cursor and open the new patch
-* Press <kbd>Ctrl + Shift + P</kbd> to create a process definition in Definitions and open the new patch
+* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>P</kbd></span> to create a process node at the cursor and open the new patch
+* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd></span> to create a process definition in Definitions and open the new patch
 
 In both cases the corresponding type-definition is automatically placed in the document patch of the active document.
 

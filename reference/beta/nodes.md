@@ -3,7 +3,7 @@ Here we're having a look at individual nodes that work differently in VL in rega
 ## IOBox (String)
 In vvvv beta an IOBox (String) connected to a pin that takes a filename or directory, automatically adapts to it so that you can right-click on it and get an open-dialog to choose a file or directory accordingly.
 
-In VL there is an IOBox (Path) to handle file and directory paths but it doesn't know (yet) which you'd want to choose. So by default a rightclick is opening a FileDialog. To get a DirectoryDialog you have to press <kbd>Shift</kbd> while rightclicking!
+In VL there is an IOBox (Path) to handle file and directory paths but it doesn't know (yet) which you'd want to choose. So by default a rightclick is opening a FileDialog. To get a DirectoryDialog you have to press <span class="keyseq"><kbd>Shift</kbd></span> while rightclicking!
 
 ## Cons
 In vvvv beta you can connect single values as well as spreads to a cons node. Since VL distinguishes between single values and spreads (see the section on Spreads above) there are now two nodes:
