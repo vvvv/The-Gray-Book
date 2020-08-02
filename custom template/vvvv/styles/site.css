@@ -1,15 +1,29 @@
 kbd
 {
-    display: inline-block;
-    margin: 0 .1em;
-    padding: .1em .4em;
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: 1.2;
-    color: #000;
-    background-color: #efefef;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px #999 ,inset 0 1px 0 0 #fff;
-    white-space: nowrap;
+    display:inline-block;
+    color:rgba(0,0,0,0.8);
+    font-size:.9em;
+    line-height:1.0;
+    background-color:#f7f7f7;
+    border:1px solid #ccc;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #fff inset;
+    -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #fff inset;
+    box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #fff inset;
+    margin:-0.15em 0.15em 0 0.15em;
+    padding:0.3em 0.4em;
+    vertical-align:middle;
+    white-space:nowrap
 }
+
+.keyseq {
+    display: inline-block;
+    white-space:nowrap;
+}
+.keyseq kbd:first-child {
+    margin-left:0
+ }
+.keyseq kbd:last-child {
+    margin-right:0
+ }
