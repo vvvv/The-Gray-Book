@@ -87,4 +87,4 @@ In vvvv beta there were two reasons to use framedelays
 In VL you'll only use a FrameDelay node for the first use-case. If your patch needs to store a value for the next frame you're creating a datatype in which case you can now use proper Fields and Pads to access those Fields.
 
 ## Adding pins to nodes
-Nodes like +, \*, Cons, that have a dynamic pin-count can have pins added/removed by selecting them and pressing <span class="keyseq"><kbd>CTRL</kbd></span> or <span class="keyseq"><kbd>CTRL</kbd></span>.
+Nodes like +, \*, Cons, that have a dynamic pin-count can have pins added/removed by selecting them and pressing <span class="keyseq"><kbd>CTRL</kbd><kbd>+</kbd></span> or <span class="keyseq"><kbd>CTRL</kbd><kbd>-</kbd></span>.

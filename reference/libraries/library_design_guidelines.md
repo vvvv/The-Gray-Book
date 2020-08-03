@@ -155,7 +155,7 @@ Note that in the implementation of a node you can of course use any datatype you
 
 ## Patterns
 ### Dynamic Pin Counts
-Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing <span class="keyseq"><kbd>Ctrl</kbd></span> or <span class="keyseq"><kbd>Ctrl</kbd></span> with such a selected node will add/remove inputs accordingly.
+Nodes like the "Cons" or the "+" can have their input count set on demand by the user. Pressing <span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span> or <span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span> with such a selected node will add/remove inputs accordingly.
 
 Any operation that has exactly two inputs and one output whose type is the same as the first input gets this functionality automatically.
 
