@@ -4,6 +4,23 @@ The following guide covers the necessary steps to setup a workflow on your Githu
 
 The guide assumes you already have created an account for GitHub and nuget.org and that you have access to an existing VL GitHub repository.
 
+- [Github workflow configuration](#github-workflow-configuration)
+  - [References](#references)
+  - [A brief introduction to Github Actions](#a-brief-introduction-to-github-actions)
+  - [Preliminary notes](#preliminary-notes)
+    - [nuspec file](#nuspec-file)
+      - [Dependencies](#dependencies)
+      - [Assets, binaries, help files, etc.](#assets-binaries-help-files-etc)
+      - [Version](#version)
+    - [`csproj` file](#csproj-file)
+    - [Package icon](#package-icon)
+      - [Using a `nuspec` file](#using-a-nuspec-file)
+      - [Using a `csproj` file](#using-a-csproj-file)
+  - [Using the Action](#using-the-action)
+    - [Getting a nuget.org API key](#getting-a-nugetorg-api-key)
+    - [Creating the workflow file](#creating-the-workflow-file)
+    - [Push!](#push)
+
 ## References
 
 The explained configuration is currently being used for libraries such as:
@@ -27,7 +44,7 @@ Our action will do the following tasks for you :
 - Pack your nuget either using a `nuspec` or a `csproj` file
 - Publish it to nuget.org (or any other feed)
 
-An action takes input parameters, listed as key-value pairs. In a workflow script, our action could like this :
+An action takes input parameters, listed as key-value pairs. In a workflow script, our action could look like this :
 
 ```
 - name: Publish VL Nuget
@@ -240,7 +257,7 @@ Now that everything is setup, we can add our action and fill its parameters acco
 
 > NOTE : paths in the workflow file are relative to the root of your repo!
 
-Wander what is that `{{ secrets.NUGET_KEY }}`? Check [Getting a Nuget API Key](### Getting a nuget.org API key).
+Wonder what is that `{{ secrets.NUGET_KEY }}`? Check [Getting a Nuget API Key](#getting-a-nugetorg-api-key).
 
 ### Push!
 
