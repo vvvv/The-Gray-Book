@@ -4,23 +4,6 @@ The following guide covers the necessary steps to setup a workflow on your Githu
 
 The guide assumes you already have created an account for GitHub and nuget.org and that you have access to an existing VL GitHub repository.
 
-- [Github workflow configuration](#github-workflow-configuration)
-  - [References](#references)
-  - [A brief introduction to Github Actions](#a-brief-introduction-to-github-actions)
-  - [Preliminary notes](#preliminary-notes)
-    - [nuspec file](#nuspec-file)
-      - [Dependencies](#dependencies)
-      - [Assets, binaries, help files, etc.](#assets-binaries-help-files-etc)
-      - [Version](#version)
-    - [`csproj` file](#csproj-file)
-    - [Package icon](#package-icon)
-      - [Using a `nuspec` file](#using-a-nuspec-file)
-      - [Using a `csproj` file](#using-a-csproj-file)
-  - [Using the Action](#using-the-action)
-    - [Getting a nuget.org API key](#getting-a-nugetorg-api-key)
-    - [Creating the workflow file](#creating-the-workflow-file)
-    - [Push!](#push)
-
 ## References
 
 The explained configuration is currently being used for libraries such as:
