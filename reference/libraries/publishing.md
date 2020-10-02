@@ -1,33 +1,158 @@
-# AppVeyor/GitHub/nuget.org pipeline configuration
+# Github workflow configuration
 
-The following guide covers the necessary steps to get a working AppVeyor project which monitors a Github C#/VL repository and whenever a push is made to it:
+The following guide covers the necessary steps to setup a workflow on your Github repository that will publish your plugin to nuget.org or any feed you like using the [PublishVLNuget](https://github.com/vvvv/PublishVLNuget) Github Action.
 
-1. Clones the repository
-2. Builds the source code
-3. Generates a nuget package
-4. Publishes the package to nuget.org
-5. Notifies you about results via e-mail
-
-The guide assumes you already have created an account for GitHub, AppVeyor and nuget.org and that you have access to an existing C#/VL GitHub repository.
+The guide assumes you already have created an account for GitHub and nuget.org and that you have access to an existing VL GitHub repository.
 
 ## References
 
 The explained configuration is currently being used for libraries such as:
 
-* [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2)
+* [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC)
+* [VL.Devices.AzureKinect](https://github.com/vvvv/VL.Devices.AzureKinect)
 * [VL.Devices.Nuitrack](https://github.com/vvvv/VL.Devices.NuiTrack)
 * [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense)
-* [VL.Devices.uEye](https://github.com/vvvv/VL.Devices.uEye)
-* [VL.IO.NetMQ](https://github.com/vvvv/VL.IO.NetMQ)
 * [VL.OpenCV](https://github.com/vvvv/VL.OpenCV)
 
 Feel free to use them as starting points for your own library.
 
-## nuget.org
+## A brief introduction to Github Actions
+
+Github actions are small scripts with a specific purpose, allowing you to automate tasks on your repos. They are actually the building blocks of what's called a _workflow_ : you chain several actions one after the other in your own small script, and decide under which condition the workflow is triggered (a new commit on `master`, a new tag, etc).
+
+Our action will do the following tasks for you :
+
+- Build your Visual Studio solution, if your plugin has one
+- Download a package icon from an external url if you don't want to commit it to your repos every time
+- Pack your nuget either using a `nuspec` or a `csproj` file
+- Publish it to nuget.org (or any other feed)
+
+An action takes input parameters, listed as key-value pairs. In a workflow script, our action could look like this :
+
+```
+- name: Publish VL Nuget
+    uses: vvvv/PublishVLNuget@1.0.29
+    with:
+    csproj: src\VL.MyLib.csproj
+    nuspec: deployment\VL.MyLib.nuspec
+    icon-src: https://foo.bar/icon.png
+    icon-dst: ./deployment/nugeticon.png
+    nuget-key: ${{ secrets.NUGET_KEY }}
+```
+
+For a list of all the input parameters the action can handle, head over to its [Github repo](https://github.com/vvvv/PublishVLNuget#inputs).
+
+For more information on Github Actions, check the [official documentation](https://docs.github.com/en/free-pro-team@latest/actions).
+
+## Preliminary notes
+
+### nuspec file
+
+The nuspec file contains your nuget's metadata, such as version, author and dependencies. It also specifies which files should be included in your final package. We recommand putting it in a `deployment` folder at the root of your repo, but it can be anywhere you like.
+
+For more information on the `nuspec` file format, check the [documentation](https://docs.microsoft.com/en-us/nuget/reference/nuspec) from Microsoft.
+
+#### Dependencies
+
+In the nuspec file, make sure you list the nugets needed by your library/project under the `dependencies` section.
+
+#### Assets, binaries, help files, etc.
+
+In the nuspec file, make sure you list any assets, dlls, help patches, etc. under the `files` section.
+
+#### Version
+
+Your package version should follow the [semver](https://semver.org/) specification.
+
+A nuget package can come in two versions, a release version or a pre-release version.
+
+A pre-release package implies that the package is currently under development and things can change drastically from one version to the next. Functionality can also be expected to break or become unstable from time to time.
+
+A release package implies that the package has been properly tested and polished for production. No major breaking changes are expected to happen and stability within the package should be reliable.
+
+If you want to publish a pre-release version of your package you need to instruct nuget.org that this is indeed a pre-release version. To do this you must add the `-alpha` suffix at the end of your package's version.
+
+### `csproj` file
+
+If your plugin has a `csproj` file, it can also be used to pack your nuget in place of a `nuspec` file. For more information, please refer to [this section](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package-msbuild) of the Nuget documentation.
+
+If you plan to use it for that purpose, just omit the `nuspec` input of the Github Action.
+
+### Package icon
+
+Our Github Action allows you to specify a package icon from an external source with the `icon-src` and `icon-dst` input parameters. That way, you don't have to commit your icon file to your repo. The file will be downloaded and put inside your package each time your workflow runs.
+
+Please note that you have to set the `icon-dst` input parameter to an already existing folder in your repo. We suggest you simply download it to the root of the repository, like so:
+
+```
+(...)
+- name: Publish VL Nuget
+    uses: vvvv/PublishVLNuget@1.0.29
+    with:
+    (...)
+    icon-src: https://wwww.url.to/nugeticon.png
+    icon-dst: ./nugeticon.png
+```
+
+#### Using a `nuspec` file
+
+In your action, set the icon destination to the root of the repo :
+
+```
+(...)
+- name: Publish VL Nuget
+    uses: vvvv/PublishVLNuget@1.0.29
+    with:
+    (...)
+    icon-src: https://wwww.url.to/nugeticon.png
+    icon-dst: ./nugeticon.png
+```
+
+> Note : paths in the workflow file are relative to the root of the repo.
+
+Then, in the `file` section, your nuspec file must reference it from where the action will download it (`src` attribute) and place it wherever you like (`target` attribute), making sure `target` matches where the `metadata` section expects it.
+
+```
+(...)
+    <metadata>
+        (...)
+        <icon>icon\nugeticon.png</icon>
+    </metadata>
+    <files>
+        (...)
+        <file src="..\nugeticon.png" target="icon\">
+    </files>
+(...)
+```
+
+> Note : paths in the nuspec file are relative to where the file itself is placed.
+
+#### Using a `csproj` file
+
+You can setup an icon for your project inside Visual Studio. Beware you'll have to specify a path to a file that does not exist yet, since the Action will take care of downloading it later on. This can feel weird since Visual Studio's UI gives your a `Browse` button for you to pick a file. simply fill the path manually to match the `icon-src` property of your workflow file.
+
+For instance, your worflow file would look like this:
+
+```
+(...)
+- name: Publish VL Nuget
+    uses: vvvv/PublishVLNuget@1.0.28
+    with:
+    csproj: src\Whatever\Whatever.csproj
+    icon-src: https://wwww.url.to/nugeticon.png
+    icon-dst: ./deployment/nugeticon.png
+    nuget-key: ${{ secrets.NUGET_KEY }}
+```
+
+And your Visual Studio configuration like this : 
+
+![Visual Studio](/images/libraries/publishing_icon_in_visualstudio.png)
+
+## Using the Action
+
+### Getting a nuget.org API key
 
 The following steps will guide you through the nuget.org configuration, before proceeding please make sure you have a working account and are logged-in in nuget.org.
-
-### Getting an API Key
 
 1. Click on your user name at the top right
 2. Click on `API Keys` in the menu that pops up
@@ -37,123 +162,90 @@ The following steps will guide you through the nuget.org configuration, before p
 6. Under `Glob Pattern` type: *
 7. Click `Create`
 
-NOTE: At this point you should see your newly created package listed with a yellow warning message reminding you to copy your key, ***this is a crucial step as this is the only time you will be able to copy this value***. Click on `Copy` below your package's description and save the key in a safe place, it will be needed in step [Encrypting your nuget.org API Key](#Encrypting your nuget.org API Key).
+NOTE: At this point you should see your newly created package listed with a yellow warning message reminding you to copy your key, ***this is a crucial step as this is the only time you will be able to copy this value***. 
 
-## AppVeyor
+Click on `Copy` below your package's description and add it to your repository's secrets. To do so, please refer to [this page](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) of the Github documentation. Remember your secret's name, we will use it in the next step when we'll create our workflow file. We suggest you simply call it `NUGET_KEY`.
 
-The following steps will guide you through the AppVeyor configuration, before proceeding please make sure you have a working account and are logged-in in appveyor.com.
+### Creating the workflow file
 
-### Creating a new project
+Create a new `main.yml` file in your repository in a `.github/workflows` directory. Your repo structure should look like this :
 
-1. Click on `Projects` in the top menu
-2. Click on `New Project`
-3. Select repository, in this case we are using GitHub
-4. Authorize as `OAuth App` unless you know what you are doing
-5. Select `Public` or `Private and Public` depending on your preference
-6. Click on `Authorize GitHub`
-7. On the pop-up displayed click on `Authorize appveyor`
+```
+├── .github
+│   └── workflows
+│       └── main.yml
+├── deployment
+│   ├── VL.MyLib.nuspec
+├── help
+│   └── Basics
+│       ├── HowTo Foo.vl
+│       └── HowTo Bar.vl
+├── src
+│   └── MyLib
+│       ├── Baz.cs
+│       ├── MyLib.csproj
+│       └── MyLib.sln
+├── README.md
+└── VL.Whatever.vl
+```
 
-Once you have authorized AppVeyor you should be able to see a list with your available GitHub repositories, select the desired repository and click on `+ ADD`. After a few seconds you should see your new project listed in the `Projects` page.
+Before using `PublishVLNuget`, you need to add a few pre-existing other actions that are needed by it. So in your `main.yml` file, paste the following :
 
-### Encrypting your nuget.org API Key
+```
+name: push_nuget
 
-1. Click on `Account` in the top menu
-2. Select `Encrypt YAML` from the left menu
-3. Paste your nuget.org key obtained in step [Getting an API Key](#Getting an API Key)
-4. Copy the encrypted string in a safe place, it will be needed later in step [YAML file (appveyor.yml)](#YAML file (appveyor.yml))
+# on push on master
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - README.md
 
-## Configuration files
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@master
+    
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.0
 
-### File locations
+    - name: Setup Nuget.exe
+      uses: nuget/setup-nuget@v1
+```
 
-In order to have full control over configuration, versioning numbers and other specific settings for your package, you need to avoid having your nuspec file in the project's root directory, otherwise AppVeyor will try to configure the package based on the nuspec file.
+The `on` section describes under which condition the workflow is triggered. Here, we specify that when there's a new commit on `master` *except* if it's on `README.md`, we trigger the workflow.
 
-This step is not mandatory since you could find a different solution to get your configuration to work, however it has proved to be both effective and easy to grasp.
+Then, in our job, we add three actions :
 
-For everything to work correctly make sure you place your YAML file in the root of your project, and move your nuspec file into a subdirectory inside the root called `appveyor`.
+- `actions/checkout` make sure our repo is checked-out on the `master` branch
+- `microsoft/setup-msbuild` makes sure our action can use `msbuild.exe` to build your solution
+  - As a consequence, if your plugin does not have a Visual Studio solution, you can omit this
+- `nuget/setup-nuget` installs `nuget.exe`. We need it in our action to pack and push your plugin to nuget.org.
 
-Your project directory structure should in the end look somewhat like this:
+Now that everything is setup, we can add our action and fill its parameters accordingly.
 
-    /
-    /appveyor/<YourPackageName>.nuspec
-    /appveyor.yml
-    ...
+```
+- name: Publish VL Nuget
+    uses: vvvv/PublishVLNuget@1.0.29
+    with:
+    csproj: src\VL.MyLib.csproj
+    nuspec: deployment\VL.MyLib.nuspec
+    icon-src: https://foo.bar/nugeticon.png
+    icon-dst: ./nugeticon.png
+    nuget-key: ${{ secrets.NUGET_KEY }}
+```
 
-For reference nuspec and YAML files you can check out the working copies for any of the GitHub repositories mentioned in [References](#references).
+> NOTE : paths in the workflow file are relative to the root of your repo!
 
-### YAML file (appveyor.yml)
+Wonder what is that `{{ secrets.NUGET_KEY }}`? Check [Getting a Nuget API Key](#getting-a-nugetorg-api-key).
 
-#### nuget.org encrypted key
+### Push!
 
-In order for AppVeyor to be able to push to your nuget.org's package feed, you will need to provide it with the encrypted nuget API Key obtained in step [Encrypting your nuget.org API Key](#Encrypting your nuget.org API Key).
+You can now push to your master branch and trigger a new deployment of your plugin. Make sure that you bump your plugin's version in your `nuspec` or `csproj` file, otherwise nuget.org (or any feed you're using) will refuse your plugin.
 
-To do so at the beginning of your YAML file make sure you have a section with the configuration below:
+Head over to the _Action_ section of your repo to monitor your worflow run in real time. If errors occur during the workflow run, they'll show up here.
 
-    environment:
-	     nuget_api_key:
-		       secure:<YourAPIKey>
-
-Adjust your API key accordingly.
-
-#### Release vs Pre-release packages
-
-A nuget package can come in two versions, a release version or a pre-release version.
-
-A pre-release package implies that the package is currently under development and things can change drastically from one version to the next. Functionality can also be expected to break or become unstable from time to time.
-
-A release package implies that the package has been properly tested and polished for production. No major breaking changes are expected to happen and stability within the package should be reliable.
-
-If you want to publish a pre-release version of your package you need to instruct nuget.org that this is indeed a pre-release version. To do this you must add the `-alpha` suffix at the end of your package's name.
-
-This should be done in two sections within the YAML file:
-
-##### assembly_info section:
-
-Make sure to add the `-alpha` suffix at the end of your `assembly_version` attribute like so:
-
-    assembly_version: "0.1.{build}-alpha"
-
-##### after_build section:
-
-Make sure to add the `-alpha` suffix at the end of your `nuget pack` and your `nuget push` command lines like so:
-
-    after_build:
-    - cd..
-    - nuget pack appveyor\<YourProjectName>.nuspec -Version %APPVEYOR_BUILD_VERSION%-alpha`
-    - nuget setApiKey %nuget_api_key%`
-    - nuget push C:\projects\<YourProjectName>\<YourProjectName>.%APPVEYOR_BUILD_VERSION%-alpha.nupkg -Source https://api.nuget.org/v3/index.json`
-
-If you do not want a pre-release package but rather a release package just remove any `-alpha` suffixes from your YAML file.
-
-#### E-mail notifications
-
-You can configure AppVeyor to send you an e-mail notification after it has finished processing your project, regardless of the outcome.
-
-To do this add the following section at the end of your YAML file and change the values accordingly:
-
-    notifications:
-    - provider: Email to: - <yourEmail@server.org> subject: '<YourProjectName> Build {{status}} message: "{{message}}, {{commitId}}, ..." on_build_status_changed: true
-
-### nuspec file
-
-#### nuget dependencies
-
-In the nuspec file, make sure you list the nugets needed by your library/project under the `dependencies` section.
-
-#### Assets, binaries, help files, etc.
-
-In the nuspec file, make sure you list any assets, dlls, help patches, etc. under the `files` section.
-
-## Testing and Deployment
-
-Once all previous steps have been successfully completed, you should be able to just push to the master branch of your GitHub repository and AppVeyor should start a build in a matter of a minute or two, you can then see the build process console in AppVeyor itself (click on your project in the projects list).
-
-If nothing fails during the nuget restore/build/nuget package/push to nuget.org process you should see a green Build completed message at the end.
-
-After a build succeeds, the newly generated nuget is pushed to nuget.org and you can follow its status there.
-
-It usually it takes 10 to 15 minutes for a new nuget to get validated, indexed and listed.  Until it is both indexed an listed it will not be usable for anyone through `nuget.exe`.
-
-## Troubleshooting
-
-If anything fails during the process you should be able to see details on the specific error in AppVeyor's console window.
+![Workflow Run](/images/libraries/publishing_workflow_run_report.png)
