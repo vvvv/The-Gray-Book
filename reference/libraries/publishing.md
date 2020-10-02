@@ -181,7 +181,7 @@ The following steps will guide you through the nuget.org configuration, before p
 
 NOTE: At this point you should see your newly created package listed with a yellow warning message reminding you to copy your key, ***this is a crucial step as this is the only time you will be able to copy this value***. 
 
-Click on `Copy` below your package's description and add it to your repository's secrets. To do so, please refer to [this page](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) of the Github documentation. Remember your secret's, we will use it in the next step when we'll create our workflow file. We suggest you simply call it `NUGET_KEY`.
+Click on `Copy` below your package's description and add it to your repository's secrets. To do so, please refer to [this page](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) of the Github documentation. Remember your secret's name, we will use it in the next step when we'll create our workflow file. We suggest you simply call it `NUGET_KEY`.
 
 ### Creating the workflow file
 
