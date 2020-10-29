@@ -1,4 +1,4 @@
-name: Build Documentation
+name: Build new Documentation
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v1
       with:
-        ref: lib-rework
+        ref: origin/lib-rework
         fetch-depth: 1
 
     - uses: nikeee/docfx-action@master
