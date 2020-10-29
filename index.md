@@ -7,7 +7,7 @@ _disableBreadcrumb: true
 
 [vvvv](http://visualprogramming.net) is your one-stop-shop for all things digital and interactive media. It is a visual live-programming environment that helps you get things done quickly: 
 
-Generate interactive 2d or 3d motion graphics. Visualize data coming from network or offline sources. Control lights, lasers, motors or anything else you can connect to a PC. In the end export everything as a standalone program. Missing any functionality? vvvv can consume almost any .NET nuget and can be easily extended using c#.
+Generate interactive 2d or 3d motion graphics. Visualize data coming from network or offline sources. Control lights, lasers, motors or anything else you can connect to a PC. In the end export everything as a standalone program. Missing some functionality? vvvv can consume almost any .NET nuget and can be easily extended using c#.
 
 ## Where to start?
 
@@ -17,7 +17,7 @@ Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvv
 
 ### The Gray Book
 
-The Gray Book combines a the written [Reference](reference/hde/gui.md) and [Explanations](introduction/language.md) for you to explore in addition to material in the HelpBrowser. 
+The Gray Book combines a the written [Reference](reference/hde/gui.md) and [Explanations](introduction/language.md) for you to explore in addition to the material in the HelpBrowser. 
 
 ### The Forum
 

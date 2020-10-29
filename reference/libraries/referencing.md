@@ -1,4 +1,4 @@
-# Dependencies
+# Referencing libraries
 
 VL Documents can reference 3 different types of dependencies:
 
