@@ -17,11 +17,11 @@ Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvv
 
 ### The Gray Book
 
-The Gray Book combines a the written [Reference](reference/hde/gui.md) and [Explanations](introduction/language.md) for you to explore in addition to the material in the HelpBrowser. 
+The Gray Book combines a written [Reference](reference/hde/gui.md) and [Explanations](introduction/language.md) for you to explore in addition to the materials in the HelpBrowser. 
 
 ### The Forum
 
-Any questions left? Find help in the [forum](http://discourse.vvvv.org).
+Any questions left? Get them answered in the [forum](http://discourse.vvvv.org).
 
 ### The Chat
 

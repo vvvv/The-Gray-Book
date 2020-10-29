@@ -2,7 +2,7 @@
 
 vvvv's functionality is structured into individual libraries, also known as NuGet packages. Not all of them are shipping with vvvv, but they can easily be installed. Most of them will be open-source and many of them are provided and maintained by your fellow vvvv users.
 
-To learn how to use nugets in vvvv please refer to the documentation on [Managing NuGets](libraries/dependencies.md#manage-nugets) or watch the [HowTo Use NuGets](https://youtu.be/-U_kUQ3VDog) video.
+To learn how to use nugets in vvvv please refer to the documentation on [Managing NuGets](referencing.md#manage-nugets) or watch the [HowTo Use NuGets](https://youtu.be/-U_kUQ3VDog) video.
 
 Find them structured into these categories:
 
@@ -13,13 +13,10 @@ Find them structured into these categories:
 | [Augmented Reality](augmentedreality.md) | Aruco markers, ... |
 | [Computer Vision](computervision.md) | OpenCV, Dlib, ... |
 | [Databases](databases.md) |  |
-| [Depth Cameras](depthcameras.md) | Kinect, RealSense, Astra, LeapMotion |
-| [Devices](devices.md) | WinTab, SICK, ... |
+| [Devices](devices.md) | Depth Cameras, Arduino, lights, lasers, SICK, ... |
 | [Graphics](graphics.md) | 2d Skia, 3d Stride, ...|
-| [IOT](iot.md) | Arduino, Firmata, ... |
-| [Lights & Lasers](lightsandlasers.md) | DMX, Art-Net, ... |
 | [Machine Learning](machinelearning.md) | Wekinator, RunwayML, ... |
-| [Networking](networking.md) | UDP, TCP, ZMQ, MQTT, WebSocket, OSC, TUIO, RCP, HTTP, ...|
+| [IO](io.md) | Networking Protocols, ... |
 | [Video](video.md) |  Video playback, capturing, ...|
 | [Misc](misc.md) |  |
 

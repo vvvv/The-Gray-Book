@@ -9,3 +9,6 @@ NuGet: [VL.Audio](https://www.nuget.org/packages/VL.Audio)
 
 Midi nodes are shipping with vvvv.
 
+## FMOD 
+Wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.  
+NuGet: [VL.FMODStudio](https://www.nuget.org/packages/VL.FMODStudio)

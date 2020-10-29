@@ -4,7 +4,7 @@
 UDPServer and UDPClient are shipping with vvvv.
 
 ## TCP
-TCP server and client.  
+TCP server and client. For decoding received byte streams, use Tokenizer nodes.  
 NuGet: [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP)  
 
 ## WebSocket

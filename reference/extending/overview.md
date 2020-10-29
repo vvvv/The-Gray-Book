@@ -1,4 +1,5 @@
 # Extending vvvv
+vvvv makes it easy for you to extend it with your own nodes and libraries. Here is how: 
 
 ## Custom Nodes
 
@@ -7,13 +8,11 @@
 
 ## Developing Libraries
 
-* [Contributing to existing libraries](contributing.md)
+* [Contributing to an existing library](contributing.md)
+* [Creating a new library](creating.md)
 * [Forwarding .NET libraries](patching-libraries.md)
+* [The vvvv API](api.md)
 * [Aspects](aspects.md)
 * [Design Guidlines](design-guidelines.md)
 * [Providing Help](providing-help.md)
 * [Publishing a NuGet](publishing.md)
-  
-## Integrating with vvvv
-
-* [The vvvv API](api.md)

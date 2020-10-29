@@ -19,3 +19,7 @@ NuGet: [VL.WinformsUtils](https://www.nuget.org/packages/VL.WinFormsUtils)
 ## String Manipulation
 Provides some useful string manipulation nodes  
 NuGet: [VL.StringExtensions](https://www.nuget.org/packages/VL.StringExtensions)
+
+## SuperMontior
+This library wraps allanrodriguez' MonitorDetailsReader and builds small useful utils on top of it  
+NuGet: [VL.SuperMonitor](https://www.nuget.org/packages/VL.SuperMonitor/1.0.3-alpha)
