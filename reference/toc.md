@@ -37,7 +37,7 @@
 
 # [Libraries](libraries/overview.md)
 ## [Referencing Libraries](libraries/referencing.md)
-## [The Core Library](libraries/standard_libraries.md)
+## [The Core Library](libraries/corelib.md)
 ### [Collections](libraries/collections.md)
 ### [Reactive](libraries/reactive.md)
 ### [Serialization](libraries/serialization.md)

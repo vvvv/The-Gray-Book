@@ -2,8 +2,9 @@
 
 ## Aruco Markers
 
-A set of nodes to detect Aruco markers is included with [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
+A set of nodes to detect Aruco markers is included with [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV).
 
-## EasyAR
+## See also
+Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](using-net-libraries.md) for learning how to explore them.
 
-Untestet, but it should be possible to use [EasyAR](https://www.easyar.com/) with vvvv.
+* [EasyAR](https://www.easyar.com/)
