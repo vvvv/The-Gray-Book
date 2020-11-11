@@ -130,7 +130,7 @@ Start a new link from the same source after finishing a connection|Finish with m
 Assign a link to an operation|Rightclick -> Assign
 Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> + double leftclick or double rightclick the link
 Insert a node into an existing link|Double leftclick the link
-Show a links tooltip while hovering it|hold <span class="keyseq"><kbd>Ctrl</kbd></span>
+Show a links tooltip while hovering it|Hold <span class="keyseq"><kbd>Ctrl</kbd></span>
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>SPACE</kbd></span>
 Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
 
