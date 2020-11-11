@@ -79,7 +79,7 @@ Increase count of input pins for nodes like +, Cons, ...|<span class="keyseq"><k
 Decrease count of input pins for nodes like +, Cons, ...|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
 Expose Pins|<span class="keyseq"><kbd>Ctrl</kbd><kbd>K</kbd></span>
 Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
-Move selected nodes faster|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Arrows</kbd></span>
+Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 
 ## Pin Groups
 Description|Action
@@ -125,12 +125,12 @@ Create a node while linking|Finish with a double leftclick
 Create an accumulator input or output proxy in IF or LOOP while linking|Finish with <span class="keyseq"><kbd>Ctrl</kbd></span> + leftclick in the region
 Create a splicer input or output proxy in LOOP while linking|Finish with <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd></span> + leftclick in the region
 Insert a IOBox into an existing link|Double rightclick the link
-Delete a link|Middleclick it
+Delete a link|Middleclick it or select it and press <span class="keyseq"><kbd>DEL</kbd></span>
 Start a new link from the same source after finishing a connection|Finish with middleclick
 Assign a link to an operation|Rightclick -> Assign
 Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> + double leftclick or double rightclick the link
 Insert a node into an existing link|Double leftclick the link
-Show a links tooltip while hovering it|<span class="keyseq"><kbd>Ctrl</kbd></span>
+Show a links tooltip while hovering it|hold <span class="keyseq"><kbd>Ctrl</kbd></span>
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>SPACE</kbd></span>
 Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
 
