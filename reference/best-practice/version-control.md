@@ -90,7 +90,7 @@ There is much more to git, but the above should give you an idea of the most sim
 
 ## Working with a team
 
-When working with a team, depending on everyones git expertise, it may help if you're agree on one Git client to use. So in case there are problems you can help each other out more easily. 
+When working with a team, depending on everyone's git expertise, it may help if you're agree on one Git client to use. So in case there are problems you can help each other out more easily. 
 
 Now the obvious problem that may arise in a team, is that people may be working on the same .vl document independent of each other:
 
