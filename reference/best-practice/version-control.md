@@ -1,6 +1,6 @@
 # Version Control with Git
 
-As soon as you're working on something that is more than a quick sketch, you should consider putting your .vl documents under version control using Git There are other version control systems, but Git is by far the most widely used. It takes some getting used to, but once you get the hang of it, there is no turning back.
+As soon as you're working on something that is more than a quick sketch, you should consider putting your .vl documents under version control using Git. There are other version control systems, but Git is by far the most widely used. It takes some getting used to, but once you get the hang of it, there is no turning back.
 
 So instead of saving your progress under files with incremental names, like foo_1.vl, then foo_2.vl, then foo_3.vl,... where you pile up endless versions of your work but you can't remember which was which, version control allows you to:
 - save the state of your work (even spanning multiple .vl documents) in one "commit"
@@ -65,7 +65,7 @@ TODO
 Here are some general thoughts regarding commits:
 - Try to commit changes that you can describe well in a commit message
 - Avoid commiting changes that involve multiple "tasks"
-- One commit per task/fix/change is recommended. 
+- One commit per task/fix/change is recommended
 - Never commit changes to a file you did not intentionally change (files can get changed while working on something else by accident, or you may forget about something you tried somewhere but did not intend to commit)
 - Always check the changes you are about to commit to make sure they match what you are intending to change
 
@@ -84,7 +84,7 @@ As long as you're working on a project on your own, everything is mostly straigh
 - Push your commits to remote
 - Get back to the first PC, pull the remote commits you pushed from PC 2, and continue working
 
-Now, what git allows you to do, is to switch to any state of your work without having worry about loosing your latest state. You do this by runnig a **checkout** of any particular commit of your history. When you're done looking at the older state, you can go back to your latest state easily by checking it out again. 
+Now, what git allows you to do, is to switch to any state of your work without having worry about loosing your latest state. You do this by running a **checkout** of any particular commit of your history. When you're done looking at the older state, you can go back to your latest state easily by checking it out again. 
 
 There is much more to git, but the above should give you an idea of the most simple workflow. Practice this on your own projects, before moving on to work with a team, where things can get a bit more juicy.
 
@@ -115,11 +115,11 @@ While with vvvv you can create an entire project in just one .vl document, it is
 - Define owners for the individual files, ie. only an owner is allowed to commit a change to a file
 - Reference the definition documents as dependencies in the master document and build the master application there
 
-Obviously the master .vl document is a classic point of conflict because everyone needs to work on it to see their changes working. But try this: Instead of building 
+Obviously the master .vl document is a classic point of conflict because everyone needs to work on it to see their changes working. But try this: If the part you're working on is sufficiently separate from the other parts, use your own local copy of the master document to work in your parts. Here you can mess around as you please. This is just for you to test, you'd not commit this file. Just when your part is integrated as planned you make sure you have the latest master document pulled, tell everyone you'll now be pushing your part and simply copy/paste over your part in one go. Like this you even don't risk a potential merge. Obviously this doesn't work for all scenarios.
   
 ### Communicate
 
-There will be times where changes need to touch many documents at once. In those cases make sure that everyone is aware this is going to happen. Make everyone commit and push there latest state. Then one team member makes the changes touching multiple documents. If in doubt, do these changes together, while screensharing, so everyone knows whats going on. 
+There will be times where changes need to touch many documents at once. In those cases make sure that everyone is aware this is going to happen. Make everyone commit and push their latest state. Then one team member makes the changes touching multiple documents. If in doubt, do these changes together, while screensharing, so everyone knows what's going on. 
 
 ## Branching
 
