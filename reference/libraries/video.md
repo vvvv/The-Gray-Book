@@ -1,10 +1,10 @@
 # Video
 
-## Playback
+## Playback and Video Input 
 
-* [VL.MediaFoundation](https://www.nuget.org/packages/VL.MediaFoundation)
-* [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer)
-* [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
+* NuGet: [VL.MediaFoundation](https://www.nuget.org/packages/VL.MediaFoundation)
+* NuGet: [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer)
+* NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 
 ## Cameras
 See also [Depth Cameras](depthcameras.md).
@@ -21,7 +21,7 @@ See also [Depth Cameras](depthcameras.md).
 
 ## Spout
 
-Part of  with VL.Stride.
+Shipping with vvvv via VL.Stride.
 
 ## NDI
 

@@ -1,18 +1,26 @@
 # Machine Learning
 
-## Wekinator
+## Lobe
+[Lobe](https://lobe.ai) allows you to train machine learning models on your local PC, given a range of images and labels. Then it classifies any new image you give it.
 
-See [VL.Wekinator](https://github.com/sebescudie/VL.Wekinator) on GitHub.
+NuGet: [VL.Lobe](https://www.nuget.org/packages/VL.Lobe)
 
-## VL.RunwayML
+## RunwayML
 [RunwayML](http://runwayml.com) provides an extensive list of machine learning models that can either be executed on their cloud (paid) or downloaded to be run locally. 
 
 Using VL.RunwayML you get a node for each local or hosted model you want to work with. This makes it a breeze to get results quickly.  
 
 NuGet: [VL.RunwayML](https://www.nuget.org/packages/VL.RunwayML)  
 
+## Wekinator
+A set of nodes to easily interact with [The Wekinator]((http://www.wekinator.org/)).
+NuGet: [VL.Wekinator](https://www.nuget.org/packages/VL.Wekinator)
+
 ## VLML
-See [VLML](https://github.com/ThinkingForms/VLML) on github.
+NuGet: [VLML](https://www.nuget.org/packages/VLML_Stride)
+
+## ONNX
+NuGet: [ONNX](https://www.nuget.org/packages/VLML.ONNX_03)
 
 ## VL.OpenCV
 
@@ -21,9 +29,9 @@ NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 
 ## VL.Dlib
 
-See [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet) on GitHub.
+GitHub: [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet)
 
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](using-net-libraries.md) for learning how to explore them.
+* [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 * [Accord.NET](http://accord-framework.net)
-* [lobe](https://www.nuget.org/packages/lobe)

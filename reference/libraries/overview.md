@@ -4,7 +4,7 @@ vvvv's functionality is structured into individual libraries, also known as NuGe
 
 To learn how to use nugets in vvvv please refer to the documentation on [Managing NuGets](referencing.md#manage-nugets) or watch the [HowTo Use NuGets](https://youtu.be/-U_kUQ3VDog) video.
 
-Find them structured into these categories:
+Besides the [VL.CoreLib](corelib.md), which is accessible by default, here is an overview of what's available:
 
 | Category | Content |
 |---|---|
@@ -13,15 +13,15 @@ Find them structured into these categories:
 | [Augmented Reality](augmentedreality.md) | Aruco markers, ... |
 | [Computer Vision](computervision.md) | OpenCV, Dlib, ... |
 | [Databases](databases.md) |  |
-| [Devices](devices.md) | Depth Cameras, Arduino, lights, lasers, SICK, ... |
+| [Devices](devices.md) | Depth Cameras, Arduino, Lights, Lasers, SICK, ... |
 | [Graphics](graphics.md) | 2d Skia, 3d Stride, ...|
-| [Machine Learning](machinelearning.md) | Wekinator, RunwayML, ... |
+| [Machine Learning](machinelearning.md) | Wekinator, RunwayML, Lobe, ONNX, ... |
 | [IO](io.md) | Networking Protocols, ... |
 | [Video](video.md) |  Video playback, capturing, ...|
 | [Misc](misc.md) |  |
 
 Missing anything?
 * Some more gems can often be found in the [work-in-progress section](https://discourse.vvvv.org/c/wip/27) of the vvvv forum. 
-* Apart from the above libraries specifically made for vvvv, you can also [use almost any .NET library](using-net-libraries.md).
+* Apart from the above libraries specifically made for vvvv, you can also [use almost any .NET library](../extending/using-net-libraries.md).
 
-You can also make your own libraries for personal use (for sharing nodes and types among different projects) or for sharing with others.
+You can also make your own libraries for personal use (for sharing nodes and types among different projects) or for sharing with others. See [Extending vvvv](../extending/overview.md).

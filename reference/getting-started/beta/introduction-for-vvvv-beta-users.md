@@ -1,4 +1,4 @@
-# VL for vvvv beta beta users
+# Introduction for vvvv beta users
 
 Over the years people have been using vvvv beta to realize more and more complex projects, often maxing out its capabilities. New programming concepts and techniques had to be introduced to keep it up to date with today's user requirements.
 

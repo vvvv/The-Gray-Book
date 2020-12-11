@@ -8,13 +8,19 @@ NuGet: [VL.ScreenRecorder](https://www.nuget.org/packages/VL.ScreenRecorder)
 The $Q Super-Quick 2d Gesture Recognizer for VL  
 NuGet: [VL.2D.DollarQ](https://www.nuget.org/packages/VL.2D.DollarQ)
 
+## QRCode/Barcode 
+QRCode encoder and decoder.
+NuGet: [VL.QRCode](https://www.nuget.org/packages/VL.QRCode)
+
 ## Voronoi and Delaunay
 NuGet: [VL.2d.Voronoi](https://www.nuget.org/packages/VL.2d.Voronoi)
 
 ## 2d Simplify
+Polyline simplification
 NuGet: [VL.2d.Simplify](https://www.nuget.org/packages/VL.2D.Simplify/)
 
 ## Noise
+Noise Generator in many flavours.
 NuGet: [VL.FastNoise](https://www.nuget.org/packages/VL.FastNoise)
 NuGet: [VL.SharpNoise](https://www.nuget.org/packages/VL.SharpNoise)
 
@@ -49,3 +55,7 @@ GitHub: https://github.com/vvvv/VL.PsTools
 ## HardwareMonitor
 Read sensor data provided by [OpenHardwareMonitor](https://openhardwaremonitor.org/).
 GitHub: https://github.com/vvvv/VL.HardwareMonitor
+
+## See also
+Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](using-net-libraries.md) for learning how to explore them.
+* For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)

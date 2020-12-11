@@ -1,5 +1,13 @@
 # Other Devices
 
+## SpaceMouse
+https://3dconnexion.com/de/
+NuGet: [VL.Devices.SpaceMouse](https://www.nuget.org/packages/VL.Devices.SpaceMouse)
+
+## Eye Tracker
+https://en.wikipedia.org/wiki/The_Eye_Tribe
+NuGet: [VL.Devices.TheEyeTribe](https://www.nuget.org/packages/VL.Devices.TheEyeTribe)
+
 ## WinTab
 For using WinTab Tablets (e.g. Wacom)  
 NuGet: [VL.Devices.WinTab](https://www.nuget.org/packages/VL.Devices.WinTab)

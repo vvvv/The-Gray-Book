@@ -29,14 +29,10 @@ Which GUI client to choose? In the end you may want to try different ones and se
 TODO: "Checkout as is - commit as is"
 
 ### Cloud Service
-If you want to backup your git repositories in the cloud, which also allows you to easily share them with others, sign up with one of these git cloud providers:
+If you want to backup your git repositories in the cloud, which also allows you to easily share them with others, sign up with one of these [git cloud providers](https://git.wiki.kernel.org/index.php/GitHosting).
 
-- [GitHub](http://github.com)
-- [Bitbucket](http://bitbucket.org)
-- [GitLab](http://gitlab.com)
-- [Codeberg](http://codeberg.org)
 
-Most of [vvvv's library repositories are on GitHub](https://github.com/vvvv), so if you want to contribute to those at some point, you'll need a GitHub account.
+Most of [vvvv's library repositories](https://github.com/vvvv) are on GitHub, so if you want to contribute to those at some point, you'll need a [GitHub](https://github.com) account.
 
 ### Terminology
 

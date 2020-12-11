@@ -1,5 +1,7 @@
 # Depth Cameras
 
+Devices that provide skeleton tracking and or depth pointclouds.
+
 ## Kinect
 
 For using the Microsoft Kinect v1/XBOX360  
@@ -25,7 +27,12 @@ NuGet: [VL.Devices.Astra](https://www.nuget.org/packages/VL.Devices.Astra)
 ## Intel RealSense
 
 For using the [Intel RealSense](https://www.intelrealsense.com/)  
-NuGet: [VL.Devices.RealSense](https://www.nuget.org/packages/VL.Devices.RealSense)  
+NuGet: [VL.Devices.RealSense](https://www.nuget.org/packages/VL.Devices.RealSense) 
+
+## ZED Camera
+
+For using [ZED Stereo Cameras](https://www.stereolabs.com/) by Stereo Labs.
+GitHub: [VL.ZEDCamera](https://github.com/m-box-de/VL.ZEDCamera)
 
 ## Nuitrack
 
@@ -35,4 +42,4 @@ NuGet: [VL.Devices.Nuitrack](https://www.nuget.org/packages/VL.Devices.Nuitrack)
 ## Ultraleap Motion Controller
 
 For using the [Ultraleap Motion Controller](https://www.ultraleap.com/product/leap-motion-controller/) for handtracking  
-NuGet: [VL.Devices.LeapOrion](https://www.nuget.org/packages/VL.Devices.LeapOrion)  
+NuGet: [VL.Devices.LeapOrion](https://www.nuget.org/packages/VL.Devices.LeapOrion)

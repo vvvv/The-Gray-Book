@@ -3,7 +3,7 @@ vvvv makes it easy for you to extend it with your own nodes and libraries. Here 
 
 ## Custom Nodes
 
-* [Using .NET libraries](../libraries/using-net-libraries.md)
+* [Using .NET libraries](using-net-libraries.md)
 * [Writing Nodes using C#](writing-nodes.md)
 
 ## Developing Libraries
@@ -11,6 +11,7 @@ vvvv makes it easy for you to extend it with your own nodes and libraries. Here 
 * [Contributing to an existing library](contributing.md)
 * [Creating a new library](creating.md)
 * [Forwarding .NET libraries](patching-libraries.md)
+* [Node Factories](factories.md)
 * [The vvvv API](api.md)
 * [Aspects](aspects.md)
 * [Design Guidlines](design-guidelines.md)

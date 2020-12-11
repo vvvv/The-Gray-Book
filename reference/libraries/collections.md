@@ -1,5 +1,7 @@
 # Collections
 
+A large number of different collection types is shipping with the VL.CoreLib:
+
 ## Sequence
 The base type for collections in VL is the _Sequence_. It corresponds to what is known as _IEnumerable_ in .net world. We just gave it a more human-readable name.
 

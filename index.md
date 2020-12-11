@@ -9,9 +9,21 @@ _disableBreadcrumb: true
 
 Generate interactive 2d or 3d motion graphics. Visualize data coming from network or offline sources. Control lights, lasers, motors or anything else you can connect to a PC. In the end export everything as a standalone program. Missing some functionality? vvvv can consume almost any .NET nuget and can be easily extended using c#.
 
+## vvvv beta vs. vvvv gamma vs. VL
+
+* ``vvvv beta`` is the original project, in development since around 2001
+* ``vvvv gamma`` is the new version, entirely rewritten from scratch, first released in 2020
+* ``VL`` is the name of the visual language that is at the core of vvvv gamma and can optionally also be used in vvvv beta
+
+When we speak of just ``vvvv``, in the past we meant ``vvvv beta``, now we mean ``vvvv gamma``. With ``vvvv`` refer to the whole programming environment, with all its windows, while with ``VL`` we refer more specifically to the language. This distinction is useful, because one fine day VL, the language, may be included in other environments, not only vvvv beta and vvvv gamma...
+
 ## Where to start?
 
+![](2020-11-18-19-12-19.png)
+
 vvvv has a built-in HelpBrowser, press F1 to open it. On the ``Learn`` tab you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
+
+
 
 Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube.
 
@@ -25,4 +37,4 @@ Any questions left? Get them answered in the [forum](http://discourse.vvvv.org).
 
 ### The Chat
 
-Want to chat with other vvvv users? Join is in the [chat](https://app.element.io/#/room/#vvvv:matrix.org).
+Want to chat with other vvvv users? Join us in the [chat](https://app.element.io/#/room/#vvvv:matrix.org).
