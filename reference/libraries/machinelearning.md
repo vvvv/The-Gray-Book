@@ -5,6 +5,9 @@
 
 NuGet: [VL.Lobe](https://www.nuget.org/packages/VL.Lobe)
 
+## ONNX
+NuGet: [ONNX](https://www.nuget.org/packages/VLML.ONNX_03)
+
 ## RunwayML
 [RunwayML](http://runwayml.com) provides an extensive list of machine learning models that can either be executed on their cloud (paid) or downloaded to be run locally. 
 
@@ -19,16 +22,11 @@ NuGet: [VL.Wekinator](https://www.nuget.org/packages/VL.Wekinator)
 ## VLML
 NuGet: [VLML](https://www.nuget.org/packages/VLML_Stride)
 
-## ONNX
-NuGet: [ONNX](https://www.nuget.org/packages/VLML.ONNX_03)
-
 ## VL.OpenCV
-
 Comes with nodes to run PoseNet and Yolo3. CPU only.  
 NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)  
 
 ## VL.Dlib
-
 GitHub: [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet)
 
 ## See also

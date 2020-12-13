@@ -1,4 +1,4 @@
-# Github workflow configuration
+# Publishing a NuGet
 
 The following guide covers the necessary steps to setup a workflow on your Github repository that will publish your plugin to nuget.org or any feed you like using the [PublishVLNuget](https://github.com/vvvv/PublishVLNuget) Github Action.
 

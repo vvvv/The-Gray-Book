@@ -36,6 +36,6 @@ In order for nugets to work with vvvv you have to provide the following structur
 ## Creating and Publishing a NuGet
 Once you're ready to create a NuGet .nupkg from your library, there are different options:
 
+* [Use a build-service like GitHub Actions](publishing.md)
 * [nuget.exe commandline](https://docs.microsoft.com/de-de/nuget/reference/nuget-exe-cli-reference)
 * [NuGet Package Explorer UI](http://docs.nuget.org/Create/using-a-gui-to-build-packages)
-* [Use a build-service like AppVeyor](publishing.md)

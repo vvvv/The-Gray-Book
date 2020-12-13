@@ -1,9 +1,9 @@
 # Using .NET Libraries
 
-Any static operation or member of a class defined in a .NET .dll (library) can be used as a node in VL.
+Any static operation or member of a class defined in a .NET .dll can be used as a node in VL.
 
 ## Referencing Libraries
-To get access to the content of a library in a patch you only need to [reference](referencing.md) it as a dependency in the .vl document.
+To get access to the content of a library in a patch you only need to [reference](../libraries/referencing.md) it as a dependency in the .vl document.
 
 ## Accessing nodes
 

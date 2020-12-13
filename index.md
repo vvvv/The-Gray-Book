@@ -19,11 +19,7 @@ When we speak of just ``vvvv``, in the past we meant ``vvvv beta``, now we mean 
 
 ## Where to start?
 
-![](2020-11-18-19-12-19.png)
-
 vvvv has a built-in HelpBrowser, press F1 to open it. On the ``Learn`` tab you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
-
-
 
 Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube.
 

@@ -15,8 +15,8 @@ Besides the [VL.CoreLib](corelib.md), which is accessible by default, here is an
 | [Databases](databases.md) |  |
 | [Devices](devices.md) | Depth Cameras, Arduino, Lights, Lasers, SICK, ... |
 | [Graphics](graphics.md) | 2d Skia, 3d Stride, ...|
-| [Machine Learning](machinelearning.md) | Wekinator, RunwayML, Lobe, ONNX, ... |
 | [IO](io.md) | Networking Protocols, ... |
+| [Machine Learning](machinelearning.md) | Wekinator, RunwayML, Lobe, ONNX, ... |
 | [Video](video.md) |  Video playback, capturing, ...|
 | [Misc](misc.md) |  |
 

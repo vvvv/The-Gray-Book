@@ -1,4 +1,4 @@
-# Library Design Guidelines
+# Design Guidelines
 
 During the design of a library a lot of choices have to be made. Be it regarding namings or patterns being used or datatypes that are being exposed. Here is a collection of guidelines that we followed when we created the VL.CoreLib and other libraries we ship with VL. In order to provide users of VL with a consistent look/feel/behavior of libraries/nodes we recommend you follow these guidelines for the design of your own libraries.
 

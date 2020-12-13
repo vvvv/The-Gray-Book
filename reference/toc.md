@@ -44,7 +44,7 @@
 ### [Reactive](libraries/reactive.md)
 ### [Serialization](libraries/serialization.md)
 ### [JSON](libraries/json.md)
-### [XML](libraries/xml.md)<>
+### [XML](libraries/xml.md)
 
 ## [Animation](libraries/animation.md)
 ## [Audio](libraries/audio.md)
@@ -65,13 +65,12 @@
 ## [Misc](libraries/misc.md)
 
 # [Extending vvvv](extending/overview.md)
-## [Using any .NET Library](extending/using-net-libraries.md)
+## [Using .NET Libraries](extending/using-net-libraries.md)
 ## [Writing Nodes using C#](extending/writing-nodes.md)
 ## [Contributing to a Library](extending/contributing.md)
 ## [Creating a new Library](extending/creating.md)
 ## [Forwarding .NET Libraries](extending/forwarding.md)
-## [Node Factory](extending/node-factory.md)
-## [The vvvv API](extending/api.md)
+## [Node Factories](extending/node-factories.md)
 ## [Aspects](extending/aspects.md)
 ## [Design Guidelines](extending/design-guidelines.md)
 ## [Providing Help](extending/providing-help.md)
