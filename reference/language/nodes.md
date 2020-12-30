@@ -25,6 +25,7 @@ Any node that spots an arrow icon has a patch behind it which can be reached by 
 ## Pin group
 Pins of type Spread can also be changed to a so called _Pin Group_ that let's you add or remove pins by pressing <span class="keyseq"><kbd>CTRL</kbd><kbd>+</kbd></span> or <span class="keyseq"><kbd>CTRL</kbd><kbd>-</kbd></span> respectively (like i.e. Group or Cons).
 In order to do so, simply open the Configure Menu of the pin via `context-menu > Configure` and set the Pin Group flag to TRUE by right-clicking on it.
+![](../../images/language/PinGroup.png)
 
 ## Apply pin
 Nodes whose first input and first output share the same datatype can have an _Apply_ pin added via the `context-menu > Configure`. If apply is set to false, the operation is bypassed and the input returned unchanged as the output.
