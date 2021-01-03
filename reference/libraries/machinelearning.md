@@ -33,3 +33,7 @@ GitHub: [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet)
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](using-net-libraries.md) for learning how to explore them.
 * [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 * [Accord.NET](http://accord-framework.net)
+
+Related tools:
+* [PerceptiLabs](https://perceptilabs.com) A GUI for TensorFlow
+* [MediaPipe](https://mediapipe.dev/) MediaPipe offers open source cross-platform, customizable ML solutions for live and streaming media.

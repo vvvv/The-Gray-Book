@@ -20,8 +20,10 @@ Besides the [VL.CoreLib](corelib.md), which is accessible by default, here is an
 | [Video](video.md) |  Video playback, capturing, ...|
 | [Misc](misc.md) |  |
 
-Missing anything?
-* Some more gems can often be found in the [work-in-progress section](https://discourse.vvvv.org/c/wip/27) of the vvvv forum. 
+Missing anything? 
+* Check the [work-in-progress section](https://discourse.vvvv.org/c/wip/27) of the vvvv forum
+* Browse the [github topic VL](https://github.com/topics/vl) 
+* Scroll the [nugets taged VL](https://www.nuget.org/packages?packagetype=&sortby=created-desc&q=Tags%3A%22VL%22&prerel=True)
 * Apart from the above libraries specifically made for vvvv, you can also [use almost any .NET library](../extending/using-net-libraries.md).
 
 You can also make your own libraries for personal use (for sharing nodes and types among different projects) or for sharing with others. See [Extending vvvv](../extending/overview.md).
