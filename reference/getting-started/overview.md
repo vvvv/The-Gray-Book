@@ -13,7 +13,7 @@ This reference is further structured into the following chapters:
 
 | Chapter | Content |
 |---|---|
-| [Development Environment](hde/gui.md) | About the different components (menues, windows) of vvvv |
-| [Language](language/language.md) | About the language VL | 
-| [Libraries](libraries/overview.md) | An overview of all available libraries |
-| [Extending vvvv](extending/overview.md) | For developers to write their own nodes and libraries |
+| [Development Environment](../hde/gui.md) | About the different components (menues, windows) of vvvv |
+| [Language](../language/language.md) | About the language VL | 
+| [Libraries](../libraries/overview.md) | An overview of all available libraries |
+| [Extending vvvv](../extending/overview.md) | For developers to write their own nodes and libraries |
