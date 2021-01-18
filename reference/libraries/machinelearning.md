@@ -37,4 +37,5 @@ Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET 
 
 Related tools:
 * [PerceptiLabs](https://perceptilabs.com) A GUI for TensorFlow
-* [MediaPipe](https://mediapipe.dev/) MediaPipe offers open source cross-platform, customizable ML solutions for live and streaming media.
+* [MediaPipe](https://mediapipe.dev/) MediaPipe offers open source cross-platform, customizable ML solutions for live and streaming media
+* [Teachable Machine](https://teachablemachine.withgoogle.com/)
