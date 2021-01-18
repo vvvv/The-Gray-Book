@@ -1,21 +1,24 @@
 # Networking
 
 ## UDP
-UDPServer and UDPClient are shipping with vvvv.
+UDP server and client nodes are shipping with vvvv. 
 
 ## TCP
-TCP server and client. For decoding received byte streams, use Tokenizer nodes.  
+TCP server and client nodes. For decoding received byte streams, use the Tokenizer nodes.  
 NuGet: [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP)  
 
 ## WebSocket
+Websocket server and client nodes. For decoding received byte streams, use the Tokenizer nodes.  
 http://websocket.org  
 NuGet: [VL.IO.WebSocket](https://www.nuget.org/packages/VL.IO.WebSocket)  
 
 ## OSC
+OSCServer and OSCClient nodes are shipping with vvvv.
 http://opensoundcontrol.org  
 NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)  
 
 ## TUIO
+Tuio tracker and client nodes are shipping with vvvv.
 http://tuio.org  
 NuGet: [VL.IO.TUIO](https://www.nuget.org/packages/VL.IO.TUIO)  
 
@@ -31,7 +34,7 @@ https://zeromq.org
 NuGet: [VL.IO.NETMQ](https://www.nuget.org/packages/VL.IO.NETMQ)  
 
 ## RCP  
-Easy remote control parameters in your patches. http://rabbitcontrol.cc  
+An easy way to remote control parameters in your patches. http://rabbitcontrol.cc  
 Client: http://client.rabbitcontrol.cc  
 NuGet: [VL.IO.RCP](https://www.nuget.org/packages/VL.IO.RCP)  
 

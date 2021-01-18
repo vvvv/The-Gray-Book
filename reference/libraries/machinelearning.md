@@ -1,11 +1,12 @@
 # Machine Learning
 
 ## Lobe
-[Lobe](https://lobe.ai) allows you to train machine learning models on your local PC, given a range of images and labels. Then it classifies any new image you give it.
+[Lobe](https://lobe.ai) allows you to train a machine-learning model for image classification on your local PC. You can then run the model inside vvvv using VL.Lobe.
 
 NuGet: [VL.Lobe](https://www.nuget.org/packages/VL.Lobe)
 
 ## ONNX
+Run ONNX models inside vvvv.
 NuGet: [ONNX](https://www.nuget.org/packages/VLML.ONNX_03)
 
 ## RunwayML
@@ -27,10 +28,11 @@ Comes with nodes to run PoseNet and Yolo3. CPU only.
 NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)  
 
 ## VL.Dlib
+Allows to run certain machine-learning models.
 GitHub: [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet)
 
 ## See also
-Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](using-net-libraries.md) for learning how to explore them.
+Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 * [Accord.NET](http://accord-framework.net)
 * [SciSharp](https://scisharp.github.io/SciSharp/)

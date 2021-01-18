@@ -57,5 +57,5 @@ Read sensor data provided by [OpenHardwareMonitor](https://openhardwaremonitor.o
 GitHub: https://github.com/vvvv/VL.HardwareMonitor
 
 ## See also
-Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](using-net-libraries.md) for learning how to explore them.
+Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)
