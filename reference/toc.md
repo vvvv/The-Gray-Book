@@ -1,4 +1,5 @@
 # [Getting Started](getting-started/overview.md)
+## [Introduction for Creative Coders](getting-started/cc/introduction-for-creative-coders.md)
 ## [Introduction for vvvv beta users](getting-started/beta/introduction-for-vvvv-beta-users.md)
 ### [User Interface](getting-started/beta/user-interface.md)
 ### [Document structure](getting-started/beta/documentstructure.md)
