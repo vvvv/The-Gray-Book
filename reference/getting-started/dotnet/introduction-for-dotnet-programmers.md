@@ -29,3 +29,5 @@ In general we try to do as little renaming as possible when importing data types
 You may want to watch some [Tutorials](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) and [HowTo's](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) or a [Talk introducing vvvv to .NET developers](https://youtu.be/-Rr7QRYlZDc).
 
 The find out how you can [extend vvvv](../../extending/overview.md) and have a look at our [Demo Library](https://github.com/vvvv/vl.demolib) including C# and F# examples of writing your own nodes for VL.
+
+Any questions left? Get them answered in the [forum](http://discourse.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).
