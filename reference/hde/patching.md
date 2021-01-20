@@ -47,7 +47,7 @@ Zoom the patch|Mousewheel or <span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></s
 Reset pan and zoom of the patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>0</kbd></span>
 
 ## Alternative Pan & Zoom
-If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* setting to _false_ to get the following behavior:
+If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* [setting](settings.md) to _false_ to get the following behavior:
 
 Description|Action
 -|-

@@ -11,7 +11,7 @@ vvvv makes it easy for you to extend it with your own nodes and libraries. Here 
 * [Contributing to an existing library](contributing.md)
 * [Creating a new library](creating.md)
 * [Forwarding .NET libraries](patching-libraries.md)
-* [Node Factories](node-factory.md)
+* [Node Factories](node-factories.md)
 * [Aspects](aspects.md)
 * [Design Guidlines](design-guidelines.md)
 * [Providing Help](providing-help.md)
