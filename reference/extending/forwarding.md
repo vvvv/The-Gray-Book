@@ -1,6 +1,6 @@
 # Forwarding .NET Libraries
 
-By [Using .NET Libraries](using_net_libraries.md) we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be very convenient to use in the dataflow context of VL.
+By [Using .NET Libraries](using-net-libraries.md) we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be very convenient to use in the dataflow context of VL.
 
 To make those libraries accessible to more casual users we often want to curate exactly what nodes and types of the original library are seen by them. Forwarding allows us to insert a very thin wrapper layer to conveniently provide such curation.
 
@@ -27,7 +27,7 @@ In a typical scenario you create _one .vl document_ to forward types from one or
 ## Create Type Forward
 
 #### 1. Set a reference to the .NET .dll
-In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See [Dependencies](dependencies.md).
+In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See [Referencing Files](../libraries/referencing.md#Files).
 
 #### 2. Prepare a Category Group
 An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the Document Patch.

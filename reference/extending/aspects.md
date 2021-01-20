@@ -1,3 +1,5 @@
+# Aspects
+
 Aspects help a library or project developer to get a better document structure and have a much cleaner looking NodeBrowser.
 
 To add an aspect to a node, you simply put the node into *special categories* created via the Group element in the NodeBrowser. If you create such a category the VL system will pick it up by it's name. It gets removed from the full node category and added as an aspect to all nodes and types anywhere inside it. So for example *MyLibrary.Value.Advanced* or *MyLibrary.Advanced.Value* will simply become *MyLibrary.Value*.

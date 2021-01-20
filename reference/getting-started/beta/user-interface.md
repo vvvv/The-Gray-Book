@@ -8,7 +8,7 @@ The VL nodebrowser is a totally different beast. See link:reference/hde/the_node
 There is no global Inspektor in VL. Instead an Inspektor pops up next to inspectable elements on demand. MiddleClick an Input/Output, Pad or IOBox or rightclick on its label -> Configure to bring up its Inspektor.
 
 ## Finder
-See link:reference/hde/finders.adoc[Finders].
+See [Finders](../hde/finders.md).
 
 ## TTY Renderer
 There is no TTY or error console yet.
