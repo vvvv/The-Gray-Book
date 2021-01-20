@@ -15,7 +15,7 @@ Generate interactive 2d or 3d motion graphics. Visualize data coming from networ
 
 * ``vvvv beta`` is the original project, in development since around 2001
 * ``vvvv gamma`` is the new version, entirely rewritten from scratch, first released in 2020
-* ``VL`` is the name of the visual language that is at the core of vvvv gamma and can optionally also be used in vvvv beta
+* ``VL`` is the name of the visual programming language that is at the core of vvvv gamma and can optionally also be used in vvvv beta
 
 When we speak of just ``vvvv``, in the past we meant ``vvvv beta``, now we mean ``vvvv gamma``. With ``vvvv`` we refer to the whole programming environment, with all its windows, while with ``VL`` we refer more specifically to the language. This distinction is useful, because one fine day VL, the language, may be included in other environments, not only vvvv beta and vvvv gamma...
 
