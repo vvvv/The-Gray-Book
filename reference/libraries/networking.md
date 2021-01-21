@@ -38,8 +38,8 @@ An easy way to remote control parameters in your patches. http://rabbitcontrol.c
 Client: http://client.rabbitcontrol.cc  
 NuGet: [VL.IO.RCP](https://www.nuget.org/packages/VL.IO.RCP)  
 
-## HTTP Get/Post
-Nodes are shipping with vvvv.  
+## HTTP Rest
+Get and Post nodes are shipping with vvvv.  
 
 ## WebServer
 NuGet: [VL.IO.HTTP.WebServer](https://www.nuget.org/packages/VL.IO.HTTP.WebServer)  
