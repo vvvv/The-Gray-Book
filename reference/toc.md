@@ -19,7 +19,7 @@
 ## [Finders](hde/finders.md)
 ## [Solution Explorer](hde/solution-explorer.md)
 ## [Documentation Window](hde/documentation.md)
-## [Patching](hde/patching.md)
+## [Keyboard Shortcuts](hde/keyboard-shortcuts.md)
 ## [Finding Help](hde/findinghelp.md)
 ## [Debugging](hde/debugging.md)
 ## [Settings](hde/settings.md)
