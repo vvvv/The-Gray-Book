@@ -70,7 +70,10 @@ Here are 3 ways to reference local files:
 <center>Add existing File as dependency</center>
 
 #### Missing Files
-Files that are showing up in red cannot be found on disk. You can Rightlcick to remove their reference. Note that you can also rightclick to select multiple files in a row and then apply "Remove" to all of them at once.
+Files that are showing up in red cannot be found on disk. You can rightclick to remove ore replace their reference. 
+
+#### Removing or Replacing Files
+You can rightclick a file reference to remove or replace it. Note that you can also rightclick to select multiple files in a row and then apply "Remove" to all of them at once.
 
 ![](../../images/libraries/vl-Dependencies-File-Remove.png)
 <center>Remove files</center>
