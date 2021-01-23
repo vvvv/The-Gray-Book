@@ -3,8 +3,8 @@
 ## Playback and Video Input 
 
 * NuGet: [VL.MediaFoundation](https://www.nuget.org/packages/VL.MediaFoundation)
-* NuGet: [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer)
 * NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
+* NuGet: [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer)
 
 ## Cameras
 See also [Depth Cameras](depthcameras.md).
