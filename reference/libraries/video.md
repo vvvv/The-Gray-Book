@@ -2,9 +2,13 @@
 
 ## Playback and Video Input 
 
-* NuGet: [VL.MediaFoundation](https://www.nuget.org/packages/VL.MediaFoundation)
+* NuGet: [VL.MediaFoundation](https://www.nuget.org/packages/VL.MediaFoundation) - mp4 and other standard formats
+* NuGet: [VL.HapPlayer](https://www.nuget.org/packages/VL.HapPlayer) - Hap and HapR playback 
 * NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 * NuGet: [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer)
+
+## Image Stack
+For professional image stack workflow there is a high-performance solution which is able to play a 4K image stack with about 180 fps: [VL.TextureLoader](https://discourse.vvvv.org/t/need-some-hints-for-research-stride-systemoutofmemoryexception/19101/20)
 
 ## Cameras
 See also [Depth Cameras](depthcameras.md).
