@@ -5,7 +5,7 @@ What you can do with the various existing creative coding frameworks, is often r
 Depending on where you come from, vvvv offers different benefits:
 
 ## Coming from text based coding
-You're familiar with text based creative coding, like:
+If you're familiar with text based creative coding, like:
 * [Cinder](https://www.libcinder.org) or [OpenFrameworks](https://openframeworks.cc)
 * [Nannou](https://nannou.cc) or [rin](https://rin.rs)  
 * [Processing](https://processing.org) or [p5.js](https://p5js.org)
@@ -28,7 +28,7 @@ VL is not your ordinary visual language: It comes with loops and if regions, all
 True, certain things, like low-level algorithms, are sometimes easier to write in text. [Nodes can be written](../../extending/overview.md) using C# or F#, without the need for any vvvv specific boilerplate code. That's why you can also directly use any of the .NET libraries hosted by the [NuGet](http://nuget.org) package manager. 
 
 ## Coming from other visual programming environments
-You're familiar with visual creative coding environments, like:
+If you're familiar with visual creative coding environments, like:
 
 * [cables](https://cables.gl)
 * [Isadora](https://troikatronix.com)
@@ -40,13 +40,13 @@ You're familiar with visual creative coding environments, like:
 ... then the following should be interesting for you:
 
 ### Vast, modular, open-source library of nodes
-Browse the [Library](../../libraries/overview.md) section to get an overview of the availability of a vast range of different libraries for vvvv, most of which are open-source (some not yet, but only for organisational reasons). Apart from the [VL.CoreLib](../../libraries/corelib.md) the 3 biggest to date are:
+Browse the [Library](../../libraries/overview.md) section to get an overview of the availability of a vast range of different libraries for vvvv, most of which are open-source (some not yet, but only for organisational reasons). Apart from the [VL.CoreLib](../../libraries/corelib.md) the three biggest to date are:
 - VL.Stride: for 3d rendering, shader programming, VR,... based on [Stride](http://stride3d.net)
 - VL.Skia: for 2d rendering, vector graphics export,... based on [Skia](https://skia.org)
 - VL.OpenCV: for computer vision,... based on [OpenCV](http://opencv.org)
 
-### Export windows applications
-Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper windows application. Other platforms are planned. The commercial developer license includes unlimited exports. 
+### Export Windows applications
+Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. The commercial developer license includes unlimited exports. 
 
 ### Comfortable licensing model
 vvvv is free for non-commercial. Simply download, install and use it:
