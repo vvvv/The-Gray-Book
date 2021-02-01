@@ -15,17 +15,17 @@ If you're familiar with text based creative coding, like:
   
 ### Save time
 
-vvvv does not have the classic time-consuming edit-compile-run cycle. For every change you make to your vvvv program, you'll get instant results! We call this **live-programming**. Every change is instantly compiled under the hood without you having to trigger it. If there is an error, you get an in-place indicator or tooltip about the problem and you can fix it without the need to restart the program.
+vvvv does not have the classic time-consuming edit-compile-run cycle. For every change you make to your vvvv program, you'll get instant results! We call this **live-programming** and are using a state hot-reload approach: Every change is instantly compiled under the hood without you having to trigger it. If there is an error, you get an in-place indicator or tooltip about the problem and you can fix it without the need to restart your program or loose state. 
 
 Further, with its [rich set of Libraries](../../libraries/overview.md) that only need to be connected, vvvv allows you to prototype a lot of common basic scenarios in no time. 
 
 ### Use familiar techniques
 
-VL is not your ordinary visual language: It comes with loops and if regions, allows for recursions and allows you to define and instantiate your own datatypes, even generic ones. You can use delegates, observables and execute parts of your program asynchronously. All without writing a single line of code.
+VL (the language used in vvvv) is not your ordinary visual language where you only can work with readymade, but hard to extend blocks: It comes with loops and if-regions, allows for recursions and allows you to define and instantiate your own datatypes, even generic ones. You can use delegates, observables and execute parts of your program asynchronously. All without writing a single line of code.
 
 ### Write your own nodes
 
-True, certain things, like low-level algorithms, are sometimes easier to write in text. [Nodes can be written](../../extending/overview.md) using C# or F#, without the need for any vvvv specific boilerplate code. That's why you can also directly use any of the .NET libraries hosted by the [NuGet](http://nuget.org) package manager. 
+True, certain things, like low-level algorithms, are sometimes easier to write in text. [Nodes can be written](../../extending/overview.md) using plain C# or F#, without the need for any vvvv specific boilerplate code. That's why you can also directly use any of the .NET libraries hosted by the [NuGet](http://nuget.org) package manager. 
 
 ## Coming from other visual programming environments
 If you're familiar with visual creative coding environments, like:
@@ -44,6 +44,7 @@ Browse the [Library](../../libraries/overview.md) section to get an overview of 
 - VL.Stride: for 3d rendering, shader programming, VR,... based on [Stride](http://stride3d.net)
 - VL.Skia: for 2d rendering, vector graphics export,... based on [Skia](https://skia.org)
 - VL.OpenCV: for computer vision,... based on [OpenCV](http://opencv.org)
+Further there is a big focus on supporting loads of [Devices](https://thegraybook.vvvv.org/reference/libraries/devices.html) and [Protocols](https://thegraybook.vvvv.org/reference/libraries/io.html) out of the box.
 
 ### Export Windows applications
 Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. The commercial developer license includes unlimited exports. 
@@ -64,9 +65,13 @@ Compared to one or the other frameworks above, you may miss:
 * vvvv is still Windows only, which is planned to change at some point
 * vvvv cannot export to mobiles or the web. This is not totally out of the question, but not on the roadmap as of now
 
+## What people are using vvvv for
+vvvv is used in a wide range of projects covering topics like: generative-design, interaction-design, data-visualization, computer-vision, VR, show-control, physical-computing and machine-learning.
+Have a look at the [Gallery](https://visualprogramming.net/#Gallery) to see some specific examples.
+
 ## Getting Started
-Watch the [Tutorials](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) to learn the very basics. As you have more specific questions, find them answered in the  [HowTo's](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s). 
+Watch the [Tutorials](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) to learn the very basics. As you have more specific questions, find them answered in the  [HowTo's](https://www.youtube.com/playlist?list=PLBTgwgsWWcT-G9lk-IlKLkGZJ9NnXcuBV). 
 
 Press F1 in vvvv to open the Helpbrowser. There you'll find numerous example and help patches on various topics. Also: With any node selected press F1 to see its dedicated help patch.
 
-Any questions left? Get them answered in the [forum](http://discourse.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).
+Any questions left? Get help and support by the developers and a welcoming global community in the [forum](http://discourse.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).
