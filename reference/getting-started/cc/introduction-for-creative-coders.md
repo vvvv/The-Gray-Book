@@ -17,7 +17,7 @@ If you're familiar with text based creative coding, like:
 * [Processing](https://processing.org) or [p5.js](https://p5js.org)
 * [OpenRNDR](https://openrndr.org)
 
-... then the following should be interesting for you:
+... then the following could be interesting for you:
   
 ### Save time
 
@@ -27,7 +27,7 @@ Further, with its [rich set of Libraries](../../libraries/overview.md) that only
 
 ### Use familiar techniques
 
-VL (the language used in vvvv) is not your ordinary visual language where you only can work with readymade, but hard to extend blocks: It comes with loops and if-regions, allows for recursions and lets you define and instantiate your own datatypes, even generic ones. You can use delegates, observables and execute parts of your program asynchronously. All without writing a single line of code.
+VL (the language used in vvvv) is not your ordinary visual language where you only can work with readymade, but hard to extend blocks: It comes with loops and if-regions, allows for recursions, lets you define and instantiate your own datatypes (even generic ones) and define and implement interfaces. This means you're not limited to dataflow programming but can also apply your object-oriented programming skills. Further you can make use of delegates and observables and execute parts of your program asynchronously. All without writing a single line of code.
 
 ### Write your own nodes
 
@@ -43,7 +43,7 @@ If you're familiar with visual creative coding environments, like:
 * [TouchDesigner](https://derivative.ca)
 * [Vuo](https://vuo.org)
 
-... then the following should be interesting for you:
+... then the following could be interesting for you:
 
 ### Vast, modular, open-source library of nodes
 Browse the [Library](../../libraries/overview.md) section to get an overview of the availability of a vast range of different libraries for vvvv, most of which are open-source (some not yet, but only for organisational reasons). Apart from the [VL.CoreLib](../../libraries/corelib.md) the three biggest to date are:
@@ -53,7 +53,7 @@ Browse the [Library](../../libraries/overview.md) section to get an overview of 
 Further there is a big focus on supporting loads of [Devices](https://thegraybook.vvvv.org/reference/libraries/devices.html) and [Protocols](https://thegraybook.vvvv.org/reference/libraries/io.html) out of the box.
 
 ### Export Windows applications
-Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. The commercial developer license includes unlimited exports. 
+Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. 
 
 ### Comfortable licensing model
 vvvv is free for non-commercial. Simply download, install and use it:
