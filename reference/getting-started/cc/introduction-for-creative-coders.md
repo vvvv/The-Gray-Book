@@ -50,6 +50,7 @@ Browse the [Library](../../libraries/overview.md) section to get an overview of 
 - VL.Stride: for 3d rendering, shader programming, VR,... based on [Stride](http://stride3d.net)
 - VL.Skia: for 2d rendering, vector graphics export,... based on [Skia](https://skia.org)
 - VL.OpenCV: for computer vision,... based on [OpenCV](http://opencv.org)
+
 Further there is a big focus on supporting loads of [Devices](https://thegraybook.vvvv.org/reference/libraries/devices.html) and [Protocols](https://thegraybook.vvvv.org/reference/libraries/io.html) out of the box.
 
 ### Export Windows applications
