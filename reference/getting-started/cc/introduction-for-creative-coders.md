@@ -67,7 +67,7 @@ vvvv is free for non-commercial. Simply download, install and use it:
 As you're starting to use vvvv for commercial projects, you [buy a monthly or yearly developer license](http://store.vvvv.org) priced affordably for indy, pro and big-fish users. 
 
 ## What you may miss
-Compared to one or the other frameworks above, you may miss:
+Compared to one or the other frameworks listed above, you may miss:
 
 * vvvv is still Windows only, which is planned to change at some point
 * vvvv cannot export to mobiles or the web. This is not totally out of the question, but not on the roadmap as of now
