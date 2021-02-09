@@ -13,12 +13,16 @@ http://websocket.org
 NuGet: [VL.IO.WebSocket](https://www.nuget.org/packages/VL.IO.WebSocket)  
 
 ## OSC
-OSCServer and OSCClient nodes are shipping with vvvv.
+The VL.IO.OSC nuget, including OSCServer and OSCClient nodes, is shipping with vvvv.
 http://opensoundcontrol.org  
+HowTo Videos: 
+* [Send OSC Messages](https://youtu.be/CSt_39fNonQ)
+* [Receive OSC Messages](https://youtu.be/i5Yy6DS3Imo)
+  
 NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)  
 
 ## TUIO
-Tuio tracker and client nodes are shipping with vvvv.
+The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.
 http://tuio.org  
 NuGet: [VL.IO.TUIO](https://www.nuget.org/packages/VL.IO.TUIO)  
 
