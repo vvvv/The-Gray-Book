@@ -19,6 +19,11 @@ NuGet: [VL.2d.Voronoi](https://www.nuget.org/packages/VL.2d.Voronoi)
 Polyline simplification
 NuGet: [VL.2d.Simplify](https://www.nuget.org/packages/VL.2D.Simplify/)
 
+
+## Curve Fitting
+Fitting bezier curves to a given set of points
+NuGet: [VL.2D.CurveFitting](https://www.nuget.org/packages/VL.2D.CurveFitting)
+
 ## Noise
 Noise Generator in many flavours.
 NuGet: [VL.FastNoise](https://www.nuget.org/packages/VL.FastNoise)
