@@ -84,8 +84,10 @@ Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd
 ## Pin Groups
 Description|Action
 -|-
-Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
-Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
+Add Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
+Remove Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
+Add Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+Remove Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
 
 ## Pads
 Description|Action
