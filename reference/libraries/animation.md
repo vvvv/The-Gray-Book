@@ -10,6 +10,10 @@ NuGet: [VL.TrackObjects](https://www.nuget.org/packages/VL.TrackObjects)
 
 ## Timeliners
 
+### Kairos
+A value animation system consisting of a vvvv nodeset and custom UI editors
+NuGet: [VL.Kairos](https://www.nuget.org/packages/VL.Kairos)
+
 ### Tilda
 A sequencing timeline that contains clips of various types.
 GitHub: [Tilda](https://github.com/nsynkde/Tilda)
