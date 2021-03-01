@@ -29,6 +29,8 @@
           "reference/**/toc.md",
           "changelog/**.md",
           "changelog/**/toc.md",
+          "roadmap/**.md",
+          "roadmap/**/toc.md",
           "toc.md",
           "*.md"
         ]
