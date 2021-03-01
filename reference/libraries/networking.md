@@ -19,7 +19,14 @@ HowTo Videos:
 * [Send OSC Messages](https://youtu.be/CSt_39fNonQ)
 * [Receive OSC Messages](https://youtu.be/i5Yy6DS3Imo)
   
-NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)  
+NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)
+
+Useful tools:
+* [Jockey](http://www.jockeyapp.net/)
+* [OSC/Pilot](https://oscpilot.com/)
+* [TouchOSC](https://hexler.net/software/touchosc) 
+* [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en_US&gl=US)
+* [poseHook](https://play.google.com/store/apps/details?id=com.hollyhook.posehook&hl=en_US&gl=US)
 
 ## TUIO
 The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.

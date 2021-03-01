@@ -14,6 +14,9 @@ Requires an ASIO drive like:
 Midi nodes are shipping with vvvv.
 NuGet: [VL.IO.Midi](https://www.nuget.org/packages/VL.IO.Midi/)
 
+Useful tools: 
+* https://www.midimonitor.com
+
 ## FMOD 
 Wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.  
 NuGet: [VL.FMODStudio](https://www.nuget.org/packages/VL.FMODStudio)

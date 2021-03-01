@@ -9,6 +9,9 @@ vvvv's 3d rendering engine VL.Stride is based on the [Stride 3d Engine](http://s
 
 Both workflows can be easily combined. In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is useful for understanding key concepts of the engine. VL.Stride also allows you to output content to VR Devices. 
 
+### Useful tools
+* [List of Material Editors](https://discourse.vvvv.org/t/open-source-material-editor-material-creation-resource-list/19185)
+
 ### Additional libraries:
 
 * NuGet: [VL.Assimp](https://www.nuget.org/packages/VL.Assimp) is an alternative 3d model loader for Stride
