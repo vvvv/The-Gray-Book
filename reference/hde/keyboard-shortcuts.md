@@ -175,3 +175,20 @@ Description|Action
 Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
 Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
 Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
+
+## VL.Stride
+The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:
+
+Description|Action
+-|-
+Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
+Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
+Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
+Toggle Fullscreen|<span class="keyseq"><kbd>F11</kbd> or <kbd>Alt</kbd><kbd>Return</kbd></span>
+
+## VL.Skia
+The following shortcuts are working with a VL.Skia Renderer active:
+
+Description|Action
+-|-
+Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
