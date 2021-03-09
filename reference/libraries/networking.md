@@ -24,6 +24,7 @@ NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)
 Useful tools:
 * [Jockey](http://www.jockeyapp.net/)
 * [OSC/Pilot](https://oscpilot.com/)
+* [Open Stage Control](https://openstagecontrol.ammd.net/)
 * [TouchOSC](https://hexler.net/software/touchosc) 
 * [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en_US&gl=US)
 * [poseHook](https://play.google.com/store/apps/details?id=com.hollyhook.posehook&hl=en_US&gl=US)

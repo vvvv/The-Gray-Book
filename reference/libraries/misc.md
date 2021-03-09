@@ -61,6 +61,10 @@ GitHub: https://github.com/vvvv/VL.PsTools
 Read sensor data provided by [OpenHardwareMonitor](https://openhardwaremonitor.org/).  
 GitHub: https://github.com/vvvv/VL.HardwareMonitor
 
+## OpenWeather
+Retrieves weather data from OpenWeather's OneCall API  
+NuGet [VL.OpenWeather](https://www.nuget.org/packages/VL.OpenWeather)
+
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)
