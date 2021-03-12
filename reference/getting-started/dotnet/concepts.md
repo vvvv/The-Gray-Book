@@ -25,7 +25,7 @@ Then the below patch should be read as: The lower foo pad corresponds to the lef
 .Shortcut for + 1: Use the Inc node
 
 ## Nullable
-When referencing an external library, you may encounter input or output pins of type __Nullable<T>__. To deal with them you need to [reference](libraries/using-net-libraries) the __System.Runtime__ assembly from the GAC.
+When referencing an external library, you may encounter input or output pins of type __Nullable<T>__. To deal with them you need to [reference](../../extending/using-net-libraries.md) the __System.Runtime__ assembly from the GAC.
 
 This gives you access to the nodes HasValue and Value to read from nullable outputs. To set a value to an input that requires a Nullable<T>, it is enough to put a CastAs node in between the value and the nullable input.
 
@@ -38,7 +38,7 @@ This gives you access to the nodes HasValue and Value to read from nullable outp
 ## Lambda
 
 ## Observable
-See [Reactive](libraries/reactive.md).
+See [Reactive](../../libraries/reactive.md).
 
 ## Task
 

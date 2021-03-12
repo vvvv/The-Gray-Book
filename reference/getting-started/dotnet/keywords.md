@@ -1,5 +1,5 @@
 Legend
-* **not-supported** This keyword does not have an equivalent in vl. If you find it necessary to use its functionality, you can still write C# code that can be used in vl, see [Writing Nodes in C#](libraries/writing-nodes.md).
+* **not-supported** This keyword does not have an equivalent in vl. If you find it necessary to use its functionality, you can still write C# code that can be used in vl, see [Writing Nodes in C#](../../extending/writing-nodes.md).
 * **no-inheritance** VL does not support class inheritance and therefore also not the concept that comes with this keyword.
 
 ## C# Keywords
@@ -34,7 +34,7 @@ for (int i # 0; i < 10; i++)
 }
 ```
 
-See [Special Loop Pins](language/loops.md#special-pins) for how to use a __Break__ output, to break out of a loop in vl.
+See [Special Loop Pins](../../language/loops.md#special-pins) for how to use a __Break__ output, to break out of a loop in vl.
 
 ### case [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/case)
 See [switch](#switch-)
@@ -46,7 +46,7 @@ See [try](#try-)
 {not-supported}
 
 ### class [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class)
-See [Datatype Patch](language/patches.md#datatype-patch).
+See [Datatype Patch](../../language/patches.md#datatype-patch).
 
 ### const [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const)
 {not-supported}
@@ -60,7 +60,7 @@ See [Datatype Patch](language/patches.md#datatype-patch).
 See [switch](#switch-)
 
 ### delegate [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/delegate)
-See [Delegates](language/delegates.md).
+See [Delegates](../../language/delegates.md).
 
 ### do [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/do)
 See [while](#while-)
@@ -80,10 +80,10 @@ See [if](#if-)
 enum Alignment {Left, Middle, Right};
 ```
 
-While existing enums can certainly be used in VL, one thing you cannot yet do in VL, is define a custom enum. If you need a custom enum, for now you'll have to define it using C# code. See [Writing Nodes in C#](libraries/writing-nodes.md) for how to do this.
+While existing enums can certainly be used in VL, one thing you cannot yet do in VL, is define a custom enum. If you need a custom enum, for now you'll have to define it using C# code. See [Writing Nodes in C#](../../extending/writing-nodes.md) for how to do this.
 
 ### event [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event)
-Instead of events, VL uses a similar concept called __Observables__. See [Reactive](libraries/reactive.md) for details.
+Instead of events, VL uses a similar concept called __Observables__. See [Reactive](../../libraries/reactive.md) for details.
 
 ### explicit [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/explicit)
 {not-supported}
@@ -101,10 +101,10 @@ See [try](#try-)
 Called _Float32_ in vl, part of category _Primitives_.
 
 ### for [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)
-See [Loops](language/loops.md).
+See [Loops](../../language/loops.md).
 
 ### foreach [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach)
-See [Loops](language/loops.md).
+See [Loops](../../language/loops.md).
 
 ### goto [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto)
 {not-supported}
@@ -123,7 +123,7 @@ Called _Integer32_ in vl, part of category _Primitives_.
 
 ### interface [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface)
 
-See [Interfaces](language/interfaces.md).
+See [Interfaces](interfaces.md).
 
 ### internal [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/internal)
 
@@ -140,7 +140,7 @@ Called _Integer64_ in vl, part of category _Primitives_.
 > Only showing in the nodebrowser, if the _Advanced_ aspect is activated.
 
 ### namespace [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace)
-The concept of a _namespace_ is called [Category](language/groups.html#category) in VL.
+The concept of a _namespace_ is called [Category](../../language/groups.md#category) in VL.
 
 ### new [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new)
 
@@ -260,5 +260,5 @@ Called _Integer16 (Unsigned)_ in vl, part of category _Primitives_.
 {not-supported}
 
 ### while [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while)
-VL doesn't have a _while_ loop yet. See [Loops](language/loops.md#while) for an easy workaround.
+VL doesn't have a _while_ loop yet. See [Loops](../../language/loops.md#while) for an easy workaround.
 
