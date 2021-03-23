@@ -28,7 +28,13 @@ When we speak of just ``vvvv``, in the past we meant ``vvvv beta``, now we mean 
 
 ## Where to start?
 
-vvvv has a built-in HelpBrowser, press F1 to open it. On the ``Learn`` tab you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
+Depending on where you come from, you may want to start with one of these introductions:
+* [Introduction for Creative Coders](reference/getting-started/cc/introduction-for-creative-coders.md)
+* [Introduction for .NET Developers](reference/getting-started/dotnet/introduction-for-dotnet-programmers.md)
+* [Introduction for vvvv beta users](reference/getting-started/beta/introduction-for-vvvv-beta-users.md)
+
+Also, vvvv has a built-in HelpBrowser, press F1 to open it. On the ``Learn`` tab 
+you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
 
 Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube.
 
