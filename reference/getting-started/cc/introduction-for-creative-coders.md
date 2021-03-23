@@ -57,14 +57,17 @@ Further there is a big focus on supporting loads of [Devices](https://thegrayboo
 Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. 
 
 ### Comfortable licensing model
-vvvv is free for non-commercial. Simply download, install and use it:
+vvvv is free for non-commercial use. Simply download, install and run it:
 
 - No questions asked
 - No copy-protection
 - No feature limitations
 - No mandatory registration
+- Pay per size of your business (Individual, Freelancer or SME, Big Fish)
+- You own the last version you paid for
+- Yearly or monthly payment options
 
-As you're starting to use vvvv for commercial projects, you [buy a monthly or yearly developer license](http://store.vvvv.org) priced affordably for indy, pro and big-fish users. 
+As you're starting to use vvvv for commercial projects, you simply [buy a per-developer-seat license](http://store.vvvv.org). 
 
 ## What you may miss
 Compared to one or the other frameworks listed above, you may miss:
