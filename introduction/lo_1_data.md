@@ -26,7 +26,7 @@ Data of a certain data type also is called an instance of that data type.
 
 *In VL we even distinguish one color from many colors. This lets you build more complex systems and thus help you in the long run. Just keep in mind that a color in VL is something different than a spread of colors.*
 
-More about data: [Basic Nodes and Data Types](basictypes.md) and [More On Data](data2.md)
+More about data: [Basic Nodes and Data Types](lo_9__basictypes.md) and [More On Data](more-on-data.md)
 
 
 
