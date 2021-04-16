@@ -53,6 +53,10 @@ NuGet: [VL.StringExtensions](https://www.nuget.org/packages/VL.StringExtensions)
 This library wraps allanrodriguez' MonitorDetailsReader and builds small useful utils on top of it.  
 NuGet: [VL.SuperMonitor](https://www.nuget.org/packages/VL.SuperMonitor/1.0.3-alpha)
 
+## Syslog
+Set of nodes to communicate with a [Syslog](https://en.wikipedia.org/wiki/Syslog) server.  
+NuGet: [VL.Syslog](https://www.nuget.org/packages/VL.Syslog)
+
 ## PsTools
 Set of nodes to execute [PsTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools).  
 GitHub: https://github.com/vvvv/VL.PsTools
