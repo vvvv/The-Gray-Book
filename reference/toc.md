@@ -50,6 +50,7 @@
 ## [Animation](libraries/animation.md)
 ## [Audio](libraries/audio.md)
 ## [Augmented Reality](libraries/augmentedreality.md)
+## [Color](libraries/color.md)
 ## [Computer Vision](libraries/computervision.md)
 ## [Databases](libraries/databases.md)
 ## [Devices](libraries/devices.md)
