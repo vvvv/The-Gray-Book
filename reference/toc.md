@@ -59,6 +59,8 @@
 ### [Robots](libraries/robots.md)
 ### [Others](libraries/other-devices.md)
 ## [Graphics](libraries/graphics.md)
+### [2D](libraries/graphics-2d.md)
+### [3D](libraries/graphics-3d.md)
 ## [IO](libraries/io.md)
 ### [Networking](libraries/networking.md)
 ### [Others](libraries/other-io.md)
