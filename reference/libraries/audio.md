@@ -15,7 +15,8 @@ Midi nodes are shipping with vvvv.
 NuGet: [VL.IO.Midi](https://www.nuget.org/packages/VL.IO.Midi/)
 
 Useful tools: 
-* https://www.midimonitor.com
+* [MIDI Montir](https://www.midimonitor.com)
+* [Virtual Audio Cable](https://vb-audio.com/Cable/index.htm)
 
 ## FMOD 
 Wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.  
