@@ -5,7 +5,6 @@ vvvv allows you to export a patch into an executable, standalone program. In ord
 ![](../../images/hde/exporting-35690.png)
 <center>The Application Exporter (Shortcut: F9)</center>
 
-
 * Application to export: Choose which application to export (in case you're working on multiple projects at the same time)
 * Output directory: Choose where the exported program and files will be created
 * Press the __Export__ button and wait until the green progressbar is full and the __Run__ button becomes available
@@ -42,10 +41,13 @@ Referencing the nuget VL.CoreLib.Windows adds the following nodes:
 
 These allow you to configure the renderers caption, controlbox, framing and more.
 
-## Problems
+## Troubleshooting
 In case the export fails, the console will be opened to show there was an error.
 
 ![](../../images/hde/exporting-74bc1.png)
 <center>The Application Exporter reporting a problem</center>
 
 Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via forum or chat.
+
+## Code Signing
+In order to have your executables to run without a warning on other PCs, you need to sign them with a certificate using [SignTool](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool).

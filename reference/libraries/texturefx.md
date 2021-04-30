@@ -147,8 +147,17 @@ To have an int input show up as an enum.
 > This also requires you to define the specified enum in C# and have it referenced by the .vl documents you're using the TextureFX in.
 
 
-#### Default
-?
+### Default
+```hlsl
+[Default(1, 1, 1, 1)]
+compose ComputeFloat4 Control;
+```
+Only for Compute inputs to specify the default. For primitive inputs you can simply set the default with the variable definition:
 
-### Shader Semantics
+```hlsl
+float4 Control = float4[1, 1, 1, )];
+```
+
+
+## Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
