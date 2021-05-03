@@ -142,7 +142,20 @@ Every pin definition can have the following Attributes:
 | Optional | Pins marked as optional don't show up on the node by default. They need to be activiated via the nodes configuration menu.
 | Color | To have a float4 input show up as a color pin
 | EnumType | To have an int input show up as an enum. **NOTE**: This also requires you to define the specified enum in C# and have it referenced by the .vl documents you're using the TextureFX in.
-| Default | Only for Compute inputs to specify the default. For primitive inputs you can simply set the default with the variable definition:
+| Default | Only for Compute inputs to specify their default. For primitive inputs you can simply set the default with the variable definition.
+
+### Examples
+```hlsl
+[Color]
+[Summary("The color to do this and that)]
+float4 MyColor;
+
+[EnumType("VL.Stride.Effects.TextureFX.NoiseType")]
+int Type;
+
+[Default(1, 1, 1, 1)]
+compose ComputeFloat4 Control;
+```
 
 ## Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
