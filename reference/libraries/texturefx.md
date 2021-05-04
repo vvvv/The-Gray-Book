@@ -26,6 +26,14 @@ shader MyFx_TextureFX : FilterBase
 > [!NOTE]
 > The filename ending in **_TextureFX.sdsl** and the shader name also ending in **_TextureFX** is crucial here. It allows the node factory to pick up this file and interpret it as a TextureFX.
 
+## Category and Aspects
+
+By default, every TextureFX node will show up in the `Stride\Textures` category. In order to move a node to a subcategory, use a [node attribute](#node-attributes).
+
+Aspects, like "Experimental", "Internal", "Obsolete" and "Advanced" can be specified in two different ways: 
+* Either as part of the shaders filename, in which case you must not forget that the shader name itself must be identical to the filename
+* Or as part of the category [node attribute](#node-attributes).
+
 ## Inputs
 Every TextureFX node has exactly one texture output and a couple of inputs by default:
 
@@ -37,7 +45,7 @@ Every TextureFX node has exactly one texture output and a couple of inputs by de
 | Output Size | Int2 |  | The size of the output texture
 | Enabled | Boolean |  | Whether or not the output is updated
 
-To make a TextureFX a "Source", specify the "TextureSource" attribute, see below.
+To make a TextureFX a "Source", specify the ["TextureSource" attribute](#source-node-attributes).
   
 ### Filter, Mixer and Utils
 | Name | Type | Optional | Description
@@ -52,17 +60,16 @@ To make a TextureFX a "Source", specify the "TextureSource" attribute, see below
 | Apply | Boolean | | If disabled, the input is returned unchanged
 
 ## Base Shaders to inherit from
-**Is there a requirement at all?**
-You can inherit your shaders from the following, multiple inheritance is allowed:
 
-* TextureFX: 
-* ShaderUtils: Pi,...
-  
-### FilterBase
-Deriving from this shader provides:
-* the Filter() function to override which comes with the color of the input texture as input
-* 
-Gives you an already sampled texture and allows you to override the Filter function. 
+There are a bunch of shaders you can inherit useful functionality from. Multiple Inheritance is allowed!
+
+* Shipping with Stride: Use the [Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)
+* Shipping with VL.Stride: Explore the .sdsl files in: C:\Program Files\vvvv\vvvv_gamma_...\lib\packs\VL.Stride.Runtime...\stride\Assets\Effects
+
+### Recommended base shaders
+ 
+#### FilterBase
+Deriving from this shader provides the Filter() function to override which comes with the color of the input texture already sampled, as input:
 
 ```hlsl
 shader MyFx_TextureFX : FilterBase
@@ -77,8 +84,8 @@ shader MyFx_TextureFX : FilterBase
 > [!NOTE]
 > Using the `tex0col` input is not mandatory and you can still add other texture inputs to sample from.
 
-### MixerBase
-Gives you two already sampled textures and a fader parameter and allows you to override the Mix function:
+#### MixerBase
+Gives you two already sampled textures and a fader parameter and allows you to override the Mix() function:
 
 ```hlsl
 shader Mix_TextureFX : MixerBase
@@ -91,7 +98,10 @@ shader Mix_TextureFX : MixerBase
 ```
 > [!NOTE]
 > Using the `tex0col` input is not mandatory and you can still add other texture inputs to sample from.
-  
+
+#### ShaderUtils
+Defines constants like PI and gives access to many commonly used shader snippets.
+
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:
 
@@ -111,7 +121,7 @@ shader MyFX_TextureFX : TextureFX
 
 | Attribute | Description
 |---|---|
-| Category | If not specified, the node will show up under `Stride\Textures`. Specifying a category allows you to put the node in a subcategory from there. 
+| Category | If not specified, the node will show up under `Stride\Textures`. Specifying a category allows you to put the node in a subcategory from there. Also [aspects](../extending/aspects.md) can be added among the category here, like e.g. Filter.Experimental
 | Summary | A short info that shows up as tooltip on the node in the NodeBrowser and when hovered in a patch.
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
@@ -128,7 +138,7 @@ shader Foo_TextureFX : TextureFX
 
 | Attribute | Description
 |---|---|
-| TextureSource | Specifies a shader to behave as a TextureFX Source, see above. Also: Any Texture input pin will keep its name as declared (For Filters and Mixers this is not the case. There the pins are renamed to have concise namings across all nodes)
+| TextureSource | Specifies a shader to behave as a [TextureFX Source](#sources). Also: Any Texture input pin will keep its name as declared (For Filters and Mixers this is not the case. There the pins are renamed to have concise namings across all nodes)
 | OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb. 
 | RenderFormat | Allows to specify a render format that differs from the output format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to OutputFormat. 
 
@@ -157,7 +167,18 @@ int Type;
 compose ComputeFloat4 Control;
 ```
 
+## Multipass TextureFX
+At this point there is no support for multiple passes in shader code. That said, you can still create multipass TextureFX by preparing the passes as individual TextureFX and then plugging them together in a patch. For an example, see how the Glow filter is done.
+
+Note that for such cases it could make sense to mark the individual passes with the "Internal" [aspect](#category-and-aspects), since they probably don't make sense on their own and therefore should not show up in the NodeBrowser.
+
 ## Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
 
 Many of those are already available in more human-readable terms inherited via the [ShaderBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/ShaderBaseStream.sdsl).
+
+A common requirement is to refer to a shaders target size, for which we don't have a semantic yet. But since filers by default adapt to the size of their input, what comes closest to referring to the target size, is using the inverse of the inputs texel size, like:
+
+```hlsl
+float2 targetSize = 1/Texture0TexelSize;
+```
