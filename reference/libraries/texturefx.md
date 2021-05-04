@@ -12,7 +12,7 @@ Next to your .vl document create a directory named `\shaders`. In this directory
 
 The .sdsl file then contains the shader for a source, mixer, filter or utility TextureFX. For a simple invert filter, this would be everything that is needed: 
 
-```hlsl
+```c
 shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
@@ -34,31 +34,6 @@ Aspects, like "Experimental", "Internal", "Obsolete" and "Advanced" can be speci
 * Either as part of the shaders filename, in which case you must not forget that the shader name itself must be identical to the filename
 * Or as part of the category [node attribute](#node-attributes).
 
-## Inputs
-Every TextureFX node has exactly one texture output and a couple of inputs by default:
-
-### Sources
-| Name | Type | Optional | Description
-|---|---|---|---|
-| Render Format | PixelFormat Enum | x | 
-| Output Format | PixelFormat Enum | x | The format of the output texture
-| Output Size | Int2 |  | The size of the output texture
-| Enabled | Boolean |  | Whether or not the output is updated
-
-To make a TextureFX a "Source", specify the ["TextureSource" attribute](#source-node-attributes).
-  
-### Filter, Mixer and Utils
-| Name | Type | Optional | Description
-|---|---|---|---|
-| Input | Texture | | 
-| Sampler | SamplerState  | x | Allows to override the default sampler
-| Control | GPU<Vector4>  | | Allows to blend between the input and the result of the operation
-| Render Format | PixelFormat Enum | x | 
-| Output Format | PixelFormat Enum | x | Allows to override the format of the output texture
-| Output Size | Int2 | x | Allows to override the size of the output texture
-| Output Texture | Texture | x | Allows to render the output in a given texture, rather than using the default texture of the node
-| Apply | Boolean | | If disabled, the input is returned unchanged
-
 ## Base Shaders to inherit from
 
 There are a bunch of shaders you can inherit useful functionality from. Multiple Inheritance is allowed!
@@ -67,11 +42,14 @@ There are a bunch of shaders you can inherit useful functionality from. Multiple
 * Shipping with VL.Stride: Explore the .sdsl files in: C:\Program Files\vvvv\vvvv_gamma_...\lib\packs\VL.Stride.Runtime...\stride\Assets\Effects
 
 ### Recommended base shaders
- 
-#### FilterBase
-Deriving from this shader provides the Filter() function to override which comes with the color of the input texture already sampled, as input:
 
-```hlsl
+#### TextureFX
+Derives from SpriteShaderBase and ShaderUtils.
+
+#### FilterBase
+Derives from TextureFX. Allows to you implement the Filter() function, which comes with the color of the input texture as parameter:
+
+```c
 shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
@@ -85,9 +63,9 @@ shader MyFx_TextureFX : FilterBase
 > Using the `tex0col` input is not mandatory and you can still add other texture inputs to sample from.
 
 #### MixerBase
-Gives you two already sampled textures and a fader parameter and allows you to override the Mix() function:
+Derives from TextureFX. Allows you to implement the Mix() function, which comes with the colors of the two input textures and a fader parameter:
 
-```hlsl
+```c
 shader Mix_TextureFX : MixerBase
 {
     float4 Mix(float4 tex0col, float4 tex2col, float fader)
@@ -105,11 +83,12 @@ Defines constants like PI and gives access to many commonly used shader snippets
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:
 
-```hlsl
+```c
 [Category("Filter")]
 [Summary("Description for what the filter does")]
 [Remarks("Any special notes")]
 [Tags("comma separated list of tags")]
+[OutputFormat("R8G8B8A8_UNorm_SRgb")]
 shader MyFX_TextureFX : TextureFX
 {
     stage override float4 Shading()
@@ -125,22 +104,20 @@ shader MyFX_TextureFX : TextureFX
 | Summary | A short info that shows up as tooltip on the node in the NodeBrowser and when hovered in a patch.
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
+| OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb. 
+| DontApplySRgbCurveOnWrite | You'll most likely not need this flag! If set, disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default. 
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
 
-```hlsl
+```c
 [TextureSource]
-[OutputFormat("R8G8B8A8_UNorm_SRgb")]
-[RenderFormat("R8G8B8A8_UNorm")]
 shader Foo_TextureFX : TextureFX
 ```
 
 | Attribute | Description
 |---|---|
 | TextureSource | Specifies a shader to behave as a [TextureFX Source](#sources). Also: Any Texture input pin will keep its name as declared (For Filters and Mixers this is not the case. There the pins are renamed to have concise namings across all nodes)
-| OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb. 
-| RenderFormat | Allows to specify a render format that differs from the output format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to OutputFormat. 
 
 ## Pin Attributes
 Every pin definition can have the following Attributes:
@@ -155,9 +132,9 @@ Every pin definition can have the following Attributes:
 | Default | Only for Compute inputs to specify their default. For primitive inputs you can simply set the default with the variable definition.
 
 ### Examples
-```hlsl
+```c
 [Color]
-[Summary("The color to do this and that)]
+[Summary("The color to do this and that")]
 float4 MyColor;
 
 [EnumType("VL.Stride.Effects.TextureFX.NoiseType")]
@@ -166,6 +143,29 @@ int Type;
 [Default(1, 1, 1, 1)]
 compose ComputeFloat4 Control;
 ```
+
+## Inputs
+Every TextureFX node has exactly one texture output and a couple of inputs by default:
+
+### Sources
+| Name | Type | Optional | Description
+|---|---|---|---|
+| Output Format | PixelFormat Enum | x | The format of the output texture, defaults to R8G8B8A8_UNorm_SRgb
+| Output Size | Int2 |  | The size of the output texture
+| Enabled | Boolean |  | Whether or not the output is updated
+
+To make a TextureFX a "Source", specify the ["TextureSource" attribute](#source-node-attributes).
+  
+### Filter, Mixer and Utils
+| Name | Type | Optional | Description
+|---|---|---|---|
+| Input | Texture | | 
+| Sampler | SamplerState  | x | Allows to override the default sampler
+| Control | GPU<Vector4>  | | Allows to blend between the input and the result of the operation
+| Output Format | PixelFormat Enum | x | Allows to override the format of the output texture, defaults to `None`, meaning the format of the input texture is used
+| Output Size | Int2 | x | Allows to override the size of the output texture
+| Output Texture | Texture | x | Allows to render the output in a given texture, rather than using nodes own texture
+| Apply | Boolean | | Whether the effect is applied to the input texuture, or the effect is bypassed and the input is returned unchanged
 
 ## Multipass TextureFX
 At this point there is no support for multiple passes in shader code. That said, you can still create multipass TextureFX by preparing the passes as individual TextureFX and then plugging them together in a patch. For an example, see how the Glow filter is done.
@@ -179,6 +179,6 @@ Many of those are already available in more human-readable terms inherited via t
 
 A common requirement is to refer to a shaders target size, for which we don't have a semantic yet. But since filers by default adapt to the size of their input, what comes closest to referring to the target size, is using the inverse of the inputs texel size, like:
 
-```hlsl
+```c
 float2 targetSize = 1/Texture0TexelSize;
 ```
