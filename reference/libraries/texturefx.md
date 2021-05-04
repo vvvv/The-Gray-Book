@@ -44,7 +44,7 @@ There are a bunch of shaders you can inherit useful functionality from. Multiple
 ### Recommended base shaders
 
 #### TextureFX
-Derives from SpriteShaderBase and ShaderUtils.
+Derives from ImageEffectShader and ShaderUtils.
 
 #### FilterBase
 Derives from TextureFX. Allows to you implement the Filter() function, which comes with the color of the input texture as parameter:
