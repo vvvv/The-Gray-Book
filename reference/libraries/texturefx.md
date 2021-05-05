@@ -105,7 +105,7 @@ shader MyFX_TextureFX : TextureFX
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
 | OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb. 
-| DontApplySRgbCurveOnWrite | You'll most likely not need this flag! If set, disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default. 
+| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a source texturefx from vvvv beta (dx9 or dx11), because their visual result may have relied on this legacy default behavior. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. 
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
@@ -167,10 +167,13 @@ To make a TextureFX a "Source", specify the ["TextureSource" attribute](#source-
 | Output Texture | Texture | x | Allows to render the output in a given texture, rather than using nodes own texture
 | Apply | Boolean | | Whether the effect is applied to the input texuture, or the effect is bypassed and the input is returned unchanged
 
-## Multipass TextureFX
+## Multiple passes
 At this point there is no support for multiple passes in shader code. That said, you can still create multipass TextureFX by preparing the passes as individual TextureFX and then plugging them together in a patch. For an example, see how the Glow filter is done.
 
-Note that for such cases it could make sense to mark the individual passes with the "Internal" [aspect](#category-and-aspects), since they probably don't make sense on their own and therefore should not show up in the NodeBrowser.
+Note that for such cases it makes sense to mark the individual passes with the "Internal" [aspect](#category-and-aspects), because they probably are not meant to be used on their own and therefore should not show up in the NodeBrowser.
+
+## Mipmaps
+Some effects rely on mipmaps in the input image. At this point there is no way of telling in a shader that this is the case. So for those cases you'll have to create a wrapping patch and place a MipMap [Stride.Textures.Utils] node before the TextureFX node.
 
 ## Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
