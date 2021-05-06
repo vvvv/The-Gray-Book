@@ -1,17 +1,26 @@
 # Editing shaders
 
+Shaders are written in [SDSL](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/index.html) which is a superset of [HLSL](http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561%28v=vs.85%29.aspx).
+
 vvvv does not come with a built-in shader editor. Instead you can use any text editor of your choice. Simply associate the file-ending `.sdsl` with any text editor. If you now Rightclick -> Open on a shader node, the code will open in the specified editor. Whenever you save the file, the shader will be updated.
 
-## Recommended Editors
+## Syntax Highlighting
+For syntax highlighting you need to use an editor that supports HLSL syntax highlighting. Try one of these:
 
-### Visual Studio 2019
-If you already have Visual Studio 2019 installed anyway, it is recommended to install the Stride extension, which comes with the main [Stride installer](https://stride3d.net/download/). This will give you the best shader editing experience, including syntax highlighting and code-completion.
+* [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) is a lighter version of Visual Studio. Add the "Shader languages support for VS Code" extension and you get syntax highlighting and basic code completion.
+* You can also use the [Sublime](https://www.sublimetext.com/) editor with the "HLSL Syntax" package. 
 
-Downside: Installing Visual Studio is a bit of an undertaking, for lighter options see the following.
+## Error Reporting
+For serious shader coding you'll not want to miss error reporting, which requires [Visual Studio 2019](https://visualstudio.microsoft.com/) in combination with the Stride extension, which comes with the main [Stride installer](https://stride3d.net/download/). This will give you the best shader editing experience, including syntax highlighting, code completion and error reporting.
 
-### Visual Studio Code
+For quickly setting up a VS solution that holds all your shaders, go to:
 
-[Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) is a lighter version of Visual Studio. Add the "Shader languages support for VS Code" extension and you get syntax highlighting and basic code completion.
+    C:\Program Files\vvvv\vvvv_gamma_...\lib\packs\VL.Stride.Runtime...\help\Overview
 
-### Sublime Text
-You can also use the [Sublime](https://www.sublimetext.com/) editor with the "HLSL Syntax" package. 
+and copy the `\EditShaders` folder next to your `\shaders` folder resulting in a setup like this:
+
+    MyProject\EditShaders\EditShaders.sln
+    MyProject\shaders\shader_files.sdsl
+    MyProject\MainDoc.vl
+
+Now when you open \EditShaders\EditShaders.sln it will pick up all your shaders automatically and you can start working on them.

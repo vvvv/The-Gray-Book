@@ -1,12 +1,16 @@
 # 3d Graphics
 
-vvvv's 3d rendering engine VL.Stride is based on the [Stride 3d Engine](http://stride3d.net). It allows for 2 distinct workflows:
+vvvv's 3d rendering engine VL.Stride is based on the [Stride 3d Engine](http://stride3d.net) and shipping with the installation. It allows for 2 distinct workflows:
 
 * A **highlevel**, easy to use SceneGraph approach, where you build 3d scenes by simply adding primitives, and lights to a scene. Primitives can be given materials to define their look. A range of Post FX, like ambient-occlusion, depth-of-field, bloom, ... are available to easily get shiny results
 * A **lowlevel** approach, where you can write shaders (vertex, pixel, geometry, compute) using the [Stride Shading Language](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/index.html) (an extension to HLSL) to customize every aspect of your rendering
 
 Both workflows can be easily combined. In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is useful for understanding key concepts of the engine. VL.Stride also allows you to output content to VR Devices. 
 
+### Topics
+
+* [Editing shaders](editing-shaders.md)
+* [All about TextureFX shaders](texturefx.md)
 
 ### Additional libraries:
 
@@ -16,7 +20,7 @@ Both workflows can be easily combined. In general the [Stride Documentation](htt
 
 
 ### Useful tools
-* [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer)
+* [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)
 * [List of Material Editors](https://discourse.vvvv.org/t/open-source-material-editor-material-creation-resource-list/19185)
 
 
