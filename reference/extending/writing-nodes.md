@@ -4,7 +4,7 @@ Writing your own nodes for VL using C# requires no VL specific knowledge or prep
 
 ## Start from a Template
 
-In Visual Studio 2017 create a new project by choosing either of those two templates:
+In Visual Studio 2019 create a new project by choosing either of those two templates:
 
 * `Visual C#[Class Library (.NET Standard)`
 * `Visual C#[Class Library (.NET Framework)`
