@@ -14,9 +14,6 @@ As a rule of thumb: Use .NET Standard as long as you can, use .NET Framework if 
 ![](../../images/libraries/vl-libraries-writingNodes-vs2017.PNG)
 <center>Visual Studio Template Chooser</center>
 
-> [!NOTE]
-> If you are using Visual Studio 2015 choose menu:Visual C#[Class Library].
-
 This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
 ![](../../images/libraries/vl-libraries-writingNodes-vs2017-emptyClass.PNG)
