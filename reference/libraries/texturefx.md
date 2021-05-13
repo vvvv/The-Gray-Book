@@ -68,14 +68,14 @@ Derives from TextureFX. Allows you to implement the Mix() function, which comes 
 ```c
 shader Mix_TextureFX : MixerBase
 {
-    float4 Mix(float4 tex0col, float4 tex2col, float fader)
+    float4 Mix(float4 tex0col, float4 tex1col, float fader)
     {
-        return lerp(tex0col, tex2col, fader);	
+        return lerp(tex0col, tex1col, fader);	
     }
 };
 ```
 > [!NOTE]
-> Using the `tex0col` input is not mandatory and you can still add other texture inputs to sample from.
+> Using the `tex0col` and `tex1col` inputs is not mandatory and you can still add other texture inputs to sample from.
 
 #### ShaderUtils
 Defines constants like PI and gives access to many commonly used shader snippets.
