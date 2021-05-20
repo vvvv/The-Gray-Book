@@ -15,10 +15,27 @@ vvvv allows you to export a patch into an executable, standalone program. In ord
 After a successful export, the output directory will contain a directory with the name of your application. Inside this directory you find the executable. To run the program on another PC you need to copy the whole content of this directory.
 
 ### Source Directory
-Next to the application directory you'll also find a \src directory. This is an artefact that vvvv creates during export and can be safely deleted.
+Next to the application directory you'll also find a `\src` directory. This is an artefact that vvvv creates during export and can be safely deleted.
 
 > [!NOTE]
-> .NET developers my find this interesting though as it contains a completely valid c# solution of the exported project that can be opened, viewed and modified with Visual Studio.
+> .NET developers may find this interesting though, as it contains a completely valid c# solution of the exported project that can be opened, viewed and modified with Visual Studio.
+
+## Options
+### Console App
+Choose between Windows or Console app. A Console app will open a windows Console and run the Update operation for only one frame, then immediately Dispose itself. So in order to keep it running you need to take care of blocking the operation yourself. You can do that for example by running your program in an endless loop... 
+
+Useful nodes: 
+- Args [System] to access commandline arguments the app was called with
+- Nodes from the advanced [System.Console] category
+
+Useful libraries:
+- [Terminal.Gui](https://github.com/migueldeicaza/gui.cs) for creating  applications with a text based UI
+
+### 64bit
+Disable to export for 32bit architectures.
+
+### Clean Output
+If active, removes artefacts of previous exports (ie. deletes the \src folder) before exporting. This will cause exports to take longer but also makes sure previous artefacts don't interfere with the new export.
 
 ## Assets
 
@@ -41,6 +58,9 @@ Referencing the nuget VL.CoreLib.Windows adds the following nodes:
 
 These allow you to configure the renderers caption, controlbox, framing and more.
 
+## Code Signing
+In order to have your executables to run without a warning on other PCs, you need to sign them with a certificate using [SignTool](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool).
+
 ## Troubleshooting
 In case the export fails, the console will be opened to show there was an error.
 
@@ -48,6 +68,3 @@ In case the export fails, the console will be opened to show there was an error.
 <center>The Application Exporter reporting a problem</center>
 
 Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via forum or chat.
-
-## Code Signing
-In order to have your executables to run without a warning on other PCs, you need to sign them with a certificate using [SignTool](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool).
