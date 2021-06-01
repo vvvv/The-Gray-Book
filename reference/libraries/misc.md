@@ -19,6 +19,9 @@ NuGet: [VL.2d.Voronoi](https://www.nuget.org/packages/VL.2d.Voronoi)
 Polyline simplification.  
 NuGet: [VL.2d.Simplify](https://www.nuget.org/packages/VL.2D.Simplify/)
 
+## SmallestCircle
+Calculate the smallest enclosing circle for a set of 2D points.  
+NuGet: [VL.SmallestCircle](https://www.nuget.org/packages/VL.SmallestCircle/)
 
 ## Curve Fitting
 Fitting bezier curves to a given set of points.  
