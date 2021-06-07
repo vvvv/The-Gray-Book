@@ -6,8 +6,8 @@ Writing your own nodes for VL using C# requires no VL specific knowledge or prep
 
 In Visual Studio 2019 create a new project by choosing either of those two templates:
 
-* `Visual C#[Class Library (.NET Standard)`
-* `Visual C#[Class Library (.NET Framework)`
+* `Visual C#[Class Library (.NET Standard 2.0)`
+* `Visual C#[Class Library (.NET Framework 4.72)`
 
 As a rule of thumb: Use .NET Standard as long as you can, use .NET Framework if you need. For more confusing information on this, read this [Stackoverflow discussion](https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project).
 
