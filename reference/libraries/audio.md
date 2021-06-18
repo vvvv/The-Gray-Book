@@ -5,7 +5,7 @@
 For audio analysis, playback, recording and sound synthesis.  
 NuGet: [VL.Audio](https://www.nuget.org/packages/VL.Audio)
 
-Requires an ASIO drive like: 
+Requires an ASIO driver! If your sound card doesn't ship with such a driver, try a generic one, like: 
 * [ASIO4All](http://www.asio4all.org)
 * or [FL Studio ASIO](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/envsettings_audio.htm#FLStudioASIO) as included with the free download of [FL Studio](https://www.image-line.com/fl-studio-download)
 
