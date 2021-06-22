@@ -18,7 +18,7 @@ Both workflows can be easily combined. In general the [Stride Documentation](htt
 * NuGet: [VL.IO.Teximp](https://www.nuget.org/packages/VL.Teximp) for texture IO and processing
 * NuGet: [VL.Assimp](https://www.nuget.org/packages/VL.Assimp) is an alternative 3d model loader for Stride
 * NuGet: [VL.CEF](https://www.nuget.org/packages/VL.CEF) is a HTML texture renderer for Stride
-* Currently in the making: [FUSE](https://vvvv.org/blog/fuse-vl.stride-gpu-tools-presentation) - A collection of GPU tools and libraries to use with VL.Stride. Think: Distance Fields & Raymarching, Particles, Procedural Geometry, Textures and Materials, GPGPU
+* NuGet: [VL.Fuse](https://www.nuget.org/packages/VL.Fuse/) is currently in the making: [FUSE](https://vvvv.org/blog/fuse-vl.stride-gpu-tools-presentation) - A collection of GPU tools and libraries to use with VL.Stride. Think: Distance Fields & Raymarching, Particles, Procedural Geometry, Textures and Materials, GPGPU
 
 
 ### Useful tools
