@@ -105,7 +105,7 @@ shader MyFX_TextureFX : TextureFX
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
 | OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb.
-| WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#Mipmaps).
+| WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#mipmaps) below.
 | DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a source texturefx from vvvv beta (dx9 or dx11), because their visual result may have relied on this legacy default behavior. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. 
 
 ## Source Node Attributes
