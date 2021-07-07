@@ -186,7 +186,7 @@ If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win3
 
 Many of those are already available in more human-readable terms inherited via the [ShaderBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/ShaderBaseStream.sdsl).
 
-A common requirement the size of the render target, this is provided via the `ViewSize` variable. It describes the size of the current viewport, which is the full size of the render target for TextureFX:
+A common requirement is the size of the render target, this is provided via the `ViewSize` variable. It describes the size of the current viewport, which is the full size of the render target for TextureFX:
 
 ```c
 float2 targetSize = ViewSize;
