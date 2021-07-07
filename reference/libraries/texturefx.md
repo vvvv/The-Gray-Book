@@ -12,7 +12,7 @@ Next to your .vl document create a directory named `\shaders`. In this directory
 
 The .sdsl file then contains the shader for a source, mixer, filter or utility TextureFX. For a simple invert filter, this would be everything that is needed: 
 
-```hlsl
+```c
 shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
@@ -49,7 +49,7 @@ Derives from ImageEffectShader and ShaderUtils.
 #### FilterBase
 Derives from TextureFX. Allows to you implement the Filter() function, which comes with the color of the input texture as parameter:
 
-```hlsl
+```c
 shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
@@ -65,7 +65,7 @@ shader MyFx_TextureFX : FilterBase
 #### MixerBase
 Derives from TextureFX. Allows you to implement the Mix() function, which comes with the colors of the two input textures and a fader parameter:
 
-```hlsl
+```c
 shader Mix_TextureFX : MixerBase
 {
     float4 Mix(float4 tex0col, float4 tex1col, float fader)
@@ -83,7 +83,7 @@ Defines constants like PI and gives access to many commonly used shader snippets
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:
 
-```hlsl
+```c
 [Category("Filter")]
 [Summary("Description for what the filter does")]
 [Remarks("Any special notes")]
@@ -111,7 +111,7 @@ shader MyFX_TextureFX : TextureFX
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
 
-```hlsl
+```c
 [TextureSource]
 shader Foo_TextureFX : TextureFX
 ```
@@ -133,7 +133,7 @@ Every pin definition can have the following Attributes:
 | Default | Only for Compute inputs to specify their default. For primitive inputs you can simply set the default with the variable definition.
 
 ### Examples
-```hlsl
+```c
 [Color]
 [Summary("The color to do this and that")]
 float4 MyColor;
@@ -176,7 +176,7 @@ Note that for such cases it makes sense to mark the individual passes with the "
 ## Mipmaps
 Some effects need mipmaps for the input texture. This can be indicated via the `[WantsMips("")]` attribute. It takes a comma separated list of texture variable names that need mipmaps. The TextureFX wrapper will then take care of generating the mipmaps, if the texture doesn't have them already. To save performance, an additional input pin is created that controls whether the mipmaps should be generated in every frame or only when the texture instance changes, the default is `true`.
 
-```hlsl
+```c
 [WantsMips("Texture0, MyTexture, ...")]
 shader Foo_TextureFX : TextureFX
 ```
@@ -188,6 +188,6 @@ Many of those are already available in more human-readable terms inherited via t
 
 A common requirement the size of the render target, this is provided via the `ViewSize` variable. It describes the size of the current viewport, which is the full size of the render target for TextureFX:
 
-```hlsl
+```c
 float2 targetSize = ViewSize;
 ```
