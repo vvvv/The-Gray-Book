@@ -12,7 +12,7 @@ Next to your .vl document create a directory named `\shaders`. In this directory
 
 The .sdsl file then contains the shader for a source, mixer, filter or utility TextureFX. For a simple invert filter, this would be everything that is needed: 
 
-```c
+```hlsl
 shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
@@ -49,7 +49,7 @@ Derives from ImageEffectShader and ShaderUtils.
 #### FilterBase
 Derives from TextureFX. Allows to you implement the Filter() function, which comes with the color of the input texture as parameter:
 
-```c
+```hlsl
 shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
@@ -65,7 +65,7 @@ shader MyFx_TextureFX : FilterBase
 #### MixerBase
 Derives from TextureFX. Allows you to implement the Mix() function, which comes with the colors of the two input textures and a fader parameter:
 
-```c
+```hlsl
 shader Mix_TextureFX : MixerBase
 {
     float4 Mix(float4 tex0col, float4 tex1col, float fader)
@@ -83,7 +83,7 @@ Defines constants like PI and gives access to many commonly used shader snippets
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:
 
-```c
+```hlsl
 [Category("Filter")]
 [Summary("Description for what the filter does")]
 [Remarks("Any special notes")]
@@ -104,13 +104,14 @@ shader MyFX_TextureFX : TextureFX
 | Summary | A short info that shows up as tooltip on the node in the NodeBrowser and when hovered in a patch.
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
-| OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb. 
+| OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb.
+| WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#Mipmaps).
 | DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a source texturefx from vvvv beta (dx9 or dx11), because their visual result may have relied on this legacy default behavior. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. 
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
 
-```c
+```hlsl
 [TextureSource]
 shader Foo_TextureFX : TextureFX
 ```
@@ -132,7 +133,7 @@ Every pin definition can have the following Attributes:
 | Default | Only for Compute inputs to specify their default. For primitive inputs you can simply set the default with the variable definition.
 
 ### Examples
-```c
+```hlsl
 [Color]
 [Summary("The color to do this and that")]
 float4 MyColor;
@@ -173,15 +174,20 @@ At this point there is no support for multiple passes in shader code. That said,
 Note that for such cases it makes sense to mark the individual passes with the "Internal" [aspect](#category-and-aspects), because they probably are not meant to be used on their own and therefore should not show up in the NodeBrowser.
 
 ## Mipmaps
-Some effects rely on mipmaps in the input image. At this point there is no way of telling in a shader that this is the case. So for those cases you'll have to create a wrapping patch and place a MipMap [Stride.Textures.Utils] node before the TextureFX node.
+Some effects need mipmaps for the input texture. This can be indicated via the `[WantsMips("")]` attribute. It takes a comma separated list of texture variable names that need mipmaps. The TextureFX wrapper will then take care of generating the mipmaps, if the texture doesn't have them already. To save performance, an additional input pin is created that controls whether the mipmaps should be generated in every frame or only when the texture instance changes, the default is `true`.
+
+```hlsl
+[WantsMips("Texture0, MyTexture, ...")]
+shader Foo_TextureFX : TextureFX
+```
 
 ## Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
 
 Many of those are already available in more human-readable terms inherited via the [ShaderBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/ShaderBaseStream.sdsl).
 
-A common requirement is to refer to a shaders target size, for which we don't have a semantic yet. But since filers by default adapt to the size of their input, what comes closest to referring to the target size, is using the inverse of the inputs texel size, like:
+A common requirement the size of the render target, this is provided via the `ViewSize` variable. It describes the size of the current viewport, which is the full size of the render target for TextureFX:
 
-```c
-float2 targetSize = 1/Texture0TexelSize;
+```hlsl
+float2 targetSize = ViewSize;
 ```
