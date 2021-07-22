@@ -106,7 +106,8 @@ shader MyFX_TextureFX : TextureFX
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
 | OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb.
 | WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#mipmaps) below.
-| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a source texturefx from vvvv beta (dx9 or dx11), because their visual result may have relied on this legacy default behavior. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. 
+| DontUnapplySRgbCurveOnRead | You'll most likely not need this flag! One usecase is when porting over a source TextureFX from vvvv beta (dx9 or dx11). The visual result may have relied on color math in sRGB space. If set, disables the automatic sRGB-to-linear conversion that happens when reading (sampling) from a sRGB input texture. Note that this might involve an internal copy of the whole texture if the resource is not typeless (i.e. doesn't allow views of different types). Only relevant if the input texture format has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default.
+| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a TextureFX from vvvv beta (dx9 or dx11). The visual result may have relied on color math in sRGB space. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default.
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
@@ -181,13 +182,46 @@ Some effects need mipmaps for the input texture. This can be indicated via the `
 shader Foo_TextureFX : TextureFX
 ```
 
-## Shader Semantics
+## sRGB and Linear Color Space
+By default the rendering pipeline is set to linear color space. This is the correct color space for doing color math such as blending and lighting.
+
+However, if you copy shader code that is written to perform color math in sRGB space, for example, from vvvv beta, you might want to indicate that the input colors should be, and output colors are, in sRGB space.
+
+```c
+[DontUnapplySRgbCurveOnRead]
+[DontApplySRgbCurveOnWrite]
+shader MySRgbFX_TextureFX : FilterBase
+{
+    float4 Filter(float4 tex0col)
+    {
+        tex0col.rgb = 1 - tex0col.rgb;
+        return tex0col;
+    }
+};
+```
+
+## System Values and Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
 
 Many of those are already available in more human-readable terms inherited via the [ShaderBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/ShaderBaseStream.sdsl).
 
+### Render Target Size
 A common requirement is the size of the render target, this is provided via the `ViewSize` variable. It describes the size of the current viewport, which is the full size of the render target for TextureFX:
 
 ```c
 float2 targetSize = ViewSize;
+```
+### Time
+The current time and the frame time diffrence can be obtained by inheriting from the [Global shader](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Rendering/Rendering/Shaders/Global.sdsl) and using the `Time` and `TimeStep` variables. The values are automatically set by the runtime.
+
+```c
+shader MyBlinker_TextureFX : FilterBase, Global
+{
+    float4 Filter(float4 tex0col)
+    {
+        var blink = frac(Time) > 0.5;
+        tex0col.rgb = tex0col.rgb * blink;
+        return tex0col;
+    }
+};
 ```
