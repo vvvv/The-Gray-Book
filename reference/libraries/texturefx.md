@@ -187,9 +187,9 @@ By default the rendering pipeline is set to linear color space. This is the corr
 
 The (linear) graphics pipeline will automatically convert from sRGB to linear when a pixel is sampled from a sRGB texture and it will automatically convert from linear to sRGB when a sRGB texture is set as render target.
 
- However, if you copy shader code that is written with the intent to perform color math in sRGB space, you might want to indicate that the input colors should be, and output colors are, in sRGB space.
+However, if you copy shader code that was written for an legacy sRGB/nonlinear pipeline (as DX9/DX11 in vvvv beta were), you might want to indicate that the input and output colors are in sRGB space.
 
-To do this, you can use two attributes that indicate read and write intent.
+To do this, you can use two attributes that declare the read and write intent.
 * `[DontUnapplySRgbCurveOnRead]`, input should stay as sRGB. This can involve an internal copy of the texture if the resource is not typeless (i.e. is [strongly typed](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-resources-intro#strong-vs-weak-typing)).
 * `[DontApplySRgbCurveOnWrite]`, output is already sRGB.
 
