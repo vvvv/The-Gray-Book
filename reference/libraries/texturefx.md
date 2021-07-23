@@ -107,7 +107,7 @@ shader MyFX_TextureFX : TextureFX
 | OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb.
 | WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#mipmaps) below.
 | DontUnapplySRgbCurveOnRead | You'll most likely not need this flag! If set, disables the automatic sRGB-to-linear conversion that happens when reading (sampling) from a sRGB input texture. Only relevant if the input texture format has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
-| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
+| DontApplySRgbCurveOnWrite | You'll most likely not need this flag! If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
@@ -187,7 +187,7 @@ By default the rendering pipeline is set to linear color space. This is the corr
 
 The (linear) graphics pipeline will automatically convert from sRGB to linear when a pixel is sampled from a sRGB texture and it will automatically convert from linear to sRGB when a sRGB texture is set as render target.
 
- However, if you copy shader code that is written with the intend to perform color math in sRGB space, you might want to indicate that the input colors should be, and output colors are, in sRGB space.
+ However, if you copy shader code that is written with the intent to perform color math in sRGB space, you might want to indicate that the input colors should be, and output colors are, in sRGB space.
 
 To do this, you can use two attributes that indicate read and write intent.
 * `[DontUnapplySRgbCurveOnRead]`, input should stay as sRGB. This can involve an internal copy of the texture if the resource is not typeless (i.e. is [strongly typed](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-resources-intro#strong-vs-weak-typing)).
