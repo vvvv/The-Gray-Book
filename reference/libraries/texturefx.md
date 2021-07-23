@@ -106,8 +106,8 @@ shader MyFX_TextureFX : TextureFX
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
 | OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb.
 | WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#mipmaps) below.
-| DontUnapplySRgbCurveOnRead | You'll most likely not need this flag! One usecase is when porting over a source TextureFX from vvvv beta (dx9 or dx11). The visual result may have relied on color math in sRGB space. If set, disables the automatic sRGB-to-linear conversion that happens when reading (sampling) from a sRGB input texture. Note that this might involve an internal copy of the whole texture if the resource is not typeless (i.e. doesn't allow views of different types). Only relevant if the input texture format has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default.
-| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a TextureFX from vvvv beta (dx9 or dx11). The visual result may have relied on color math in sRGB space. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default.
+| DontUnapplySRgbCurveOnRead | You'll most likely not need this flag! If set, disables the automatic sRGB-to-linear conversion that happens when reading (sampling) from a sRGB input texture. Only relevant if the input texture format has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
+| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
@@ -183,23 +183,36 @@ shader Foo_TextureFX : TextureFX
 ```
 
 ## sRGB and Linear Color Space
-By default the rendering pipeline is set to linear color space. This is the correct color space for doing color math such as blending and lighting.
+By default the rendering pipeline is set to linear color space. This is the correct color space for doing color math, such as blending and lighting. But almost all images are stored in sRGB color space because it allows for lower bit depths, hence smaller file sizes. To solve this, graphics APIs have low bit depth [pixel formats with the `_SRgb` suffix](https://github.com/stride3d/stride/blob/7e836297cb5930c01e6dfa0183e7f3cc64748fb6/sources/engine/Stride/Graphics/PixelFormatExtensions.cs#L590) to indicate that the pixel values are in sRGB color space.
 
-However, if you copy shader code that is written to perform color math in sRGB space, for example, from vvvv beta, you might want to indicate that the input colors should be, and output colors are, in sRGB space.
+The (linear) graphics pipeline will automatically convert from sRGB to linear when a pixel is sampled from a sRGB texture and it will automatically convert from linear to sRGB when a sRGB texture is set as render target.
+
+ However, if you copy shader code that is written with the intend to perform color math in sRGB space, you might want to indicate that the input colors should be, and output colors are, in sRGB space.
+
+To do this, you can use two attributes that indicate read and write intent.
+* `[DontUnapplySRgbCurveOnRead]`, input should stay as sRGB. This can involve an internal copy of the texture if the resource is not typeless (i.e. is [strongly typed](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-resources-intro#strong-vs-weak-typing)).
+* `[DontApplySRgbCurveOnWrite]`, output is already sRGB.
 
 ```c
-[DontUnapplySRgbCurveOnRead]
-[DontApplySRgbCurveOnWrite]
+[DontUnapplySRgbCurveOnRead] //could involve a copy for each input texture
+[DontApplySRgbCurveOnWrite] //almost cost free
 shader MySRgbFX_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
     {
-        tex0col.rgb = 1 - tex0col.rgb;
+        tex0col.rgb = tex0col.rgb;
         return tex0col;
     }
 };
 ```
+These attributes will only do something if the input textures or render target have the `_SRgb` suffix.
 
+It is also possible to specify a comma separated list of variable names of input textures to only set this attribute for specific ones:
+```c
+[DontUnapplySRgbCurveOnRead("Texture0, MyTexture")]
+[DontApplySRgbCurveOnWrite]
+shader MySRgbFX_TextureFX : FilterBase
+```
 ## System Values and Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
 
