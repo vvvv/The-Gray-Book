@@ -62,11 +62,11 @@ NuGet: [VL.Syslog](https://www.nuget.org/packages/VL.Syslog)
 
 ## PsTools
 Set of nodes to execute [PsTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools).  
-GitHub: https://github.com/vvvv/VL.PsTools
+NuGet: [VL.PsTools](https://www.nuget.org/packages/VL.PsTools)
 
 ## HardwareMonitor
 Read sensor data provided by [OpenHardwareMonitor](https://openhardwaremonitor.org/).  
-GitHub: https://github.com/vvvv/VL.HardwareMonitor
+NuGet: [VL.HardwareMonitor](https://www.nuget.org/packages/VL.HardwareMonitor)
 
 ## OpenWeather
 Retrieves weather data from OpenWeather's OneCall API  
