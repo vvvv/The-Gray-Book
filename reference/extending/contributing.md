@@ -24,7 +24,7 @@ vl-libs\VL.Audio\
 vl-libs\VL.Devices.Kinect2\
 </pre>
 
-Such a directory holding one ore more sub-directories that are the sources of packages for vvvv is called a *package-repository*. By specifying the path to this package-repository in vvvv's args.txt like e.g:
+Such a directory holding one ore more sub-directories that are the sources of packages for vvvv is called a *package-repository*. By specifying the path to this package-repository in vvvv's Sketches\args.txt like e.g:
 
 <pre>
 --package-repositories C:\Users\foo\Documents\repos\vl-libs

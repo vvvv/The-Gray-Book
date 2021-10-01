@@ -19,6 +19,9 @@ NuGet: [VL.2d.Voronoi](https://www.nuget.org/packages/VL.2d.Voronoi)
 Polyline simplification.  
 NuGet: [VL.2d.Simplify](https://www.nuget.org/packages/VL.2D.Simplify/)
 
+## SmallestCircle
+Calculate the smallest enclosing circle for a set of 2D points.  
+NuGet: [VL.SmallestCircle](https://www.nuget.org/packages/VL.SmallestCircle/)
 
 ## Curve Fitting
 Fitting bezier curves to a given set of points.  
@@ -59,11 +62,11 @@ NuGet: [VL.Syslog](https://www.nuget.org/packages/VL.Syslog)
 
 ## PsTools
 Set of nodes to execute [PsTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools).  
-GitHub: https://github.com/vvvv/VL.PsTools
+NuGet: [VL.PsTools](https://www.nuget.org/packages/VL.PsTools)
 
 ## HardwareMonitor
 Read sensor data provided by [OpenHardwareMonitor](https://openhardwaremonitor.org/).  
-GitHub: https://github.com/vvvv/VL.HardwareMonitor
+NuGet: [VL.HardwareMonitor](https://www.nuget.org/packages/VL.HardwareMonitor)
 
 ## OpenWeather
 Retrieves weather data from OpenWeather's OneCall API  

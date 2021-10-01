@@ -104,8 +104,10 @@ shader MyFX_TextureFX : TextureFX
 | Summary | A short info that shows up as tooltip on the node in the NodeBrowser and when hovered in a patch.
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
-| OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb. 
-| DontApplySRgbCurveOnWrite | You'll most likely not need this flag. One usecase is when porting over a source texturefx from vvvv beta (dx9 or dx11), because their visual result may have relied on this legacy default behavior. If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. 
+| OutputFormat | Allows to specify the outputs texture format. Valid Values: [PixelFormats](https://github.com/stride3d/stride/blob/master/sources/engine/Stride/Graphics/PixelFormat.cs). If not specified, defaults to R8G8B8A8_UNorm_SRgb.
+| WantsMips | Requests mipmaps for a specific texture input. See [Mipmaps](#mipmaps) below.
+| DontConvertToLinearOnRead | You'll most likely not need this flag! If set, disables the automatic sRGB-to-linear conversion that happens when reading (sampling) from an sRGB input texture. Only relevant if the input texture format has the `_SRgb` suffix and the pipeline is set to linear color space, which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
+| DontConvertToSRgbOnWrite | You'll most likely not need this flag! If set, this flag disables the automatic linear-to-sRGB conversion that happens when writing the shader result into an sRGB texture. Only relevant if OutputFormat has the `_SRgb` suffix and the pipeline is set to linear color space, both of which is the default. See [sRGB and Linear Color Space](#srgb-and-linear-color-space) below.
 
 ## Source Node Attributes
 The following attributes are specifically for use with Source TextureFX:
@@ -173,15 +175,66 @@ At this point there is no support for multiple passes in shader code. That said,
 Note that for such cases it makes sense to mark the individual passes with the "Internal" [aspect](#category-and-aspects), because they probably are not meant to be used on their own and therefore should not show up in the NodeBrowser.
 
 ## Mipmaps
-Some effects rely on mipmaps in the input image. At this point there is no way of telling in a shader that this is the case. So for those cases you'll have to create a wrapping patch and place a MipMap [Stride.Textures.Utils] node before the TextureFX node.
+Some effects need mipmaps for the input texture. This can be indicated via the `[WantsMips("")]` attribute. It takes a comma separated list of texture variable names that need mipmaps. The TextureFX wrapper will then take care of generating the mipmaps, if the texture doesn't have them already. To save performance, an additional input pin is created that controls whether the mipmaps should be generated in every frame or only when the texture instance changes, the default is `true`.
 
-## Shader Semantics
+```c
+[WantsMips("Texture0, MyTexture, ...")]
+shader Foo_TextureFX : TextureFX
+```
+
+## sRGB and Linear Color Space
+By default the rendering pipeline is set to linear color space. This is the correct color space for doing color math, such as blending and lighting. But almost all images are stored in non-linear sRGB color space because it allows for lower bit depths, hence smaller file sizes. To solve this, graphics APIs have low bit depth [pixel formats with the `_SRgb` suffix](https://github.com/stride3d/stride/blob/7e836297cb5930c01e6dfa0183e7f3cc64748fb6/sources/engine/Stride/Graphics/PixelFormatExtensions.cs#L590) to indicate that the pixel values are in sRGB color space.
+
+The (linear) graphics pipeline will automatically convert from sRGB to linear when a pixel is sampled from an sRGB texture and it will automatically convert from linear to sRGB when a pixel is written into an sRGB texture set as render target.
+
+However, if you copy shader code that was written for an legacy sRGB/non-linear pipeline (as DX9/DX11 in vvvv beta were), you might want to indicate that the input and output colors are in sRGB space.
+
+To do this, you can use two attributes that declare the read and write intent.
+* `[DontConvertToLinearOnRead]`, input should stay as sRGB. This can involve an internal copy of the texture if the resource is not typeless (i.e. is [strongly typed](https://docs.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-resources-intro#strong-vs-weak-typing)).
+* `[DontConvertToSRgbOnWrite]`, output is already sRGB.
+
+```c
+[DontConvertToLinearOnRead] //could involve a copy for each input texture
+[DontConvertToSRgbOnWrite] //almost cost free
+shader MySRgbFX_TextureFX : FilterBase
+{
+    float4 Filter(float4 tex0col)
+    {
+        tex0col.rgb = tex0col.rgb;
+        return tex0col;
+    }
+};
+```
+These attributes will only do something if the input textures or render target have the `_SRgb` suffix.
+
+Because there can be more than one input texture, it is also possible to specify a comma separated list of variable names of input textures to set the input attribute only for specific ones:
+```c
+[DontConvertToLinearOnRead("Texture0, MyTexture")]
+[DontConvertToSRgbOnWrite]
+shader MySRgbFX_TextureFX : FilterBase
+```
+## System Values and Shader Semantics
 If needed, [HLSL shader semantics](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics#system-value-semantics) can be used. 
 
 Many of those are already available in more human-readable terms inherited via the [ShaderBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/ShaderBaseStream.sdsl).
 
-A common requirement is to refer to a shaders target size, for which we don't have a semantic yet. But since filers by default adapt to the size of their input, what comes closest to referring to the target size, is using the inverse of the inputs texel size, like:
+### Render Target Size
+A common requirement is the size of the render target, this is provided via the `ViewSize` variable. It describes the size of the current viewport, which is the full size of the render target for TextureFX:
 
 ```c
-float2 targetSize = 1/Texture0TexelSize;
+float2 targetSize = ViewSize;
+```
+### Time
+The current time and the frame time diffrence can be obtained by inheriting from the [Global shader](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Rendering/Rendering/Shaders/Global.sdsl) and using the `Time` and `TimeStep` variables. The values are automatically set by the runtime.
+
+```c
+shader MyBlinker_TextureFX : FilterBase, Global
+{
+    float4 Filter(float4 tex0col)
+    {
+        var blink = frac(Time) > 0.5;
+        tex0col.rgb = tex0col.rgb * blink;
+        return tex0col;
+    }
+};
 ```

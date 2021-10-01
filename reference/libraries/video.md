@@ -2,7 +2,7 @@
 
 ## Playback and Video Input 
 
-* NuGet: [VL.MediaFoundation](https://www.nuget.org/packages/VL.MediaFoundation) - mp4 and other standard formats
+* NuGet: [VL.Video.MediaFoundation](https://www.nuget.org/packages/VL.Video.MediaFoundation) - mp4 and other standard formats
 * NuGet: [VL.HapPlayer](https://www.nuget.org/packages/VL.HapPlayer) - Hap and HapR playback 
 * NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 * NuGet: [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer)
