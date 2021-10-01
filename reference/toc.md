@@ -82,4 +82,5 @@
 ## [Publishing NuGets](extending/publishing.md)
 
 # Best Practice
+## [Recording output as video](best-practice/video-recording.md)
 ## [Version Control using Git](best-practice/version-control.md)
