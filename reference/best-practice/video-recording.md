@@ -29,3 +29,6 @@ If you're looking for a recording option as part of your application, have a loo
 If you want to write high-resolution image sequences in non-realtime, use the TextureWriter (for VL.Stride) or ImageWriter (for VL.Skia) nodes. 
 
 Use those in combination with the MainLoop node set to "Is Incremental" and specifying the "Incremental FPS" you need. This makes sure that the timing of all nodes that are depending on a clock (like LFOs, Filters,...) is correctly advanced, no matter how long it takes, to write each of the images to disk. 
+
+> [!NOTE]
+> This technique does not work for scenarios where your visual content relies on realtime parameters like audio analysis or realtime sensor data.
