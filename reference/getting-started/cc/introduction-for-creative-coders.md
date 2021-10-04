@@ -10,6 +10,44 @@ Have a look at the [Gallery](https://visualprogramming.net/#Gallery) to see some
 
 Depending on where you come from, vvvv offers different benefits:
 
+## Coming from other visual programming environments
+If you're familiar with visual creative coding environments, like:
+
+* [cables](https://cables.gl)
+* [Isadora](https://troikatronix.com)
+* [Max](https://cycling74.com)
+* [PD](http://puredata.info)
+* [TouchDesigner](https://derivative.ca)
+* [Vuo](https://vuo.org)
+
+... then the following could be interesting for you:
+
+### Vast, modular, open-source library of nodes
+Browse the [Library](../../libraries/overview.md) section to get an overview of the availability of a vast range of different libraries for vvvv, most of which are open-source (some not yet, but only for organisational reasons). Apart from the [VL.CoreLib](../../libraries/corelib.md) the three biggest to date are:
+- VL.Stride: for 3d rendering, shader programming, VR,... based on [Stride](http://stride3d.net)
+- VL.Skia: for 2d rendering, vector graphics export,... based on [Skia](https://skia.org)
+- [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV): for computer vision,... based on [OpenCV](http://opencv.org)
+- [VL.Fuse](https://www.nuget.org/packages/VL.Fuse): a collection of GPU tools and libraries to use with VL.Stride
+- [VL.Elementa](https://www.nuget.org/packages/VL.Elementa): a UI widget library for VL.Skia  
+
+Further there is a big focus on supporting loads of [Devices](https://thegraybook.vvvv.org/reference/libraries/devices.html) and [Protocols](https://thegraybook.vvvv.org/reference/libraries/io.html) out of the box.
+
+### Export Windows applications
+Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. 
+
+### Comfortable licensing model
+vvvv is free for non-commercial use. Simply download, install and run it:
+
+- No questions asked
+- No copy-protection
+- No feature limitations
+- No mandatory registration
+- Pay per size of your business (Individual, Freelancer or SME, Big Fish)
+- You own the last version you paid for
+- Yearly or monthly payment options
+
+As you're starting to use vvvv for commercial projects, you simply [buy a per-developer-seat license](http://store.vvvv.org). 
+
 ## Coming from text based coding
 If you're familiar with text based creative coding, like:
 * [Cinder](https://www.libcinder.org) or [OpenFrameworks](https://openframeworks.cc)
@@ -32,42 +70,6 @@ VL (the language used in vvvv) is not your ordinary visual language where you on
 ### Write your own nodes
 
 True, certain things, like low-level algorithms, are sometimes easier to write in text. [Nodes can be written](../../extending/overview.md) using plain C# or F#, without the need for any vvvv specific boilerplate code. That's why you can also directly use any of the .NET libraries hosted by the [NuGet](http://nuget.org) package manager. 
-
-## Coming from other visual programming environments
-If you're familiar with visual creative coding environments, like:
-
-* [cables](https://cables.gl)
-* [Isadora](https://troikatronix.com)
-* [Max](https://cycling74.com)
-* [PD](http://puredata.info)
-* [TouchDesigner](https://derivative.ca)
-* [Vuo](https://vuo.org)
-
-... then the following could be interesting for you:
-
-### Vast, modular, open-source library of nodes
-Browse the [Library](../../libraries/overview.md) section to get an overview of the availability of a vast range of different libraries for vvvv, most of which are open-source (some not yet, but only for organisational reasons). Apart from the [VL.CoreLib](../../libraries/corelib.md) the three biggest to date are:
-- VL.Stride: for 3d rendering, shader programming, VR,... based on [Stride](http://stride3d.net)
-- VL.Skia: for 2d rendering, vector graphics export,... based on [Skia](https://skia.org)
-- VL.OpenCV: for computer vision,... based on [OpenCV](http://opencv.org)
-
-Further there is a big focus on supporting loads of [Devices](https://thegraybook.vvvv.org/reference/libraries/devices.html) and [Protocols](https://thegraybook.vvvv.org/reference/libraries/io.html) out of the box.
-
-### Export Windows applications
-Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. 
-
-### Comfortable licensing model
-vvvv is free for non-commercial use. Simply download, install and run it:
-
-- No questions asked
-- No copy-protection
-- No feature limitations
-- No mandatory registration
-- Pay per size of your business (Individual, Freelancer or SME, Big Fish)
-- You own the last version you paid for
-- Yearly or monthly payment options
-
-As you're starting to use vvvv for commercial projects, you simply [buy a per-developer-seat license](http://store.vvvv.org). 
 
 ## What you may miss
 Compared to one or the other frameworks listed above, you may miss:
