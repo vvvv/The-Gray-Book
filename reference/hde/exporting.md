@@ -34,6 +34,9 @@ Useful libraries:
 ### 64bit
 Disable to export for 32bit architectures.
 
+> [!NOTE]
+> If a 32bit application that references VL.Stride fails to run even on your developer PC, make sure it has [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) for x86 installed.
+
 ### Clean Output
 If active, removes artefacts of previous exports (ie. deletes the \src folder) before exporting. This will cause exports to take longer but also makes sure previous artefacts don't interfere with the new export.
 
@@ -62,9 +65,15 @@ These allow you to configure the renderers caption, controlbox, framing and more
 In order to have your executables to run without a warning on other PCs, you need to sign them with a certificate using [SignTool](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool).
 
 ## Troubleshooting
+
+### Export fails
 In case the export fails, the console will be opened to show there was an error.
 
 ![](../../images/hde/exporting-74bc1.png)
 <center>The Application Exporter reporting a problem</center>
 
 Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via forum or chat.
+
+### Exported app doesn't run on target PC
+
+If your application is referencing VL.Stride, make sure the target PC also has [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) installed!
