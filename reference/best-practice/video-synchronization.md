@@ -1,6 +1,6 @@
 # Video Synchronization
 
-Using either the **TexurePlayer** (with VL.Stride) or **ImagePlayer** (with VL.Skia) nodes found in the Video category, it is possible to synchronize the playback of videos that are playing on different PCs, when connected via a local network. 
+Using either the **ImagePlayer (Stride)** or **ImagePlayer (Skia)** nodes (or their framebased variants) found in the Video category, it is possible to synchronize the playback of videos that are playing on different PCs, when connected via a local network. 
 
 
 ## How it works
