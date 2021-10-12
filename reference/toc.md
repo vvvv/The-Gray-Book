@@ -84,7 +84,7 @@
 ## [Publishing NuGets](extending/publishing.md)
 
 # Best Practice
-## [Capturing video input](best-practice/video-video-capture.md)
-## [Playing back video](best-practice/video-video-playback.md)
+## [Capturing video input](best-practice/video-capture.md)
+## [Playing back video](best-practice/video-playback.md)
 ## [Recording output as video](best-practice/video-recording.md)
 ## [Version Control using Git](best-practice/version-control.md)
