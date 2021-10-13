@@ -9,8 +9,9 @@ Both workflows can be easily combined. In general the [Stride Documentation](htt
 
 ### Topics
 
-* [Editing shaders](editing-shaders.md)
-* [All about TextureFX shaders](texturefx.md)
+* [Models and Meshes](3d/models.md)
+* [Editing shaders](3d/editing-shaders.md)
+* [All about TextureFX shaders](3d/texturefx.md)
 
 ### Additional libraries:
 
