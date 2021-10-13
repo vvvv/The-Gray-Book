@@ -37,7 +37,7 @@ vvvv offers two distinct ways for video playback:
 - Nodes exist in two variants: timebased and framebased, see below
 - Can do seemless looping
 - Allows to implement seemless switching between soruces
-- The playback of image sequences on multiple PCs in a local network can be [synchronized](videp-synchronization.md)
+- The playback of image sequences on multiple PCs in a local network can be [synchronized](video-synchronization.md)
 
 ### Disadvantage
 - Less comfortable handling of media assets (ie. thousands of image files)
