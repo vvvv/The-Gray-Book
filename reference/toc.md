@@ -62,7 +62,7 @@
 ## [Graphics](libraries/graphics.md)
 ### [2D](libraries/graphics-2d.md)
 ### [3D](libraries/graphics-3d.md)
-#### [Models](libraries/3d/models.md)
+#### [Models and Meshes](libraries/3d/models.md)
 #### [TextureFX](libraries/3d/texturefx.md)
 #### [Editing Shaders](libraries/3d/editing-shaders.md)
 ## [IO](libraries/io.md)
