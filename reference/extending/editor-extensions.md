@@ -6,22 +6,22 @@ Editor extensions allow you to extend the vvvv editor with your own tools. Examp
 
 Extensions can be entirely patched in vvvv and assigned a shortcut so they can be called by the user at anytime. You can find all currently loaded extensions in the main menu under:
 
-    Quad > Extensions
+`Quad > Extensions`
 
 ## Creating an extension from the template
 
 From the main menu choose:
 
-    Quad > Extensions > New Extension...
+`Quad > Extensions > New Extension...`
 
 and specify the destination and filename for your new extension .vl document in the file save dialog.
 
-> NOTE
+> [!NOTE]
 > The filename must end in `.HDE.vl` in order for the file to be a valid editor extension.
 
 This copies the template to the given destination and opens the document for you, which should look like this:
 
-![](extension-command.png)
+![](../../images/reference/extending/extension-command.png)
 
 Note the `Command` node here that allows you to register a command with the editor, by specifying:
 - A label for the menu entry
