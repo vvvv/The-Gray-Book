@@ -47,8 +47,8 @@
 ### [JSON](libraries/json.md)
 ### [XML](libraries/xml.md)
 
-## [2D Graphics](libraries/graphics-2d.md)
-## [3D Graphics](libraries/graphics-3d.md)
+## [2d Graphics](libraries/graphics-2d.md)
+## [3d Graphics](libraries/graphics-3d.md)
 ### [Rendering](libraries/3d/rendering.md)
 ### [Models and Meshes](libraries/3d/models.md)
 ### [Transparency](libraries/3d/transparency.md)
