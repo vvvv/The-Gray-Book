@@ -24,4 +24,4 @@ See `HowTo Synchronize players between multiple PCs`  in the Helpbrowser.
 
 In this case, to figure out an offset on the client side and decide when to jump, you can come up with different strategies. The FramePlayer node implements one of them. 
 
-See `HowTo Synchronize framebased players between multiple PCs`  in the Helpbrowser.
+See `HowTo Synchronize framebased players between multiple PCs` in the Helpbrowser.
