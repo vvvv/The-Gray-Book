@@ -7,13 +7,14 @@ vvvv does not come with a built-in shader editor. Instead you can use any text e
 ## Syntax Highlighting
 For syntax highlighting you have to use an editor that supports HLSL syntax highlighting. Try one of these:
 
-* [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) is a lighter version of Visual Studio. Add the "[Shader languages support for VS Code](https://marketplace.visualstudio.com/items?itemName=slevesque.shader)" extension and you get syntax highlighting and basic code completion.
+* [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) is a light version of Visual Studio. Add the [Shader languages support for VS Code](https://marketplace.visualstudio.com/items?itemName=slevesque.shader) extension, assign `*.sdsl` files to HLSL syntax, and you get syntax highlighting and basic code completion.
 * You can also use the [Sublime](https://www.sublimetext.com/) editor with the "HLSL Syntax" package.
 
 ## Error Reporting
 For serious shader coding you'll not want to miss error reporting. This requires
 *  [Visual Studio 2019](https://visualstudio.microsoft.com/)
-* The Stride extension, which comes with the [Stride installer](https://stride3d.net/download/).
+* The Stride extension, which comes with the [Stride installer](https://stride3d.net/download/)
+* Stride must be installed for this to work, to see which version, check the "About" dialogue in vvvv gamma
 
  Additionally recommended:
   * Enable the [scroll bar code map](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar?view=vs-2019)
