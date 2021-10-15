@@ -8,13 +8,14 @@ Besides the [VL.CoreLib](corelib.md), which is accessible by default, here is an
 
 | Category | Content |
 |---|---|
+| [2D Graphics](graphics-2d.md) | Skia, paths, svg, pdf, ... |
+| [3D Graphics](graphics-3d.md) | Stride, models, materials, shaders, textures, ... |
 | [Animation](animation.md) | Particle Systems, Timelines, ... |
 | [Audio](audio.md) | Audio analysis, playback, recording. Sound synthesis, ... |
 | [Augmented Reality](augmentedreality.md) | Aruco markers, ... |
 | [Computer Vision](computervision.md) | OpenCV, Dlib, ... |
 | [Databases](databases.md) |  |
 | [Devices](devices.md) | Depth Cameras, Arduino, Lights, Lasers, SICK, ... |
-| [Graphics](graphics.md) | 2d Skia, 3d Stride, ...|
 | [IO](io.md) | Networking Protocols, ... |
 | [Machine Learning](machinelearning.md) | Wekinator, RunwayML, Lobe, ONNX, ... |
 | [Video](video.md) |  Video playback, capturing, ...|

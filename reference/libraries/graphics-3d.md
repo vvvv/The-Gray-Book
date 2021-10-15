@@ -5,7 +5,7 @@ vvvv's 3d rendering engine VL.Stride is based on the [Stride 3d Engine](http://s
 * A **high-level**, easy to use SceneGraph approach, where you build 3d scenes by simply adding primitives, and lights to a scene. Primitives can be given materials to define their look. A range of Post FX, like ambient-occlusion, depth-of-field, bloom, ... are available to easily get shiny results
 * A **low-level** approach, where you can write shaders (vertex, pixel, geometry, compute) using the [Stride Shading Language](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/index.html) (an extension to HLSL) to customize every aspect of your rendering
 
-Both workflows can be easily combined, see [Rendering](libraries/3d/rendering.md) for more details. In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is useful for understanding key concepts of the engine. VL.Stride also allows you to output content to VR Devices.
+Both workflows can be easily combined, see [Rendering](3d/rendering.md) for more details. In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is useful for understanding key concepts of the engine. VL.Stride also allows you to output content to VR Devices.
 
 ### Topics
 
