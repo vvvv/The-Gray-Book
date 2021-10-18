@@ -43,11 +43,17 @@ Now check the output of the `Command` that will trigger whenever the command is 
 You take it from here. A classic usecase will be showing/hiding an editor extensions window on repeated executions of the command. But as within any other patch, you're free to run even `format c:` here, so as always, handle with care...
 
 ## Multiple extensions per .HDE.vl file
-If that is what you need, then yes, simply register multiple commands in your document. 
+If that is what you need, then yes, simply register multiple commands in your document that trigger individual extensions.
 
 Note though, that should one of your extensions have a runtime error, all the others running in the same document, might be affected as well. 
 
-## Packaging extensions in a nuget
+## Interfacing with vvvv
+The vvvv API gives you access to hovered and selected nodes and allows you to read and write pins. In the HelpBrowser check the `API` section for some examples. All the API nodes are available via the `VL.Lang` repository in the `Session` category.
+
+## Settings
+For some extensions it will be interesting to have them configurable via the [Settings](../hde/settings.md). This is not yet possible though. 
+
+## Packaging extensions in a NuGet
 In order for vvvv to pick up editor extensions from installed nugets, their nuget ID also has to end in `.HDE`, e.g.:
 
 `VL.MyExtension.HDE`
@@ -56,5 +62,5 @@ which in turn requires the .vl document inside that nuget to be following the sa
 
 `VL.MyExtension.HDE.vl`
 
-## Debugging Extensions
-tbd
+## Restarting all extensions
+Especially during development it may happen that you crash an extension and it needs a restart. You can restart all extensions at once using the shortcut `Shift+F9`.
