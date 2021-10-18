@@ -1,11 +1,11 @@
 # Rendering
 VL.Stride offers two workflows for rendering:
 * **High-level**: Work with models, lights, materials, textures (Entity-Component-System)
-* **Low-level**: Work with shaders, geometry, and GPU resources directly
+* **Low-level**: Work with draw calls, pipeline states, and GPU resources directly
 
 If you worked with a game engine before, then you've used the high-level approach. If you're coming from vvvv beta and you worked with DX9/DX11, then you've been using the low-level approach.
 
-Both workflows can be combined without any drawbacks, and both can render into a texture or an output window.
+Both workflows can be combined without any drawbacks, and both can render into a texture or an output window. You can also write shaders for both.
 
 ## High-level (scene graph)
 Commonly known as entity-component-system (ECS). The scene graph consists of a tree of scenes that have entities.
