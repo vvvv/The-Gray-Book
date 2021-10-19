@@ -168,6 +168,8 @@ Run|<span class="keyseq"><kbd>F5</kbd></span>
 Step|<span class="keyseq"><kbd>F6</kbd></span>
 Pause|<span class="keyseq"><kbd>F7</kbd></span>
 Stop|<span class="keyseq"><kbd>F8</kbd></span>
+Restart|<span class="keyseq"><kbd>F9</kbd></span>
+Restart editor extensions|<span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></span>
 
 ## Windows
 Description|Action
@@ -175,6 +177,7 @@ Description|Action
 Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
 Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
 Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
+Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
 
 ## VL.Stride
 The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:
