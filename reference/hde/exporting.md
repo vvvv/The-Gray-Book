@@ -64,6 +64,11 @@ These allow you to configure the renderers caption, controlbox, framing and more
 ## Code Signing
 In order to have your executables to run without a warning on other PCs, you need to sign them with a certificate using [SignTool](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool).
 
+## Dependencies
+If your application is referencing VL.Stride, make sure the target PC also has the following dependencies installed:
+* [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) 
+* [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
+
 ## Troubleshooting
 
 ### Export fails
@@ -76,4 +81,4 @@ Please send us the console output by pressing "Copy To Clipboard" and pasting it
 
 ### Exported app doesn't run on target PC
 
-If your application is referencing VL.Stride, make sure the target PC also has [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) installed!
+Chances are that you're missing a dependency on the target PC. See 'Dependencies' above.
