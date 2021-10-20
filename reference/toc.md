@@ -84,8 +84,9 @@
 ## [Design Guidelines](extending/design-guidelines.md)
 ## [Providing Help](extending/providing-help.md)
 ## [Publishing NuGets](extending/publishing.md)
+## [Creating Editor Extensions](extending/editor-extensions.md)
 
-# Best Practice
+# [Best Practice](best-practice/overview.md)
 ## [Capturing video input](best-practice/video-capture.md)
 ## [Playing back video](best-practice/video-playback.md)
 ## [Video synchronization](best-practice/video-synchronization.md)
