@@ -47,8 +47,26 @@ If that is what you need, then yes, simply register multiple commands in your do
 
 Note though, that should one of your extensions have a runtime error, all the others running in the same document, might be affected as well. 
 
+## Windows
+
+An extension doesn't necessarily have to have a window at all (e.g. it could just run an operation on a bunch of selected nodes...). It can also have its very own idea of a window. But in many cases you'll just want to use a ready window that comes with `VL.HDE`. For now these two are available:
+
+* SkiaWindow: A slimmed down version of a Renderer [Skia]
+* SkiaWindowTopMost: Same as above, only doesn't get the focus and is always topmost (e.g. used in the Key/Mouse Display extension)
+
+### Window Bounds
+
+As of now there is no way to tab or dock multiple extension windows. Setting a windows bounds is the best we can do for now. Yes, with many extensions open, this will get messy. Let's see...
+
+In order to set the initial window bounds when an extension window opens, set the `Bounds` input on the SkiaWindow nodes. For convenience checkout out:
+
+* WindowBounds: Positions the window right next to the editor
+* WindowBounds (EditorHeight): Same as above but also sets its height to be the same as the main window (e.g. used in the HelpBrowser)
+
 ## Interfacing with vvvv
-The vvvv API gives you access to hovered and selected nodes and allows you to read and write pins. In the HelpBrowser check the `API` section for some examples. All the API nodes are available via the `VL.Lang` repository in the `Session` category.
+The vvvv API gives you access to hovered and selected nodes and allows you to read and write pins. 
+* In the HelpBrowser check the `API` section for some examples. 
+* All the API nodes are available via the `VL.Lang` repository in the `Session` category.
 
 ## Settings
 For some extensions it will be interesting to have them configurable via the [Settings](../hde/settings.md). This is not yet possible though. 
@@ -63,4 +81,4 @@ which in turn requires the .vl document inside that nuget to be following the sa
 `VL.MyExtension.HDE.vl`
 
 ## Restarting all extensions
-Especially during development it may happen that you crash an extension and it needs a restart. You can restart all extensions at once using the shortcut `Shift+F9`.
+Especially during development it may happen that you crash an extension and it needs a restart. You can restart all extensions at once using the shortcut <span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></span>.
