@@ -82,21 +82,16 @@ Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 
 ## Pin Groups
-### Pin Group 1
 Description|Action
 -|-
-Add Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
-Remove Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
-Add Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-Remove Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
-
-### Pin Group 2
-Description|Action
--|-
-Add Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
-Remove Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
-Add Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-Remove Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
+(Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
+(Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
+(Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
+(Group 3) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+(Group 3) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Group 4) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+(Group 4) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
 
 ## Pads
 Description|Action
