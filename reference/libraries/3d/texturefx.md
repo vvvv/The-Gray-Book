@@ -24,7 +24,10 @@ shader MyFx_TextureFX : FilterBase
 ```
 
 > [!NOTE]
-> The filename ending in **_TextureFX.sdsl** and the shader name also ending in **_TextureFX** is crucial here. It allows the node factory to pick up this file and interpret it as a TextureFX.
+> 3 things are crucial here for the node factory to pick up a file and interpret it as a TextureFX shader:
+> * The shader name must be unique among the shaders shipping with vvvv and your own
+> * The shader name must end in **_TextureFX**
+> * The filename must be: **[shader-name]_TextureFX.sdsl** 
 
 ## Category and Aspects
 
