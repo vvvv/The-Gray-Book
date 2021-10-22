@@ -20,6 +20,7 @@
 ## [Solution Explorer](hde/solution-explorer.md)
 ## [Documentation Window](hde/documentation.md)
 ## [Keyboard Shortcuts](hde/keyboard-shortcuts.md)
+## [Commandline Arguments](hde/commandline-arguments.md)
 ## [Finding Help](hde/findinghelp.md)
 ## [Debugging](hde/debugging.md)
 ## [Settings](hde/settings.md)
