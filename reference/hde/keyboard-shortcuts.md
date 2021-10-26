@@ -84,14 +84,16 @@ Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd
 ## Pin Groups
 Description|Action
 -|-
-(Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
-(Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
-(Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
-(Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
-(Group 3) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-(Group 3) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
-(Group 4) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-(Group 4) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Input Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
+(Input Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
+(Input Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
+(Input Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
+(Output Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+(Output Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Output Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
+(Output Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
+
+In general, the <kbd>Shift</kbd> key means second group and the <kbd>Alt</kbd> key means output group. However, if the node has no input pin groups, the <kbd>Alt</kbd> key is optional. If the node has more pin groups, the additional ones can be found in the context menu of the node.
 
 ## Pads
 Description|Action
