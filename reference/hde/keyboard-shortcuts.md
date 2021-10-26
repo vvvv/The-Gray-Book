@@ -82,21 +82,16 @@ Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 
 ## Pin Groups
-### Pin Group 1
 Description|Action
 -|-
-Add Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
-Remove Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
-Add Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-Remove Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
-
-### Pin Group 2
-Description|Action
--|-
-Add Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
-Remove Input Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
-Add Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-Remove Output Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
+(Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
+(Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
+(Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
+(Group 3) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+(Group 3) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Group 4) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+(Group 4) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
 
 ## Pads
 Description|Action
@@ -168,6 +163,8 @@ Run|<span class="keyseq"><kbd>F5</kbd></span>
 Step|<span class="keyseq"><kbd>F6</kbd></span>
 Pause|<span class="keyseq"><kbd>F7</kbd></span>
 Stop|<span class="keyseq"><kbd>F8</kbd></span>
+Restart|<span class="keyseq"><kbd>F9</kbd></span>
+Restart editor extensions|<span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></span>
 
 ## Windows
 Description|Action
@@ -175,6 +172,7 @@ Description|Action
 Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
 Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
 Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
+Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
 
 ## VL.Stride
 The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:
