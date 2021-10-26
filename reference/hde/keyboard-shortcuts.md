@@ -186,6 +186,18 @@ Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
 Toggle Fullscreen|<span class="keyseq"><kbd>F11</kbd> or <kbd>Alt</kbd><kbd>Return</kbd></span>
 
+If the profiler (<kbd>F3</kbd>) is enabled and the window is active:
+
+Description|Action
+-|-
+Cycle Page (FPS, CPU, GPU)|<span class="keyseq"><kbd>F5</kbd></span>
+Togle Sort Mode (Name, Timinig)|<span class="keyseq"><kbd>F6</kbd></span>
+Decrease Result Page|<span class="keyseq"><kbd>F7</kbd></span>
+Increase Result Page|<span class="keyseq"><kbd>F8</kbd></span>
+Jump to Result Page (1, 2, 3, 4, 5)|<span class="keyseq"><kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd></span>
+Slow down Refresh Time|<span class="keyseq"><kbd>-</kbd></span>
+Speed up Refresh Time|<span class="keyseq"><kbd>+</kbd></span>
+
 ## VL.Skia
 The following shortcuts are working with a VL.Skia Renderer active:
 
