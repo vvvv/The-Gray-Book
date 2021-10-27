@@ -1,8 +1,10 @@
 # Editor Extensions
 
-Editor extensions allow you to extend the vvvv editor with your own tools. Examples of such extensions shipping with vvvv by default, are:
+Editor extensions allow you to extend the vvvv editor with your own tools. Examples of such extensions are:
 
-- The Key & Mouse display
+- The Key & Mouse display (shipping with vvvv)
+- TUIO Simulator & Monitor (install via VL.TUIO.HDE nuget)
+- Desktop Pipette (install via VL.Pipette.HDE nuget)
 
 Extensions can be entirely patched in vvvv and assigned a shortcut so they can be called by the user at anytime. You can find all currently loaded extensions in the main menu under:
 
