@@ -53,6 +53,7 @@
 ### [Rendering](libraries/3d/rendering.md)
 ### [Models and Meshes](libraries/3d/models.md)
 ### [Transparency](libraries/3d/transparency.md)
+### [Shaders](libraries/3d/shaders.md)
 ### [TextureFX](libraries/3d/texturefx.md)
 ### [Editing Shaders](libraries/3d/editing-shaders.md)
 ## [Animation](libraries/animation.md)

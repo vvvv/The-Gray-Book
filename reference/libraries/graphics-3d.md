@@ -7,7 +7,7 @@ vvvv's 3d rendering engine VL.Stride is based on the [Stride 3d Engine](http://s
 
 Both workflows can be easily combined, see [Rendering](3d/rendering.md) for more details.
 
- You you can write shaders (vertex, pixel, geometry, compute) using the [Stride Shading Language](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/index.html) (an extension to HLSL) to customize your rendering in both workflows.
+ You you can write [shaders](3d/shaders.md) (vertex, pixel, geometry, compute) using the [Stride Shading Language](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/index.html) (an extension to HLSL) to customize your rendering in both workflows.
 
 A range of Post FX, like ambient occlusion, depth of field, bloom, etc. are available too. VL.Stride also allows you to output content to VR Devices.
 
@@ -18,8 +18,10 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * [Rendering](3d/rendering.md)
 * [Models and Meshes](3d/models.md)
 * [Transparency](3d/transparency.md)
+* [Shaders](3d/shaders.md)
 * [All about TextureFX shaders](3d/texturefx.md)
 * [Editing shaders](3d/editing-shaders.md)
+
 
 ### Additional libraries:
 

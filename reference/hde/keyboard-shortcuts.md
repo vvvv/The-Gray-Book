@@ -84,14 +84,16 @@ Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd
 ## Pin Groups
 Description|Action
 -|-
-(Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
-(Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
-(Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
-(Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
-(Group 3) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-(Group 3) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
-(Group 4) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
-(Group 4) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Input Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
+(Input Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
+(Input Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
+(Input Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
+(Output Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>+</kbd></span>
+(Output Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
+(Output Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
+(Output Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
+
+In general, the <kbd>Shift</kbd> key means second group and the <kbd>Alt</kbd> key means output group. However, if the node has no input pin groups, the <kbd>Alt</kbd> key is optional. If the node has more pin groups, the additional ones can be found in the context menu of the node.
 
 ## Pads
 Description|Action
@@ -183,6 +185,18 @@ Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
 Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
 Toggle Fullscreen|<span class="keyseq"><kbd>F11</kbd> or <kbd>Alt</kbd><kbd>Return</kbd></span>
+
+If the profiler (<kbd>F3</kbd>) is enabled and the window is active:
+
+Description|Action
+-|-
+Cycle Page (FPS, CPU, GPU)|<span class="keyseq"><kbd>F5</kbd></span>
+Togle Sort Mode (Name, Timinig)|<span class="keyseq"><kbd>F6</kbd></span>
+Decrease Result Page|<span class="keyseq"><kbd>F7</kbd></span>
+Increase Result Page|<span class="keyseq"><kbd>F8</kbd></span>
+Jump to Result Page (1, 2, 3, 4, 5)|<span class="keyseq"><kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd></span>
+Slow down Refresh Time|<span class="keyseq"><kbd>-</kbd></span>
+Speed up Refresh Time|<span class="keyseq"><kbd>+</kbd></span>
 
 ## VL.Skia
 The following shortcuts are working with a VL.Skia Renderer active:
