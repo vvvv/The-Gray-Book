@@ -2,7 +2,7 @@
 uid: a9d77f3f-f4f6-4084-873f-59e9c63ac39e
 ---
 
-# ListOfBlogposts
+# List of all devvvv blog posts
 
 As we near the official release of vvvv gamma, let's take a minute and look back on what happened so far.  
 
