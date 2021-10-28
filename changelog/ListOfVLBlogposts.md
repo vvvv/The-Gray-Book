@@ -168,9 +168,4 @@ Initial thoughs: <a href="https://vvvv.org/blog/50-that-next-big-thing.-an-overv
 
 Object oriented patching for the masses: <a href="https://vvvv.org/blog/50-vl-features-i-a-patch-is-now-a-class" class="extURL blog" target="_blank">50-vl-features-i-a-patch-is-now-a-class</a>  
 
-The very first applications built with VL: <a href="https://vvvv.org/blog/50-the-humble-quad-bundle" class="extURL blog" target="_blank">50-the-humble-quad-bundle</a>  
-
-Anything to add? Let us know in the comments.  
-
-yours,  
-devvvvs
+The very first applications built with VL: <a href="https://vvvv.org/blog/50-the-humble-quad-bundle" class="extURL blog" target="_blank">50-the-humble-quad-bundle</a>
