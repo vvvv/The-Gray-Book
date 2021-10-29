@@ -18,3 +18,7 @@ This reference is further structured into the following chapters:
 | [Language](../language/language.md) | About the language VL | 
 | [Libraries](../libraries/overview.md) | An overview of all available node libraries |
 | [Extending vvvv](../extending/overview.md) | For developers to write their own nodes and libraries |
+| [Best Practice](../best-practice/overview.md) | Learn the best practices for specific topics |
+
+## Workshops
+A free bundle of 30 workshop recordings is [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
