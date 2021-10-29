@@ -1,4 +1,4 @@
-# List of previous releases and devvvv blog posts
+# List of previous releases and blog posts
 Here's a compilation of every vvvv gamma and VL related blog post.  
 
 We hope it serves as both, an overview of historic developments and a helpful learning source for VL users that might have forgotten some along the way:
