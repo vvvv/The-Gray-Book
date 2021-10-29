@@ -186,7 +186,7 @@ Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
 Toggle Fullscreen|<span class="keyseq"><kbd>F11</kbd> or <kbd>Alt</kbd><kbd>Return</kbd></span>
 
-If the profiler is enabled and the window is active:
+If the profiler ( <kbd>F3</kbd> ) is enabled and the window is active:
 
 Description|Action
 -|-
