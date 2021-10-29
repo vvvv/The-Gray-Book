@@ -1,16 +1,65 @@
----
-uid: a9d77f3f-f4f6-4084-873f-59e9c63ac39e
----
-
-# List of all devvvv blog posts
-
-As we near the official release of vvvv gamma, let's take a minute and look back on what happened so far.  
-
+# List of previous releases and devvvv blog posts
 Here's a compilation of every vvvv gamma and VL related blog post.  
 
-We hope it serves as both, an overview of historic developments and a helpful learning source for VL users that might have forgotten some along the way:  
+We hope it serves as both, an overview of historic developments and a helpful learning source for VL users that might have forgotten some along the way:
+
+## 2021
+
+NODE20 workshop recordings are available: <a href="https://vvvv.org/blog/vvvv-gamma-2021.4-release-candidate" class="extURL blog" target="_blank">vvvv gamma 2021.4 release candidate</a>
+
+Rework of video playback: <a href="https://vvvv.org/blog/video-playback-news" class="extURL blog" target="_blank">Video playback news</a>
+
+FUSE GPU programming release: <a href="https://vvvv.org/blog/fuse-preview-release-presentation" target="_blank">FUSE Preview release & presentation</a>
+
+Talk about vvvv beta and gamma at SIGGRAPH: <a href="https://vvvv.org/blog/talking-about-vvvv-at-siggraph" class="extURL blog" target="_blank">Talking about vvvv at SIGGRAPH</a>
+
+Announcement for **stable release** of vvvv gamma 2021.3: <a href="https://vvvv.org/blog/vvvv-gamma-2021.3-release" class="extURL blog" target="_blank">vvvv gamma 2021.3 release</a>  
+
+Custom training for commercial users: <a href="https://vvvv.org/blog/we-offer-custom-training" class="extURL blog" target="_blank">We Offer Custom Training</a>
+
+Free demos for commercial users: <a href="https://vvvv.org/blog/request-a-vvvv-demo" class="extURL blog" target="_blank">Request a vvvv demo!</a>
+
+How to renew licenses: <a href="https://vvvv.org/blog/updating-vvvv-gamma-licenses" class="extURL blog" target="_blank">Updating vvvv gamma licenses</a>
+
+Custom support and development for VL: <a href="https://vvvv.org/blog/we-offer-custom-support-and-development" class="extURL blog" target="_blank">We Offer Custom Support and Development</a>
+
+Early bird discount ends: <a href="https://vvvv.org/blog/vvvv-gamma-end-of-earlybird-pricing" class="extURL blog" target="_blank">vvvv gamma - End of Earlybird Pricing</a>
+
+Roundup #4 of the latest features of the VL.Stride 3d rendering engine: <a href="https://vvvv.org/blog/vl-stride-3d-engine-update-4" class="extURL blog" target="_blank">VL: Stride 3D Engine Update #4</a>
+
+Roadmap announcement: <a href="https://vvvv.org/blog/vvvv-gamma-the-road-ahead" class="extURL blog" target="_blank">vvvv gamma - The Road Ahead</a>
+
+VL.Kairos timeline management: <a href="https://vvvv.org/blog/timeline-your-data-using-vl.kairos" class="extURL blog" target="_blank">Timeline your data using VL.Kairos</a>
 
 ## 2020
+
+Announcement for **stable release** of vvvv gamma 2020.2: <a href="https://vvvv.org/blog/vvvv-gamma-2020.2-release" class="extURL blog" target="_blank">vvvv gamma 2020.2 release</a>
+
+VL.OpenCV update with 3D integration: <a href="https://vvvv.org/blog/vl.opencv-meets-stride" class="extURL blog" target="_blank">VL.OpenCV meets Stride</a>
+
+Fisrt public Announcement of VL.Fuse: <a href="https://vvvv.org/blog/fuse-vl.stride-gpu-tools-presentation" class="extURL blog" target="_blank">FUSE VL.Stride GPU tools presentation</a>
+
+NODE20 recap: <a href="https://vvvv.org/blog/this-was-node20" class="extURL blog" target="_blank">This was NODE20</a>
+
+NODE20 workshop recordings are available: <a href="https://vvvv.org/blog/node20-workshop-recordings-online-survey" class="extURL blog" target="_blank">NODE20 Workshop Recordings Online & Survey</a>
+
+First public release of VL.Stride 3D rendering: <a href="https://vvvv.org/blog/vl.stride-for-evvvveryone" class="extURL blog" target="_blank">VL.Stride for evvvveryone!</a>
+
+How to automatically publish nugets for VL: <a href="https://vvvv.org/blog/publishing-your-vl-nugets-with-github-actions" class="extURL blog" target="_blank">Publishing your VL nugets with Github Actions</a>
+
+On using vvvv gamma as a work tool: <a href="https://vvvv.org/blog/vvvv-the-tool" class="extURL blog" target="_blank">vvvv - The Tool</a>
+
+Screenshots of VL.Stride early access users: <a href="https://vvvv.org/blog/vl.stride-earlyaccess-screenshots" class="extURL blog" target="_blank">VL.Stride EarlyAccess Screenshots</a>
+
+Start of VL.Stride early access phase: <a href="https://vvvv.org/blog/vl.stride-earlyaccess-available-now" class="extURL blog" target="_blank">VL.Stride EarlyAccess available now!</a>
+
+Rework of depth camera libraries: <a href="https://vvvv.org/blog/revvvvamped-support-for-depth-cameras" class="extURL blog" target="_blank">Revvvvamped support for Depth Cameras</a>
+
+Open-source participation of the VL language design: <a href="https://vvvv.org/blog/vl-language-design-repository" class="extURL blog" target="_blank">VL Language Design Repository</a>
+
+NODE20 festival announcement: <a href="https://vvvv.org/blog/node20-second-nature" class="extURL blog" target="_blank">NODE20 - Second Nature</a>
+
+Video recording of vvvv gamma talk: <a href="https://vvvv.org/blog/vvvv-at-ircam-forum-talk-recording" class="extURL blog" target="_blank">vvvv at Ircam Forum: Talk Recording</a>
 
 Announcement for **stable release** of vvvv gamma 2020.1: <a href="https://vvvv.org/blog/vvvv-gamma-2020.1-release" class="extURL blog" target="_blank">vvvv-gamma-2020.1-release</a>  
 
