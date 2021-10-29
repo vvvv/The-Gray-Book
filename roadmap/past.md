@@ -5,13 +5,15 @@ We hope it serves as both, an overview of historic developments and a helpful le
 
 ## 2021
 
-NODE20 workshop recordings are available: <a href="https://vvvv.org/blog/vvvv-gamma-2021.4-release-candidate" class="extURL blog" target="_blank">vvvv gamma 2021.4 release candidate</a>
+Release candidate of 2021.4 is available: <a href="https://vvvv.org/blog/vvvv-gamma-2021.4-release-candidate" class="extURL blog" target="_blank">vvvv gamma 2021.4 release candidate</a>
 
 Rework of video playback: <a href="https://vvvv.org/blog/video-playback-news" class="extURL blog" target="_blank">Video playback news</a>
 
 FUSE GPU programming release: <a href="https://vvvv.org/blog/fuse-preview-release-presentation" target="_blank">FUSE Preview release & presentation</a>
 
 Talk about vvvv beta and gamma at SIGGRAPH: <a href="https://vvvv.org/blog/talking-about-vvvv-at-siggraph" class="extURL blog" target="_blank">Talking about vvvv at SIGGRAPH</a>
+
+All 30 NODE20 workshops are avaiable for free: <a href="https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/" class="extURL blog" target="_blank">The NODE20 VVVV Workshop Bundle</a>
 
 Announcement for **stable release** of vvvv gamma 2021.3: <a href="https://vvvv.org/blog/vvvv-gamma-2021.3-release" class="extURL blog" target="_blank">vvvv gamma 2021.3 release</a>  
 
