@@ -1,9 +1,19 @@
 # Models and Meshes
+You can load a model from file with the `FileModel` node. The following file types are supported:
+* `.fbx;.dae;.3ds;.gltf;.glb;.obj;.blend;.x;.md2;.md3;.dxf;.ply;.stl;.stp`
+ 
+ The loaded model can be connectd to a `ModelEntity` to render it with a material.
 
-## Model
+ At the moment we don't support automatic loading of materials, textures, animations or skeletons. This will be added in a later release. See the help patch `Load Assets from File` for an example, that also shows how to assign multiple materials to the model.
+
+Models can also be loaded from a Stride game project. This has the advantage that you can set up the model, including materials in the Stride editor. See [Assets](https://doc.stride3d.net/4.0/en/manual/game-studio/assets.html) and [Animation](https://doc.stride3d.net/4.0/en/manual/animation/index.html) int the Stride manual. See the help patch `Load Stride Project` and `Modify Entities from a Stride Project`.
+
+## Difference between Model and Mesh
+
+### Model
 A `Model` is a high-level class that combines geometry (meshes) with appearance (materials) and optionally a skeleton for animation. This makes it possible to represent a simple model with just one mesh and one material or a complex 3d object, such as an animated character.
 
-To render a model, it has to be assigned to a `ModelComponent` that is part of an `Entity` in the scene graph. See [Rendering](rendering.md).
+In the scene graph, a model has to be assigned to a `ModelComponent` that is part of an `Entity`. See [Rendering](rendering.md).
 
 ![](../../../images/libraries/3d/stride_model.svg)
 <center><i>Model data structure</i></center>
@@ -11,7 +21,7 @@ To render a model, it has to be assigned to a `ModelComponent` that is part of a
 
 To join the data of a model you can use the node `MeshModel` for the simple case of one mesh and one material or `MeshesModel` for multiple meshes and materials. To connect a single model to the scene graph, you can use the node `ModelEntity` that internally does all the entity and component setup for you.
 
-## Mesh
+### Mesh
 A `Mesh` is a part of the model that contains the geometry information and an index that points to a material in the material list of the model.
 
 ![](../../../images/libraries/3d/stride_mesh.svg)
