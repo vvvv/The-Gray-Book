@@ -20,5 +20,11 @@ This reference is further structured into the following chapters:
 | [Extending vvvv](../extending/overview.md) | For developers to write their own nodes and libraries |
 | [Best Practice](../best-practice/overview.md) | Learn the best practices for specific topics |
 
-## Workshops
-A free bundle of 30 workshop recordings is [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
+## Tutorials
+Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. 
+There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
+
+## Connect
+
+Any questions left? Get them answered in the [forum](http://discourse.vvvv.org). 
+Want to chat with other vvvv users? Join us in the [chat](https://app.element.io/#/room/#vvvv:matrix.org).

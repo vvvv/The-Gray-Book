@@ -33,7 +33,7 @@ Depending on where you come from, you may want to start with one of these introd
 * [Introduction for .NET Developers](reference/getting-started/dotnet/introduction-for-dotnet-programmers.md)
 * [Introduction for vvvv beta users](reference/getting-started/beta/introduction-for-vvvv-beta-users.md)
 
-Also, vvvv has a built-in HelpBrowser, press F1 to open it. On the ``Learn`` tab 
+Also, vvvv has a built-in HelpBrowser, press <span class="keyseq"><kbd>F1</kbd></span> to open it. On the ``Learn`` tab 
 you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
 
 Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
@@ -42,10 +42,7 @@ Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvv
 
 The Gray Book combines a written [Reference](reference/hde/gui.md) and [Explanations](introduction/language.md) for you to explore in addition to the materials in the HelpBrowser. 
 
-### The Forum
+## Connect
 
-Any questions left? Get them answered in the [forum](http://discourse.vvvv.org).
-
-### The Chat
-
+Any questions left? Get them answered in the [forum](http://discourse.vvvv.org). 
 Want to chat with other vvvv users? Join us in the [chat](https://app.element.io/#/room/#vvvv:matrix.org).

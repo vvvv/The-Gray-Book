@@ -1,21 +1,12 @@
 # Settings
 
-Go to `Quad > Settings > Open in Editor` to open the settings.xml file in the program you have assigned to open .xml files with.
+The settings can be found in the Hamburger menu in the top right corner of the editor window:
 
-If that program does not allow you to edit the file, choose `Quad > Settings > Show in explorer` instead to locate the file in explorer from where you can open it in your preferred editor.
+![](../../images/reference/hde/settings.png)
 
-![](../../images/hde/vl-Settings.png)
-<center>The Settings file</center>
-
-After changing any setting simply save the file and go back to the vl editor. Changes are applied immediately, no need to restart!
+In versions prior to 2021.4,  the settings had to be edited manually in a text file, see: `Quad > Settings`.
 
 ## Local Settings
 You can also provide a local settings file via commandline options when you start up vvvv.exe:
 
-<code>
---settings C:\path\to\setings.xml
-</code>
-
-<pre>
-  --settings C:\path\to\setings.xml
-</pre>
+    --settings C:\path\to\setings.xml
