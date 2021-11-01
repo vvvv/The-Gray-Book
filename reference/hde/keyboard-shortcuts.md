@@ -47,7 +47,7 @@ Zoom the patch|Mousewheel or <span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></s
 Reset pan and zoom of the patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>0</kbd></span>
 
 ## Alternative Pan & Zoom
-If you prefer to use the mousewheel for panning vertically instead of zooming change the *MouseWheelZooms* [setting](settings.md) to _false_ to get the following behavior:
+If you prefer to use the mousewheel for panning vertically instead of zooming change the "Mouse wheel zooms" setting to false to get the following behavior:
 
 Description|Action
 -|-
@@ -82,6 +82,9 @@ Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 
 ## Pin Groups
+
+In general, the <kbd>Shift</kbd> key means second group and the <kbd>Alt</kbd> key means output group. However, if the node has no input pin groups, the <kbd>Alt</kbd> key is optional. If the node has more pin groups, the additional ones can be found in the context menu of the node.
+
 Description|Action
 -|-
 (Input Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
@@ -92,8 +95,6 @@ Description|Action
 (Output Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>-</kbd></span>
 (Output Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
 (Output Group 2) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>-</kbd></span>
-
-In general, the <kbd>Shift</kbd> key means second group and the <kbd>Alt</kbd> key means output group. However, if the node has no input pin groups, the <kbd>Alt</kbd> key is optional. If the node has more pin groups, the additional ones can be found in the context menu of the node.
 
 ## Pads
 Description|Action
@@ -186,7 +187,7 @@ Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
 Toggle Fullscreen|<span class="keyseq"><kbd>F11</kbd> or <kbd>Alt</kbd><kbd>Return</kbd></span>
 
-If the profiler (<kbd>F3</kbd>) is enabled and the window is active:
+If the profiler ( <kbd>F3</kbd> ) is enabled and the window is active:
 
 Description|Action
 -|-
