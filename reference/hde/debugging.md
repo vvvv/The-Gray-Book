@@ -4,15 +4,18 @@
 
 Description | Action
 -|-
-Pause/Step execution|<span class="keyseq"><kbd>F6</kbd></span>
 Run|<span class="keyseq"><kbd>F5</kbd></span>
+Step execution|<span class="keyseq"><kbd>F6</kbd></span>
+Pause execution|<span class="keyseq"><kbd>F7</kbd></span>
+Stop execution|<span class="keyseq"><kbd>F8</kbd></span>
+Restart|<span class="keyseq"><kbd>F9</kbd></span>
 
-The execution of vl can be paused by pressing <span class="keyseq"><kbd>F6</kbd></span>. Pressing <span class="keyseq"><kbd>f6</kbd></span> repeatedly, causes the execution to make one step at a time. To get back into run mode press <span class="keyseq"><kbd>f5</kbd></span>.
+The execution of vl can be paused by pressing <span class="keyseq"><kbd>F7</kbd></span>. Pressing <span class="keyseq"><kbd>F6</kbd></span> repeatedly, causes the execution to make one step at a time. To get back into run mode press <span class="keyseq"><kbd>F5</kbd></span>.
 
-You can also choose to auto-pause whenever an error occurs and jump to the node that threw the exception by setting *RuntimePauseOnError* to _true_ in the [Settings](settings.md) file.
+You can also choose to auto-pause whenever an error occurs and jump to the node that threw the exception by activating the *Pause on error* [Setting](settings.md).
 
 ## Timings
-The tooltip shows timings if the *TooltipShowTimings* setting is set to _true_ in the [Settings](settings.md) file.
+The tooltip shows timings when *Show Timings* is activated in the [Settings](settings.md).
 
 *Image:Tooltip shows timings on nodes*
 
