@@ -47,7 +47,7 @@ There are a bunch of shaders you can inherit useful functionality from. Multiple
 ### Recommended base shaders
 
 #### TextureFX
-Derives from ImageEffectShader and ShaderUtils.
+[TextureFX](https://github.com/vvvv/VL.Stride/blob/preview/gamma-2021.4/packages/VL.Stride.Runtime/src/Effects/TextureFX/TextureFX.sdsl) derives from [ImageEffectShader](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Rendering/Rendering/Images/ImageEffectShader.sdsl), [SpriteBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/SpriteBase.sdsl), [ShaderBase](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/ShaderBaseStream.sdsl), [Texturing](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Graphics/Shaders/Texturing.sdsl) and [ShaderUtils](https://github.com/vvvv/VL.Stride/blob/preview/gamma-2021.4/packages/VL.Stride.Runtime/src/Effects/Common/ShaderUtils.sdsl).
 
 #### FilterBase
 Derives from TextureFX. Allows to you implement the Filter() function, which comes with the color of the input texture as parameter:
@@ -81,7 +81,7 @@ shader Mix_TextureFX : MixerBase
 > Using the `tex0col` and `tex1col` inputs is not mandatory and you can still add other texture inputs to sample from.
 
 #### ShaderUtils
-Defines constants like PI and gives access to many commonly used shader snippets.
+[ShaderUtils](https://github.com/vvvv/VL.Stride/blob/preview/gamma-2021.4/packages/VL.Stride.Runtime/src/Effects/Common/ShaderUtils.sdsl) defines constants like PI and gives access to many commonly used shader snippets.
 
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:
