@@ -2,24 +2,42 @@
 
 When opening the NodeBrowser via a left double-click anywhere on a patch what you see is:
 
-* a list of top-level node categories
-* language primitives (_written in italic_)
-* a list of available nugets
+* Language primitives (Node, Input, IOBox,...)
+* A list of top-level node categories (2D, 3D, Animation,...)
+* A list of available nugets (VL)
 
 ![](../../images/hde/vl-Nodebrowser-Nodebrowser.png)
 <center>The NodeBrowser</center>
 
 You can also bring up the NodeBrowser:
 
-* while linking by double leftclicking to create a node that is connected to the link at hand
-* by double leftclicking on an existing link to insert a node there
-* by double leftclicking an existing node to replace it
+* While linking by double leftclicking to create a node that is connected to the link at hand
+* By double leftclicking on an existing link to insert a node there
+* By double leftclicking an existing node to replace it
 
-## Available Nodes
+## Filtering nodes
+
+The circles on the left side are filters that let you quickly include or exclude a certain group of nodes. Hover them with the mouse to see their purpose and click to toggle them on or off:
+- Include high level nodes (the standard set)
+- Include potential future nodes (Experimental)
+- Include low level nodes (Advanced)
+- Include obsolete, old nodes (Obsolete)
+![](../../images/hde/vl-Nodebrowser-Filter1.png)
+<center>4 circles: Node filters</center>
+
+The bottom two circles are two more filters:
+- Include internal nodes (those that are only visible inside this document)
+- Include external nodes (from referenced .dlls and NuGets)
+![](../../images/hde/vl-Nodebrowser-Filter2.png)
+<center>2 circles: More node filters</center>
+
+If you see a dot inside of a circle, it means that, given the current search term you would get additional nodes listed, if this filter was on.
+
+## Finding Nodes
 There are different ways to navigate the list of available nodes:
 
-* by categories
-* by tags
+* By category
+* By tag
 
 In both cases it helps to be familiar with the icons:
 
@@ -37,16 +55,16 @@ Hovering any entry that represents a node will show you the nodes Inputs and Out
 
 When you're clicking an entry that represents a node two things may happen:
 
-* if your selection is unambiguous the node will be created
-* there are situations where a selection is ambiguous in which case the NodeBrowser prompts you to specify more details by choosing from the offered options.
+* If your selection is unambiguous the node will be created
+* There are situations where a selection is ambiguous in which case the NodeBrowser prompts you to specify more details by choosing from the offered options.
 
 ### Search By Category
 Nodes in VL are organized in a hierarchical structure of categories. Click any of the categories to enter it.
 
 ![](../../images/hde/vl-Nodebrowser-Tags.png)
-<center>Selected Tags</center>
+<center>Selected tags: 2D, Collision</center>
 
-Note that when entering a category a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it. Pressing the ESC button always removes the last tag.
+Note that when entering a category, a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it. Pressing the ESC button always removes the last tag.
 
 ### Search By Tag
 Enter any word to search for it.
