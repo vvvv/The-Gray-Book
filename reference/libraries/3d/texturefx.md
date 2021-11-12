@@ -96,7 +96,7 @@ shader MyFX_TextureFX : TextureFX
 {
     stage override float4 Shading()
     {
-        return ColorUtilityTemp.LinearTosRGB(InTex());
+        return ColorUtilityTemp.LinearToSRgb(InTex0());
     }
 };
 ```
