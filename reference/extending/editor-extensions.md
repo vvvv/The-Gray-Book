@@ -75,7 +75,16 @@ The vvvv API gives you access to hovered and selected nodes and allows you to re
 For some extensions it will be interesting to have them configurable via the [Settings](../hde/settings.md). This is not yet possible though. 
 
 ## Packaging extensions in a NuGet
-In order for vvvv to pick up editor extensions from installed nugets, their nuget ID also has to end in `.HDE`, e.g.:
+### Existing NuGet
+If you have nuget and you want to add an extension, just add a new vl document that is called like the main document of the nuget but with the `HDE` suffix added. For example, if you release a nuget named `VL.MyPackage` it would contain at least these two documents:
+```c#
+VL.MyPackage.vl // main doc
+VL.MyPackage.HDE.vl // extension doc
+```
+Where `VL.MyPackage.HDE.vl` references `VL.MyPackage.vl`.
+
+### Extension only NuGet
+If you want to release a nuget that only contains an extension, its ID has to end in `.HDE`, e.g.:
 
 `VL.MyExtension.HDE`
 
