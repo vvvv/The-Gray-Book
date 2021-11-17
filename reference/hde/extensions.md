@@ -10,7 +10,7 @@ Examples:
 - [Spout Monitor](https://www.nuget.org/packages/VL.SpoutMonitor.HDE/): Are you relying on textures coming in via [Spout](https://spout.zeal.co/) from other programs? Use this monitor to get a quick overview of textures currently shared on your system. 
 
 ## Finding and installing extensions
-Extensions are distributed as NuGets, so you find them on [nuget.org](https://www.nuget.org/packages?q=Tags%3A%22VL%22+hde).
+Extensions are distributed as NuGets and as such can be included with any VL NuGet you install. There are also NuGets that only include extensions. Those can easily be found on [nuget.org](https://www.nuget.org/packages?q=Tags%3A%22VL%22+hde).
 
 Once found, extensions are [installed like any other NuGet](../libraries/referencing.md#manage-nugets). 
 

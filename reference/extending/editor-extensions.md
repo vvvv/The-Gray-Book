@@ -75,15 +75,7 @@ The vvvv API gives you access to hovered and selected nodes and allows you to re
 For some extensions it will be interesting to have them configurable via the [Settings](../hde/settings.md). This is not yet possible though. 
 
 ## Packaging extensions in a NuGet
-### Existing NuGet
-If you have nuget and you want to add an extension, just add a new vl document that is called like the main document of the nuget but with the `HDE` suffix added. For example, if you release a nuget named `VL.MyPackage` it would contain at least these two documents:
-```c#
-VL.MyPackage.vl // main doc
-VL.MyPackage.HDE.vl // extension doc
-```
-Where `VL.MyPackage.HDE.vl` references `VL.MyPackage.vl`.
-
-### Extension only NuGet
+### Extension-only NuGet
 If you want to release a nuget that only contains an extension, its ID has to end in `.HDE`, e.g.:
 
 `VL.MyExtension.HDE`
@@ -91,6 +83,13 @@ If you want to release a nuget that only contains an extension, its ID has to en
 which in turn requires the .vl document inside that nuget to be following the same naming and be called:
 
 `VL.MyExtension.HDE.vl`
+
+### Extension as part of a NuGet
+Extensions can also be included with any NuGet that primarily offers other functionality. In such a case, the name of the extension document has to be identical to the package ID but with the `.HDE` suffix added. For example a NuGet named `VL.MyPackage` would contain at least these two documents:
+```c#
+VL.MyPackage.vl // main doc
+VL.MyPackage.HDE.vl // extension doc
+```
 
 ## Restarting all extensions
 Especially during development it may happen that you crash an extension and it needs a restart. You can restart all extensions at once using the shortcut <span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></span>.
