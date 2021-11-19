@@ -20,6 +20,7 @@
 ## [Keyboard Shortcuts](hde/keyboard-shortcuts.md)
 ## [Extensions](hde/extensions.md)
 ## [Settings](hde/settings.md)
+## [Themes](hde/themes.md)
 ## [Finders](hde/finders.md)
 ## [Debugging](hde/debugging.md)
 ## [Solution Explorer](hde/solution-explorer.md)
