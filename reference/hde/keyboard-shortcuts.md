@@ -147,11 +147,10 @@ Force to include links in a marquee selection despite nodes or pads are already 
 Description|Action
 -|-
 Create a Frame from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd></span> while making a marquee selection
-Screenshot of Marquee selection to clipboard|Hold <span class="keyseq"><kbd>S</kbd></span> while making a marquee selection
 Surround selected nodes with a frame|<span class="keyseq"><kbd>Alt</kbd><kbd>F</kbd></span>
 Surround selected nodes with a frame in viewspace|<span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></span>
-Screenshot of Marquee selection|Make Marquee selection and press <span class="keyseq"><kbd>S</kbd></span>
-
+Screenshot of marquee selection to clipboard|Hold <span class="keyseq"><kbd>S</kbd></span> while making a marquee selection
+  
 ## Tooltips
 Description|Action
 -|-
