@@ -147,8 +147,13 @@ Force to include links in a marquee selection despite nodes or pads are already 
 Description|Action
 -|-
 Create a Frame from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd></span> while making a marquee selection
+Create a Frame in viewspace from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd></span> while making a marquee selection
 Surround selected nodes with a frame|<span class="keyseq"><kbd>Alt</kbd><kbd>F</kbd></span>
 Surround selected nodes with a frame in viewspace|<span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></span>
+Toggle visibility of all frames in a patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd></span>
+Take a screenshot of the selected frame|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
+Take a screenshot of all frames in a document at once|<span class="keyseq"><kbd>Ctrl</kbd><kbd>5</kbd></span>
+Start/stop a screenshot recording of the selected frame|<span class="keyseq"><kbd>Ctrl</kbd><kbd>4</kbd></span>
 Screenshot of marquee selection to clipboard|Hold <span class="keyseq"><kbd>S</kbd></span> while making a marquee selection
   
 ## Tooltips

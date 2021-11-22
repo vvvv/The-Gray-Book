@@ -36,9 +36,12 @@
 ## [Links](language/links.md)
 ## [Properties](language/properties.md)
 ## [Groups and Categories](language/groups.md)
+## [Conditions](language/conditions.md)
 ## [Loops](language/loops.md)
+## [Cache](language/cache.md)
 ## [Delegates](language/delegates.md)
 ## [Generics](language/generics.md)
+## [Frames](language/frames.md)
 ## [Identifier Naming Conventions](language/namings.md)
 
 # [Libraries](libraries/overview.md)

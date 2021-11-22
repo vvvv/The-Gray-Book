@@ -1,3 +1,5 @@
+# Groups and Categories
+
 VL has 3 patch types that help you structure your documents:
 
 * Group

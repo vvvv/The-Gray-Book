@@ -1,3 +1,5 @@
+# Properties
+
 Properties are where datatype patches store data. A datatype patch can have any number of properties and you can see them listed in the PatchExplorer.
 
 *Image:Properties listed in the PatchExplorer*
