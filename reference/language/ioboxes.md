@@ -113,9 +113,17 @@ Via the inspector you can configure the IOBox:
 * Choose between *File* or *Directory* as path type which simply determines which dialog a rightclick on the IOBox will pop up
 
 ## Collections
-Collection IOBoxes work with all the above datatypes. If you want to manually create a collection IOBox, first create a normal IOBox of the type and then configure its type to be of eg. __Spread<Float32>__.
+Collection IOBoxes work with all the above datatypes. Most often you'd create them automatically by starting a link from a pin that has a collection type (e.g. Spread, Sequence,...) and then middle-click to create the according IOBox automatically. 
 
-The number specifies the number of elements in the collection and can be changed. By default a collection IOBox will display up to 5 elements. When the collection contains more items, a scrollbar will be shown.
+![](../../images/language/collectioniobox.gif)
+<center>Middleclick to create an IOBox</center>
+
+If you want to manually create a collection IOBox, first create a normal IOBox and then configure its type to be of eg. `Spread<Float32>`.
+
+![](../../images/language/collectioniobox2.gif)
+<center>Annotating the type of an IOBox</center>
+
+The number you see topleft in the IOBox specifies the number of elements in the collection and can be changed. By default a collection IOBox will display up to 5 elements. When the collection contains more items, a scrollbar will be shown.
 
 ![](../../images/language/ioboxes-08b7c.png)
 <center>A spread of floats inspected via a collection IOBox</center>
