@@ -38,6 +38,7 @@ Navigate back in Tab history|<span class="keyseq"><kbd>Ctrl</kbd><kbd><</kbd></s
 Navigate forward in Tab history|<span class="keyseq"><kbd>Ctrl</kbd><kbd>></kbd></span>  or <span class="keyseq"><kbd>Alt</kbd><kbd>Right</kbd></span>
 Navigate one level Up in application|<span class="keyseq"><kbd>Ctrl</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
 Navigate one level Up in definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
+Save active patch as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span>
 
 ## Pan & Zoom
 Description|Action
