@@ -1,7 +1,6 @@
 # Further...
 
 Further on our agenda, incomplete and in no particular order:
-* Improve Navigation (Browserlike, live object graph, multi-window support)
 * Integrating additional editors (Node Inspektor, Timelines, State machines, Curves, Meshes, ..)
 * Projection tools (blending, warping, softedge,...)
 * Package management (create, deploy packages)
