@@ -40,12 +40,14 @@ kbd
 .topbar a
 {
     font-size: 13px;
-    color: #ffffff;
+    color: #cfcfcf;
     text-decoration: none;
     margin: 0px;
 }
 
 .topbar a:hover
 {
-    text-decoration: underline;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 3px;
 }
