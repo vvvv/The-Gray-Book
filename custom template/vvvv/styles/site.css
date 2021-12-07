@@ -31,15 +31,16 @@ kbd
 .topbar
 {
     background-color: #111111;
-    height: 2.5em;
+    height: 2.3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 4px;
 }
 
 .topbar a
 {
-    font-size: 13px;
+    font-size: 12px;
     color: #cfcfcf;
     text-decoration: none;
     margin: 0px;
@@ -50,4 +51,14 @@ kbd
     color: #ffffff;
     border-bottom: 1px solid #ffffff;
     margin-bottom: 3px;
+}
+
+.sidetoc
+{
+    top: 170px;
+}
+
+.sidefilter
+{
+    top: 120px;
 }
