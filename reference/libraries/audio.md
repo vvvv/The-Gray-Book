@@ -18,6 +18,8 @@ NuGet: [VL.IO.Midi](https://www.nuget.org/packages/VL.IO.Midi/)
 Useful tools: 
 * [MIDI Monitor](https://www.midimonitor.com)
 * [Virtual Audio Cable](https://vb-audio.com/Cable/index.htm)
+* [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
+* [virtualMIDI](https://www.tobias-erichsen.de/software/virtualmidi.html)
 
 ## FMOD 
 Wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.  
