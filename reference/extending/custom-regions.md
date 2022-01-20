@@ -1,7 +1,7 @@
 # Regions
 
 Regions can be descibed as *node-like building blocks that have a hole inside*: 
-They do something specific - this is the part where they are similar to nodes
+They do something specific - this is the part where they are similar to nodes.
 But they are somehow "unsure about the details", so they let the end-user step in and ask for those details - this is what makes them regions.
 
 In general we can describe regions as nodes with a *callback mechanism*: A way to call back that small patch inside the region, patched by the end-user of the region.
@@ -45,7 +45,7 @@ The basic idea here is that the region is built in a way that it allows for proc
 
 Regions of that flavor can instanciate the user patch by calling the white parts of the inside of the region and then update this patch by calling the grey parts of the inside of the region.
 
-Often enough those regions only manage one instance of the users' patch, but in theory such a region can also manage the whole lifetime of many instances those patches. For examples see the experimental LifeTimeManagers, like `LifeAndLetDie`. 
+Often enough those regions only manage one instance of the users' patch, but in theory such a region can also manage the whole lifetime of many instances those patches. For examples see the experimental LifeTimeManagers, like `LiveAndLetDie`. 
 
 ### Stateful Get your hands dirty
 
