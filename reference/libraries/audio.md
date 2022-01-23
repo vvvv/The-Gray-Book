@@ -10,14 +10,17 @@ Requires an ASIO driver! If your sound card doesn't ship with such a driver, try
 * [FlexASIO](https://github.com/dechamps/FlexASIO/releases)
 * [FL Studio ASIO](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/envsettings_audio.htm#FLStudioASIO) as included with the free download of [FL Studio](https://www.image-line.com/fl-studio-download)
 
+Useful tools:
+* [Dante Via](https://www.audinate.com/products/software/dante-via) Versatile Audio Networking 
+* [Virtual Audio Cable](https://vb-audio.com/Cable/index.htm)
+
 ## MIDI
 
 Midi nodes are shipping with vvvv.
 NuGet: [VL.IO.Midi](https://www.nuget.org/packages/VL.IO.Midi/)
 
 Useful tools: 
-* [MIDI Montir](https://www.midimonitor.com)
-* [Virtual Audio Cable](https://vb-audio.com/Cable/index.htm)
+* [MIDI Monitor](https://www.midimonitor.com)
 
 ## FMOD 
 Wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.  
