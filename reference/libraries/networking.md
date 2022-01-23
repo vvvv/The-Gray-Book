@@ -61,5 +61,5 @@ Video Streaming https://ndi.tv
 NuGet: [VL.IO.NDI](https://www.nuget.org/packages/VL.IO.NDI)  
 
 ## SPNet
-Receive data via the [Stage Precision](http://www.stageprecision.com/) [SPNet](https://git.stageprecision.com/stage-precision-public/spnet) protocol in VL.
+Receive data via the [Stage Precision](http://www.stageprecision.com/) [SPNet](https://git.stageprecision.com/stage-precision-public/spnet) protocol in VL.  
 NuGet: [VL.IO.SPNet](https://www.nuget.org/packages/VL.IO.SPNet)

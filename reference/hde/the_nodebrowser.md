@@ -6,8 +6,7 @@ When opening the NodeBrowser via a left double-click anywhere on a patch what yo
 * A list of top-level node categories (2D, 3D, Animation,...)
 * A list of available nugets (VL)
 
-![](../../images/hde/vl-Nodebrowser-Nodebrowser.png)
-<center>The NodeBrowser</center>
+<img src="../../images/hde/vl-Nodebrowser-Nodebrowser.png" height="460">
 
 You can also bring up the NodeBrowser:
 
@@ -22,14 +21,14 @@ The circles on the left side are filters that let you quickly include or exclude
 - Include potential future nodes (Experimental)
 - Include low level nodes (Advanced)
 - Include obsolete, old nodes (Obsolete)
-![](../../images/hde/vl-Nodebrowser-Filter1.png)
-<center>4 circles: Node filters</center>
+
+<img src="../../images/hde/vl-Nodebrowser-Filter1.png">
 
 The bottom two circles are two more filters:
 - Include internal nodes (those that are only visible inside this document)
 - Include external nodes (from referenced .dlls and NuGets)
+
 ![](../../images/hde/vl-Nodebrowser-Filter2.png)
-<center>2 circles: More node filters</center>
 
 If you see a dot inside of a circle, it means that, given the current search term you would get additional nodes listed, if this filter was on.
 
@@ -41,15 +40,26 @@ There are different ways to navigate the list of available nodes:
 
 In both cases it helps to be familiar with the icons:
 
-![](../../images/hde/vl-Nodebrowser-Icon-Category.png) Category
+<img src="../../images/hde/vl-Nodebrowser-Icon-Category.png" height="20"> Category
 
-![](../../images/hde/vl-Nodebrowser-Icon-Type.png) Type Category
+<img src="../../images/hde/vl-Nodebrowser-Icon-Nuget.png" height="20"> NuGet Package
 
-![](../../images/hde/vl-Nodebrowser-Icon-Process.png) Process Node
+Nodes:
 
-![](../../images/hde/vl-Nodebrowser-Icon-Operation.png) Operation Node
+<img src="../../images/hde/vl-Nodebrowser-Icon-Process.png" height="20"> Process Node
 
-![](../../images/hde/vl-Nodebrowser-Icon-Nuget.png) Nuget
+<img src="../../images/hde/vl-Nodebrowser-Icon-Operation.png" height="20"> Operation Node
+
+Types:
+
+<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Record.png" height="20"> Record
+
+<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Mutable.png" height="20"> Class
+
+<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Enum.png" height="20"> Enumeration
+
+<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Interface.png" height="20"> Interface
+
 
 Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available.
 
@@ -61,8 +71,7 @@ When you're clicking an entry that represents a node two things may happen:
 ### Search By Category
 Nodes in VL are organized in a hierarchical structure of categories. Click any of the categories to enter it.
 
-![](../../images/hde/vl-Nodebrowser-Tags.png)
-<center>Selected tags: 2D, Collision</center>
+<img src="../../images/hde/vl-Nodebrowser-Tags.png" height="460">
 
 Note that when entering a category, a tag appears in the bottom right part of the NodeBrowser. The listing is now filtered by this tag. Choose another category from the listing to refine your search or remove a tag by clicking on the X button next to it. Pressing the ESC button always removes the last tag.
 
@@ -88,7 +97,6 @@ Many of the primitives can be given a name directly after choosing to create the
 ## Available Nugets
 Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
 
-![](../../images/hde/vl-Nodebrowser-Nugets.png)
-<center>Nugets in the NodeBrowser</center>
+<img src="../../images/hde/vl-Nodebrowser-Nugets.png" height="460">
 
 If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies.
