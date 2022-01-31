@@ -12,7 +12,7 @@ If you have any ASIO driver installed, it will be used by default. Otherwise the
 > As of now, audio input is only available when using an ASIO driver!
 
 If your sound card doesn't ship with an ASIO driver, try a generic one, like: 
-* [FlexASIO](https://github.com/dechamps/FlexASIO/releases)
+* [FlexASIO](https://github.com/dechamps/FlexASIO/releases) and [FlexASIO GUI](https://github.com/flipswitchingmonkey/FlexASIO_GUI/releases)
 * [ASIO4All](http://www.asio4all.org)
 * [FL Studio ASIO](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/envsettings_audio.htm#FLStudioASIO) as included with the free download of [FL Studio](https://www.image-line.com/fl-studio-download)
 
