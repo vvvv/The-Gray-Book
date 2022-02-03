@@ -51,7 +51,7 @@ Regions of that flavor can
 * instanciate the user patch and 
 * update the patch.
 
-Often enough those regions only manage one instance of the users' patch, but in theory such a region can also manage the whole lifetime of many instances those patches. For examples see the experimental LifeTimeManagers, like `LiveAndLetDie`. 
+Often enough those regions only manage one instance of the users' patch, but in theory such a region can also manage the whole lifetime of many instances those patches. 
 
 ### Stateful Get your hands dirty
 
