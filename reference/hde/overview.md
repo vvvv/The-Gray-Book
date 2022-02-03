@@ -10,16 +10,18 @@ It gives you quick access to:
 - [Managing Nugets](managing-nugets.md)
 - All Documents: A listing of all open documents
 - Run, Step, Pause, Stop, Restart all running applications
-- [Exporting](exporting.md)
+- [Exporting Applications](exporting.md)
 - Additional Windows
 
 ## The document menu
 The document menu collects all commands relevant for the active document.
 
 It gives you quick access to:
-- Configuring the documents Dependencies
+- Configuring the documents [Dependencies](navigating_a_project.md#dependencies)
 - The documentes application patch
 - The documents definition patch
+- Saving, reloading, closing the document
+- Jumping to the document in the Explorer
   
 ## Document Tabs
 
