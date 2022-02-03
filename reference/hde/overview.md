@@ -11,7 +11,7 @@ It gives you quick access to:
 - All Documents: A listing of all open documents
 - Run, Step, Pause, Stop, Restart all running applications
 - [Exporting Applications](exporting.md)
-- Additional Windows
+- Additional Windows like the [Documentation Window](documentation.md) and the [Solution Explorer](solution-explorer.md)
 
 ## The document menu
 The document menu collects all commands relevant for the active document.
