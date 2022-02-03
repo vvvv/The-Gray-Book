@@ -123,7 +123,7 @@ Anyway. You want to create a region that does more? Just patch along!
 Now your imagination is needed...
 
 ### User Expectations
-When you design your region you might focus on BCPs with a certain data type.  Note however: the user might still want some standard behavior for when the data type is different. Consider to implement a fallback mechanism that works like in the `Do [Control]` region: feeding the data from the outside to inside of the region or the other way around.
+When you design your region you might focus on BCPs with a certain data type.  Note however: the user might still want some standard behavior for when the data type is different. Consider to implement a fallback mechanism that just channels the untouched data from outside to inside or the other way around, very much like seen in the `Do [Control]` region.
 
 ### Current Limitiations
 Note that there are still some constraints for your ideas :(
