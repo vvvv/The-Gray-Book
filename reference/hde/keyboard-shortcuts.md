@@ -70,8 +70,8 @@ Description|Action
 Bring up the NodeBrowser to choose node to create|Double leftclick in an empty area of a patch or on a link
 Replace a node|Double leftclick it to bring up the NodeBrowser and choose a different node. You may need to press ESC to remove existing choices
 Move a node (or selection of nodes) into or out of a region|Press <span class="keyseq"><kbd>SPACE</kbd></span> while draging a node
-Assign a node to an operation|Rightclick -> Assign -> _operation_
-Remove the operation-assignment of a node|Rightclick -> Assign -> Pop
+Assign an operation-node to an operation|Rightclick -> Assign -> (operation)
+Remove the operation-assignment of a node|Rightclick -> Assign -> Clear assignment
 Align selected nodes|<span class="keyseq"><kbd>Ctrl</kbd><kbd>L</kbd></span>
 Line up selected nodes|<span class="keyseq"><kbd>Alt</kbd><kbd>L</kbd></span>
 Evenly distribute selected nodes between left/top-most and right/bottom-most node in selection|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>L</kbd></span>
@@ -137,7 +137,8 @@ Create a splicer input or output proxy in LOOP while linking|Finish with <span c
 Insert a IOBox into an existing link|Double rightclick the link
 Delete a link|Middleclick it or select it and press <span class="keyseq"><kbd>DEL</kbd></span>
 Start a new link from the same source after finishing a connection|Finish with middleclick
-Assign a link to an operation|Rightclick -> Assign
+Assign a link to an operation|Rightclick -> Assign -> (operation)
+Remove the operation-assignment of a link|Rightclick -> Assign -> Clear assignment
 Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> + double leftclick or double rightclick the link
 Insert a node into an existing link|Double leftclick the link
 Show a links tooltip while hovering it|Hold <span class="keyseq"><kbd>Ctrl</kbd></span>

@@ -1,10 +1,10 @@
-# Insta Share
+# InstaShare
 
-The Insta Share extension allows you to quickly share screenshots of your renderings with the world.
+The InstaShare extension allows you to quickly share screenshots of your renderings with the world.
 
 Press <span class="keyseq"><kbd>Alt</kbd><kbd>I</kbd></span> to open it.
 
-When open, it intercepts any screenshot you make and allows you to post it to a common [madewithvvvv](https://pixelfed.social/p/madewithvvvv/) account. In addition you can configure Insta Share to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
+When open, it intercepts any screenshot you make and allows you to post it to a common [madewithvvvv](https://pixelfed.social/p/madewithvvvv/) account. In addition you can configure InstaShare to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
 
 ## Configuring Accounts
 
