@@ -6,10 +6,12 @@ VL Documents can reference 3 different types of dependencies:
 * .NET Nugets
 * Files
 
-When a document references a dependency, it means that all public nodes in that dependency will be available to it via the NodeBrowser.
+When a document references a dependency, it means that all public nodes in that dependency will be available to it via the [NodeBrowser](../hde/the_nodebrowser.md).
 
 ## Nugets
 [NuGet](https://www.nuget.org) is the package managing system for .NET. Nugets are packages that can contain many .dll and/or .vl files that expose nodes to the referencing document.
+
+For installing nugets, see [Managing Nugets](../hde/managing-nugets.md).
 
 ### VL vs. .NET Nugets
 A VL Nuget is a nuget specifically created for use with vl that won't work for any other [.NET language](https://en.wikipedia.org/wiki/List_of_CLI_languages). It is still a valid nuget in the original terms of NuGet but since it contains .vl documents it will not be useable outside of vl.
@@ -20,24 +22,6 @@ You can reference either VL or .NET nugets via the menu by navigating to it and 
 
 ![](../../images/libraries/vl-Dependencies-Nuget.png)
 <center>Rightclick toggles adding/removing a nuget reference</center>
-
-### Manage Nugets
-
-* *Find on nuget.org* opens a webbrowser and lets you search for nugets in the online repository. Note that for now, after you've found what you're looking for, you'll still have to install a nuget manually via the commandline
-* *Show installed* opens a file explorer at the path all your nugets are installed locally
-* *Commandline* Opens a commandline from which you can run [nuget commands](https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference) like "install"
-
-![](../../images/libraries/vl-Dependencies-ManageNugets-Commandline.png)
-<center>Installing a nuget via the commandline</center>
-
-> [!NOTE]
-> Some packages may only be available as a "prerelease". To install those, add the commandline argument "-pre" when running "nuget install".
-
-> [!NOTE]
-> After installing a nuget via the commandline it is not yet automatically referenced by the current document! It is now merely available among the Nugets via the Dependencies menu. But if an installed nuget contains any help files, those will already show up in the HelpBrowser.
-
-> [!NOTE]
-> To update to the latest version of a nuget you have already installed, simply run the install command again. Your package directory can contain multiple versions of the same nuget and vl will always use the newest. Older versions have to be removed manually if no longer needed.
 
 ### Missing Nugets
 If a nuget that is referenced by a document cannot be found,  it will be listed in red in the Dependencies menu. In such a case a rightclick on a red entry allows you to:
