@@ -4,11 +4,11 @@
 The Quad menu collects all global commands.
 
 It gives you quick access to:
-- Recent Sketches
+- Recent Sketches: for quickly accessing most recent .vl documents, saved in the default location
 - [The Helpbrowser](findinghelp.md#help-browser)
 - [Extensions](extensions.md)
 - [Managing Nugets](managing-nugets.md)
-- All Documents: A listing of all open documents
+- All Documents: A listing of all currently open .vl documents
 - Run, Step, Pause, Stop, Restart all running applications
 - [Exporting Applications](exporting.md)
 - Additional Windows like the [Documentation Window](documentation.md) and the [Solution Explorer](solution-explorer.md)
