@@ -30,7 +30,7 @@ Shows titles of all open patches. All tabs with white titles belong to the activ
 ## The Hamburger 
 
 Gives you quick access to: 
-- [Settings](settings.md)
+- [Settings](settings.md) including a link to the backup directory
 - [Themes](themes.md)
 - Licensing Terms including a link to the [vvvv License Store](https://store.vvvv.org)
 - The About dialog including 
