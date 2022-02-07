@@ -84,7 +84,7 @@ In vvvv beta there were two reasons to use framedelays
 * to make sure one thing happens after the other
 * to store a value for the next frame
 
-In VL you'll only use a FrameDelay node for the first use-case. If your patch needs to store a value for the next frame you're creating a datatype in which case you can now use proper Fields and Pads to access those Fields.
+In VL you'll only use a FrameDelay node for the first use-case. If your patch needs to store a value for the next frame you're creating a datatype patch. In this case you can now use [Properties](../../language/properties.md) to much better structure your programs.
 
 ## Adding pins to nodes
 Nodes like +, \*, Cons, that have a dynamic pin-count can have pins added/removed by selecting them and pressing <span class="keyseq"><kbd>CTRL</kbd><kbd>+</kbd></span> or <span class="keyseq"><kbd>CTRL</kbd><kbd>-</kbd></span>.
