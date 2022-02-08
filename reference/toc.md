@@ -40,6 +40,7 @@
 ## [Conditions](language/conditions.md)
 ## [Loops](language/loops.md)
 ## [Cache](language/cache.md)
+## [Enumerations](language/enumerations.md)
 ## [Delegates](language/delegates.md)
 ## [Generics](language/generics.md)
 ## [Frames](language/frames.md)
