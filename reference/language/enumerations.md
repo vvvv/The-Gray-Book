@@ -4,7 +4,7 @@ An enumeration type (or enum type) is a value type defined by a set of named con
 - Static Enums
 - Dynamic Enums
 
-> NOTE
+> [!NOTE]
 > As of now, enums can only be used but not created in VL. For defining a new enum, for now you'd have to resort back to writing C# and loading a compiled .dll that includes the enum type.
 
 ## Static Enums
