@@ -17,4 +17,6 @@ A dynamic enum can have entries added, removed or changed during runtime. They a
 
 For working with dynamic enums, use nodes from the (advanced) `Primitive.DynamicEnum` and `Primitive.DynamicEnumDefinition` category.
 
+![](../../images/language/dynamic-enums.png)
+
 For defining custom dynamic enums in C# see: [Defining Dynamic Enums](../extending/writing-nodes.md#dynamic-enums).
