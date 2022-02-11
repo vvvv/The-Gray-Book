@@ -6,12 +6,12 @@ For audio analysis, playback, recording and sound synthesis.
 NuGet: [VL.Audio](https://www.nuget.org/packages/VL.Audio)
 
 ## Audio drivers
-If you have any ASIO driver installed, it will be used by default. Otherwise the system default WASAPI driver will be used. For choosing a different driver than the default, use the DriverSettings node. But note that this node must globally only exist once, otherwise it is not guaranteed that you will be using the desired driver!
+VL.Audio supports both WASAPI and ASIO drivers. By default the engine will try to use the system WASAPI drivers which should work out of the box with default settings. To choose a different driver or different settings, use the DriverSettings node. 
 
 > [!NOTE]
-> As of now, audio input is only available when using an ASIO driver!
+> The DriverSettings node must globally only exist once. In case you have multiple instances of the node running, it is undefined the configuration of which node will be used.
 
-If your sound card doesn't ship with an ASIO driver, try a generic one, like: 
+In case you want to use an ASIO driver with your soundcard that doesn't come with dedicated ASIO drivers, here are some options:
 * [FlexASIO](https://github.com/dechamps/FlexASIO/releases) and [FlexASIO GUI](https://github.com/flipswitchingmonkey/FlexASIO_GUI/releases)
 * [ASIO4All](http://www.asio4all.org)
 * [FL Studio ASIO](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/envsettings_audio.htm#FLStudioASIO) as included with the free download of [FL Studio](https://www.image-line.com/fl-studio-download)
