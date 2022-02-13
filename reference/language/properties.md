@@ -1,30 +1,77 @@
 # Properties
 
-Properties are where datatype patches store data. A datatype patch can have any number of properties and you can see them listed in the PatchExplorer.
+Datatypes can use properties to store data. You can get an overview of the properties of a datatype via the Patch Explorer. 
 
 *Image:Properties listed in the PatchExplorer*
 
-Properties can be added and removed via the explorer or simply by adding a Pad via the Nodebrowser. Pads are used in a patch to read from or write to a property. Properties and their pads are matched by name, so make sure to always be specific about naming, including casing. Rename a Pad by doubleclicking its label and pressing <span class="keyseq"><kbd>Enter</kbd></span> when finished.
+You can add and remove properties via the Patch Explorer, but specifically for adding properties, you'd often simply create Pads.
 
-Any number of different operations can write to the same pad but each operation can only write to a pad once. A little triangle above a pad is a hint that there is a pad with the same name in the patch that is also written to.
+If you're coming from textual programming, you may also think of properties as "variables" with the caveat that they can only be written to once per operation!
 
-*Image:Different operations writing to the same pad*
+## Pads
 
-You can use anonymous (unnamed) pads as a hub to join many links into one.
+In a patch, Pads are used to get (read data from) or set (write data to) properties. Pads refer to properties via name, meaning all Pads with the same name refer to one and the same property. Names are case-sensitive!
 
-*Image:Anonymous pad use as a hub for multiple links*
+In every [operation](operations.md) you can assume that first always all Pads are read from. Then all its operations are executed and only as the last step all Pads are written to. 
 
-In an operation you can assume that first always all pads are read from and only as the last step all pads are written to.
+If a link goes into a Pad (from above), data is written into this Pad. If a link leaves a Pad (at the bottom), data is read from this Pad.
+
+Pads can have multiple links coming in and/or going out. Note though, that while multiple links can go out on the same operation, all incoming links need to be on different operations! Think about it this way: Pads cannot be used to store intermediate values during the execution of an operation. They can only be used to store data between the execution of different operations.
+
+A little triangle above a Pad is a hint that there is a Pad with the same name in the patch that is also written to.
+
+*Image:Different operations writing to the same Pad*
+
+### Adding Pads
+You can add Pads via [Nodebrowser](../hde/the_nodebrowser.md) in two different ways:
+
+1) Enter the name of the Pad you want to create and then choose the entry `Pad`.
+2) Choose the entry `Pad` and then enter a name
+3) Choose from the list of existing properties that are listed in the Nodebrowser
+
+### Renaming Pads
+Doubleclick a Pad's name to change it. When renaming a Pad, only this one instance is renamed and eventually referring to a different property. If a property with the new name of a Pad did not exist so far, a new property is automatically added at this point!
+
+To rename all Pads that share a name at the same time, rename the property via the Patch Explorer instead. 
+
+### Anonymous Pads
+Pads without a name are called "anonymous Pads". They don't refer to a property but still allow you to store data between the call of multiple operations.
+
+You can quickly insert an anonymous Pad into a link, by pressing <span class="keyseq"><kbd>Shift</kbd></span> while doubleclicking the link.
+
+You can also use anonymous Pads simply as a hub to join many links into one.
+
+*Image:Anonymous Pad use as a hub for multiple links*
 
 ## The datatype of a property
-By default a property does not have a datatype assigned and  therefore is generic. You see this because a pad at first is only an outlined circle. If the circle is filled, it means that the compiler has inferred a type for it which you can see in the tooltip by hovering it.
+A property's datatype can either be:
 
-*Image:Generic pad vs. pad with a datatype inferred*
+1) Generic
+2) Inferred 
+3) Annotated
+   
+ad 1) Generic
+By default properties are generic, meaning they don't have a datatype assigned. On Pads this is visible when they are only showing the outline of a circle. 
 
-If you manually need to specify a type for a property you can annotate its pad by middleclicking and entering any type in the editor that pops up. As an alternative to the middleclick you can rightclick the pads label and choose -> Configure.
+Properties are generic as long as none of their associated Pads are have a datatype either inferred or annotated. 
 
-*Image:Annotating a pad*
+ad 2) Inferred
+If the compiler has inferred a type for a Pad from the links that are connected to it, it is showing as a filled circle. You can see the inferred datatype in the Pad's tooltip by hovering it.
 
-You can recognize pads that are annotated manually as they have a black dot in their circle.
+*Image:Generic Pad vs. Pad with a datatype inferred*
 
-*Image:Annotated pad*
+ad 3) Annotated
+To set the type for a property manually, you can annotate one of its Pads. Middleclick a Pad to open a little inspector where you can edit its type. As an alternative to the middleclick you can rightclick the Pad's label and choose -> Configure.
+
+*Image:Annotating a Pad*
+
+You can recognize Pads that are annotated manually as they have a dot in their circle.
+
+*Image:Annotated Pad*
+
+## Pads vs. IOBoxes
+A Pad and an IOBox are essentially the same thing: While the IOBox has a value editor and a comment (on its right side), a Pad has a name (on its left side). 
+
+You can convert between the two via Rightclick -> Convert...
+
+You can also enable the value editor for any Pad or hide it for any IOBox.
