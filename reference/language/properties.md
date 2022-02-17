@@ -23,7 +23,7 @@ A little triangle above a Pad is a hint that there is a Pad with the same name i
 *Image:Different operations writing to the same Pad*
 
 ### Adding Pads
-You can add Pads via [Nodebrowser](../hde/the_nodebrowser.md) in two different ways:
+You can add Pads via [Nodebrowser](../hde/the_nodebrowser.md) in three different ways:
 
 1) Enter the name of the Pad you want to create and then choose the entry `Pad`.
 2) Choose the entry `Pad` and then enter a name

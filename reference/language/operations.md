@@ -1,62 +1,100 @@
 # Operations
 
-Operations define a simple functionality. They take input, apply their function to it and return a result. Operations cannot hold state, meaning they cannot store any data between consecutive calls. This also means that you cannot use any Process nodes (e.g. LFO, Damper,...) in them as those are stateful and therefore can only be used in a stateful context which an operation does not provide.
-
-There are two different types of operations in vl:
-
-* Static operations
-* Member operations
-
-While _static_ operations are on their own, operating only on data they are being fed with, the term _member_ refers to the fact that those operations belong to and operate on the data of  a datatype.
+Operations define a simple functionality. They take input, do something with it and return a result. Operations cannot hold state, meaning they cannot store any data between consecutive calls. Data instead is stored in [Properties](properties.md). 
 
 ## Definition vs. Application
 
-Using the term "operation" alone can be ambiguous if not from the context it will be clear whether we actually mean an "operation definition" or an "application of the operation definition" which again is synonymous with "node".
+Using the term "operation" alone can be ambiguous if not from the context it will be clear whether we actually mean an "operation definition" or an "application of the operation definition" which again is synonymous with "node". In this chapter, we're using the term "operation" as shortcut for "operation definition". 
 
-*Image:A static operation definition and its application as a node*
+## Types of Operations
+
+There are two different types of operations in vl:
+
+* Member operations
+* Static operations
+
+## Member Operations
+The term _member_ refers to the fact that those operations belong to and operate on the data of a datatype.
+
+Datatypes can have many operations, most often they have at least a `Create` and an `Update` operation. To distinguish multiple member operations in a patch, VL uses colors for Pins and Links. There are three reserved colors: 
+- White: for the Create operation
+- Gray: for the Update operation
+- Dark red: for the Dispose operation
+
+All other colors are applied randomly from a color pallette and have no meaning whatsoever. They are only there to indicate the belonging of colored elements to a certain operation. To check which color refers to which operation, use the Patch Explorer or hover the pin and find the operation mentioned in the tooltip.  
 
 *Image:A member operation definition and its application as a node*
 
-## Static operation definitions
-Static operation definitions can be created directly in a document patch or in a group patch via the NodeBrowser.
+### Creating a Member Operation
+Member operations are either created via the Patch Explorer, or during the assignment workflow, where you can choose to assign to a new operation and then specify the name of the operation to be created and assigned to at the same time.
+
+### Assigning Nodes, Inputs/Outputs and Links to operations
+
+Use the elements context menu to assign it to one of the available operations or create a new one. 
+
+Often it makes sense to start assignments on Input or Output pins. Note that assignments auto-propagate through the whole patch. They only stop at Pads or Process Nodes, which act kind of like bridges between the operations in that they store values written by one operation and have them available for retrieval by an other operation. 
+
+There are cases though where no Input or Output pin is part of an operation. In that case consider setting an assignment onto a link or Operation Node.
+
+> [!NOTE]
+> Process Nodes cannot be assigned to an operation. Instead you'll see that their Pins can assign to different operations, meaning that different parts (operations) of a Process Node can be executed on different operations in the containing patch. 
+
+### Clearing Operation assignments
+
+To remove the assignment from an element, also use the context menu -> Clear assignment. 
+
+By default, elements with no assignment will "fall back" to being executed on Update, if it is available. 
+
+### The Dispose Operation
+
+In cases where you deal with an unmanaged object it is necessary to add an operation named `Dispose` and use it to in turn execute a Dispose node for the object. This will make sure that when the parent patch is disposed, that the managed resource will be disposed as well. 
+
+Since there is no way to know whether an object is unmanaged, a simple test you can do, is try to connect Dispose [IDisposable] to an instance of it. If this connection is allowed, you know that the resource is unmanaged and needs you to manually call Dispose on it.
+
+## Static Operations
+Static operations are on their own, operating only on data they are being fed with.
+
+*Image:A static operation definition and its application as a node*
+
+### Creating a Static Operation
+Static operation definitions can be created via the NodeBrowser.
 
 ![](../../images/language/vl-Operations-Static-NodeBrowser.png)
 <center>Choose to create an operation definition in the NodeBrowser</center>
 
-By default static operations have their _Is Generic_ property set to true. Disabling it shows errors for all inputs and outputs of the operation whose datatype is not specified or cannot be infered.
+By default, static operations have their _Is Generic_ property set to false. Errors will be shown for all inputs and outputs of the operation whose datatype is not specified or cannot be infered. To allow generic inputs, enable this toggle.
 
 ![](../../images/language/vl-Utils-StaticOperation-GenericToggle.png)
-<center>The "Is Generic" toggle of an operation definition is on by default</center>
+<center>The "Is Generic" toggle of an operation definition is off by default</center>
 
 Once created, the operation definition shows up in the NodeBrowser and can now be created as a node.
 
 ![](../../images/language/vl-Operations-Static-MyOperation-NodeBrowser.png)
 <center>The newly created operation can now be selected via the NodeBrowser</center>
 
-## Member operation definitions
-Any operation defined as part of a datatype patch is a member operation.
+## Input and Output Pins
+Inputs and Outputs in operation definitions show up as Pins on the corresponding Node.
 
-Member operations are not surrounded by a rectangular definition region because they can interact with each other via pads and can in fact be quite distributed over a patch which would potentially result in many overlapping regions in a patch. Therefore instead member operations are distinguished by color.
+### Annotating Inputs and Outputs
+### Defaults for Inputs
 
-*Image:Two member operations exchanging data via a pad*
+### Visibility for Inputs and Outputs
 
-Member operations in a patch can be defined either via the PatchExplorer...
+### Pin groups
+Pins of type Spread can also be changed to a so called _Pin Group_ that let's you add or remove pins by pressing 
+In order to do so, simply open the Configure Menu of the pin via `context-menu > Configure` and set the Pin Group flag to TRUE by right-clicking on it.
 
-*Image:Adding a member operation via the PatchExplorer*
+![](../../images/language/PinGroup.png)
 
-...or by selecting an elements in the patch and choosing to assign them to a new operation via the context menu:
 
-*Image:Assigning a selection of inputs to a new operation*
-
-## Operation Applications
-As mentioned above the term _Operation Application_ is synonymous with the term _Node_ and therefore we're here referring you to the chapter link:/en/reference/vl/nodes.adoc[Nodes] for further details.
-
-## Operation Signature
-The signature of an operation comprises of its input- and output-pins and defines the order in which they show up on corresponding nodes.
+### Operation Signature
+The signature of an operation allows you to define the order in which its Inputs and Outputs show up on corresponding nodes.
 
 For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the PatchExplorer.
 
-*Image:Signature of a static and a member operation*
+*Image:Signature of member operations in the Patch Explorer*
+
+*Image:Signature of a static operation*
 
 By default the order of pins is defined by their left-to-right placement in the patch. To override that behavior uncheck the "pin order" toggle and arrange the pins by drag-dropping them directly in the signature.
 
