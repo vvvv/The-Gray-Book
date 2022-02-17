@@ -1,6 +1,6 @@
 # Video Recording
 
-Here are a couple of options for screen recording:
+Here are a couple of options for screen recording.
 
 ## XBox Game Bar
 Typically installed on Windows 10, otherwise available via the Microsoft Store. 
@@ -32,3 +32,9 @@ Use those in combination with the MainLoop node set to "Is Incremental" and spec
 
 > [!NOTE]
 > This technique does not work for scenarios where your visual content relies on realtime parameters like audio analysis or realtime sensor data.
+
+## Gif Recorders
+For recording animated gifs, try the [LiceCap](https://www.cockos.com/licecap/) screen capturing tool.
+
+
+
