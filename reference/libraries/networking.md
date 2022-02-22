@@ -29,6 +29,7 @@ NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)
 * [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en_US&gl=US)
 * [poseHook](https://play.google.com/store/apps/details?id=com.hollyhook.posehook&hl=en_US&gl=US)
 * [Sensors2](https://sensors2.org/osc/)
+* [SoundCool](https://play.google.com/store/apps/details?id=org.soundcool.upv.oscapp)
 
 ## TUIO
 The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.
