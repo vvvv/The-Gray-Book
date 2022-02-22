@@ -22,24 +22,30 @@ HowTo Videos:
 NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)
 
 ### Useful tools:
-* [Jockey](http://www.jockeyapp.net/)
-* [OSC/Pilot](https://oscpilot.com/)
-* [Open Stage Control](https://openstagecontrol.ammd.net/)
 * [TouchOSC](https://hexler.net/software/touchosc) 
+* [Open Stage Control](https://openstagecontrol.ammd.net/)
+* [OSC/Pilot](https://oscpilot.com/)
+* [Jockey](http://www.jockeyapp.net/)
 * [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en_US&gl=US)
 * [poseHook](https://play.google.com/store/apps/details?id=com.hollyhook.posehook&hl=en_US&gl=US)
+* [Sensors2](https://sensors2.org/osc/)
 
 ## TUIO
 The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.
 http://tuio.org  
 NuGet: [VL.IO.TUIO](https://www.nuget.org/packages/VL.IO.TUIO)  
-
+NuGet: [VL.IO.TUIO.HDE](https://www.nuget.org/packages/VL.IO.TUIO.HDE) for a TUIO Simulator and Monitor [Extension](../hde/extensions.md)  
 ## MQTT
 https://mqtt.org  
 NuGet: [VL.IO.M2MQTT](https://www.nuget.org/packages/VL.IO.M2MQTT)  
 Or: [VL.IO.MQTTnet](https://www.nuget.org/packages/VL.IO.MQTTnet) 
 
-For a broker service try [shiftr.io](https://www.shiftr.io/) - An IoT Platform for Interconnected Projects
+### Brokers
+* For a broker cloud service try [shiftr.io](https://www.shiftr.io/) - An IoT Platform for Interconnected Projects
+* For a local broker, try [Mosquitto](http://mosquitto.org/download/)
+
+### Clients
+* Search mobile app stores for "mqtt"
 
 ## ZMQ 
 https://zeromq.org  
