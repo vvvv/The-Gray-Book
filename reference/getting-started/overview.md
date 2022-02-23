@@ -8,6 +8,10 @@ Depending on where you come from you may at some point want to read one of the f
 * [Introduction for .NET programmers](dotnet/introduction-for-dotnet-programmers.md)
 * [Introduction for vvvv beta users](beta/introduction-for-vvvv-beta-users.md)
 
+## Tutorials
+Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. 
+There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
+
 ## Chapters
 
 This reference is further structured into the following chapters:
@@ -19,10 +23,6 @@ This reference is further structured into the following chapters:
 | [Libraries](../libraries/overview.md) | An overview of all available node libraries |
 | [Extending vvvv](../extending/overview.md) | For developers to write their own nodes and libraries |
 | [Best Practice](../best-practice/overview.md) | Learn the best practices for specific topics |
-
-## Tutorials
-Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. 
-There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
 
 ## Connect
 
