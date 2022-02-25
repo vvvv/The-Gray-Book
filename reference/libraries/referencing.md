@@ -62,6 +62,25 @@ You can rightclick a file reference to remove or replace it. Note that you can a
 ![](../../images/libraries/vl-Dependencies-File-Remove.png)
 <center>Remove files</center>
 
+#### Duplicate reference warning
+
+When referencing a .dll you may encounter the following warning:
+
+![](../../images/libraries/duplicate-reference-warning.png)
+
+The warning pops up because you can now not be sure that the file you want to reference is actually referenced. 
+
+There are two situations in which this may occur:
+1) Changing the location from which to load a .dll:
+You've set a reference to the .dll before but have since moved it to a different location on disk and now want to fix the reference to that new position. 
+
+2) Referencing a .dll that vvvv itself has already loaded.
+You're setting a reference to a .dll in one location but a .dll with the same name has already been loaded from another location, most likely by vvvv itself. 
+
+If you are certain that those are actually the same files, only in a different location, then you can ignore the warning. 
+
+Otherwise in case 1) restarting vvvv should help, but in case 2) you'll actually not have a chance to get this solved. .dlls loaded by vvvv cannot be changed at all. If for some reason you need to use a newer version of a .dll than the one vvvv is currently using, please start a thread on the [forum](https://discourse.vvvv.org) about this and we'll see what we can do. 
+
 ### Libraries from the GAC (Global Assembly Cache)
 
 By default .NET comes with a large number of assemblies that can be referenced. They are stored in the [GAC](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) on all machines that have .NET installed and can be referenced from there via:
