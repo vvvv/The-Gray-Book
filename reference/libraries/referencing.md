@@ -64,7 +64,7 @@ You can rightclick a file reference to remove or replace it. Note that you can a
 
 #### Duplicate reference warning
 
-When referencing a .dll you may encounter the following warning:
+When referencing a .dll you may encounter a warning similar to the following warning:
 
 ![](../../images/libraries/duplicate-reference-warning.png)
 

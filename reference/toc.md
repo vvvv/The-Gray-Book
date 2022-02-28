@@ -37,6 +37,7 @@
 ## [IOBoxes](language/ioboxes.md)
 ## [Links](language/links.md)
 ## [Properties](language/properties.md)
+## [Categories](language/categories.md)
 ## [Conditions](language/conditions.md)
 ## [Loops](language/loops.md)
 ## [Cache](language/cache.md)
@@ -44,7 +45,7 @@
 ## [Delegates](language/delegates.md)
 ## [Generics](language/generics.md)
 ## [Frames](language/frames.md)
-## [Groups and Categories](language/groups.md)
+## [Groups ](language/groups.md)
 ## [Identifier Naming Conventions](language/namings.md)
 
 # [Libraries](libraries/overview.md)
