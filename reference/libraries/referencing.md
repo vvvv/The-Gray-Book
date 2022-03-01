@@ -68,13 +68,13 @@ When referencing a .dll you may encounter a warning similar to the following war
 
 ![](../../images/libraries/duplicate-reference-warning.png)
 
-The warning pops up because you can now not be sure that the file you want to reference is actually referenced. 
+The warning pops up because a file with the same name is already loaded by vvvv. 
 
 There are two situations in which this may occur:
-1) Changing the location from which to load a .dll:
+1) Changing the location from which to load a .dll:  
 You've set a reference to the .dll before but have since moved it to a different location on disk and now want to fix the reference to that new position. 
 
-2) Referencing a .dll that vvvv itself has already loaded.
+2) Referencing a .dll that vvvv itself has already loaded:  
 You're setting a reference to a .dll in one location but a .dll with the same name has already been loaded from another location, most likely by vvvv itself. 
 
 If you are certain that those are actually the same files, only in a different location, then you can ignore the warning. 
