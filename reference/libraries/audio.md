@@ -1,22 +1,20 @@
 # Audio
 
-## Audio
+## Playback, recording, analysis, synthesis
 
-For audio analysis, playback, recording and sound synthesis.  
-NuGet: [VL.Audio](https://www.nuget.org/packages/VL.Audio)
+For audio playback, recording, analysis and sound synthesis vvvv ships with the [VL.Audio](https://www.nuget.org/packages/VL.Audio) package. For more advanced features like beat tracking and pitch analysis, install the optional [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) package, which as the name implies, stands under the [GPL license](https://opensource.org/licenses/gpl-license). 
 
-## Audio drivers
-VL.Audio supports both WASAPI and ASIO drivers. By default the engine will try to use the system WASAPI drivers which should work out of the box with default settings. To choose a different driver or different settings, use the DriverSettings node. 
+### Audio drivers
+VL.Audio supports both WASAPI and ASIO drivers. By default the engine will try to use the system WASAPI drivers which should work out of the box with default settings. 
 
-> [!NOTE]
-> The DriverSettings node must globally only exist once. In case you have multiple instances of the node running, it is undefined the configuration of which node will be used.
+To choose a different driver or different settings, use either the DriverSettings node or the Configuration GUI, which is available via `Quad -> Extensions -> VL.Audio.Configuration` or <span class="keyseq"><kbd>Alt</kbd><kbd>C</kbd></span> as soon as VL.Audio is referenced in a document.
 
 In case you want to use an ASIO driver with your soundcard that doesn't come with dedicated ASIO drivers, here are some options:
 * [FlexASIO](https://github.com/dechamps/FlexASIO/releases) and [FlexASIO GUI](https://github.com/flipswitchingmonkey/FlexASIO_GUI/releases)
 * [ASIO4All](http://www.asio4all.org)
 * [FL Studio ASIO](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/envsettings_audio.htm#FLStudioASIO) as included with the free download of [FL Studio](https://www.image-line.com/fl-studio-download)
 
-Useful tools:
+### Useful tools
 * [Dante Via](https://www.audinate.com/products/software/dante-via) Versatile Audio Networking 
 * [Virtual Audio Cable](https://vb-audio.com/Cable/index.htm)
 
