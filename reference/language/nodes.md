@@ -27,7 +27,7 @@ The name _Process_ comes from the fact that it can be understood like a little m
 
 Process nodes have a distinguished look with the bars behind their pins being darker. This makes them visually heavier, hinting at the fact that they are holding state, ie. storing data between consecutive executions.
 
-For more on defining Process Nodes, see [Datatype Patches](patches.md).
+For more on defining Process Nodes, see [Datatype Patches](patches.md#process).
 
 ### Static Operation Nodes
 Operation nodes are nodes representing a single operation.
@@ -70,10 +70,14 @@ Typically a Node has either a single input or output Pin group, in which case it
 For keyboard shortcuts in case of multiple Pin groups on a node, see:  [Pin group shortcuts](../hde/keyboard-shortcuts.md#pin-groups).
 
 
-## Navigation hint
+## Navigating to a Nodes definition
 
-Any node that spots an arrow icon has a patch behind in the same document or a document that is directly referenced as a file dependency. This patch can quickly be opened via rightclick -> Open or middle-clicking the Node. 
+If a node is defined by a patch, you can navigate to its definition via pressing  `RightClick -> Open` on the node. Any node that spots an arrow icon has a patch behind in the same document or a document that is directly referenced as a file dependency. This patch can quickly be opened via middle-clicking the Node. 
 
 *Image:Node with a patch behind it*
 
 See also the [setting](../hde/settings.md) "Middleclick navigates to definition" to enable the middleclick to navigate to any patch even if it is not in the same or a referenced document. 
+
+If a node is defined by SDSL shader code, the corresponding code editor will open. See [Editing Shaders](../libraries/3d/editing-shaders.md). 
+
+Nodes that are defined by C# code cannot be inspected. 
