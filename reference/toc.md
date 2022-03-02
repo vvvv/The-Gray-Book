@@ -41,6 +41,7 @@
 ## [Conditions](language/conditions.md)
 ## [Loops](language/loops.md)
 ## [Cache](language/cache.md)
+## [Exception Handling](language/exception-handling.md)
 ## [Enumerations](language/enumerations.md)
 ## [Delegates](language/delegates.md)
 ## [Generics](language/generics.md)

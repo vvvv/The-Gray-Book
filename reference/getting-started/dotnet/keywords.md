@@ -218,10 +218,8 @@ VL does not have a _switch_ statement yet. See [Conditions](language/conditions.
 ### throw [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)
 
 ### try [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try)
-Support for exception handling using _try/catch/finally_ is still experimental in VL.
 
-> [!NOTE]
-> Only showing in the nodebrowser, if the _Experimental_ aspect is activated.
+See [Exception Handling](../../language/exception-handling.md).
 
 ### typeof [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/typeof)
 
