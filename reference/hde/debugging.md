@@ -10,9 +10,26 @@ Pause execution|<span class="keyseq"><kbd>F7</kbd></span>
 Stop execution|<span class="keyseq"><kbd>F8</kbd></span>
 Restart|<span class="keyseq"><kbd>F9</kbd></span>
 
-The execution of vl can be paused by pressing <span class="keyseq"><kbd>F7</kbd></span>. Pressing <span class="keyseq"><kbd>F6</kbd></span> repeatedly, causes the execution to make one step at a time. To get back into run mode press <span class="keyseq"><kbd>F5</kbd></span>.
+The execution of VL can be paused by pressing <span class="keyseq"><kbd>F7</kbd></span>. Pressing <span class="keyseq"><kbd>F6</kbd></span> repeatedly, causes the execution to make one step at a time. To get back into run mode press <span class="keyseq"><kbd>F5</kbd></span>.
 
 You can also choose to auto-pause whenever an error occurs and jump to the node that threw the exception by activating the *Pause on error* [Setting](settings.md).
+
+## IOBoxes
+Use [IOBoxes](../language/ioboxes.md) connected upstream to display incoming values. 
+
+*Image:IOBox used to inspect an upstream value*
+
+## Tooltips
+Hover a pin with the mouse to see a tooltip with its name and type.
+
+*Image:Tooltip of a pin showing its name and type*
+
+If the type is a collection, like Sequence, Spread,... you'll also see the collections number of elements in square brackets and the value of the first three elements in that collection.
+
+*Image:Tooltip of a collection type*
+
+> [!NOTE]
+> If you're observing a pin in a patch that is instantiated multiple times there is no way yet to know to which instance this value belongs!
 
 ## Timings
 The tooltip shows timings when *Show Timings* is activated in the [Settings](settings.md).
@@ -21,24 +38,10 @@ The tooltip shows timings when *Show Timings* is activated in the [Settings](set
 
 *Image:Tooltip shows timings on Datatype definition*
 
-## Tooltip
-Hover a pin with the mouse to see a tooltip with its name and type.
+## Write to Console
+The Log window can be opened via `Quad > Windows > Log` or by pressing <span class="keyseq"><kbd>Ctrl</kbd><kbd>F1</kbd></span>.
 
-*Image:Tooltip of a pin showing its name and type*
-
-If the type is a collection, like Sequence, Spread,... you'll also see the collections number of elements in square brackets and the value of the first element in that collection.
-
-*Image:Tooltip of a collection type*
-
-> [!NOTE]
-> If you're observing a pin in a patch that is instantiated multiple times there is no way yet to know to which instance this value belongs!
-
-## IOBoxes
-Use IOBoxes connected upstream to display incoming values. As with the tooltip, you'll also always only see the first value in a collection and the first instance of the value, in case there are multiple.
-
-*Image:IOBox used to inspect an upstream value*
-
-Spreadable IOBoxes are yet to come!
+Use the advanced `Write` and `WriteLine` nodes from the `System.Console` category to write debug infos to the Log.
 
 ## Warnings and Errors
 
