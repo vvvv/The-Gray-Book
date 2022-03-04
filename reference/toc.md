@@ -36,6 +36,7 @@
 ## [Nodes](language/nodes.md)
 ## [IOBoxes](language/ioboxes.md)
 ## [Links](language/links.md)
+## [Execution Order](language/execution-order.md)
 ## [Properties](language/properties.md)
 ## [Categories](language/categories.md)
 ## [Conditions](language/conditions.md)
