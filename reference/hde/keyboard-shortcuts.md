@@ -61,7 +61,7 @@ Description|Action
 -|-
 Select an Element|left click
 Add an element to the selection|<span class="keyseq"><kbd>Ctrl</kbd></span> + leftclick
-Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
+Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Space</kbd></span>
 Force to only select links when making a marquee selection|<span class="keyseq"><kbd>L</kbd></span>
 
 ## Nodes
@@ -69,7 +69,7 @@ Description|Action
 -|-
 Bring up the NodeBrowser to choose node to create|Double leftclick in an empty area of a patch or on a link
 Replace a node|Double leftclick it to bring up the NodeBrowser and choose a different node. You may need to press ESC to remove existing choices
-Move a node (or selection of nodes) into or out of a region|Press <span class="keyseq"><kbd>SPACE</kbd></span> while draging a node
+Move a node (or selection of nodes) into or out of a region|Press <span class="keyseq"><kbd>Space</kbd></span> while draging a node
 Assign an operation-node to an operation|Rightclick -> Assign -> (operation)
 Remove the operation-assignment of a node|Rightclick -> Assign -> Clear assignment
 Align selected nodes|<span class="keyseq"><kbd>Ctrl</kbd><kbd>L</kbd></span>
@@ -132,17 +132,20 @@ Create an IOBox while linking|Finish with middleclick (or <span class="keyseq"><
 Create an input or output pin while linking|Finish with <span class="keyseq"><kbd>Ctrl</kbd></span> + leftclick in the patch
 Create a pad while linking|Finish with <span class="keyseq"><kbd>Shift</kbd></span> + leftclick in the patch
 Create a node while linking|Finish with a double leftclick
+Insert a link point while linking|Click in an empty area in a patch
+Insert a link point into an existing link|Press down on the link and drag a new point away
+Remove a link point from an existing link|Click to select the point and then press <span class="keyseq"><kbd>Delete</kbd></span>
 Create an accumulator input or output proxy in IF or LOOP while linking|Finish with <span class="keyseq"><kbd>Ctrl</kbd></span> + leftclick in the region
 Create a splicer input or output proxy in LOOP while linking|Finish with <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd></span> + leftclick in the region
 Insert a IOBox into an existing link|Double rightclick the link
-Delete a link|Middleclick it or select it and press <span class="keyseq"><kbd>DEL</kbd></span>
+Delete a link|Middleclick it or select it and press <span class="keyseq"><kbd>Delete</kbd></span>
 Start a new link from the same source after finishing a connection|Finish with middleclick
 Assign a link to an operation|Rightclick -> Assign -> (operation)
 Remove the operation-assignment of a link|Rightclick -> Assign -> Clear assignment
 Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> + double leftclick or double rightclick the link
 Insert a node into an existing link|Double leftclick the link
-Show a links tooltip while hovering it|Hold <span class="keyseq"><kbd>Ctrl</kbd></span>
-Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>SPACE</kbd></span>
+Show a links tooltip to see its current value and the operation it is assigned to|Press <span class="keyseq"><kbd>Ctrl</kbd></span> while hovering the link
+Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>Space</kbd></span>
 Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
 
 ## Frames
