@@ -89,6 +89,7 @@
 # [Extending vvvv](extending/overview.md)
 ## [Using .NET Libraries](extending/using-net-libraries.md)
 ## [Writing Nodes using C#](extending/writing-nodes.md)
+## [Custom Regions](extending/custom-regions.md)
 ## [Contributing to a Library](extending/contributing.md)
 ## [Creating a new Library](extending/creating.md)
 ## [Forwarding .NET Libraries](extending/forwarding.md)
