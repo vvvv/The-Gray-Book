@@ -8,7 +8,7 @@ All nodes inside a Cache region are only executed if one of its border control i
 
 Once executed, the regions output border control points hold (ie. cache) the results until the region is executed again. 
 
-The `Dispose Cached Outputs` input defines whether objects, cached in one of the regions output border control points, will be disposed, before a new result is being cached. This is only necessary for unmanaged objects. As a rule of thumb: If the objects class has a Dispose() method, you'll most likely want to activate this input, except you're intentionally dealing with its disposal in a different way. 
+The `Dispose Cached Outputs` input defines whether objects, cached in one of the regions output border control points, will be disposed, before a new result is being cached. As a rule of thumb: If the objects class has a Dispose() method, you'll most likely want to activate this input, except you're intentionally dealing with its disposal in a different way. 
 
 The `Has Changed` output returns true for every frame the the region was executed.
 
