@@ -6,26 +6,31 @@ via [Wikipedia](https://en.wikipedia.org/wiki/Serialization)
 
 ## Common Formats
 
-There are many ways this can be done but there are three commonly used text formats for serialization, called [XML](https://en.wikipedia.org/wiki/XML), [JSON](https://en.wikipedia.org/wiki/JSON) and [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) and another common binary format called [BSON](https://en.wikipedia.org/wiki/BSON). While binary formats are typically smaller, which results in faster read/write times, the advantage of text formats is human readability which helps with debugging and version-control. Also, when interacting with the web it is common to choose JSON as this can be easily parsed and created from java-script.
+There are many ways this can be done but there are three commonly used text formats for serialization, called [XML](https://en.wikipedia.org/wiki/XML), [JSON](https://en.wikipedia.org/wiki/JSON) and [CSV](https://en.wikipedia.org/wiki/Comma-separated_values). While binary formats are typically smaller, which results in faster read/write times, the advantage of text formats is human readability which helps with debugging and version-control. When interacting with the web it is common to choose JSON as this can be easily parsed and created from java-script.
 
 ## Automatic
 When you need to send data-structures from one instance of your application to another over a network and the data does not have to be saved to disk, chances are that you don't care about the actual format.
 
-In this case you can use one of the runtime serializers provided that can serialize most datatypes directly without the need for building an extra data-structure for serialization. While this is quick and easy, it comes at the cost of not having any control over the format and thus may have some overhead in the formats size, as the serialization process may include data that you'd not even need to serialize.
+In this case you can use one of the runtime serializers provided that can serialize most datatypes directly without the need for building an extra data-structure for serialization. While this is quick and easy, it comes at the cost of not having any control over the format and thus may have some overhead in the formats size, as the serialization process may include data that you'd not even need to serialize. 
 
-The following nodes can be used:
+For serialization to XElement (ie. XML) best use the nodes from the `System.Serialization` category: 
+* Serialize -> XElement -> Deserialize
+* Serialize (Log Errors) [Advanced] -> XElement -> Deserialize (Log Errors)
 
-* Serialize (JSON) [System.Serialization] -> Deserialize (JSON) [System.Serialization]
-* Serialize (BSON) [System.Serialization] -> Deserialize (BSON) [System.Serialization]
-* Serialize (Binary) [System.Serialization] -> Deserialize (Binary) [System.Serialization]
-* Serialize (XML) [System.Serialization] -> Deserialize (XML) [System.Serialization]
+Further, the following nodes from the category `System.Serialization.Volatile` can be used:
 
-**image: example MyType automatically serialized and deserialized**
+* Serialize (XML) -> String -> Deserialize (XML)
+* Serialize (JSON) -> String -> Deserialize (JSON)
+* Serialize (Binary) -> MutableArray of Byte -> Deserialize (Binary) 
+
+> [!NOTE]
+> The serialized format these nodes generate is "volatile" in a sense that it may not be compatible between different versions of VL.
+>
+> Also: Deserializing JSON or XML that was not generated with the corresponding Serialize nodes will fail, if the individual attributes are not ordered alphabetically! This is a peculiarity of FsPickler and we'll therefore probably have to replace it at some point. Meanwhile you may want to have a look at using nodes from the [Json.NET](https://www.newtonsoft.com/json) library for such cases.
 
 In case you want to learn more about the inner workings of those nodes, check the documentation of the [FSPickler](https://mbraceproject.github.io/FsPickler/) library on which they are based on.
 
-> [!NOTE]
-> Deserializing JSON or XML that was not generated with the corresponding Serialize nodes will fail, if the individual attributes are not ordered alphabetically! This is a peculiarity of FsPickler and we'll therefore probably have to replace it at some point. Meanwhile you may want to have a look at using nodes from the [Json.NET](https://www.newtonsoft.com/json) library for such cases.
+**image: example MyType automatically serialized and deserialized**
 
 ## Manual
 When you're saving the state of a program to disk, you may want think about different versions of your file-format because the data-structure you're saving may evolve over time and you may still want your application to be able to load files saved with earlier versions.
