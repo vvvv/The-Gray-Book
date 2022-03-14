@@ -10,7 +10,8 @@ Depending on where you come from you may at some point want to read one of the f
 
 ## Tutorials
 Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube.  
-There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
+There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).  
+And a series of independent [video tutorials by Takuma Nakata](https://www.youtube.com/c/TakumaNakata/videos).
 
 ## Chapters
 
