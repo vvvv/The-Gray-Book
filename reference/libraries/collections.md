@@ -3,7 +3,7 @@
 A large number of different collection types is shipping with the VL.CoreLib:
 
 ## Sequence
-The base type for collections in VL is the _Sequence_. It corresponds to what is known as _IEnumerable_ in .net world. We just gave it a more human-readable name.
+The base type for collections in VL is the _Sequence_. It corresponds to what is known as _IEnumerable_ in .NET world. We just gave it a more human-readable name.
 
 ## Spread
 The Spread is a specialized sequence. The elements in a spread are called slices. When asking a spread with 4 slices for the slice with index 6, instead of complaining, it takes the index modulo its count, ie 4 mod 6 = 2 and returns the slice with index 2.
@@ -17,3 +17,9 @@ The Dictionary is a key-value collection. Items (values) are added to the dictio
 The key is often a string, but can really be any other datatype.
 
 ## HashSet
+
+Represents a set of values.
+
+---
+
+Enable the `Advanced` aspect in the nodebrowser to get access to many more collection types.
