@@ -67,6 +67,7 @@
 ### [Shaders](libraries/3d/shaders.md)
 ### [TextureFX](libraries/3d/texturefx.md)
 ### [Editing Shaders](libraries/3d/editing-shaders.md)
+### [Geometry](libraries/3d/geometry.md)
 ## [Animation](libraries/animation.md)
 ## [Audio](libraries/audio.md)
 ## [Augmented Reality](libraries/augmentedreality.md)
