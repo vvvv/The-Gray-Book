@@ -21,7 +21,7 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * [Shaders](3d/shaders.md)
 * [All about TextureFX shaders](3d/texturefx.md)
 * [Editing shaders](3d/editing-shaders.md)
-
+* [Geometry](3d/geometry.md)
 
 ### Additional libraries:
 
