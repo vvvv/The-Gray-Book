@@ -8,22 +8,7 @@ In the main menubar you always see the filename of the document you're currently
 <center>The main menubar with the Active Document "callmenames.vl"</center>
 
 ## Active Document Menu
-Clicking on the active document opens its menu. At the bottom of the menu you see the VL version the document was last saved with. If there is a little green or red icon before the document name, this means that the document has been saved with a version different to the one currently running.
-
-![](../../images/hde/gamma-active_document_menu.png)
-<center>In this example gamma version 2020.1.3.147 is running</center>
-
-*Green* 
-
-![](../../images/hde/gamma-active_document_menu_savedOlder_line.png)
-
-A little green symbol next to the document's name is a hint that the document was upgraded to the currently running version, which is usually just fine. Still this hint is given so you know that if you save the document in this version it may have troubles being loaded in an older version.
-
-*Red*
-
-![](../../images/hde/gamma-active_document_menu_savedNewer_line.png)
-
-A red symbol is a warning that the document was last saved with a newer version and therefore things may not look/work as expected. In that case consider running a newer version of VL to open this document.
+Clicking on the active document opens its menu. 
 
 ### Dependencies
 A document can reference three different types of dependencies:
@@ -66,3 +51,29 @@ In this section you see a listing of all nugets and files combined. Here you can
 By default if you add a dependency to a document you get only the nodes the dependency exposes directly. Dependencies can depend on other dependencies which you don't see by default.
 
 Only if you check a dependency as "Forward" it will also be seen by documents that only include their parent document.
+
+## Application
+See [Application Patch](../language/patches.md#application-patch).
+
+## Definitions
+See [Definitions Patch](../language/patches.md#definitions-patch).
+
+## Last saved with version
+At the bottom of the menu you see the VL version the document was last saved with. If there is a little green or red icon before the document name, this means that the document has been saved with a version different to the one currently running.
+
+![](../../images/hde/gamma-active_document_menu.png)
+<center>In this example gamma version 2020.1.3.147 is running</center>
+
+*Green* 
+
+![](../../images/hde/gamma-active_document_menu_savedOlder_line.png)
+
+A little green symbol next to the document's name is a hint that the document was upgraded to the currently running version, which is usually just fine. Still this hint is given so you know that if you save the document in this version it may have troubles being loaded in an older version.
+
+*Red*
+
+![](../../images/hde/gamma-active_document_menu_savedNewer_line.png)
+
+A red symbol is a warning that the document was last saved with a newer version and therefore things may not look/work as expected. In that case consider running a newer version of VL to open this document.
+
+

@@ -75,17 +75,35 @@ Once created, the operation definition shows up in the NodeBrowser and can now b
 ## Input and Output Pins
 Inputs and Outputs in operation definitions show up as Pins on the corresponding Node.
 
-### Annotating Inputs and Outputs
-### Defaults for Inputs
+There are two ways of creating pins:
+- With a link at hand, hold <span class="keyseq"><kbd>CTRL</kbd></span> while left-clicking
+- Doubleclick to bring up the NodeBrowser, then type the name, you want the pin to have, then choose either `Input` or `Output`
 
-### Visibility for Inputs and Outputs
+### Configuring Input and Output Pins
+Use a pins configuration menu to to configure it. You can reach the menu either way:
+- Middleclick the pin
+- Rightclick the pin and choose `Configure`
 
-### Pin groups
-Pins of type Spread can also be changed to a so called _Pin Group_ that let's you add or remove pins by pressing 
-In order to do so, simply open the Configure Menu of the pin via `context-menu > Configure` and set the Pin Group flag to TRUE by right-clicking on it.
+#### Annotating Inputs and Outputs
+"Annotating" means to manually specify a datatype for a pin. In the configuration menu, the topmost entry allows you to specify a Type. Doubleclick the entry to edit it. 
+
+> [!NOTE]
+> Type names are case-sensitive, ie it is important that you're using correct spelling when setting a type.
+
+#### Defaults for Inputs
+When an input is annotated with a type you can also specify a default for it in the configuration menu. 
+
+#### Visibility for Inputs and Outputs
+As the creator of a node you can also decide if certain pins should not be visible by default. A reason to do so would be that the pin is of rather special interest and default usage of the node doesn't require it. 
+
+When setting a pins visibility to `Optional` it can be shown by a user of the node, using the nodes configuration menu. If a pin is set to `Hidden` it cannot be used by a user of the node. 
+
+#### Pin groups
+Pins of type Spread can also be changed to a so called _Pin Group_. Pin Groups allow you to dynamically add/remove pins to a node. For the keyboard shortcut to do so, see [Pin Group Shortcuts](../hde/keyboard-shortcuts.md#pin-groups).
+
+In order to make a pin into a pin group, it has to be annotated to the type `Spread`. Then you can set the Pin Group flag in the configuration menu to TRUE.
 
 ![](../../images/language/PinGroup.png)
-
 
 ### Operation Signature
 The signature of an operation allows you to define the order in which its Inputs and Outputs show up on corresponding nodes.

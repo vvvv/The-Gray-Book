@@ -14,4 +14,4 @@ The `Has Changed` output returns true for every frame the the region was execute
 
 You can quickly surround a bunch of nodes with a Cache region, by selecting them and then choosing `Surround -> Cache` from the rightclick context menu.
 
-Moving nodes into and out of the region works by pressing `Space` while dragging them. 
+Moving nodes into and out of the region works by pressing <span class="keyseq"><kbd>SPACE</kbd></span> while dragging them. 

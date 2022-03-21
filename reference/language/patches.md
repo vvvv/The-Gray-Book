@@ -5,7 +5,7 @@ A "Patch" is a canvas that holds [Nodes](nodes.md), [Links](links.md) and other 
 * Datatype Patches
 * Definition Patches
 
- Every VL document has two main patches that can be reached via the [Document Menu](../hde/document-menu.md):
+ Every VL document has two main patches that can be reached via the [Document Menu](../hde/navigating_a_project.md#active-document-menu):
 
 * The Application patch: A special form of a datatype patch
 * The Definitions patch: The root of all definition patches 
@@ -57,25 +57,39 @@ There are different ways to create a new datatype patch:
 In either case, a corresponding type-definition is automatically placed in the definitions patch of the active document.
 
 ### Process
-
-The most common type of datatype patch is the "Process". It holds the definition for a [Process Node](nodes.md#process-nodes). 
+The most common type of datatype patch is the "Process". It holds the definition for a [Process Node](nodes.md#process-nodes), ie. its life-time is bound to the existence of a node.
 
 A processes' member operations can either be directly part of the process or not. The patch explorer can be used to decide about this for every operation. Also the order of execution of multiple operations in a process can be configured there. 
 
 The Application patch of a document is a special Process patch:
 * It has a Create and an Update operation but doesn't allow you to add additional operations
-* It isn't instantiated as a node, but an instance of it is running as soon as its the document is opened directly or as a dependency for another document
+* It cannot be instantiated as a node, but an instance of it is running as soon as its  document is opened directly or as a dependency for another document
 
 ### Record
-Defines an immutable datatype.
-A record can optionally also define a Process.
+Defines an immutable datatype. As opposed to a Process, its life-time is not defined by the existence of a node. Instead, any number of instances of a Record can be created, update and disposed at any time. 
+
+The typical life-time of a record goes like this:
+- An instance is created using a call to its `Create` operation
+- The instance is stored in a collection 
+- Operations like `Update` (or others that were defined) are called on it repeatedly or only from time to time and return a new instance (replacing the previous one) that is stored in the collection again
+- For this, activate the Process toggle in the Patch Explorer
+- The instance is removed from the collection in order to kill it. In case the record holds unmanaged resources it is also necessary to call its `Dispose` operation before removing it from the collection.
+
+Every node that modifies a record type, essentially makes a copy of it (with changes applied) and returns a new instance. Thus, modified Records always need to be written back into a [Pad](properties.md#pads), for their changes to survive to the next frame!
+
+The fact that a record is at anytime a fixed, immutable snapshot of data, makes it specifically suitable for use in a dataflow programming language like VL. 
+
+A record can optionally also define a Process. For this, activate the Process toggle in the Patch Explorer. 
 
 ### Class
-Defines a mutable datatype.
-A class can optionally also define a Process.
+Defines a mutable datatype. Basically similar to the Record with one main difference: 
+
+Every node that modifies a class type really modifies the original instance! No matter how far down the line a node is that operates on a class type, it is always the original instance that is being modified. So what's passed on over links, from pin to pin, is not data, but only a reference to the original instance.
+
+A class can optionally also define a Process. For this, activate the Process toggle in the Patch Explorer.
 
 ### Interface
-Not officially supported yet.
+Not officially supported yet. 
 
 ### Forward
 See [Forwarding](../extending/forwarding.md).
