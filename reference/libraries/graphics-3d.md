@@ -30,6 +30,9 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * NuGet: [VL.IO.PLY](https://www.nuget.org/packages/VL.IO.PLY) for loading PLY pointcloud files
 * NuGet: [VL.IO.Teximp](https://www.nuget.org/packages/VL.Teximp) for texture IO and processing
 * NuGet: [VL.Assimp](https://www.nuget.org/packages/VL.Assimp) is an alternative 3d model loader for Stride
+* NuGet: [VL.Alembic](https://www.nuget.org/packages/VL.Alembic/) for loading [Alembic](http://www.alembic.io) files
+* NuGet: [VL.OpenEXR](https://www.nuget.org/packages/VL.OpenEXR) for loading [OpenEXR](https://www.openexr.com/) image files
+* NuGet: [VL.Boids-GPU](https://www.nuget.org/packages/VL.Boids-GPU) Boids algorithm implemented Stride
 
 ### Useful tools
 * [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)
