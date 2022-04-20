@@ -1,11 +1,15 @@
 # Misc Libraries
 
+## FuzzySearch
+Wrapper for the text similarity metric library SimMetricsCore and several nodes covering Fuzzy Search tasks.  
+NuGet: [VL.FuzzySearch](https://www.nuget.org/packages/VL.FuzzySearch)
+
 ## ScreenRecorder
 Records fullscreen or a given area as mp4 movie. Including sound.  
 NuGet: [VL.ScreenRecorder](https://www.nuget.org/packages/VL.ScreenRecorder)
 
 ## $Q Super-Quick 2d Gesture Recognizer
-The $Q Super-Quick 2d Gesture Recognizer for VL  
+The $Q Super-Quick 2d Gesture Recognizer for VL.  
 NuGet: [VL.2D.DollarQ](https://www.nuget.org/packages/VL.2D.DollarQ)
 
 ## QRCode/Barcode 
@@ -18,6 +22,10 @@ NuGet: [VL.2d.Voronoi](https://www.nuget.org/packages/VL.2d.Voronoi)
 ## 2d Simplify
 Polyline simplification.  
 NuGet: [VL.2d.Simplify](https://www.nuget.org/packages/VL.2D.Simplify/)
+
+## 2DUtils
+A collection of tools for 2D purposes in VL..  
+NuGet: [VL.2DUtils](https://www.nuget.org/packages/VL.2DUtils)
 
 ## SmallestCircle
 Calculate the smallest enclosing circle for a set of 2D points.  
@@ -69,8 +77,25 @@ Read sensor data provided by [OpenHardwareMonitor](https://openhardwaremonitor.o
 NuGet: [VL.HardwareMonitor](https://www.nuget.org/packages/VL.HardwareMonitor)
 
 ## OpenWeather
-Retrieves weather data from OpenWeather's OneCall API  
+Retrieves weather data from OpenWeather's OneCall API.  
 NuGet [VL.OpenWeather](https://www.nuget.org/packages/VL.OpenWeather)
+
+## SunCalc
+Provides Sun and Moon related calculations in VL.  
+NuGet [VL.SunCalc](https://www.nuget.org/packages/VL.SunCalc)
+
+## FsNotify
+Convenience node to retrieve file system events as observables.  
+NuGet [VL.FsNotify](https://www.nuget.org/packages/VL.FsNotify)
+
+## FileTypeAssociation
+Query Win API to retrieve information about associated Filetypes.  
+NuGet [VL.FileTypeAssociation](https://www.nuget.org/packages/VL.FileTypeAssociation/)
+
+## Spotify
+A VL wrapper for JohnnyCrazy's SpotifyAPI.Web.  
+NuGet [VL.Spotify](https://www.nuget.org/packages/VL.Spotify)
+
 
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
