@@ -34,7 +34,7 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 ### Useful tools
 * [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)
 * [List of Material Editors](https://discourse.vvvv.org/t/open-source-material-editor-material-creation-resource-list/19185)
-
+* [ALVR](https://github.com/alvr-org/ALVR) to stream VR content to headsets via Wi-Fi
 
 ---
 
