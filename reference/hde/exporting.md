@@ -44,10 +44,12 @@ If active, removes artefacts of previous exports (ie. deletes the \src folder) b
 
 Using referenced external assets in exported executables for now is a bit cumbersome:
 
-Instead of using path IOBoxes to reference files, you have to use a combination of the node __ApplicationPath__ and a string of the relative path to your asset. Also after export you have to manually copy the assets to the output directory!
+Instead of simply using *Path* IOBoxes to reference files, you have to manually concatenate every assets path by adding the result of __ApplicationPath [System.Application]__ with a string of the relative path to your asset. Then, if needed, use a __ToPath [IO]__ node to convert the resulting *string* into a *Path*.
 
 ![](../../images/hde/exporting-1837f.png)
 <center>Creating paths relative to the exported executable</center>
+
+Also after export you have to manually copy the assets to the output directory!
 
 > [!NOTE]
 > During development a path created like that will be relative to your main .vl document. When exported, it will be relative to the executable.
