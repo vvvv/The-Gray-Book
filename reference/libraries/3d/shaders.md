@@ -22,7 +22,31 @@ Specialized nodes to process textures. See more in the chapter [TextureFX](textu
 ### Inheritance
 The main purpose of inherance is re-using existing shader code. You can think of it like importing or including the code of another shader into your own shader. It is actually quite similar to the #include statements in HLSL or C, with some nice additional features.
 
-To understand the shader hierachy better, you can use the Stride.ShaderExplorer to get an overview and browse the shaders.
+So, say you have a file `MyUtils.sdsl` like this:
+```c
+shader MyUtils
+{
+    float4 Invert(float4 col)
+    {
+        col.rgb = 1 - col.rgb;
+        return col;
+    }
+};
+```
+
+and you want to use its functions in another file, then make sure both files are in the same directory and simply inherit and use the `MyUtils` shader like so:
+
+```c
+shader MyFx_TextureFX : FilterBase, MyUtils
+{
+    float4 Filter(float4 tex0col)
+    {
+        return MyUtils.Invert(tex0col);
+    }
+};
+```
+
+To understand the shader inheritance hierachy better, you can use the [Stride.ShaderExplorer](../graphics-3d.md#useful-tools) to get an overview and browse the shaders.
 
 ### Composition
 

@@ -83,6 +83,9 @@ shader Mix_TextureFX : MixerBase
 #### ShaderUtils
 [ShaderUtils](https://github.com/vvvv/VL.Stride/blob/preview/gamma-2021.4/packages/VL.Stride.Runtime/src/Effects/Common/ShaderUtils.sdsl) defines constants like PI and gives access to many commonly used shader snippets.
 
+## Include Files
+See [Inheritance](shaders.md#inheritance).
+
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:
 
