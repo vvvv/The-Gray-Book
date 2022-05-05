@@ -39,7 +39,7 @@ Aspects, like "Experimental", "Internal", "Obsolete" and "Advanced" can be speci
 
 ## Base Shaders to inherit from
 
-There are a bunch of shaders you can inherit useful functionality from. Multiple Inheritance is allowed!
+There are a bunch of shaders you can [inherit](shaders.md#inheritance) useful functionality from. Multiple Inheritance is allowed!
 
 * Shipping with Stride: Use the [Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)
 * Shipping with VL.Stride: Explore the .sdsl files in: C:\Program Files\vvvv\vvvv_gamma_...\lib\packs\VL.Stride.Runtime...\stride\Assets\Effects
@@ -84,7 +84,7 @@ shader Mix_TextureFX : MixerBase
 [ShaderUtils](https://github.com/vvvv/VL.Stride/blob/preview/gamma-2021.4/packages/VL.Stride.Runtime/src/Effects/Common/ShaderUtils.sdsl) defines constants like PI and gives access to many commonly used shader snippets.
 
 ## Include Files
-See [Inheritance](shaders.md#inheritance).
+See [Includes](shaders.md#includes).
 
 ## Node Attributes
 Attributes allow you to configure your TextureFX node. Here is an example of some attributes applied to a shader:

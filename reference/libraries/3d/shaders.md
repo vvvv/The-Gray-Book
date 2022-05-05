@@ -2,6 +2,7 @@
 Shaders are written in [SDSL](https://doc.stride3d.net/4.0/en/manual/graphics/effects-and-shaders/shading-language/index.html), an advanced high-level shader language that supports OOP concepts and multiple inheritance. This allows to write short and nice looking shader code.
 
 ## File Management
+###Scope
 Any .vl document that has VL.Stride set as a dependency will pick up shader files that are placed next to it in special folder called "shaders". Multiple .vl documents can share the same shaders folder.
 
 > [!NOTE]
@@ -19,8 +20,8 @@ A node that represents a compute shader to work with arbitrary data on the GPU.
 Specialized nodes to process textures. See more in the chapter [TextureFX](texturefx.md).
 
 ## Core Concepts
-### Inheritance
-The main purpose of inherance is re-using existing shader code. You can think of it like importing or including the code of another shader into your own shader. It is actually quite similar to the #include statements in HLSL or C, with some nice additional features.
+### Includes
+There isn't such a thing as the #include statement known from HLSL. Instead you can simply call any function of any shader that is in [scope](#scope). 
 
 So, say you have a file `MyUtils.sdsl` like this:
 ```c
@@ -34,10 +35,10 @@ shader MyUtils
 };
 ```
 
-and you want to use its functions in another file, then make sure both files are in the same directory and simply inherit and use the `MyUtils` shader like so:
+and you want to use its functions in another file, then make sure both files are in scope (e.g in the same same directory) and simply use any function of the `MyUtils` shader like so:
 
 ```c
-shader MyFx_TextureFX : FilterBase, MyUtils
+shader MyFx_TextureFX : FilterBase
 {
     float4 Filter(float4 tex0col)
     {
@@ -45,6 +46,13 @@ shader MyFx_TextureFX : FilterBase, MyUtils
     }
 };
 ```
+
+See also [Static Calls](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.html#static-calls) in the Stride documentation.
+
+### Inheritance
+The main purpose of inherance is re-using existing shader code. You can think of it like importing or including the code of another shader into your own shader. 
+
+For examples, see [Inheritance](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.html#example-code-inheritance) in the Stride documentation.
 
 To understand the shader inheritance hierachy better, you can use the [Stride.ShaderExplorer](../graphics-3d.md#useful-tools) to get an overview and browse the shaders.
 
