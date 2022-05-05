@@ -35,7 +35,7 @@ shader MyUtils
 };
 ```
 
-and you want to use its functions in another file, then make sure both files are in scope (e.g in the same same directory) and simply use any function of the `MyUtils` shader like so:
+and you want to use its functions in another file, then make sure both files are in scope (e.g in the same directory) and simply use any function of the `MyUtils` shader like so:
 
 ```c
 shader MyFx_TextureFX : FilterBase
