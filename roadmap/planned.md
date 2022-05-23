@@ -8,15 +8,15 @@ Continuous releases with bug fixes
 * Allow for simple shader creation
 * Add Entity Picking
 
-## 2022.5 (Q2)
-* Package Manager: replacing the commandline for installing NuGets
-* Dependency Manager: replacing the Dependency menu
-
-## 2022.6 (Q4)
+## 2022.5 (Q3)
 * Update to .NET6 which promises:
   * Performance improvements 
   * Export to other platforms
   * Allows for using latest .NET NuGets
+
+## 2022.6
+* Package Manager: replacing the commandline for installing NuGets
+* Dependency Manager: replacing the Dependency menu
   
 ## 202x.7
 * The big UI rework potentially including
