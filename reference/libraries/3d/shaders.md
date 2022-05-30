@@ -23,7 +23,7 @@ Specialized nodes to process textures. See more in the chapter [TextureFX](textu
 ### Includes and Static Calls
 You can use the [#include directive](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-pre-include) just as you would in HLSL. But often you'll not need it because you can call a static function of any shader that is in [scope](#scope) (e.g in the same directory, or both in the /shaders folder next to any .vl document that is loaded). Static functions are functions that don't use any stream variables or class variables, like shader inputs. See also [Static Calls](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.html#static-calls) in the Stride documentation.
 
-So, say you have a file `MyUtils.sdsl` like this:
+If you have a file `MyUtils.sdsl` like this:
 ```c
 shader MyUtils
 {
@@ -35,7 +35,7 @@ shader MyUtils
 };
 ```
 
-If you want to use its functions in another file, then make sure both files are in scope and use a static function of the `MyUtils` shader like so:
+You can call its static functions in another file like so:
 
 ```c
 shader MyFx_TextureFX : FilterBase
