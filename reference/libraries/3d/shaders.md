@@ -21,7 +21,7 @@ Specialized nodes to process textures. See more in the chapter [TextureFX](textu
 
 ## Core Concepts
 ### Includes
-There isn't such a thing as the #include statement known from HLSL. Instead you can simply call any function of any shader that is in [scope](#scope). 
+You can use the [#include directive](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-pre-include) just as you would in HLSL. But often you'll not need it because you can simply call any function of any shader that is in [scope](#scope). 
 
 So, say you have a file `MyUtils.sdsl` like this:
 ```c
