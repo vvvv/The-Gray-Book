@@ -55,5 +55,11 @@ For examples, see [Inheritance](https://doc.stride3d.net/latest/en/manual/graphi
 To understand the shader inheritance hierachy better, you can use the [Stride.ShaderExplorer](../graphics-3d.md#useful-tools) to get an overview and browse the shaders.
 
 ### Composition
+Compostion allows a shader A to use other shader B like a variable and call functions of it. The main feature is, that the other shaders C or D can be used as composition if they inhertit from the shader class B, that is expected as composition variable in shader A. The fact that you can use different implementations (shaders that inherit from B) as the composition, allows for polymorphism known as __interfaces__ in OOP languages.
+
+For examples, see [Composition](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/composition.html) in the Stride documentation.
 
 ### Streams
+SDSL has a convenient way to pass parameters across the different stages of your shader. Simply declare a variable as stream variable and write and read to it in any shader stage. The SDSL compiler will generate the input and output structs for each shader stage.
+
+For examples, see [Automatic shader stage input/output](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.html) in the Stride documentation.
