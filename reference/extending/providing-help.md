@@ -2,15 +2,22 @@
 
 Library developers can provide patches demonstrating different aspects of the library.
 
-We distinguish 2 types of patches:
+We distinguish 5 types of patches:
 
 * Explanation: Typically a single patch per library giving an overview of the whole set of nodes the library provides
-* HowTo: A series of patches demonstrating how to achieve specific things using certain nodes provided by the library
+* HowTo: A series of patches demonstrating how to achieve specific things using certain combination of nodes provided by the library
+* Reference: A patch covering the functionality of one specific node
+* Tutorial: Most often a link to a video tutorial
+* Example: A patch more broadly showing a usecase of of a library, not necessarily explaining too much but more giving an idea of what's possible
 
-In order to be picked up by the helpbrowser, those need to be put in the right place and follow the naming convention:
+These (except the "Examples") follow the idea of [The Documentation System](https://documentation.divio.com/).
+
+In order to be picked up by the helpbrowser, files need to be put in the right place and follow the naming convention:
 
     \help\Explanation Overview of available nodes.vl
     \help\HowTo Do something.vl
+    \help\Referece Nodename.vl
+    \help\Example Something Beautiful.vl
 
 In case a library has a lot of help patches, you can also use up to two levels of subdirectories to structure them, like so:
 
@@ -59,8 +66,12 @@ Since the end-user doesn't need to see the help flags, by default they are invis
 ![](../../images/libraries/helpflags-21aea.png)
 <center>The help flag indicator indicating that this how-to patch has help flags set</center>
 
-### Context
-Help flags can only be set on nodes that are defined in the same package as the one the how-to patch belongs to. If you try to set a help flag on a node that is not defined in the same package as the how-to patch you're working on, you'll see the following warning:
+### Troubleshooting
 
 ![](../../images/libraries/helpflags-79980.png)
 <center>Warning: Help flag cannot be set on this node</center>
+
+If you get this warning, check the following:
+- Make sure you're using package-repositries
+- Make sure the node you want to set the help flag on is defined in the same package as the help patch you're currently preparing
+- If you're still seeing the warning, save your help patch, restart vvvv, open the patch again and try to set the flag again
