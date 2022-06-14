@@ -72,6 +72,6 @@ Since the end-user doesn't need to see the help flags, by default they are invis
 <center>Warning: Help flag cannot be set on this node</center>
 
 If you get this warning, check the following:
-- Make sure you're using package-repositries
+- Make sure the pack you're adding a help patch to is referenced as a [source repository](contributing.md#source-package-repositories)
 - Make sure the node you want to set the help flag on is defined in the same package as the help patch you're currently preparing
 - If you're still seeing the warning, save your help patch, restart vvvv, open the patch again and try to set the flag again
