@@ -11,13 +11,14 @@ NuGet: [VL.Devices.Kinect](https://www.nuget.org/packages/VL.Devices.Kinect)
 
 For using the Microsoft Kinect2  
 NuGet: [VL.Devices.Kinect2](https://www.nuget.org/packages/VL.Devices.Kinect2)  
+Also: NuGet: [VL.Kinect2FuseUtils](https://vvvv.org/contribution/kinect2-fuse-utils)
 
 ## Azure Kinect
 
 For using the Microsoft [Azure Kinect](https://azure.microsoft.com/de-de/services/kinect-dk/)
 
 NuGet: [VL.Devices.AzureKinect](https://www.nuget.org/packages/VL.Devices.AzureKinect)  
-Body tracking NuGet: [VL.Devices.AzureKinect.Body](https://www.nuget.org/packages/VL.Devices.AzureKinect.Body)  
+Body tracking NuGet: [VL.Devices.AzureKinect.Body](https://www.nuget.org/packages/VL.Devices.AzureKinect.Body)
 
 ## Orbbec Astra
 

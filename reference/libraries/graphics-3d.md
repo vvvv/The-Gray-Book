@@ -27,10 +27,11 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 
 * NuGet: [VL.Fuse](https://www.nuget.org/packages/VL.Fuse/) is a collection of GPU tools and libraries to use with VL.Stride. Think: Distance Fields & Raymarching, Particles, Procedural Geometry, Textures and Materials, GPGPU. For details, see [The FUSE Lab](https://www.thefuselab.io/)
 * NuGet: [VL.CEF](https://www.nuget.org/packages/VL.CEF) is a HTML texture renderer for Stride
+* NuGet: [VL.Alembic](https://www.nuget.org/packages/VL.Alembic/) for loading [Alembic](http://www.alembic.io) files
+* NuGet: [VL.Stride.Text3d](https://www.nuget.org/packages/VL.Stride.Text3d) for rendering extruded 3d text
 * NuGet: [VL.IO.PLY](https://www.nuget.org/packages/VL.IO.PLY) for loading PLY pointcloud files
 * NuGet: [VL.IO.Teximp](https://www.nuget.org/packages/VL.Teximp) for texture IO and processing
 * NuGet: [VL.Assimp](https://www.nuget.org/packages/VL.Assimp) is an alternative 3d model loader for Stride
-* NuGet: [VL.Alembic](https://www.nuget.org/packages/VL.Alembic/) for loading [Alembic](http://www.alembic.io) files
 * NuGet: [VL.OpenEXR](https://www.nuget.org/packages/VL.OpenEXR) for loading [OpenEXR](https://www.openexr.com/) image files
 * NuGet: [VL.Boids-GPU](https://www.nuget.org/packages/VL.Boids-GPU) Boids algorithm implemented Stride
 

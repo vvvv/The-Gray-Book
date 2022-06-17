@@ -96,6 +96,9 @@ NuGet [VL.FileTypeAssociation](https://www.nuget.org/packages/VL.FileTypeAssocia
 A VL wrapper for JohnnyCrazy's SpotifyAPI.Web.  
 NuGet [VL.Spotify](https://www.nuget.org/packages/VL.Spotify)
 
+## RogueSharp
+NuGet: [VL.RogueSharp](https://vvvv.org/contribution/vl.roguesharp)
+
 
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.

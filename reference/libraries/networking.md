@@ -58,7 +58,9 @@ Client: http://client.rabbitcontrol.cc
 NuGet: [VL.IO.RCP](https://www.nuget.org/packages/VL.IO.RCP)  
 
 ## HTTP Rest
-Get and Post nodes are shipping with vvvv.  
+Get and Post nodes are shipping with vvvv. 
+
+Also: NuGet: [VL.SimpleHTTP](https://www.nuget.org/packages/VL.SimpleHTTP)
 
 ## WebServer
 NuGet: [VL.IO.HTTP.WebServer](https://www.nuget.org/packages/VL.IO.HTTP.WebServer)  
