@@ -59,7 +59,7 @@ In either case, a corresponding type-definition is automatically placed in the d
 ### Process
 The most common type of datatype patch is the "Process". It holds the definition for a [Process Node](nodes.md#process-nodes), ie. its life-time is bound to the existence of a node.
 
-A processes' member operations can either be directly part of the process or not. The patch explorer can be used to decide about this for every operation. Also the order of execution of multiple operations in a process can be configured there. 
+A processes' member operations can either be directly part of the process or not. The patch explorer can be used to decide about this for every operation. Also the order of execution of multiple operations in a process can be configured there by dragging the operations up or down.
 
 The Application patch of a document is a special Process patch:
 * It has a Create and an Update operation but doesn't allow you to add additional operations
