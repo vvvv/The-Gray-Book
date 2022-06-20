@@ -17,7 +17,7 @@ For using [Lidar devices by SICK](https://www.sick.com/de/de/mess-und-detektions
 NuGet: [VL.Devices.SICK](https://www.nuget.org/packages/VL.Devices.SICK)
 
 ## GameController
-NuGet: [VL.GameController](https://discourse.vvvv.org/t/vl-gamecontroller/20570)
+WIP: [VL.GameController](https://discourse.vvvv.org/t/vl-gamecontroller/20570)
 
 ## XBOX 360 Controller
 For using the XBOX360 Controller  

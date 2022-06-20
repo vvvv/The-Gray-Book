@@ -52,6 +52,10 @@ NuGet: [VL.DBSCAN](https://www.nuget.org/packages/VL.DBSCAN)
 A Markov chain generator.  
 NuGet: [VL.Markov](https://www.nuget.org/packages/VL.Markov)
 
+## GlassWindow
+Make transparent render windows.  
+GitHub: [VL.GlassWindow](https://github.com/torinos-yt/VL.GlassWindow)
+
 ## WinForm Utils
 To set useful properties on Form windows.  
 NuGet: [VL.WinformsUtils](https://www.nuget.org/packages/VL.WinFormsUtils)
