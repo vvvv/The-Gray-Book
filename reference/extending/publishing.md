@@ -198,7 +198,7 @@ name: push_nuget
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - README.md
 
