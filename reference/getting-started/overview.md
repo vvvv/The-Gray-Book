@@ -8,10 +8,18 @@ Depending on where you come from you may at some point want to read one of the f
 * [Introduction for .NET programmers](dotnet/introduction-for-dotnet-programmers.md)
 * [Introduction for vvvv beta users](beta/introduction-for-vvvv-beta-users.md)
 
+## Download
+When [downloading vvvv](https://visualprogramming.net/#Download) you can choose between two versions:
+- Stable: Use for production
+- Preview: Use for testing latest features
+
+You may also want to use the third-party [Gamma Launcher](https://vvvv.org/contribution/gamma-launcher) for conveniently downloading and using multiple versions side by side. 
+
 ## Tutorials
-Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube.  
-There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).  
-And a series of independent [video tutorials by Takuma Nakata](https://www.youtube.com/c/TakumaNakata/videos).
+- [vvvvTv](https://www.youtube.com/vvvvtv42): Our youtube channel has the official Tutorials and HowTo videos
+- [NODE20 Workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
+- [English Video tutorials by Takuma Nakata](https://www.youtube.com/c/TakumaNakata/playlists)
+- [Chinese video tutorials by RED](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists)
 
 ## Chapters
 
