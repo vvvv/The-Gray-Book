@@ -8,9 +8,9 @@ By doing this, we are separating the differing ideas of what data is again with 
 
 A color is immutable. A number is immutable. A string (text) is immutable. And your own data types will also be immutable by default.
 
-#### The default
+#### Immutability is our default
 When talking about data later on in the book you should always think of that data as being immutable. Most of our basic data types are immutable. As soon as we encounter mutable types we'll also use the term reference (to some location in memory) or (shared) memory to underline the difference to the default.
 
-While other systems embrace the idea of data being a reference to mutable data in memory mainly out of low level performance reasons, we embrace the idea of immutable data and encourage you to deal with this kind of data as long as possible. 
+While other systems embrace the idea of data being a reference to mutating memory mainly out of low level performance reasons, we embrace the idea of immutable data and encourage you to deal with this kind of data as long as possible. 
 
 Immutable data makes reasoning about data flow much more pleasant than when dealing with references. We'll look into data flow in the next chapter. Immutable data also has advantages when reasoning about parts of a program running in parallel on different cores of a modern processor, which is another reason for our decision of making immutable data the default.
