@@ -2,7 +2,7 @@
 
 ## Aruco Markers
 
-A set of nodes to detect Aruco markers is included with VL.OpenCV.
+A set of nodes to detect Aruco markers is included with VL.OpenCV.  
 NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 
 ## See also

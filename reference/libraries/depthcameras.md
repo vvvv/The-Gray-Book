@@ -22,7 +22,7 @@ Body tracking NuGet: [VL.Devices.AzureKinect.Body](https://www.nuget.org/package
 
 ## Orbbec Astra
 
-For using the [Orbbec Astra](https://orbbec3d.com/product-astra-pro/)  
+For using the [Orbbec Astra](https://orbbec3d.com/index/products.html)  
 NuGet: [VL.Devices.Astra](https://www.nuget.org/packages/VL.Devices.Astra)  
 
 ## Intel RealSense

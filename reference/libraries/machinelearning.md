@@ -13,7 +13,7 @@ NuGet: [ONNX](https://www.nuget.org/packages/VLML.ONNX_03)
 NuGet: [VL.RunwayML](https://www.nuget.org/packages/VL.RunwayML)  
 
 ## Wekinator
-A set of nodes to easily interact with [The Wekinator]((http://www.wekinator.org/))  
+A set of nodes to easily interact with [The Wekinator](http://www.wekinator.org/)  
 NuGet: [VL.Wekinator](https://www.nuget.org/packages/VL.Wekinator)
 
 ## OpenAI
