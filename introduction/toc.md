@@ -16,5 +16,7 @@
 # [More On Data](more-on-data.md)
 ## [Data And Mutability](mut.md)
 ## [DataFlow And Mutability](mut2.md)
+## [Detecting Changes](mut3.md)
+## [Builders of Immutable Data](mut4.md)
 ## [Generics](generics.md)
 ## [Sub Types](subtypes.md)

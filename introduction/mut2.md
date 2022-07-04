@@ -7,9 +7,8 @@ Let's focus on the HSV nodes' output pin which is a data source for two other no
 
 This is essential to be able to understand the patch. The data is coming from up there, solely from the data source (the output pin of the HSV node). That's all that matters. Any exception to that rule would destroy the basic idea of data flow that is **data is flowing from source to sink only**.
 
-And for the brave: our reasoning on mutable data types and data flow:
-#### Mutable Data and Data flow
+#### Mutable Data and Reference flow
 
-Working with mutable data shouldn't break this general data flow rule. Yet it is hard to ensure this. A node taking the reference to a certain memory location might just write to it. The next node would encounter **this new value** not the one it is linked to. You could argue: "Well in this case it is the reference that is flowing not a frozen snapshot. I am aware of that." Still, it opens up a whole range of problems since a patch only describes data flow, not order of execution. Which of the receiving nodes will execute first? The one on the left? And by that having an effect on the one to the right?
+Mutable Data also flows downwards, however this time it is more meaningful to state: a reference to the data is flowing downstream. The receiving nodes now can change the data in-place, meaning that every other sink that got handed a reference to that object will see the changed object. 
 
-So since for now VL doesn't allow you to define execution order you have to take care of this yourself. The only hint VL gives you is marking links that carry mutable data: These are the dashed links. If a dashed link has a "yellow sock" warning this means the you need to be aware of the execution order. Otherwise you may receive unwanted results. 
+The fact that sinks can influence each other, makes it more important to not only think about data flow, but also execution order. You will need to think more imperatively, less in a declarative way. In particular you will try to patch more vertically, where the patch reads more like a big list of instructions, that only can be executed in a certain way. 
