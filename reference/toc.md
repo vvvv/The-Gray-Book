@@ -84,6 +84,7 @@
 ### [Networking](libraries/networking.md)
 ### [Others](libraries/other-io.md)
 ## [Machine Learning](libraries/machinelearning.md)
+## [Projection Mapping](libraries/projectionmapping.md)
 ## [Video](libraries/video.md)
 ## [Misc](libraries/misc.md)
 
