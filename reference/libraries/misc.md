@@ -16,6 +16,10 @@ NuGet: [VL.2D.DollarQ](https://www.nuget.org/packages/VL.2D.DollarQ)
 QRCode encoder and decoder.  
 NuGet: [VL.QRCode](https://www.nuget.org/packages/VL.QRCode)
 
+## LerpX
+Collection of operators to manipulate data.  
+NuGet: [VL.LerpX](https://www.nuget.org/packages/VL.LerpX)
+
 ## Voronoi and Delaunay
 NuGet: [VL.2d.Voronoi](https://www.nuget.org/packages/VL.2d.Voronoi)
 
