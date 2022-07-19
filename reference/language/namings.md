@@ -20,7 +20,7 @@ In general the following characters are allowed, not starting with a number or s
 
 **a-z A-Z 0-9 + - * / = ~ < >**
 
-Pads and pins should contain spaces to make them visually more pleasing and distinct to operations:
+Pads and pins should contain spaces to make them visually more pleasing and distinct from operations:
 <pre>
 Velocity
 Map Mode
