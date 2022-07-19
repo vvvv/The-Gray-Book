@@ -20,16 +20,14 @@ In general the following characters are allowed, not starting with a number or s
 
 **a-z A-Z 0-9 + - * / = ~ < >**
 
-Pads also allow spaces, for categories dots are allowed. Examples:
-
-Pads:
+Pads and pins should contain spaces to make them visually more pleasing and distinct to operations:
 <pre>
 Velocity
 Map Mode
 Word List
 </pre>
 
-Categories:
+Categories can include periods:
 <pre>
 Math
 Collections.Spread
