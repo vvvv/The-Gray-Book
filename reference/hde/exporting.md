@@ -2,11 +2,11 @@
 
 vvvv allows you to export a patch into an executable, standalone program. In order to do so, open the Application Exporter via `Quad > Export...` or shortcut <span class="keyseq"><kbd>F10</kbd></span>.
 
-![](../../images/hde/exporting-35691.png)
+![](../../images/hde/exportdialog.png)
 <center>The Application Exporter</center>
 
 ## Application to export
-Choose which application to export (in case you have multiple projects open at the time).
+Choose which application to export (in case you have multiple projects open at the same time).
 
 ## Output directory
 Choose where the exported program and files will be created.
@@ -24,8 +24,8 @@ Choose an .ico file to be associated with the generated executable.
 
 ## Assets
 Choose how assets will be referenced in the exported application:
-* **Original**: This option is most useful during development, to quickly test exports without having to worry about moving assets around. Assets will be referenced from where they are. 
-* **Copy**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
+* **Relative to document**: This option is most useful during development, to quickly test exports without having to worry about moving assets around. Assets will be referenced from where they are. 
+* **Relative to output**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
   
 ## Options
 ### Console App
