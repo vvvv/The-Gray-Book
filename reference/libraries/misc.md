@@ -105,7 +105,7 @@ A VL wrapper for JohnnyCrazy's SpotifyAPI.Web.
 NuGet [VL.Spotify](https://www.nuget.org/packages/VL.Spotify)
 
 ## RogueSharp
-RogueSharp has functions useful for reasoning about 2D grids where some cells are walkable or transaprent. For example pathfinding and field of view.
+RogueSharp has functions useful for reasoning about 2D grids where some cells are walkable or transparent. For example pathfinding and field of view.
 Also includes a dice rolling function.  
 NuGet: [VL.RogueSharp](https://vvvv.org/contribution/vl.roguesharp)
 
