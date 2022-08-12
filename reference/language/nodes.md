@@ -49,7 +49,7 @@ They have an optional "State Output" pin that is visually not connected to the c
 
 ### Class Operation Nodes
 
-Record operation nodes are part of a record, on which they operate. They are visually higher, as they also display the name of the datatype they belong to in smaller type, below the nodes name.
+Class operation nodes are part of a class, on which they operate. They are visually higher, as they also display the name of the datatype they belong to in smaller type, below the nodes name.
 
 They always have a "State Output" pin that is visually connected to the corresponding "State Input" pin, indicating that the object coming in is the same as the object going out, only modified. 
 
