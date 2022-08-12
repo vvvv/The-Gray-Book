@@ -26,8 +26,6 @@ You can use Git via the commandline, ie. without a GUI client (some people prefe
 
 Which GUI client to choose? In the end you may want to try different ones and see which you prefer. The vvvv development team has been happy with [GitExtensions](https://gitextensions.github.io/) for many years. The best diff/merge tool we found is [P4Merge](https://www.perforce.com/downloads/visual-merge-tool) which you can choose to use as diff/merge tool with GitExtensions (and maybe also other GUI clients).
 
-TODO: "Checkout as is - commit as is"
-
 ### Cloud Service
 If you want to backup your git repositories in the cloud, which also allows you to easily share them with others, sign up with one of these [git cloud providers](https://git.wiki.kernel.org/index.php/GitHosting).
 
