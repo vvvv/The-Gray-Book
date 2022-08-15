@@ -13,7 +13,7 @@ Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span> in any patch to se
 <center>Finder</center>
 
 ## SymbolFinder
-Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd></span> to globally search for any symbol including the given string.
+Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd></span> or <span class="keyseq"><kbd>Ctrl</kbd><kbd>,</kbd></span> to globally search for any symbol including the given string.
 
 ![](../../images/hde/vl-Finder-SymbolFinder.png)
 <center>Symbol Finder</center>
