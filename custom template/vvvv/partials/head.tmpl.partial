@@ -19,7 +19,4 @@
   {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
   {{#_enableSearch}}<meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
   {{#_enableNewTab}}<meta property="docfx:newtab" content="true">{{/_enableNewTab}}
-
-  <script async defer data-domain="thegraybook.visualprogramming.net" src="https://plausible.io/js/plausible.js"></script>
-
 </head>

@@ -55,7 +55,7 @@ kbd
 
 .sidetoc
 {
-    top: 170px;
+    top: 90px;
 }
 
 .sidefilter
@@ -82,3 +82,9 @@ kbd
     border-bottom: 1px solid #000000;
     margin-bottom: 3px;
 }
+
+.article
+{
+    margin-top: 100px;
+}
+

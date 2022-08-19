@@ -6,7 +6,7 @@ When opening the NodeBrowser via a left double-click anywhere on a patch what yo
 * A list of top-level node categories (2D, 3D, Animation,...)
 * A list of available nugets (VL)
 
-<img src="../../images/hde/vl-Nodebrowser-Nodebrowser.png" height="460">
+![](../../images/hde/vl-Nodebrowser-Nodebrowser.png)
 
 You can also bring up the NodeBrowser:
 
@@ -40,25 +40,25 @@ There are different ways to navigate the list of available nodes:
 
 In both cases it helps to be familiar with the icons:
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Category.png" height="20"> Category
+![](../../images/hde/vl-Nodebrowser-Icon-Category.png) Category
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Nuget.png" height="20"> NuGet Package
+![](../../images/hde/vl-Nodebrowser-Icon-Nuget.png) NuGet Package
 
 Nodes:
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Process.png" height="20"> Process Node
+![](../../images/hde/vl-Nodebrowser-Icon-Process.png) Process Node
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Operation.png" height="20"> Operation Node
+![](../../images/hde/vl-Nodebrowser-Icon-Operation.png) Operation Node
 
 Types:
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Record.png" height="20"> Record
+![](../../images/hde/vl-Nodebrowser-Icon-Type_Record.png) Record
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Mutable.png" height="20"> Class
+![](../../images/hde/vl-Nodebrowser-Icon-Type_Mutable.png) Class
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Enum.png" height="20"> Enumeration
+![](../../images/hde/vl-Nodebrowser-Icon-Type_Enum.png) Enumeration
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Type_Interface.png" height="20"> Interface
+![](../../images/hde/vl-Nodebrowser-Icon-Type_Interface.png) Interface
 
 
 Hovering any entry that represents a node will show you the nodes Inputs and Outputs in the topright corner of the NodeBrowser and a tooltip will show you the description associated with the node if available.
