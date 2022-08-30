@@ -1,6 +1,9 @@
 # Best Practice
 Here is a list of best-practice articles on various topics:
 
+## 3d Rendering
+* [Text Rendering](text-rendering.md)
+
 ## Video
 * [Capturing video input](video-capture.md)
 * [Playing back video](video-playback.md)
