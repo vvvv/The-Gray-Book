@@ -23,6 +23,7 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * [Editing shaders](3d/editing-shaders.md)
 * [Geometry](3d/geometry.md)
 * [Projection Mapping](projectionmapping.md)
+* [Text rendering](../best-practice/text-rendering.md)
 
 ### Additional libraries:
 
