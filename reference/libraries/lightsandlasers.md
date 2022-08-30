@@ -9,4 +9,4 @@ An [Enttec DMXUsbPro](https://www.enttec.co.uk/en/product/controls/dmx-usb-inter
 NuGet: [VL.Devices.ENTTEC](https://www.nuget.org/packages/VL.Devices.ENTTEC)
 
 ## Ilda laser control
-Nothing yet. 
+Nothing yet. Any specific needs? We can most certainly offer custom development for supporting your preferred devices. [Get in touch](mailto:devvvvs@vvvv.org).
