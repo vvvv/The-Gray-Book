@@ -337,7 +337,7 @@ public class MyEnum: DynamicEnumBase<MyEnum, MyEnumDefinition>
     {
     }
 
-    //this method needs to be imported in VL to set the default
+    [CreateDefault]
     public static MyEnum CreateDefault()
     {
         //use method of base class if nothing special required
