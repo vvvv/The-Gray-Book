@@ -4,7 +4,11 @@ The InstaShare extension allows you to quickly share screenshots of your renderi
 
 Press <span class="keyseq"><kbd>Alt</kbd><kbd>I</kbd></span> to open it.
 
-When open, it intercepts any screenshot you make and allows you to post it to a common [madewithvvvv](https://pixelfed.social/p/madewithvvvv/) account. In addition you can configure InstaShare to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
+When open, it intercepts any screenshot you make. Use either:
+- <span class="keyseq"><kbd>Win</kbd><kbd>Shift</kbd><kbd>S</kbd></span> the default windows shortcut to take a screenshot
+- <span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span> which works on Skia and Stride windows
+
+Screenshots augmented with some text can then be posted to our common [madewithvvvv](https://pixelfed.social/p/madewithvvvv/) account. In addition you can configure ShowAndTell to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
 
 ## Configuring Accounts
 
@@ -24,21 +28,18 @@ Press the `Add Account` button and specify:
 * The instance (without http://, e.g.: pixelfed.de)
 * The access token
 
-> [!NOTE]
-> Currently the access token is not saved, so you'll have to provide it once per session.
-
 #### Pixelfed access token
 
-In your Pixelfed account, go to Settings > Developers > Create New Client
+In your Pixelfed account, go to `Settings > Developers > Create New Client`
 
-Fill out the form, make sure to enable the `Write` scope and press `Create`. This will prompt you with an access token that you copy-paste into the Insta Share account configuration. 
+Fill out the form, make sure to enable the `Write` scope and press `Create`. This will prompt you with an access token that you copy-paste into the account configuration. 
 
 #### Mastodon access token
 
-In your Mastodon account, go to Preferences > Development > New Application
+In your Mastodon account, go to `Preferences > Development > New Application`
 
-Fill out the form, make sure to enable the `Write` scope and press `Submit`. This will prompt you with an access token that you copy-paste into the Insta Share account configuration. 
+Fill out the form, make sure to enable the `Write` scope and press `Submit`. This will prompt you with an access token that you copy-paste into the account configuration. 
 
 ## Why Pixelfed and Mastodon?
 
-Pixelfed (for image sharing) and Mastodon (for microblogging) are part of the larger [Fediverse](https://en.wikipedia.org/wiki/Fediverse), a federation of decentralized social networks. Instead of comparable old-school walled-gardens, those work more like Email: Anyone can run their own instance of a Pixelfed or Mastodon server and still communicate with anyone else. Any public posts are truly public and can be viewed by anyone without having to register to another user-exploiting service. How normal does that sound for a change?!
+Pixelfed and Mastodon are part of the larger [Fediverse](https://en.wikipedia.org/wiki/Fediverse), a federation of decentralized social networks. Instead of comparable old-school walled-gardens, those work more like Email: Anyone can run their own instance of a Pixelfed or Mastodon server and still communicate with anyone else, because the fediverse shares a common communications protocol: [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub). Any public posts are truly public and can be viewed by anyone without having to register to another user-exploiting service. How normal does that sound for a change?!
