@@ -1,6 +1,6 @@
-# InstaShare
+# Show & Tell
 
-The InstaShare extension allows you to quickly share screenshots of your renderings with the world.
+The Show & Tell extension allows you to quickly share screenshots of your renderings with the world.
 
 Press <span class="keyseq"><kbd>Alt</kbd><kbd>I</kbd></span> to open it.
 
