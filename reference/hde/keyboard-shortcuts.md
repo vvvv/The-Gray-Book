@@ -38,7 +38,8 @@ Navigate back in Tab history|<span class="keyseq"><kbd>Ctrl</kbd><kbd><</kbd></s
 Navigate forward in Tab history|<span class="keyseq"><kbd>Ctrl</kbd><kbd>></kbd></span>  or <span class="keyseq"><kbd>Alt</kbd><kbd>Right</kbd></span>
 Navigate one level Up in application|<span class="keyseq"><kbd>Ctrl</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
 Navigate one level Up in definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
-Save active patch as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span>
+Copy screenshot of active patch to clipboard and save it as PNG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
+Take screenshot of active patch and save it as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span>
 
 ## Pan & Zoom
 Description|Action
@@ -191,6 +192,7 @@ The following shortcuts are working with either a VL.Stride SceneWindow or Rende
 
 Description|Action
 -|-
+Copy content of render window to clipboard|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
 Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
 Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
@@ -213,4 +215,5 @@ The following shortcuts are working with a VL.Skia Renderer active:
 
 Description|Action
 -|-
+Copy content of render window to clipboard|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
 Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
