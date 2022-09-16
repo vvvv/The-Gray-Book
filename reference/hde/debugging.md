@@ -52,3 +52,16 @@ Use the advanced `Write` and `WriteLine` nodes from the `System.Console` categor
 *Image:A pin showing a warning*
 
 To get rid of pin-warnings after you've acknowledged them, press <span class="keyseq"><kbd>Ctrl</kbd><kbd>E</kbd></span>.
+
+## Attaching Visual Studio
+In case you encounter errors that are not traceable through techniques mentioned above, you can also attach to your patches with Visual Studio.
+
+> [!NOTE]
+> Beware, this is not meant for the casual user!
+
+But if you're quite familiar with C# programming, you can do the following:
+- Start vvvv.exe with the `--debug` commandline argument
+- Run Visual Studio 
+- Attach to vvvv.exe
+- Wait for the exception to occur
+- This will bring up the C# code of your patch and jump to the location where the error occured. Here you can also set break points. This may help you figure out the source of the problem. 
