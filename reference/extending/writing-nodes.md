@@ -43,7 +43,7 @@ namespace MyCustomNodes
 
 This will translate to the following node:
 
-![](2022-09-16-12-40-39.png)
+![](../../images/reference/extending/MyAddition.png)
 <center>Resulting Node in VL</center>
 
 Depending on which version of vvvv you're using you can now use your new nodes like this:
@@ -54,7 +54,7 @@ Build the project and you'll get a managed .dll containing your nodes. From here
 ### vvvv gamma 2022.5.x
 Reference the .csproj file in your .vl document, like so:
 
-![](2022-09-16-12-38-43.png)
+![](../../images/reference/extending/ReferencingProjects.png)
 <center>Referencing a .csproj file in .vl</center>
 
 This takes care of compiling the project and updating nodes in vvvv whenever you make a change to the .csproj or any of its .cs files.

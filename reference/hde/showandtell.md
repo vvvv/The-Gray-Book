@@ -27,7 +27,7 @@ Press the `Add Account` button and specify:
 * The access token
 
 #### Pixelfed access token
-![Pixelfed](../images/pixelfed-logo.svg)
+![Pixelfed](../../images/reference/hde/mastodon-logo.svg)
 
 > [!NOTE]
 > For issues we're still investigating, this does currently not work with the pixelfed.social instance! There are many [other instances](https://fedidb.org/software/pixelfed) to choose from.
@@ -38,7 +38,7 @@ In your Pixelfed account, go to `Settings > Applications > Create New Token`
 Fill out the form, make sure to enable the `Write` scope and press `Create`. This will prompt you with an access token that you copy-paste into the account configuration. 
 
 #### Mastodon access token
-![Mastodon](../images/mastodon-logo.svg)
+![Mastodon](../../images/reference/hde/mastodon-logo.svg)
 
 In your Mastodon account, go to `Preferences > Development > New Application`
 
