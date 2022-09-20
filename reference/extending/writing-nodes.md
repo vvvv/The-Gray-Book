@@ -4,15 +4,20 @@ Writing your own nodes for VL using C# requires no VL specific knowledge or prep
 
 ## Start from a Template
 
-In Visual Studio 2019 create a new project by choosing either of those two templates:
+In [Visual Studio Code](https://code.visualstudio.com/):
+- Install the C# Extension
+- Open a terminal and navigate to the directory you want your C# project to be placed
+- Run `dotnet new classlib -o MyProjectsName` -> to create a .NET6 class library project with the given name
+- Run `code .` to open the project in the editor
 
-* `Visual C#[Class Library (.NET Standard 2.0)`
-* `Visual C#[Class Library (.NET Framework 4.7.2)`
+In [Visual Studio 2022](https://visualstudio.microsoft.com/de/):
 
-As a rule of thumb: Use .NET Standard as long as you can, use .NET Framework if you need. For more confusing information on this, read this [Stackoverflow discussion](https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project).
-
-![](../../images/libraries/vl-libraries-writingNodes-vs2017.PNG)
-<center>Visual Studio Template Chooser</center>
+* Create a new project: `File -> New -> Project`
+* Choose the `Class Library` Template
+* Specify Name and Location
+* As Framework choose:
+  * For vvvv gamma 2021.4.x: `.NET Standard 2.0`
+  * For vvvv gamma 2022.5.x: `.NET 6.0`
 
 This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
@@ -36,10 +41,27 @@ namespace MyCustomNodes
 }
 ```
 
-This is basically it. Now build the project and you'll get a managed .dll containing your nodes. From here you continue with [Using .NET Libraries](using-net-libraries.md) to use those operations as nodes in VL.
+This will translate to the following node:
 
-![](../../images/libraries/vl-libraries-writingNodes-MyAdditionNode.png)
+![](2022-09-16-12-40-39.png)
 <center>Resulting Node in VL</center>
+
+Depending on which version of vvvv you're using you can now use your new nodes like this:
+
+### vvvv gamma 2021.4.x
+Build the project and you'll get a managed .dll containing your nodes. From here you continue with [Using .NET Libraries](using-net-libraries.md) to use those operations as nodes in VL.
+
+### vvvv gamma 2022.5.x
+Reference the .csproj file in your .vl document, like so:
+
+![](2022-09-16-12-38-43.png)
+<center>Referencing a .csproj file in .vl</center>
+
+This takes care of compiling the project and updating nodes in vvvv whenever you make a change to the .csproj or any of its .cs files.
+
+Note that you can now also debug your code:
+- Run Visual Studio and attach to vvvv.exe
+- Set a break-point in your code
 
 ## More Details
 
