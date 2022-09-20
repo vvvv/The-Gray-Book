@@ -27,7 +27,7 @@ Press the `Add Account` button and specify:
 * The access token
 
 #### Pixelfed access token
-![Pixelfed](../../images/reference/hde/mastodon-logo.svg)
+![Pixelfed](../../images/reference/hde/pixelfed-logo.svg)
 
 > [!NOTE]
 > For issues we're still investigating, this does currently not work with the pixelfed.social instance! There are many [other instances](https://fedidb.org/software/pixelfed) to choose from.
