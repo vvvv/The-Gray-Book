@@ -2,7 +2,7 @@
 
 The Show & Tell extension allows you to quickly share screenshots of your renderings with the world.
 
-Press <span class="keyseq"><kbd>Alt</kbd><kbd>I</kbd></span> to open it.
+Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span> to open it.
 
 When open, it intercepts any screenshot you make. Use either:
 - <span class="keyseq"><kbd>Win</kbd><kbd>Shift</kbd><kbd>S</kbd></span>:  The default windows shortcut to take a screenshot
