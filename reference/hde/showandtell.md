@@ -21,13 +21,14 @@ This is the default account that anyone can always post to. If you want your ima
 ### Custom Accounts
 If you have either a [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) account, you can also post to those. 
 
+![Pixelfed & Mastodon](../../images/reference/hde/fediverse.png)
+
 Press the `Add Account` button and specify:
 * A name that identifies the account for you
 * The instance (without http://, e.g.: pixelfed.de)
 * The access token
 
 #### Pixelfed access token
-![Pixelfed](../../images/reference/hde/pixelfed-logo.svg)
 
 > [!NOTE]
 > For issues we're still investigating, this does currently not work with the pixelfed.social instance! There are many [other instances](https://fedidb.org/software/pixelfed) to choose from.
@@ -38,7 +39,6 @@ In your Pixelfed account, go to `Settings > Applications > Create New Token`
 Fill out the form, make sure to enable the `Write` scope and press `Create`. This will prompt you with an access token that you copy-paste into the account configuration. 
 
 #### Mastodon access token
-![Mastodon](../../images/reference/hde/mastodon-logo.svg)
 
 In your Mastodon account, go to `Preferences > Development > New Application`
 
