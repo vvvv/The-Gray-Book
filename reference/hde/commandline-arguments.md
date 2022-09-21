@@ -9,6 +9,7 @@ Open a VL document on startup|`--open` or `-o` + path to file
 Override loading the default settings|`--settings` + path to file
 Do not load editor extension packages|`--noextensions`
 List of package repositories used by VL to lookup packages. Most useful, when [working on libraries](../extending/contributing.md).|`--package-repositories` + a semi-colon separated list of package repository directories
+Prevent pre-compilation of packages in 2022.5|`--disable-package-compiler`
 
 Example:
 
