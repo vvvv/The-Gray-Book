@@ -7,7 +7,6 @@ Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span> to open it.
 When open, it intercepts any screenshot you make. Use either:
 - <span class="keyseq"><kbd>Win</kbd><kbd>Shift</kbd><kbd>S</kbd></span>:  The default windows shortcut to take a screenshot
 - <span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>: Works on Skia and Stride windows
-- <span class="keyseq"><kbd>S</kbd> + Marquee Selection</span>: Works in the patch editor
 
 Screenshots augmented with some text can then be posted to our common [madewithvvvv](https://pixelfed.social/p/madewithvvvv/) account. In addition you can configure ShowAndTell to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
 
@@ -46,4 +45,4 @@ Fill out the form, make sure to enable the `Write` scope and press `Submit`. Thi
 
 ## What the Pixelfed and Mastodon?
 
-Pixelfed and Mastodon are part of the larger [Fediverse](https://en.wikipedia.org/wiki/Fediverse), a federation of decentralized social networks. Instead of the comparable legacy walled-gardens, those work more like Email: Anyone can run their own instance of a Pixelfed or Mastodon server and still communicate with anyone else, because the fediverse shares a common communications protocol: [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub). No ads, no tracking, just the actual functionality!
+Pixelfed and Mastodon are part of the larger [Fediverse](https://en.wikipedia.org/wiki/Fediverse), a federation of decentralized social networks. Instead of comparable legacy walled-gardens, those work more like Email: Anyone can run their own instance of a Pixelfed or Mastodon server and still communicate with anyone else, because the fediverse shares a common communications protocol: [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub). No ads, no tracking, no blockchain, no crypto. Just a simple way to share text and images over the internet. 
