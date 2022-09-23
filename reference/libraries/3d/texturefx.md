@@ -93,7 +93,7 @@ Attributes allow you to configure your TextureFX node. Here is an example of som
 [Category("Filter")]
 [Summary("Description for what the filter does")]
 [Remarks("Any special notes")]
-[Tags("comma separated list of tags")]
+[Tags("Space-separated list of tags")]
 [OutputFormat("R8G8B8A8_UNorm_SRgb")]
 shader MyFX_TextureFX : TextureFX
 {
