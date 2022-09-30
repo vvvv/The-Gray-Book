@@ -36,7 +36,7 @@ Depending on where you come from, you may want to start with one of these introd
 Also, vvvv has a built-in HelpBrowser, press <span class="keyseq"><kbd>F1</kbd></span> to open it. On the ``Learn`` tab 
 you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
 
-Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. There is also a bundle of 30 workshop recordings [avaliable here](https://thenodeinstitute.org/courses/node20-vvvv-workshop-bundle/).
+Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. There is also a bundle of 30 workshop recordings [avaliable here](https://vimeo.com/showcase/node20workshops).
 
 ### The Gray Book
 
