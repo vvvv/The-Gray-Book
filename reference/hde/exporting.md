@@ -2,7 +2,7 @@
 
 vvvv allows you to export a patch into an executable, standalone program. In order to do so, open the Application Exporter via `Quad > Export...` or shortcut <span class="keyseq"><kbd>F10</kbd></span>.
 
-![](../../images/hde/exportdialog.png)
+![](exportdialog.png)
 <center>The Application Exporter</center>
 
 ## Application to export
@@ -13,12 +13,6 @@ Choose where the exported program and files will be created.
 
 After a successful export, the output directory will contain a directory with the name of your application. Inside this directory you find the executable. To run the program on another PC you need to copy the whole content of this directory.
 
-### Source Directory
-Next to the application directory you'll also find a `\src` directory. This is an artefact that vvvv creates during export and can be safely deleted.
-
-> [!NOTE]
-> .NET developers may find this interesting though, as it contains a completely valid c# solution of the exported project that can be opened, viewed and modified with Visual Studio.
-
 ## Icon file
 Choose an .ico file to be associated with the generated executable.
 
@@ -27,6 +21,29 @@ Choose how assets will be referenced in the exported application:
 * **Relative to document**: This option is most useful during development, to quickly test exports without having to worry about moving assets around. Assets will be referenced from where they are. 
 * **Relative to output**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
   
+## Output type
+> [!NOTE]
+> This is only available for 2022.5 preview builds!
+
+Choose between Windows (GUI) or Console application. A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
+
+Use a __KeepAppAlive__ node to prevent this default behavior.
+
+## Target OS
+> [!NOTE]
+> This is only available for 2022.5 preview builds!
+
+Choose the OS for which to create output for. If you choose *Any*, export will create executables for all available targets, otherwise only for the one selected OS.
+
+## Platform target
+> [!NOTE]
+> This is only available for 2022.5 preview builds!
+
+Choose between CPU architectures x64, x86 or any.
+
+> [!NOTE]
+> If a 32bit application that references VL.Stride fails to run on a PC, make sure it has [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) for x86 installed.
+
 ## Options
 ### Console App
 Choose between Windows or Console app. A Console app will open a windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
@@ -47,10 +64,23 @@ If active, removes artefacts of previous exports (ie. deletes the \src folder) b
 * Press __Run__ to test/run your program
 * __Explore Output__: opens a file explorer at the specified output directory
 
+### Source Directory
+Next to the application directory you'll also find a `\src` directory. This is an artefact that vvvv creates during export and can be safely deleted.
+
+> [!NOTE]
+> .NET developers may find this interesting though, as it contains a completely valid c# solution of the exported project that can be opened, viewed and modified with Visual Studio.
+
 ## Dependencies
 If your application is referencing VL.Stride, make sure the target PC also has the following dependencies installed:
 * [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) 
 * [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
+
+## Advanced build configuration
+> [!NOTE]
+> This is only true for 2022.5 preview builds!
+Using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) you can customize the build process in many details.
+
+Next to your main .vl file, place a .props file with the same name. This is actually a .xml file which you can configure to your needs. 
 
 ## Useful nodes
 - Args [System] to access commandline arguments the app was called with
