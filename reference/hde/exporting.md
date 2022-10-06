@@ -78,9 +78,8 @@ If your application is referencing VL.Stride, make sure the target PC also has t
 ## Advanced build configuration
 > [!NOTE]
 > This is only true for 2022.5 preview builds!
-Using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) you can customize the build process in many details.
 
-Next to your main .vl file, place a .props file with the same name. This is actually a .xml file which you can configure to your needs. 
+The build process can be customized in many details. Next to your main .vl file, place a .props file with the same name. This is actually an .xml file which you can configure to your needs using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) syntax.
 
 ## Useful nodes
 - Args [System] to access commandline arguments the app was called with
