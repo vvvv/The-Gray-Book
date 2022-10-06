@@ -2,7 +2,7 @@
 
 vvvv allows you to export a patch into an executable, standalone program. In order to do so, open the Application Exporter via `Quad > Export...` or shortcut <span class="keyseq"><kbd>F10</kbd></span>.
 
-![](exportdialog.png)
+![](../../images/hde/exportdialog.png)
 <center>The Application Exporter</center>
 
 ## Application to export
