@@ -9,6 +9,7 @@ Open a VL document on startup|`--open` or `-o` + path to file
 Override loading the default settings|`--settings` + path to file
 Do not load editor extension packages|`--noextensions`
 List of package repositories used by VL to lookup packages. Most useful, when [working on libraries](../extending/contributing.md).|`--package-repositories` + a semi-colon separated list of package repository directories
+**As of 2021.4.11:** Override primary package folder | `--nuget-path` + path to custom primary package folder
 **As of 2022.5:** Disables the package compiler. All packages will be loaded from source.|`--disable-package-compiler`
 **As of 2022.5:** Opt-in to also compile source packages (which by default would not be compiled). Useful for developers who want to check how a package referenced as source would behave when compiled.|`--compile-source-packages`
 
