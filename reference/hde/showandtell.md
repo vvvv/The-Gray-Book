@@ -8,7 +8,7 @@ When open, it intercepts any screenshot you make. Use either:
 - <span class="keyseq"><kbd>Win</kbd><kbd>Shift</kbd><kbd>S</kbd></span>:  The default windows shortcut to take a screenshot
 - <span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>: Works on Skia and Stride windows
 
-Screenshots augmented with some text can then be posted to our common [madewithvvvv](https://pixelfed.social/p/madewithvvvv/) account. In addition you can configure ShowAndTell to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
+Screenshots augmented with some text can then be posted to our common [madewithvvvv](https://pixelfed.social/madewithvvvv/) account. In addition you can configure ShowAndTell to post to one of your own [Pixelfed](https://pixelfed.org/) or [Mastdon](https://joinmastodon.org/) accounts and thus build a beautiful portfolio of your work. 
 
 ## Configuring Accounts
 
