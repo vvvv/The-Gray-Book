@@ -10,6 +10,7 @@ Override loading the default settings|`--settings` + path to file
 Do not load editor extension packages|`--noextensions`
 List of package repositories used by VL to lookup packages. Most useful, when [working on libraries](../extending/contributing.md).|`--package-repositories` + a semi-colon separated list of package repository directories
 Replace the default global location for NuGets|`--nuget-path` + path to directory
+Do not start the runtime on startup|`--noautostart`
 
 Example:
 
