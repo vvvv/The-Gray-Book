@@ -33,13 +33,12 @@ Add .NET Framework Assembly|<span class="keyseq"><kbd>Control</kbd><kbd>Shift</k
 Description|Action
 -|-
 General _middleclick_ alternative|<span class="keyseq"><kbd>ALT</kbd></span> + leftclick
-Remove Errors (from current level downwards)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>E</kbd></span>
 Navigate back in Tab history|<span class="keyseq"><kbd>Ctrl</kbd><kbd><</kbd></span> or <span class="keyseq"><kbd>Alt</kbd><kbd>Left</kbd></span>
 Navigate forward in Tab history|<span class="keyseq"><kbd>Ctrl</kbd><kbd>></kbd></span>  or <span class="keyseq"><kbd>Alt</kbd><kbd>Right</kbd></span>
 Navigate one level Up in application|<span class="keyseq"><kbd>Ctrl</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
 Navigate one level Up in definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
 Copy screenshot of active patch to clipboard and save it as PNG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
-Take screenshot of active patch and save it as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span>
+Take screenshot of active patch and save it as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>2</kbd></span>
 
 ## Pan & Zoom
 Description|Action
