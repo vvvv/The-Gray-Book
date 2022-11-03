@@ -43,6 +43,8 @@ The Log window can be opened via `Quad > Windows > Log` or by pressing <span cla
 
 Use the advanced `Write` and `WriteLine` nodes from the `System.Console` category to write debug infos to the Log.
 
+Pressing the <kbd>Backspace</kbd> key with the Console focused clears it.
+
 ## Warnings and Errors
 
 *Image:A node showing an error*
