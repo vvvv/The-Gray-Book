@@ -117,11 +117,11 @@ We have two modes to let the user select the node:
 In our case we see three entries corresponding to the three available nodes:
 ![grafik](https://user-images.githubusercontent.com/575557/200342798-ecf5e1c0-ba9b-4e97-adbc-3bb549f74a8a.png)
 
-#### Choose a single pins
+#### Choose single pins
 
 This is how the worflow for choosing single pins works:
-* If there is a node that is clearly simper than all others in terms of its signature, this node will get created.
-* Double-clicking on the node will show you pins that you can opt-into
+* If there is a node that is clearly simpler than all others in terms of its signature, this node will be placed.
+* Double-clicking on the node will show you pins that you can opt into
 * Selecting such a pin will again close the node browser if there is one node that is clearly simpler than any other with that pin configuration.
 * Double-clicking the node will allow you to see if there are more pins that you could add, and which pins you already committed to. You can cancel pin choices individually in order to find the overload you need.
 This workflow can be helpful in cases where many overloads with many pins show up. You don't need to keep track of all the different variations. Just tell the node browser which pins you want to work with and you'll be presented pins that are still an option.
