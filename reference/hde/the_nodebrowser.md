@@ -110,12 +110,14 @@ In these cases the user needs to select the node by choosing a signature:
 ![grafik](https://user-images.githubusercontent.com/575557/200344675-54f48159-7444-41e6-b6b4-3a864916608d.png)
 
 We have two modes to let the user select the node:
-* select the node signature. This is like choosing several pins at once.
-* select single pins in a multiple choice fashion
+* choose a node signature. This is like choosing several pins at once.
+* choose single pins in a multiple choice fashion
 
-This is how it looks when choosing the node:
+#### Choose a node signature
 In our case we see three entries corresponding to the three available nodes:
 ![grafik](https://user-images.githubusercontent.com/575557/200342798-ecf5e1c0-ba9b-4e97-adbc-3bb549f74a8a.png)
+
+#### Choose a single pins
 
 This is how the worflow for choosing single pins works:
 * If there is a node that is clearly simper than all others in terms of its signature, this node will get created.
