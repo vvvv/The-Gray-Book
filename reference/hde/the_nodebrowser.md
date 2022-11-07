@@ -124,4 +124,6 @@ This is how the worflow for choosing single pins works:
 * Double-clicking the node will allow you to see if there are more pins that you could add, and which pins you already committed to. You can cancel pin choices individually in order to find the overload you need.
 This workflow can be helpful in cases where many overloads with many pins show up. You don't need to keep track of all the different variations. Just tell the node browser which pins you want to work with and you'll be presented pins that are still an option.
 
-Activate this workflow by choosing ![grafik](https://user-images.githubusercontent.com/575557/200347340-324157d4-34b3-4b38-8d87-75d701203344.png)
+Activate this workflow by choosing
+![grafik](https://user-images.githubusercontent.com/575557/200347537-bee02efb-80e3-4ce2-a770-27175a3c5fc6.png)
+
