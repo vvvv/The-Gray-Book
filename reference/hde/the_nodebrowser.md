@@ -100,3 +100,28 @@ Nugets that are available for VL but not referenced by the active document show 
 <img src="../../images/hde/vl-Nodebrowser-Nugets.png" height="460">
 
 If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies.
+
+## Nodes that ony differ by Signature
+We typically distinguish nodes by Name, Version or Category.
+But in some cases there are several nodes that share all of the above. 
+When in the process of designing the surface of a library we typically make use the Version to distinguish nodes that only differ by a detail, but in other cases we import nodes from a dll without naming each of the overloads differently.
+
+In these cases the user needs to select the node by choosing a signature:
+![grafik](https://user-images.githubusercontent.com/575557/200344675-54f48159-7444-41e6-b6b4-3a864916608d.png)
+
+We have two modes to let the user select the node:
+* select the node signature. This is like choosing several pins at once.
+* select single pins in a multiple choice fashion
+
+This is how it looks when choosing the node:
+In our case we see three entries corresponding to the three available nodes:
+![grafik](https://user-images.githubusercontent.com/575557/200342798-ecf5e1c0-ba9b-4e97-adbc-3bb549f74a8a.png)
+
+This is how the worflow for choosing single pins works:
+* If there is a node that is clearly simper than all others in terms of its signature, this node will get created.
+* Double-clicking on the node will show you pins that you can opt-into
+* Selecting such a pin will again close the node browser if there is one node that is clearly simpler than any other with that pin configuration.
+* Double-clicking the node will allow you to see if there are more pins that you could add, and which pins you already committed to. You can cancel pin choices individually in order to find the overload you need.
+This workflow can be helpful in cases where many overloads with many pins show up. You don't need to keep track of all the different variations. Just tell the node browser which pins you want to work with and you'll be presented pins that are still an option.
+
+Activate this workflow by choosing ![grafik](https://user-images.githubusercontent.com/575557/200347340-324157d4-34b3-4b38-8d87-75d701203344.png)
