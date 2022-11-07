@@ -104,7 +104,7 @@ If you want to get rid of a nuget again you have to uncheck it in the documents 
 ## Nodes that ony differ by Signature
 We typically distinguish nodes by Name, Version or Category.
 But in some cases there are several nodes that share all of the above. 
-When in the process of designing the surface of a library we typically make use the Version to distinguish nodes that only differ by a detail, but in other cases we import nodes from a dll without naming each of the overloads differently.
+When in the process of designing the surface of a library we typically give nodes a Version to distinguish nodes that only differ by a detail, but in other cases we import nodes from a dll without naming each of the overloads differently.
 
 In these cases the user needs to select the node by choosing a signature:
 ![grafik](https://user-images.githubusercontent.com/575557/200344675-54f48159-7444-41e6-b6b4-3a864916608d.png)
