@@ -119,7 +119,7 @@ In our case we see three entries corresponding to the three available nodes:
 
 #### Choose single pins
 
-This is how the worflow for choosing single pins works:
+This is how the workflow for choosing single pins works:
 * If there is a node that is clearly simpler than all others in terms of its signature, this node will be placed.
 * Double-clicking on the node will show you pins that you can opt into
 * Selecting such a pin will again close the node browser if there is one node that is clearly simpler than any other with that pin configuration.
