@@ -101,7 +101,7 @@ Nugets that are available for VL but not referenced by the active document show 
 
 If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies.
 
-## Nodes that ony differ by Signature
+## Nodes that only differ by Signature
 We typically distinguish nodes by Name, Version or Category.
 But in some cases there are several nodes that share all of the above. 
 When in the process of designing the surface of a library we typically give nodes a Version to distinguish nodes that only differ by a detail, but in other cases we import nodes from a dll without naming each of the overloads differently.
