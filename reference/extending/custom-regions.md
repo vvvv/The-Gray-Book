@@ -76,7 +76,8 @@ Here are some regions that showcase the CustomRegion API:
 
 In order to patch a new region, all you need to do is to 
 * define a new `Process` 
-* have an input pin typed `ICustomRegion` on `Update`.
+* have an input pin typed `ICustomRegion` on `Update`
+* use the configuration menu on the input pin to configure certain aspects of the region.
 
 The workflow up to now is very similar to how you had an input pin of type delegate earlier on, just this time it is of type `ICustomRegion`.
 
@@ -122,12 +123,21 @@ Anyway. You want to create a region that does more? Just patch along!
 
 Now your imagination is needed...
 
+### Configuration options
+* **Node Or Region** - whether the region can also be created as a node. Useful when composing regions.
+* **Supported Control Points** - choose what kind of control points your region supports:
+** `None` - no control points are allowed
+** `Border` - rectangle shape, the data shouldn't be modified by the region when crossing the border
+** `Accumulator` - diamond shape, the control points come as a pair, the output should be same as the input if the region doesn't execute
+** `Splicer` - triangle shape, when crossing the border the input data should get split apart and the ouput data should get put back together. The splitting and joining needs to be handled by the region. However the system will help out with the typing of the inner and outer parts of the control points (if a type constraint is specified).
+* **Control Point Type Constraint** - define the type constraint the system will put on each control point. For example if you specify `Spread`, then the user will only be able to connect spreads to the region. For splicers the system will try to align the inner type argument with the inner part of the control point.
+
 ### User Expectations
 When you design your region you might focus on BCPs with a certain data type. Note however: the user might still want some standard behavior for when the data type is different. Consider to implement a fallback mechanism for such a BCP that just channels the untouched data from the outside to inside or the other way around, very much like seen in the `Do [Control]` region.
 
 ### Current Limitiations
 Note that there are still some constraints for your ideas :(
-* currently the outside data type and the inside data type of one particular BCP is always the same. Splicers on Loop regions actually have different types on the inside and the outside. This is something that might come in the future.
+* It's not possible to define multiple control point kinds (like `Accumulator` and `Splicer`)
 * Pins inside the region patch are not supported. So you currently always need to BCPs. A workaround for this limitation is to check for a BCP with a certain name or type and treat this differently. 
 
 Please let us know of your needs: https://github.com/vvvv/VL-Language/issues/51
