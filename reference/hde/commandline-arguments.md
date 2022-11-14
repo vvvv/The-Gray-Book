@@ -5,6 +5,7 @@ The following is a listing of commandline arguments that can be used when starti
 Description|Argument
 -|-
 Allow to run multiple instances of vvvv in parallel|`--allowmultiple` or`-m`
+Do not start the patch applications when vvvv starts|`--stoppedonstartup` 
 Open a VL document on startup|`--open` or `-o` + path to file
 Override loading the default settings|`--settings` + path to file
 Do not load editor extension packages|`--noextensions`
