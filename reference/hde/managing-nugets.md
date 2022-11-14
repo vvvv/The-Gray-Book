@@ -7,7 +7,11 @@
 Opens a webbrowser and lets you search for NuGets in the online repository. Note that for now, after you've found what you're looking for, you'll still have to install a nuget manually via the commandline
 
 ## Show installed
-Opens a file explorer at the path all your nugets are installed locally
+Opens a file explorer at the path all your nugets are installed locally. By default this is in your users directory:
+ 
+    AppData\Local\vvvv\gamma\nugets
+
+but can be changed using the commandline argument "nuget-path", see [Commandline Arguments](commandline-arguments.md).
 
 ## Commandline
 Opens a commandline from which you can run [nuget commands](https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference) like e.g. "install":

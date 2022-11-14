@@ -6,6 +6,13 @@ vvvv's 2d rendering engine VL.Skia is based on [SkiaSharp](https://github.com/mo
 
 It comes with an extensive collection of help patches documenting the different aspects of the library. Browse them via the [HelpBrowser](../hde/findinghelp.md#help-browser).
 
+### Skia Features
+- Drawing 2d primitives and paths
+- Drawing images and SVGs
+- Drawing text
+- Rendering of [Lottie](https://lottiefiles.com/what-is-lottie) animations
+- Export as image, SVG or PDF
+
 ### Additional Libraries
 * NuGet: [VL.Elementa](https://www.nuget.org/packages/VL.Elementa) is an advanced widget and layouting library for VL.Skia
 * NuGet: [VL.PolyTools](https://www.nuget.org/packages/VL.PolyTools) extends VL.Skia Paths with high level polygon and polypath objects

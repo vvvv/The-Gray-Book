@@ -7,6 +7,8 @@ NuGet: [VL.BadMapper](https://www.nuget.org/packages/VL.BadMapper)
 
 This packet is a work-in-progress collection of tools for convenient manual blending (softedge) and warping (homography, bezier) of content.
 
+Also includes a simple 6-point camera based ProjectorCalibration tool. 
+
 ## VL.Domemaster
 Download: [WIP](https://discourse.vvvv.org/t/vl-domemaster/20660)  
 Rendering Scenes in Domemaster format for use in fulldome projections.
