@@ -109,6 +109,10 @@ RogueSharp has functions useful for reasoning about 2D grids where some cells ar
 Also includes a dice rolling function.  
 NuGet: [VL.RogueSharp](https://vvvv.org/contribution/vl.roguesharp)
 
+## Kafka
+[Kafka](https://kafka.apache.org/) for VL  
+NuGet: [VL.Kafka](https://www.nuget.org/packages/VL.Kafka)
+
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)

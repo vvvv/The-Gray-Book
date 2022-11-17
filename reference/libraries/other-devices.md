@@ -2,7 +2,8 @@
 
 ## SpaceMouse
 https://3dconnexion.com/de/
-NuGet: [VL.Devices.SpaceMouse](https://www.nuget.org/packages/VL.Devices.SpaceMouse)
+NuGet: [VL.Devices.SpaceMouse](https://www.nuget.org/packages/VL.Devices.SpaceMouse)  
+NuGet 2: [VL.Devices.SpaceMouseHID](https://www.nuget.org/packages/VL.Devices.SpaceMouseHID)
 
 ## Eye Tracker
 https://en.wikipedia.org/wiki/The_Eye_Tribe
