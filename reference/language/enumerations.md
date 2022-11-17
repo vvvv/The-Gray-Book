@@ -12,6 +12,8 @@ Entries of a static enum are fixed and cannot change at runtime. An example woul
 
 For working with static enums, use nodes from the `Primitive.Enum` category. 
 
+![](../../images/language/static-enums.png)
+
 ## Dynamic Enums
 A dynamic enum can have entries added, removed or changed during runtime. They are used for example for device enumerations. 
 
