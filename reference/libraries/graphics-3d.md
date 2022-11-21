@@ -3,7 +3,7 @@
 vvvv's 3d rendering engine VL.Stride is based on the [Stride 3d Engine](http://stride3d.net) and shipping with the installation. It allows for 2 distinct workflows:
 
 * A **high-level**, easy to use SceneGraph approach, where you build 3d scenes by simply adding models, and lights to a scene. Models can be given materials to define their look
-* A **low-level** approach, work with the graphics API directly
+* A **low-level** approach, where you work with the graphics API directly
 
 Both workflows can be easily combined, see [Rendering](3d/rendering.md) for more details.
 
@@ -17,14 +17,15 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 
 * [Rendering](3d/rendering.md)
 * [Models and Meshes](3d/models.md)
+* [Geometry](3d/geometry.md)
+* [Text rendering](../best-practice/text-rendering.md)
 * [Transparency](3d/transparency.md)
 * [Shaders](3d/shaders.md)
 * [All about TextureFX shaders](3d/texturefx.md)
 * [Editing shaders](3d/editing-shaders.md)
-* [Geometry](3d/geometry.md)
 * [Projection Mapping](projectionmapping.md)
-* [Text rendering](../best-practice/text-rendering.md)
-
+* [Graphics cards](3d/graphics-cards.md)
+  
 ### Additional libraries:
 
 * NuGet: [VL.Fuse](https://www.nuget.org/packages/VL.Fuse/) is a collection of GPU tools and libraries to use with VL.Stride. Think: Distance Fields & Raymarching, Particles, Procedural Geometry, Textures and Materials, GPGPU. For details, see [The FUSE Lab](https://www.thefuselab.io/)
