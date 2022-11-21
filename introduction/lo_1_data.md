@@ -5,7 +5,7 @@ Let's look at some more data:
 |Type|Data-Pad|
 |---|---|
 |Color (RGBA)|<img src="../images/introduction/datatype-color.png" style="height: 1.5em"/>|
-|Number (Integer32)|<img src="../images/introduction/datatype-integer32.png" style="height: 1.5em"/>|
+|Number (Integer32)|<img src="../images/introduction/datatype-Integer32.png" style="height: 1.5em"/>|
 |Number (Float32)|<img src="../images/introduction/datatype-float32.png" style="height: 1.5em"/>|
 |Boolean (true or false)|<img src="../images/introduction/datatype-boolean.png" style="height: 1.5em"/>|
 |String (aka a text)|<img src="../images/introduction/datatype-string.png" style="height: 1.5em"/>|
