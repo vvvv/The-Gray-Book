@@ -11,4 +11,5 @@ Here is a list of best-practice articles on various topics:
 * [Recording output as video](video-recording.md)
 
 ## Development
+* [Deploying to a Raspberry Pi](raspberry-pi.md)
 * [Version control using Git](version-control.md)

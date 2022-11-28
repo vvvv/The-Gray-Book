@@ -106,9 +106,10 @@
 ## [Creating Editor Extensions](extending/editor-extensions.md)
 
 # [Best Practice](best-practice/overview.md)
-## [Capturing video input](best-practice/video-capture.md)
 ## [Playing back video](best-practice/video-playback.md)
+## [Capturing video input](best-practice/video-capture.md)
+## [Recording output as video](best-practice/video-recording.md)
 ## [Video synchronization](best-practice/video-synchronization.md)
 ## [Text Rendering](best-practice/text-rendering.md)
-## [Recording output as video](best-practice/video-recording.md)
+## [Deploying to a Raspberry Pi](best-practice/raspberry-pi.md)
 ## [Version Control using Git](best-practice/version-control.md)
