@@ -10,6 +10,7 @@ As of the [upcoming version 2022.5](../../changelog/2022.5.md) you can now [expo
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio): for GPIO, I2C, SPI, PWM, Serial port
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings): for higher-level specific device support
 - [VL.IO.RCP](https://www.nuget.org/packages/VL.IO.RCP) for remote controlling parameters of the application from a web browser
+- Any of the libraries in the [IO](../libraries/io.md) category
 - [SFML.Net](https://www.nuget.org/packages/SFML.Net): for audio playback and recording (NOTE: version 2.5.0 of the NuGet has audio recording broken. Compile yourself [from sources](https://github.com/SFML/SFML.Net) to get this working)
 
 ## Deployment

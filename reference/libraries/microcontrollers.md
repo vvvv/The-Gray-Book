@@ -2,8 +2,7 @@
 
 ## Arduino/Firmata
 
-A set of nodes to communicate with Arduinos (or other microcontrollers) running the [Firmata Protocol](https://github.com/firmata/protocol).
-NuGet: [VL.IO.Firmata]((https://www.nuget.org/packages/VL.IO.Firmata))
+Nodes for communicating with Arduinos (or other microcontrollers) running the [Firmata Protocol](https://github.com/firmata/protocol) are shipping with vvvv. Reference the VL.IO.Firmata package via the NodeBrowser.
 
 ## nanoFramework
 
