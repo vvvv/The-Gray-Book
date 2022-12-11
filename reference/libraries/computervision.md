@@ -1,4 +1,4 @@
-# Computer Vision
+# Computer Vision (CV)
 
 ## VL.OpencCV
 

@@ -1,4 +1,4 @@
-# Augmented Reality
+# Augmented Reality (AR)
 
 ## Aruco Markers
 

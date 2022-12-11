@@ -25,8 +25,8 @@ See also [Depth Cameras](depthcameras.md).
 
 ## Spout
 
-Shipping with vvvv via VL.Stride.
+[Spout](https://spout.zeal.co/) allows you to send realtime video between Windows applications with near-zero latency or overhead. Shipping with vvvv via VL.Stride.
 
-## NDI
-
+## NDI®
+Network Device Interface ([NDI](https://ndi.tv/about-ndi/)) is a high performance standard that allows anyone to use real time, ultra low latency video on existing IP video networks.  
 NuGet: [VL.IO.NDI](https://www.nuget.org/packages/VL.IO.NDI)
