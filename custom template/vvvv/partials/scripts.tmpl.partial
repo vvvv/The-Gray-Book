@@ -3,6 +3,7 @@
 <script type="text/javascript" src="{{_rel}}styles/docfx.vendor.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/main.js"></script>
+<script type="text/javascript" src="{{_rel}}styles/gdpr-video.js"></script>
 <script async defer data-domain="thegraybook.visualprogramming.net" src="https://plausible.io/js/plausible.js"></script>
 
 
