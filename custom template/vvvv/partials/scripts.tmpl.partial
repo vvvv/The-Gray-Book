@@ -4,6 +4,8 @@
 <script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/main.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/gdpr-video.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript"> docsearch({ appId: 'ZHW2WU2R4S', apiKey: 'e51f751bd604785e217464c70a19aa39', indexName: 'thegraybook-vvvv', container: '#docsearch', debug: 'true'});</script>
 <script async defer data-domain="thegraybook.visualprogramming.net" src="https://plausible.io/js/plausible.js"></script>
 
 

@@ -1,0 +1,32 @@
+:root {
+--docsearch-primary-color: #505050;
+--docsearch-logo-color: #505050;
+--docsearch-container-background: rgba(33, 33, 33, 0.8);
+}
+
+.ds-search
+{
+    float: right;
+    margin-top: 0.7rem;
+}
+
+.DocSearch-SearchBar
+{
+    position: relative;
+}
+
+.DocSearch-Modal
+{
+    margin: 30px auto auto;
+    border-radius: 3px;
+}
+
+.DocSearch-Button
+{
+    border-radius: 2px;
+}
+
+.DocSearch-Button:hover
+{
+    box-shadow: inherit;
+}

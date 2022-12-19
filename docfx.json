@@ -60,7 +60,7 @@
     "globalMetadata": {
       "_appTitle": "vvvv gamma documentation",
       "_appFooter": "",
-      "_enableSearch": true,
+      "_enableSearch": false,
       "_enableNewTab": true,
       "_appLogoPath": "/images/logo.svg",
       "_appFaviconPath": "/images/favicon.ico",
@@ -77,7 +77,7 @@
         "default",
         "custom template/vvvv"
     ],
-    "postProcessors": [ "ExtractSearchIndex" ],
+    "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
