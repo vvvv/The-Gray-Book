@@ -7,7 +7,7 @@
 .ds-search
 {
     float: right;
-    margin-top: 0.7rem;
+    margin-top: 1rem;
 }
 
 .DocSearch-SearchBar
@@ -24,11 +24,16 @@
 .DocSearch-Button
 {
     border-radius: 2px;
+    height: 30px;
 }
 
 .DocSearch-Button:hover
 {
     box-shadow: inherit;
+}
+
+.DocSearch-Button-Placeholder {
+    padding: 0 30px 0 6px;
 }
 
 .DocSearch-Logo svg {
