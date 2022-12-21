@@ -1,4 +1,6 @@
-# Regions
+# Custom Regions
+
+## Regions
 
 Regions can be descibed as *node-like building blocks that have a hole inside*: 
 They do something specific - this is the part where they are similar to nodes.
