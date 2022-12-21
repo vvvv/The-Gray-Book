@@ -30,3 +30,11 @@
 {
     box-shadow: inherit;
 }
+
+.DocSearch-Logo svg {
+    color: var(--docsearch-logo-color);
+}
+
+.DocSearch-Logo .cls-1, .DocSearch-Logo .cls-2 {
+    color: var(--docsearch-logo-color);
+}
