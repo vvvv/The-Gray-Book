@@ -72,6 +72,6 @@ You can recognize Pads that are annotated manually as they have a dot in their c
 ## Pads vs. IOBoxes
 A Pad and an IOBox are essentially the same thing: While the IOBox has a value editor and a comment (on its right side), a Pad has a name (on its left side). 
 
-You can convert between the two via Rightclick -> Convert...
+You can convert between the two via Rightclick -> Replace...
 
 You can also enable the value editor for any Pad or hide it for any IOBox.
