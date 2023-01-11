@@ -159,8 +159,14 @@ Nodes like the "Cons" or the "+" can have their input count set on demand by the
 
 Any operation that has exactly two inputs and one output whose type is the same as the first input gets this functionality automatically.
 
+To manually create a Pin Group use the right click menu on an input and enable the Pin Group option. Note the input needs to have a type set for a collection (like Spread). However you only need to set the collection type, (So just _Spread_, not _Spread\<Foobar\>_) You don't need to specify the complete type if it should be generic.
+
+<img width="329" alt="PinGroup" src="https://user-images.githubusercontent.com/4467208/208264172-956016fa-868f-4d47-a0cb-8c0783b1c732.png"> 
+ 
 The other case, where you want to have a node to create pins on demand (think Timeliner, Automata) is not yet supported!
 
+ 
+ 
 ### Adaptive Nodes
 Adaptive nodes allow you to define the signature (ie. names and order of input and output pins) of a node and then provide concrete implementations for different datatypes.
 
