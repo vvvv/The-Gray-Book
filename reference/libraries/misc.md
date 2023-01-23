@@ -1,8 +1,7 @@
 # Misc Libraries
 
 ## FuzzySearch
-Wrapper for the text similarity metric library SimMetricsCore and several nodes covering Fuzzy Search tasks.  
-NuGet: [VL.FuzzySearch](https://www.nuget.org/packages/VL.FuzzySearch)
+Wrapper for the text similarity metric library SimMetricsCore and several nodes covering Fuzzy Search tasks. Included with vvvv: VL.FuzzySearch
 
 ## ScreenRecorder
 Records fullscreen or a given area as mp4 movie. Including sound.  
