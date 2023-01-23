@@ -115,3 +115,4 @@ NuGet: [VL.Kafka](https://www.nuget.org/packages/VL.Kafka)
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)
+* PDF document generation: [QuestPDF](https://www.questpdf.com/)

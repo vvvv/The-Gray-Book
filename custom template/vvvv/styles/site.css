@@ -1,3 +1,8 @@
+header
+{
+    z-index: 100;
+}
+
 kbd
 {
     display:inline-block;
@@ -86,4 +91,10 @@ kbd
 .article
 {
     margin-top: 120px;
+}
+
+#autocollapse .navbar-header
+{
+    margin-right: inherit;
+    float: left;
 }

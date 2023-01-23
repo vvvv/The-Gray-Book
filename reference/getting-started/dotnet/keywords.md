@@ -1,9 +1,9 @@
+# C# Keywords
+... and how to express them in VL.
+
 Legend
 * **not-supported** This keyword does not have an equivalent in vl. If you find it necessary to use its functionality, you can still write C# code that can be used in vl, see [Writing Nodes in C#](../../extending/writing-nodes.md).
 * **no-inheritance** VL does not support class inheritance and therefore also not the concept that comes with this keyword.
-
-## C# Keywords
-... and how to express them in VL.
 
 ### abstract [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)
 ```csharp

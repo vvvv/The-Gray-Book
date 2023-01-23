@@ -68,7 +68,7 @@ Note that you can now also debug your code:
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
 
-For more general considerations also see: [Library Design Guidelines](library_design_guidelines.md)
+For more general considerations also see: [Design Guidelines](design_guidelines.md)
 
 ### Vectors and Matrices
 
