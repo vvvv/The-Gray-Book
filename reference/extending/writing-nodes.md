@@ -63,7 +63,7 @@ Note that you can now also debug your code:
 - Run Visual Studio and attach to vvvv.exe
 - Set a break-point in your code
 
-## More Details
+## Examples
 
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib

@@ -11,7 +11,7 @@ Any .vl document that has VL.Stride set as a dependency will pick up shader file
 ### Special Suffixes
 If a shader file ends with one of the pre-defined suffixes, the shader will be converted into a VL node.
 #### _ShaderFX
-A node that just represents "a piece of code" that can be used to compose larger shaders. This is the most felxible type of node, it can work together all other shader node types.
+A node that just represents "a piece of code" that can be used to compose larger shaders. This is the most flexible type of node, it can work together with all other shader node types.
 #### _DrawFX
 A node that can be used to draw geometry.
 #### _ComputeFX
