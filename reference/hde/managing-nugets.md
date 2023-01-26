@@ -19,7 +19,7 @@ Opens a commandline from which you can run [nuget commands](https://docs.microso
 ### Installing the latest version of a NuGet
 To install the latest version of a NuGet simply run `nuget install`, like e.g:
 
-    nuget install vl.opencv
+`nuget install vl.opencv`
 
 After installing a NuGet via the commandline it is not yet automatically referenced by the current document! It is now merely available among the NuGets via the Dependencies menu. But if an installed NuGet contains any help files, those will already show up in the [HelpBrowser](findinghelp.md#help-browser).
 
@@ -29,12 +29,12 @@ After installing a NuGet via the commandline it is not yet automatically referen
 ### Installing a pre-release version
 Sometimes you may want to install a "pre-release" version of a package. To install those, add the argument `-pre` when running the install command, like e.g:
 
-    nuget install vl.audio -pre
+`nuget install vl.audio -pre`
 
 ### Installing a specific version
 Sometimes you may want to install a specific version rather than just the latest. In this case, use the `-version` argument when running the install command, like e.g:
 
-    nuget install vl.opencv -version 2.1.0
+`nuget install vl.opencv -version 2.1.0`
 
 > [!NOTE]
 > VL will always load the newest version of a NuGet it finds installed. So in case you want to run a specific older version of a package, make sure you don't still have newer versions of it and its dependencies around. 
