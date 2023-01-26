@@ -23,6 +23,7 @@
 ## [Debugging](hde/debugging.md)
 ## [Extensions](hde/extensions.md)
 ## [Managing NuGets](hde/managing-nugets.md)
+## [Show & Tell](hde/showandtell.md)
 ## [Exporting Applications](hde/exporting.md)
 ## [Documentation Window](hde/documentation.md)
 ## [Solution Explorer](hde/solution-explorer.md)
