@@ -33,7 +33,7 @@ The document patch can set or omit a base category.
 <center>Document base category set to "Foo"</center>
 
 ## Datatype Patches
-There are different types of datatype patches that can be switched between in the patch explorer:
+There are different types of datatype patches that can be switched between in the [Patch Explorer](../hde/patch-explorer.md):
 
 * Process
 * Record
@@ -59,7 +59,7 @@ In either case, a corresponding type-definition is automatically placed in the d
 ### Process
 The most common type of datatype patch is the "Process". It holds the definition for a [Process Node](nodes.md#process-nodes), ie. its life-time is bound to the existence of a node.
 
-A processes' member operations can either be directly part of the process or not. The patch explorer can be used to decide about this for every operation. Also the order of execution of multiple operations in a process can be configured there by dragging the operations up or down.
+A processes' member operations can either be directly part of the process or not. The [Patch Explorer](../hde/patch-explorer.md) can be used to decide about this for every operation. Also the order of execution of multiple operations in a process can be configured there by dragging the operations up or down.
 
 The Application patch of a document is a special Process patch:
 * It has a Create and an Update operation but doesn't allow you to add additional operations
@@ -72,21 +72,21 @@ The typical life-time of a record goes like this:
 - An instance is created using a call to its `Create` operation
 - The instance is stored in a collection 
 - Operations like `Update` (or others that were defined) are called on it repeatedly or only from time to time and return a new instance (replacing the previous one) that is stored in the collection again
-- For this, activate the Process toggle in the Patch Explorer
+- For this, activate the Process toggle in the [Patch Explorer](../hde/patch-explorer.md)
 - The instance is removed from the collection in order to kill it. In case the record holds unmanaged resources it is also necessary to call its `Dispose` operation before removing it from the collection.
 
 Every node that modifies a record type, essentially makes a copy of it (with changes applied) and returns a new instance. Thus, modified Records always need to be written back into a [Pad](properties.md#pads), for their changes to survive to the next frame!
 
 The fact that a record is at anytime a fixed, immutable snapshot of data, makes it specifically suitable for use in a dataflow programming language like VL. 
 
-A record can optionally also define a Process. For this, activate the Process toggle in the Patch Explorer. 
+A record can optionally also define a Process. For this, activate the Process toggle in the [Patch Explorer](../hde/patch-explorer.md). 
 
 ### Class
 Defines a mutable datatype. Basically similar to the Record with one main difference: 
 
 Every node that modifies a class type really modifies the original instance! No matter how far down the line a node is that operates on a class type, it is always the original instance that is being modified. So what's passed on over links, from pin to pin, is not data, but only a reference to the original instance.
 
-A class can optionally also define a Process. For this, activate the Process toggle in the Patch Explorer.
+A class can optionally also define a Process. For this, activate the Process toggle in the [Patch Explorer](../hde/patch-explorer.md).
 
 ### Interface
 Not officially supported yet. 

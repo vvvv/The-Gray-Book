@@ -21,12 +21,12 @@ Datatypes can have many operations, most often they have at least a `Create` and
 - Gray: for the Update operation
 - Dark red: for the Dispose operation
 
-All other colors are applied randomly from a color pallette and have no meaning whatsoever. They are only there to indicate the belonging of colored elements to a certain operation. To check which color refers to which operation, use the Patch Explorer or hover the pin and find the operation mentioned in the tooltip.  
+All other colors are applied randomly from a color pallette and have no meaning whatsoever. They are only there to indicate the belonging of colored elements to a certain operation. To check which color refers to which operation, use the [Patch Explorer](../hde/patch-explorer.md) or hover the pin and find the operation mentioned in the tooltip.  
 
 *Image:A member operation definition and its application as a node*
 
 ### Creating a Member Operation
-Member operations are either created via the Patch Explorer, or during the assignment workflow, where you can choose to assign to a new operation and then specify the name of the operation to be created and assigned to at the same time.
+Member operations are either created via the [Patch Explorer](../hde/patch-explorer.md), or during the assignment workflow, where you can choose to assign to a new operation and then specify the name of the operation to be created and assigned to at the same time.
 
 ### Assigning Nodes, Inputs/Outputs and Links to operations
 
@@ -110,7 +110,7 @@ The signature of an operation allows you to define the order in which its Inputs
 
 For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the PatchExplorer.
 
-*Image:Signature of member operations in the Patch Explorer*
+*Image:Signature of member operations in the [Patch Explorer](../hde/patch-explorer.md)*
 
 *Image:Signature of a static operation*
 
