@@ -33,6 +33,7 @@
 
 # [Language](language/language.md)
 ## [Patches](language/patches.md)
+## [Patch Explorer](language/patch-explorer.md)
 ## [Nodes](language/nodes.md)
 ## [Links](language/links.md)
 ## [IOBoxes](language/ioboxes.md)

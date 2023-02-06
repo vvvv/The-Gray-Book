@@ -47,7 +47,7 @@ In a tooltip aspects are clearly distinguished from categories:
 ![](../../images/libraries/aspect_tooltip.PNG)
 
 ## Specifying an aspect for a single datatype definition
-For a Process, Record or Class, aspects can be set via the [Patch Explorer](../hde/patch-explorer.md#datatype-patch-explorer).
+For a Process, Record or Class, aspects can be set via the [Patch Explorer](../language/patch-explorer.md#datatype-patch-explorer).
 
 Aspects assigned to a type, also apply to all its nested elements!
 

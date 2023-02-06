@@ -110,7 +110,7 @@ The signature of an operation allows you to define the order in which its Inputs
 
 For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the PatchExplorer.
 
-*Image:Signature of member operations in the [Patch Explorer](../hde/patch-explorer.md)*
+*Image:Signature of member operations in the [Patch Explorer](patch-explorer.md)*
 
 *Image:Signature of a static operation*
 
