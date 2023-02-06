@@ -46,6 +46,7 @@ Description|Action
 Pan the patch|Rightdrag in an empty area
 Zoom the patch|Mousewheel or <span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span> & <span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
 Reset pan and zoom of the patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>0</kbd></span>
+Zoom the tooltip|<span class="keyseq"><kbd>Ctrl</kbd></span> while using the Mousewheel
 
 ## Alternative Pan & Zoom
 If you prefer to use the mousewheel for panning vertically instead of zooming change the "Mouse wheel zooms" setting to false to get the following behavior:
