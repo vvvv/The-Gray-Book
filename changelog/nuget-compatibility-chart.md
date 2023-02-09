@@ -3,8 +3,6 @@
 ## vvvv gamma 2022.5.0 -preview
 NuGet|Version
 -|-
-VL.FUSE|
-VL.Kairos|
 VL.Devices.Kinect2|>= 1.3.0
 VL.Devices.RealSense|>= 1.5.0
 
