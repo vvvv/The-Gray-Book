@@ -27,6 +27,6 @@ Package|Version|Recommended command
 * _vvvv beta42_
 * _also applies to vvvv gamma 2021.3.0_
 
-Package|Latest working version
+Package|Command to get recommended version
 -|-
-VL.OpenCV|1.2.0
+[OpenCV](https://github.com/vvvv/VL.OpenCV)| `nuget install VL.OpenCV -Version 1.2.0`
