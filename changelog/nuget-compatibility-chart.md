@@ -14,7 +14,7 @@ Package|Command to get recommended version
 
 ## vvvv gamma (Preview builds)
 
-_vvvv gamma 2022.5.0 (preview)_
+_vvvv gamma 2022.5.0_
 
 Package|Version|Recommended command
 -|-|-
