@@ -5,6 +5,7 @@
 
 _vvvv gamma 2021.4.12_
 Package|Command to get recommended version
+
 -|-
 [Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | `nuget install VL.Devices.Kinect2 -Version 1.2.1`
 [RealSense](https://github.com/vvvv/VL.Devices.RealSense) | `nuget install VL.Devices.RealSense -Version 1.3.2`
@@ -15,6 +16,7 @@ Package|Command to get recommended version
 
 _vvvv gamma 2022.5.0 (preview)_
 Package|Version|Recommended command
+
 -|-|-
 [Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2 -pre`
 [RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense -pre`
