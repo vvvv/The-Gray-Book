@@ -149,6 +149,13 @@ Show a links tooltip to see its current value and the operation it is assigned t
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>Space</kbd></span>
 Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
 
+## Finders
+For more details, see [Finders](finders.md).
+Description|Action
+-|-
+Look for strings in the active patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span>
+Globally search for symbols (documents, patches, operations, pads)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> or <kbd>Ctrl</kbd><kbd>,</kbd></span>
+
 ## Frames
 Description|Action
 -|-
