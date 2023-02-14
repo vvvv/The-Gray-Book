@@ -151,6 +151,7 @@ Force to include links in a marquee selection despite nodes or pads are already 
 
 ## Finders
 For more details, see [Finders](finders.md).
+
 Description|Action
 -|-
 Look for strings in the active patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span>
