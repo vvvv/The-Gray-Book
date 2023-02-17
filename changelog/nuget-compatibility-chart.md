@@ -12,7 +12,6 @@ Package|Version|Command to get recommended version
 [Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
 [RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
 [Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | nuget install VL.Stride.Text3d -version 0.4.0
-nuget install VL.Stride.Text3d
 
 ## Preview: vvvv gamma 2022.5.0
 
