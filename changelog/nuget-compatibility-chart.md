@@ -11,7 +11,7 @@ Package|Version|Command to get recommended version
 [Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
 [Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
 [RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
-[Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | nuget install VL.Stride.Text3d -version 0.4.0
+[Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | `nuget install VL.Stride.Text3d -version 0.4.0`
 
 ## Preview: vvvv gamma 2022.5.0
 
@@ -21,7 +21,7 @@ Package|Version|Command to get recommended version
 [Kairos](https://github.com/KairosResearchLab/Kairos) | >=1.0 preview | `nuget install VL.Kairos -pre`
 [Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2 -pre`
 [RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense -pre`
-[Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 1.0.1 | nuget install VL.Stride.Text3d
+[Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 1.0.1 | `nuget install VL.Stride.Text3d`
 
 
 ## vvvv gamma 2021.3.0
