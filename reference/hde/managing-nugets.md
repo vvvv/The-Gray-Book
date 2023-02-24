@@ -39,4 +39,4 @@ Sometimes you may want to install a specific version rather than just the latest
 > [!NOTE]
 > VL will always load the newest version of a NuGet it finds installed. So in case you want to run a specific older version of a package, make sure you don't still have newer versions of it and its dependencies around. 
 
-[Here](/changelog/nuget-compatibility-chart.html) we are collecting packages and their recommended package versions for several vvvv releases. 
+[Here](/changelog/nuget-compatibility-chart.md) we are collecting packages and their recommended package versions for several vvvv releases. 
