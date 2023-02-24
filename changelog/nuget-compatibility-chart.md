@@ -18,12 +18,12 @@ Package|Version|Command to get recommended version
 
 Package|Version|Command to get recommended version
 -|-|-
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >=1.0 preview | `nuget install VL.Fuse -pre`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >=1.0 preview | `nuget install VL.Kairos -pre`
+[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
+[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -pre`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2 -pre`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense -pre`
-[VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >=1.0.1 | `nuget install VL.Stride.Text3d`
-[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.18 preview | `nuget install VL.Badmapper -pre`
+[VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
+[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.19 preview | `nuget install VL.Badmapper -pre`
 
 
 ## vvvv gamma 2021.3.0
