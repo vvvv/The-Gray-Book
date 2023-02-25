@@ -3,3 +3,4 @@
 # [2021.3](2021.3.md)
 # [2020.2](2020.2.md)
 # [2020.1](2020.1.md)
+# [NuGet Compatibility Chart](nuget-compatibility-chart.md)
