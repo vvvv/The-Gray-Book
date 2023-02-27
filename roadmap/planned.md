@@ -2,17 +2,15 @@
 
 Here we are sharing our plans of where vvvv is heading, outlining our coming milestones. Please understand that this is a living document and things may change along the way.
 
-## 2021.4.x (ongoing)
-Continuous releases with bug fixes
-* Getting rid of MSBuild as a runtime dependency
-* Allow for simple shader creation
-* Add Entity Picking
-
 ## 2022.5 (Q3)
 * Update to .NET6 which promises:
   * Performance improvements 
   * Export to other platforms
-  * Allows for using latest .NET NuGets
+  * Using latest .NET NuGets
+* Shader creation wizard
+* Allow referencing of C# projects
+* Faster startup times due to precompilation of libraries
+* Support for Dear ImGui UI library
 
 ## 2022.6
 * Package Manager: replacing the commandline for installing NuGets
