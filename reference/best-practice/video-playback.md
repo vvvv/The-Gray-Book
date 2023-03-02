@@ -29,7 +29,7 @@ vvvv offers two distinct ways for video playback:
 - Depending on the rendering engine you are using, the following nodes are shipping with vvvv:
   - VL.Stride (3d engine): **ImagePlayer (Stride)** [Video] or **ImagePlayer (FrameBased Stride)** [Video]
   - VL.Skia (2d engine): **ImagePlayer (Skia)** [Video] or **ImagePlayer (FrameBased Skia)** [Video]
-- The ImagePlayers for VL.Stride prefer images in the [DDS](https://wiki.beyondskyrim.org/wiki/Arcane_University:DDS_Data_Format) format (see below for conversion tools)
+- The ImagePlayers for VL.Stride prefer images in the [DDS](https://www.reedbeta.com/blog/understanding-bcn-texture-compression-formats/) format (see below for conversion tools)
 - Both support the playback of JPG, PNG and BMP files
 - Consult the help browser for examples on using the nodes
 
