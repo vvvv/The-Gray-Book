@@ -4,6 +4,9 @@ The vvvv editor supports theming. You can quickly switch between a dark and ligh
 
 ![](../../images/hde/themes.png)
 
-Additionally you can create custom themes using (a limited set of) [CSS](https://de.wikipedia.org/wiki/Cascading_Style_Sheets). Copy one of the provided themes and start modifying from there. Place custom themes in your user document folder to have them picked up:
+## Custom Themes
 
-`...\Documents\vvvv\gamma\Themes`
+Custom themes can be created using (a limited set of) [CSS](https://de.wikipedia.org/wiki/Cascading_Style_Sheets):
+- Copy one of the provided themes from `C:\Program Files\vvvv\vvvv_gamma...\Stylesheets`
+- Modify it
+- Place it in your user document folder `...\Documents\vvvv\gamma\Themes` to have them available in the Themes tab 
