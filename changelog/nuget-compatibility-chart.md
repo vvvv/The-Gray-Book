@@ -7,23 +7,25 @@ Unfortunately the listings here are done manually and are therefore by no means 
 
 Package|Version|Command to get recommended version
 -|-|-
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
+[VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | 1.0.0 | `nuget install VL.Audio.GPL -version 1.0.0`
+[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | 0.0.15 | `nuget install VL.Badmapper -version 0.0.15`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
+[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
+[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | `nuget install VL.Stride.Text3d -version 0.4.0`
-[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | 0.0.15 | `nuget install VL.Badmapper -version 0.0.15`
 
-## Preview: vvvv gamma 2022.5.0
+## Preview: vvvv gamma 5.0
 
 Package|Version|Command to get recommended version
 -|-|-
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -pre`
+[VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | >= 1.1.1 preview | `nuget install VL.Audio.GPL -pre`
+[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.19 preview | `nuget install VL.Badmapper -pre`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2 -pre`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense -pre`
+[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
+[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -pre`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
-[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.19 preview | `nuget install VL.Badmapper -pre`
 
 
 ## vvvv gamma 2021.3.0
