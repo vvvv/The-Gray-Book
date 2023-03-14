@@ -1,10 +1,10 @@
 # Properties
 
-Datatypes can use properties to store data. You can get an overview of the properties of a datatype via the Patch Explorer. 
+Datatypes can use properties to store data. You can get an overview of the properties of a datatype via the [Patch Explorer](patch-explorer.md). 
 
 *Image:Properties listed in the PatchExplorer*
 
-You can add and remove properties via the Patch Explorer, but specifically for adding properties, you'd often simply create Pads.
+You can add and remove properties via the [Patch Explorer](patch-explorer.md), but specifically for adding properties, you'd often simply create Pads.
 
 If you're coming from textual programming, you may also think of properties as "variables" with the caveat that they can only be written to once per operation!
 
@@ -32,7 +32,7 @@ You can add Pads via [Nodebrowser](../hde/the_nodebrowser.md) in three different
 ### Renaming Pads
 Doubleclick a Pad's name to change it. When renaming a Pad, only this one instance is renamed and eventually referring to a different property. If a property with the new name of a Pad did not exist so far, a new property is automatically added at this point!
 
-To rename all Pads that share a name at the same time, rename the property via the Patch Explorer instead. 
+To rename all Pads that share a name at the same time, rename the property via the [Patch Explorer](patch-explorer.md) instead. 
 
 ### Anonymous Pads
 Pads without a name are called "anonymous Pads". They don't refer to a property but still allow you to store data between the call of multiple operations.
@@ -72,6 +72,6 @@ You can recognize Pads that are annotated manually as they have a dot in their c
 ## Pads vs. IOBoxes
 A Pad and an IOBox are essentially the same thing: While the IOBox has a value editor and a comment (on its right side), a Pad has a name (on its left side). 
 
-You can convert between the two via Rightclick -> Convert...
+You can convert between the two via Rightclick -> Replace...
 
 You can also enable the value editor for any Pad or hide it for any IOBox.

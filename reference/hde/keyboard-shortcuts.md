@@ -46,6 +46,7 @@ Description|Action
 Pan the patch|Rightdrag in an empty area
 Zoom the patch|Mousewheel or <span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span> & <span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
 Reset pan and zoom of the patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>0</kbd></span>
+Zoom the tooltip|<span class="keyseq"><kbd>Ctrl</kbd></span> while using the Mousewheel
 
 ## Alternative Pan & Zoom
 If you prefer to use the mousewheel for panning vertically instead of zooming change the "Mouse wheel zooms" setting to false to get the following behavior:
@@ -147,6 +148,14 @@ Insert a node into an existing link|Double leftclick the link
 Show a links tooltip to see its current value and the operation it is assigned to|Press <span class="keyseq"><kbd>Ctrl</kbd></span> while hovering the link
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>Space</kbd></span>
 Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
+
+## Finders
+For more details, see [Finders](finders.md).
+
+Description|Action
+-|-
+Look for strings in the active patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span>
+Globally search for symbols (documents, patches, operations, pads)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> or <kbd>Ctrl</kbd><kbd>,</kbd></span>
 
 ## Frames
 Description|Action

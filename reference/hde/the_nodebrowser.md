@@ -32,6 +32,8 @@ The bottom two circles are two more filters:
 
 If you see a dot inside of a circle, it means that, given the current search term you would get additional nodes listed, if this filter was on.
 
+The defaults for those filters can be set via the [Settings](settings.md) in the "Advanced" section.
+
 ## Finding Nodes
 There are different ways to navigate the list of available nodes:
 

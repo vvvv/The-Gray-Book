@@ -1,8 +1,7 @@
 # Misc Libraries
 
 ## FuzzySearch
-Wrapper for the text similarity metric library SimMetricsCore and several nodes covering Fuzzy Search tasks.  
-NuGet: [VL.FuzzySearch](https://www.nuget.org/packages/VL.FuzzySearch)
+Wrapper for the text similarity metric library SimMetricsCore and several nodes covering Fuzzy Search tasks. Included with vvvv: VL.FuzzySearch
 
 ## ScreenRecorder
 Records fullscreen or a given area as mp4 movie. Including sound.  
@@ -116,3 +115,4 @@ NuGet: [VL.Kafka](https://www.nuget.org/packages/VL.Kafka)
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)
+* PDF document generation: [QuestPDF](https://www.questpdf.com/)

@@ -26,7 +26,7 @@ This will create a .sln, a .csproj and a Class1.cs file which looks like this:
 
 The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
 
-Now *any public static operation and every member operation of a public class you write will turn into a VL node*. The most simple node you can write is therefore:
+Now every static or member method of a public class you write will turn into a VL node. The most simple node you can write is therefore:
 
 ```csharp
 namespace MyCustomNodes
@@ -63,12 +63,12 @@ Note that you can now also debug your code:
 - Run Visual Studio and attach to vvvv.exe
 - Set a break-point in your code
 
-## More Details
+## Examples
 
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
 
-For more general considerations also see: [Library Design Guidelines](library_design_guidelines.md)
+For more general considerations also see: [Design Guidelines](design_guidelines.md)
 
 ### Vectors and Matrices
 
@@ -422,43 +422,4 @@ public class ComPortDefinition : DynamicEnumDefinitionBase<ComPortDefinition>
 }
 ```
 
-In VL you can then access the tag of the selected enum entry using the Tag [Collections.DynamicEnum] node.
-
-The ManualDynamicEnumDefinitionBase can be used if you need to add and remove entries in a VL patch. It comes with nodes like AddEntry, RemoveEntry and Clear:
-
-```csharp
-public class MyEnumDefinition : ManualDynamicEnumDefinitionBase<MyEnumDefinition>
-{
-    //this is optional an can be used if any initialization before the call to GetEntries is needed
-    protected override void Initialize()
-    {
-        //add two default entries on initialization
-        AddEntry("abara", null);
-        AddEntry("kadabara", null);
-    }
-
-    //add this to get a node that can access the singleton instance from everywhere
-    public static MyEnumDefinition Instance => ManualDynamicEnumDefinitionBase<MyEnumDefinition>.Instance;
-}
-
-```
-
-> [!NOTE]
-> For the `Observable` type you need to install the 'System.Reactive' nuget.
-
-##### 3. Introduce the enum to VL
-
-Lastly there is one thing you'll have to do in VL to get your dynamic enum working: So far when you create a node in VL that has an input typed with your `MyEnum`, the inputs tooltip will show "null". This is because the VL type system does not know how to deal with the type yet. What we want, is that the type-system automatically creates an instance of `MyEnum` whenever it encounters it.
-
-For this to happen we have to introduce the enum to VL which has to be done using a Typeforward:
-
-1. In the .vl document where you have set a reference to the .dll that holds your enum open the Solution Explorer (<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>J</kbd></span>).
-2. Unfolding it, you should see the `MyEnum` type which you can drag-drop onto the document patch. This makes the enum available for the VL type system and allows it to initialize the type, whenever it encounters it.
-
-![](../../images/libraries/vl-libraries-writingNodes-DynamicEnums-CreateDefault.png)
-<center>Creating a TypeForward for `MyEnum`</center>
-
-Now you will see a valid instance in any pin that uses `MyEnum` and you can create an IOBox to control it.
-
-![](../../images/libraries/vl-libraries-writingNodes-DynamicEnums.png)
-<center>How this looks in VL</center>
+For using dynamic enums in VL, see: [Enumerations](https://thegraybook.vvvv.org/reference/language/enumerations.html#dynamic-enums).

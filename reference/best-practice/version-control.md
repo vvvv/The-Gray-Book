@@ -121,4 +121,4 @@ Branching is not something you should start with.
 
 ## Merging
 
-https://discourse.vvvv.org/t/mergevldocs/18414/16
+[Merge Tool for VL documents](https://github.com/vvvv/MergeVLDocs/)

@@ -37,10 +37,10 @@ Each XElement can have:
 Referring to the example above:
 
 * the value of the first "label" element is "Foo"
-* the element "entry" has one attribute with the name "visible". the value of the first entries "visible" attribute is "true"
-* the child elements of the "entry" element are: "id", "label", "description" and "position"
+* the element "entry" has one attribute with the name "visible". the value of the first entry's "visible" attribute is "true"
+* the child elements of the "entry" element are: "id", "label", "description" and "speed"
 
-### Accessing an elements value
+### Accessing an element's value
 
 To access the value of only the first occurrence of an element, use the *XPathGetValue [System.XML]* node:
 
@@ -52,7 +52,7 @@ To get the values of all occurrences of an element, use the *XPathGetValues [Sys
 ![](../../images/libraries/xml-a7e85.png)
 <center>XPathGetValues returns the values of all queried elements as spread of whatever type is connected</center>
 
-### Accessing an elements attributes
+### Accessing an element's attributes
 
 To access an attribute of only the first occurrence of an element, use the  *XPathGetAttributeValue [System.XML]* node:
 
