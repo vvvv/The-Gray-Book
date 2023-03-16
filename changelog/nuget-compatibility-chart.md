@@ -10,6 +10,7 @@ Package|Version|Command to get recommended version
 [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | 1.0.0 | `nuget install VL.Audio.GPL -version 1.0.0`
 [VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | 0.0.15 | `nuget install VL.Badmapper -version 0.0.15`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
+[VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | 1.1.4 | `nuget install VL.Devices.LeapOrion -version 1.1.4`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
 [VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
 [VL.Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
@@ -21,8 +22,9 @@ Package|Version|Command to get recommended version
 -|-|-
 [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | >= 1.1.1 preview | `nuget install VL.Audio.GPL -pre`
 [VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.19 preview | `nuget install VL.Badmapper -pre`
-[VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2 -pre`
-[VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense -pre`
+[VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2`
+[VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | >= 1.2.0 | `nuget install VL.Devices.LeapOrion`
+[VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense`
 [VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
 [VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -pre`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
