@@ -103,6 +103,9 @@ Change the alpha channel|<span class="keyseq"><kbd>Shift</kbd></span> + Rightdra
 
 Path IOBoxes can be used to enter filenames or directories. By default they always assume you want to choose a filename!
 
+> [!NOTE]
+> Path IOBoxes always store relative paths if possible but actually hide this fact from you! This will lead to confusion in the rare case that you actually want to specify an absolut path: While IOBox and tooltip will show the absolut path you entered, internally a relative path is stored. So if you really need to specify an absolut path, use a string IOBox followed by a ToPath [IO] node.
+
 * Rightclick to open open the file chooser dialog
 * <span class="keyseq"><kbd>SHIFT</kbd></span> + Rightclick to open the directory chooser dialog
 * Click the [O] icon to open the currently selected file with its associated application
