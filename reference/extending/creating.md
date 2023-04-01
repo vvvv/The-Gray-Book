@@ -26,12 +26,12 @@ In order for nugets to work with vvvv you have to provide the following structur
 
 ```
 \lib              //for managed .dlls
-\lib-native       //for native/un-managed .dlls
+\runtimes         //for native/un-managed .dlls *
 \src              //for c# sources
-\vvvv             //for anything only useful for vvvv beta (this can include .vl files that are only wrapping vl-nodes for vvvv)
 <packName>.nuspec
 <packName>.vl
 ```
+\* See [Architecture Specific Folders](https://learn.microsoft.com/en-us/nuget/create-packages/supporting-multiple-target-frameworks#architecture-specific-folders)
 
 ## Creating and Publishing a NuGet
 Once you're ready to create a NuGet .nupkg from your library, there are different options:

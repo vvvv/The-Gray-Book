@@ -24,7 +24,7 @@ vl-libs\VL.Audio\
 vl-libs\VL.Devices.Kinect2\
 </pre>
 
-Such a directory holding one ore more sub-directories that are the sources of packages for vvvv is called a *package-repository*. By specifying the path to this package-repository in vvvv's Sketches\args.txt like e.g:
+Such a directory holding one ore more sub-directories that are the sources of packages for vvvv is called a *package-repository*. To make vvvv aware of a package-repository, specify the path to this package-repository via [commandline argument](../hde/commandline-arguments.md):
 
 <pre>
 --package-repositories C:\Users\foo\Documents\repos\vl-libs
@@ -33,10 +33,16 @@ Such a directory holding one ore more sub-directories that are the sources of pa
 You can of course also set multiple paths if you want to maintain different package-repositories in separate directories:
 
 <pre>
---package-repositories "C:\Users\foo\Documents\repos\vl-packs;C:\Users\foo\Documents\repos\my-vl-repo"
+--package-repositories "C:\Users\foo\Documents\repos\vl-libs;C:\Users\foo\Documents\repos\vl-libs2"
 </pre>
 
 Packages found in a package-repository path will show up among `Dependencies > VL Nugets` like any other nuget you installed. So you can simply reference them in any .vl document and work on them. Note though that some packages may have a c# solution that would need to be built before the package works!
+
+By default source-packages are compiled, meaning you cannot edit them in vvvv. In order to be able to edit individual packages you have to specify them as editable packages via [commandline argument](../hde/commandline-arguments.md), like:
+
+<pre>
+--editable-packages VL.Audio;VL.Devices*"
+</pre>
 
 ## Switching between source and binary packages
 
