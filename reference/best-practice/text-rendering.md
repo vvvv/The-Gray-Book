@@ -12,4 +12,6 @@ For [VL.Stride](../libraries/graphics-3d.md) you have the following options:
 - For quick, simple Text rendering use Text [Stride.Models] (experimental)
 - Use any of the above (2d Graphics) options via a SkiaRenderer or SkiaTexture node in Stride
 - Use [VL.Stride.Text3d](https://www.nuget.org/packages/VL.Stride.Text3d) for rendering extruded 3d text
+- Try [VL.BMFont](https://www.nuget.org/packages/VL.BMFont)
+- Try [FontStashSharp](https://github.com/FontStashSharp/FontStashSharp) (Text rendering library addon for Stride)
 - For the best available option go with the [Slug](https://sluglibrary.com/) library. Requires a separate license from them. If you need help with the implementation, [get in touch](mailto:devvvvs@vvvv.org).
