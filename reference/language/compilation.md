@@ -6,8 +6,8 @@ When the compiler is active, you'll see a little indicator in the top left corne
 
 Color of Indicator|Meaning
 -|-
-Gray|The patch is being compiled to C#
-Orange|The C# code is being compiled to [IL](https://en.wikipedia.org/wiki/Common_Intermediate_Language) code
+Gray|Building Symbols
+Orange|Emitting C# code
 
 ## Hotswap limitations
 There are certain scenarios though, where the Hotswap can not be performed smoothly and you'll notice an interruption in your running patch, like loosing state.
@@ -39,7 +39,7 @@ In precompiled patches, beware of the following restrictions:
 
 If you do make changes and save the patch, those changes will be detected on next startup, which will trigger a one-time re-compilation of the patch. 
 
-## Opting out of precompilation
+### Opting out of precompilation
 The most likely reason you'd want to opt out of precompilation for certain libraries, is when you have referenced them via a [source package-repository](../extending/contributing.md#source-package-repositories) to actually work on them. 
 
 In this case you need to use the [commandline argument](../hde/commandline-arguments.md) `editable-packages` when starting vvvv. Here is an example to opt out of precompilation for all libraries starting with "VL.Devices" and the library "VL.Audio": 
