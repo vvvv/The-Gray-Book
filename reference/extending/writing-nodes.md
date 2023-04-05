@@ -4,75 +4,62 @@ Writing your own nodes for VL using C# requires no VL specific knowledge or prep
 
 ## Start from a Template
 
-In [Visual Studio Code](https://code.visualstudio.com/):
-- Install the C# Extension
-- Open a terminal and navigate to the directory you want your C# project to be placed
-- Run `dotnet new classlib -o MyProjectsName` -> to create a .NET6 class library project with the given name
-- Run `code .` to open the project in the editor
+![](../../images/reference/extending/csharp-wizard.png)
 
-In [Visual Studio 2022](https://visualstudio.microsoft.com/de/):
+Use the built-in C# Wizard (as of version 5.0)
+- `Quad` -> `New` -> `C# File`
+- Choose one of the templates
+- By default this will create and reference a .csproj file with the name of your current main document. If such a .csproj already exists, it will add the C# file to it, assuming the default workflow will be one .csproj file with possibly many .cs files for your project
+- To override this default behavior, you can open the `Customize` dropdown:
+  - Manually specify a name for the .cs file
+  - Choose to which among possibly multiple .csproj files you want the file added to
+  - Uncheck `Use Existing` to create a new .csproj file
+- In the `Open on Create` pulldown you can choose:
+  - Open the .csproj: Ideally you have an IDE like Visual Studio 2022 installed and open the .csproj file
+  - Open the .cs file: If you don't have a full IDE installed, you can also simply edit the .cs files with any text editor
+  - Open Folder: In case you don't want to edit the file at this point, you can also just see where it is located by having the explorer opened, pointing to it
 
-* Create a new project: `File -> New -> Project`
-* Choose the `Class Library` Template
-* Specify Name and Location
-* As Framework choose:
-  * For vvvv gamma 2021.4.x: `.NET Standard 2.0`
-  * For vvvv gamma 2022.5.x: `.NET 6.0`
+![](../../images/reference/extending/StaticUtils.png)
+<center>The Static Utils template opened in Visual Studio 2022</center>
 
-This will create a .sln, a .csproj and a Class1.cs file which looks like this:
+The first time a new .csproj file is created, you will see it is automatically referenced to your active document, like so:
 
-![](../../images/libraries/vl-libraries-writingNodes-vs2017-emptyClass.PNG)
-<center>Empty generated Class1.cs</center>
+![](../../images/reference/extending/csharp-reference.png)
+<center>A .csproj file referenced in a .vl document</center>
 
-The Namespace you specify here will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
+The Static Utils templates' code for example will then translate to the following node in VL:
 
-Now every static or member method of a public class you write will turn into a VL node. The most simple node you can write is therefore:
+![](../../images/reference/extending/DemoNode.png)
+<center>Resulting node in VL</center>
 
-```csharp
-namespace MyCustomNodes
-{
-    public static class MyStaticNodes
-    {
-        public static float MyAddition(float input, float input2)
-        {
-            return input + input2;
-        }
-    }
-}
-```
+## Compilation and Hotswap
+Everytime you make a change in a .cs file and save it, code compilation will be triggered and the running code immediately "hotswapped". 
 
-This will translate to the following node:
+### Static methods
+This works flawlessly as long as you're only working with static menthods since those can be replaced on-the-fly without any side-effects. If there is an error in your C# code, all nodes stemming from the same project will turn red, with the tooltip indicating an error with the project, pointing you to the exact .cs file and line of the first error found.
 
-![](../../images/reference/extending/MyAddition.png)
-<center>Resulting Node in VL</center>
+![](../../images/reference/extending/csharp-error.png)
 
-Depending on which version of vvvv you're using you can now use your new nodes like this:
+### Stateful code
+If you're dealing with stateful code, you need to understand that every time you save your .cs file, you will loose all running state of instances that are defined in C# code!
 
-### vvvv gamma 2021.4.x
-Build the project and you'll get a managed .dll containing your nodes. From here you continue with [Using .NET Libraries](using-net-libraries.md) to use those operations as nodes in VL.
+As long as your C# code is fully managed, this will not be too big an issue. You'll see pink nodes with Nullpointer exceptions ("Object reference not set an instance of an object") in your patches where those instances were and restarting the patch with F9 will get you back into a running state.
 
-### vvvv gamma 2022.5.x
-Reference the .csproj file in your .vl document, like so:
+It gets more tricky as soon as your C# code depends on unmanaged code (e.g. WinForms, device libraries,...) which requires manual disposal of resources. vvvv does not know about those resources and can therefore not clean those up properly! In such cases you'll end up with unfreed resources whenever saving your .cs file which often leads to undefined behavior (eg. WinForms windows that don't dissapear or devices that cannot be accessed anymore). Only a complete restart of vvvv will help to get into a working state in such situations!
 
-![](../../images/reference/extending/ReferencingProjects.png)
-<center>Referencing a .csproj file in .vl</center>
-
-This takes care of compiling the project and updating nodes in vvvv whenever you make a change to the .csproj or any of its .cs files.
-
-Note that you can now also debug your code:
-- Run Visual Studio and attach to vvvv.exe
-- Set a break-point in your code
+## Debugging
+When editing your code with Visual Studio, you can set break-points in your C# code. then attach to vvvv.exe and see the break-points hit. 
 
 ## Examples
+Every static or member method of a public class you write in C# will turn into a VL node. 
 
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
 
 For more general considerations also see: [Design Guidelines](design_guidelines.md)
 
-### Vectors and Matrices
-
-In order to create pins of type Vector/Matrix that are compatible with the ones in VL you have to use the types coming with the [Stride.Core.Mathematics](https://www.nuget.org/packages/Stride.Core.Mathematics/) nuget.
+## Namespaces 
+The Namespace you specify in C# will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
 
 ### Pin Names
 
@@ -229,7 +216,7 @@ Any datatype that you define as class or strcut in c# can be used in VL:
 * Any constructor will be available as a Create node
 * Any get-property will show up as a node returning the properties value
 * Any set-property will show up as a node called Set.. allowing you to set the properties value
-* Any public member operation will be available as a node in VL. Private or Protected operations will be ignored.
+* Any public static or member method will be available as a node in VL. Private or Protected operations will be ignored.
 
 ```csharp
 public class MyDataType
