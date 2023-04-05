@@ -23,7 +23,7 @@ Choose how assets will be referenced in the exported application:
   
 ## Output type
 > [!NOTE]
-> This is only available for 2022.5 preview builds!
+> This is only available from versions 5.0 on!
 
 Choose between Windows (GUI) or Console application. A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
 
@@ -31,13 +31,13 @@ Use a __KeepAppAlive__ node to prevent this default behavior.
 
 ## Target OS
 > [!NOTE]
-> This is only available for 2022.5 preview builds!
+> This is only available from versions 5.0 on!
 
 Choose the OS for which to create output for. If you choose *Any*, export will create executables for all available targets, otherwise only for the one selected OS.
 
 ## Platform target
 > [!NOTE]
-> This is only available for 2022.5 preview builds!
+> This is only available from versions 5.0 on!
 
 Choose between CPU architectures x64, x86 or any.
 
@@ -72,7 +72,12 @@ Next to the application directory you'll also find a `\src` directory. This is a
 
 ## Dependencies
 If your application is referencing VL.Stride, make sure the target PC also has the following dependencies installed:
-* [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) 
+
+* [Microsoft Visual C++ Redistributables 2013](https://aka.ms/highdpimfc2013x64enu)
+* [Microsoft Visual C++ Redistributables 2015](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+### 2021.4.12
+For applications exported with this older version of vvvv, you'll also have to install:
 * [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
 
 ## Advanced build configuration
