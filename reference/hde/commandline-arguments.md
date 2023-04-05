@@ -19,6 +19,6 @@ Example:
     vvvv.exe -o "c:\myproject\foo.vl"
 
 ## Args.txt
-A quick way to apply commandline arguments to vvvv is specifying them in and `args.txt` file in your Sketches folder:
+A quick way to apply commandline arguments to vvvv is specifying them in an `args.txt` file in your Sketches folder:
 
     C:\Users\..\Documents\vvvv\gamma\Sketches\args.txt
