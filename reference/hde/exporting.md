@@ -75,6 +75,7 @@ If your application is referencing VL.Stride, make sure the target PC also has t
 
 * [Microsoft Visual C++ Redistributables 2013](https://aka.ms/highdpimfc2013x64enu)
 * [Microsoft Visual C++ Redistributables 2015](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+* [.NET6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) (For FileTexture and FileModel nodes to work)
 
 ### 2021.4.12
 For applications exported with this older version of vvvv, you'll also have to install:
