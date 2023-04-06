@@ -18,7 +18,9 @@ You may also want to use the third-party [Gamma Launcher](https://vvvv.org/contr
 ## Tutorials
 - [vvvvTv](https://www.youtube.com/vvvvtv42): Our youtube channel has the official Tutorials and HowTo videos
 - [NODE20 Workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
-- [English Video tutorials by Takuma Nakata](https://www.youtube.com/c/TakumaNakata/playlists)
+- [Beginner video tutorials by Christoph](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p)
+- [Intermediate video tutorials by Toby K](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V) 
+- [Graphics video tutorials by Takuma Nakata](https://www.youtube.com/c/TakumaNakata/playlists)
 - [Chinese video tutorials by RED](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists)
 
 ## Chapters
