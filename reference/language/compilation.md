@@ -9,39 +9,32 @@ Color of Indicator|Meaning
 Gray|Building Symbols
 Orange|Emitting C# code
 
-## Hotswap limitations
-There are certain scenarios though, where the Hotswap can not be performed smoothly and you'll notice an interruption in your running patch, like loosing state.
+On-the-fly compilation, while often not noticable at all, can cause severe lag, when working on large projects or libraries if all .vl files have to be considered for changes all the time. Therefore vvvv gamma 5.0 introduced the idea of read-only packages.
 
-Thorough Hotswap setting??
+### Read-only packages
+Patches in read-only packages are excluded from on-the-fly compilation. Like this, they run optimized in the same way as when you export them. Apart from faster execution, the fact that the compiler doesn't have to worry about them saves CPU cycles while working and also leads to a smaller overall memory footprint of vvvv which in turn removes stress from the garbage collector. 
 
-## Precompilation
-On-the-fly compilation, while often not noticable at all, can cause severe lag, when working on large projects or libraries if all .vl files have to be considered for changes all the time. Therefore vvvv gamma 5.0 introduced the option to "precompile" patches. 
+### Restrictions in read-only packages
+Patches part of a read-only package can be recognized by this banner:
 
-### Benefits of precompilation
-Precompilation makes patches run optimized in the same way as when you export them. The more patches run precompiled, the fewer patches have to be considered by the on-the-fly compiler, which saves CPU cycles while working and also leads to a smaller overall memory footprint of vvvv which in turn removes stress from the garbage collector. 
+![](../../images/reference/language/readonly-package-banner.png)
 
-### What is being precompiled?
-"Precompiled" is now the default for all libraries shipping with vvvv. Like this the startup time and memory usage of vvvv is significantly improved.
-
-But also the .vl documents of any NuGet you reference are now being compiled on first use, which makes sense since you're never supposed to change those other than by getting a different version of a NuGet. 
-
-Finally vvvv now also compiles .vl documents of any library from a [source package-repository](../extending/contributing.md#source-package-repositories) you reference.
-
-### Restrictions in precompiled patches
-
-Precompiled patches can be recognized by having a banner like this:
-
-**image**
-
-In precompiled patches, beware of the following restrictions:
+In read-only patches, beware of the following restrictions:
 - Tooltips will not show any data flowing in the patch
 - Any modification you make is not being taken into account
 
-If you do make changes and save the patch, those changes will be detected on next startup, which will trigger a one-time re-compilation of the patch. 
+If you do make changes and save the patch, those changes will only be detected on next startup of vvvv, which will trigger a one-time re-compilation of the patch. 
 
-### Opting out of precompilation
-The most likely reason you'd want to opt out of precompilation for certain libraries, is when you have referenced them via a [source package-repository](../extending/contributing.md#source-package-repositories) to actually work on them. 
+### What makes a package read-only?
+"Read-only" is now the default for all packages shipping with vvvv. Like this the startup time and memory usage of vvvv is significantly improved.
 
-In this case you need to use the [commandline argument](../hde/commandline-arguments.md) `editable-packages` when starting vvvv. Here is an example to opt out of precompilation for all libraries starting with "VL.Devices" and the library "VL.Audio": 
+But also the .vl documents of any NuGet you reference are now being compiled on first use, which makes sense since you're never supposed to change those other than by getting a different version of a NuGet. 
+
+Finally vvvv now also compiles .vl documents of any package from a [source package-repository](../extending/contributing.md#source-package-repositories) you reference.
+
+### Editable packages
+The most likely reason you'd want to opt out of the read-only default for certain packages, is when you have referenced them via a [source package-repository](../extending/contributing.md#source-package-repositories) to actually work on them. 
+
+In this case you need to use the [commandline argument](../hde/commandline-arguments.md) `editable-packages` when starting vvvv. Here is an example to opt out of precompilation for all packages starting with "VL.Devices" and the package "VL.Audio": 
 
     --editable-packages VL.Devices*;VL.Audio

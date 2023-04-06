@@ -49,7 +49,8 @@
 ## [Delegates](language/delegates.md)
 ## [Generics](language/generics.md)
 ## [Frames](language/frames.md)
-## [Groups ](language/groups.md)
+## [Groups](language/groups.md)
+## [Compilation](language/compilation.md)
 ## [Identifier Naming Conventions](language/namings.md)
 
 # [Libraries](libraries/overview.md)
