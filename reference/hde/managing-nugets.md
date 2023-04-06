@@ -37,6 +37,8 @@ Sometimes you may want to install a specific version rather than just the latest
 `nuget install vl.opencv -version 2.1.0`
 
 > [!NOTE]
-> VL will always load the newest version of a NuGet it finds installed. So in case you want to run a specific older version of a package, make sure you don't still have newer versions of it and its dependencies around. 
+> vvvv will always load the newest version of a NuGet it finds installed. So in case you want to run a specific older version of a package, make sure you don't still have newer versions of it and its dependencies around. 
+>
+> To remove versions of a NuGet, go to [Show Installed](#show-installed) and delete respective folders from there. If deletion fails, make sure to close vvvv first.
 
 In the [NuGet Compatibility Chart](../../changelog/nuget-compatibility-chart.md) we are collecting packages and their recommended versions for specific vvvv releases. 
