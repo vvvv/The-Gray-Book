@@ -9,6 +9,7 @@ Package|Version|Command to get recommended version
 -|-|-
 [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | 1.0.0 | `nuget install VL.Audio.GPL -version 1.0.0`
 [VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | 0.0.15 | `nuget install VL.Badmapper -version 0.0.15`
+[VL.Devices.Astra](https://github.com/vvvv/VL.Devices.Astra) | 1.0.1 | `nuget install VL.Devices.Astra -version 1.0.1`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | 1.1.4 | `nuget install VL.Devices.LeapOrion -version 1.1.4`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
@@ -22,6 +23,7 @@ Package|Version|Command to get recommended version
 -|-|-
 [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | >= 1.1.1 preview | `nuget install VL.Audio.GPL -pre`
 [VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.19 preview | `nuget install VL.Badmapper -pre`
+[VL.Devices.Astra](https://github.com/vvvv/VL.Devices.Astra) | >= 1.2.0 | `nuget install VL.Devices.Astra`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | >= 1.2.0 | `nuget install VL.Devices.LeapOrion`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense`
