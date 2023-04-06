@@ -1,6 +1,6 @@
 # Deploying to a Raspberry Pi
 
-As of the [upcoming version 2022.5](../../changelog/2022.5.md) you can now [export](../hde/exporting.md) console apps to Linux, which makes the [Raspberry Pi](https://www.raspberrypi.com/) an excellent target. 
+As of [version 5.0](../../changelog/5.x.md) you can now [export](../hde/exporting.md) console apps to Linux, which makes the [Raspberry Pi](https://www.raspberrypi.com/) an excellent target. 
 
 ## Prerequisites 
 - [Install .NET on the Raspberry Pi](https://learn.microsoft.com/en-us/dotnet/iot/deployment#deploying-a-framework-dependent-app) (Follow steps 1. and 2.)
