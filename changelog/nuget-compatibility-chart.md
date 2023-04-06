@@ -3,6 +3,8 @@ Different versions of vvvv are compatible with different versions of NuGets. Oft
 
 Unfortunately the listings here are done manually and are therefore by no means complete. Please help us improve the listing by adding your findings, either by clicking "Improve this Doc" (top right corner of this page) or by informing us via an email to [devvvvs@vvvv.org](mailto:devvvvs@vvvv.org).
 
+If you find yourself in the need to downgrade the version of a NuGet, make sure to read [Installing a specific version of a NuGet](../reference/hde/managing-nugets.md#installing-a-specific-version).
+
 ## vvvv gamma 2021.4.12
 
 Package|Version|Command to get recommended version
