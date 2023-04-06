@@ -38,7 +38,7 @@ You can of course also set multiple paths if you want to maintain different pack
 
 Packages found in a package-repository path will show up among `Dependencies > VL Nugets` like any other nuget you installed. So you can simply reference them in any .vl document and work on them. Note though that some packages may have a c# solution that would need to be built before the package works!
 
-By default source-packages are compiled, meaning you cannot edit them in vvvv. In order to be able to edit individual packages you have to specify them as editable packages via [commandline argument](../hde/commandline-arguments.md), like:
+By default [source-packages are read-only](../language/compilation.md#read-only-packages), meaning you cannot edit them in vvvv. In order to be able to edit individual packages you have to specify them as editable packages via [commandline argument](../hde/commandline-arguments.md), like:
 
 <pre>
 --editable-packages VL.Audio;VL.Devices*"

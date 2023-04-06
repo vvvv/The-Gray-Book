@@ -26,11 +26,13 @@ In read-only patches, beware of the following restrictions:
 If you do make changes and save the patch, those changes will only be detected on next startup of vvvv, which will trigger a one-time re-compilation of the patch. 
 
 ### What makes a package read-only?
-"Read-only" is now the default for all packages shipping with vvvv. Like this the startup time and memory usage of vvvv is significantly improved.
 
-But also the .vl documents of any NuGet you reference are now being compiled on first use, which makes sense since you're never supposed to change those other than by getting a different version of a NuGet. 
+By default all packages are read-only. Like this the startup time and memory usage of vvvv is significantly improved.
 
-Finally vvvv now also compiles .vl documents of any package from a [source package-repository](../extending/contributing.md#source-package-repositories) you reference.
+This includes:
+- All packages shipping with vvvv
+- All [packages you install](../hde/managing-nugets.md) in addition and reference in your project. This makes sense since you're never supposed to change those other than by getting a different version of a NuGet
+- All packages you reference from a [source package-repository](../extending/contributing.md#source-package-repositories)
 
 ### Editable packages
 The most likely reason you'd want to opt out of the read-only default for certain packages, is when you have referenced them via a [source package-repository](../extending/contributing.md#source-package-repositories) to actually work on them. 
