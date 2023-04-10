@@ -81,6 +81,18 @@ If your application is referencing VL.Stride, make sure the target PC also has t
 
 The build process can be customized in many details. Next to your main .vl file, place a .props file with the same name. This is actually an .xml file which you can configure to your needs using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) syntax.
 
+Example:  
+Add this snippet inside the `<Project>` tag to automatically copy your `Assets` folder to the Export
+```
+  <ItemGroup>
+	  <ContentWithTargetPath 
+		   Include="$(MSBuildThisFileDirectory)Assets\*.*"
+		   CopyToOutputDirectory="PreserveNewest"
+		   TargetPath="Assets\%(Filename)%(Extension)" 
+	  />
+  </ItemGroup>
+```
+
 ## Useful nodes
 - Args [System] to access commandline arguments the app was called with
 - Nodes from the advanced [System.Console] category
