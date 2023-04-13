@@ -1,6 +1,6 @@
 # Forwarding .NET Libraries
 
-By [Using .NET Libraries](using-net-libraries.md) we have direct access to a vast range of nodes for patching in VL. Many of those libraries though will not be very convenient to use in the dataflow context of VL.
+By [Using .NET Libraries](using-net-libraries.md) we have direct access to a vast range of nodes for patching. Many of those libraries though will not be very convenient to use in the dataflow context of VL.
 
 To make those libraries accessible to more casual users we often want to curate exactly what nodes and types of the original library are seen by them. Forwarding allows us to insert a very thin wrapper layer to conveniently provide such curation.
 
@@ -22,26 +22,19 @@ To make those libraries accessible to more casual users we often want to curate 
 > Also, the wrapper can act as a useful layer to shield the end-user of a vl-library from changes in the original library. Instead of confronting a vl-user directly with the (e.g. naming) changes of an original library, forwards allow us to implement ways to not break patches in such cases.
 
 ## Forwarding Types
-In a typical scenario you create _one .vl document_ to forward types from one or more .NET .dlls. This .vl document is then the only thing a user of your library will have to reference.
+In a typical scenario you create _one .vl document_ to forward types from one or more .NET .dlls or C# Projects (.csproj). This .vl document is then the only thing a user of your library will have to reference.
 
 ## Create Type Forward
+### 1. Set a reference to the .NET .dll or .csproj
+In a blank .vl document set a reference to the .NET .dll(s) or .csproj files you want to forward types from. See [Referencing Files](../libraries/referencing.md#Files).
 
-#### 1. Set a reference to the .NET .dll
-In a blank .vl document set a reference to the .NET .dll(s) you want to forward types from. See [Referencing Files](../libraries/referencing.md#Files).
+### 2. Prepare a Category
+An imported type will show-up in the [category](../language/categories.md) you place it in. So, create the categories you need in your documents [Definition Patch](../language/patches.md#definitions-patch).
 
-#### 2. Prepare a Category Group
-An imported type will show-up in the category defined by the group you place it in. So, create groups for every category of your library in the Document Patch.
-
-![](../../images/libraries/vl-libraries-wrapping-CategoryGroups.png)
-<center>Groups (representing categories) in a document's main patch</center>
-
-> [!NOTE]
-> Empty categories are not showing-up in the NodeBrowser.
-
-#### 3. Create Type Forward
+### 3. Create Type Forward
 There are two ways to create a type forward:
 
-##### Drag-Drop from the Solution Explorer
+#### 3.1 Drag-Drop from the Solution Explorer
 
 1. Open the group you want to drop the type into
 2. Open the Solution Explorer
@@ -52,7 +45,7 @@ There are two ways to create a type forward:
 ![](../../images/libraries/vl-libraries-wrapping-dragndrop.png)
 <center>Drag-Drop type from Solution Explorer into group</center>
 
-##### Manually
+#### 3.2 Manually
 
 1. Open the group you want to drop the type into
 2. Create a new _Process_ patch
@@ -105,13 +98,17 @@ To do so, simply create an operation called `CreateDefault` in a type forward pa
 ![](../../images/libraries/vl-libraries-wrapping-CreateDefault.png)
 <center>Creating a Default for a type</center>
 
-#### Process Node
-Each type forward can also directly expose a process node. This is exactly the same as exposing a process node from an ordinary patch. See..
+### Process Node
+Each type forward can also directly expose a process node. This is exactly the same as exposing a [process node](../language/nodes.md#process-nodes) from an ordinary patch.
 
-If you want to expose more than one process node from a single type forward, you have to create an extra patch for each additional process node that does not forward the type but simply uses the types operations to create the desired process.
+* In the forward, navigate to the [Patch Explorer](../language/patch-explorer.md) and activate the "Process Node" checkbox. 
+* Then [manually forward](#forwarding-operations) a constructor of your C# type
 
-## Forwarding Operations
+This gives you a working process node of your C# type.
 
+If you want to expose more than one process node from a single type forward, you have to create an extra [process definition](../language/patches.md#process) for each additional process node. Those will not forward the type but simply use the types operations to create the desired process.
+
+### Forwarding Operations
 As shown above, a type forward can easily forward all of its operations automatically. Even with "Forward All Nodes" activated though, it can make sense to manually forward some operations to tweak their pins.
 
 To create forwards for individual operations:
@@ -167,7 +164,7 @@ Rightclick on the header of the operation you're forwarding and choose `Configur
 ![](../../images/libraries/vl-libraries-wrapping-ShowCategory.png)
 <center>Show Category checkbox</center>
 
-## Manually managing the Signature
+### Manually managing the Signature
 When forwarding a node, you'll usually want to automatically sync its signature to the one of its surrounding definition. This is why by default the two options which manage this behavior are on:
 
 * Automatic Signature

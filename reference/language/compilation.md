@@ -11,7 +11,7 @@ Orange|Emitting C# code
 
 On-the-fly compilation, while often not noticable at all, can cause severe lag, when working on large projects or libraries if all .vl files have to be considered for changes all the time. Therefore vvvv gamma 5.0 introduced the idea of read-only packages.
 
-### Read-only packages
+## Read-only packages
 Patches in read-only packages are excluded from on-the-fly compilation. Like this, they run optimized in the same way as when you export them. Apart from faster execution, the fact that the compiler doesn't have to worry about them saves CPU cycles while working and also leads to a smaller overall memory footprint of vvvv which in turn removes stress from the garbage collector. 
 
 ### Restrictions in read-only packages
@@ -26,7 +26,6 @@ In read-only patches, beware of the following restrictions:
 If you do make changes and save the patch, those changes will only be detected on next startup of vvvv, which will trigger a one-time re-compilation of the patch. 
 
 ### What makes a package read-only?
-
 By default all packages are read-only. Like this the startup time and memory usage of vvvv is significantly improved.
 
 This includes:

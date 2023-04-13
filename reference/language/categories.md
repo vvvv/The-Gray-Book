@@ -29,8 +29,11 @@ A Full Category is similar to a normal Category, only that it doesn't add its ca
 ![](../../images/language/06_FullCategoryInside.PNG)
 <center>Inside a category patch</center>
 
+> [!NOTE]
+> Empty categories are not showing-up in the NodeBrowser.
+
 ## Changing the Patch Type
-You can easily convert a group patch into a category patch and vice versa by the patch type enum. Note how the label changes and represents the actual category structure:
+You can easily convert a category into a [group](groups.md) patch and vice versa by the patch type enum. Note how the label changes and represents the actual category structure:
 
 ![](../../images/language/08_ChangePatchType.gif)
 <center>Converting a group into a category</center>

@@ -36,19 +36,31 @@ The Static Utils templates' code for example will then translate to the followin
 Everytime you make a change in a .cs file and save it, code compilation will be triggered and the running code immediately "hotswapped". 
 
 ### Static methods
-This works flawlessly as long as you're only working with static menthods since those can be replaced on-the-fly without any side-effects. If there is an error in your C# code, all nodes stemming from the same project will turn red, with the tooltip indicating an error with the project, pointing you to the exact .cs file and line of the first error found.
+This works flawlessly as long as you're only working with static menthods since those can be replaced on-the-fly without any side-effects. 
+
+If there is an error in your C# code, all nodes stemming from the same project will turn red, with the tooltip indicating an error with the project, pointing you to the exact .cs file and line of the first error found.
 
 ![](../../images/reference/extending/csharp-error.png)
 
-### Stateful code
-If you're dealing with stateful code, you need to understand that every time you save your .cs file, you will loose all running state of instances that are defined in C# code!
+### Classes
+If you're dealing with stateful code, it gets a bit more tricky. Here are two typical scenarios:
+
+#### Process node
+Assuming you want to treat your C# class like a [process node](../language/nodes.md#process-nodes) in VL, ie one instance per node, not dynamically spawning/killing instances, then take your class and create a [Forward](forwarding.md#process-node) for it. 
+
+This allows vvvv to properly create/dispose instances of your class as needed, whenever you make a change to your C# code.
+
+#### Dynamic instances
+If your C# class is going to be used more like a "Particle", ie you'll be dynamically spawning/killing instances, a Forward as mentioned above will not help you with dispose issues that you may run into. So here is what you have to know: 
+
+Every time you save your .cs file, you will loose all running state of instances that are defined in C# code!
 
 As long as your C# code is fully managed, this will not be too big an issue. You'll see pink nodes with Nullpointer exceptions ("Object reference not set an instance of an object") in your patches where those instances were and restarting the patch with F9 will get you back into a running state.
 
-It gets more tricky as soon as your C# code depends on unmanaged code (e.g. WinForms, device libraries,...) which requires manual disposal of resources. vvvv does not know about those resources and can therefore not clean those up properly! In such cases you'll end up with unfreed resources whenever saving your .cs file which often leads to undefined behavior (eg. WinForms windows that don't dissapear or devices that cannot be accessed anymore). Only a complete restart of vvvv will help to get into a working state in such situations!
+It gets more tricky as soon as your C# code depends on unmanaged code (e.g. WinForms, device libraries,...) which requires manual disposal of resources. vvvv does not know about those resources and can therefore not clean those up properly! In such cases you'll end up with unfreed resources whenever saving your .cs file which often leads to undefined behavior (eg. devices that cannot be accessed anymore). Only a complete restart of vvvv will help to get into a working state in such situations!
 
 ## Debugging
-When editing your code with Visual Studio, you can set break-points in your C# code. then attach to vvvv.exe and see the break-points hit. 
+When editing your code with Visual Studio, you can set break-points in your C# code. Then [attach](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) to vvvv.exe and see the break-points hit. 
 
 ## Examples
 Every static or member method of a public class you write in C# will turn into a VL node. 

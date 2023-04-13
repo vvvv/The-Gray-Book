@@ -21,7 +21,7 @@ To install the latest version of a NuGet simply run `nuget install`, like e.g:
 
 `nuget install vl.opencv`
 
-After installing a NuGet via the commandline it is not yet automatically referenced by the current document! It is now merely available among the NuGets via the Dependencies menu. But if an installed NuGet contains any help files, those will already show up in the [HelpBrowser](findinghelp.md#help-browser).
+After installing a NuGet via the commandline it is not yet automatically referenced by the current document! It is now merely available among the NuGets via the [Dependencies menu](navigating_a_project.md#dependencies). But if an installed NuGet contains any help files, those will already show up in the [HelpBrowser](findinghelp.md#help-browser).
 
 > [!NOTE]
 > To update to the latest version of a NuGet you have already installed, simply run the install command again. Your package directory can contain multiple versions of the same nuget and VL will always use the newest. Older versions have to be removed manually if no longer needed.
@@ -37,7 +37,7 @@ Sometimes you may want to install a specific version rather than just the latest
 `nuget install vl.opencv -version 2.1.0`
 
 > [!NOTE]
-> vvvv will always load the newest version of a NuGet it finds installed. So in case you want to run a specific older version of a package, make sure you don't still have newer versions of it and its dependencies around. 
+> vvvv will always load the newest version of a NuGet it finds installed. So in case you want to run a specific older version of a package (downgrade), make sure you don't still have newer versions of it and its dependencies around. 
 >
 > To remove versions of a NuGet, go to [Show Installed](#show-installed) and delete respective folders from there. If deletion fails, make sure to close vvvv first.
 
