@@ -1,7 +1,31 @@
 # Shaders
 Shaders are written in [SDSL](https://doc.stride3d.net/4.0/en/manual/graphics/effects-and-shaders/shading-language/index.html), an advanced high-level shader language that supports OOP concepts and multiple inheritance. This allows to write short and nice looking shader code.
 
-## File Management
+Here is a step by step guide to get you started:
+
+## Prepare an editor
+vvvv does not come with a build-in shader editor. See [Editing Shaders](editing-shaders.md) for different options. 
+
+## Start from a Template
+![](../../../images/libraries/3d/shaderwizard.png)
+
+Use the built-in Sharder Wizard (as of version 5.0)
+- `Quad` -> `New` -> `Shader File`
+- Choose one of the templates
+- Specify a name for the new shader
+- In the `Open on Create` pulldown you can choose:
+  - Solution: This is the best option, assuming you have Visual Studio installed with the Stride Extension as explained in [Editing Shaders](editing-shaders.md)
+  - Open the .sdsl file: If you don't have Visual Studio installed, you can also simply edit the .sdsl files with any text editor
+  - Open Folder: In case you don't want to edit the file at this point, you can also just see where it is located by having the explorer opened, pointing to it
+- Press `Create`
+  - This will create the new shader file on disk, reference the VL.Stride package with your current document (if it isn't already) and open the shader
+
+## Create the shader node
+Open the [NodeBrowser](../../hde/the_nodebrowser.md) and find the shader by the name you gave it.
+
+Now anytime you save a change in your shader file, the node will be updated accordingly.
+
+## Further details
 ### Scope
 Any .vl document that has VL.Stride set as a dependency will pick up shader files that are placed next to it in special folder called "shaders". Multiple .vl documents can share the same shaders folder.
 

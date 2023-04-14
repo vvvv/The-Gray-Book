@@ -9,15 +9,17 @@ Writing your own nodes for VL using C# requires no VL specific knowledge or prep
 Use the built-in C# Wizard (as of version 5.0)
 - `Quad` -> `New` -> `C# File`
 - Choose one of the templates
-- By default this will create and reference a .csproj file with the name of your current main document. If such a .csproj already exists, it will add the C# file to it, assuming the default workflow will be one .csproj file with possibly many .cs files for your project
-- To override this default behavior, you can open the `Customize` dropdown:
-  - Manually specify a name for the .cs file
-  - Choose to which among possibly multiple .csproj files you want the file added to
-  - Uncheck `Use Existing` to create a new .csproj file
+  - By default  a .csproj file with the name of your current main document will be created. If such a .csproj already exists, it will add the C# file to it. This is assuming the typical scenario will be one .csproj file with possibly many .cs files for your project
+  - Optional: To override this default behavior, you can open the `Customize` dropdown:
+      - Manually specify a name for the .cs file
+    - Choose to which among possibly multiple .csproj files you want the file added to
+    - Uncheck `Use Existing` to create a new .csproj file
 - In the `Open on Create` pulldown you can choose:
   - Open the .csproj: Ideally you have an IDE like Visual Studio 2022 installed and open the .csproj file
   - Open the .cs file: If you don't have a full IDE installed, you can also simply edit the .cs files with any text editor
   - Open Folder: In case you don't want to edit the file at this point, you can also just see where it is located by having the explorer opened, pointing to it
+- Press `Create`
+  - This will create the file(s) on disk and reference the .csproj file to you current main document
 
 ![](../../images/reference/extending/StaticUtils.png)
 <center>The Static Utils template opened in Visual Studio 2022</center>
@@ -26,6 +28,12 @@ The first time a new .csproj file is created, you will see it is automatically r
 
 ![](../../images/reference/extending/csharp-reference.png)
 <center>A .csproj file referenced in a .vl document</center>
+
+> NOTE
+> Don't use referenced .csproj files when you're working on a library you're going to ship as a NuGet! It would force the whole package and all packages that depend on it editable, meaning you'd lose the benefit of a [read-only package](../language/compilation.md#read-only-packages). 
+
+## Create the node
+Open the [NodeBrowser](../../hde/the_nodebrowser.md) and find the methods and classes of your c# file by their names.
 
 The Static Utils templates' code for example will then translate to the following node in VL:
 
@@ -70,7 +78,7 @@ Here are some simple examples and a few more details that will help you create y
 
 For more general considerations also see: [Design Guidelines](design_guidelines.md)
 
-## Namespaces 
+### Namespaces 
 The Namespace you specify in C# will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
 
 ### Pin Names
