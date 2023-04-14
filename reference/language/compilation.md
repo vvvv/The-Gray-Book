@@ -39,3 +39,6 @@ The most likely reason you'd want to opt out of the read-only default for certai
 In this case you need to use the [commandline argument](../hde/commandline-arguments.md) `editable-packages` when starting vvvv. Here is an example to opt out of precompilation for all packages starting with "VL.Devices" and the package "VL.Audio": 
 
     --editable-packages VL.Devices*;VL.Audio
+
+> NOTE
+> In addition this makes any package editable that depends on those you specify!
