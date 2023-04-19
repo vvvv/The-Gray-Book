@@ -74,8 +74,9 @@
       "_gitUrlPattern": "github"
     },
 	"template": [
-        "default",
-        "custom template/vvvv"
+        "default", 
+        "modern",
+        "custom template/vvvv_modern"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
