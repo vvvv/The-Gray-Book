@@ -76,7 +76,7 @@ In order to create pins of type Vector/Matrix that are compatible with the ones 
 
 ### Pin Names
 
-For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
+For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in C# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
 
 ```csharp
 public static float PinNames(float firstInput, float secondInput)
@@ -90,7 +90,7 @@ public static float PinNames(float firstInput, float secondInput)
 
 ### Default Values
 
-Simply use the c# notation for defaults to define defaults for inputs in VL.
+Simply use the C# notation for defaults to define defaults for inputs in VL.
 
 ```csharp
 public static float Defaults(float firstInput=44f, float secondInput=0.44f)
@@ -139,7 +139,7 @@ Choosing the respective node in the NodeBrowser will then ask you for a further 
 
 ### Using Enums
 
-You can use custom c# enums as input or output types to operations:
+You can use custom C# enums as input or output types to operations:
 ```csharp
 public enum DemoEnum { Foo, Bar };
 
@@ -170,7 +170,7 @@ public static string Generic<T>(T input)
 
 ### Operating on Spreads
 
-The c# IEnumerable<> appears as Sequence<> in VL:
+The C# IEnumerable<> appears as Sequence<> in VL:
 
 ```csharp
 public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
@@ -206,7 +206,7 @@ public static int HTMLDocuTest(int a)
 <center>Documentation shows up in NodeBrowser and Tooltip</center>
 
 > [!NOTE]
-> Don't forget to enable "XML Documentation File" in the c# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
+> Don't forget to enable "XML Documentation File" in the C# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
 
 ### C# Ref Paramters
 
@@ -224,7 +224,7 @@ public static int RefParams(ref int firstInput)
 
 ### Datatypes
 
-Any datatype that you define as class or strcut in c# can be used in VL:
+Any datatype that you define as class or struct in C# can be used in VL:
 
 * Any constructor will be available as a Create node
 * Any get-property will show up as a node returning the properties value
@@ -258,7 +258,7 @@ public class MyDataType
 
 VL translates .net events that conform to the [.NET Core Event Pattern](https://docs.microsoft.com/en-us/dotnet/csharp/modern-events) to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern.
 
-Here is an example of c# events without and with event arguments:
+Here is an example of C# events without and with event arguments:
 
 ```csharp
 public class MyDataType
@@ -314,7 +314,7 @@ For general information on workig with Observables see the chapter about [Reacti
 
 Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime.
 
-Consider a normal enum in c#:
+Consider a normal enum in C#:
 ```csharp
 enum MyEnum = { Foo, Bar }
 ```
@@ -330,7 +330,7 @@ public static string EnumDemo(MyEnum e)
 
 #### Implementing dynamic Enums for VL
 
-Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
+Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in C#:
 
 * The type needs to implement `IDynamicEnum`
 * The definition needs to implement `IDynamicEnumDefinition`
