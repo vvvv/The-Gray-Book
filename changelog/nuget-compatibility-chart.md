@@ -5,21 +5,7 @@ Unfortunately the listings here are done manually and are therefore by no means 
 
 If you find yourself in the need to downgrade the version of a NuGet, make sure to read [Installing a specific version of a NuGet](../reference/hde/managing-nugets.md#installing-a-specific-version).
 
-## vvvv gamma 2021.4.12
-
-Package|Version|Command to get recommended version
--|-|-
-[VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | 1.0.0 | `nuget install VL.Audio.GPL -version 1.0.0`
-[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | 0.0.15 | `nuget install VL.Badmapper -version 0.0.15`
-[VL.Devices.Astra](https://github.com/vvvv/VL.Devices.Astra) | 1.0.1 | `nuget install VL.Devices.Astra -version 1.0.1`
-[VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
-[VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | 1.1.4 | `nuget install VL.Devices.LeapOrion -version 1.1.4`
-[VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
-[VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | `nuget install VL.Stride.Text3d -version 0.4.0`
-
-## Preview: vvvv gamma 5.0
+## vvvv gamma 5.0
 
 Package|Version|Command to get recommended version
 -|-|-
@@ -33,6 +19,19 @@ Package|Version|Command to get recommended version
 [VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -pre`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
 
+## vvvv gamma 2021.4.12
+
+Package|Version|Command to get recommended version
+-|-|-
+[VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) | 1.0.0 | `nuget install VL.Audio.GPL -version 1.0.0`
+[VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | 0.0.15 | `nuget install VL.Badmapper -version 0.0.15`
+[VL.Devices.Astra](https://github.com/vvvv/VL.Devices.Astra) | 1.0.1 | `nuget install VL.Devices.Astra -version 1.0.1`
+[VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
+[VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | 1.1.4 | `nuget install VL.Devices.LeapOrion -version 1.1.4`
+[VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
+[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
+[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
+[VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | `nuget install VL.Stride.Text3d -version 0.4.0`
 
 ## vvvv gamma 2021.3.0
 also applies to _vvvv beta42_
