@@ -22,11 +22,11 @@ For completeness, here we duplicate links to some important bits:
 
 ### Tutorials
 - [vvvvTv](https://www.youtube.com/vvvvtv42): Our youtube channel has the official Tutorials and HowTo videos
-- [Beginner video tutorials by chk](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p)
-- [Intermediate video tutorials by Toby K](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V) 
+- [Beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) by chk
+- [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V)  by Toby K
 - [NODE20 Workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
-- [Graphics video tutorials by Takuma Nakata](https://www.youtube.com/c/TakumaNakata/playlists)
-- [Chinese video tutorials by RED](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists)
+- [Graphics video tutorials](https://www.youtube.com/c/TakumaNakata/playlists) by Takuma Nakata
+- [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) by RED
 
 ### Examples
 - [VL.GenerativeGestaltung](https://discourse.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples follwing the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book, by phlegma
@@ -46,10 +46,10 @@ This reference is further structured into the following chapters:
 
 ## Connect
 
-[Forum](http://discourse.vvvv.org): Any questions left? Get them answered here. 
-[Chat](https://app.element.io/#/room/#vvvv:matrix.org): Want to talk with other vvvv users? Here is where we meet.
-[Blog](https://www.visualprogramming.net/blog/): Follow this one, to make sure not to miss any news.
-[Mastodon](https://mastodon.xyz/@vvvv): Follow for more bite-size news than in the blog.
-[Pixelfed](https://pixelfed.social/madewithvvvv): Share screenshots of your work with fellow patchers using [Show and Tell](../hde/showandtell.md).
-[Vimeo](https://vimeo.com/groups/vvvv/sort:date/format:thumbnail): Share your project documentations.
-[GitHub](https://github.com/vvvv) Ready to contribute code? All of vvvv's libraries are open-source.
+* [Forum](http://discourse.vvvv.org): Any questions left? Get them answered here
+* [Chat](https://app.element.io/#/room/#vvvv:matrix.org): Want to talk with other vvvv users? Here is where we meet
+* [Blog](https://www.visualprogramming.net/blog/): Follow this one, to make sure not to miss any news
+* [Mastodon](https://mastodon.xyz/@vvvv): Follow for more bite-size news than in the blog
+* [Pixelfed](https://pixelfed.social/madewithvvvv): Share screenshots of your work with fellow patchers using [Show and Tell](../hde/showandtell.md)
+* [Vimeo](https://vimeo.com/groups/vvvv/sort:date/format:thumbnail): Share your project documentations
+* [GitHub](https://github.com/vvvv): Ready to contribute code? All of vvvv's libraries are open-source!
