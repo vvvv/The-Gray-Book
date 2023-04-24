@@ -29,8 +29,9 @@ For completeness, here we duplicate links to some important bits:
 - [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) by RED
 
 ### Examples
-- [VL.GenerativeGestaltung](https://discourse.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples follwing the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book, by phlegma
-- [Genuary2023](http://www.github.com/CeeYaa/Genuary2023) A collection of examples made following the prompts of [Genuary](http://www.genuary.art/), by CeeYaa
+- [VL.GenerativeGestaltung](https://discourse.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples follwing the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book by phlegma
+- [Nodevember2022](https://discourse.vvvv.org/t/vl-examples-patches-playground01/21166) A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) by CeeYa
+- [Genuary2023](http://www.github.com/CeeYaa/Genuary2023) A collection of examples made following the prompts of [Genuary](http://www.genuary.art/) by CeeYaa
 
 ## Chapters
 
