@@ -40,5 +40,5 @@ In this case you need to use the [commandline argument](../hde/commandline-argum
 
     --editable-packages VL.Devices*;VL.Audio
 
-> NOTE
+> [!NOTE]
 > In addition this makes any package editable that depends on those you specify!
