@@ -5,29 +5,15 @@ TextureFX is a specification for nodes that do GPU/shader based texture operatio
 Here is what you need to know to write your own:
 
 ## Creating a new TextureFX
-Next to your .vl document create a directory named `\shaders`. In this directory place a text file with the suffix `_TextureFX.sdsl`, like:
 
-    \MyProgram.vl
-    \shaders\MyFx_TextureFX.sdsl
+First, see [Editing Shaders](editing-shaders.md.md) on setting up an external shader editing application. 
 
-The .sdsl file then contains the shader for a source, mixer, filter or utility TextureFX. For a simple invert filter, this would be everything that is needed: 
+Then follow [Start from a Template](shaders.md#start-from-a-template) for the quickest way to write a shader. If instead you want to create a shader file manually, here is what you need to take care of in order for the node factory to pick up a file and interpret it as a TextureFX shader:
 
-```c
-shader MyFx_TextureFX : FilterBase
-{
-    float4 Filter(float4 tex0col)
-    {
-        tex0col.rgb = 1 - tex0col.rgb;
-        return tex0col;
-    }
-};
-```
-
-> [!NOTE]
-> 3 things are crucial here for the node factory to pick up a file and interpret it as a TextureFX shader:
-> * The shader name must be unique among the shaders shipping with vvvv and your own
-> * The shader name must end in **_TextureFX**
-> * The filename must be: **[shader-name]_TextureFX.sdsl** 
+* The file must be placed in a subfolder called `shader` next to your .vl file
+* The shader name must be unique among the shaders shipping with vvvv and your own
+* The shader name must end in **_TextureFX**
+* The filename must be: **[shader-name]_TextureFX.sdsl** 
 
 ## Category and Aspects
 
