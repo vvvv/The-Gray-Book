@@ -6,11 +6,11 @@ Here is what you need to know to write your own:
 
 ## Creating a new TextureFX
 
-First, see [Editing Shaders](editing-shaders.md.md) on setting up an external shader editing application. 
+First, see [Editing Shaders](editing-shaders.md) on setting up an external shader editing application. 
 
 Then follow [Start from a Template](shaders.md#start-from-a-template) for the quickest way to write a shader. If instead you want to create a shader file manually, here is what you need to take care of in order for the node factory to pick up a file and interpret it as a TextureFX shader:
 
-* The file must be placed in a subfolder called `shader` next to your .vl file
+* The file must be placed in a subfolder called `shaders` next to your .vl file
 * The shader name must be unique among the shaders shipping with vvvv and your own
 * The shader name must end in **_TextureFX**
 * The filename must be: **[shader-name]_TextureFX.sdsl** 
