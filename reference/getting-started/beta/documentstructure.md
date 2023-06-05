@@ -1,17 +1,8 @@
+# The Document Structure
+
 ## .v4p versus .vl
 In vvvv beta each patch has its own .v4p file. This is different with VL. Here many patches can be collected within a single .vl file or VL document, as we call it. Therefore small VL projects typically only have one VL document, even if they consist of multiple patches.
 
-Then there are 3 different types of patches in VL:
+Then there are different types of patches in VL. You can learn about them in the [Patches](../../language/patches.md) section.
 
-* Datatype Patches
-* The Document Patch
-* Group Patches
-
-## Datatype Patches
-Datatype Patches are the ones that most closely correspond to what you're familiar with from vvvv beta. A new datatype patch is created by pressing <span class="keyseq"><kbd>CTRL</kbd><kbd>P</kbd></span> or <span class="keyseq"><kbd>CTRL</kbd><kbd>Shift</kbd><kbd>P</kbd></span>. Here you can patch as usual.
-
-## The Document Patch
-Every VL document has one toplevel patch that provides an overview of its content. You can always reach it by pressing <span class="keyseq"><kbd>ALT</kbd><kbd>P</kbd></span>
-
-## Group Patches
-You can create a new Group patch by typing 'Group' in the Nodebrowser. Group patches are merely organisational elements in that they have no purpose other than letting you structure/modularize your program.
+The [Process Patch](../../language/patches.md#process) is the one that most closely correspond to what you're familiar with from vvvv beta. Watch [HowTo Make a Node](https://youtu.be/wEziL9RTkMM) to learn how you can wrap a group of nodes in a new patch. 

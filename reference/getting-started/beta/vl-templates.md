@@ -18,5 +18,5 @@ and either:
 * an OperationDefinition
 * a ProcessDefinition with ProcessNode enabled
 
-![](../../images/beta/ProcessNode.png)
+![](../../../images/beta/ProcessNode.png)
 <center>Preparing a vl process for use as a node in vvvv beta</center>
