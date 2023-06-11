@@ -22,16 +22,18 @@ For completeness, here we duplicate links to some important bits:
 
 ### Tutorials
 - [vvvvTv](https://www.youtube.com/vvvvtv42): Our youtube channel has the official Tutorials and HowTo videos
-- [Beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) by chk
-- [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V)  by Toby K
+- [Beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) (by chk)
+- [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V)  (by TobyK)
 - [NODE20 Workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
-- [Graphics video tutorials](https://www.youtube.com/c/TakumaNakata/playlists) by Takuma Nakata
-- [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) by RED
+- [Graphics video tutorials](https://www.youtube.com/c/TakumaNakata/playlists) (by Takuma Nakata)
+- [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) (by RED)
 
 ### Examples
-- [VL.GenerativeGestaltung](https://discourse.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples follwing the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book by phlegma
-- [Nodevember2022](https://discourse.vvvv.org/t/vl-examples-patches-playground01/21166) A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) by CeeYa
-- [Genuary2023](http://www.github.com/CeeYaa/Genuary2023) A collection of examples made following the prompts of [Genuary](http://www.genuary.art/) by CeeYaa
+- [VL.ThePatchersGuide](https://github.com/chkworks/VL.ThePatchersGuide): A tutorial series for absolute beginners, covering all nodes and techniques to get you started (by chk)
+- [VL.GenerativeGestaltung](https://discourse.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples following the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book (by phlegma)
+- [VL.ExtendedTutorials](https://github.com/TobyKLight/VL.ExtendedTutorials): Extended tutorial help patches, covering common questions as learners move from beginner towards intermediate (by TobyK)
+- [Nodevember2022](https://discourse.vvvv.org/t/vl-examples-patches-playground01/21166): A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) (by CeeYaa)
+- [Genuary2023](http://www.github.com/CeeYaa/Genuary2023): A collection of examples made following the prompts of [Genuary](http://www.genuary.art/) (by CeeYaa)
 
 ## Chapters
 
