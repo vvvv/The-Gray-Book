@@ -23,7 +23,7 @@ For completeness, here we duplicate links to some important bits:
 ### Tutorials
 - [vvvvTv](https://www.youtube.com/vvvvtv42): Our youtube channel has the official Tutorials and HowTo videos
 - [Beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) (by chk)
-- [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V)  (by TobyK)
+- [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V) (by TobyK)
 - [NODE20 Workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
 - [Graphics video tutorials](https://www.youtube.com/c/TakumaNakata/playlists) (by Takuma Nakata)
 - [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) (by RED)
