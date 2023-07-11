@@ -5,7 +5,10 @@ Here we are sharing our plans of where vvvv is heading, outlining our coming mil
 ## 5.x
 * Inspektor
 * Logging framework
+* Error View
 * Compute() inputs for TextureFX nodes
+* Node set to communicate with a [redis](https://redis.io/) database
+* OSC and redis backends for global channels
 
 ## 6.0
 * Package Manager: replacing the commandline for installing NuGets
