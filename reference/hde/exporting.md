@@ -113,6 +113,13 @@ In case the export fails, the console will be opened to show there was an error.
 
 Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via forum or chat.
 
+#### Export fails with "..could not copy file.."
+This may happen when you have packages referenced as source repository. To still get a successful export in such cases you can try:
+- In the export log find the line starting with "dotnet publish -c Release" and copy the whole commandline
+- close vvvv
+- open a commandline (cmd.exe)
+- paste the command and run it
+
 #### Export fails With 2021.4.x
 There is a known incompatibility with newer versions of MSBuild tools than what vvvv expects. So in order to make sure the right version of MSBuild tools is installed do as follows:
 - Uninstall all versions of Visual Studio and Build Tools you can find on your machine 
