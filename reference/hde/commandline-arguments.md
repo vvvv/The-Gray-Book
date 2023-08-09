@@ -11,7 +11,7 @@ Override loading the default settings|`--settings` + path to file
 Do not load editor extension packages|`--noextensions`
 Replace the default global location for NuGets|`--nuget-path` + path to directory
 List of package repositories used by VL to lookup packages. Most useful, when [working on libraries](../extending/contributing.md).|`--package-repositories` + a semi-colon separated list of package repository directories
-Tell the exporter to add a path to the generated NuGet.config file, which in turn will be used by dotnet to build the generated project|`--export-package-sources`
+Tell the exporter to add a path to the generated NuGet.config file, which in turn will be used by dotnet to build the generated project|`--export-package-sources` + path to directory with .nupkg files
 **As of 5.0:** Opt-out of the read-only default for libraries in order to work on them. For details, see [Editable Packages](../language/compilation.md#editable-packages).|`--editable-packages` + a semi-colon separated list of packages. Glob patterns are allowed, e.g. VL.IO.*
 
 Example:
