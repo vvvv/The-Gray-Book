@@ -12,7 +12,7 @@ As explained in [Deploy .NET apps on ARM single-board computers](https://learn.m
 ### Framework dependent
 This is the default used by the Exporter. It requires you to [install .NET on the Raspberry Pi](https://learn.microsoft.com/en-us/dotnet/iot/deployment#deploying-a-framework-dependent-app) (Follow steps 1. and 2.) in order to be able to run the export on it. 
 
-After a successful export, copy the generated files over the PI and there on a commandline run the program by typing:
+After a successful export, copy the generated files over to the PI and there on a commandline run the program by typing:
 
 ``dotnet myprogram.dll``
 
@@ -23,13 +23,16 @@ Run the export normally once, then press the "Show Details" button. At the very 
 
 ``dotnet publish -c Release --self-contained false /clp:ErrorsOnly /nologo PathToYourProject.csproj"``
 
-Copy this, open a Command prompt and paste run the command modified like this:
+Copy this, open a Command prompt and run the command modified like this:
 
 ``dotnet publish -c Release -r linux-arm --self-contained true /clp:ErrorsOnly /nologo PathToYourProject.csproj"``
 
-After a successful export, copy the generated files over the PI and there on a commandline run the program by typing:
+After a successful export, copy the generated files over to the PI and there on a commandline set execute permissions on the executable:
 
-``chmod +x myprogram`` (to set execute permissions on the file)
+``chmod +x myprogram``
+
+and then run it:
+
 ``./myprogram``
 
 ## Automatic deployment of files
@@ -60,7 +63,7 @@ Copying the files over to the PI after every build can be automated. In the Expo
 </Target>
 ```
 
-This will copy modified files over to the PI after every build.
+Specify ``SourceFolder`` and ``DestFolder``. Then this will copy modified files over to the PI after every build.
 
 ## Autostart
 To have your application autostart when starting the Pi, you need to install it as a service (other options like rc.local or a .desktop file don't seem to work).
