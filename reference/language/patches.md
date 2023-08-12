@@ -20,7 +20,7 @@ Application patches can also hold definitions, but this is not considered partic
 In case a documents application patch is empty, the document is only used as a library, ie. only providing node definitions to any document referencing it. 
 
 ## Definitions patch
-This is where all the node definitions of a VL document are placed. Here you can use [Categories](categories.md) to build a hierarchy for your definitions. You can reach this patch via the shortcut <span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>A</kbd></span>.
+This is where all the node definitions of a VL document are placed. Here you can use [Categories](categories.md) and [Groups](groups.md) to build a hierarchy and organize your definitions. You can reach this patch via the shortcut <span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>A</kbd></span>.
 
 ![](../../images/language/vl-DocumentPatch.png)
 <center>Section of the definitions patch of VL.CoreLib.vl</center>
