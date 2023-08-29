@@ -16,8 +16,8 @@ abstract class Foo
 
 ### as [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/as)
 ```csharp
-object foo # 1;
-var foo # foo as int;
+object foo = 1;
+var foo = foo as int;
 ```
 Use the *CastAs* node.
 
@@ -26,9 +26,9 @@ Use the *CastAs* node.
 
 ### break [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/break)
 ```csharp
-for (int i # 0; i < 10; i++)
+for (int i = 0; i < 10; i++)
 {
-  if (i % 2 ## 0)
+  if (i % 2 == 0)
     break;
   Console.Beep();
 }
@@ -145,7 +145,7 @@ The concept of a _namespace_ is called [Category](../../language/groups.md#categ
 ### new [![](../images/vl-for-c-programmers-b4959.png)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new)
 
 ```csharp
-var date # new DateTime(2002, 12, 24);
+var date = new DateTime(2002, 12, 24);
 ```
 
 The new keyword denotes a constructor, meaning the operation that creates a new instance of a object. In VL all constructors of classes and records are called __Create__.
