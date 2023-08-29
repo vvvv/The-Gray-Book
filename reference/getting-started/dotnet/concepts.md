@@ -4,19 +4,19 @@
 ## foo++
 How to translate an expression like the following to VL:
 ```csharp
-var foo # 1;
+var foo = 1;
 foo++;
 ```
 
 First we need to agree that the above is only a shortcut to writing:
 ```csharp
-var foo # 1;
-foo # foo + 1;
+var foo = 1;
+foo = foo + 1;
 ```
 
-Then the below patch should be read as: The lower foo pad corresponds to the left side of the assignment (foo #) and the upper foo pad corresponds to the initialized variable foo (var foo # 1). So:
+Then the below patch should be read as: The lower foo pad corresponds to the left side of the assignment (foo =) and the upper foo pad corresponds to the initialized variable foo (var foo = 1). So:
 
-    foo (lower pad) # foo (upper pad) + 1;
+    foo (lower pad) = foo (upper pad) + 1;
 
 ![](../images/vl-for-c-programmers-2e149.png)
 .Note how the link from the IOBox to the foo pad is white, meaning it is assigned to the constructor
