@@ -33,7 +33,7 @@ NuGet: [VL.Devices.RealSense](https://www.nuget.org/packages/VL.Devices.RealSens
 ## ZED Camera
 
 For using [ZED Stereo Cameras](https://www.stereolabs.com/) by Stereo Labs.
-GitHub: [VL.ZEDCamera](https://github.com/m-box-de/VL.ZEDCamera)
+GitHub: [VL.Devices.ZED](https://github.com/vvvv/VL.Devices.ZED) 
 
 ## Nuitrack
 
