@@ -3,6 +3,14 @@
 ## FuzzySearch
 Wrapper for the text similarity metric library SimMetricsCore and several nodes covering Fuzzy Search tasks. Included with vvvv: VL.FuzzySearch
 
+## SRT
+Wrapper for ong.andrew's Universal.Common.Subtitles library.  
+NuGet: [VL.SRT](https://www.nuget.org/packages/VL.SRT)
+
+## GraphLayout
+GraphLayout Implemetaion.  
+NuGet: [VL.GraphLayout](https://www.nuget.org/packages/VL.GraphLayout)
+
 ## ScreenRecorder
 Records fullscreen or a given area as mp4 movie. Including sound.  
 NuGet: [VL.ScreenRecorder](https://www.nuget.org/packages/VL.ScreenRecorder)
