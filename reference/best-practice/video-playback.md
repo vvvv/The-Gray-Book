@@ -6,10 +6,10 @@ vvvv offers two distinct ways for video playback:
 
 ## Video files
 
-- Referencing the VL.Video.Mediafoundation nuget (shipping with vvvv) adds the **VideoPlayer (Stride)** [Video.Mediafoundation] and **VideoPlayer (Skia)** [Video.Mediafoundation] nodes
-- These nodes play a wide range of [video containers and codecs](https://docs.microsoft.com/en-us/windows/win32/medfound/supported-media-formats-in-media-foundation) out of the box
+- Referencing the VL.Video nuget (shipping with vvvv) adds the **VideoPlayer** [Video] node
+- This node plays a wide range of [video containers and codecs](https://docs.microsoft.com/en-us/windows/win32/medfound/supported-media-formats-in-media-foundation) out of the box
 - If you're missing any codecs for playback, see if they are available in this [Mediafoundation Codec Pack](http://codecguide.com/media_foundation_codecs.htm).
-- Consult the help browser for examples on using the nodes
+- Consult the help browser for examples on using the node
 
 ### Advantages
 - Quick and easy to use
