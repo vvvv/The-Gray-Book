@@ -17,6 +17,7 @@
       <link rel="icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
       <link rel="stylesheet" href="{{_rel}}public/docfx.min.css">
       <link rel="stylesheet" href="{{_rel}}public/main.css">
+      <link rel="stylesheet" href="{{_rel}}public/customDocSearch.css">
       <meta name="docfx:navrel" content="{{_navRel}}">
       <meta name="docfx:tocrel" content="{{_tocRel}}">
       {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
@@ -24,7 +25,7 @@
       {{#_disableNewTab}}<meta name="docfx:disablenewtab" content="true">{{/_disableNewTab}}
       {{#_disableTocFilter}}<meta name="docfx:disabletocfilter" content="true">{{/_disableTocFilter}}
       {{#docurl}}<meta name="docfx:docurl" content="{{docurl}}">{{/docurl}}
-      <meta name="loc:inThisArticle" content="{{__global.inThisArticle}}">
+      <meta name="loc:inThisArticle" content="{{_inThisArticle}}">
       <meta name="loc:searchResultsCount" content="{{__global.searchResultsCount}}">
       <meta name="loc:searchNoResults" content="{{__global.searchNoResults}}">
       <meta name="loc:tocFilter" content="{{__global.tocFilter}}">
@@ -83,17 +84,6 @@
           {{!body}}
         </article>
 
-        {{^_disableContribution}}
-        <div class="contribution d-print-none">
-          {{#sourceurl}}
-          <a href="{{sourceurl}}" class="edit-link">{{__global.improveThisDoc}}</a>
-          {{/sourceurl}}
-          {{^sourceurl}}{{#docurl}}
-          <a href="{{docurl}}" class="edit-link">{{__global.improveThisDoc}}</a>
-          {{/docurl}}{{/sourceurl}}
-        </div>
-        {{/_disableContribution}}
-
         {{^_disableNextArticle}}
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
         {{/_disableNextArticle}}
@@ -101,6 +91,16 @@
       </div>
 
       <div class="affix">
+        {{^_disableContribution}}
+        <div class="contribution d-print-none">
+          {{#sourceurl}}
+          <a href="{{sourceurl}}" class="edit-link">{{_improveThisDoc}}</a>
+          {{/sourceurl}}
+          {{^sourceurl}}{{#docurl}}
+          <a href="{{docurl}}" class="edit-link">{{_improveThisDoc}}</a>
+          {{/docurl}}{{/sourceurl}}
+        </div>
+        {{/_disableContribution}}
         <nav id="affix"></nav>
       </div>
     </main>

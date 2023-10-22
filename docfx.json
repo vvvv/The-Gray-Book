@@ -58,6 +58,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "globalMetadata": {
+      "_improveThisDoc": "Edit this page",
+      "_inThisArticle": "IN THIS ARTICLE",
       "_appTitle": "vvvv gamma documentation",
       "_appFooter": "",
       "_enableSearch": false,
@@ -74,12 +76,17 @@
       "_gitUrlPattern": "github"
     },
 	"template": [
-        "default", 
+        "default",
         "modern",
         "custom template/vvvv_modern"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
+    "markdownEngineProperties": {
+      "toc": {
+        "levels": "1,2,3"
+      }
+    },
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,

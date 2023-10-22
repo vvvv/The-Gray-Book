@@ -1,12 +1,9 @@
 <footer class="border-top">
     <div class="container-xxl">
-      <div class="flex-fill">
-          <span class="pull-right">
-            <a href="#top">Back to top</a>
-          </span>
-          {{{_appFooter}}}
-          <span class="broughtToYou">Brought to you by <a href="https://vvvv.org">vvvv.org</a> | <a href="https://www.visualprogramming.net">visualprogramming.net</a></span>
-          {{^_appFooter}}<span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>{{/_appFooter}}
+      <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small">
+        <p class="broughtToYou">Brought to you by <a href="https://vvvv.org">vvvv.org</a> | <a href="https://www.visualprogramming.net">visualprogramming.net</a></p>
+        <p>Made with <a href="https://dotnet.github.io/docfx">docfx</a></p>
+        <p><a href="#top">Back to top</a></p>
       </div>
     </div>
-  </footer>
+</footer>

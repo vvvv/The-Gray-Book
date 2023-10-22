@@ -120,3 +120,28 @@ kbd
     margin-right: inherit;
     float: left;
 }
+
+button, a {
+    color: #337ab7;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+button, a:hover {
+    text-decoration: underline;
+}
+
+a.external[href]::after
+{
+    margin: 0 .5em;
+}
+
+.contribution
+{
+    margin-bottom: 1em;
+}
+
+.edit-link
+{
+    font-weight: bold;
+}
