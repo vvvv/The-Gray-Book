@@ -19,7 +19,29 @@ kbd
     margin:-0.15em 0.15em 0 0.15em;
     padding:0.3em 0.4em;
     vertical-align:middle;
-    white-space:nowrap
+    white-space:nowrap;
+}
+
+@media (prefers-color-scheme: light) {
+    kbd
+    {
+        background-color:#fff;
+        border: 1px solid #ccc;;
+        -moz-box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #fff inset;
+        -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #fff inset;
+        box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #fff inset;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    kbd.adaptive
+    {
+        background-color:#aaa;
+        border: none;
+        -moz-box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #444 inset;
+        -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #444 inset;
+        box-shadow:0 1px 0 rgba(0,0,0,0.1),0 0 0 0.1em #444 inset;
+    }
 }
 
 .keyseq {
