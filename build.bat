@@ -1,0 +1,2 @@
+docfx build
+docfx serve
