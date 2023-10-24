@@ -9,15 +9,17 @@ Writing your own nodes for VL using C# requires no VL specific knowledge or prep
 Use the built-in C# Wizard (as of version 5.0)
 - `Quad` -> `New` -> `C# File`
 - Choose one of the templates
-- By default this will create and reference a .csproj file with the name of your current main document. If such a .csproj already exists, it will add the C# file to it, assuming the default workflow will be one .csproj file with possibly many .cs files for your project
-- To override this default behavior, you can open the `Customize` dropdown:
-  - Manually specify a name for the .cs file
-  - Choose to which among possibly multiple .csproj files you want the file added to
-  - Uncheck `Use Existing` to create a new .csproj file
+  - By default  a .csproj file with the name of your current main document will be created. If such a .csproj already exists, it will add the C# file to it. This is assuming the typical scenario will be one .csproj file with possibly many .cs files for your project
+  - Optional: To override this default behavior, you can open the `Customize` dropdown:
+      - Manually specify a name for the .cs file
+    - Choose to which among possibly multiple .csproj files you want the file added to
+    - Uncheck `Use Existing` to create a new .csproj file
 - In the `Open on Create` pulldown you can choose:
   - Open the .csproj: Ideally you have an IDE like Visual Studio 2022 installed and open the .csproj file
   - Open the .cs file: If you don't have a full IDE installed, you can also simply edit the .cs files with any text editor
   - Open Folder: In case you don't want to edit the file at this point, you can also just see where it is located by having the explorer opened, pointing to it
+- Press `Create`
+  - This will create the file(s) on disk and reference the .csproj file to you current main document
 
 ![](../../images/reference/extending/StaticUtils.png)
 <center>The Static Utils template opened in Visual Studio 2022</center>
@@ -26,6 +28,12 @@ The first time a new .csproj file is created, you will see it is automatically r
 
 ![](../../images/reference/extending/csharp-reference.png)
 <center>A .csproj file referenced in a .vl document</center>
+
+> NOTE
+> Don't use referenced .csproj files when you're working on a library you're going to ship as a NuGet! It would force the whole package and all packages that depend on it editable, meaning you'd lose the benefit of a [read-only package](../language/compilation.md#read-only-packages). 
+
+## Create the node
+Open the [NodeBrowser](../../hde/the_nodebrowser.md) and find the methods and classes of your c# file by their names.
 
 The Static Utils templates' code for example will then translate to the following node in VL:
 
@@ -70,12 +78,12 @@ Here are some simple examples and a few more details that will help you create y
 
 For more general considerations also see: [Design Guidelines](design_guidelines.md)
 
-## Namespaces 
+### Namespaces 
 The Namespace you specify in C# will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
 
 ### Pin Names
 
-For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in c# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
+For better readability in VL, an operation's arguments are separated at camelCasing. So "firstInput" in C# turns into "First Input" in VL. The default “return” value is called "Output" in VL.
 
 ```csharp
 public static float PinNames(float firstInput, float secondInput)
@@ -89,7 +97,7 @@ public static float PinNames(float firstInput, float secondInput)
 
 ### Default Values
 
-Simply use the c# notation for defaults to define defaults for inputs in VL.
+Simply use the C# notation for defaults to define defaults for inputs in VL.
 
 ```csharp
 public static float Defaults(float firstInput=44f, float secondInput=0.44f)
@@ -138,7 +146,7 @@ Choosing the respective node in the NodeBrowser will then ask you for a further 
 
 ### Using Enums
 
-You can use custom c# enums as input or output types to operations:
+You can use custom C# enums as input or output types to operations:
 ```csharp
 public enum DemoEnum { Foo, Bar };
 
@@ -169,7 +177,7 @@ public static string Generic<T>(T input)
 
 ### Operating on Spreads
 
-The c# IEnumerable<> appears as Sequence<> in VL:
+The C# IEnumerable<> appears as Sequence<> in VL:
 
 ```csharp
 public static IEnumerable<float> ReverseSequence(IEnumerable<float> input)
@@ -205,7 +213,7 @@ public static int HTMLDocuTest(int a)
 <center>Documentation shows up in NodeBrowser and Tooltip</center>
 
 > [!NOTE]
-> Don't forget to enable "XML Documentation File" in the c# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
+> Don't forget to enable "XML Documentation File" in the C# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
 
 ### C# Ref Paramters
 
@@ -223,7 +231,7 @@ public static int RefParams(ref int firstInput)
 
 ### Datatypes
 
-Any datatype that you define as class or strcut in c# can be used in VL:
+Any datatype that you define as class or struct in C# can be used in VL:
 
 * Any constructor will be available as a Create node
 * Any get-property will show up as a node returning the properties value
@@ -257,7 +265,7 @@ public class MyDataType
 
 VL translates .net events that conform to the [.NET Core Event Pattern](https://docs.microsoft.com/en-us/dotnet/csharp/modern-events) to Observables automatically. So you can simply use events in your code and then access them in VL via the Observable pattern.
 
-Here is an example of c# events without and with event arguments:
+Here is an example of C# events without and with event arguments:
 
 ```csharp
 public class MyDataType
@@ -313,7 +321,7 @@ For general information on workig with Observables see the chapter about [Reacti
 
 Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime.
 
-Consider a normal enum in c#:
+Consider a normal enum in C#:
 ```csharp
 enum MyEnum = { Foo, Bar }
 ```
@@ -329,7 +337,7 @@ public static string EnumDemo(MyEnum e)
 
 #### Implementing dynamic Enums for VL
 
-Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in c#:
+Now in order to create a dynamic enum for VL we also need those two elements, the type and the definition. Both need to be implemented as classes in C#:
 
 * The type needs to implement `IDynamicEnum`
 * The definition needs to implement `IDynamicEnumDefinition`

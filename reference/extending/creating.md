@@ -22,6 +22,9 @@ The .nuspec file describes a nuget in a simple text format as defined by the [Nu
 
 The .vl file acts as the central entry point when using the nuget. It defines all actual nodes that you get by using the nuget: everything has to be either patched in there or marked as a 'forwarded dependency'.
 
+> NOTE
+> Make sure non of the .vl files in a package has a referenced .csproj file! It would force the whole package and all packages that depend on it editable, meaning you'd lose the benefit of a [read-only package](../language/compilation.md#read-only-packages). 
+
 In order for nugets to work with vvvv you have to provide the following structure where of course all the directories are optional and only needed when actually used by a specific nuget:
 
 ```

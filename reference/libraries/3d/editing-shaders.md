@@ -12,25 +12,13 @@ For syntax highlighting you have to use an editor that supports HLSL syntax high
 
 ## Error Reporting
 For serious shader coding you'll not want to miss error reporting. This requires
-*  [Visual Studio 2019](https://visualstudio.microsoft.com/)
-* The Stride extension, which comes with the [Stride installer](https://stride3d.net/download/)
-* Stride must be installed for this to work, to see which version, check the "About" dialogue in vvvv gamma
+*  [Visual Studio 2022](https://visualstudio.microsoft.com/)
+* The Stride extension for Visual Studio, which comes with the [Stride installer](https://stride3d.net/download/)
+* Stride itself must also be installed for this to work. To see which exact version of Stride is required for your vvvv version, check the "About" dialog in vvvv 
 
- Additionally recommended:
-  * Enable the [scroll bar code map](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar?view=vs-2019)
- * [Productivity Power Tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017) for highlighting the selected word
+### Additional recommendations
+* [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer/releases): A tool that lets you explore the built-in shaders and their inheritance hierarchy
+* Enable the [scroll bar code map](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar?view=vs-2022) in Visual Studio
+* [Productivity Power Tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2022) for highlighting the selected word
 
-
- It will give you the best shader editing experience, including syntax highlighting, code completion, code navigation and error reporting. 
-
-For quickly setting up a VS solution that holds all your shaders, go to:
-
-    C:\Program Files\vvvv\vvvv_gamma_...\lib\packs\VL.Stride.Runtime...\help\Overview
-
-and copy the `\EditShaders` folder next to your `\shaders` folder resulting in a setup like this:
-
-    MyProject\EditShaders\EditShaders.sln
-    MyProject\shaders\shader_files.sdsl
-    MyProject\MainDoc.vl
-
-Now when you open \EditShaders\EditShaders.sln it will pick up all your shaders automatically and you can start working on them.
+This setup will give you the best shader editing experience, including syntax highlighting, code completion, code navigation and error reporting. 

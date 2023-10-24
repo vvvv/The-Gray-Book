@@ -26,8 +26,8 @@ Reload Active Document discarding unsaved changes|<span class="keyseq"><kbd>Ctrl
 Close Active Document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>W</kbd></span>
 Show Active Document in Explorer|<span class="keyseq"><kbd>Alt</kbd><kbd>E</kbd></span>
 View Active Document as Text|<span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
-Add Existing Dependency|<span class="keyseq"><kbd>Control</kbd><kbd>E</kbd></span>
-Add .NET Framework Assembly|<span class="keyseq"><kbd>Control</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
+Add Existing Dependency|<span class="keyseq"><kbd>Ctrl</kbd><kbd>E</kbd></span>
+Add .NET Framework Assembly|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
 
 ## Basics
 Description|Action
@@ -82,6 +82,8 @@ Decrease count of input pins for nodes like +, Cons, ...|<span class="keyseq"><k
 Expose Pins|<span class="keyseq"><kbd>Ctrl</kbd><kbd>K</kbd></span>
 Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
+Assign a [Help Flag](../extending/providing-help.md#help-flags)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>H</kbd></span>
+
 
 ## Pin Groups
 
@@ -105,6 +107,8 @@ Create via Nodebrowser|double leftclick in patch, type name of pad, choose _Pad_
 Create while linking|Finish with <span class="keyseq"><kbd>Shift</kbd></span> + leftclick in the patch
 Bake current type annotation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>T</kbd></span>
 Clear type annotation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>T</kbd></span>
+Create Create/Split operations|<span class="keyseq"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+Create property accessors operations (Get/Set)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>K</kbd></span>
 
 ## IOBoxes
 Description|Action
@@ -190,10 +194,10 @@ Restart editor extensions|<span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></sp
 ## Windows
 Description|Action
 -|-
-Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
-Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
 Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
 Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
+Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
+Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
 
 ## VL.Stride
 The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:

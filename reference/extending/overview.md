@@ -20,3 +20,7 @@ vvvv makes it easy for you to extend it with your own nodes and libraries. Here 
 
 ## Extending the vvvv editor
 * [Creating Editor Extensions](editor-extensions.md)
+
+## Related Webinars
+* [Using .NET NuGets](https://vimeo.com/showcase/9462001/video/467351841)
+* [Turning a .NET library into a VL library](https://vimeo.com/showcase/9462001/video/467350999) 

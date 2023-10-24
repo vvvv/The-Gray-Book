@@ -1,3 +1,5 @@
+# Evaluation
+
 Evaluation in vvvv beta is framebased. Each frame the whole graph is being evaluated *lazily* starting from sinks, like Renderers or Writers:
 
 There are some nodes that don't evaluate inputs under certain circumstances. A Switch (Input) for example only evaluates the one input that currently is switched to. A S+H only evaluates its data source, if you really want to sample in that frame. So vvvv beta takes care that not everything is evaluated, but only the part that is necessary.

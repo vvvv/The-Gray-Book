@@ -18,6 +18,12 @@ NuGet: [VL.Kairos](https://www.nuget.org/packages/VL.Kairos)
 A sequencing timeline that contains clips of various types.  
 GitHub: [Tilda](https://github.com/nsynkde/Tilda)
 
+## State Machine
+
+### AutomataUI
+A finite Statemachine Editor.  
+NuGet: [VL.AutomataUI](https://www.nuget.org/packages/VL.AutomataUI)
+
 ### See also
 * [Chataigne](http://benjamin.kuperberg.fr/chataigne/en)
 * [ossia score](https://ossia.io)

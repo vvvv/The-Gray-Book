@@ -77,14 +77,11 @@ If your application is referencing VL.Stride, make sure the target PC also has t
 * [Microsoft Visual C++ Redistributables 2015](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 * [.NET6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) (For FileTexture and FileModel nodes to work)
 
-### 2021.4.12
+### For versions prior to 5.0
 For applications exported with this older version of vvvv, you'll also have to install:
 * [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
 
 ## Advanced build configuration
-> [!NOTE]
-> This is only true for 2022.5 preview builds!
-
 The build process can be customized in many details. Next to your main .vl file, place a .props file with the same name. This is actually an .xml file which you can configure to your needs using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) syntax.
 
 ## Useful nodes
@@ -115,6 +112,13 @@ In case the export fails, the console will be opened to show there was an error.
 <center>The Application Exporter reporting a problem</center>
 
 Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via forum or chat.
+
+#### Export fails with "..could not copy file.."
+This may happen when you have packages referenced as source repository. To still get a successful export in such cases you can try:
+- In the export log find the line starting with "dotnet publish -c Release" and copy the whole commandline
+- close vvvv
+- open a commandline (cmd.exe)
+- paste the command and run it
 
 #### Export fails With 2021.4.x
 There is a known incompatibility with newer versions of MSBuild tools than what vvvv expects. So in order to make sure the right version of MSBuild tools is installed do as follows:

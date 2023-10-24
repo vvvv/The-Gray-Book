@@ -4,6 +4,9 @@
 
 For audio playback, recording, analysis and sound synthesis vvvv ships with the [VL.Audio](https://www.nuget.org/packages/VL.Audio) package. For more advanced features like beat tracking and pitch analysis, install the optional [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) package, which as the name implies, stands under the [GPL license](https://opensource.org/licenses/gpl-license). 
 
+For an alternative player, see also:  
+NuGet: [VL.GameAudioPlayer](https://www.nuget.org/packages/VL.GameAudioPlayer)
+
 ### Audio drivers
 VL.Audio supports both WASAPI and ASIO drivers. By default the engine will try to use the system WASAPI drivers which should work out of the box with default settings. 
 

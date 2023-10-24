@@ -31,7 +31,7 @@ An action takes input parameters, listed as key-value pairs. In a workflow scrip
 
 ```
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.29
+    uses: vvvv/PublishVLNuget@1.0.42
     with:
     csproj: src\VL.MyLib.csproj
     nuspec: deployment\VL.MyLib.nuspec
@@ -87,7 +87,7 @@ Please note that you have to set the `icon-dst` input parameter to an already ex
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.29
+    uses: vvvv/PublishVLNuget@1.0.42
     with:
     (...)
     icon-src: https://wwww.url.to/nugeticon.png
@@ -101,7 +101,7 @@ In your action, set the icon destination to the root of the repo :
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.29
+    uses: vvvv/PublishVLNuget@1.0.42
     with:
     (...)
     icon-src: https://wwww.url.to/nugeticon.png
@@ -229,7 +229,7 @@ Now that everything is setup, we can add our action and fill its parameters acco
 
 ```
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.29
+    uses: vvvv/PublishVLNuget@1.0.42
     with:
     csproj: src\VL.MyLib.csproj
     nuspec: deployment\VL.MyLib.nuspec
