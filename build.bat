@@ -1,2 +1,1 @@
-docfx build
-docfx serve
+docfx build docfx.json
