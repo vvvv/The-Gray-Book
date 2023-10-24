@@ -4,7 +4,7 @@ What you can do with the various existing creative coding frameworks, is often r
 
 ## What people are using vvvv for
 vvvv is used in a wide range of projects covering topics like: generative-design, interaction-design, data-visualization, computer-vision, VR, show-control, physical-computing, machine-learning and generally for any kind of quick prototyping.
-Have a look at the [Gallery](https://visualprogramming.net/#Gallery) to see some specific examples.
+Have a look at the [Gallery](https://visualprogramming.net/#Showcase) to see some specific examples.
 
 ---
 
