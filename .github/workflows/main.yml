@@ -11,14 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    # Setup .NET SDK
+    - name: Dotnet Setup
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.x
+
+    # Checkout repo
     - name: Checkout repo
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
+    
+    # Install DocFX 2.71.0
+    - name: Install DocFX
+      run: dotnet tool update -g docfx --version 2.71.0
 
-    - uses: nikeee/docfx-action@master
-      with:
-        args: docfx.json
+    - name: Build documentation
+      run: ./build.bat
+      working-directory: The-Gray-Book
     
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.0
