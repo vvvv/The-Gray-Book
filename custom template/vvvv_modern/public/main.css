@@ -122,7 +122,7 @@ kbd
 }
 
 button, a {
-    color: #337ab7;
+    color:var (--bs-link-color);
     cursor: pointer;
     text-decoration: none;
   }
@@ -144,4 +144,14 @@ a.external[href]::after
 .edit-link
 {
     font-weight: bold;
+}
+
+[data-bs-theme="dark"]
+{
+    --bs-link-color: #6ea8fe;
+}
+
+[data-bs-theme="light"]
+{
+    --bs-link-color: #337ab7;
 }
