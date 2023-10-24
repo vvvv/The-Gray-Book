@@ -30,7 +30,6 @@ jobs:
 
     - name: Build documentation
       run: ./build.bat
-      working-directory: The-Gray-Book
     
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.0
