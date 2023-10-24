@@ -1,0 +1,72 @@
+{{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
+{{!include(/^public/.*/)}}
+{{!include(favicon.ico)}}
+{{!include(logo.svg)}}
+
+<!DOCTYPE html>
+<html {{#_lang}}lang="{{_lang}}"{{/_lang}}>
+
+{{>partials/head}}
+
+  {{^redirect_url}}
+  <body class="tex2jax_ignore" data-layout="{{_layout}}{{layout}}" data-yaml-mime="{{yamlmime}}">
+    <header class="bg-body border-bottom">
+      {{>partials/navbar}}
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em"
+              type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas"
+              aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="{{uid}}">
+          {{!body}}
+        </article>
+
+        {{^_disableNextArticle}}
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        {{/_disableNextArticle}}
+        
+      </div>
+
+      <div class="affix">
+        {{^_disableContribution}}
+        <div class="contribution d-print-none">
+          {{#sourceurl}}
+          <a href="{{sourceurl}}" class="edit-link">{{_improveThisDoc}}</a>
+          {{/sourceurl}}
+          {{^sourceurl}}{{#docurl}}
+          <a href="{{docurl}}" class="edit-link">{{_improveThisDoc}}</a>
+          {{/docurl}}{{/sourceurl}}
+        </div>
+        {{/_disableContribution}}
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    {{^_disableFooter}}
+      {{>partials/footer}}
+    {{/_disableFooter}}
+    {{>partials/scripts}}
+  </body>
+  {{/redirect_url}}
+</html>
