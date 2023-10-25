@@ -6,7 +6,7 @@
 
 .ds-search
 {
-    width: 230px;
+    width: 250px;
     background-color: var(--bs-body-bg);
 }
 
@@ -17,9 +17,18 @@
 
 .DocSearch-Modal
 {
-    margin: 80px auto auto;
-    border-radius: 3px;
+    margin: 0 auto auto;
+    border-radius: 0px;
 }
+
+@media (min-width: 768px) {
+    .DocSearch-Modal
+        {
+            margin: 110px auto auto;
+            border-radius: 3px;
+        }
+    }
+
 
 .DocSearch-Button
 {

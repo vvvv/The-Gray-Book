@@ -15,6 +15,16 @@ const app = {
             icon: 'image',
             href: 'https://pixelfed.social/madewithvvvv',
             title: 'Pixelfed'
+        },
+        {
+            icon: 'vimeo',
+            href: 'https://vimeo.com/groups/vvvv/sort:date/format:thumbnail',
+            title: 'Vimeo'
+        },
+        {
+            icon: 'youtube',
+            href: 'https://www.youtube.com/channel/UCu-xqv-TLwv6L0An7MJJA5A',
+            title: 'Youtube'
         }
     ],
     start: function () {

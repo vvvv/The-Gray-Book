@@ -1,7 +1,13 @@
 header
 {
     z-index: 100;
+    flex-direction: column;
 }
+
+@media (min-width: 768px) {
+    body > header, body[data-layout="landing"] > header {
+        height: 90px;
+    }
 
 kbd
 {
@@ -57,7 +63,7 @@ kbd
 
 .topbar
 {
-    background-color: #111111;
+    background-color: var(--bs-secondary-bg);
     height: 2.3em;
     display: flex;
     flex-direction: column;
@@ -65,18 +71,17 @@ kbd
     padding-bottom: 4px;
 }
 
-.topbar a
+a.backtovvvv 
 {
     font-size: 12px;
-    color: #cfcfcf;
+    color: var(--bs-body-color);
     text-decoration: none;
     margin: 0px;
 }
 
-.topbar a:hover
+a.backtovvvv:hover
 {
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    color: var(--bs-emphasis-color);
     margin-bottom: 3px;
 }
 
