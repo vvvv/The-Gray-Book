@@ -17,7 +17,7 @@ For serialization to XElement (ie. XML) best use the nodes from the `System.Seri
 * Serialize -> XElement -> Deserialize
 * Serialize (Log Errors) [Advanced] -> XElement -> Deserialize (Log Errors)
 
-Further, the following nodes from the advanced category `System.Serialization.Volatile` can be used:
+Further, the following nodes from the package `VL.Serialization.FSPickler` can be used:
 
 * Serialize (XML) -> String -> Deserialize (XML)
 * Serialize (JSON) -> String -> Deserialize (JSON)
