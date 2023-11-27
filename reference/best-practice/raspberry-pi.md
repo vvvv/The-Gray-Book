@@ -74,6 +74,11 @@ For installing a service, refer to chapter "4.4 Using A Systemd Service" of [boo
 - If your program is accessing files, make sure to set the ``WorkingDirectory`` to where your application resides on disk
 - ``ExecStart`` needs to have absolut paths to both "dotnet" and your application. eg.: ``/home/pi/.dotnet/dotnet /home/pi/MyApp/myapp.dll`` 
 
+### Map Pi as network drive
+To map your Pi users home directory to the Z drive on your windows machine, in a command prompt run:  
+
+``net use Z: \\[hostname]\[username]``
+
 ## Useful NuGets
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio): for GPIO, I2C, SPI, PWM, Serial port
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings): for higher-level specific device support
