@@ -78,7 +78,8 @@ Compared to one or the other frameworks listed above, you may miss:
 * vvvv cannot export to mobiles or the web. This is not totally out of the question, but not on the roadmap as of now
 
 ## Getting Started
-* Watch the [Tutorials](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) to learn the very basics
+* Watch [these Tutorials](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) and then [these Tutorials](https://www.youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) to learn the very basics
+* See if there are upcoming [live online courses at The NODE Institute](https://thenodeinstitute.org/) 
 * And the [Recordings of NODE20 Webinars](https://vimeo.com/showcase/node20workshops) for 90 additional hours of learning
 * As you have more specific questions, find them answered in the  [HowTo's](https://www.youtube.com/playlist?list=PLBTgwgsWWcT-G9lk-IlKLkGZJ9NnXcuBV)
 
