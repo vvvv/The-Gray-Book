@@ -92,7 +92,7 @@ shader MyFX_TextureFX : TextureFX
 
 | Attribute | Description
 |---|---|
-| Category | If not specified, the node will show up under `Stride\Textures`. Specifying a category allows you to put the node in a subcategory from there. Also [aspects](../extending/aspects.md) can be added among the category here, like e.g. Filter.Experimental
+| Category | If not specified, the node will show up under `Stride\Textures`. Specifying a category allows you to put the node in a subcategory from there. Use `:` to define a new root category (e.g. `:My.Category`). Also [aspects](../extending/aspects.md) can be added among the category here, like e.g. Filter.Experimental
 | Summary | A short info that shows up as tooltip on the node in the NodeBrowser and when hovered in a patch.
 | Remarks | Additional info regarding the node visible on the tooltip in the patch.
 | Tags | A list of search terms (separated by space, not comma!) the node should be found with, when typed in the NodeBrowser.
