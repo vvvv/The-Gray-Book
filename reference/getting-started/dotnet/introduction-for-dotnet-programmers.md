@@ -2,7 +2,7 @@
 
 VL is a visual programming language for [.NET](https://en.wikipedia.org/wiki/.NET_Framework). It combines dataflow programming with features known from object-oriented programming. vvvv is the editing environment for VL.
 
-Currently vvvv is still using .NETFramework, but an update to .NETCore is planned. 
+Versions 5.x of vvvv are using .NET6, an update to .NET8 for newer versions is in the making. 
 
 With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document. The VL.CoreLib is built on top of [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard).
 
