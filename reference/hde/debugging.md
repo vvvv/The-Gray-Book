@@ -1,5 +1,10 @@
 # Debugging
 
+Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>F2</kbd></span> to open the following debug windows
+- [Build result](debugging-buildresult.md)
+- [App Health](debugging-apphealth.md)
+- [Log](debugging-log.md)
+
 ## Stepping Execution
 
 Description | Action
