@@ -4,8 +4,9 @@
 
 The log is collecting all messages over time and shows you the whole history, until you clear it or the buffer runs over (Buffer length defaults to 5000 but can be configured via the Settings).
 
-Here you'll find all messages sent by the system, but also by your app. To distinguish between those, see the "Source" column. 
+![](2023-12-20-21-15-29.png)
 
+Here you'll find all messages sent by the system, but also by your app. To distinguish between those, see the "Source" column. 
 
 To create log messages from your patches use the Log [System.Logging] node. 
 
