@@ -26,7 +26,7 @@ In general we try to do as little renaming as possible when importing data types
 
 ## Getting Started
 
-Here are a view workshop recordings particularly suited if you have a background in .NET:
+Here are a few workshop recordings particularly suited if you have a background in .NET:
 - [Introduction to vvvv For Coders](https://vimeo.com/467725726)
 - [Using .NET NuGets](https://vimeo.com/467351841)
 - [Object Oriented Patching](https://vimeo.com/467436333)
