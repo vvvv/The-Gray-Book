@@ -17,5 +17,6 @@ Keeping this list in check is the basis of a [healthy app](debugging-apphealth.m
 
 
 Remarks: 
+* Typically only the Errors are of interest.
 * vvvv can build patches with errors. This allows for faster iterations and refactorings. You don't need to fix every error to test a new idea. If you are in the process of such a refactoring you might see a lot of errors. The Build Result view reminds you of those, but don't feel bad. Sometimes when developing bigger patches, this is just part of working, a proof that things are moving. Decide for yourself when it's about tackling those errors again. For sure, when testing your app, searching for a bug is easier if there are no build errors left.
 * Warnings: There are too many of them typically and it's quite hard to get rid of them. So it's a bit tricky to take them seriously. However, they still have a purpose which is trying to help you with reasoning about what your app does. Especially when it comes to object mutability and order of execution.
