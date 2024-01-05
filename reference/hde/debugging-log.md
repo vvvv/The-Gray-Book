@@ -34,3 +34,8 @@ The interesting thing with logging is that you can also route logs to any [loggi
 When exporting your application, by default you've now lost the ability to view your log messages, since the above Log window is part of vvvv itself and not your app.
 
 Yes you still have all the possibilities to use any thirdparty log providers but you may also want to have a log window as part of your application, see "HowTo Use the log view in an exported application" for how to set this up.
+
+## Log issues during startup of vvvv
+If you encounter issues already while vvvv itself is starting up, run vvvv.exe using the `--log` commandline argument and then inspect the vvvv.log file being created in:
+
+    %UserProfile%\Documents\vvvv\gamma\
