@@ -238,4 +238,4 @@ Don't reference your own nuget in any .vl documents that contribute to a nuget o
 Still to be defined: in what form to provide tests (patches, code,..) that can be run automated
 
 ### Help Patches
-See [Providing Help](providinghelp.md)
+See [Providing Help](providing-help.md)
