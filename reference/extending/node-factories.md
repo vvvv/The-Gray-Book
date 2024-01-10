@@ -8,6 +8,6 @@ When done, please select the factory in your VL document as a dependency, like s
 
 
 For examples, see: 
-* https://github.com/vvvv/VL.RunwayML/blob/master/src/ModelFactory.cs
-* https://github.com/vvvv/VL.Audio/blob/main/src/Nodes/NodeFactory.cs
+* https://github.com/vvvv/VL.Audio/blob/main/src/Initialization.cs
+* https://github.com/vvvv/VL.RunwayML/blob/master/src/Initialization.cs
 
