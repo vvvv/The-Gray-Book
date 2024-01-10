@@ -8,7 +8,6 @@
 2. Make an installer
 4. Package the installer to MSIX
 5. Upload MSIX to the store
-6. **Check if dependencies have to be provided**
 
 #### Step by step
 
@@ -23,8 +22,15 @@ https://learn.microsoft.com/en-us/windows/apps/publish/partner-center/account-ty
   - `Package/Identity/Publisher`
   - `Package/Properties/PublisherDisplayName`
 
-- Back to Gamma. Export your app
+- Back to Gamma. Export your app.
 
+  Note, apps packaged as MSIX should be self-contained, so all the dependencies (also those from .NET) has to be packaged.
+  As for now, after exporting the App you should:
+  - copy the `build` string from the Export dialog (like `dotnet publish -c Release --self-contained false /clp:ErrorsOnly /nologo "C:\Work\MyApp\Export\src\MyApp\MyApp.csproj"`)
+  - replace `--self-contained false` to `--self-contained true`
+  - run that line from the commandline
+  - the build will be here `C:\Work\MyApp\Export\src\MyApp\bin` (don't forget to copy all assets into this folder)
+  
 - Make in installer for your app
   https://jrsoftware.org/isinfo.php
 
