@@ -1,16 +1,5 @@
 # Machine Learning (ML)
 
-## MediaPipe
-A set of nodes to get results out of [MediaPipe](https://mediapipe.dev/) models to do:
-- face detection and tracking
-- face landmarks
-- hand tracking and gesture recognition
-- object detection and tracking
-- image classification and segmentation
-
-Using [mediapipe-touchdesigner](https://github.com/torinmb/mediapipe-touchdesigner) under the hood.  
-NuGet: [VL.MediaPipe](https://www.nuget.org/packages/VL.Mediapipe)
-
 ## Wekinator
 A set of nodes to easily interact with [The Wekinator](http://www.wekinator.org/)  
 NuGet: [VL.Wekinator](https://www.nuget.org/packages/VL.Wekinator)
