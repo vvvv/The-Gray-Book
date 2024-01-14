@@ -76,6 +76,7 @@
 ### [TextureFX](libraries/3d/texturefx.md)
 ### [Editing Shaders](libraries/3d/editing-shaders.md)
 ### [Projection Mapping](libraries/projectionmapping.md)
+### [Virtual Reality](libraries/3d/virtual-reality.md)
 ### [Graphics Cards](libraries/3d/graphics-cards.md)
 ## [Animation](libraries/animation.md)
 ## [Audio](libraries/audio.md)
@@ -96,6 +97,7 @@
 ## [Projection Mapping](libraries/projectionmapping.md)
 ## [Video](libraries/video.md)
 ## [Misc](libraries/misc.md)
+## [On Demand](libraries/on-demand.md)
 
 # [Extending vvvv](extending/overview.md)
 ## [Using .NET Libraries](extending/using-net-libraries.md)
