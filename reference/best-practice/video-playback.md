@@ -8,7 +8,7 @@ vvvv offers two distinct ways for video playback:
 
 - Referencing the VL.Video.Mediafoundation nuget (shipping with vvvv) adds the **VideoPlayer (Stride)** [Video.Mediafoundation] and **VideoPlayer (Skia)** [Video.Mediafoundation] nodes
 - These nodes play a wide range of [video containers and codecs](https://docs.microsoft.com/en-us/windows/win32/medfound/supported-media-formats-in-media-foundation) out of the box
-- If you're missing any codecs for playback, see if they are available in this [Mediafoundation Codec Pack](http://codecguide.com/media_foundation_codecs.htm).
+- If you're missing any codecs like HVEC, VP9, AV1 or MPEG-2 for playback, get them as described in the [Mediafoundation Codec Guide](http://codecguide.com/media_foundation_codecs.htm)
 - Consult the help browser for examples on using the nodes
 
 ### Advantages
@@ -59,7 +59,7 @@ vvvv offers two distinct ways for video playback:
 ### DDS conversion tools
 
 * [Texconv](https://github.com/Microsoft/DirectXTex/wiki/Texconv): Commandline tool
-* [TexconvGUI](https://vvvv.org/contribution/texconvgui): A GUI for the above
+* [TexconvGUI](https://github.com/bj-rn/texconvgui/releases): A GUI for the above
 * [Intel's Texture Works](https://gametechdev.github.io/Intel-Texture-Works-Plugin/): A Plugin for Photoshop
 * [NVIDIA Texture Tools Exporter](https://developer.nvidia.com/nvidia-texture-tools-exporter)
 * [AMD Compressonator](https://gpuopen.com/gaming-product/compressonator/)
