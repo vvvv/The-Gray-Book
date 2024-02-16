@@ -25,7 +25,7 @@ For completeness, here we duplicate links to some important bits:
 - [Beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) (by chk)
 - [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V) (by TobyK)
 - [NODE20 workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
-- [Graphics video tutorials](https://www.youtube.com/c/TakumaNakata/playlists) (by Takuma Nakata)
+- [Graphics video tutorials](https://www.youtube.com/playlist?list=PLK3HDkvkLePRQpgCIb8dL9CRSYOTmNbdI) (by Takuma Nakata)
 - [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) (by RED)
 
 ### Examples
