@@ -151,7 +151,7 @@ Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> 
 Insert a node into an existing link|Double leftclick the link
 Show a links tooltip to see its current value and the operation it is assigned to|Press <span class="keyseq"><kbd>Ctrl</kbd></span> while hovering the link
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>Space</kbd></span>
-Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
+Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
 
 ## Finders
 For more details, see [Finders](finders.md).
@@ -166,6 +166,7 @@ Description|Action
 -|-
 Create a Frame from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd></span> while making a marquee selection
 Create a Frame in viewspace from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd></span> while making a marquee selection
+Force to include frames in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
 Surround selected nodes with a frame|<span class="keyseq"><kbd>Alt</kbd><kbd>F</kbd></span>
 Surround selected nodes with a frame in viewspace|<span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></span>
 Toggle visibility of all frames in a patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd></span>
