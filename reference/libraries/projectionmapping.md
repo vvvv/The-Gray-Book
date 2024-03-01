@@ -9,6 +9,9 @@ This packet is a work-in-progress collection of tools for convenient manual blen
 
 Also includes a simple 6-point camera based ProjectorCalibration tool. 
 
+## Mapper
+NuGet: [VL.Mapper](https://www.nuget.org/packages/VL.Mapper)
+
 ## Domemaster
 Download: [WIP](https://discourse.vvvv.org/t/vl-domemaster/20660)  
 Rendering Scenes in Domemaster format for use in fulldome projections.
