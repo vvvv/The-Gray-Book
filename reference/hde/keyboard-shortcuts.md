@@ -202,6 +202,7 @@ Gobal Channels|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F3</kbd></span>
 Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
 Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
 Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
+Make window topmost|<span class="keyseq"><kbd>Ctrl</kbd><kbd>T</kbd></span>
 
 ## VL.Stride
 The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:
