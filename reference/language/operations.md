@@ -99,7 +99,7 @@ As the creator of a node you can also decide if certain pins should not be visib
 When setting a pins visibility to `Optional` it can be shown by a user of the node, using the nodes configuration menu. If a pin is set to `Hidden` it cannot be used by a user of the node. 
 
 #### Pin groups
-Pins of type Spread can also be changed to a so called _Pin Group_. Pin Groups allow you to dynamically add/remove pins to a node. For the keyboard shortcut to do so, see [Pin Group Shortcuts](../hde/keyboard-shortcuts.md#pin-groups).
+Pins of type `Spread<T>`, `Array<T>`, `MutableArray<T>`, `Dictionary<string, T>` and `MutableDictionary<string, T>` can also be changed to a so called _Pin Group_. Pin Groups allow you to dynamically add/remove pins to a node. For the keyboard shortcut to do so, see [Pin Group Shortcuts](../hde/keyboard-shortcuts.md#pin-groups).
 
 In order to make a pin into a pin group, it has to be annotated to the type `Spread`. Then you can set the Pin Group flag in the configuration menu to TRUE.
 
