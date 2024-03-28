@@ -101,7 +101,7 @@ When setting a pins visibility to `Optional` it can be shown by a user of the no
 #### Pin groups
 Pins of type `Spread<T>`, `Array<T>`, `MutableArray<T>`, `Dictionary<string, T>` and `MutableDictionary<string, T>` can also be changed to a so called _Pin Group_. Pin Groups allow you to dynamically add/remove pins to a node. For the keyboard shortcut to do so, see [Pin Group Shortcuts](../hde/keyboard-shortcuts.md#pin-groups).
 
-In order to make a pin into a pin group, it has to be annotated to the type `Spread`. Then you can set the Pin Group flag in the configuration menu to TRUE.
+In order to make a pin into a pin group, it has to be annotated to one of the above types. Only then you can set the Pin Group flag in the configuration menu to TRUE.
 
 ![](../../images/language/PinGroup.png)
 
