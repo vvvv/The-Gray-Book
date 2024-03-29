@@ -29,7 +29,7 @@ Scalable Tutorial:
 NuGet: [VL.VIOSOWarpBlend](https://www.nuget.org/packages/VL.VIOSOWarpBlend)
 
 Support for the auto projector-alignment technology by [VIOSO](https://vioso.com/).  
-Let's you apply calibrations created using [VIOSO Integrate](https://vioso.com/vioso-integrate/) ([Trial version](https://vioso.com/downloads/#integrate)).
+Let's you apply calibrations created using [VIOSO6](https://vioso.com/software/vioso6/) or domeprojection's [ProjectionTools](https://www.domeprojection.com/software/projection-tools).
 
 VIOSO documentation:
 - [2d calibration workflow](https://helpdesk.vioso.com/documentation/core-video-tutorial/) for projecting flat textures or videos

@@ -2,7 +2,7 @@
 
 ## Playback and Video Input 
 
-* NuGet: [VL.Video.MediaFoundation](https://www.nuget.org/packages/VL.Video.MediaFoundation) - shipping with vvvv, see [Playing back video](../best-practice/video-playback.md)
+* NuGet: [VL.Video](https://www.nuget.org/packages/VL.Video) - shipping with vvvv, see [Playing back video](../best-practice/video-playback.md)
 * NuGet: [VL.HapPlayer](https://www.nuget.org/packages/VL.HapPlayer) - Hap and HapR playback 
 * NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 * NuGet: [VL.GStreamer](https://www.nuget.org/packages/VL.GStreamer) (experimental)
@@ -15,7 +15,9 @@ See also [Depth Cameras](depthcameras.md).
 
 | Device | Nuget |
 |---|---|
-| [uEye by IDS Imaging](https://de.ids-imaging.com/store/products/cameras/sort-by/position/sort-direction/desc.html) | [VL.Devices.uEye](https://www.nuget.org/packages/VL.Devices.uEye) |
+| [uEye](https://de.ids-imaging.com/store/products/cameras/sort-by/position/sort-direction/desc.html) by IDS Imaging| [VL.Devices.uEye](https://www.nuget.org/packages/VL.Devices.uEye) |
+| [uEye & uEye+](https://de.ids-imaging.com/store/products/cameras/sort-by/name/sort-direction/asc.html) by IDS Imaging | [VL.Devices.IDS](https://www.nuget.org/packages/VL.Devices.IDS) (using IDS peak)|
+| [Industrial Cameras](https://www.theimagingsource.com/en-us/product/industrial/) by TheImagingSource | [VL.Devices.TheImagingSource](https://www.nuget.org/packages/VL.Devices.TheImagingSource) |
 | DSLR Cameras | [VL.Devices.DigiCamControl](https://www.nuget.org/packages/VL.Devices.DigiCamControl) 
 ## Capture Cards
 
