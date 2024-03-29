@@ -1,7 +1,6 @@
 # Keyboard Shortcuts
 
 ## Quad Menu
-
 Description | Action
 -|-
 New Document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>N</kbd></span>
@@ -39,6 +38,8 @@ Navigate one level Up in application|<span class="keyseq"><kbd>Ctrl</kbd><kbd>^<
 Navigate one level Up in definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
 Copy screenshot of active patch to clipboard and save it as PNG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
 Take screenshot of active patch and save it as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>2</kbd></span>
+Duplicate selected nodes/pads keeping|<span class="keyseq"><kbd>Ctrl</kbd><kbd>D</kbd></span>
+Duplicate selected nodes/pads keeping incoming links|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>D</kbd></span>
 
 ## Pan & Zoom
 Description|Action
@@ -83,7 +84,6 @@ Expose Pins|<span class="keyseq"><kbd>Ctrl</kbd><kbd>K</kbd></span>
 Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 Assign a [Help Flag](../extending/providing-help.md#help-flags)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>H</kbd></span>
-
 
 ## Pin Groups
 
@@ -151,7 +151,7 @@ Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> 
 Insert a node into an existing link|Double leftclick the link
 Show a links tooltip to see its current value and the operation it is assigned to|Press <span class="keyseq"><kbd>Ctrl</kbd></span> while hovering the link
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>Space</kbd></span>
-Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Shift</kbd></span>
+Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
 
 ## Finders
 For more details, see [Finders](finders.md).
@@ -166,6 +166,7 @@ Description|Action
 -|-
 Create a Frame from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd></span> while making a marquee selection
 Create a Frame in viewspace from Marquee selection|Hold <span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd></span> while making a marquee selection
+Force to include frames in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
 Surround selected nodes with a frame|<span class="keyseq"><kbd>Alt</kbd><kbd>F</kbd></span>
 Surround selected nodes with a frame in viewspace|<span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></span>
 Toggle visibility of all frames in a patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd></span>
@@ -195,9 +196,13 @@ Restart editor extensions|<span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></sp
 Description|Action
 -|-
 Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
+Inspector|<span class="keyseq"><kbd>Ctrl</kbd><kbd>I</kbd></span>
+Debug Views|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F2</kbd></span>
+Gobal Channels|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F3</kbd></span>
 Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
 Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
 Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
+Make window topmost|<span class="keyseq"><kbd>Ctrl</kbd><kbd>T</kbd></span>
 
 ## VL.Stride
 The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:

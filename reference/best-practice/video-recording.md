@@ -23,6 +23,10 @@ Free and open source software for video recording and live streaming: https://ob
 ## VL.ScreenRecorder
 If you're looking for a recording option as part of your application, have a look at the [VL.ScreenRecorder](https://www.nuget.org/packages/VL.ScreenRecorder) NuGet.
 
+## VL.LoopTool
+A collection of nodes designed to simplify the creation of repeating loop animations. Includes animation nodes that respond to a global sequencer, making it easy to create smooth tween animations. Provides animated camera and scene presets. Captures video, image sequences and images.  
+NuGet: [VL.LoopTool](https://www.nuget.org/packages/VL.LoopTool)
+
 ## High resolution Texture/Image Writer
 If you want to write high-resolution image sequences in non-realtime, use the the following nodes:
 - for VL.Stride: TextureWriter in combination with SceneTexture

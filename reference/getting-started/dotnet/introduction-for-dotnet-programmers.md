@@ -1,10 +1,11 @@
 # Introduction for .NET programmers
 
-VL is a visual programming language for [.NET](https://en.wikipedia.org/wiki/.NET_Framework). It combines dataflow programming with features known from object-oriented programming. vvvv is the editing environment for VL.
+VL is a visual programming language for [.NET](https://en.wikipedia.org/wiki/.NET). It combines dataflow programming with features known from object-oriented programming. vvvv is the editing environment for VL.
 
-Versions 5.x of vvvv are using .NET6, an update to .NET8 for newer versions is in the making. 
+Versions 5.x of vvvv are using .NET6
+Versions 6.x of vvvv are using .NET8
 
-With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document. The VL.CoreLib is built on top of [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard).
+With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document.
 
 ## Language Features
 If you're familiar with programming in C#, VL should feel quite familiar, apart from the fact that it is visual. Here are a few things things that will be new to you though:
