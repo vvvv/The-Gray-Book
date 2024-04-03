@@ -35,7 +35,7 @@ The first time a new .csproj file is created, you will see it is automatically r
 ## Create the node
 Open the [NodeBrowser](../../hde/the_nodebrowser.md) and find the methods and classes of your c# file by their names.
 
-The Static Utils templates' code for example will then translate to the following node in VL:
+The Utils templates' code for example will then translate to the following node in VL:
 
 ![](../../images/reference/extending/DemoNode.png)
 <center>Resulting node in VL</center>
@@ -54,7 +54,7 @@ If there is an error in your C# code, all nodes stemming from the same project w
 If you're dealing with stateful code, it gets a bit more tricky. Here are two typical scenarios:
 
 #### Process node
-Assuming you want to treat your C# class like a [process node](../language/nodes.md#process-nodes) in VL, ie one instance per node, not dynamically spawning/killing instances, then take your class and create a [Forward](forwarding.md#process-node) for it. 
+Assuming you want to treat your C# class like a [process node](../language/nodes.md#process-nodes) in VL, ie one instance per node, not dynamically spawning/killing instances, then attach the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) attribute to it.
 
 This allows vvvv to properly create/dispose instances of your class as needed, whenever you make a change to your C# code.
 
@@ -71,7 +71,8 @@ It gets more tricky as soon as your C# code depends on unmanaged code (e.g. WinF
 When editing your code with Visual Studio, you can set break-points in your C# code. Then [attach](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) to vvvv.exe and see the break-points hit. 
 
 ## Examples
-Every static or member method of a public class you write in C# will turn into a VL node. 
+Every public member of a public class you write in C# will turn into a VL node.
+You can also attach the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) attribute to a public class to make it available as a node.
 
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
@@ -79,7 +80,8 @@ Here are some simple examples and a few more details that will help you create y
 For more general considerations also see: [Design Guidelines](design-guidelines.md)
 
 ### Namespaces 
-The Namespace you specify in C# will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
+The Namespace you specify in C# will be used as the category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
+The [`ImportAsIs`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ImportAsIsAttribute.cs) allows to import only a certain namespace, thereby stripping it from the resulting VL category.
 
 ### Pin Names
 
@@ -100,7 +102,7 @@ public static float PinNames(float firstInput, float secondInput)
 Simply use the C# notation for defaults to define defaults for inputs in VL.
 
 ```csharp
-public static float Defaults(float firstInput=44f, float secondInput=0.44f)
+public static float Defaults(float firstInput = 44f, float secondInput = 0.44f)
 {
     return firstInput + secondInput;
 }
@@ -233,10 +235,10 @@ public static int RefParams(ref int firstInput)
 
 Any datatype that you define as class or struct in C# can be used in VL:
 
-* Any constructor will be available as a Create node
-* Any get-property will show up as a node returning the properties value
-* Any set-property will show up as a node called Set.. allowing you to set the properties value
-* Any public static or member method will be available as a node in VL. Private or Protected operations will be ignored.
+* Any constructor will be available as a `Create` node
+* Any public member will be available as a node in VL
+  * A property will lead up to two nodes, one for the getter and one for the setter.
+  * An event will be translated to a node of the same name returning an `IObservable<EventPattern<>>`. See below for details.
 
 ```csharp
 public class MyDataType
@@ -260,6 +262,31 @@ public class MyDataType
 
 ![](../../images/libraries/vl-libraries-writingNodes-Datatypes.png)
 <center>Corresponding nodes</center>
+
+### Process nodes
+
+Any class can be turned into a process node by attaching the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) to it.
+By default all its public members will be used as its fragments. The attribute provides various ways to tweak this behavior.
+
+> [!NOTE]
+> The attribute only works if the assembly has the `[assembly:ImportAsIs]` attribute set. Newly created C# projects will have this attribute set, for existing ones you'll have to add it on your own.
+
+```csharp
+[ProcessNode]
+public class Counter
+{
+    public MyProcessNode(int initialValue)
+    {
+        Value = initialValue;
+    }
+
+    public void Increment() => _counter++;
+
+    public void Decrement() => _counter--;
+
+    public int Value { get; set; }
+}
+```
 
 ### Events/Observables
 
