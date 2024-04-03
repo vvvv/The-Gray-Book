@@ -76,7 +76,7 @@ Every static or member method of a public class you write in C# will turn into a
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
 
-For more general considerations also see: [Design Guidelines](design_guidelines.md)
+For more general considerations also see: [Design Guidelines](design-guidelines.md)
 
 ### Namespaces 
 The Namespace you specify in C# will turn into the nodes category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.

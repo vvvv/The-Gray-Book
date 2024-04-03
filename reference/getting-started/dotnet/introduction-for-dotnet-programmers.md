@@ -1,10 +1,11 @@
 # Introduction for .NET programmers
 
-VL is a visual programming language for [.NET](https://en.wikipedia.org/wiki/.NET_Framework). It combines dataflow programming with features known from object-oriented programming. vvvv is the editing environment for VL.
+VL is a visual programming language for [.NET](https://en.wikipedia.org/wiki/.NET). It combines dataflow programming with features known from object-oriented programming. vvvv is the editing environment for VL.
 
-Currently vvvv is still using .NETFramework, but an update to .NETCore is planned. 
+Versions 5.x of vvvv are using .NET6
+Versions 6.x of vvvv are using .NET8
 
-With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document. The VL.CoreLib is built on top of [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard).
+With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document.
 
 ## Language Features
 If you're familiar with programming in C#, VL should feel quite familiar, apart from the fact that it is visual. Here are a few things things that will be new to you though:
@@ -15,7 +16,6 @@ The main collection type in VL is called __Spread__ and its individual entries a
 E.g. if you have a spread with 5s slice and you're asking for slice 7, you get slice 2.
 
 ### Foreach with Multiple Inputs
-
 Where in C#, a foreach loop can only iterate over one collection at a time, in VL you can iterate over many collections at the same time. The number of iterations executed, is determined by the collection with the smallest count.
 
 ## Renamings
@@ -26,8 +26,17 @@ In general we try to do as little renaming as possible when importing data types
 * IEnumerable is called Sequence
 
 ## Getting Started
-You may want to watch some [Tutorials](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) and [HowTo's](https://www.youtube.com/playlist?list=PLBTgwgsWWcT_VMMrwsy3Ao7_ubazEGL4s) or a [Talk introducing vvvv to .NET developers](https://youtu.be/-Rr7QRYlZDc).
 
-The find out how you can [extend vvvv](../../extending/overview.md) and have a look at our [Demo Library](https://github.com/vvvv/vl.demolib) including C# and F# examples of writing your own nodes for VL.
+Here are a few workshop recordings particularly suited if you have a background in .NET:
+- [Introduction to vvvv For Coders](https://vimeo.com/467725726)
+- [Using .NET NuGets](https://vimeo.com/467351841)
+- [Object Oriented Patching](https://vimeo.com/467436333)
+- [Introduction to Reactive Patching](https://vimeo.com/467724898)
+- [Turning a .NET library into a VL library](https://vimeo.com/467350999)
+- [Talk introducing vvvv to .NET developers](https://youtu.be/-Rr7QRYlZDc)
+
+Then head back to the [Overview](../overview.md#tutorials) for more sources of learning content. 
+
+You may also want to find out how you can [extend vvvv](../../extending/overview.md) and have a look at our [Demo Library](https://github.com/vvvv/vl.demolib) including C# and F# examples of writing your own nodes for VL.
 
 Any questions left? Get them answered in the [forum](http://discourse.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).

@@ -1,0 +1,46 @@
+<head>
+    <meta charset="utf-8">
+    {{#redirect_url}}
+      <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
+    {{/redirect_url}}
+    {{^redirect_url}}
+      <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
+      {{#_description}}<meta name="description" content="{{_description}}">{{/_description}}
+      <link rel="icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
+      <link rel="stylesheet" href="{{_rel}}public/docfx.min.css">
+      <link rel="stylesheet" href="{{_rel}}public/main.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"/>
+      <link rel="stylesheet" href="{{_rel}}public/customDocSearch.css">
+      <meta name="docfx:navrel" content="{{_navRel}}">
+      <meta name="docfx:tocrel" content="{{_tocRel}}">
+      {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
+      {{#_enableSearch}}<meta name="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
+      {{#_disableNewTab}}<meta name="docfx:disablenewtab" content="true">{{/_disableNewTab}}
+      {{#_disableTocFilter}}<meta name="docfx:disabletocfilter" content="true">{{/_disableTocFilter}}
+      {{#docurl}}<meta name="docfx:docurl" content="{{docurl}}">{{/docurl}}
+      <meta name="loc:inThisArticle" content="{{_inThisArticle}}">
+      <meta name="loc:searchResultsCount" content="{{__global.searchResultsCount}}">
+      <meta name="loc:searchNoResults" content="{{__global.searchNoResults}}">
+      <meta name="loc:tocFilter" content="{{__global.tocFilter}}">
+      <meta name="loc:nextArticle" content="{{__global.nextArticle}}">
+      <meta name="loc:prevArticle" content="{{__global.prevArticle}}">
+      <meta name="loc:themeLight" content="{{__global.themeLight}}">
+      <meta name="loc:themeDark" content="{{__global.themeDark}}">
+      <meta name="loc:themeAuto" content="{{__global.themeAuto}}">
+      <meta name="loc:changeTheme" content="{{__global.changeTheme}}">
+      <meta name="loc:copy" content="{{__global.copy}}">
+    {{/redirect_url}}
+  </head>
+
+  <script type="module">
+    import options from './{{_rel}}public/main.js'
+    import { init } from './{{_rel}}public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>

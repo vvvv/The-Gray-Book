@@ -8,6 +8,10 @@ NuGet: [VL.Animation.ParticleSystem](https://www.nuget.org/packages/VL.Animation
 Follows and identifies objects over time and assigns them a stable and unique ID.  
 NuGet: [VL.TrackObjects](https://www.nuget.org/packages/VL.TrackObjects)
 
+## LoopTool
+A collection of useful nodes designed to simplify the creation of repeating loop animations.  
+NuGet: [VL.LoopTool](https://www.nuget.org/packages/VL.LoopTool)
+
 ## Timeliners
 
 ### Kairos

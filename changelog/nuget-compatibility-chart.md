@@ -5,6 +5,14 @@ Unfortunately the listings here are done manually and are therefore by no means 
 
 If you find yourself in the need to downgrade the version of a NuGet, make sure to read [Installing a specific version of a NuGet](../reference/hde/managing-nugets.md#installing-a-specific-version).
 
+## vvvv gamma 6.0 - previews
+
+Package|Version|Command to get recommended version
+-|-|-
+[VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | >= 0.5.0 preview | `nuget install VL.IO.TCP -pre`
+[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
+[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0.0 | `nuget install VL.Fuse`
+
 ## vvvv gamma 5.0
 
 Package|Version|Command to get recommended version
@@ -13,11 +21,13 @@ Package|Version|Command to get recommended version
 [VL.Badmapper](https://github.com/vvvv/VL.BadMapper) | >= 0.0.19 preview | `nuget install VL.Badmapper -pre`
 [VL.Devices.Astra](https://github.com/vvvv/VL.Devices.Astra) | >= 1.2.0 | `nuget install VL.Devices.Astra`
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2`
+[VL.Devices.Kinect](https://github.com/vvvv/VL.Devices.Kinect) | >= 1.0.3 | `nuget install VL.Devices.Kinect`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | >= 1.2.0 | `nuget install VL.Devices.LeapOrion`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense`
 [VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -pre`
+[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -version 1.1.8`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
+[VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | <= 0.4.2 preview | `nuget install VL.IO.TCP -version 0.4.2-alpha`
 
 ## vvvv gamma 2021.4.12
 

@@ -1,16 +1,8 @@
 # Machine Learning (ML)
 
-## RunwayML
-[RunwayML](http://runwayml.com) provides an extensive list of machine learning models that can either be executed on their cloud (paid) or downloaded to be run locally. Using VL.RunwayML you get a node for each local or hosted model you want to work with. This makes it a breeze to get results quickly.  
-NuGet: [VL.RunwayML](https://www.nuget.org/packages/VL.RunwayML)  
-
 ## Wekinator
 A set of nodes to easily interact with [The Wekinator](http://www.wekinator.org/)  
 NuGet: [VL.Wekinator](https://www.nuget.org/packages/VL.Wekinator)
-
-## Lobe
-[Lobe](https://lobe.ai) allows you to train a machine-learning model for image classification on your local PC. You can then run the model inside vvvv using VL.Lobe.  
-NuGet: [VL.Lobe](https://www.nuget.org/packages/VL.Lobe)
 
 ## OpenAI
 Talk to the OpenAI GPT-3 API (requires API key!)  
@@ -39,5 +31,10 @@ Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET 
 
 Related tools:
 * [PerceptiLabs](https://perceptilabs.com) A GUI for TensorFlow
-* [MediaPipe](https://mediapipe.dev/) MediaPipe offers open source cross-platform, customizable ML solutions for live and streaming media
 * [Teachable Machine](https://teachablemachine.withgoogle.com/)
+
+### Legacy
+
+Both Runway and Lobe unfortunately no longer exist:
+* Runway: [Sunset Notification: ML Lab](https://help.runwayml.com/hc/en-us/articles/22125973740691-Sunset-Notification-ML-Lab)
+* Lobe: [End of life announcement](https://github.com/lobe)

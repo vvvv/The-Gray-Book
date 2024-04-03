@@ -19,8 +19,6 @@ HowTo Videos:
 * [Send OSC Messages](https://youtu.be/CSt_39fNonQ)
 * [Receive OSC Messages](https://youtu.be/i5Yy6DS3Imo)
   
-NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)
-
 ### Useful tools:
 * [TouchOSC](https://hexler.net/software/touchosc) 
 * [Open Stage Control](https://openstagecontrol.ammd.net/)
@@ -31,11 +29,15 @@ NuGet: [VL.IO.OSC](https://www.nuget.org/packages/VL.IO.OSC)
 * [Sensors2](https://sensors2.org/osc/)
 * [SoundCool](https://play.google.com/store/apps/details?id=org.soundcool.upv.oscapp)
 
+## OSCQuery
+The VL.IO.OSCQuery nuget, is shipping with vvvv.  
+https://github.com/Vidvox/OSCQueryProposal  
+
 ## TUIO
 The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.
 http://tuio.org  
-NuGet: [VL.IO.TUIO](https://www.nuget.org/packages/VL.IO.TUIO)  
 NuGet: [VL.IO.TUIO.HDE](https://www.nuget.org/packages/VL.IO.TUIO.HDE) for a TUIO Simulator and Monitor [Extension](../hde/extensions.md)  
+
 ## MQTT
 https://mqtt.org  
 NuGet: [VL.IO.M2MQTT](https://www.nuget.org/packages/VL.IO.M2MQTT)  

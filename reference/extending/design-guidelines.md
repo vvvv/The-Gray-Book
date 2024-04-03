@@ -177,7 +177,7 @@ Create an operation in any other category using the same signature and implement
 When creating multiple implementations (for different datatypes) make sure you put the operations in different categories.
 
 #### Replace an adaptive node with a specific implementation
-There are cases where you'll want to make sure the compiler uses one specific implementation for an adaptive node. To choose a specific version for an adaptive node, first place the node via the NodeBrowser, then doubleclick it and remove the ''Adaptive'' choice in the lower right section of the NodeBrowser. Now you'll see all available implementations in the main panel from which you can simply choose one.
+There are cases where you'll want to make sure the compiler uses one specific implementation for an adaptive node. To choose a specific version for an adaptive node, first place the node via the NodeBrowser. Then doubleclick it to see all available implementations in the main panel from which you can simply choose one.
 
 ### Process Nodes
 #### Reset Inputs
@@ -238,4 +238,4 @@ Don't reference your own nuget in any .vl documents that contribute to a nuget o
 Still to be defined: in what form to provide tests (patches, code,..) that can be run automated
 
 ### Help Patches
-See [Providing Help](providinghelp.md)
+See [Providing Help](providing-help.md)

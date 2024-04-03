@@ -1,5 +1,9 @@
 # Other Devices
 
+## StreamDeck
+A package for using the [Elgato StreamDeck](https://www.elgato.com/us/en/p/stream-deck-mk2-black) button display.  
+NuGet: [VL.Devices.StreamDeck](https://www.nuget.org/packages/VL.Devices.StreamDeck)
+
 ## SpaceMouse
 https://3dconnexion.com/de/  
 NuGet: [VL.Devices.SpaceMouse](https://www.nuget.org/packages/VL.Devices.SpaceMouse)  

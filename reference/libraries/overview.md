@@ -26,6 +26,7 @@ Missing anything?
 * Check the [work-in-progress section](https://discourse.vvvv.org/c/wip/27) of the vvvv forum
 * Browse the [github topic VL](https://github.com/topics/vl) 
 * Scroll the [nugets taged VL](https://www.nuget.org/packages?packagetype=&sortby=created-desc&q=Tags%3A%22VL%22&prerel=True)
-* Apart from the above libraries specifically made for vvvv, you can also [use almost any .NET library](../extending/using-net-libraries.md).
+* Apart from the above libraries specifically made for vvvv, you can also [use almost any .NET library](../extending/using-net-libraries.md)
+* We do offer custom development, don't hesitate to [get in touch](mailto:devvvvs@vvvv.org)!
 
 You can also make your own libraries for personal use (for sharing nodes and types among different projects) or for sharing with others. See [Extending vvvv](../extending/overview.md).
