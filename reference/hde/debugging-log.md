@@ -1,7 +1,5 @@
 # Log
 
-**As of vvvv gamma 5.3-preview 419**
-
 The log is collecting all messages over time and shows you the whole history, until you clear it or the buffer runs over (Buffer length defaults to 5000 but can be configured via the Settings).
 
 ![](../../images/reference/hde/2023-12-20-21-15-29.png)
