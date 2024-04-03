@@ -5,13 +5,15 @@ Unfortunately the listings here are done manually and are therefore by no means 
 
 If you find yourself in the need to downgrade the version of a NuGet, make sure to read [Installing a specific version of a NuGet](../reference/hde/managing-nugets.md#installing-a-specific-version).
 
-## vvvv gamma 6.0 - previews
+## vvvv gamma 6.0
 
 Package|Version|Command to get recommended version
 -|-|-
+[VL.Devices.AzureKinect](https://www.nuget.org/packages/VL.Devices.AzureKinect) | >= 1.5.0 | `nuget install VL.Devices.AzureKinect`
+[VL.Devices.AzureKinect.Body](https://www.nuget.org/packages/VL.Devices.AzureKinect) | >= 1.5.0 | `nuget install VL.Devices.AzureKinect.Body`
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | >= 0.5.0 preview | `nuget install VL.IO.TCP -pre`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0.0 | `nuget install VL.Fuse`
+[VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
 
 ## vvvv gamma 5.0
 
@@ -24,8 +26,8 @@ Package|Version|Command to get recommended version
 [VL.Devices.Kinect](https://github.com/vvvv/VL.Devices.Kinect) | >= 1.0.3 | `nuget install VL.Devices.Kinect`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | >= 1.2.0 | `nuget install VL.Devices.LeapOrion`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense`
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | >= 1.0 preview | `nuget install VL.Kairos -version 1.1.8`
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
+[VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.0 preview | `nuget install VL.Kairos -version 1.1.8`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | <= 0.4.2 preview | `nuget install VL.IO.TCP -version 0.4.2-alpha`
 
@@ -39,8 +41,8 @@ Package|Version|Command to get recommended version
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | 1.2.1 | `nuget install VL.Devices.Kinect2 -version 1.2.1`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | 1.1.4 | `nuget install VL.Devices.LeapOrion -version 1.1.4`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.3.2 | `nuget install VL.Devices.RealSense -version 1.3.2`
-[VL.Fuse](https://github.com/TheFuseLab/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
-[VL.Kairos](https://github.com/KairosResearchLab/Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | 0.2.4 | `nuget install VL.Fuse -version 0.2.4`
+[VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | 0.6 | `nuget install VL.Kairos -version 0.6`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | 0.4.0 | `nuget install VL.Stride.Text3d -version 0.4.0`
 
 ## vvvv gamma 2021.3.0
