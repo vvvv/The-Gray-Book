@@ -81,7 +81,7 @@ For more general considerations also see: [Design Guidelines](design-guidelines.
 
 ### Namespaces 
 The Namespace you specify in C# will be used as the category in VL. Nested namespaces (using dot syntax) will be translated to nested categories accordingly.
-The [`ImportAsIs`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ImportAsIsAttribute.cs) allows to import only a certain namespace, thereby stripping it from the resulting VL category.
+The [`ImportAsIs`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ImportAsIsAttribute.cs) attribute allows to import only a certain namespace, thereby stripping it from the resulting VL category.
 
 ### Pin Names
 
@@ -265,7 +265,7 @@ public class MyDataType
 
 ### Process nodes
 
-Any class can be turned into a process node by attaching the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) to it.
+Any class can be turned into a process node by attaching the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) attribute to it.
 By default all its public members will be used as its fragments. The attribute provides various ways to tweak this behavior.
 
 > [!NOTE]
