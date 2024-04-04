@@ -10,7 +10,7 @@ Run|<span class="keyseq"><kbd>F5</kbd></span>
 Step|<span class="keyseq"><kbd>F6</kbd></span>
 Pause|<span class="keyseq"><kbd>F7</kbd></span>
 Stop|<span class="keyseq"><kbd>F8</kbd></span>
-Export...|<span class="keyseq"><kbd>F9</kbd></span>
+Export...|<span class="keyseq"><kbd>F10</kbd></span>
 
 ## Document Menu
 Description|Action
