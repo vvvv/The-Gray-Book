@@ -9,6 +9,7 @@ If you find yourself in the need to downgrade the version of a NuGet, make sure 
 
 Package|Version|Command to get recommended version
 -|-|-
+[VL.Devices.RealSense](https://www.nuget.org/packages/VL.Devices.RealSense) | >= 1.6.0 | `nuget install VL.Devices.RealSense`
 [VL.Devices.AzureKinect](https://www.nuget.org/packages/VL.Devices.AzureKinect) | >= 1.5.0 | `nuget install VL.Devices.AzureKinect`
 [VL.Devices.AzureKinect.Body](https://www.nuget.org/packages/VL.Devices.AzureKinect) | >= 1.5.0 | `nuget install VL.Devices.AzureKinect.Body`
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | >= 0.5.0 preview | `nuget install VL.IO.TCP -pre`
@@ -25,7 +26,7 @@ Package|Version|Command to get recommended version
 [VL.Devices.Kinect2](https://github.com/vvvv/VL.Devices.Kinect2) | >= 1.3.0 | `nuget install VL.Devices.Kinect2`
 [VL.Devices.Kinect](https://github.com/vvvv/VL.Devices.Kinect) | >= 1.0.3 | `nuget install VL.Devices.Kinect`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | >= 1.2.0 | `nuget install VL.Devices.LeapOrion`
-[VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | >= 1.5.0 | `nuget install VL.Devices.RealSense`
+[VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.5.0 | `nuget install VL.Devices.RealSense -version 1.5.0`
 [VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.0 preview | `nuget install VL.Kairos -version 1.1.8`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
