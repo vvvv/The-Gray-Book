@@ -22,39 +22,21 @@ Choose how assets will be referenced in the exported application:
 * **Relative to output**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
   
 ## Output type
-> [!NOTE]
-> This is only available from versions 5.0 on!
-
 Choose between Windows (GUI) or Console application. A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
 
 Use a __KeepAppAlive__ node to prevent this default behavior.
 
 ## Target OS
-> [!NOTE]
-> This is only available from versions 5.0 on!
-
 Choose the OS for which to create output for. If you choose *Any*, export will create executables for all available targets, otherwise only for the one selected OS.
 
 ## Platform target
-> [!NOTE]
-> This is only available from versions 5.0 on!
-
-Choose between CPU architectures x64, x86 or any.
-
-> [!NOTE]
-> If a 32bit application that references VL.Stride fails to run on a PC, make sure it has [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) for x86 installed.
+Choose between CPU architectures x64 (64bit), x86 (32bit) or any.
 
 ## Options
 ### Console App
 Choose between Windows or Console app. A Console app will open a windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
 
 Use a __KeepAppAlive__ node to prevent this default behavior.
-
-### 64bit
-Disable to export for 32bit architectures.
-
-> [!NOTE]
-> If a 32bit application that references VL.Stride fails to run even on your developer PC, make sure it has [Microsoft Visual C++ Redistributables 2013 and 2019](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160) for x86 installed.
 
 ### Clean Output
 If active, removes artefacts of previous exports (ie. deletes the \src folder) before exporting. This will cause exports to take longer but also makes sure previous artefacts don't interfere with the new export.
@@ -73,9 +55,8 @@ Next to the application directory you'll also find a `\src` directory. This is a
 ## Dependencies
 If your application is referencing VL.Stride, make sure the target PC also has the following dependencies installed:
 
-* [Microsoft Visual C++ Redistributables 2013](https://aka.ms/highdpimfc2013x64enu)
-* [Microsoft Visual C++ Redistributables 2015](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-* [.NET6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) (For FileTexture and FileModel nodes to work)
+* Microsoft Visual C++ Redistributables: [64bit](https://aka.ms/vs/17/release/vc_redist.x64.exe) or [32bit](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+* [.NET8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (For FileTexture and FileModel nodes to work)
 
 ### For versions prior to 5.0
 For applications exported with this older version of vvvv, you'll also have to install:
