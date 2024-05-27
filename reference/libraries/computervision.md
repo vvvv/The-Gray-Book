@@ -16,7 +16,6 @@ Using [mediapipe-touchdesigner](https://github.com/torinmb/mediapipe-touchdesign
 NuGet: [VL.MediaPipe](https://www.nuget.org/packages/VL.Mediapipe)
 
 ## OpenCV
-
 Most of the [OpenCV](http://opencv.org/) library can be used in vvvv. This includes:
 
 * Image filters
@@ -30,7 +29,6 @@ Most of the [OpenCV](http://opencv.org/) library can be used in vvvv. This inclu
 NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 
 ## DlibDotNet
-
 GitHub: [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet)
 
 ## See also

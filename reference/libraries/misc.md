@@ -48,7 +48,8 @@ NuGet: [VL.2D.CurveFitting](https://www.nuget.org/packages/VL.2D.CurveFitting)
 
 ## Noise
 Noise Generator in many flavours.  
-NuGet: [VL.FastNoise](https://www.nuget.org/packages/VL.FastNoise)
+NuGet: [VL.FastNoise](https://www.nuget.org/packages/VL.FastNoise)  
+NuGet: [VL.FastNoiseLite](https://www.nuget.org/packages/VL.FastNoiseLite)  
 NuGet: [VL.SharpNoise](https://www.nuget.org/packages/VL.SharpNoise)
 
 ## SharedMemory
@@ -119,6 +120,15 @@ NuGet: [VL.RogueSharp](https://vvvv.org/contribution/vl.roguesharp)
 ## Kafka
 [Kafka](https://kafka.apache.org/) for VL  
 NuGet: [VL.Kafka](https://www.nuget.org/packages/VL.Kafka)
+
+## Harmony
+Library for working with musical concepts  
+NuGet: [VL.Harmony](https://www.nuget.org/packages/VL.Harmony)
+
+## Interpolator
+Binary search set of nodes, to interpolate any kind of data  
+NuGet: [VL.Interpolator](https://www.nuget.org/packages/VL.Interpolator)
+
 
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.

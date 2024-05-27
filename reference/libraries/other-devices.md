@@ -32,6 +32,14 @@ NuGet: [VL.IO.Xbox360Controller](https://www.nuget.org/packages/VL.IO.Xbox360Con
 For using the PJLink protocol  
 NuGet: [VL.PJLink](https://www.nuget.org/packages/VL.PJLink) 
 
+## M8Display
+[Dirtywave](https://dirtywave.com/) M8 Remote Display  
+NuGet: [VL.M8Display](https://www.nuget.org/packages/VL.M8Display)
+
+## PTZ
+Set of nodes to work with PTZ cameras  
+NuGet: [VL.PTZ](https://www.nuget.org/packages/VL.PTZ)
+
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * [Nintendo WiiMote](https://www.nuget.org/packages/WiimoteLib/)

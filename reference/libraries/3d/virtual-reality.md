@@ -3,6 +3,10 @@
 ## OpenXR 
 The default VR backend in VL.Stride shipping with vvvv.  
 
+Supported extensions:
+- Passthrough
+- HandTracking via [VL.Stride.OpenXRExtensions](https://www.nuget.org/packages/VL.Stride.OpenXRExtensions)
+
 ## OpenVR
 Supported as alternative VR backend via VL.Stride shipping with vvvv.
 

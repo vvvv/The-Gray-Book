@@ -2,7 +2,7 @@
 
 ## Playback, recording, analysis, synthesis
 
-For audio playback, recording, analysis and sound synthesis vvvv ships with the [VL.Audio](https://www.nuget.org/packages/VL.Audio) package. For more advanced features like beat tracking and pitch analysis, install the optional [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) package, which as the name implies, stands under the [GPL license](https://opensource.org/licenses/gpl-license). 
+For audio playback, recording, analysis and sound synthesis vvvv ships with the [VL.Audio](https://www.nuget.org/packages/VL.Audio) package. For more advanced features like beat tracking and pitch analysis, install the optional [VL.Audio.GPL](https://www.nuget.org/packages/VL.Audio.GPL) package, which as the name implies, stands under the [GPL license](https://opensource.org/licenses/gpl-license). For encoding/decoding LTC timecode, see [VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC).
 
 For an alternative player, see also:  
 NuGet: [VL.GameAudioPlayer](https://www.nuget.org/packages/VL.GameAudioPlayer)
@@ -22,9 +22,9 @@ In case you want to use an ASIO driver with your soundcard that doesn't come wit
 * [Virtual Audio Cable](https://vb-audio.com/Cable/index.htm)
 
 ## MIDI
+Midi nodes are shipping with vvvv via the [VL.IO.Midi](https://www.nuget.org/packages/VL.IO.Midi/) package.
 
-Midi nodes are shipping with vvvv.
-NuGet: [VL.IO.Midi](https://www.nuget.org/packages/VL.IO.Midi/)
+Additional utilities: [VL.MiDi.Music.Utils](https://www.nuget.org/packages/VL.MiDi.Music.Utils)
 
 Useful tools: 
 * [MIDI Monitor](https://www.midimonitor.com)

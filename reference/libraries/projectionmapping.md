@@ -10,6 +10,7 @@ This packet is a work-in-progress collection of tools for convenient manual blen
 Also includes a simple 6-point camera based ProjectorCalibration tool. 
 
 ## Mapper
+Projection mapping tool.  
 NuGet: [VL.Mapper](https://www.nuget.org/packages/VL.Mapper)
 
 ## Domemaster

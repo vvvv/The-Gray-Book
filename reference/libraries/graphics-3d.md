@@ -33,6 +33,7 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * NuGet: [VL.Addons](https://www.nuget.org/packages/VL.Addons) for a wide range of additional TextureFX
 * NuGet: [VL.Alembic](https://www.nuget.org/packages/VL.Alembic/) for loading [Alembic](http://www.alembic.io) files
 * NuGet: [VL.Stride.Text3d](https://www.nuget.org/packages/VL.Stride.Text3d) for rendering extruded 3d text
+* NuGet: [VL.Stride.SDFToMesh](https://www.nuget.org/packages/VL.Stride.SDFToMesh) for converting an SDF function to a mesh
 * NuGet: [VL.IO.PLY](https://www.nuget.org/packages/VL.IO.PLY) for loading PLY pointcloud files
 * NuGet: [VL.IO.Teximp](https://www.nuget.org/packages/VL.Teximp) for texture IO and processing
 * NuGet: [VL.Assimp](https://www.nuget.org/packages/VL.Assimp) is an alternative 3d model loader for Stride
