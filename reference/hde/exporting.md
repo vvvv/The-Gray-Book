@@ -96,7 +96,14 @@ In case the export fails, the console will be opened to show there was an error.
 <center>The Application Exporter reporting a problem</center>
 
 #### NuGet dependency issues
-Read the red error message carefully. There will be a reason given for the problem you're facing. If that reason hints at incompatible packages, you may have accumulated packages in your nuget folder over time, which prevent the export from succeeding. In such a case a solution could be, starting with a clean nuget folder. 
+Read the red error message carefully. There will be a reason given for the problem you're facing. If that reason hints at incompatible packages, you may have accumulated packages in your NuGet folder over time, which prevent the export from succeeding. In such a case try starting from a clean NuGet folder. Here are the steps to do so:
+- Open your NuGet folder: `Quad menu -> Manage NuGets -> Show Installed` opens your `C:\Users\..\AppData\Local\vvvv\gamma\nugets` folder
+- Close vvvv
+- Go one level up from your NuGet folder and rename it so you have: `C:\Users\..\AppData\Local\vvvv\gamma\nugets_backup`
+- Open vvvv and your patch
+- The document menu will be red, meaning it's missing referenced dependencies
+- Click the `Document menu -> Dependencies` and rightclick to select all missing dependencies, then choose: "Install exact referenced version"
+- Wait for all packages to be installed again, then try the export again
 
 #### Export fails with "..could not copy file.."
 This may happen when you have packages referenced as source repository. To still get a successful export in such cases you can try:
