@@ -47,7 +47,7 @@ A vl document can reference other .vl documents and managed .dll files.
 Here are 3 ways to reference local files:
 
 * Drop a .vl or .dll file onto a patch
-* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>R</kbd></span> to select files via a file browser
+* Press <span class="keyseq"><kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>E</kbd></span> to select files via a file browser
 * Via menu:Document[Dependencies > Files > Add Existing...]
 
 ![](../../images/libraries/vl-Dependencies-File.png)
@@ -85,7 +85,7 @@ Otherwise in case 1) restarting vvvv should help, but in case 2) you'll actually
 
 By default .NET comes with a large number of assemblies that can be referenced. They are stored in the [GAC](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) on all machines that have .NET installed and can be referenced from there via:
 
-* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>R</kbd></span>
+* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
 * via `Document > Dependencies > Files > Add .NET Framework Assembly...`
 
 In the dialog you need to double-click entries that you want to add as references.
