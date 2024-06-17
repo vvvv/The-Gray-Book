@@ -86,13 +86,24 @@ In order to have your executables to run without a warning on other PCs, you nee
 
 ## Troubleshooting
 
+### Exported app doesn't run on target PC
+Chances are that you're missing a dependency on the target PC. See [Dependencies](#dependencies) above.
+
 ### Export fails
 In case the export fails, the console will be opened to show there was an error.
 
 ![](../../images/hde/exporting-74bc1.png)
 <center>The Application Exporter reporting a problem</center>
 
-Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via forum or chat.
+#### NuGet dependency issues
+Read the red error message carefully. There will be a reason given for the problem you're facing. If that reason hints at incompatible packages, you may have accumulated packages in your NuGet folder over time, which prevent the export from succeeding. In such a case try starting from a clean NuGet folder. Here are the steps to do so:
+- Open your NuGet folder: `Quad menu -> Manage NuGets -> Show Installed` opens your `C:\Users\..\AppData\Local\vvvv\gamma\nugets` folder
+- Close vvvv
+- Go one level up from your NuGet folder and rename it so you have: `C:\Users\..\AppData\Local\vvvv\gamma\nugets_backup`
+- Open vvvv and your patch
+- The document menu will be red, meaning it's missing referenced dependencies
+- Click the `Document menu -> Dependencies` and rightclick to select all missing dependencies, then choose: "Install exact referenced version"
+- Wait for all packages to be installed again, then try the export again
 
 #### Export fails with "..could not copy file.."
 This may happen when you have packages referenced as source repository. To still get a successful export in such cases you can try:
@@ -101,11 +112,10 @@ This may happen when you have packages referenced as source repository. To still
 - open a commandline (cmd.exe)
 - paste the command and run it
 
-#### Export fails With 2021.4.x
+#### Export fails With vvvv gamma 2021.4.x
 There is a known incompatibility with newer versions of MSBuild tools than what vvvv expects. So in order to make sure the right version of MSBuild tools is installed do as follows:
 - Uninstall all versions of Visual Studio and Build Tools you can find on your machine 
 - Then run the vvvv 2021.4.x installer again with having the “Build Tools” checkbox enabled
 
-### Exported app doesn't run on target PC
-
-Chances are that you're missing a dependency on the target PC. See [Dependencies](#dependencies) above.
+#### None of the above
+Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via [the forum](https://discourse.vvvv.org/c/vvvv-gamma/bug/31).

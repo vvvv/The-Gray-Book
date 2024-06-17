@@ -42,3 +42,10 @@ Sometimes you may want to install a specific version rather than just the latest
 > To remove versions of a NuGet, go to [Show Installed](#show-installed) and delete respective folders from there. If deletion fails, make sure to close vvvv first.
 
 In the [NuGet Compatibility Chart](../../changelog/nuget-compatibility-chart.md) we are collecting packages and their recommended versions for specific vvvv releases. 
+
+### Troubleshooting
+If running the `nuget install` command returns with an error hinting at the nuget not existing but you're certain that it does and you spelled it correctly, there is an off-chance that your [NuGet.Config](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file) file is corrupt. You'll find it in:
+
+    C:\Users\..\AppData\Roaming\NuGet
+
+Rename the existing file to have a backup just in case. Then try to run the install again, which will recreate a working version of NuGet.Config automatically.
