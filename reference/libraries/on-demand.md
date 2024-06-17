@@ -18,3 +18,5 @@ Here some things you might be looking for:
 - Disguise [RenderStream](https://www.disguise.one/en/products/renderstream)
 - NVIDIA [Rivermax](https://developer.nvidia.com/networking/rivermax)
 - [Notch LC](https://notchlc.notch.one/) video Codec
+- [VST3](https://steinbergmedia.github.io/vst3_dev_portal/pages/index.html) audio plugins
+- [Python](https://github.com/pythonnet/pythonnet) scripting
