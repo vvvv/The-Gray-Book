@@ -13,7 +13,7 @@ http://websocket.org
 NuGet: [VL.IO.WebSocket](https://www.nuget.org/packages/VL.IO.WebSocket)  
 
 ## OSC
-The VL.IO.OSC nuget, including OSCServer and OSCClient nodes, is shipping with vvvv.
+The VL.IO.OSC NuGet, including OSCServer and OSCClient nodes, is shipping with vvvv.
 http://opensoundcontrol.org  
 HowTo Videos: 
 * [Send OSC Messages](https://youtu.be/CSt_39fNonQ)
@@ -30,9 +30,8 @@ HowTo Videos:
 * [SoundCool](https://play.google.com/store/apps/details?id=org.soundcool.upv.oscapp)
 
 ## OSCQuery
-The VL.IO.OSCQuery nuget, is shipping with vvvv.  
-https://github.com/Vidvox/OSCQueryProposal  
-
+The VL.IO.OSCQuery NuGet, implementing the [OSCQueryProposal](https://github.com/Vidvox/OSCQueryProposal), is shipping with vvvv.  
+  
 ## TUIO
 The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.
 http://tuio.org  
