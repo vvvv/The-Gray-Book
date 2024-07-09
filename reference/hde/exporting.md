@@ -103,6 +103,13 @@ This error [originates from Stride](https://github.com/stride3d/stride/issues/22
   - `copy System.Security.Cryptography.Pkcs.6.0.4\lib\net6.0\System.Security.Cryptography.Pkcs.dll %userprofile%\.nuget\packages\stride.core.assets.compilerapp\4.2.0.2121\lib\net8.0`
 - Now try the export again
 
+#### Export fails with "..Found multiple publish output files with the same relative path.."
+If the file in question is `ijwhost.dll` it might work to specify:
+
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+
+in the .props file you can edit via `Advanced build configuration` as [explained here](https://stackoverflow.com/questions/69919664/publish-error-found-multiple-publish-output-files-with-the-same-relative-path).
+
 #### Export fails with NuGet dependency issues
 Read the red error message carefully. There will be a reason given for the problem you're facing. If that reason hints at incompatible packages, you may have accumulated packages in your NuGet folder over time, which prevent the export from succeeding. In such a case try starting from a clean NuGet folder. Here are the steps to do so:
 - Open your NuGet folder: `Quad menu -> Manage NuGets -> Show Installed` opens your `C:\Users\..\AppData\Local\vvvv\gamma\nugets` folder
