@@ -188,7 +188,7 @@ Connect to Signature is enabled by default for nodes dropped in from the solutio
 
 Rightclick on the node you're forwarding and choose `Configure > Connect to Signature`.
 
-![Connect to Signature](image.png)
+![Connect to Signature](../../images/reference/extending/connect-to-signature.png)
 
 *The "Connect to Signature" feature*
 

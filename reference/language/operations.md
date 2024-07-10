@@ -110,11 +110,11 @@ The signature of an operation allows you to define the order in which its Inputs
 
 For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the PatchExplorer.
 
-![](2024-07-10-10-55-21.png)
+![](../../images/language/member-operation-signature.png)
 
 *Locked signature of member operation "Update" in the [Patch Explorer](patch-explorer.md)*
 
-![](2024-07-10-10-56-32.png)
+![](../../images/language/static-operation-signature.png)
 
 *Unlocked signature of static operation "Confine"*
 
