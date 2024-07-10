@@ -167,30 +167,30 @@ Rightclick on the header of the operation you're forwarding and choose `Configur
 ### Manually managing the Signature
 When forwarding a node, you'll usually want to automatically sync its signature to the one of its surrounding definition. This is why by default the two options which manage this behavior are on:
 
-* Automatic Signature
-* Connect to Signature
+* Locked Signature (ie. managaged by the system rather than manually by the user)
+* Connect to Signature (only works with locked signatures)
 
 A reason to disable these would be if you want to create a stable API for a vl library that you don't want to be automatically adapting to changes in the underlying .NET library. Since a change in the .NET library may cause an incompatibility for users of your vl library you'll want to have the chance to review such changes and decide how to forward them to your API.
 
 > [!NOTE]
-> Both features "Automatic Signature" and "Connect to Signature" are not limited to usage in forwarding definitions. There are other scenarios where they may be useful.
+> Both features "Locked Signature" and "Connect to Signature" are not limited to usage in forwarding definitions. There are other scenarios where they may be useful.
 
-### Automatic Signature
-Unchecking "Automatic Signature" has two implications:
+### Locked Signature
+Unchecking "Locked Signature" has two implications:
 
-* pins in the signature will now no longer automatically be sorted by the x-position of their representations in the patch
-* pins will not be automatically added to/removed from the signature for nodes that have "Connect to Signature" activated, if their signature changed. Instead, the signature will now show warnings which allow you to inspect those changes and react to them
+* Pins in the signature will now no longer automatically be sorted by the x-position of their representations in the patch
+* Pins will not be automatically added to/removed from the signature for nodes that have "Connect to Signature" activated, if their signature changed. Instead, the signature will now show warnings which allow you to inspect those changes and react to them
 
-*Image:The "Automatic Signature" toggle*
+See also [Operation Signature](../language/operations.md#operation-signature).
 
 ### Connect to Signature
 Connect to Signature is enabled by default for nodes dropped in from the solution explorer for being forwarded. This helps saving some clicks in that it automatically connects the node to the surrounding signature, just as if for each pin you would have created a link to an own pin with the same name. If you want to have more manual control over which pins of a node are being forwarded you can disable the feature.
 
-*Image:The "Connect to Signature"*
-<center>Rightclick on the node you're forwarding and choose `Configure > Connect to Signature`.</center>
+Rightclick on the node you're forwarding and choose `Configure > Connect to Signature`.
 
-![](../../images/libraries/vl-libraries-wrapping-ForwardPins-Selectively.png)
-<center>RandomSpread with only its 'Count' input and its 'Output' forwarded</center>
+![Connect to Signature](image.png)
+
+*The "Connect to Signature" feature*
 
 ## Forwarding Enums
 In order to forward an enum from a .dll to the user of a .vl document simply drag-drop the enum onto the patch.

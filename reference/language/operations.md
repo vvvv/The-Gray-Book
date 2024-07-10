@@ -110,10 +110,16 @@ The signature of an operation allows you to define the order in which its Inputs
 
 For static operations the signature can be opened directly on the operation definition region. The signature of member operations can be accessed via the PatchExplorer.
 
-*Image:Signature of member operations in the [Patch Explorer](patch-explorer.md)*
+![](2024-07-10-10-55-21.png)
 
-*Image:Signature of a static operation*
+*Locked signature of member operation "Update" in the [Patch Explorer](patch-explorer.md)*
 
-By default the order of pins is defined by their left-to-right placement in the patch. To override that behavior uncheck the "pin order" toggle and arrange the pins by drag-dropping them directly in the signature.
+![](2024-07-10-10-56-32.png)
+
+*Unlocked signature of static operation "Confine"*
+
+By default signatures are *locked*, meaning the order of pins is defined by their left-to-right placement in the patch. In order to manually manage an operations signature you have to *unlock* it by pressing the Lock icon toggle. In an unlocked signature you can arrange pins via drag'n'drop.
+
+The [Connect To Signature](../extending/forwarding.md#connect-to-signature) feature only works on locked signatures, where the system has full control over managing existence and order of pins.
 
 Doubleclicking a pins name allows you to rename it. A middleclick on a pin allows you to annotate it with a type.
