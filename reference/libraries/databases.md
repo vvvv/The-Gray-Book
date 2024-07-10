@@ -1,5 +1,8 @@
 # Databases
 
+## Redis
+The VL.IO.Redis NuGet is shipping with vvvv.
+
 ## InfluxDB
 
 NuGet: [VL.InfluxDB](https://www.nuget.org/packages/VL.InfluxDB)

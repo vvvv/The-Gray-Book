@@ -95,7 +95,22 @@ In case the export fails, the console will be opened to show there was an error.
 ![](../../images/hde/exporting-74bc1.png)
 <center>The Application Exporter reporting a problem</center>
 
-#### NuGet dependency issues
+#### Export fails with error MSB3073
+This error [originates from Stride](https://github.com/stride3d/stride/issues/2232). If you're facing this issue, please try this workaround:
+- From within vvvv open the NuGet command line `Quad menu -> Manage NuGets -> Commandline`
+- From the commandline execute:
+  - `nuget install System.Security.Cryptography.Pkcs -version 6.0.4`
+  - `copy System.Security.Cryptography.Pkcs.6.0.4\lib\net6.0\System.Security.Cryptography.Pkcs.dll %userprofile%\.nuget\packages\stride.core.assets.compilerapp\4.2.0.2121\lib\net8.0`
+- Now try the export again
+
+#### Export fails with "..Found multiple publish output files with the same relative path.."
+If the file in question is `ijwhost.dll` it might work to specify:
+
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+
+in the .props file you can edit via `Advanced build configuration` as [explained here](https://stackoverflow.com/questions/69919664/publish-error-found-multiple-publish-output-files-with-the-same-relative-path).
+
+#### Export fails with NuGet dependency issues
 Read the red error message carefully. There will be a reason given for the problem you're facing. If that reason hints at incompatible packages, you may have accumulated packages in your NuGet folder over time, which prevent the export from succeeding. In such a case try starting from a clean NuGet folder. Here are the steps to do so:
 - Open your NuGet folder: `Quad menu -> Manage NuGets -> Show Installed` opens your `C:\Users\..\AppData\Local\vvvv\gamma\nugets` folder
 - Close vvvv

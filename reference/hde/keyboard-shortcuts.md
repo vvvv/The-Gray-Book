@@ -209,7 +209,7 @@ The following shortcuts are working with either a VL.Stride SceneWindow or Rende
 
 Description|Action
 -|-
-Copy content of render window to clipboard|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
+Copy screenshot of render window to clipboard|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
 Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
 Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
@@ -232,5 +232,5 @@ The following shortcuts are working with a VL.Skia Renderer active:
 
 Description|Action
 -|-
-Copy content of render window to clipboard|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
+Copy screenshot of render window to clipboard|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
 Toggle Performance Meter|<span class="keyseq"><kbd>F2</kbd></span>
