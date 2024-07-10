@@ -15,8 +15,15 @@ Here some things you might be looking for:
 - Support for specific [OpenXR Extensions](https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html)
 - Planar Image Tracking and more via [EasyAR](https://www.easyar.com/)
 - VESA [MPCDI](https://vesa.org/featured-articles/vesa-completes-specifications-for-new-multiple-projector-common-data-interchange-standard-mpcdi/)
-- Disguise [RenderStream](https://www.disguise.one/en/products/renderstream)
-- NVIDIA [Rivermax](https://developer.nvidia.com/networking/rivermax)
 - [Notch LC](https://notchlc.notch.one/) video Codec
 - [VST3](https://steinbergmedia.github.io/vst3_dev_portal/pages/index.html) audio plugins
 - [Python](https://github.com/pythonnet/pythonnet) scripting
+- NVIDIA [Rivermax](https://developer.nvidia.com/networking/rivermax)
+- Integrations
+  - [Disguise](https://www.disguise.one/) ([RenderStream](https://www.disguise.one/en/products/renderstream))
+  - [7th Sense](https://7thsense.one/)
+  - [Green Hippo](https://www.green-hippo.com/)
+  - [TouchDesigner](https://derivative.ca/) ([TouchEngine](https://docs.derivative.ca/TouchEngine))
+  - [Unreal Engine](https://www.unrealengine.com) 
+  - [Ventuz](https://www.ventuz.com/)
+  - [Brainsalt](https://www.brainsalt.com/)
