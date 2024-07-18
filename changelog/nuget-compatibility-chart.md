@@ -16,6 +16,7 @@ Package|Version|Command to get recommended version
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
 [VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
 [VL.Pipette.HDE](https://www.nuget.org/packages/VL.Pipette.HDE) | >= 0.0.2 | `nuget install VL.Pipette.HDE`
+[VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC) | >=0.1.1 | `nuget install VL.Audio.LTC`
 
 ## vvvv gamma 5.0
 
@@ -32,6 +33,7 @@ Package|Version|Command to get recommended version
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.0 preview | `nuget install VL.Kairos -version 1.1.8`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | <= 0.4.2 preview | `nuget install VL.IO.TCP -version 0.4.2-alpha`
+[VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC) | 0.1.0 | `nuget install VL.Audio.LTC -version 0.1.0`
 
 ## vvvv gamma 2021.4.12
 
