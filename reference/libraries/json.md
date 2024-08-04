@@ -3,7 +3,7 @@
 Instead of operating on a JSON object directly, in VL by default the JSON is converted to an XElement which can be easily inspected and modified. Vice versa, an XElement can always be converted to JSON.
 
 > [!NOTE]
-> If in an advanced use case you find yourself in a situation where this conversion from JSON to XElement is not feasible, you can still operate on JSON directly by referencing a library like [JSON.NET](https://www.newtonsoft.com/json), as described in [Using .NET Libraries](using-net-libraries.md).
+> If in an advanced use case you find yourself in a situation where this conversion from JSON to XElement is not feasible, you can still operate on JSON directly by referencing a library like [JSON.NET](https://www.newtonsoft.com/json), as described in [Using .NET Libraries](../extending/using-net-libraries.md).
 
 ## Loading a JSON file
 
