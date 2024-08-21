@@ -28,12 +28,13 @@ Number IOBoxes work the same for whole (integer32, byte, ...) and real (float32,
 * Doubleclick to enter a value via keyboard
 
 > [!NOTE]
-> You can also enter math formulas like, e.g.: "1/3" that will be immediately be evaluated and fill the IOBox with the result
+> You can also enter math formulas like, e.g.: "1/3" that will be immediately be evaluated and fill the IOBox with the result.  
+> For a signchange like "-1" you'll have to write "±1"!
 
 * Right-drag up and down to change the value gradually
-** hold <span class="keyseq"><kbd>SHIFT</kbd></span> while dragging, to divide the step-size by 10
-** hold <span class="keyseq"><kbd>CTRL</kbd></span> while dragging, to divide the step-size by (another) 10
-** hold <span class="keyseq"><kbd>ALT</kbd></span> in combination with the above to multiply instead of divide the stepsize
+  * hold <span class="keyseq"><kbd>SHIFT</kbd></span> while dragging, to divide the step-size by 10
+  * hold <span class="keyseq"><kbd>CTRL</kbd></span> while dragging, to divide the step-size by (another) 10
+  * hold <span class="keyseq"><kbd>ALT</kbd></span> in combination with the above to multiply instead of divide the stepsize
 * <span class="keyseq"><kbd>ALT</kbd></span> + Rightclick to reset the value to its default
 
 Via the inspector you can configure the IOBox:
