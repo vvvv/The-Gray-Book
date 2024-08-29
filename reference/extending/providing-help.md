@@ -5,7 +5,7 @@ Library developers can provide patches demonstrating different aspects of the li
 We distinguish 5 types of patches:
 
 * Explanation: Typically a single patch per library giving an overview of the whole set of nodes the library provides
-* HowTo: A series of patches demonstrating how to achieve specific things using certain combination of nodes provided by the library
+* HowTo: A series of individual patches demonstrating how to achieve specific things using certain combination of nodes provided by the library
 * Reference: A patch covering the functionality of one specific node
 * Tutorial: Most often a link to a video tutorial
 * Example: A patch more broadly showing a usecase of of a library, not necessarily explaining too much but more giving an idea of what's possible
