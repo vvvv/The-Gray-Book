@@ -129,6 +129,9 @@ NuGet: [VL.Harmony](https://www.nuget.org/packages/VL.Harmony)
 Binary search set of nodes, to interpolate any kind of data  
 NuGet: [VL.Interpolator](https://www.nuget.org/packages/VL.Interpolator)
 
+## Tor
+Allows to make HTTP requests via the TOR network  
+NuGet: [VL.TorSharp](https://www.nuget.org/packages/VL.TorSharp)
 
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
