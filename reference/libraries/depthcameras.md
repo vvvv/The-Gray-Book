@@ -33,5 +33,5 @@ For using the [Nuitrack API](http://nuitrack.com/) with different depth cameras.
 NuGet: [VL.Devices.Nuitrack](https://www.nuget.org/packages/VL.Devices.Nuitrack)  
 
 ## Ultraleap Motion Controller
-For using the [Ultraleap Motion Controller](https://www.ultraleap.com/product/leap-motion-controller/) for handtracking.  
-NuGet: [VL.Devices.LeapOrion](https://www.nuget.org/packages/VL.Devices.LeapOrion)
+For using hand tracking devices by [Ultraleap](https://www.ultraleap.com) with either the Gemini (5.x) or Hyperion (6.x) line of drivers.  
+NuGet: [VL.Devices.Ultraleap](https://www.nuget.org/packages/VL.Devices.Ultraleap)
