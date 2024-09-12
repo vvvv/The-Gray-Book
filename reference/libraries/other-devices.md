@@ -40,6 +40,10 @@ NuGet: [VL.M8Display](https://www.nuget.org/packages/VL.M8Display)
 Set of nodes to work with PTZ cameras  
 NuGet: [VL.PTZ](https://www.nuget.org/packages/VL.PTZ)
 
+## Robotiq 3-Finger Adaptive Robot Gripper
+A node set to control a [Robotiq 3-Finger Adaptive Robot Gripper](https://robotiq.com/products/adaptive-grippers#Three-Finger-Gripper).  
+NuGet: [VL.Devices.Robotiq](https://www.nuget.org/packages/VL.Devices.Robotiq)
+
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * [Nintendo WiiMote](https://www.nuget.org/packages/WiimoteLib/)
