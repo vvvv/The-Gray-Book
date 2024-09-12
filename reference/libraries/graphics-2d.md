@@ -16,4 +16,5 @@ It comes with an extensive collection of help patches documenting the different 
 ### Additional Libraries
 * NuGet: [VL.Elementa](https://www.nuget.org/packages/VL.Elementa) is an advanced widget and layouting library for VL.Skia
 * NuGet: [VL.CEF.Skia](https://www.nuget.org/packages/VL.CEF.Skia) is a HTML renderer
+* NuGet: [VL.PDFReader](https://www.nuget.org/packages/VL.PDFReader) to load PDF pages as images
 * NuGet: [VL.PolyTools](https://www.nuget.org/packages/VL.PolyTools) extends VL.Skia Paths with high level polygon and polypath objects
