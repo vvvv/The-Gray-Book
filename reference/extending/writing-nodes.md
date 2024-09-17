@@ -269,7 +269,7 @@ Any class can be turned into a process node by attaching the [`ProcessNode`](htt
 By default all its public members will be used as its fragments. The attribute provides various ways to tweak this behavior.
 
 > [!NOTE]
-> The attribute only works if the assembly has the `[assembly:ImportAsIs]` attribute set. Newly created C# projects will have this attribute set, for existing ones you'll have to add it on your own.
+> The attribute only works if the assembly has the `[assembly:ImportAsIs]` attribute set. C# projects created by vvvv will have this attribute set, if you're referencing an existing project you'll have to add it on your own, see [Setting assembly attributes](https://learn.microsoft.com/en-us/dotnet/standard/assembly/set-attributes).
 
 ```csharp
 [ProcessNode]
