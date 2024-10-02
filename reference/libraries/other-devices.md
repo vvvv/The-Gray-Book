@@ -17,10 +17,6 @@ NuGet: [VL.Devices.TheEyeTribe](https://www.nuget.org/packages/VL.Devices.TheEye
 For using WinTab Tablets (e.g. Wacom)  
 NuGet: [VL.Devices.WinTab](https://www.nuget.org/packages/VL.Devices.WinTab)
 
-## SICK
-For using [Lidar devices by SICK](https://www.sick.com/de/de/mess-und-detektionsloesungen/3d-lidar-sensoren/c/g282752)  
-NuGet: [VL.Devices.SICK](https://www.nuget.org/packages/VL.Devices.SICK)
-
 ## GameController
 WIP: [VL.GameController](https://discourse.vvvv.org/t/vl-gamecontroller/20570)
 

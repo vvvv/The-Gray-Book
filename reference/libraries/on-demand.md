@@ -9,6 +9,7 @@ We do offer priority support for your development requirements, please **[get in
 Here some things you might be looking for:
 - Support for specific camera devices
 - Support for specific capture cards
+- Support for specific lidars
 - Support for specific protocols
 - Lasers by [Laser Animation Sollinger](https://laseranimation.com/)
 - Support for [ShowNET Hardware](https://www.laserworld.com/de/software/shownet-hardware.html)
