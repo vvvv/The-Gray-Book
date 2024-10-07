@@ -18,7 +18,7 @@ Feel free to use them as starting points for your own library.
 
 ## A brief introduction to Github Actions
 
-Github actions are small scripts with a specific purpose, allowing you to automate tasks on your repos. They are actually the building blocks of what's called a _workflow_ : you chain several actions one after the other in your own small script, and decide under which condition the workflow is triggered (a new commit on `master`, a new tag, etc).
+Github actions are small scripts with a specific purpose, allowing you to automate tasks on your repos. They are actually the building blocks of what's called a _workflow_ : you chain several actions one after the other in your own small script, and decide under which condition the workflow is triggered (a new commit on `main`, a new tag, etc).
 
 Our action will do the following tasks for you :
 
@@ -31,7 +31,7 @@ An action takes input parameters, listed as key-value pairs. In a workflow scrip
 
 ```
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.42
+    uses: vvvv/PublishVLNuget@1.0.43
     with:
     csproj: src\VL.MyLib.csproj
     nuspec: deployment\VL.MyLib.nuspec
@@ -87,7 +87,7 @@ Please note that you have to set the `icon-dst` input parameter to an already ex
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.42
+    uses: vvvv/PublishVLNuget@1.0.43
     with:
     (...)
     icon-src: https://wwww.url.to/nugeticon.png
@@ -101,7 +101,7 @@ In your action, set the icon destination to the root of the repo :
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.42
+    uses: vvvv/PublishVLNuget@1.0.43
     with:
     (...)
     icon-src: https://wwww.url.to/nugeticon.png
@@ -194,7 +194,7 @@ Before using `PublishVLNuget`, you need to add a few pre-existing other actions 
 ```
 name: push_nuget
 
-# on push on master
+# on push on main
 on:
   push:
     branches:
@@ -210,13 +210,13 @@ jobs:
       uses: actions/checkout@master
     
     - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.0
+      uses: microsoft/setup-msbuild@v2
 
     - name: Setup Nuget.exe
-      uses: nuget/setup-nuget@v1
+      uses: nuget/setup-nuget@v2.0.0
 ```
 
-The `on` section describes under which condition the workflow is triggered. Here, we specify that when there's a new commit on `master` *except* if it's on `README.md`, we trigger the workflow.
+The `on` section describes under which condition the workflow is triggered. Here, we specify that when there's a new commit on `main` *except* if it's on `README.md`, we trigger the workflow.
 
 Then, in our job, we add three actions :
 
@@ -229,7 +229,7 @@ Now that everything is setup, we can add our action and fill its parameters acco
 
 ```
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.42
+    uses: vvvv/PublishVLNuget@1.0.43
     with:
     csproj: src\VL.MyLib.csproj
     nuspec: deployment\VL.MyLib.nuspec
@@ -244,7 +244,7 @@ Wonder what is that `{{ secrets.NUGET_KEY }}`? Check [Getting a Nuget API Key](#
 
 ### Push!
 
-You can now push to your master branch and trigger a new deployment of your plugin. Make sure that you bump your plugin's version in your `nuspec` or `csproj` file, otherwise nuget.org (or any feed you're using) will refuse your plugin.
+You can now push to your `main` branch and trigger a new deployment of your plugin. Make sure that you bump your plugin's version in your `nuspec` or `csproj` file, otherwise nuget.org (or any feed you're using) will refuse your plugin.
 
 Head over to the _Action_ section of your repo to monitor your worflow run in real time. If errors occur during the workflow run, they'll show up here.
 
