@@ -47,7 +47,7 @@ By default, elements with no assignment will "fall back" to being executed on Up
 
 ### The Dispose Operation
 
-If you want to get rid of an instance of an object that you've created dynamically at runtime, typically you'd simply make sure you don't have a reference to it anymore, e.g. like removing it from a list. But beware: If your object is "disposable" you'll also have to call its `Dispose` operation before loosing any reference to it. So the question remains how you can find out whether an object is disposable or not. For now the only way to know is by testing this: Try to connect Dispose [IDisposable] note to an instance of your object. If this connection is allowed, you know that the object is disposable and requires you to manually call `Dispose` on it.
+If you want to get rid of an instance of an object that you've created dynamically at runtime, typically you'd simply make sure you don't have a reference to it anymore, e.g. like removing it from a list. But beware: If your object is "disposable" you'll also have to call its `Dispose` operation before loosing any reference to it. So the question remains how you can find out whether an object is disposable or not. For now the only way to know is by testing this: Try to connect Dispose [IDisposable] node to an instance of your object. If this connection is allowed, you know that the object is disposable and requires you to manually call `Dispose` on it.
 
 If on the other hand you're looking at implementing the IDisposable interface in your own object, simple create a member operation called "Dispose" and use it like any other operation. At least for Process nodes, the system will now know to trigger this operation automatically whenever the Process node is deleted from a patch. 
 
