@@ -47,9 +47,9 @@ By default, elements with no assignment will "fall back" to being executed on Up
 
 ### The Dispose Operation
 
-In cases where you deal with an unmanaged object it is necessary to add an operation named `Dispose` and use it to in turn execute a Dispose node for the object. This will make sure that when the parent patch is disposed, that the managed resource will be disposed as well. 
+If you want to get rid of an instance of an object that you've created dynamically at runtime, typically you'd simply make sure you don't have a reference to it anymore, e.g. like removing it from a list. But beware: If your object is "disposable" you'll also have to call its `Dispose` operation before loosing any reference to it. So the question remains how you can find out whether an object is disposable or not. For now the only way to know is by testing this: Try to connect Dispose [IDisposable] note to an instance of your object. If this connection is allowed, you know that the object is disposable and requires you to manually call `Dispose` on it.
 
-Since there is no way to know whether an object is unmanaged, a simple test you can do, is try to connect Dispose [IDisposable] to an instance of it. If this connection is allowed, you know that the resource is unmanaged and needs you to manually call Dispose on it.
+If on the other hand you're looking at implementing the IDisposable interface in your own object, simple create a member operation called "Dispose" and use it like any other operation. At least for Process nodes, the system will now know to trigger this operation automatically whenever the Process node is deleted from a patch. 
 
 ## Static Operations
 Static operations are on their own, operating only on data they are being fed with.
