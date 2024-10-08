@@ -220,7 +220,7 @@ The `on` section describes under which condition the workflow is triggered. Here
 
 Then, in our job, we add three actions :
 
-- `actions/checkout` make sure our repo is checked-out on the `master` branch
+- `actions/checkout` make sure to use the latest version of the git checkout action
 - `microsoft/setup-msbuild` makes sure our action can use `msbuild.exe` to build your solution
   - As a consequence, if your plugin does not have a Visual Studio solution, you can omit this
 - `nuget/setup-nuget` installs `nuget.exe`. We need it in our action to pack and push your plugin to nuget.org.
