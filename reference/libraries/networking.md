@@ -24,10 +24,11 @@ HowTo Videos:
 * [Open Stage Control](https://openstagecontrol.ammd.net/)
 * [OSC/Pilot](https://oscpilot.com/)
 * [Jockey](http://www.jockeyapp.net/)
-* [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en_US&gl=US)
-* [poseHook](https://play.google.com/store/apps/details?id=com.hollyhook.posehook&hl=en_US&gl=US)
+* [oscHook](https://apkpure.com/de/oschook/com.hollyhook.oscHook)
+* [poseHook](https://apkpure.com/de/posehook/com.hollyhook.posehook)
 * [Sensors2](https://sensors2.org/osc/)
 * [SoundCool](https://play.google.com/store/apps/details?id=org.soundcool.upv.oscapp)
+* [GyrOSC](https://apps.apple.com/us/app/gyrosc/id418751595)
 
 ## OSCQuery
 The VL.IO.OSCQuery NuGet, implementing the [OSCQueryProposal](https://github.com/Vidvox/OSCQueryProposal), is shipping with vvvv.  
