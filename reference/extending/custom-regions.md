@@ -36,11 +36,11 @@ You do this by asking for a specific "delegate implementation":
 
 By that you basically let the "delegate implementation" of the user / the inside of the users' region flow into your algorithm. 
 
-You now can reason about when to call back that patch. For example you could call back the patch several times or just when some condition is true. You have complete freedom regarding when to call beack the users application of your region.
+You now can reason about when to call back that patch. For example you could call back the patch several times or just when some condition is true. You have complete freedom regarding when to call back the users application of your region.
 
 ## Custom delegate types
 These allow you to define Regions that come with nicely named Pins.
-If you are not afraid of  C# then please give them a try! 
+If you are not afraid of C# then please give them a try! 
 * They enhance the readability of the Region as you can name your pins
 * They allow for several Outputs
 
@@ -64,7 +64,7 @@ Search for `UserPatch`. You'll find a helper patch that allowed to declare some 
 # `CustomRegion` API based
 Since 2021.4 VL offers a way to build regions that have `Input Border Controlpoints` (BCP) and `Output BCPs`. And again: you can patch them.
 
-This is a powerful feature as it allows the end user stay in the flow. Getting data into or outof the region suddenly is effortless.  
+This is a powerful feature as it allows the end user stay in the flow. Getting data into or out of the region suddenly is effortless.  
 
 Where Delegate-based Regions can get arbitrarily complex, only asking for a small detail via a delegate, Regions based on this CustomRegion API are typically focussing only on small tweaks.
 
@@ -81,7 +81,7 @@ In order to patch a new region, all you need to do is to
 * have an input pin typed `ICustomRegion` on `Update`
 * use the configuration menu on the input pin to configure certain aspects of the region.
 
-The workflow up to now is very similar to how you had an input pin of type delegate earlier on, just this time it is of type `ICustomRegion`.
+The workflow up to now is very similar to how you had an input pin of type Delegate earlier on, just this time it is of type `ICustomRegion`.
 
 When you now instanciate your new region via the node browser in your help patch, you already will get a region. No questions asked. *If you are unhappy that you didn't get asked for Node or Region by the node browser: Check the configuration menu of that Region input pin*
 
