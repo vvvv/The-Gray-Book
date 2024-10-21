@@ -55,11 +55,7 @@ Regions of that flavor can
 
 Typically, those regions manage only one instance of the users’ patch. However, you are free to manage as many instances of the patch as you wish.
 
-### Stateful Get your hands dirty
-
-This workflow still needs some more love:
-
-Search for `UserPatch`. You'll find a helper patch that allowed to declare some stateful region. Take this as an example for now. Note that in your specific case you might need to change the delegate type in order to fit your needs. Copy over that UserPatch and refine it on your side.  
+The help browser offers you an example: *Stateful Delegate-based While Loop*.
 
 # `CustomRegion` API based
 Since 2021.4 VL offers a way to build regions that have `Input Border Controlpoints` (BCP) and `Output BCPs`. And again: you can patch them.
