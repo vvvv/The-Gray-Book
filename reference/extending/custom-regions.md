@@ -53,7 +53,7 @@ Regions of that flavor can
 * instanciate the user patch and 
 * update the patch.
 
-Often enough those regions only manage one instance of the users' patch, but in theory such a region can also manage the whole lifetime of many instances those patches. 
+Typically, those regions manage only one instance of the users’ patch. However, you are free to manage as many instances of the patch as you wish.
 
 ### Stateful Get your hands dirty
 
@@ -64,9 +64,9 @@ Search for `UserPatch`. You'll find a helper patch that allowed to declare some 
 # `CustomRegion` API based
 Since 2021.4 VL offers a way to build regions that have `Input Border Controlpoints` (BCP) and `Output BCPs`. And again: you can patch them.
 
-This is a powerful feature as it allows the end user stay in the flow. Getting data into or out of the region suddenly is effortless.  
+This is a powerful feature as it allows the end user stay in the flow. Getting data into or out of the region suddenly is effortless. 
 
-Where Delegate-based Regions can get arbitrarily complex, only asking for a small detail via a delegate, Regions based on this CustomRegion API are typically focussing only on small tweaks.
+*Border control points connect the inside and outside, meaning the ‘hole’ you cut into your node cannot be arbitrary. In the delegate-based version, you could delegate anything to the user, exchanging data that only the user patch and your algorithm needed to know. With border control points, the inside and outside are conceptually more interconnected.*
 
 Here are some regions that showcase the CustomRegion API:
 * Comment
@@ -140,7 +140,7 @@ When you design your region you might focus on BCPs with a certain data type. No
 ### Current Limitiations
 Note that there are still some constraints for your ideas :(
 * It's not possible to define multiple control point kinds (like `Accumulator` and `Splicer`)
-* Pins inside the region patch are not supported. So you currently always need to BCPs. A workaround for this limitation is to check for a BCP with a certain name or type and treat this differently. 
+* Pins inside the region patch are not supported. So you currently always need to use BCPs. A workaround for this limitation is to check for a BCP with a certain name or type and treat this differently. 
 
 Please let us know of your needs: https://github.com/vvvv/VL-Language/issues/51
 
