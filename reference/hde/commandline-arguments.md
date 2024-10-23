@@ -14,6 +14,7 @@ List of package repositories used by VL to lookup packages. Most useful, when [w
 Tell the exporter to add a path to the generated NuGet.config file, which in turn will be used by dotnet to build the generated project|`--export-package-sources` + path to directory with .nupkg files
 **As of 5.0:** Opt-out of the read-only default for libraries in order to work on them. For details, see [Editable Packages](../language/compilation.md#editable-packages).|`--editable-packages` + a semi-colon separated list of packages. Glob patterns are allowed, e.g. VL.IO.*
 **As of 5.3:** Log issues during startup to %UserProfile%\Documents\vvvv\gamma\vvvv.log |`--log`
+**As of 6.7:** Enable GPU debugging with VL.Stride. See [GPU Debugging](../libraries/3d/gpu-debugging.md).|`--debug-gpu`
 
 Example:
 

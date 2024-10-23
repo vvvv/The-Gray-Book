@@ -78,6 +78,7 @@
 ### [Projection Mapping](libraries/projectionmapping.md)
 ### [Virtual Reality](libraries/3d/virtual-reality.md)
 ### [Graphics Cards](libraries/3d/graphics-cards.md)
+### [GPU Debugging](libraries/3d/gpu-debugging.md)
 ## [Animation](libraries/animation.md)
 ## [Audio](libraries/audio.md)
 ## [Augmented Reality](libraries/augmentedreality.md)
