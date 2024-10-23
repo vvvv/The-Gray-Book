@@ -51,21 +51,13 @@ For more in-depth GPU debugging, you can use **RenderDoc**. This tool allows you
 
 ##### 1. Setting Up the RenderDocManager Node
 
-Once vvvv is running with the `--debug-gpu` flag:
-
-- In any patch that references **VL.Stride**, add the **RenderDocManager** node.
-- The node has two inputs:
-  - **Capture Next Frame**: Captures the next frame rendered by the GPU.
-  - **Number of Frames to Capture**: Specifies the number of consecutive frames to capture for debugging.
+Once vvvv is running with the `--debug-gpu` flag, open any patch that references **VL.Stride**, and add the **RenderDocManager** node.
 
 ##### 2. Enabling the Stride Profiler
 
-Before capturing frames, enable the **Stride Profiler** in vvvv:
+Before capturing frames, enable the **Stride Profiler** as described above.
 
-- Focus on any Stride window (e.g., a render window or scene window).
-- Press **F4** to enable the Stride Profiler.
-
-The Stride Profiler will appear as a small text line in the top left corner of the window, showing FPS and other information. It has three states: FPS, CPU page, and GPU page. It doesn’t matter which page is currently displayed, but the profiler **must be enabled** for RenderDoc to receive the necessary information for organizing GPU calls.
+It doesn’t matter which page is currently displayed, but the profiler **must be enabled** for RenderDoc to get detailed information for organizing GPU calls.
 
 ##### 3. Capturing Frames
 
