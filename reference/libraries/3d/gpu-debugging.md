@@ -108,7 +108,14 @@ RenderDoc also provides performance counters that help assess GPU performance me
 #### 1. Enabling the Performance Counter Viewer
 
 - Go to **Window > Performance Counter Viewer** in RenderDoc.
-- In this view, you can access different GPU counters, including generic counters and **Nvidia-specific counters** (if you install an additional DLL).
+- In this view, you can access different GPU counters, including generic counters and **Nvidia-specific counters**.
+
+To enable Nvidia-specific counters:
+1. Download the **Nsight Perf SDK** from the official Nvidia page: [Nsight Perf SDK](https://developer.nvidia.com/nsight-perf-sdk).
+2. Extract the SDK contents.
+3. Copy the `nvperf_grfx_host.dll` file to the following directory:
+`C:\Users\YourUsername\AppData\Roaming\renderdoc\plugins\nv\nvperf_grfx_host.dll`
+4. Reopen the frame capture in RenderDoc.
   
 Once enabled, you can perform **Sample Counters** on captured frames. This will generate a detailed list showing various performance metrics, such as the time taken in milliseconds for specific GPU calls.
 
