@@ -97,7 +97,7 @@ Once frames are captured and loaded in RenderDoc:
 
 4. **Shader Debugging**: 
    - To debug pixel, vertex, or compute shaders, go to the **Pipeline State** section.
-   - For more information on debugging shaders in RenderDoc, refer to their official guide: [Shader Debugging in RenderDoc](https://renderdoc.org/docs/how/how_debug_shaders.html).
+   - For more information on debugging shaders in RenderDoc, refer to their official guide: [Shader Debugging in RenderDoc](https://renderdoc.org/docs/how/how_debug_shader.html).
 
 ![](../../../images/libraries/3d/renderdoc.png)
 
@@ -119,6 +119,6 @@ Once enabled, you can perform **Sample Counters** on captured frames. This will 
 
 ![](../../../images/libraries/3d/counter_view.png)
 
-For more information on how to use the Performance Counter Viewer, refer to the official RenderDoc documentation: [Performance Counter Viewer in RenderDoc](https://renderdoc.org/docs/how/how_view_performance_counters.html).
+For more information on how to use the Performance Counter Viewer, refer to the official RenderDoc documentation: [Performance Counter Viewer in RenderDoc](https://renderdoc.org/docs/window/performance_counter_viewer.html).
 
 For further details on using RenderDoc, including advanced features like shader debugging and performance counters, refer to the official [RenderDoc documentation](https://renderdoc.org/docs/).
