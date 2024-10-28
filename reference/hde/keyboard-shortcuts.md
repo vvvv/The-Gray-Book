@@ -117,6 +117,7 @@ Create via Nodebrowser|right doubleclick in the patch
 Create while linking|Middleclick (or <span class="keyseq"><kbd>ALT</kbd></span> + leftclick) in the patch
 Reset to default|<span class="keyseq"><kbd>ALT</kbd></span> + rightclick
 Edit the value|Double leftclick
+*IOBox (Float)*: Change precision|<span class="keyseq"><kbd>Ctrl</kbd></span> + <span class="keyseq"><kbd>+</kbd></span>/<span class="keyseq"><kbd>-</kbd></span>
 *IOBox (Value)*: Change value|Rightdrag up/down
 *IOBox (Value)*: Change value finer|<span class="keyseq"><kbd>Ctrl</kbd></span> + Rightdrag up/down to change value with stepsize divided by 10
 *IOBox (Value)*: Change value finer|<span class="keyseq"><kbd>Shift</kbd></span> + Rightdrag up/down to change value with stepsize divided by 10
