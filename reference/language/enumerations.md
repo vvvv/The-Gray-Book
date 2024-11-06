@@ -39,3 +39,5 @@ For working with dynamic enums, use nodes from the (advanced) `Primitive.Dynamic
 As of now dynamic enums cannot be created in VL itself. Instead you have to create a small C# code snippet that defines the enum. Follow the instructions unter [writing nodes](../extending/writing-nodes.md) and choose one of the "Dynamic Enum" templates. Opening the .cs file the template created, you can customize the template. 
 
 For more details on this customization, see: [Defining Dynamic Enums](../extending/writing-nodes.md#dynamic-enums).
+
+After your changes, saving the .cs file will make the enum available in your VL document.
