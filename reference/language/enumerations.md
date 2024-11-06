@@ -13,7 +13,7 @@ For working with static enums, use nodes from the `Primitive.Enum` category.
 ![](../../images/language/static-enums.png)
 
 ### Defining Static Enums
-As of now static enums cannot be created in VL itself. Instead you have to create a small C# code snippet that defines the enum. Follow the instructions unter [writing nodes](../extending/writing-nodes.md] and choose the "Static Enum" template. Opening the .cs file the template created, you'll see the following line:
+As of now static enums cannot be created in VL itself. Instead you have to create a small C# code snippet that defines the enum. Follow the instructions unter [writing nodes](../extending/writing-nodes.md]) and choose the "Static Enum" template. Opening the .cs file the template created, you'll see the following line:
 
 ```csharp
     public enum StaticEnum { foo, bar };
@@ -36,6 +36,6 @@ For working with dynamic enums, use nodes from the (advanced) `Primitive.Dynamic
 ![](../../images/language/dynamic-enums.png)
 
 ### Defining Dynamic Enums
-As of now dynamic enums cannot be created in VL itself. Instead you have to create a small C# code snippet that defines the enum. Follow the instructions unter [writing nodes](../extending/writing-nodes.md] and choose one of the "Dynamic Enum" templates. Opening the .cs file the template created, you can customize the template. 
+As of now dynamic enums cannot be created in VL itself. Instead you have to create a small C# code snippet that defines the enum. Follow the instructions unter [writing nodes](../extending/writing-nodes.md) and choose one of the "Dynamic Enum" templates. Opening the .cs file the template created, you can customize the template. 
 
 For more details on this customization, see: [Defining Dynamic Enums](../extending/writing-nodes.md#dynamic-enums).
