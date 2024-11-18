@@ -17,8 +17,8 @@ Here some things you might be looking for:
 - Planar Image Tracking and more via [EasyAR](https://www.easyar.com/)
 - VESA [MPCDI](https://vesa.org/featured-articles/vesa-completes-specifications-for-new-multiple-projector-common-data-interchange-standard-mpcdi/)
 - [Notch LC](https://notchlc.notch.one/) video Codec
-- [VST3](https://steinbergmedia.github.io/vst3_dev_portal/pages/index.html) audio plugins
 - [Python](https://github.com/pythonnet/pythonnet) scripting
+- [Crestron](https://www.crestron.com/)
 - NVIDIA [Rivermax](https://developer.nvidia.com/networking/rivermax)
 - Integrations
   - [Disguise](https://www.disguise.one/) ([RenderStream](https://www.disguise.one/en/products/renderstream))
