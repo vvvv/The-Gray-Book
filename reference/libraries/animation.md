@@ -20,14 +20,14 @@ NuGet: [VL.Kairos](https://www.nuget.org/packages/VL.Kairos)
 
 ### Tilda
 A sequencing timeline that contains clips of various types.  
-GitHub: [Tilda](https://github.com/nsynkde/Tilda)  
-  
+GitHub: [Tilda](https://github.com/nsynkde/Tilda)
+
 ### Interpolator
-Powerfull binary search set of nodes for vl, to interpolate, blend & compose any kind of type.
-NuGet: [VL.Interpolator](https://www.nuget.org/packages/VL.Interpolator/)  
-  
+Powerfull binary search set of nodes for vl, to interpolate, blend & compose any kind of type.  
+NuGet: [VL.Interpolator](https://www.nuget.org/packages/VL.Interpolator/)
+
 ### Interpolator.Addons
-Timeliner & addons around VL.Interpolator.
+Timeliner & addons around VL.Interpolator.  
 NuGet: [VL.Interpolator.Addons](https://www.nuget.org/packages/VL.Interpolator.Addons/)
 
 
