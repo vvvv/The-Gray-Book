@@ -27,6 +27,8 @@ Copy this, open a Command prompt and run the command modified like this:
 
 ``dotnet publish -c Release -r linux-arm --self-contained true /clp:ErrorsOnly /nologo PathToYourProject.csproj"``
 
+Use ``-r linux-arm`` for 32bit Raspberry Pi OS or ``-r linux-arm64`` for the 64bit Version.
+
 After a successful export, copy the generated files over to the PI and there on a commandline set execute permissions on the executable:
 
 ``chmod +x myprogram``
