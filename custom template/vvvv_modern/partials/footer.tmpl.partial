@@ -2,7 +2,7 @@
   <div class="container-xxl">
     <div class="flex-fill">
       <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small mx-3">
-        <p>Brought to you by <a href="https://vvvv.org" target="_blank">vvvv.org</a> | <a href="https://www.visualprogramming.net" target="_blank">visualprogramming.net</a></p>
+        <p>Brought to you by <a href="https://vvvv.org" target="_blank">vvvv.org</a></p>
         <p>Made with <a href="https://dotnet.github.io/docfx" target="_blank">docfx</a></p>
         <p><a href="#top">Back to top</a></p>
       </div>
