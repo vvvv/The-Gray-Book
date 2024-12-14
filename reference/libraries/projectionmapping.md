@@ -14,7 +14,7 @@ Projection mapping tool.
 NuGet: [VL.Mapper](https://www.nuget.org/packages/VL.Mapper)
 
 ## Domemaster
-Download: [WIP](https://discourse.vvvv.org/t/vl-domemaster/20660)  
+Download: [WIP](https://forum.vvvv.org/t/vl-domemaster/20660)  
 Rendering Scenes in Domemaster format for use in fulldome projections.
 
 ## MPCDI

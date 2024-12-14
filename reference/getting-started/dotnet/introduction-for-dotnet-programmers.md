@@ -39,4 +39,4 @@ Then head back to the [Overview](../overview.md#tutorials) for more sources of l
 
 You may also want to find out how you can [extend vvvv](../../extending/overview.md) and have a look at our [Demo Library](https://github.com/vvvv/vl.demolib) including C# and F# examples of writing your own nodes for VL.
 
-Any questions left? Get them answered in the [forum](http://discourse.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).
+Any questions left? Get them answered in the [forum](http://forum.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).

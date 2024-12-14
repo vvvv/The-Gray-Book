@@ -85,4 +85,4 @@ Compared to one or the other frameworks listed above, you may miss:
 
 Press <span class="keyseq"><kbd>F1</kbd></span> in vvvv to open the Helpbrowser. There you'll find numerous example and help patches on various topics. Also: With any node selected press F1 to see its dedicated help patch.
 
-Any questions left? Get help and support by the developers and a welcoming global community in the [forum](http://discourse.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).
+Any questions left? Get help and support by the developers and a welcoming global community in the [forum](http://forum.vvvv.org) or [chat](https://app.element.io/#/room/#vvvv:matrix.org).

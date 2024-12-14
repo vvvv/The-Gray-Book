@@ -18,7 +18,7 @@ For using WinTab Tablets (e.g. Wacom)
 NuGet: [VL.Devices.WinTab](https://www.nuget.org/packages/VL.Devices.WinTab)
 
 ## GameController
-WIP: [VL.GameController](https://discourse.vvvv.org/t/vl-gamecontroller/20570)
+WIP: [VL.GameController](https://forum.vvvv.org/t/vl-gamecontroller/20570)
 
 ## XBOX 360 Controller
 For using the XBOX360 Controller  

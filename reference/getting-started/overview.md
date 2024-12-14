@@ -32,9 +32,9 @@ For completeness, here we duplicate links to some important bits:
 
 ### Examples
 - [VL.TheBigBang](https://github.com/chkworks/VL.TheBigBang): A tutorial series for absolute beginners, covering all nodes and techniques to get you started (by chk)
-- [VL.GenerativeGestaltung](https://discourse.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples following the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book (by phlegma)
+- [VL.GenerativeGestaltung](https://forum.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples following the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book (by phlegma)
 - [VL.ExtendedTutorials](https://github.com/TobyKLight/VL.ExtendedTutorials): Extended tutorial help patches, covering common questions as learners move from beginner towards intermediate (by TobyK)
-- [Nodevember2022](https://discourse.vvvv.org/t/vl-examples-patches-playground01/21166): A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) (by CeeYaa)
+- [Nodevember2022](https://forum.vvvv.org/t/vl-examples-patches-playground01/21166): A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) (by CeeYaa)
 - [Genuary2023](http://www.github.com/CeeYaa/Genuary2023): A collection of examples made following the prompts of [Genuary](http://www.genuary.art/) (by CeeYaa)
 
 ## Chapters
@@ -51,7 +51,7 @@ This reference is further structured into the following chapters:
 
 ## Connect
 
-* [Forum](http://discourse.vvvv.org): Any questions left? Get them answered here
+* [Forum](http://forum.vvvv.org): Any questions left? Get them answered here
 * [Chat](https://app.element.io/#/room/#vvvv:matrix.org): Want to talk with other vvvv users? Here is where we meet
 * [Blog](https://www.visualprogramming.net/blog/): Follow this one, to make sure not to miss any news
 * [Mastodon](https://mastodon.xyz/@vvvv): Follow for more bite-size news than in the blog

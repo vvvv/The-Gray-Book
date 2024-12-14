@@ -24,7 +24,7 @@ Node Info is available for every selected node. Next to information about the no
 ![](../../images/hde/findinghelp-dd8fd.png)
 
 ## Forum
-Get help and support by the developers and a welcoming global community in the [forum](http://discourse.vvvv.org).
+Get help and support by the developers and a welcoming global community in the [forum](http://forum.vvvv.org).
 
 ## Chat
 Talk to developers and fellow vvvv users in the [chat](https://app.element.io/#/room/#vvvv:matrix.org).

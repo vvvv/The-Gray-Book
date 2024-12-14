@@ -44,5 +44,5 @@ The Gray Book combines a written [Reference](reference/hde/gui.md) and [Explanat
 
 ## Connect
 
-Any questions left? Get them answered in the [forum](http://discourse.vvvv.org). 
+Any questions left? Get them answered in the [forum](http://forum.vvvv.org). 
 Want to chat with other vvvv users? Join us in the [chat](https://matrix.to/#/#vvvv:matrix.org).

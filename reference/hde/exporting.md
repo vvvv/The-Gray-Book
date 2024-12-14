@@ -133,4 +133,4 @@ There is a known incompatibility with newer versions of MSBuild tools than what 
 - Then run the vvvv 2021.4.x installer again with having the “Build Tools” checkbox enabled
 
 #### None of the above
-Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via [the forum](https://discourse.vvvv.org/c/vvvv-gamma/bug/31).
+Please send us the console output by pressing "Copy To Clipboard" and pasting it to us via [the forum](https://forum.vvvv.org/c/vvvv-gamma/bug/31).

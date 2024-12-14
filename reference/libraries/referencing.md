@@ -79,7 +79,7 @@ You're setting a reference to a .dll in one location but a .dll with the same na
 
 If you are certain that those are actually the same files, only in a different location, then you can ignore the warning. 
 
-Otherwise in case 1) restarting vvvv should help, but in case 2) you'll actually not have a chance to get this solved. .dlls loaded by vvvv cannot be changed at all. If for some reason you need to use a newer version of a .dll than the one vvvv is currently using, please start a thread on the [forum](https://discourse.vvvv.org) about this and we'll see what we can do. 
+Otherwise in case 1) restarting vvvv should help, but in case 2) you'll actually not have a chance to get this solved. .dlls loaded by vvvv cannot be changed at all. If for some reason you need to use a newer version of a .dll than the one vvvv is currently using, please start a thread on the [forum](https://forum.vvvv.org) about this and we'll see what we can do. 
 
 ### Libraries from the GAC (Global Assembly Cache)
 

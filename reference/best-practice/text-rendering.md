@@ -4,7 +4,7 @@
 For [VL.Skia](../libraries/graphics-2d.md) you have the following options:
 
 - Skia itself comes with an extensive set of nodes for high-quality simple text rendering
-- Try [VL.RichtextKit](https://discourse.vvvv.org/t/vl-richtextkit/19883) for rendering richttext
+- Try [VL.RichtextKit](https://forum.vvvv.org/t/vl-richtextkit/19883) for rendering richttext
 - Using [VL.CEF.Skia](https://www.nuget.org/packages/VL.CEF.Skia) to render html content allows for complex formatted text to be rendered
 
 ## 3d Graphics
