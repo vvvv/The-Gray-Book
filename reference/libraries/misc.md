@@ -115,7 +115,7 @@ NuGet [VL.Spotify](https://www.nuget.org/packages/VL.Spotify)
 ## RogueSharp
 RogueSharp has functions useful for reasoning about 2D grids where some cells are walkable or transparent. For example pathfinding and field of view.
 Also includes a dice rolling function.  
-NuGet: [VL.RogueSharp](https://vvvv.org/contribution/vl.roguesharp)
+NuGet: [VL.RogueSharp](https://beta.vvvv.org/contributions/plugins/vl-roguesharp/)
 
 ## Kafka
 [Kafka](https://kafka.apache.org/) for VL  

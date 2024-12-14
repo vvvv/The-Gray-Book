@@ -22,7 +22,7 @@ Body tracking NuGet: [VL.Devices.AzureKinect.Body](https://www.nuget.org/package
 ## Microsoft Kinect2
 For using the Microsoft Kinect2.  
 NuGet: [VL.Devices.Kinect2](https://www.nuget.org/packages/VL.Devices.Kinect2)  
-Also: NuGet: [VL.Kinect2FuseUtils](https://vvvv.org/contribution/kinect2-fuse-utils)
+Also: NuGet: [VL.Kinect2FuseUtils](https://beta.vvvv.org/contributions/packs/kinect2-fuse-utils/)
 
 ## Microsoft Kinect
 For using the Microsoft Kinect v1/XBOX360.  

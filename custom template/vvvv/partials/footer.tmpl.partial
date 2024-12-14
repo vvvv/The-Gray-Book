@@ -8,7 +8,7 @@
         <a href="#top">Back to top</a>
       </span>
       {{{_appFooter}}}
-      <span class="broughtToYou">Brought to you by <a href="https://vvvv.org">vvvv.org</a> | <a href="https://www.visualprogramming.net">visualprogramming.net</a></span>
+      <span class="broughtToYou">Brought to you by <a href="https://vvvv.org">vvvv.org</a></span>
     </div>
   </div>
 </footer>

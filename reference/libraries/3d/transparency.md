@@ -15,4 +15,4 @@ If you render your own custom shaders, you can control the blending and the inte
 
 There are also preconfigured blend states like `Additive`, `AlphaBlend` and `AlphaBlendPremultiplied` in the category `[BlendStateDescription]`.
 
-For further reading on this topic and the related problem, you can have a look at the [vvvv beta documentation](https://vvvv.org/documentation/transparency).
+For further reading on this topic and the related problem, you can have a look at the [vvvv beta documentation](https://legacy.vvvv.org/documentation/transparency).

@@ -1,7 +1,7 @@
 {{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
 <div class="topbar d-none d-md-flex">
   <div class="container-xxl px-4">
-    <a href="https://www.visualprogramming.net" class="backtovvvv">Back to vvvv</a>
+    <a href="https://vvvv.org" class="backtovvvv">Back to vvvv</a>
   </div>
 </div>
 <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
@@ -10,7 +10,7 @@
       <img id="logo" class="svg" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" alt="{{_appName}}" >
       {{_appName}}
     </a>
-    <a href="https://www.visualprogramming.net" class="nav-link d-md-none">Back to vvvv</a>
+    <a href="https://vvvv.org" class="nav-link d-md-none">Back to vvvv</a>
     <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-three-dots"></i>
     </button>
