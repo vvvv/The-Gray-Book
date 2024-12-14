@@ -5,7 +5,7 @@ _disableBreadcrumb: true
 
 # Welcome to vvvv!
 
-[vvvv](http://visualprogramming.net) is your one-stop-shop for all things digital and interactive media.  
+[vvvv](http://vvvv.org) is your one-stop-shop for all things digital and interactive media.  
 It is a visual live-programming environment that helps you get things done quickly: 
 
 * Generate interactive 2d or 3d motion graphics
