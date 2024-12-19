@@ -41,17 +41,16 @@ For more in-depth GPU debugging, you can use **RenderDoc**. This tool allows you
 
 1. **Install RenderDoc**: Before using the RenderDocManager in vvvv, you must install RenderDoc. Download the latest version here: [Download RenderDoc](https://renderdoc.org).
 
-2. **Start vvvv with the Debug Flag**:
-   - vvvv must be started with the `--debug-gpu` flag.
-   - This flag does the following:
-     1. Enables the connection between RenderDoc and vvvv.
-     2. Initializes the graphics device in **debug mode**, necessary for providing detailed GPU information to RenderDoc.
+2. **Start vvvv with the RenderDoc Flag**:
+   - vvvv must be started with the `--renderdoc` flag.
+   - This flag enables the connection between RenderDoc and vvvv.
+   - Optional: pass `--debug-gpu` to enable the D3D11 debug layer as well, see further down for its requirements
 
 #### Using the RenderDocManager in vvvv
 
 ##### 1. Setting Up the RenderDocManager Node
 
-Once vvvv is running with the `--debug-gpu` flag, open any patch that references **VL.Stride**, and add the **RenderDocManager** node.
+Once vvvv is running with the `--renderdoc` flag, open any patch that references **VL.Stride**, and add the **RenderDocManager** node.
 
 ##### 2. Enabling the Stride Profiler
 
@@ -121,3 +120,13 @@ Once enabled, you can perform **Sample Counters** on captured frames. This will 
 For more information on how to use the Performance Counter Viewer, refer to the official RenderDoc documentation: [Performance Counter Viewer in RenderDoc](https://renderdoc.org/docs/window/performance_counter_viewer.html).
 
 For further details on using RenderDoc, including advanced features like shader debugging and performance counters, refer to the official [RenderDoc documentation](https://renderdoc.org/docs/).
+
+### Enabling the D3D11 debug layer
+
+It's also possible to enable the [D3D11 debug layer](https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-devices-layers) and capture its output with tools like [DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview).
+
+To enable the debug layer one needs to
+  1. Enable the optional Windows feature "Graphics Tool" - for detailed instruction see above linke
+  2. Start vvvv.exe with `--debug-gpu` - tells vvvv to create a D3D11 debug device
+
+Note that when also enabling RenderDoc as well, DebugView no longer seems to be able to capture information.
