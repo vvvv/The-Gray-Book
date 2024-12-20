@@ -31,6 +31,9 @@
       <meta name="loc:themeAuto" content="{{__global.themeAuto}}">
       <meta name="loc:changeTheme" content="{{__global.changeTheme}}">
       <meta name="loc:copy" content="{{__global.copy}}">
+
+      <script defer data-domain="thegraybook.vvvv.org" src="https://plausible.io/js/script.js"></script>
+      
     {{/redirect_url}}
   </head>
 

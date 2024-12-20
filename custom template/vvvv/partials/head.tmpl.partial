@@ -23,4 +23,7 @@
   {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
   {{#_enableSearch}}<meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
   {{#_enableNewTab}}<meta property="docfx:newtab" content="true">{{/_enableNewTab}}
+
+  <script defer data-domain="thegraybook.vvvv.org" src="https://plausible.io/js/script.js"></script>
+  
 </head>
