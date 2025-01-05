@@ -15,7 +15,7 @@ Package|Version|Command to get recommended version
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | >= 0.5.0 preview | `nuget install VL.IO.TCP -pre`
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
 [VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
-[VL.Pipette.HDE](https://www.nuget.org/packages/VL.Pipette.HDE) | >= 0.0.2 | `nuget install VL.Pipette.HDE`
+[VL.Pipette.HDE](https://www.nuget.org/packages/VL.Pipette.HDE) | 0.0.2 | `nuget install VL.Pipette.HDE`
 [VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC) | >=0.1.1 | `nuget install VL.Audio.LTC`
 
 ## vvvv gamma 5.0
