@@ -54,7 +54,7 @@ If there is an error in your C# code, all nodes stemming from the same project w
 If you're dealing with stateful code, it gets a bit more tricky. Here are two typical scenarios:
 
 #### Process node
-Assuming you want to treat your C# class like a [process node](../language/nodes.md#process-nodes) in VL, ie one instance per node, not dynamically spawning/killing instances, then attach the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) attribute to it.
+Assuming you want to treat your C# class like a [process node](../language/nodes.md#process-nodes) in VL, ie one instance per node, not dynamically spawning/killing instances, then attach the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) attribute to it. For an example of this, [see below](#process-nodes).
 
 This allows vvvv to properly create/dispose instances of your class as needed, whenever you make a change to your C# code.
 
@@ -71,9 +71,6 @@ It gets more tricky as soon as your C# code depends on unmanaged code (e.g. WinF
 When editing your code with Visual Studio, you can set break-points in your C# code. Then [attach](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) to vvvv.exe and see the break-points hit. 
 
 ## Examples
-Every public member of a public class you write in C# will turn into a VL node.
-You can also attach the [`ProcessNode`](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/Import/ProcessNodeAttribute.cs) attribute to a public class to make it available as a node.
-
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
  https://github.com/vvvv/VL.DemoLib
 
@@ -215,7 +212,7 @@ public static int HTMLDocuTest(int a)
 <center>Documentation shows up in NodeBrowser and Tooltip</center>
 
 > [!NOTE]
-> Don't forget to enable "XML Documentation File" in the C# projects properties to make sure the .xml file holding the documentation is generated. This file will then always need to be next to the .dll, therfore always move those two files together!
+> The xml documentation will only be generated if the project has the `GenerateDocumentationFile` property set to `true`. C# projects created by vvvv will have this by default, if you're referencing an existing project you might have to add this on your own!
 
 ### C# Ref Paramters
 
@@ -275,7 +272,7 @@ By default all its public members will be used as its fragments. The attribute p
 [ProcessNode]
 public class Counter
 {
-    public MyProcessNode(int initialValue)
+    public Counter(int initialValue)
     {
         Value = initialValue;
     }
@@ -346,7 +343,11 @@ For general information on workig with Observables see the chapter about [Reacti
 
 ### Dynamic Enums
 
-Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime.
+Dynamic enums are useful in cases where you want to offer users a list of items to choose from, where the entries of that list may change during runtime. A typical example are nodes that give access to hardware devices that can be plugged in and removed anytime. 
+
+For writing a dynamic enum, best start from one of the "Dynamic Enum" [C# file templates](#start-from-a-template).
+
+If you want to better understand the templates code, read on:
 
 Consider a normal enum in C#:
 ```csharp
