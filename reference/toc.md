@@ -102,7 +102,7 @@
 
 # [Extending vvvv](extending/overview.md)
 ## [Using .NET Libraries](extending/using-net-libraries.md)
-## [Setting up a Code Editor](extending/code-editors.md)
+## [Choosing a Code Editor](extending/code-editors.md)
 ## [Writing Nodes using C#](extending/writing-nodes.md)
 ## [Custom Regions](extending/custom-regions.md)
 ## [Contributing to a Library](extending/contributing.md)

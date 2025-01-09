@@ -4,6 +4,7 @@ vvvv makes it easy for you to extend it with your own nodes and libraries. Here 
 ## Custom nodes
 
 * [Using .NET libraries](using-net-libraries.md)
+* [Choosing a Code Editor](code-editors.md)
 * [Writing Nodes using C#](writing-nodes.md)
 * [Custom Regions](custom-regions.md)
 
