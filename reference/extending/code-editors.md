@@ -1,4 +1,4 @@
-# Code Editors
+# Choosing a Code Editor
 
 vvvv doesn't include an editor for editing C# code. Instead you can choose your own. Here are some suggestions:
 
@@ -8,7 +8,7 @@ vvvv doesn't include an editor for editing C# code. Instead you can choose your 
 
 During installation make sure to check the ".NET desktop development" workload.
 
-![](2025-01-09-15-55-23.png)
+![](../../images/reference/extending/vs-workload.png)
 
 ## Visual Studio Code
 
@@ -16,7 +16,7 @@ During installation make sure to check the ".NET desktop development" workload.
 
 After installation make sure to install the "C# Dev Kit" extension.
 
-![](2025-01-09-15-56-53.png)
+![](../../images/reference/extending/vsc-extension.png)
 
 ## JetBrains Rider
 
