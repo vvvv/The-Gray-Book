@@ -1,5 +1,7 @@
 # Writing nodes using C#
 
+First you'll have to [choose a Code Editor](code-editors.md).
+
 Writing your own nodes for VL using C# requires no VL specific knowledge or preparation. Essentially you’re writing plain C# code that VL then turns into nodes. Here is a step by step guide to get you started:
 
 ## Start from a Template
