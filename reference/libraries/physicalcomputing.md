@@ -5,7 +5,7 @@ For tasks like controlling motors or reading sensors, use a microcontroller.
 ## Microcontrollers
 
 ### Arduino/Firmata
-Nodes for communicating with Arduinos (or other microcontrollers) running the [Firmata Protocol](https://github.com/firmata/protocol) are shipping with vvvv. Reference the VL.IO.Firmata package via the Node Browser and see its helppatches in the Help Browser.
+Nodes for communicating with Arduinos (or other microcontrollers) running the [Firmata Protocol](https://github.com/firmata/protocol) are shipping with vvvv. Reference the VL.IO.Firmata package via the Node Browser and see its helppatches in the Help Browser. For an introduction, watch [Sensors & Servos with Arduino](https://www.youtube.com/live/uvLNZsStve8?si=pkvuD1H4tRNmZ8Vu)
 
 ### Phidgets
 For using [Phidgets](https://www.phidgets.com): Products for USB Sensing and Control  
