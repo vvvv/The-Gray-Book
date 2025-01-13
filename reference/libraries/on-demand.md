@@ -7,7 +7,7 @@ vvvv's libraries are all [open-source](https://github.com/vvvv) and for programm
 We do offer priority support for your development requirements, please **[get in touch](mailto:devvvvs@vvvv.org)** to see if/how we can work things out together.
 
 Here some things you might be looking for:
-- Support for specific camera devices
+- Support for specific camera devices (e.g. [Ximea](https://www.ximea.com/), [FLIR (Point Grey,..)](https://ptgreycamera.com/product-category/camera/flir/) via [Spinnaker SDK](https://www.teledynevisionsolutions.com/products/spinnaker-sdk/?model=Spinnaker%20SDK&vertical=machine%20vision&segment=iis), ...)
 - Support for specific capture cards
 - Support for specific lidars
 - Support for specific protocols
