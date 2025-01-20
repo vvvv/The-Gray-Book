@@ -133,6 +133,18 @@ NuGet: [VL.Interpolator](https://www.nuget.org/packages/VL.Interpolator)
 Allows to make HTTP requests via the TOR network  
 NuGet: [VL.TorSharp](https://www.nuget.org/packages/VL.TorSharp)
 
+## CredentialManager
+Manage credentials in VL using Windows Credential Manager.  
+NuGet: [VL.CredentialManager](https://www.nuget.org/packages/VL.CredentialManager)
+
+## Bookmarks
+Allows you to place bookmarks as nodes in your patches and access them quickly from a list.  
+NuGet: [VL.Bookmarks.HDE](https://www.nuget.org/packages/VL.Bookmarks.HDE/)
+
+## GifRecorder
+A simple gif recorder.  
+NuGet: [VL.IO.GifRecorder](https://www.nuget.org/packages/VL.IO.GifRecorder)
+
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)

@@ -1,5 +1,9 @@
 # Machine Learning (ML)
 
+## Yolo
+Implements YOLOv8 and YOLOv10 for real-time Object Detection, Classification, OBB Detection, Segmentation, Pose Estimation.  
+NuGet: [VL.YoloDotNet](https://www.nuget.org/packages/VL.YoloDotNet)
+
 ## Wekinator
 A set of nodes to easily interact with [The Wekinator](http://www.wekinator.org/)  
 NuGet: [VL.Wekinator](https://www.nuget.org/packages/VL.Wekinator)

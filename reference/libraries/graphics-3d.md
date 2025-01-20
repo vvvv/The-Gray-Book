@@ -41,6 +41,8 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * NuGet: [VL.OpenEXR](https://www.nuget.org/packages/VL.OpenEXR) for loading [OpenEXR](https://www.openexr.com/) image files
 * NuGet: [VL.Boids-GPU](https://www.nuget.org/packages/VL.Boids-GPU) Boids algorithm implemented Stride
 * NuGet: [VL.Radiosity](https://www.nuget.org/packages/VL.Radiosity) 2D Radiosity Shader
+* NuGet: [VL.OCIO](https://www.nuget.org/packages/VL.OCIO) Reads OpenColorIO (OCIO) config files and can apply a selected the color transformation to a texture. Especially helpful for displaying vvvv rendering on HDR displays with 10-bit colors or more.
+* NuGet: [VL.Stride.BezierPatch](https://www.nuget.org/packages/VL.Stride.BezierPatch) Set of nodes to create bezier surfaces.
 
 ### Useful tools
 * [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)

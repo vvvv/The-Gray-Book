@@ -1,5 +1,17 @@
 # Other Devices
 
+## Here
+A set of nodes wapping the Here REST API.  
+NuGet: [VL.Here](https://www.nuget.org/packages/VL.Here)
+
+## mDNS
+Nodes to announce and browse for mDNS services (a.k.a Bonjour or zeroconf) on the network.  
+NuGet: [VL.IO.mDNS](https://www.nuget.org/packages/VL.IO.mDNS)
+
+## RPLidar
+For using RPLIDAR devices by Slamtec.  
+NuGet: [VL.Devices.RPLidar](https://www.nuget.org/packages/VL.Devices.RPLidar)
+
 ## StreamDeck
 A package for using the [Elgato StreamDeck](https://www.elgato.com/us/en/p/stream-deck-mk2-black) button display.  
 NuGet: [VL.Devices.StreamDeck](https://www.nuget.org/packages/VL.Devices.StreamDeck)

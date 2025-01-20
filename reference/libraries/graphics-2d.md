@@ -18,3 +18,5 @@ It comes with an extensive collection of help patches documenting the different 
 * NuGet: [VL.CEF.Skia](https://www.nuget.org/packages/VL.CEF.Skia) is a HTML renderer
 * NuGet: [VL.PDFReader](https://www.nuget.org/packages/VL.PDFReader) to load PDF pages as images
 * NuGet: [VL.PolyTools](https://www.nuget.org/packages/VL.PolyTools) extends VL.Skia Paths with high level polygon and polypath objects
+* NuGet: [VL.Flex](https://www.nuget.org/packages/VL.Flex) A Facebook Yoga implementation
+* NuGet: [VL.RichTextKit](https://www.nuget.org/packages/VL.RichTextKit)
