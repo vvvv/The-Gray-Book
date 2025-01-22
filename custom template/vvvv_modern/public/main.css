@@ -4,6 +4,11 @@ header
     flex-direction: column;
 }
 
+#navpanel
+{
+    padding-left: 2rem;
+}
+
 @media (min-width: 768px) {
     body > header, body[data-layout="landing"] > header {
         height: 90px;

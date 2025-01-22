@@ -1,16 +1,9 @@
 {{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
-<div class="topbar d-none d-md-flex">
-  <div class="container-xxl px-4">
-    <a href="https://vvvv.org" class="backtovvvv">Back to vvvv</a>
-  </div>
-</div>
+<!-- HEADER -->
+<div name="DocsHeader"><div id="vvvv-navbar"><a href="https://vvvv.org/" class="logo"><img src="https://vvvv.org/img/vvvvquad.svg" alt="vvvv"></a><div class="vvvv-hamburger"><button id="vvvv-hamburgerButton" aria-label="Toggle navigation"><div class="vvvv-hamburger-stripes"><div></div><div></div><div></div></div></button></div><div id="vvvv-menu"><ul><li><a href="https://vvvv.org/features">features</a></li><li><a href="https://vvvv.org/blog">blog</a></li><li><a href="https://vvvv.org/showcase">showcase</a></li><li><a href="https://vvvv.org/learn" class="selected">learn</a></li><li><a href="https://forum.vvvv.org">community</a></li><li><a href="https://vvvv.org/licensing">licensing</a></li><li><a href="https://vvvv.org/support">support</a></li><li class="download"><a href="https://vvvv.org/download">download</a></li></ul></div></div></div>
+<!-- /HEADER -->
 <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
   <div class="container-xxl flex-nowrap">
-    <a class="navbar-brand" href="{{_appLogoUrl}}{{^_appLogoUrl}}{{_rel}}index.html{{/_appLogoUrl}}">
-      <img id="logo" class="svg" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" alt="{{_appName}}" >
-      {{_appName}}
-    </a>
-    <a href="https://vvvv.org" class="nav-link d-md-none">Back to vvvv</a>
     <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-three-dots"></i>
     </button>
