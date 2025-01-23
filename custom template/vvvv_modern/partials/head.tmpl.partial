@@ -41,9 +41,8 @@
   </head>
 
   <script type="module">
-    import options from './{{_rel}}public/main.js'
     import { init } from './{{_rel}}public/docfx.min.js'
-    init(options)
+    init()
   </script>
 
   <script>

@@ -1,3 +1,5 @@
+// CURRENTLY NOT IN USE
+
 const app = {
     languageDropdownCreated: false,
     iconLinks: [

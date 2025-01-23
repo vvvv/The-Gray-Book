@@ -9,10 +9,19 @@ header
     padding-left: 2rem;
 }
 
+body > main {
+    padding-top: 0;
+}
+
 @media (min-width: 768px) {
     body > header, body[data-layout="landing"] > header {
-        height: 90px;
+        height: 7.5rem;
     }
+
+    body > main > .toc-offcanvas{
+        top: 8rem !important;
+    }
+}
 
 kbd
 {
