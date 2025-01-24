@@ -4,7 +4,7 @@ _disableBreadcrumb: true
 ---
 
 ## Getting Started
-If you're new to vvvv, please start reading in the [Getting Started](/reference/getting-started/overview.md) section.
+If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Online Courses
 [The NODE Institute](https://thenodeinstitute.org/) is regularly offering live online courses. 
