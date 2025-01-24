@@ -3,46 +3,44 @@ _disableAffix: true
 _disableBreadcrumb: true
 ---
 
-# Welcome to vvvv!
+## Getting Started
+If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
-[vvvv](http://vvvv.org) is your one-stop-shop for all things digital and interactive media.  
-It is a visual live-programming environment that helps you get things done quickly: 
+## Online Courses
+[The NODE Institute](https://thenodeinstitute.org/) is regularly offering live online courses. 
 
-* Generate interactive 2d or 3d motion graphics
-* Visualize data coming from network or offline sources
-* Control lights, lasers, motors or anything else you can connect to a PC
-* In the end, export everything as a standalone program. 
-* Missing some functionality? vvvv can consume almost any .NET nuget and can be easily extended using c#.
+**Upcoming**
+- [**12 session course from March 24**](https://thenodeinstitute.org/vvvv-beginner-class-summer-2025/)
+- [**All upcoming courses Winter 24/25**](https://thenodeinstitute.org/vvvv-education-winter-2024-25/)
 
-<br>
+Past courses still accessible
+- [The NODE Institute Winter 2023](https://thenodeinstitute.org/ws23-vvvv-intermediates/) (various topics)
+- [The NODE Institute Summer 2023](https://thenodeinstitute.org/vvvv-intermediates-summer-2023/) (various topics)
+- [NODE20 workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
 
-![](images/vvvvIO.png)
+## Tutorials 
+- [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
+- [Essential beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) by chk
+- [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V) by TobyK
+- [Graphics video tutorials](https://www.youtube.com/playlist?list=PLK3HDkvkLePRQpgCIb8dL9CRSYOTmNbdI) by Takuma Nakata
+- [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) by RED
+- [Japanese video tutorials](https://note.com/aoi/m/mad38388fcad0) by Satoshi Eto
 
-## vvvv beta vs. vvvv gamma vs. VL
+## Examples
+- [VL.TheBigBang](https://github.com/chkworks/VL.TheBigBang): A tutorial series for absolute beginners, covering all nodes and techniques to get you started (by chk)
+- [VL.GenerativeGestaltung](https://forum.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples following the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book (by phlegma)
+- [VL.ExtendedTutorials](https://github.com/TobyKLight/VL.ExtendedTutorials): Extended tutorial help patches, covering common questions as learners move from beginner towards intermediate (by TobyK)
+- [Nodevember2022](https://forum.vvvv.org/t/vl-examples-patches-playground01/21166): A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) (by CeeYaa)
+- [Genuary2023](http://www.github.com/CeeYaa/Genuary2023): A collection of examples made following the prompts of [Genuary](http://www.genuary.art/) (by CeeYaa)
 
-* ``vvvv beta`` is the original project, in development since around 2001
-* ``vvvv gamma`` is the new version, entirely rewritten from scratch, first released in 2020
-* ``VL`` is the name of the visual programming language that is at the core of vvvv gamma and can optionally also be used in vvvv beta
+## Documentation
 
-When we speak of just ``vvvv``, in the past we meant ``vvvv beta``, now we mean ``vvvv gamma``. With ``vvvv`` we refer to the whole programming environment, with all its windows, while with ``VL`` we refer more specifically to the language. This distinction is useful, because one fine day VL, the language, may be included in other environments, not only vvvv beta and vvvv gamma...
+This reference is structured into the following chapters:
 
-## Where to start?
-
-Depending on where you come from, you may want to start with one of these introductions:
-* [Introduction for Creative Coders](reference/getting-started/cc/introduction-for-creative-coders.md)
-* [Introduction for .NET Developers](reference/getting-started/dotnet/introduction-for-dotnet-programmers.md)
-* [Introduction for vvvv beta users](reference/getting-started/beta/introduction-for-vvvv-beta-users.md)
-
-Also, vvvv has a built-in HelpBrowser, press <span class="keyseq"><kbd>F1</kbd></span> to open it. On the ``Learn`` tab 
-you find help for each library: Browse the ``Examples`` and ``Tutorials`` first. When you have more specific questions, consult the ``HowTo's`` and ``Explanations``.
-
-Want to watch some vvvv videos first? Visit [vvvvTv](https://www.youtube.com/vvvvtv42) on youtube. There is also a bundle of 30 workshop recordings [avaliable here](https://vimeo.com/showcase/node20workshops).
-
-### The Gray Book
-
-The Gray Book combines a written [Reference](reference/hde/gui.md) and [Explanations](introduction/language.md) for you to explore in addition to the materials in the HelpBrowser. 
-
-## Connect
-
-Any questions left? Get them answered in the [forum](http://forum.vvvv.org). 
-Want to chat with other vvvv users? Join us in the [chat](https://matrix.to/#/#vvvv:matrix.org).
+| Chapter | Content |
+|---|---|
+| [Development Environment](../hde/gui.md) | About the different components (menues, windows) of vvvv |
+| [Language](../language/language.md) | About the language VL | 
+| [Libraries](../libraries/overview.md) | An overview of all available node libraries |
+| [Extending vvvv](../extending/overview.md) | For developers to write their own nodes and libraries |
+| [Best Practice](../best-practice/overview.md) | Learn the best practices for specific topics |
