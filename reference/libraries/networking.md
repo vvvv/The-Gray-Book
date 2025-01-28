@@ -36,19 +36,11 @@ The VL.IO.OSCQuery NuGet, implementing the [OSCQueryProposal](https://github.com
 ## TUIO
 The VL.IO.TUIO nuget, Tuio tracker and client nodes, is shipping with vvvv.
 http://tuio.org  
-NuGet: [VL.IO.TUIO.HDE](https://www.nuget.org/packages/VL.IO.TUIO.HDE) for a TUIO Simulator and Monitor [Extension](../hde/extensions.md)  
+NuGet: [VL.IO.TUIO.HDE](https://www.nuget.org/packages/VL.IO.TUIO.HDE) for a TUIO Simulator and Monitor [Extension](../hde/extensions.md) 
 
 ## MQTT
 https://mqtt.org  
-NuGet: [VL.IO.M2MQTT](https://www.nuget.org/packages/VL.IO.M2MQTT)  
-Or: [VL.IO.MQTTnet](https://www.nuget.org/packages/VL.IO.MQTTnet) 
-
-### Brokers
-* For a broker cloud service try [shiftr.io](https://www.shiftr.io/) - An IoT Platform for Interconnected Projects
-* For a local broker, try [Mosquitto](http://mosquitto.org/download/)
-
-### Clients
-* Search mobile app stores for "mqtt"
+NuGet: [VL.IO.MQTT](https://www.nuget.org/packages/VL.IO.MQTT)  
 
 ## ZMQ 
 https://zeromq.org  
