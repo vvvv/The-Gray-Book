@@ -23,8 +23,8 @@ Past courses still accessible
 - [Essential beginner video tutorials](https://youtube.com/playlist?list=PL2KeRstDQVRRVnzCHEambwAI4yWmpIF-p) by chk
 - [Intermediate video tutorials](https://youtube.com/playlist?list=PLEncasrnvr2bkPb0QKdU1DrDs4Hd_Jr0V) by TobyK
 - [Graphics video tutorials](https://www.youtube.com/playlist?list=PLK3HDkvkLePRQpgCIb8dL9CRSYOTmNbdI) by Takuma Nakata
-- [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) by RED
-- [Japanese video tutorials](https://note.com/aoi/m/mad38388fcad0) by Satoshi Eto
+- [Chinese video tutorials](https://www.youtube.com/channel/UCSJuEFRlfo11WDbeWFcFZVg/playlists) by RED 🇨🇳 
+- [Japanese video tutorials](https://note.com/aoi/m/mad38388fcad0) by Satoshi Eto 🇯🇵 
 
 ## Examples
 - [VL.TheBigBang](https://github.com/chkworks/VL.TheBigBang): A tutorial series for absolute beginners, covering all nodes and techniques to get you started (by chk)
