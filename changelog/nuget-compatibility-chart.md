@@ -16,6 +16,7 @@ Package|Version|Command to get recommended version
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
 [VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
 [VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC) | >=0.1.1 | `nuget install VL.Audio.LTC`
+[VL.SpoutMonitor.HDE](https://www.nuget.org/packages/VL.SpoutMonitor.HDE) | 0.1.0 | `nuget install VL.SpoutMonitor.HDE -version 0.1.0`
 [VL.Pipette.HDE](https://www.nuget.org/packages/VL.Pipette.HDE) | 0.0.2 | `nuget install VL.Pipette.HDE -version 0.0.2`
 [VL.TUIO.HDE](https://www.nuget.org/packages/VL.TUIO.HDE) | 0.2.1 | `nuget install VL.TUIO.HDE -version 0.2.1`
 
