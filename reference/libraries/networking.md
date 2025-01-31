@@ -39,7 +39,7 @@ http://tuio.org
 NuGet: [VL.IO.TUIO.HDE](https://www.nuget.org/packages/VL.IO.TUIO.HDE) for a TUIO Simulator and Monitor [Extension](../hde/extensions.md) 
 
 ## MQTT
-MQTT client and broker nodes. For an introduction, watch the vvvvTv episode: [Networking with MQTT](https://youtube.com/live/LZ-y5FOrdh0)
+MQTT client and broker nodes. For an introduction, watch the vvvvTv episode: [Networking with MQTT](https://youtube.com/live/LZ-y5FOrdh0)  
 https://mqtt.org  
 NuGet: [VL.IO.MQTT](https://www.nuget.org/packages/VL.IO.MQTT)  
 
