@@ -11,7 +11,6 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 
 **Upcoming**
 - [**12 session course from March 24**](https://thenodeinstitute.org/vvvv-beginner-class-summer-2025/)
-- [**All upcoming courses Winter 24/25**](https://thenodeinstitute.org/vvvv-education-winter-2024-25/)
 
 Past courses still accessible
 - [The NODE Institute Winter 2023](https://thenodeinstitute.org/ws23-vvvv-intermediates/) (various topics)
