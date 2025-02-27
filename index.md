@@ -38,8 +38,8 @@ This reference is structured into the following chapters:
 
 | Chapter | Content |
 |---|---|
-| [Development Environment](../hde/gui.md) | About the different components (menues, windows) of vvvv |
-| [Language](../language/language.md) | About the language VL | 
-| [Libraries](../libraries/overview.md) | An overview of all available node libraries |
-| [Extending vvvv](../extending/overview.md) | For developers to write their own nodes and libraries |
-| [Best Practice](../best-practice/overview.md) | Learn the best practices for specific topics |
+| [Development Environment](reference/hde/gui.md) | About the different components (menues, windows) of vvvv |
+| [Language](reference/language/language.md) | About the language VL | 
+| [Libraries](reference/libraries/overview.md) | An overview of all available node libraries |
+| [Extending vvvv](reference/extending/overview.md) | For developers to write their own nodes and libraries |
+| [Best Practice](reference/best-practice/overview.md) | Learn the best practices for specific topics |
