@@ -272,18 +272,20 @@ By default all its public members will be used as its fragments. The attribute p
 
 ```csharp
 [ProcessNode]
-public class Counter
+public class MyCounter
 {
-    public Counter(int initialValue)
+    int value;
+
+    public MyCounter(int initialValue)
     {
-        Value = initialValue;
+        value = initialValue;
     }
 
-    public void Increment() => _counter++;
+    public int Update() => value;
 
-    public void Decrement() => _counter--;
+    public void Increment() => value++;
 
-    public int Value { get; set; }
+    public void Decrement() => value--;
 }
 ```
 
