@@ -10,7 +10,7 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 [The NODE Institute](https://thenodeinstitute.org/) is regularly offering live online courses. 
 
 **Upcoming**
-- [**12 session course from March 24**](https://thenodeinstitute.org/vvvv-beginner-class-summer-2025/)
+- [**7 session masterclass on Creative Robotics from May 7](https://thenodeinstitute.org/courses/ss25-cm-creative-robotics/)
 
 Past courses still accessible
 - [The NODE Institute Winter 2023](https://thenodeinstitute.org/ws23-vvvv-intermediates/) (various topics)
