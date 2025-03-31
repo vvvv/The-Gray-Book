@@ -1,45 +1,77 @@
 # Exporting Applications
 
-vvvv allows you to export a patch into an executable, standalone program. In order to do so, open the Application Exporter via `Quad > Export...` or shortcut <span class="keyseq"><kbd>F10</kbd></span>.
+vvvv allows you to export a patch into an executable, standalone program. There are two ways to do this:
+- Using the commandline compiler `vvvvc.exe` 
+- Using the Application Exporter UI included with vvvv: Open via `Quad > Export...` or shortcut <span class="keyseq"><kbd>F10</kbd></span>.
+
+## The commandline compiler
+The standalone compiler `vvvvc.exe` ships with vvvv **as of version 7.0**. You can find it next to the `vvvv.exe` in the install directory.
+
+In its simplest form you call it like this:
+
+    vvvvc.exe MyApp.vl
+
+And it will publish its output artefacts to the default export directory: 
+
+    %UserProfile%\Documents\vvvv\gamma\Exports\MyApp
+
+> [!NOTE]
+> You need to make sure that the compiler has access to all NuGets your patch references! For now this means that you'll have to install them manually or point the compiler to them using the `--nuget-path`, `--package-repositories` or `--export-package-sources` [commandline arguments](commandline-arguments.md).
+
+### Compiler arguments
+See [commandline arguments](commandline-arguments.md#vvvvexe-and-vvvvcexe) and the options of the UI below for a full listing of the arguments the compiler takes.
+
+## The Application Exporter UI
 
 ![](../../images/hde/exportdialog.png)
-<center>The Application Exporter</center>
+
+<center>The Application Exporter UI</center>
 
 ## Application to export
 Choose which application to export (in case you have multiple projects open at the same time).
 
-## Output directory
+## Output directory 
 Choose where the exported program and files will be created.
 
 After a successful export, the output directory will contain a directory with the name of your application. Inside this directory you find the executable. To run the program on another PC you need to copy the whole content of this directory.
 
+vvvvc.exe: `--output-directory` + path to directory
+
 ## Icon file
 Choose an .ico file to be associated with the generated executable.
 
-## Assets
+vvvvc.exe: `--app-icon` + path to the icon file
+
+## Asset behavior
 Choose how assets will be referenced in the exported application:
 * **Relative to document**: This option is most useful during development, to quickly test exports without having to worry about moving assets around. Assets will be referenced from where they are. 
 * **Relative to output**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
+
+vvvvc.exe: `--asset-behavior` + RelativeToDocument | RelativeToOutput
   
 ## Output type
-Choose between Windows (GUI) or Console application. A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
+Choose between Windows (GUI) or Console application. 
 
-Use a __KeepAppAlive__ node to prevent this default behavior.
+vvvvc.exe: `--output-type` + Exe | *WinExe*
+
+A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. Use a __KeepAppAlive__ node to prevent this default behavior.
 
 ## Target OS
 Choose the OS for which to create output for. If you choose *Any*, export will create executables for all available targets, otherwise only for the one selected OS.
 
-## Platform target
+vvvvc.exe: `--target-os` + Any | *Windows* | Linux
+
+## Platform
 Choose between CPU architectures x64 (64bit), x86 (32bit) or any.
 
-## Options
-### Console App
-Choose between Windows or Console app. A Console app will open a windows Console and run the Update operation for only one frame, then immediately Dispose itself. 
+vvvvc.exe: `--platform` + AnyCPU | *x64* | x86
 
-Use a __KeepAppAlive__ node to prevent this default behavior.
+## Options
 
 ### Clean Output
 If active, removes artefacts of previous exports (ie. deletes the \src folder) before exporting. This will cause exports to take longer but also makes sure previous artefacts don't interfere with the new export.
+
+vvvvc.exe: `--clean` + true | *false*
 
 ## Export
 * Press the __Export__ button and wait until the green progressbar is full and the __Run__ button becomes available
@@ -64,6 +96,13 @@ For applications exported with this older version of vvvv, you'll also have to i
 
 ## Advanced build configuration
 The build process can be customized in many details. Next to your main .vl file, place a .props file with the same name. This is actually an .xml file which you can configure to your needs using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) syntax.
+
+### Version
+One of the things you can define in the .props file is a version, like so:
+
+    <Version>1.3</Version>
+
+And you can read this version in a vvvv patch using the **ApplicationVersion** node.
 
 ## Useful nodes
 - Args [System] to access commandline arguments the app was called with
