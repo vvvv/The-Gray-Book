@@ -58,7 +58,7 @@ Get and Post nodes are shipping with vvvv.
 Also: NuGet: [VL.SimpleHTTP](https://www.nuget.org/packages/VL.SimpleHTTP)
 
 ## WebServer
-NuGet: [VL.IO.HTTP.WebServer](https://www.nuget.org/packages/VL.IO.HTTP.WebServer)  
+NuGet: [VL.IO.WebServer](https://www.nuget.org/packages/VL.IO.WebServer)  
 
 ## NDI
 Video Streaming https://ndi.tv  

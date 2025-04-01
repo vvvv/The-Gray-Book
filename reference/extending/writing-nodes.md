@@ -274,16 +274,12 @@ By default all its public members will be used as its fragments. The attribute p
 [ProcessNode]
 public class Counter
 {
-    public Counter(int initialValue)
+    private int _value;
+
+    public int Update(int increment)
     {
-        Value = initialValue;
+        return _value += increment;
     }
-
-    public void Increment() => _counter++;
-
-    public void Decrement() => _counter--;
-
-    public int Value { get; set; }
 }
 ```
 
