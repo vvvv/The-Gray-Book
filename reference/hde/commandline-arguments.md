@@ -33,15 +33,15 @@ The following commandline arguments apply to [vvvvc.exe](exporting.md#the-comman
 
 Description|Argument
 -|-
-The verbosity of the output. Default = Information. |`-v`, `--verbosity` + Trace \| Debug \| Information \| Warning \| Error \| Critical \| None
-Ignore VL compile errors (red nodes). Default = false|`--ignore-errors` + true \| false
+The verbosity of the output. |`-v`, `--verbosity` + Trace \| Debug \| *Information* \| Warning \| Error \| Critical \| None
+Ignore VL compile errors (red nodes). |`--ignore-errors` + true \| *false*
 Choose where the exported program and files will be created. Default = %UserProfile%\Documents\vvvv\gamma\Exports\AppName|`--output-directory` + path to directory
 Choose an .ico file to be associated with the generated executable.|`--app-icon` path to the .ico file
-Choose how assets will be referenced in the exported application. See [Asset behavior](exporting.md#asset-behavior). Default = RelativeToDocument. |`--asset-behavior` valid values: RelativeToDocument \| RelativeToOutput
-Choose between Windows (GUI) or Console application. Default = WinExe|`--output-type` + Exe \| WinExe
-Choose the OS for which to create the output for. Default = Windows|`--target-os` + Windows \| Linux \| Any
-Choose the CPU architecture to create the output for. Default = x64|`--platform` + AnyCPU \| x86 \| x64
-Whether or not the build directory (OutputDirectory/src) should be cleaned before doing the export. Default = false |`--clean`
+Choose how assets will be referenced in the exported application. See [Asset behavior](exporting.md#asset-behavior). |`--asset-behavior` valid values: RelativeToDocument \| *RelativeToOutput*
+Choose between Windows (GUI) or Console application. |`--output-type` + Exe \| *WinExe*
+Choose the OS for which to create the output for. |`--target-os` + *Windows* \| Linux \| Any
+Choose the CPU architecture to create the output for. |`--platform` + AnyCPU \| x86 \| *x64*
+Whether or not the build directory (OutputDirectory/src) should be cleaned before doing the export. |`--clean` *true* \| false
 
 ## Args.txt
 A quick way to apply commandline arguments to vvvv is specifying them in an `args.txt` file in your Sketches folder:

@@ -47,7 +47,7 @@ Choose how assets will be referenced in the exported application:
 * **Relative to document**: This option is most useful during development, to quickly test exports without having to worry about moving assets around. Assets will be referenced from where they are. 
 * **Relative to output**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
 
-vvvvc.exe: `--asset-behavior` + RelativeToDocument | RelativeToOutput
+vvvvc.exe: `--asset-behavior` + RelativeToDocument | *RelativeToOutput*
   
 ## Output type
 Choose between Windows (GUI) or Console application. 
@@ -71,7 +71,7 @@ vvvvc.exe: `--platform` + AnyCPU | *x64* | x86
 ### Clean Output
 If active, removes artefacts of previous exports (ie. deletes the \src folder) before exporting. This will cause exports to take longer but also makes sure previous artefacts don't interfere with the new export.
 
-vvvvc.exe: `--clean` + true | *false*
+vvvvc.exe: `--clean` + *true* | false
 
 ## Export
 * Press the __Export__ button and wait until the green progressbar is full and the __Run__ button becomes available
