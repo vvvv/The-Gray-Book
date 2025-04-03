@@ -36,3 +36,7 @@ Useful tools:
 ## FMOD 
 Wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.  
 NuGet: [VL.FMODStudio](https://www.nuget.org/packages/VL.FMODStudio)
+
+## Super Collider
+VL.SCSynth is a minimal implementation of a standalone server executor for [Super Collider](https://supercollider.github.io/).  
+NuGet: [VL.SCSynth](https://www.nuget.org/packages/VL.SCSynth)

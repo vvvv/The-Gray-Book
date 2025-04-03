@@ -15,7 +15,7 @@ NuGet: [VL.OpenAI](https://www.nuget.org/packages/VL.OpenAI/)
 ## VLML
 NuGet: [VLML](https://www.nuget.org/packages/VLML_Stride)
 
-## VL.OpenCV
+## OpenCV
 Comes with nodes to run PoseNet and Yolo3. CPU only.  
 NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)  
 
@@ -23,9 +23,12 @@ NuGet: [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV)
 Run ONNX models inside vvvv.  
 NuGet: [ONNX](https://www.nuget.org/packages/VLML.ONNX_03)
 
-## VL.Dlib
+## Dlib
 Allows to run certain machine-learning models.  
 GitHub: [VL.DlibDotNet](https://github.com/m-box-de/VL.DlibDotNet)
+
+## Ollama
+NuGet: [VL.Ollama](https://www.nuget.org/packages/VL.Ollama)
 
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.

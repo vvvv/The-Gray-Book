@@ -145,6 +145,10 @@ NuGet: [VL.Bookmarks.HDE](https://www.nuget.org/packages/VL.Bookmarks.HDE/)
 A simple gif recorder.  
 NuGet: [VL.IO.GifRecorder](https://www.nuget.org/packages/VL.IO.GifRecorder)
 
+## Nvidia.Cuda
+Wraps CUDA functionality. For now only Radix Sort.  
+NuGet: [VL.Nvidia.CUDA](https://www.nuget.org/packages/VL.Nvidia.CUDA)
+
 ## See also
 Relevant libraries that have not yet been tailored for VL. Refer to [Using .NET libraries](../extending/using-net-libraries.md) for learning how to explore them.
 * For PDF, XLS, Word, Powerpoint, Barcode, QRCode see: [FreeSpire Components](https://www.nuget.org/packages?q=freespire)
