@@ -70,7 +70,9 @@ As long as your C# code is fully managed, this will not be too big an issue. You
 It gets more tricky as soon as your C# code depends on unmanaged code (e.g. WinForms, device libraries,...) which requires manual disposal of resources. vvvv does not know about those resources and can therefore not clean those up properly! In such cases you'll end up with unfreed resources whenever saving your .cs file which often leads to undefined behavior (eg. devices that cannot be accessed anymore). Only a complete restart of vvvv will help to get into a working state in such situations!
 
 ## Debugging
-When editing your code with Visual Studio, you can set break-points in your C# code. Then [attach](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) to vvvv.exe and see the break-points hit. 
+When editing your code with Visual Studio, you can set break-points in your C# code. If your breakpoint shows a warning a la "..will not currently be hit" you need to change a setting in Visual Studio: In the "Debug" menu choose "Options..." and there find and disable "Require source files to exactly match the original version". 
+
+Then [attach](https://learn.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2022) to vvvv.exe and see the break-points hit. 
 
 ## Examples
 Here are some simple examples and a few more details that will help you create your own nodes. Those are also available via:
