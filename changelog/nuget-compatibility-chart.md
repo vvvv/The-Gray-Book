@@ -9,15 +9,16 @@ If you find yourself in the need to downgrade the version of a NuGet, make sure 
 
 Package|Version|Command to get recommended version
 -|-|-
+[VL.Audio](https://www.nuget.org/packages/VL.Audio) | <= 1.8.2 | ships with vvvv
+[VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC) | >=0.1.1 | `nuget install VL.Audio.LTC`
 [VL.Devices.RealSense](https://www.nuget.org/packages/VL.Devices.RealSense) | >= 1.6.0 | `nuget install VL.Devices.RealSense`
 [VL.Devices.AzureKinect](https://www.nuget.org/packages/VL.Devices.AzureKinect) | >= 1.5.0 | `nuget install VL.Devices.AzureKinect`
 [VL.Devices.AzureKinect.Body](https://www.nuget.org/packages/VL.Devices.AzureKinect) | >= 1.5.0 | `nuget install VL.Devices.AzureKinect.Body`
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | >= 0.5.0 preview | `nuget install VL.IO.TCP -pre`
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.1.9 | `nuget install VL.Kairos`
-[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
-[VL.Audio.LTC](https://www.nuget.org/packages/VL.Audio.LTC) | >=0.1.1 | `nuget install VL.Audio.LTC`
-[VL.SpoutMonitor.HDE](https://www.nuget.org/packages/VL.SpoutMonitor.HDE) | 0.1.0 | `nuget install VL.SpoutMonitor.HDE -version 0.1.0`
 [VL.Pipette.HDE](https://www.nuget.org/packages/VL.Pipette.HDE) | 0.0.2 | `nuget install VL.Pipette.HDE -version 0.0.2`
+[VL.SpoutMonitor.HDE](https://www.nuget.org/packages/VL.SpoutMonitor.HDE) | 0.1.0 | `nuget install VL.SpoutMonitor.HDE -version 0.1.0`
 [VL.TUIO.HDE](https://www.nuget.org/packages/VL.TUIO.HDE) | 0.2.1 | `nuget install VL.TUIO.HDE -version 0.2.1`
 
 ## vvvv gamma 5.0
