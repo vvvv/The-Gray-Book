@@ -1,6 +1,10 @@
 # Best Practice
 Here is a list of best-practice articles on various topics:
 
+## General
+* [Running vvvv on an Arm CPU](vvvv-on-arm.md)
+* [Running vvvv on a Mac](vvvv-on-mac.md)
+
 ## 3d Rendering
 * [Text Rendering](text-rendering.md)
 
