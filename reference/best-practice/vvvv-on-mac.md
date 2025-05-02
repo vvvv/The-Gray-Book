@@ -12,7 +12,7 @@ vvvv does not have a native version for macOS!
 
 [Parallels](https://www.parallels.com/de/products/desktop) allows you to run Windows in a virtual machine on macOS. Installation of Parallels, including Windows takes < 30min. When set-up, make sure to download and install the [Arm build of vvvv](vvvv-on-arm.md).
 
-We're testing with Version 20 or Parallels. 
+We're testing with Version 20 of Parallels. 
 
 ### Known issues
 Right-draging an IOBox or input pin sometimes fails. Changing the following setting in Parallels, fixes this:

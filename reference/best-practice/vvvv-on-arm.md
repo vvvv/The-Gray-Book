@@ -1,6 +1,6 @@
 # vvvv on Arm 
 
-Since version 7.0 we offer dedicated builds for running on Arm CPUs. In the download section, to to the Arm tab to see available downloads:
+Since version 7.0 we offer dedicated builds for running on Arm CPUs. In the download section, switch to the Arm tab to see available downloads:
 
 [![Arm downloads](../../images//reference//best-practice/vvvv-on-arm.png)](https://vvvv.org/download/)
 

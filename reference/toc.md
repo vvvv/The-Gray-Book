@@ -116,6 +116,8 @@
 ## [Creating Editor Extensions](extending/editor-extensions.md)
 
 # [Best Practice](best-practice/overview.md)
+## [Running vvvv on an Arm CPU](best-practice/vvvv-on-arm.md)
+## [Running vvvv on a Mac](best-practice/vvvv-on-mac.md)
 ## [Playing back video](best-practice/video-playback.md)
 ## [Capturing video input](best-practice/video-capture.md)
 ## [Recording output as video](best-practice/video-recording.md)
