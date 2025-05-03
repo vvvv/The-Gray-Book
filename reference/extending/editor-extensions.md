@@ -57,14 +57,9 @@ An extension doesn't necessarily have to have a window at all (e.g. it could jus
 * SkiaWindow: A slimmed down version of a Renderer [Skia]
 * SkiaWindowTopMost: Same as above, only doesn't get the focus and is always topmost (e.g. used in the Key/Mouse Display extension)
 
-### Window Bounds
+### Docking
 
-As of now there is no way to tab or dock multiple extension windows. Setting a windows bounds is the best we can do for now. Yes, with many extensions open, this will get messy. Let's see...
-
-In order to set the initial window bounds when an extension window opens, set the `Bounds` input on the SkiaWindow nodes. For convenience checkout out:
-
-* WindowBounds: Positions the window right next to the editor
-* WindowBounds (EditorHeight): Same as above but also sets its height to be the same as the main window (e.g. used in the HelpBrowser)
+For the window to be able to take part in the docking facilities as well as automatic window restore management, it needs to be registered to the window manager. This can be achieved by surrounding it with the `WindowFactory` node and connecting the `WindowContext` and `Window` pins accordingly. See `VL.HDE/Template.HDE.vl` for an example.
 
 ## Interfacing with vvvv
 The vvvv API gives you access to hovered and selected nodes and allows you to read and write pins. 
