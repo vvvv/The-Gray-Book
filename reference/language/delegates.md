@@ -23,4 +23,4 @@ You can now execute the delegate and pass it parameters through the Invoke node.
 
 As delegates are objects, you can for instance store them in a spread and choose which to execute programmatically.
 
-![Delegates stored in a spread](/images/language/delegates_delegate.png)
+![Delegates stored in a spread](/images/language/delegates_spread.png)
