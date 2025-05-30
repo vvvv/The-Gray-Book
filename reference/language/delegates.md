@@ -1,17 +1,14 @@
 # Delegates
-Delegates are anonymous operations which can be passed around as an object and can get invoked on data when needed. 
+Delegates are anonymous operations which can be passed around as an object and can be invoked on data when needed.
 
-The fact that a delegate doesn't have a name is a feature here: you don't need to know the exact name of an operation to call into it, you just need to get a hand onto any fitting operation, which is the delegate object. Like a lego piece that has the right shape.
-This way you can easily switch between different functionalities and feed them via the same delegate downstream - without changing the code that calls them downstream. The delegate shiedlds away those details and acts as a facade. 
+The fact that a delegate doesn't have a name is a feature here: as long as the it has the correct signature it will fit, like a lego piece with the right shape. This way you can treat behaviour as an object which can be used to easily switch between different functionalities - without changing the calling code downstream. The delegate abstracts away the internals and only presents a facade.
 
-Delegates have zero to many inputs, and zero or one output. This is part of what defines the shape. 
+Delegates have zero to many inputs, and zero or one output. This is part of what defines the signature, or "shape". They are a standard .NET feature.
 
-Delegates are a standard .Net feature.
-
-Inputs on definition side are often called parameters, on invocation side they values fed are often called arguments for those parmeters. 
+Inputs called parameters in the definition, and on the invocation side the values fed in are usually called arguments. 
 
 ## Defining a delegate
-A delegate is defined using the Delegate region. It will initially be empty, so you will want to add inputs and/or outputs to have it actually do something. Here we have a delegate which takes two parameters, multiplies them, and then outputs it. Note that this code is not currently being executed.
+A delegate is defined using the Delegate region. It will initially be empty, so you will want to add inputs and/or outputs to have it actually do something. Here we have a delegate which takes two parameters, multiplies them, and then outputs it. Note that this code is not yet being executed.
 
 ![A Delegate](/images/language/delegates_delegate.png)
 
@@ -24,7 +21,7 @@ To actually execute the code we have written, we need to invoke the delegate. On
 
 ![Different variants of the Invoke node](/images/language/delegates_invoke_variants.png)
 
-You can now execute the delegate and pass it parameters through the Invoke node. Note that you don't need to specify the type of each input and output. The types gets inferred vai the usage.
+You can now execute the delegate and pass it parameters through the Invoke node. Note that this specific delegate has no types specified - they got inferred via the usage.
 
 ![Using the Invoke node](/images/language/delegates_invoke.png)
 
