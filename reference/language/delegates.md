@@ -5,7 +5,7 @@ The fact that a delegate doesn't have a name is a feature here: as long as the i
 
 Delegates have zero to many inputs, and zero or one output. This is part of what defines the signature, or "shape". They are a standard .NET feature.
 
-Inputs called parameters in the definition, and on the invocation side the values fed in are usually called arguments. 
+Inputs are called parameters in the definition, and on the invocation side the values passed in are usually called arguments. 
 
 ## Defining a delegate
 A delegate is defined using the Delegate region. It will initially be empty, so you will want to add inputs and/or outputs to have it actually do something. Here we have a delegate which takes two parameters, multiplies them, and then outputs it. Note that this code is not yet being executed.
