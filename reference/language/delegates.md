@@ -1,7 +1,7 @@
 # Delegates
 Delegates are anonymous operations which can be passed around as an object and can be invoked on data when needed.
 
-The fact that a delegate doesn't have a name is a feature here: as long as the it has the correct signature it will fit, like a lego piece with the right shape. This way you can treat behaviour as an object which can be used to easily switch between different functionalities - without changing the calling code downstream. The delegate abstracts away the internals and only presents a facade.
+The fact that a delegate doesn't have a name is a feature here: as long as it has the correct signature it will fit, like a lego piece with the right shape. This way you can treat behaviour as an object which can be used to easily switch between different functionalities - without changing the calling code downstream. The delegate abstracts away the internals and only presents a facade.
 
 Delegates have zero to many inputs, and zero or one output. This is part of what defines the signature, or "shape". They are a standard .NET feature.
 
