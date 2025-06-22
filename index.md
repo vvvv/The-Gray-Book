@@ -7,15 +7,7 @@ _disableBreadcrumb: true
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Online Courses
-[The NODE Institute](https://thenodeinstitute.org/) is regularly offering live online courses. 
-
-**Upcoming**
-- [**7 session masterclass on Creative Robotics from May 7](https://thenodeinstitute.org/courses/ss25-cm-creative-robotics/)
-
-Past courses still accessible
-- [The NODE Institute Winter 2023](https://thenodeinstitute.org/ws23-vvvv-intermediates/) (various topics)
-- [The NODE Institute Summer 2023](https://thenodeinstitute.org/vvvv-intermediates-summer-2023/) (various topics)
-- [NODE20 workshop recordings](https://vimeo.com/showcase/node20workshops): Recordings of 30 webinars held during [NODE20](https://nodeforum.org/activities/festival/node20/)
+[The NODE Institute](https://thenodeinstitute.org/) is regularly offering live online courses. And here is a list of [past courses that are still available](https://thenodeinstitute.org/courses/#uagb-tabs__tab1)
 
 ## Tutorials 
 - [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
