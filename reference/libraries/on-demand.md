@@ -11,6 +11,7 @@ Here some things you might be looking for:
 - Support for specific capture cards
 - Support for specific lidars
 - Support for specific protocols
+- Support for the [OptiTrack NatNet SDK](https://www.optitrack.com/software/natnet-sdk/)
 - Lasers by [Laser Animation Sollinger](https://laseranimation.com/)
 - Support for [ShowNET Hardware](https://www.laserworld.com/de/software/shownet-hardware.html)
 - Support for specific [OpenXR Extensions](https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html)
