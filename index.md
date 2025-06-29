@@ -18,7 +18,7 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 - [Japanese video tutorials](https://note.com/aoi/m/mad38388fcad0) by Satoshi Eto 🇯🇵 
 
 ## Examples
-- [VL.TheBigBang](https://github.com/chkworks/VL.TheBigBang): A tutorial series for absolute beginners, covering all nodes and techniques to get you started (by chk)
+- [VL.TheBigBang](https://github.com/chkw-rks/VL.TheBigBang): A tutorial series for absolute beginners, covering all nodes and techniques to get you started (by chk)
 - [VL.GenerativeGestaltung](https://forum.vvvv.org/t/vl-generativegestaltung/19350): A collection of examples following the [Generative Gestaltung v2](http://www.generative-gestaltung.de/2/) book (by phlegma)
 - [VL.ExtendedTutorials](https://github.com/TobyKLight/VL.ExtendedTutorials): Extended tutorial help patches, covering common questions as learners move from beginner towards intermediate (by TobyK)
 - [Nodevember2022](https://forum.vvvv.org/t/vl-examples-patches-playground01/21166): A collection of examples made following the prompts of [Nodevember](http://www.nodevember.io/) (by CeeYaa)
