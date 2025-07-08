@@ -141,7 +141,7 @@ Please let us know of your needs: https://github.com/vvvv/VL-Language/issues/51
 ## `IRegion` API based
 With the release of VL 7.0 we introduced a more generalized region API `IRegion<TInlay>` which no longer suffers from the limitations of `ICustomRegion`.
 It allows the developer of a region to fully define the shape of the inner part simply via an interface. Whether that interface is specific to that region or it refers to an already existing one doesn't matter.
-It further makes no assumptions on how the in- and output data is stored. Instead it tells the region exactly when it passed data to it or retrieves data from it.
+It further makes no assumptions on how the in- and output data is stored. Instead it tells the region exactly when it passes data to or retrieves data from it.
 
 ### Examples
 There's currently one example called *IfElse* to be found in the help browser under API / Custom Regions.
@@ -160,7 +160,7 @@ On open it creates one patch inlay and from then on calls `Then` or `Else` on it
 * Add the operation `RetrieveInput` which the system will call from within the patch inlay to retrieve data for a control point or link.
 * Add the operation `AcknowledgeOutput` which the system will call from within the patch inlay to pass data for a control point to the region.
 
-#### Configuration options
+### Configuration options
 * ~**Node Or Region** - whether the region can also be created as a node. Useful when composing regions.~ - not yet implemented
 * **Supported Control Points** - choose what kind of control points your region supports:
 ** `None` - no control points are allowed
@@ -168,3 +168,10 @@ On open it creates one patch inlay and from then on calls `Then` or `Else` on it
 ** `Accumulator` - diamond shape, the control points come as a pair, the output should be same as the input if the region doesn't execute
 ** `Splicer` - triangle shape, when crossing the border the input data should get split apart and the ouput data should get put back together. The splitting and joining needs to be handled by the region. However the system will help out with the typing of the inner and outer parts of the control points (if a type constraint is specified).
 * **Control Point Type Constraint** - define the type constraint the system will put on each control point. For example if you specify `Spread`, then the user will only be able to connect spreads to the region. For splicers the system will try to align the inner type argument with the inner part of the control point.
+
+### Current limitations
+While we consider the API in a rather good state (it emerged from serveral proposals over the years, like https://github.com/vvvv/VL-Language/issues/53), the current implementation still has some assumptions / limitations:
+
+* The process must contain an `Update` operation. We'll probably need to add some config options to defined how control points are allowed to behave in regards to linking from multiple moments from the outside. Currently input control points are assumed to be on `Update` while output control points can be accessed from other moments as well. This restrition does not apply to inner moments of the region. Our *IfElse* example explicitly allows to connect to the same control point from `Then` and `Else` - last one wins.
+* The interface used for the inlay must not interit from other interfaces.
+* Type parameters on the interface (generic interface) has not been tested yet.
