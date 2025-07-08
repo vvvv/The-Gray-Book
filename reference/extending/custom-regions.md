@@ -143,6 +143,11 @@ With the release of VL 7.0 we introduced a more generalized region API `IRegion<
 It allows the developer of a region to fully define the shape of the inner part simply via an interface. Whether that interface is specific to that region or it refers to an already existing one doesn't matter.
 It further makes no assumptions on how the in- and output data is stored. Instead it tells the region exactly when it passed data to it or retrieves data from it.
 
+### Examples
+There's currently one example called *IfElse* to be found in the help browser under API / Custom Regions.
+It defines an interface called `IIfElsePatch` which acts as the patch inlay with two operations `Then` and `Else`.
+On open it creates one patch inlay and from then on calls `Then` or `Else` on it based on the input condition.
+
 ### Usage
 * Define a class, inherit from `IRegion` and enable its process.
 * Optional: define an interface `IMyPatchInlay` representing the inner part of the region.
