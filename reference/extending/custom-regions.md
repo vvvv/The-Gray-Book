@@ -172,6 +172,6 @@ On open it creates one patch inlay and from then on calls `Then` or `Else` on it
 ### Current limitations
 While we consider the API in a rather good state (it emerged from serveral proposals over the years, like https://github.com/vvvv/VL-Language/issues/53), the current implementation still has some assumptions / limitations:
 
-* The process must contain an `Update` operation. We'll probably need to add some config options to defined how control points are allowed to behave in regards to linking from multiple moments from the outside. Currently input control points are assumed to be on `Update` while output control points can be accessed from other moments as well. This restrition does not apply to inner moments of the region. Our *IfElse* example explicitly allows to connect to the same control point from `Then` and `Else` - last one wins.
+* The process must contain an `Update` operation. We'll probably need to add some config options to define how control points are allowed to behave in regards to linking from multiple moments from the outside. Currently input control points are assumed to be on `Update` while output control points can be accessed from other moments as well. This restriction does not apply to inner moments of the region. Our *IfElse* example explicitly allows to connect to the same control point from `Then` and `Else` - last one wins.
 * The interface used for the inlay must not interit from other interfaces.
-* Type parameters on the interface (generic interface) has not been tested yet.
+* Type parameters on the interface (generic interface) have not been tested yet.
