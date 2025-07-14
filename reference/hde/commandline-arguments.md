@@ -42,6 +42,9 @@ Choose between Windows (GUI) or Console application. |`--output-type` + Exe \| *
 Choose the runtime identifier to build for. |`--rid` + *win-x64* \| win-x86 \| win-arm64 \| osx-x64 \| osx-arm64 \| linux-x64 \| linux-arm \| linux-arm64
 Whether or not the build directory (OutputDirectory/src) should be cleaned before doing the export. |`--clean` *true* \| false
 
+For example to build a console app for Linux x64 run:
+`vvvvc.exe --rid linux-x64 --output-type Exe`
+
 ## Args.txt
 A quick way to apply commandline arguments to vvvv is specifying them in an `args.txt` file in your Sketches folder:
 
