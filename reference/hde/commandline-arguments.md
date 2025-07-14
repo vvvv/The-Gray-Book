@@ -39,8 +39,7 @@ Choose where the exported program and files will be created. Default = %UserProf
 Choose an .ico file to be associated with the generated executable.|`--app-icon` path to the .ico file
 Choose how assets will be referenced in the exported application. See [Asset behavior](exporting.md#asset-behavior). |`--asset-behavior` valid values: RelativeToDocument \| *RelativeToOutput*
 Choose between Windows (GUI) or Console application. |`--output-type` + Exe \| *WinExe*
-Choose the OS for which to create the output for. |`--target-os` + *Windows* \| Linux \| Any
-Choose the CPU architecture to create the output for. |`--platform` + AnyCPU \| x86 \| *x64*
+Choose the runtime identifier to build for. |`--rid` + *win-x64* \| win-x86 \| win-arm64 \| osx-x64 \| osx-arm64 \| linux-x64 \| linux-arm \| linux-arm64
 Whether or not the build directory (OutputDirectory/src) should be cleaned before doing the export. |`--clean` *true* \| false
 
 ## Args.txt
