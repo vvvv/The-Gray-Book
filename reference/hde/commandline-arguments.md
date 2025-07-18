@@ -44,8 +44,3 @@ Whether or not the build directory (OutputDirectory/src) should be cleaned befor
 
 For example to build a console app for Linux x64 run:
 `vvvvc.exe --rid linux-x64 --output-type Exe`
-
-## Args.txt
-A quick way to apply commandline arguments to vvvv is specifying them in an `args.txt` file in your Sketches folder:
-
-    C:\Users\..\Documents\vvvv\gamma\Sketches\args.txt

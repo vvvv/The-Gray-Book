@@ -67,8 +67,8 @@ Force to include links in a marquee selection despite nodes or pads are already 
 Force to only select links when making a marquee selection|<span class="keyseq"><kbd>L</kbd></span>
 
 ## Nodes
-Description|Action
--|-
+Description|Action|Help
+-|-|-
 Bring up the NodeBrowser to choose node to create|Double leftclick in an empty area of a patch or on a link
 Replace a node|Double leftclick it to bring up the NodeBrowser and choose a different node. You may need to press ESC to remove existing choices
 Move a node (or selection of nodes) into or out of a region|Press <span class="keyseq"><kbd>Space</kbd></span> while draging a node
@@ -83,14 +83,16 @@ Decrease count of input pins for nodes like +, Cons, ...|<span class="keyseq"><k
 Expose Pins|<span class="keyseq"><kbd>Ctrl</kbd><kbd>K</kbd></span>
 Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
-Assign a [Help Flag](../extending/providing-help.md#help-flags)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>H</kbd></span>
+Assign a Help Flag|<span class="keyseq"><kbd>Ctrl</kbd><kbd>H</kbd></span>|[Help](../extending/providing-help.md#help-flags)
 
 ## Pin Groups
 
-In general, the <kbd>Shift</kbd> key means second group and the <kbd>Alt</kbd> key means output group. However, if the node has no input pin groups, the <kbd>Alt</kbd> key is optional. If the node has more pin groups, the additional ones can be found in the context menu of the node.
+If the node has more than two pin groups, the additional ones can be found in the context menu of the node.
 
 Description|Action
 -|-
+Generally means the second group|Including <span class="keyseq"><kbd>Shift</kbd></span>
+Generally means the output group, but optional if the node has no input pin groups|Including <span class="keyseq"><kbd>Alt</kbd></span>
 (Input Group 1) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd></span>
 (Input Group 1) Remove Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>-</kbd></span>
 (Input Group 2) Add Pin|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>+</kbd></span>
@@ -154,12 +156,11 @@ Force a connection to a datahub that would otherwise not accept it|<span class="
 Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
 
 ## Finders
-For more details, see [Finders](finders.md).
 
-Description|Action
--|-
-Look for strings in the active patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span>
-Globally search for symbols (documents, patches, operations, pads)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> or <kbd>Ctrl</kbd><kbd>,</kbd></span>
+Description|Action|Help
+-|-|-
+Look for strings in the active patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span>|[Help](../hde/finders.md)
+Globally search for symbols (documents, patches, operations, pads)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> or <kbd>Ctrl</kbd><kbd>,</kbd></span>|[Help](../hde/finders.md)
 
 ## Frames
 Description|Action
@@ -215,7 +216,7 @@ Toggle Profiler|<span class="keyseq"><kbd>F3</kbd></span>
 Toggle Helper View|<span class="keyseq"><kbd>F4</kbd></span>
 Toggle Fullscreen|<span class="keyseq"><kbd>F11</kbd> or <kbd>Alt</kbd><kbd>Return</kbd></span>
 
-If the profiler ( <kbd>F3</kbd> ) is enabled and the window is active:
+If the profiler is enabled and the window is active:
 
 Description|Action
 -|-

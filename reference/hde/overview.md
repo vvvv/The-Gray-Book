@@ -3,36 +3,46 @@
 ## The Quad menu
 The Quad menu collects all global commands.
 
+![](../../images/hde/quadmenu.png)
+
 It gives you quick access to:
-- Recent Sketches: For quickly accessing most recent .vl documents, saved in the default location
-- [The Helpbrowser](findinghelp.md#help-browser)
-- [Extensions](extensions.md)
+- Recent Sketches: For quickly accessing most recent .vl documents you've been working on
 - [Managing Nugets](managing-nugets.md)
-- All Documents: A listing of all currently open .vl documents
-- Run, Step, Pause, Stop, Restart all running applications
+- Documents: A listing of all currently open .vl documents
+- Applications: A listing of all currently open main entry points
 - [Exporting Applications](exporting.md)
-- Additional Windows like the [Documentation Window](documentation.md) and the [Solution Explorer](solution-explorer.md)
+- Windows like [Extensions](extensions.md), the [Documentation Window](documentation.md) and the [Solution Explorer](solution-explorer.md)
+- [The Helpbrowser](findinghelp.md#help-browser)
+- [The Settings](settings.md)
 
 ## The document menu
 The document menu collects all commands relevant for the active document.
 
+![](../../images/hde/documentmenu.png)
+
 It gives you quick access to:
 - Configuring the documents [Dependencies](navigating_a_project.md#dependencies)
-- The documentes application patch
-- The documents definition patch
+- The documentes [application patch](../language/patches.md#application-patch)
+- The documents [definition patch](../language/patches.md#definitions-patch)
 - Saving, reloading, closing the document
 - Jumping to the document in the Explorer
   
 ## Document Tabs
 
-Shows titles of all open patches. All tabs with white titles belong to the active document. Tabs with dim titles belong to other documents.
+Shows titles of all open patches.
+![](../../images/hde/documenttabs.png)
 
-## The Hamburger 
+## About
+![](../../images/hde/about-icon.png)
+
+- The About dialog including 
+  - Version and licensing info for vvvv itself and all used open source libraries
+  - Links to this documentation, the [Changelog](../../changelog/index.md) and [Roadmap](../../roadmap/index.md)
+- Licensing Terms including a link to the [vvvv License Store](https://store.vvvv.org)
+
+## Settings
+![](../../images/hde/settings-icon.png)
 
 Gives you quick access to: 
 - [Settings](settings.md) including a link to the backup directory
 - [Themes](themes.md)
-- Licensing Terms including a link to the [vvvv License Store](https://store.vvvv.org)
-- The About dialog including 
-  - Version and licensing info for vvvv itself and all used open source libraries
-  - Links to this documentation, the [Changelog](../../changelog/index.md) and [Roadmap](../../roadmap/index.md)
