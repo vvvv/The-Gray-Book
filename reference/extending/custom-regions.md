@@ -147,6 +147,7 @@ It further makes no assumptions on how the in- and output data is stored. Instea
 There's currently one example called *IfElse* to be found in the help browser under API / Custom Regions.
 It defines an interface called `IIfElsePatch` which acts as the patch inlay with two operations `Then` and `Else`.
 On open it creates one patch inlay and from then on calls `Then` or `Else` on it based on the input condition.
+The same example can also be found written in C# here: https://github.com/vvvv/VL.StandardLibs/blob/main/VL.TestNodes/src/IfElseRegion.cs
 
 ### Usage
 * Define a class, inherit from `IRegion` and enable its process.
