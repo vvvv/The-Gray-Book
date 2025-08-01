@@ -80,37 +80,34 @@ You can also enable the value editor for any Pad or hide it for any IOBox.
 A property can have metadata associated that adds more info to it. As an example a property of type Float32 may have Min and Max values associated that allow a UI that controls that property to constrain e.g. a slider between those two values.
 
 Metadata can be useful for different systems looking at properties. Currently the following systems take metadata into account:
-- The Object Editor: "See HowTo Build a Custom Editor" in the [Help Browser](../hde/findinghelp.md)
+- The Object Editor: See "HowTo Build a Custom Editor" in the [Help Browser](../hde/findinghelp.md)
 - The Channel Browser
 - Channel Bindings
 
 To define metadata for a property, it needs to be viewed via the [Inspector](../hde/inspector.md) by selecting a Pad that refers to it.
 
-****screenshot* A property of type Float32 as seen in the Inspector.***
+To read metadata programmatically, see "HowTo Reflect over Property Metadata" in the [Help Browser](../hde/findinghelp.md)
 
-- EditorAttributes are for channels
-- can we also set attributes on properties directly?
-- helppatch
+![](../../images/reference/language/pad-inspector.png)
+
+<center><small>A property of type Float32 as seen in the Inspector.</small></center>
 
 ### Common Metadata
-Some metadata is available for all types:
-- Exposed: Whether or not the property can be published as a Channel
-- Browsable: Whether or not the property is visible in the ObjectEditor
 - Default: A value a UI can use to reset to 
+Some metadata is available for all types:
+- Order: The order in which this property would appear in a list compared to its siblings
+- Widget: The type of widget the property would preferrably be manipulated with
+- Can be Published: Whether or not the property can be published as a Channel
+- Visible in ObjectEditor: Whether or not the property is visible in the ObjectEditor
+- Read-Only: Whether the property can be only read or also written to
+- Don't Serialize:
 - Label: A human readable identifier 
 - Description: A longer description for the property
 - Tags: A list of terms associated with the property 
-- Order: The order in which this property would appear in a list compared to its siblings
-- ReadOnly: Whether the property can be only read or also written to
-- Widget: The type of widget the property would preferrably be manipulated with
 
 ### Metadata specific for number types
 - Min: Lowest allowed value (inclusive)
 - Max: Highest allowed value (inclusive)
-- Stepsize: Must be >= 0. It constrains possible values to a multiple of the stepsize. A value of 0 means: no constraint.
-- Unit: The physical unit of the value for display after the value in the UI
 
 ### Custom Metadata
 Allows to assign custom key/value data to properties.
-
-how to read those

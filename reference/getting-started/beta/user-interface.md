@@ -18,7 +18,7 @@ See [Finders](../../hde/finders.md).
 There is a convenient logging window which you an open via `Quad Menu` -> `Windows` -> `Log`. See also [Debugging](../../hde/debugging-log.md).
 
 ## Docking Patches
-Patch windows and tool windows can be docked by simply dragging them in and out of other windows. See [settings](../../hde/settings.md) "Open previous documents/windows" to for options on restoring sessions.
+Patch windows and tool windows can be docked by simply dragging them in and out of other windows. See [settings](../../hde/settings.md) "Open previous documents/windows" for options on restoring sessions.
 
 ## Open a nodes patch
 Where in beta you'd rightclick a node to open its corresponding patch, in VL you rightclick -> Open. 
