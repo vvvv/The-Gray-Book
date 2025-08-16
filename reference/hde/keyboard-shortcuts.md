@@ -1,16 +1,45 @@
 # Keyboard Shortcuts
 
 ## Quad Menu
-Description | Action
--|-
+Description | Action | Help
+-|-|-
 New Document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>N</kbd></span>
+New C# File|<span class="keyseq"><kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd></span>|
+New Shader|<span class="keyseq"><kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>S</kbd></span>
 Open Document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>O</kbd></span>
+Load previous documents and windows|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>O</kbd></span>
 Save All Documents|<span class="keyseq"><kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>S</kbd></span>
+Export|<span class="keyseq"><kbd>F10</kbd></span>
+
+## Runtime
+Description|Action
+-|-
 Run|<span class="keyseq"><kbd>F5</kbd></span>
 Step|<span class="keyseq"><kbd>F6</kbd></span>
 Pause|<span class="keyseq"><kbd>F7</kbd></span>
 Stop|<span class="keyseq"><kbd>F8</kbd></span>
-Export...|<span class="keyseq"><kbd>F10</kbd></span>
+Restart|<span class="keyseq"><kbd>F9</kbd></span>
+Restart editor extensions|<span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></span>
+
+## Windows
+Description|Action
+-|-
+About|<span class="keyseq"><kbd>Shift</kbd><kbd>F1</kbd></span>
+Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
+Channel Browser|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F4</kbd></span>
+Console|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F5</kbd></span>
+Debug Views|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F2</kbd></span>
+Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
+Inspector|<span class="keyseq"><kbd>Ctrl</kbd><kbd>I</kbd></span>
+Key & Mouse Display|<span class="keyseq"><kbd>Shift</kbd><kbd>F2</kbd></span>
+Log|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F2</kbd></span>
+NuGet Commandline|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F3</kbd></span>
+Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
+Settings|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F1</kbd></span>
+Show & Tell|<span class="keyseq"><kbd>Ctrl</kbd><kbd>3</kbd></span>
+Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
+Solution Explorer .NET Dependencies|<span class="keyseq"><kbd>Ctrl</kbd><kbd>U</kbd></span>
+Make window topmost|<span class="keyseq"><kbd>Ctrl</kbd><kbd>T</kbd></span>
 
 ## Document Menu
 Description|Action
@@ -25,8 +54,9 @@ Reload Active Document discarding unsaved changes|<span class="keyseq"><kbd>Ctrl
 Close Active Document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>W</kbd></span>
 Show Active Document in Explorer|<span class="keyseq"><kbd>Alt</kbd><kbd>E</kbd></span>
 View Active Document as Text|<span class="keyseq"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
-Add Existing Dependency|<span class="keyseq"><kbd>Ctrl</kbd><kbd>E</kbd></span>
-Add .NET Framework Assembly|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
+Add Existing Dependency|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
+Add New Dependency|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd></span>
+Add .NET Framework Assembly|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd></span>
 
 ## Basics
 Description|Action
@@ -38,7 +68,7 @@ Navigate one level Up in application|<span class="keyseq"><kbd>Ctrl</kbd><kbd>^<
 Navigate one level Up in definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>^</kbd></span> (where <span class="keyseq"><kbd>^</kbd></span> is the Key below <span class="keyseq"><kbd>ESC</kbd></span>)
 Copy screenshot of active patch to clipboard and save it as PNG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>2</kbd></span>
 Take screenshot of active patch and save it as SVG next to its .vl document|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>2</kbd></span>
-Duplicate selected nodes/pads keeping|<span class="keyseq"><kbd>Ctrl</kbd><kbd>D</kbd></span>
+Duplicate selected nodes/pads|<span class="keyseq"><kbd>Ctrl</kbd><kbd>D</kbd></span>
 Duplicate selected nodes/pads keeping incoming links|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>D</kbd></span>
 
 ## Pan & Zoom
@@ -84,6 +114,10 @@ Expose Pins|<span class="keyseq"><kbd>Ctrl</kbd><kbd>K</kbd></span>
 Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 Assign a Help Flag|<span class="keyseq"><kbd>Ctrl</kbd><kbd>H</kbd></span>|[Help](../extending/providing-help.md#help-flags)
+Group nodes to a process node|<span class="keyseq"><kbd>Ctrl</kbd><kbd>G</kbd></span>
+Group nodes to an operation node|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd></span>
+Rename a nodes definition|<span class="keyseq"><kbd>F2</kbd></span>
+Cut a nodes definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd></span>
 
 ## Pin Groups
 
@@ -118,7 +152,9 @@ Description|Action
 Create via Nodebrowser|right doubleclick in the patch
 Create while linking|Middleclick (or <span class="keyseq"><kbd>ALT</kbd></span> + leftclick) in the patch
 Reset to default|<span class="keyseq"><kbd>ALT</kbd></span> + rightclick
+Change size|<span class="keyseq"><kbd>ALT</kbd>+<kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd></span>
 Edit the value|Double leftclick
+*IOBox (Float Value)*: Change precision|<span class="keyseq"><kbd>Ctrl</kbd><kbd>+</kbd>/<kbd>-</kbd></span>
 *IOBox (Value)*: Change value|Rightdrag up/down
 *IOBox (Value)*: Change value finer|<span class="keyseq"><kbd>Ctrl</kbd></span> + Rightdrag up/down to change value with stepsize divided by 10
 *IOBox (Value)*: Change value finer|<span class="keyseq"><kbd>Shift</kbd></span> + Rightdrag up/down to change value with stepsize divided by 10
@@ -153,7 +189,7 @@ Insert a pad into an existing link|<span class="keyseq"><kbd>Shift</kbd></span> 
 Insert a node into an existing link|Double leftclick the link
 Show a links tooltip to see its current value and the operation it is assigned to|Press <span class="keyseq"><kbd>Ctrl</kbd></span> while hovering the link
 Force a connection to a datahub that would otherwise not accept it|<span class="keyseq"><kbd>Space</kbd></span>
-Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>SPACE</kbd></span>
+Force to include links in a marquee selection despite nodes or pads are already part of it|<span class="keyseq"><kbd>Space</kbd></span>
 
 ## Finders
 
@@ -182,28 +218,6 @@ Description|Action
 Copy content when showing an error|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd></span>
 Toggle showing more infos for infos, warnings or errors|<span class="keyseq"><kbd>Space</kbd></span>
 Detach from currently inspected instance|<span class="keyseq"><kbd>Tab</kbd></span>
-
-## Runtime
-Description|Action
--|-
-Run|<span class="keyseq"><kbd>F5</kbd></span>
-Step|<span class="keyseq"><kbd>F6</kbd></span>
-Pause|<span class="keyseq"><kbd>F7</kbd></span>
-Stop|<span class="keyseq"><kbd>F8</kbd></span>
-Restart|<span class="keyseq"><kbd>F9</kbd></span>
-Restart editor extensions|<span class="keyseq"><kbd>Shift</kbd><kbd>F9</kbd></span>
-
-## Windows
-Description|Action
--|-
-Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
-Inspector|<span class="keyseq"><kbd>Ctrl</kbd><kbd>I</kbd></span>
-Debug Views|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F2</kbd></span>
-Gobal Channels|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F3</kbd></span>
-Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
-Patch Documentation|<span class="keyseq"><kbd>Ctrl</kbd><kbd>M</kbd></span>
-Solution Explorer|<span class="keyseq"><kbd>Ctrl</kbd><kbd>J</kbd></span>
-Make window topmost|<span class="keyseq"><kbd>Ctrl</kbd><kbd>T</kbd></span>
 
 ## VL.Stride
 The following shortcuts are working with either a VL.Stride SceneWindow or RenderWindow active:
