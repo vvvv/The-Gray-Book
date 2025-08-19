@@ -115,7 +115,9 @@ Move selected nodes|<span class="keyseq"><kbd>Arrows</kbd></span>
 Move selected nodes faster|<span class="keyseq"><kbd>Shift</kbd><kbd>Arrows</kbd></span>
 Assign a Help Flag|<span class="keyseq"><kbd>Ctrl</kbd><kbd>H</kbd></span>|[Help](../extending/providing-help.md#help-flags)
 Group nodes to a process node|<span class="keyseq"><kbd>Ctrl</kbd><kbd>G</kbd></span>
-Group nodes to an operation node|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd></span>
+Group nodes to a process node (current canvas)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd></span>
+Group nodes to an operation node|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>G</kbd></span>
+Group nodes to an operation node (current canvas)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>G</kbd></span>
 Rename a nodes definition|<span class="keyseq"><kbd>F2</kbd></span>
 Cut a nodes definition|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd></span>
 
