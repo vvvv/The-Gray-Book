@@ -34,6 +34,7 @@ Shows titles of all open patches.
 
 ## About
 ![](../../images/hde/about-icon.png)
+Can be invoked via <span class="keyseq"><kbd>Shift</kbd><kbd>F1</kbd></span>
 
 - The About dialog including 
   - Version and licensing info for vvvv itself and all used open source libraries
@@ -42,7 +43,8 @@ Shows titles of all open patches.
 
 ## Settings
 ![](../../images/hde/settings-icon.png)
+Can be invoked via <span class="keyseq"><kbd>Ctrl</kbd><kbd>F1</kbd></span>
 
 Gives you quick access to: 
-- [Settings](settings.md) including a link to the backup directory
+- [Settings](settings.md)
 - [Themes](themes.md)

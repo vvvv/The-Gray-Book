@@ -53,24 +53,28 @@ Choose how assets will be referenced in the exported application:
     vvvvc.exe MyApp.vl --asset-behavior  RelativeToDocument
   
 ## Output type
-Choose between Windows (GUI) or Console application. 
+Choose between a Windows (WinExe) or Console (Exe) application. 
 
 ### Commandline example:
-    vvvvc.exe MyApp.vl  --output-type Exe
+    vvvvc.exe MyApp.vl --output-type Exe
 
 A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. Use a __KeepAppAlive__ node to prevent this default behavior.
 
-## Target OS
-Choose the OS for which to create output for. If you choose *Any*, export will create executables for all available targets, otherwise only for the one selected OS.
+## Runtime identifier
+Choose the OS and architecture to build for. Currently supported options are: win-x64 | win-x86 | win-arm64 | osx-x64 | osx-arm64 | linux-x64 | linux-arm | linux-arm64
 
 ### Commandline example:
-    vvvvc.exe MyApp.vl --target-os Linux
+    vvvvc.exe MyApp.vl --rid linux-arm64
 
-## Platform
-Choose between CPU architectures x64 (64bit), x86 (32bit) or any.
+## Error handling
+### Ignore Compilation Errors
+There are cases where you are aware of errors in your patch that you simply want to ignore for the time being and still be able to export. 
 
-### Commandline example:
-    vvvvc.exe MyApp.vl --platform AnyCPU
+#### Commandline example:
+    vvvvc.exe MyApp.vl --ignore-errors true
+
+### Ignore Unhandled Exceptions
+By default unhandled runtime exceptions result in a popup and the application is halted. When disabling this behavior, such exceptions will only be written to the log.
 
 ## Options
 
@@ -97,7 +101,7 @@ If your application is referencing VL.Stride, make sure the target PC also has t
 * Microsoft Visual C++ Redistributables: [64bit](https://aka.ms/vs/17/release/vc_redist.x64.exe) or [32bit](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 * [.NET8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (For FileTexture and FileModel nodes to work)
 
-### For versions prior to 5.0
+### For versions prior to vvvv 5.0
 For applications exported with this older version of vvvv, you'll also have to install:
 * [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
 
