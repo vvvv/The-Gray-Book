@@ -1,7 +1,5 @@
 # Custom Regions
 
-## Regions
-
 Regions can be descibed as *node-like building blocks that have a hole inside*: 
 They do something specific - this is the part where they are similar to nodes.
 But they are somehow "unsure about the details", so they let the end-user step in and ask for those details - this is what makes them regions.
@@ -12,7 +10,7 @@ In general we can describe regions as nodes with a *callback mechanism*: A way t
 
 VL offers several of those callback mechanisms for region developers. 
 
-* Delegate-based Callbacks
+* Delegate-based callbacks
   * short lived (stateless)
     * `Func<>` or `Action<>` based
     * based on a custom delegate type (typically declared in C#)
@@ -21,8 +19,8 @@ VL offers several of those callback mechanisms for region developers.
 * Regions built with the `CustomRegion` API
   * long running with support for border control points
 
-# Delegate-based Regions
-Delegate-based Regions regions allow a region designer to feed any data into the inside of the region and request back any other data. 
+## Delegate-based Regions
+Delegate-based regions allow a region designer to feed any data into the inside of the region and request back any other data. 
 All you need to do is to 
 * `Invoke` a delegate of any type - e.g. `(Vector2, Rectangle) -> Boolean`
   * feed the data into the inside of the region by feeding data to the `Invoke` call
@@ -38,7 +36,7 @@ By that you basically let the "delegate implementation" of the user / the inside
 
 You now can reason about when to call back that patch. For example you could call back the patch several times or just when some condition is true. You have complete freedom regarding when to call back the users application of your region.
 
-## Custom delegate types
+### Custom delegate types
 These allow you to define Regions that come with nicely named Pins.
 If you are not afraid of C# then please give them a try! 
 * They enhance the readability of the Region as you can name your pins
@@ -46,7 +44,7 @@ If you are not afraid of C# then please give them a try!
 
 For details see: https://github.com/vvvv/VL-Language/issues/5
 
-## Stateful - delegate-based
+### Stateful - delegate-based
 The basic idea here is that the region is built in a way that it allows for process nodes to be placed inside.
 
 Regions of that flavor can 
@@ -57,8 +55,8 @@ Typically, those regions manage only one instance of the users’ patch. However
 
 The help browser offers you an example: *Stateful Delegate-based While Loop*.
 
-# `CustomRegion` API based
-Since 2021.4 VL offers a way to build regions that have `Input Border Controlpoints` (BCP) and `Output BCPs`. And again: you can patch them.
+## `CustomRegion` API based
+Since 4.0 VL offers a way to build regions that have `Input Border Controlpoints` (BCP) and `Output BCPs`. And again: you can patch them.
 
 This is a powerful feature as it allows the end user stay in the flow. Getting data into or out of the region suddenly is effortless. 
 
@@ -70,7 +68,7 @@ Here are some regions that showcase the CustomRegion API:
 * Try
 * ManageProcess
 
-## Usage
+### Usage
 
 In order to patch a new region, all you need to do is to 
 * define a new `Process` 
@@ -121,7 +119,7 @@ Anyway. You want to create a region that does more? Just patch along!
 
 Now your imagination is needed...
 
-### Configuration options
+#### Configuration options
 * **Node Or Region** - whether the region can also be created as a node. Useful when composing regions.
 * **Supported Control Points** - choose what kind of control points your region supports:
 ** `None` - no control points are allowed
@@ -130,14 +128,51 @@ Now your imagination is needed...
 ** `Splicer` - triangle shape, when crossing the border the input data should get split apart and the ouput data should get put back together. The splitting and joining needs to be handled by the region. However the system will help out with the typing of the inner and outer parts of the control points (if a type constraint is specified).
 * **Control Point Type Constraint** - define the type constraint the system will put on each control point. For example if you specify `Spread`, then the user will only be able to connect spreads to the region. For splicers the system will try to align the inner type argument with the inner part of the control point.
 
-### User Expectations
+#### User Expectations
 When you design your region you might focus on BCPs with a certain data type. Note however: the user might still want some standard behavior for when the data type is different. Consider to implement a fallback mechanism for such a BCP that just channels the untouched data from the outside to inside or the other way around, very much like seen in the `Do [Control]` region.
 
-### Current Limitiations
+#### Current Limitiations
 Note that there are still some constraints for your ideas :(
 * It's not possible to define multiple control point kinds (like `Accumulator` and `Splicer`)
 * Pins inside the region patch are not supported. So you currently always need to use BCPs. A workaround for this limitation is to check for a BCP with a certain name or type and treat this differently. 
 
 Please let us know of your needs: https://github.com/vvvv/VL-Language/issues/51
 
+## `IRegion` API based
+With the release of VL 7.0 we introduced a more generalized region API `IRegion<TInlay>` which no longer suffers from the limitations of `ICustomRegion`.
+It allows the developer of a region to fully define the shape of the inner part simply via an interface. Whether that interface is specific to that region or it refers to an already existing one doesn't matter.
+It further makes no assumptions on how the in- and output data is stored. Instead it tells the region exactly when it passes data to or retrieves data from it.
 
+### Examples
+There's currently one example called *IfElse* to be found in the help browser under API / Custom Regions.
+It defines an interface called `IIfElsePatch` which acts as the patch inlay with two operations `Then` and `Else`.
+On open it creates one patch inlay and from then on calls `Then` or `Else` on it based on the input condition.
+The same example can also be found written in C# here: https://github.com/vvvv/VL.StandardLibs/blob/main/VL.TestNodes/src/IfElseRegion.cs
+
+### Usage
+* Define a class, inherit from `IRegion` and enable its process.
+* Optional: define an interface `IMyPatchInlay` representing the inner part of the region.
+* Add an operation called `Update` to your class and make sure it's part of the process. This is a restriction / assumption of the current design and might get lifted in the future.
+* Define an operation called `SetPatchInlayFactory` with an input `Patch Inlay Factory` and annotate with `() -> IMyPatchInlay`.
+* The region should now be available from within the node browser.
+* The `Patch Inlay Factory` pin can be used to further configure what types of control points (if any) are supported. See below for details.
+* Add the operation `AcknowledgeInput` which the system will call for each control point and link to pass data into the region.
+* Add the operation `RetrieveOutput` which the system will call to retrieve data for each control point.
+* Add the operation `RetrieveInput` which the system will call from within the patch inlay to retrieve data for a control point or link.
+* Add the operation `AcknowledgeOutput` which the system will call from within the patch inlay to pass data for a control point to the region.
+
+### Configuration options
+* ~**Node Or Region** - whether the region can also be created as a node. Useful when composing regions.~ - not yet implemented
+* **Supported Control Points** - choose what kind of control points your region supports:
+** `None` - no control points are allowed
+** `Border` - rectangle shape, the data shouldn't be modified by the region when crossing the border
+** `Accumulator` - diamond shape, the control points come as a pair, the output should be same as the input if the region doesn't execute
+** `Splicer` - triangle shape, when crossing the border the input data should get split apart and the ouput data should get put back together. The splitting and joining needs to be handled by the region. However the system will help out with the typing of the inner and outer parts of the control points (if a type constraint is specified).
+* **Control Point Type Constraint** - define the type constraint the system will put on each control point. For example if you specify `Spread`, then the user will only be able to connect spreads to the region. For splicers the system will try to align the inner type argument with the inner part of the control point.
+
+### Current limitations
+While we consider the API in a rather good state (it emerged from serveral proposals over the years, like https://github.com/vvvv/VL-Language/issues/53), the current implementation still has some assumptions / limitations:
+
+* The process must contain an `Update` operation. We'll probably need to add some config options to define how control points are allowed to behave in regards to linking from multiple moments from the outside. Currently input control points are assumed to be on `Update` while output control points can be accessed from other moments as well. This restriction does not apply to inner moments of the region. Our *IfElse* example explicitly allows to connect to the same control point from `Then` and `Else` - last one wins.
+* The interface used for the inlay must not interit from other interfaces.
+* Type parameters on the interface (generic interface) have not been tested yet.
