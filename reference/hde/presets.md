@@ -1,6 +1,6 @@
 # Presets & Transitions
 
-Using presets you can take snapshots of any combination of [Public Channels](channel-browser.md), store and recall them again anytime. A simple recall will jump to the stored value. Using a transition, values will be smoothly converged to. 
+Using presets you can take snapshots of any combination of [Public Channels](the_channelbrowser.md), store and recall them again anytime. A simple recall will jump to the stored value. Using a transition, values will be smoothly converged to. 
 
 ![](../../images/reference/hde/presets.png)
 <center><small>A preset column to store, and the Presets Panel to trigger snapshots</small></center>

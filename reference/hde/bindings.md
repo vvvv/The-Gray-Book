@@ -1,6 +1,6 @@
 # Bindings
 
-Bindings offer a unified way to expose [Public Channels](channel-browser.md) from your app and allow them to interact with the outside world. Think easy connections to RCP, OSCQuery, OSC, Midi, Redis,...
+Bindings offer a unified way to expose [Public Channels](the_channelbrowser.md) from your app and allow them to interact with the outside world. Think easy connections to RCP, OSCQuery, OSC, Midi, Redis,...
 
 ![](../../images/reference/hde/binding-columns.png)
 <center><small>Binding columns for MIDI, OSC, OSCQuery and Redis established by the respective nodes</small></center>
