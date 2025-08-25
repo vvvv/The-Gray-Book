@@ -1,4 +1,4 @@
-# The NodeBrowser
+# The Node Browser
 
 When opening the NodeBrowser via a left double-click anywhere on a patch what you see is:
 

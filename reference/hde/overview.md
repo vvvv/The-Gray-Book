@@ -12,7 +12,7 @@ It gives you quick access to:
 - Applications: A listing of all currently open main entry points
 - [Exporting Applications](exporting.md)
 - Windows like [Extensions](extensions.md), the [Documentation Window](documentation.md) and the [Solution Explorer](solution-explorer.md)
-- [The Helpbrowser](findinghelp.md#help-browser)
+- [The Help Browser](findinghelp.md#help-browser)
 - [The Settings](settings.md)
 
 ## The document menu
