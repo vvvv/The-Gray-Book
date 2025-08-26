@@ -6,8 +6,9 @@ _disableBreadcrumb: true
 ## Getting Started
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
-## Online Courses
-[Upcoming and past vvvv courses](https://thenodeinstitute.org/courses/#uagb-tabs__tab0) at The NODE Institute.
+## Courses
+- Live in Berlin: [Free 3h introduction to vvvv on September 7](https://thenodeinstitute.org/event/nocode-2-new-media-art-with-vvvv/) at The NODE Institute
+- More [Upcoming and past vvvv courses](https://thenodeinstitute.org/courses/#uagb-tabs__tab0) hosted by The NODE Institute.
 
 ## Tutorials 
 - [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
@@ -35,4 +36,5 @@ This reference is structured into the following chapters:
 | [Libraries](reference/libraries/overview.md) | An overview of all available node libraries |
 | [Extending vvvv](reference/extending/overview.md) | For developers to write their own nodes and libraries |
 | [Best Practice](reference/best-practice/overview.md) | Learn the best practices for specific topics |
+
 
