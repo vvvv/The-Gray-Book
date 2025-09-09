@@ -5,7 +5,13 @@ Unfortunately the listings here are done manually and are therefore by no means 
 
 If you find yourself in the need to downgrade the version of a NuGet, make sure to read [Installing a specific version of a NuGet](../reference/hde/managing-nugets.md#installing-a-specific-version).
 
-## vvvv gamma 6.0
+## vvvv gamma 7.x
+
+Package|Version|Command to get recommended version
+-|-|-
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
+
+## vvvv gamma 6.x
 
 Package|Version|Command to get recommended version
 -|-|-
@@ -21,7 +27,7 @@ Package|Version|Command to get recommended version
 [VL.SpoutMonitor.HDE](https://www.nuget.org/packages/VL.SpoutMonitor.HDE) | 0.1.0 | `nuget install VL.SpoutMonitor.HDE -version 0.1.0`
 [VL.TUIO.HDE](https://www.nuget.org/packages/VL.TUIO.HDE) | 0.2.1 | `nuget install VL.TUIO.HDE -version 0.2.1`
 
-## vvvv gamma 5.0
+## vvvv gamma 5.x
 
 Package|Version|Command to get recommended version
 -|-|-
