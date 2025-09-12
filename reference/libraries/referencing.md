@@ -85,7 +85,7 @@ Otherwise in case 1) restarting vvvv should help, but in case 2) you'll actually
 
 By default .NET comes with a large number of assemblies that can be referenced. They are stored in the [GAC](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) on all machines that have .NET installed and can be referenced from there via:
 
-* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></span>
+* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd></span>
 * via `Document > Dependencies > Files > Add .NET Framework Assembly...`
 
 In the dialog you need to double-click entries that you want to add as references.
