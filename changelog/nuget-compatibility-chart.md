@@ -10,6 +10,7 @@ If you find yourself in the need to downgrade the version of a NuGet, make sure 
 Package|Version|Command to get recommended version
 -|-|-
 [VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
+[VL.Devices.Axis](https://www.nuget.org/packages/VL.Devices.Axis) | >= 0.0.9 preview | `nuget install VL.Devices.Axis -pre`
 
 ## vvvv gamma 6.x
 
@@ -26,6 +27,7 @@ Package|Version|Command to get recommended version
 [VL.Pipette.HDE](https://www.nuget.org/packages/VL.Pipette.HDE) | 0.0.2 | `nuget install VL.Pipette.HDE -version 0.0.2`
 [VL.SpoutMonitor.HDE](https://www.nuget.org/packages/VL.SpoutMonitor.HDE) | 0.1.0 | `nuget install VL.SpoutMonitor.HDE -version 0.1.0`
 [VL.TUIO.HDE](https://www.nuget.org/packages/VL.TUIO.HDE) | 0.2.1 | `nuget install VL.TUIO.HDE -version 0.2.1`
+[VL.Devices.Axis](https://www.nuget.org/packages/VL.Devices.Axis) | = 0.0.8 preview | `nuget install VL.Devices.Axis -version 0.0.8`
 
 ## vvvv gamma 5.x
 
