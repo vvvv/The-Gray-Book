@@ -198,7 +198,7 @@ Force to include links in a marquee selection despite nodes or pads are already 
 Description|Action|Help
 -|-|-
 Look for strings in the active patch|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F</kbd></span>|[Help](../hde/finders.md)
-Globally search for symbols (documents, patches, operations, pads)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> or <kbd>Ctrl</kbd><kbd>,</kbd></span>|[Help](../hde/finders.md)
+Globally search for symbols (documents, patches, operations, pads)|<span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd></span> or <span class="keyseq"><kbd>Ctrl</kbd><kbd>,</kbd></span>|[Help](../hde/finders.md)
 
 ## Frames
 Description|Action
