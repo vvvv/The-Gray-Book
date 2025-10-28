@@ -11,19 +11,22 @@ Unfortunately some libraries will not work with Arm builds of vvvv. This will be
 
 Generally we can give the following (incomplete) overview of Arm compatibility for libraries:
 
+### VL.Stride
+Available since 7.1-preview 68
+
+Arm CPUs often will not be accompanied by Nvidia GPUs. Non-Nvidia GPUs though seem to be much closer following the official specs, when it comes to shader programming. This will lead to the impression that things working on a machine with an Nvidia GPU are broken on a machine with a non-Nvidia GPU, when in fact most often the program is actually broken to begin with, only Nvidia GPUs still manage to run them. So really the code needs to be fixed to be valid on all GPUs!
+
+You'll see in few help patches we've added a warning: ⚠️Nvidia only⚠️ when they are using a rendering technique that is only supported on Nvidia cards.
+
 ### VL.Audio
 Using the Resample [Audio.Utils] node will crash vvvv.
 
-### VL.Stride
-- compute
-- fuse
-
 ### Should work
 The following libraries do not yet have Arm support, but it seems the underlying libraries do. So it should be possible to get them working with Arm builds of vvvv with some effort:
-- VL.OpenCV
-- VL.IO.NDI
 - VL.CEF
 - VL.MediaPipe
+- VL.OpenCV
+- VL.IO.NDI
 
 ### Could work
 Support for the following libararies depends on support for Arm CPUs by the creators of the underlying libraries. In case they offer support, we can most likely make them work with Arm builds of vvvv:
