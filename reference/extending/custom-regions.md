@@ -148,6 +148,7 @@ There's currently one example called *IfElse* to be found in the help browser un
 It defines an interface called `IIfElsePatch` which acts as the patch inlay with two operations `Then` and `Else`.
 On open it creates one patch inlay and from then on calls `Then` or `Else` on it based on the input condition.
 The same example can also be found written in C# here: https://github.com/vvvv/VL.StandardLibs/blob/main/VL.TestNodes/src/IfElseRegion.cs
+Another C# example is the [`ForEach (Key)` region](https://github.com/vvvv/VL.StandardLibs/blob/c4fb51ab5354cac01bf9dbcdac7efe749e47e0f3/VL.CoreLib/src/Control/Synchronize.cs#L345), it also shows that the patch inlay can have pins.
 
 ### Usage
 * Define a class, inherit from `IRegion` and enable its process.
@@ -176,3 +177,4 @@ While we consider the API in a rather good state (it emerged from serveral propo
 * The process must contain an `Update` operation. We'll probably need to add some config options to define how control points are allowed to behave in regards to linking from multiple moments from the outside. Currently input control points are assumed to be on `Update` while output control points can be accessed from other moments as well. This restriction does not apply to inner moments of the region. Our *IfElse* example explicitly allows to connect to the same control point from `Then` and `Else` - last one wins.
 * The interface used for the inlay must not interit from other interfaces.
 * Type parameters on the interface (generic interface) have not been tested yet.
+
