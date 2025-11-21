@@ -9,8 +9,10 @@ If you find yourself in the need to downgrade the version of a NuGet, make sure 
 
 Package|Version|Command to get recommended version
 -|-|-
-[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.3 preview | `nuget install VL.Fuse -pre`
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0.8 preview | `nuget install VL.Fuse -pre`
 [VL.Devices.Axis](https://www.nuget.org/packages/VL.Devices.Axis) | >= 0.0.9 preview | `nuget install VL.Devices.Axis -pre`
+[VL.CEF.Skia](https://www.nuget.org/packages/VL.CEF.Skia) | >= 0.7.2 | `nuget install VL.CEF.Skia`
+[VL.CEF.Stride](https://www.nuget.org/packages/VL.CEF.Stride) | >= 0.7.2 | `nuget install VL.CEF.Stride`
 
 ## vvvv gamma 6.x
 
