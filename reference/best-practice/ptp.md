@@ -21,8 +21,6 @@ Configuring PTP on the system takes several steps:
     1. Ntp providers will be disabled (your normal default time server), only PtpClient remains enabled.
 1. Enable Inbound and Outbound UDP Ports 219,220 in Windows Firewall. These are used by the PTP protocol.
 
-Registry keys and Firewall configs also described by Microsoft (here)[https://github.com/microsoft/W32Time/tree/master/Precision%20Time%20Protocol/Windows%20Configuration%20Helpers].
-
 When the configuration is ready:
 
 1. Start `Command Line` as Adminitrator
@@ -33,6 +31,12 @@ When the configuration is ready:
 
 It takes some time until the client and server done their agreements, after that periodically checking `w32tm /query /status /verbose` will give you hints how many seconds ago the system was synced etc.
 
+For more about Windows Time Service:
+
+- (Windows Time Service)[https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/how-the-windows-time-service-works]
+- (Service Tools and Settings)[https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config]
+- Registry keys and Firewall configs also described by Microsoft (here)[https://github.com/microsoft/W32Time/tree/master/Precision%20Time%20Protocol/Windows%20Configuration%20Helpers].
+
 ### Configuration of a Server (Ptp Time Source)
 
 Although there are special hardware PTP Sources, PTP Source Service can run from on a simple Raspberry Pi 5 (Network Card on the earlier versions doesn't support PTP). And if a real high precision time is needed, a GPS receiver could be added to the Raspberry Pi.
@@ -41,6 +45,7 @@ These articles describe how to setup and run PTP Service on Linux:
 
 - [Nanosecond accurate PTP server](https://austinsnerdythings.com/2025/02/18/nanosecond-accurate-ptp-server-grandmaster-and-client-tutorial-for-raspberry-pi/)
 - [Windows Subsystem for Linux for testing Windows 10 PTP Client](https://techcommunity.microsoft.com/blog/networkingblog/windows-subsystem-for-linux-for-testing-windows-10-ptp-client/389181)
+- Multicast / Unicast [PTPd Config examples](https://github.com/Microsoft/W32Time/tree/master/Precision%20Time%20Protocol/PTPd%20Configuration%20Examples)
 
 
 ## Unicast and Multicast scenarios
