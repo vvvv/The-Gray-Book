@@ -17,9 +17,11 @@ Configuring PTP on the system takes several steps:
     1. If the system has several cards, the one with PTP Enabled should be assigned as preffered one, in order to be picked by a time service: in the `Properties` of the Network Adapter: `Internet Protocol Version 4 (TCP/IPv4) > Properties > Advanced` turn off `Automatic metric` and set it to a value, smaller than for the other cards. 
 1. Run registry file (link), it sets several keys:
     1. A key `PtpClient` (Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\PtpClient) with some subkeys is added, as described [here](https://techcommunity.microsoft.com/blog/networkingblog/windows-subsystem-for-linux-for-testing-windows-10-ptp-client/389181). **Note**, you have to set `PtpMasters` key to the IP(s) of your ptp time providers.
-    2. Some subkeys under a `Config` key (Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\PtpClient) are updated, as described in [Configuring Systems for High Accuracy](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/configuring-systems-for-high-accuracy).
+    2. Some subkeys under a `Config` key (Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\Config) are updated, as described in [Configuring Systems for High Accuracy](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/configuring-systems-for-high-accuracy).
     1. Ntp providers will be disabled (your normal default time server), only PtpClient remains enabled.
 1. Enable Inbound and Outbound UDP Ports 219,220 in Windows Firewall. These are used by the PTP protocol.
+
+Registry keys and Firewall configs also described by Microsoft (here)[https://github.com/microsoft/W32Time/tree/master/Precision%20Time%20Protocol/Windows%20Configuration%20Helpers].
 
 When the configuration is ready:
 
