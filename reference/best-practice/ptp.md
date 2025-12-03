@@ -19,7 +19,7 @@ Configuring PTP on the system takes several steps:
     1. A key `PtpClient` (Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\PtpClient) with some subkeys is added, as described [here](https://techcommunity.microsoft.com/blog/networkingblog/windows-subsystem-for-linux-for-testing-windows-10-ptp-client/389181). **Note**, you have to set `PtpMasters` key to the IP(s) of your ptp time providers.
     2. Some subkeys under a `Config` key (Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\Config) are updated, as described in [Configuring Systems for High Accuracy](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/configuring-systems-for-high-accuracy).
     1. The NtpClient will be disabled, only PtpClient remains enabled.
-1. Enable Inbound and Outbound UDP Ports 219 and 220 in Windows Firewall. These are used by the PTP protocol.
+1. Enable Inbound and Outbound UDP Ports 319 and 320 in Windows Firewall. These are used by the PTP protocol.
 
 When the configuration is ready:
 
@@ -33,9 +33,9 @@ It takes some time until the client and server have negotiated a sync. Checking 
 
 For more about Windows Time Service:
 
-- (Windows Time Service)[https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/how-the-windows-time-service-works]
-- (Service Tools and Settings)[https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config]
-- Registry keys and Firewall configs also described by Microsoft (here)[https://github.com/microsoft/W32Time/tree/master/Precision%20Time%20Protocol/Windows%20Configuration%20Helpers].
+- [Windows Time Service](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/how-the-windows-time-service-works)
+- [Service Tools and Settings](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config)
+- Registry keys and Firewall configs also described by Microsoft [here](https://github.com/microsoft/W32Time/tree/master/Precision%20Time%20Protocol/Windows%20Configuration%20Helpers).
 
 ### Configuration of a Server (Ptp Time Source)
 
