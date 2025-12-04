@@ -18,11 +18,14 @@ Arm CPUs often will not be accompanied by Nvidia GPUs. Non-Nvidia GPUs though se
 
 You'll see in few help patches we've added a warning: ⚠️Nvidia only⚠️ when they are using a rendering technique that is only supported on Nvidia cards.
 
+### VL.Fuse
+Same as VL.Stride, see above. Largely works but fails in areas where shaders have been written in a way to only work on Nvidia GPUs.
+
 ### VL.Audio
 Using the Resample [Audio.Utils] node will crash vvvv.
 
 ### Should work
-The following libraries do not yet have Arm support, but it seems the underlying libraries do. So it should be possible to get them working with Arm builds of vvvv with some effort:
+The following libraries do not yet have Arm support in vvvv, but it seems the underlying libraries do. So it should be possible to get them working with Arm builds of vvvv with some effort:
 - VL.CEF
 - VL.MediaPipe
 - VL.OpenCV
