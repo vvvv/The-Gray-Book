@@ -35,6 +35,7 @@ Description|Argument
 -|-
 The verbosity of the output. |`-v`, `--verbosity` + Trace \| Debug \| *Information* \| Warning \| Error \| Critical \| None
 Ignore VL compile errors (red nodes). |`--ignore-errors` + true \| *false*
+Ignore runtime errors (pink nodes). |`--ignore-unhandled-exceptions` + true \| *false*
 Choose where the exported program and files will be created. Default = %UserProfile%\Documents\vvvv\gamma\Exports\AppName|`--output-directory` + path to directory
 Choose an .ico file to be associated with the generated executable.|`--app-icon` path to the .ico file
 Choose how assets will be referenced in the exported application. See [Asset behavior](exporting.md#asset-behavior). |`--asset-behavior` valid values: RelativeToDocument \| *RelativeToOutput*
@@ -43,4 +44,5 @@ Choose the runtime identifier to build for. |`--rid` + *win-x64* \| win-x86 \| w
 Whether or not the build directory (OutputDirectory/src) should be cleaned before doing the export. |`--clean` *true* \| false
 
 For example to build a console app for Linux x64 run:
+
 `vvvvc.exe --rid linux-x64 --output-type Exe`
