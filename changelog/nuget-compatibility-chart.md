@@ -42,7 +42,7 @@ Package|Version|Command to get recommended version
 [VL.Devices.Kinect](https://github.com/vvvv/VL.Devices.Kinect) | >= 1.0.3 | `nuget install VL.Devices.Kinect`
 [VL.Devices.LeapOrion](https://github.com/vvvv/VL.Devices.LeapOrion) | >= 1.2.0 | `nuget install VL.Devices.LeapOrion`
 [VL.Devices.RealSense](https://github.com/vvvv/VL.Devices.RealSense) | 1.5.0 | `nuget install VL.Devices.RealSense -version 1.5.0`
-[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | >= 1.0 preview | `nuget install VL.Fuse -pre`
+[VL.Fuse](https://www.nuget.org/packages/VL.Fuse) | 1.0.2 | `nuget install VL.Fuse -version 1.0.2`
 [VL.Kairos](https://www.nuget.org/packages/VL.Kairos) | >= 1.0 preview | `nuget install VL.Kairos -version 1.1.8`
 [VL.Stride.Text3d](https://github.com/bj-rn/VL.Stride.Text3d) | >= 1.0.1 | `nuget install VL.Stride.Text3d`
 [VL.IO.TCP](https://www.nuget.org/packages/VL.IO.TCP) | <= 0.4.2 preview | `nuget install VL.IO.TCP -version 0.4.2-alpha`
