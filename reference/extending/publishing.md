@@ -249,3 +249,8 @@ You can now push to your `main` branch and trigger a new deployment of your plug
 Head over to the _Action_ section of your repo to monitor your worflow run in real time. If errors occur during the workflow run, they'll show up here.
 
 ![Workflow Run](/images/libraries/publishing_workflow_run_report.png)
+
+### Categorize the pack
+In order for your public pack on nuget.org to show up in the [package browser](http://vvvv.org/packs) make sure:
+- Your pack has a tag "VL"
+- You add your pack to the [list of curated libraries](https://github.com/vvvv/PublicContent/blob/master/Libraries.xml), which defines the categories used in the browser. Note: A NuGet can appear in multiple categories!
