@@ -46,15 +46,15 @@ A vl document can reference other .vl documents and managed .dll files.
 ### From Disk
 Here are 3 ways to reference local files:
 
-* Drop a .vl or .dll file onto a patch
-* Press <span class="keyseq"><kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>E</kbd></span> to select files via a file browser
-* Via menu:Document[Dependencies > Files > Add Existing...]
+* Press <span class="keyseq"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></span> to select files via a file browser
+* Via `Document > Dependencies > Files > Add Existing...`
+* Via `Document > Dependencies > Files > Add New`
 
 ![](../../images/libraries/vl-Dependencies-File.png)
 <center>Add existing File as dependency</center>
 
 #### Missing Files
-Files that are showing up in red cannot be found on disk. You can rightclick to remove ore replace their reference. 
+Files that are showing up in red cannot be found on disk. You can rightclick to remove or replace their reference. 
 
 #### Removing or Replacing Files
 You can rightclick a file reference to remove or replace it. Note that you can also rightclick to select multiple files in a row and then apply "Remove" to all of them at once.
