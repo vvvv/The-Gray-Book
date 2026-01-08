@@ -1,6 +1,6 @@
 # Libraries
 
-vvvv's functionality is structured into individual libraries, also known as NuGet packages. Not all of them are shipping with vvvv, but they can easily be installed. Most of them will be open-source and many of them are provided and maintained by your fellow vvvv users.
+vvvv's functionality is structured into individual libraries, also known as NuGet packages. Not all of them are shipping with vvvv, but they can easily be installed. Most of them are open-source and many of them are provided and maintained by your fellow vvvv users.
 
 To learn how to use nugets in vvvv please refer to the documentation on [Managing NuGets](../hde/managing-nugets.md) or watch the [HowTo Use NuGets](https://youtu.be/-U_kUQ3VDog) video.
 
