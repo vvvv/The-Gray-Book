@@ -26,23 +26,9 @@ In general the [Stride Documentation](https://doc.stride3d.net/latest/en/) is us
 * [Projection Mapping](projectionmapping.md)
 * [Graphics cards](3d/graphics-cards.md)
   
-### Additional libraries:
+### Additional libraries
 
-* NuGet: [VL.Fuse](https://www.nuget.org/packages/VL.Fuse/) is a collection of GPU tools and libraries to use with VL.Stride. Think: Distance Fields & Raymarching, Particles, Procedural Geometry, Textures and Materials, GPGPU. For details, see [The FUSE Lab](https://www.thefuselab.io/)
-* NuGet: [VL.CEF.Stride](https://www.nuget.org/packages/VL.CEF.Stride) is a HTML texture renderer
-* NuGet: [VL.PDFReader](https://www.nuget.org/packages/VL.PDFReader) to load PDF pages as textures
-* NuGet: [VL.Addons](https://www.nuget.org/packages/VL.Addons) for a wide range of additional TextureFX
-* NuGet: [VL.Alembic](https://www.nuget.org/packages/VL.Alembic/) for loading [Alembic](http://www.alembic.io) files
-* NuGet: [VL.Stride.Text3d](https://www.nuget.org/packages/VL.Stride.Text3d) for rendering extruded 3d text
-* NuGet: [VL.Stride.SDFToMesh](https://www.nuget.org/packages/VL.Stride.SDFToMesh) for converting an SDF function to a mesh
-* NuGet: [VL.IO.PLY](https://www.nuget.org/packages/VL.IO.PLY) for loading PLY pointcloud files
-* NuGet: [VL.IO.Teximp](https://www.nuget.org/packages/VL.Teximp) for texture IO and processing
-* NuGet: [VL.Assimp](https://www.nuget.org/packages/VL.Assimp) is an alternative 3d model loader for Stride
-* NuGet: [VL.OpenEXR](https://www.nuget.org/packages/VL.OpenEXR) for loading [OpenEXR](https://www.openexr.com/) image files
-* NuGet: [VL.Boids-GPU](https://www.nuget.org/packages/VL.Boids-GPU) Boids algorithm implemented Stride
-* NuGet: [VL.Radiosity](https://www.nuget.org/packages/VL.Radiosity) 2D Radiosity Shader
-* NuGet: [VL.OCIO](https://www.nuget.org/packages/VL.OCIO) Reads OpenColorIO (OCIO) config files and can apply a selected the color transformation to a texture. Especially helpful for displaying vvvv rendering on HDR displays with 10-bit colors or more.
-* NuGet: [VL.Stride.BezierPatch](https://www.nuget.org/packages/VL.Stride.BezierPatch) Set of nodes to create bezier surfaces.
+See the [3d Graphics Category](https://vvvv.org/packs/?c=3d%20Graphics) in the packs browser. 
 
 ### Useful tools
 * [Stride Shader Explorer](https://github.com/tebjan/Stride.ShaderExplorer) to browse available shaders to inherit from (requires also [Stride](https://stride3d.net/download/) to be installed)
