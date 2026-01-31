@@ -7,7 +7,7 @@ vvvv does not come with a built-in shader editor. Instead you can use any text e
 ## Syntax Highlighting
 For syntax highlighting you have to use an editor that supports HLSL syntax highlighting. Try one of these:
 
-* [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) is a light version of Visual Studio. Add the [Shader languages support for VS Code](https://marketplace.visualstudio.com/items?itemName=slevesque.shader) extension, assign `*.sdsl` files to HLSL syntax, and you get syntax highlighting and basic code completion.
+* [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) is a light version of Visual Studio. Add the [Stride SDSL Shader Tools](https://marketplace.visualstudio.com/items?itemName=tebjan.sdsl) extension, and you get syntax highlighting and code completion.
 * You can also use the [Sublime](https://www.sublimetext.com/) editor with the "HLSL Syntax" package.
 
 ## Error Reporting
