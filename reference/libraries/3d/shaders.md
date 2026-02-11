@@ -4,7 +4,7 @@ Shaders are written in [SDSL](https://doc.stride3d.net/4.0/en/manual/graphics/ef
 Here is a step by step guide to get you started:
 
 ## Prepare an editor
-vvvv does not come with a build-in shader editor. See [Editing Shaders](editing-shaders.md) for different options. 
+vvvv does not come with a built-in shader editor. We recommend **Visual Studio Code** with the **Stride Shader Tools** extension for the best experience. See [Editing Shaders](editing-shaders.md) for setup and other options. 
 
 ## Start from a Template
 ![](../../../images/libraries/3d/shaderwizard.png)
@@ -72,11 +72,13 @@ shader MyFx_TextureFX : FilterBase
 ```
 
 ### Inheritance
-The main purpose of inherance is re-using existing shader code. You can think of it like importing or including the code of another shader into your own shader. 
+The main purpose of inheritance is re-using existing shader code. You can think of it like importing or including the code of another shader into your own shader.
 
 For examples, see [Inheritance](https://doc.stride3d.net/latest/en/manual/graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.html#example-code-inheritance) in the Stride documentation.
 
-To understand the shader inheritance hierachy better, you can use the [Stride.ShaderExplorer](../graphics-3d.md#useful-tools) to get an overview and browse the shaders.
+To understand the shader inheritance hierarchy better, you can:
+* Use the **VS Code Stride Shader Tools extension** which shows the inheritance tree in a sidebar panel while you edit (see [Editing Shaders](editing-shaders.md))
+* Use the standalone [Stride.ShaderExplorer](../graphics-3d.md#useful-tools) tool to browse and export shader hierarchies
 
 ### Composition
 Compostion allows a shader A to use other shader B like a variable and call functions of it. The main feature is, that the other shaders C or D can be used as composition if they inhertit from the shader class B, that is expected as composition variable in shader A. The fact that you can use different implementations (shaders that inherit from B) as the composition, allows for polymorphism known as __interfaces__ in OOP languages.
