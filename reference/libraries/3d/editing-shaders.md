@@ -6,7 +6,7 @@ vvvv does not come with a built-in shader editor. Instead you can use any text e
 
 ## Recommended: Visual Studio Code with Stride Shader Tools
 
-[Visual Studio Code](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/) with the **[Stride Shader Tools](https://marketplace.visualstudio.com/items?itemName=tebjan.sdsl)** extension ([OpenVSX](https://open-vsx.org/extension/tebjan/sdsl)) provides:
+[Visual Studio Code](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/) with the **[Stride Shader Tools](https://marketplace.visualstudio.com/items?itemName=stride.sdsl)** extension ([OpenVSX](https://open-vsx.org/extension/tebjan/sdsl)) provides:
 
 * Syntax highlighting for SDSL
 * Context-aware code completion (inherited members, streams, semantics, compositions)
