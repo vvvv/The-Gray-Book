@@ -8,7 +8,7 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 
 ## Courses
 - [8 session vvvv beginner class starting April 27](https://thenodeinstitute.org/courses/vvvv-beginner-class-summer-2026)
-- [3 session vvvv intermediate class starting June 29](https://thenodeinstitute.org/courses/vvvv-intermediate-foundations-summer-2026)
+- [4 session vvvv intermediate class starting June 29](https://thenodeinstitute.org/courses/vvvv-intermediate-foundations-summer-2026)
 - [All vvvv courses](https://thenodeinstitute.org/learning-vvvv/) hosted by The NODE Institute.
 
 ## Tutorials 
