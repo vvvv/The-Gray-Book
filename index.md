@@ -7,7 +7,9 @@ _disableBreadcrumb: true
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Courses
-- [Upcoming and past vvvv courses](https://thenodeinstitute.org/courses/#uagb-tabs__tab1) hosted by The NODE Institute.
+- [8 session vvvv beginner class starting April 27](https://thenodeinstitute.org/courses/vvvv-beginner-class-summer-2026)
+- [3 session vvvv intermediate class starting June 29](https://thenodeinstitute.org/courses/vvvv-intermediate-foundations-summer-2026)
+- [All vvvv courses](https://thenodeinstitute.org/learning-vvvv/) hosted by The NODE Institute.
 
 ## Tutorials 
 - [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
