@@ -26,8 +26,6 @@ Using the Resample [Audio.Utils] node will crash vvvv.
 
 ### Should work
 The following libraries do not yet have Arm support in vvvv, but it seems the underlying libraries do. So it should be possible to get them working with Arm builds of vvvv with some effort:
-- VL.CEF
-- VL.MediaPipe
 - VL.OpenCV
 - VL.IO.NDI
 
