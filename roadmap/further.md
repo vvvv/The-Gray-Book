@@ -1,9 +1,8 @@
 # Further...
 
 Further on our agenda, incomplete and in no particular order:
-* Integrating additional editors (Node Inspektor, Timelines, State machines, Curves, Meshes, ..)
+* Integrating additional editors (Timelines, State machines, Curves, Meshes, ..)
 * Projection tools (blending, warping, softedge,...)
-* Package management (create, deploy packages)
 * Run editor on osx/linux
 * Deploy to Android/iOS, UWP, Meadow
 * Version control system support
