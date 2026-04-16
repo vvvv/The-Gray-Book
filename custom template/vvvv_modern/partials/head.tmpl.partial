@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="{{_rel}}public/main.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"/>
       <link rel="stylesheet" href="{{_rel}}public/customDocSearch.css">
-      <link rel="stylesheet" href="https://vvvv.org/scss/_header.min.css">
+      <link rel="stylesheet" href="https://vvvv.org/scss/_header.css">
 
       <meta name="docfx:navrel" content="{{_navRel}}">
       <meta name="docfx:tocrel" content="{{_tocRel}}">
