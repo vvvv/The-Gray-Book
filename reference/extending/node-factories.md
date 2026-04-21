@@ -6,6 +6,16 @@ Factories allow you to describe nodes dynamically via an API. That way you also 
 When done, please select the factory in your VL document as a dependency, like so:
 ![grafik](https://user-images.githubusercontent.com/575557/179545040-f7dcc439-8edf-4b6e-ac1c-21dfe42a4c17.png)
 
+## Basic Components
+For listing nodes in the NodeBrowser:
+- [IVLNodeDescriptionFactory](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/IVLNodeDescriptionFactory.cs)
+- [IVLNodeDescription](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/IVLNodeDescription.cs)
+- [IVLPinDescription](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/IVLPinDescription.cs)
+- [NodeBuilding helpers](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/NodeBuilding.cs)
+
+For execution:
+- [IVLNode](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/IVLNode.cs), [FactoryBasedVLNode](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/FactoryBasedVLNode.cs)
+- [IVLPin](https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Core/src/NodeFactory/IVLPin.cs)
 
 For examples, see: 
 * https://github.com/vvvv/VL.StandardLibs/blob/main/VL.Video/src/Initialization.cs
