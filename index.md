@@ -7,9 +7,7 @@ _disableBreadcrumb: true
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Courses
-- [8 session vvvv beginner class](https://thenodeinstitute.org/courses/vvvv-beginner-class-summer-2026) starting April 27
 - [4 session vvvv intermediate class](https://thenodeinstitute.org/courses/vvvv-intermediate-foundations-summer-2026) starting June 29
-- [Interactive Particle Systems](https://pixel-forest.com/workshops/interactive-particle-systems-in-vvvv-with-rosi-grillmair/) in Berlin May 9 and 10 
 - [Interactive Sketches with vvvv](https://thenodeinstitute.org/courses/interactive-sketches-with-vvvv) - a self-paced offline course
 - [All vvvv courses](https://thenodeinstitute.org/learning-vvvv/) hosted by The NODE Institute
 
