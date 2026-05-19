@@ -1,6 +1,10 @@
 # Exporting Applications
 
-vvvv allows you to export a patch into an executable, standalone program. There are two ways to do this:
+vvvv allows you to export a patch into an executable, standalone program. As of 7.x the following exports are supported:
+- Windows: Desktop and Console apps
+- Linux, MacOS: Console apps
+
+There are two ways to do this:
 - Using the commandline compiler `vvvvc.exe` 
 - Using the Application Exporter UI included with vvvv: Open via `Quad > Export...` or shortcut <span class="keyseq"><kbd>F10</kbd></span>.
 
