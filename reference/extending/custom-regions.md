@@ -48,7 +48,7 @@ For details see: https://github.com/vvvv/VL-Language/issues/5
 The basic idea here is that the region is built in a way that it allows for process nodes to be placed inside.
 
 Regions of that flavor can 
-* instanciate the user patch and 
+* instantiate the user patch and 
 * update the patch.
 
 Typically, those regions manage only one instance of the users’ patch. However, you are free to manage as many instances of the patch as you wish.
