@@ -16,6 +16,7 @@
 ## [Overview](hde/overview.md)
 ## [Project Structure](hde/project_structure.md)
 ## [Navigating a Project](hde/navigating_a_project.md)
+## [Packman](hde/packman.md)
 ## [The NodeBrowser](hde/the_nodebrowser.md)
 ## [The ChannelBrowser](hde/the_channelbrowser.md)
 ### [Presets](hde/presets.md)
