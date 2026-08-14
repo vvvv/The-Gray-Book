@@ -7,7 +7,7 @@ _disableBreadcrumb: true
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Courses
-- [All vvvv courses](https://thenodeinstitute.org/learning-vvvv/) hosted by The NODE Institute
+- [vvvv Winter 2026/2027 courses](https://thenodeinstitute.org/learning-vvvv/?v=7d0db380a5b9#winter) hosted by The NODE Institute
 
 ## Tutorials 
 - [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
