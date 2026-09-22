@@ -1,6 +1,6 @@
 # Synchronizing machines to the High Precision Clock
 
-Starting from Windows10 (build) window's System Time can be synchronized to a High Precision Time Sourse that uses [PTP](https://de.wikipedia.org/wiki/Precision_Time_Protocol) (Precision Time Protocol). PTP is more precise than NTP (Network Time Protocol), which is used in Windows by default sync its time.
+Starting from Windows10 (build) window's System Time can be synchronized to a High Precision Time Source that uses [PTP](https://de.wikipedia.org/wiki/Precision_Time_Protocol) (Precision Time Protocol). PTP is more precise than NTP (Network Time Protocol), which is used in Windows by default to sync its time.
 
 ## Overview
 
@@ -46,7 +46,3 @@ These articles describe how to setup and run PTP Service on Linux:
 - [Nanosecond accurate PTP server](https://austinsnerdythings.com/2025/02/18/nanosecond-accurate-ptp-server-grandmaster-and-client-tutorial-for-raspberry-pi/)
 - [Windows Subsystem for Linux for testing Windows 10 PTP Client](https://techcommunity.microsoft.com/blog/networkingblog/windows-subsystem-for-linux-for-testing-windows-10-ptp-client/389181)
 - Multicast / Unicast [PTPd Config examples](https://github.com/Microsoft/W32Time/tree/master/Precision%20Time%20Protocol/PTPd%20Configuration%20Examples)
-
-## Unicast and Multicast scenarios
-
-...
