@@ -7,7 +7,20 @@ _disableBreadcrumb: true
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Courses
-- [vvvv Winter 2026/2027 courses](https://thenodeinstitute.org/learning-vvvv/?v=7d0db380a5b9#winter) hosted by The NODE Institute
+### Beginners
+- From October 19th: [Part I: Playful Patching in vvvv gamma](https://thenodeinstitute.org/courses/vvvv-beginner-class-part1-winter-2026?utm_source=vvvv&utm_medium=blog) - 8 sessions 
+- From January 11th: [Part II: Foundations of VL Development ](https://thenodeinstitute.org/courses/vvvv-beginner-class-part2-winter-2026?utm_source=vvvv&utm_medium=blog) - 4 sessions
+
+### Intermediate
+- 27 Oct + 3 Nov 2026: [Advanced TextureFX Techniques](https://thenodeinstitute.org/courses/advanced-texturefx-techniques-in-vvvv/?v=5f02f0889301)
+- 10 + 17 Nov 2026: [Applied 2D & 3D Math for Creative Coders](https://thenodeinstitute.org/courses/applied-2d-3d-math-for-creative-coders/?v=5f02f0889301) 
+- 24 Nov 2026: [Driving Particle Systems from Geospatial Data](https://thenodeinstitute.org/courses/driving-particle-systems-from-geospatial-data-in-vvvv/?v=5f02f0889301)
+- 8 + 15 Dec 2026: [Pixels in Space: Projection Mapping & Immersive Setups](https://thenodeinstitute.org/courses/pixels-in-space-projection-mapping-immersive-setups-in-vvvv/?v=5f02f0889301)
+- 12 + 19 + 26 Jan 2027: [Let’s Build an App Together: Development Patterns for Real Projects](https://thenodeinstitute.org/courses/lets-build-an-app-together-development-patterns-for-real-projects-in-vvvv/?v=5f02f0889301)
+- 2 Feb 2027: [Scaling vvvv Projects: Team Workflows & Git Versioning](https://thenodeinstitute.org/courses/scaling-vvvv-projects-team-workflows-git-versioning/?v=5f02f0889301)
+- 9 Feb 2027: [Observe and Monitor your Multi-Client vvvv Installations](https://thenodeinstitute.org/courses/observe-and-monitor-your-multi-client-vvvv-installations/?v=5f02f0889301)
+  
+- [Get the whole bundle 25% off](https://thenodeinstitute.org/courses/vvvv-intermediates-bundle-winter-2026-27/)
 
 ## Tutorials 
 - [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
