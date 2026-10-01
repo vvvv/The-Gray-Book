@@ -20,7 +20,7 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 - 2 Feb 2027: [Scaling vvvv Projects: Team Workflows & Git Versioning](https://thenodeinstitute.org/courses/scaling-vvvv-projects-team-workflows-git-versioning/?v=5f02f0889301)
 - 9 Feb 2027: [Observe and Monitor your Multi-Client vvvv Installations](https://thenodeinstitute.org/courses/observe-and-monitor-your-multi-client-vvvv-installations/?v=5f02f0889301)
   
-- [Get the whole bundle 25% off](https://thenodeinstitute.org/courses/vvvv-intermediates-bundle-winter-2026-27/)
+[Get the whole bundle 25% off](https://thenodeinstitute.org/courses/vvvv-intermediates-bundle-winter-2026-27/)
 
 ## Tutorials 
 - [vvvvTv](https://www.youtube.com/vvvvtv42) Official youtube channel with Tutorials and HowTo videos
