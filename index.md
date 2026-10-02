@@ -12,9 +12,9 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 - From January 11th: [Part II: Foundations of VL Development ](https://thenodeinstitute.org/courses/vvvv-beginner-class-part2-winter-2026?utm_source=vvvv&utm_medium=blog) - 4 sessions
 
 ### Intermediate
-- 27 Oct + 3 Nov 2026: [Advanced TextureFX Techniques](https://thenodeinstitute.org/courses/advanced-texturefx-techniques-in-vvvv/?v=5f02f0889301)
 - 10 + 17 Nov 2026: [Applied 2D & 3D Math for Creative Coders](https://thenodeinstitute.org/courses/applied-2d-3d-math-for-creative-coders/?v=5f02f0889301) 
 - 24 Nov 2026: [Driving Particle Systems from Geospatial Data](https://thenodeinstitute.org/courses/driving-particle-systems-from-geospatial-data-in-vvvv/?v=5f02f0889301)
+- 1 + 2 Dec 2026: [Advanced TextureFX Techniques](https://thenodeinstitute.org/courses/advanced-texturefx-techniques-in-vvvv/?v=5f02f0889301)
 - 8 + 15 Dec 2026: [Pixels in Space: Projection Mapping & Immersive Setups](https://thenodeinstitute.org/courses/pixels-in-space-projection-mapping-immersive-setups-in-vvvv/?v=5f02f0889301)
 - 12 + 19 + 26 Jan 2027: [Let’s Build an App Together: Development Patterns for Real Projects](https://thenodeinstitute.org/courses/lets-build-an-app-together-development-patterns-for-real-projects-in-vvvv/?v=5f02f0889301)
 - 2 Feb 2027: [Scaling vvvv Projects: Team Workflows & Git Versioning](https://thenodeinstitute.org/courses/scaling-vvvv-projects-team-workflows-git-versioning/?v=5f02f0889301)
