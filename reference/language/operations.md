@@ -32,12 +32,29 @@ Member operations are either created via the [Patch Explorer](../hde/patch-explo
 
 Use the elements context menu to assign it to one of the available operations or create a new one. 
 
+![Assignment Menu](../../images/reference/language/assignmentmenu.png)
+
 Often it makes sense to start assignments on Input or Output pins. Note that assignments auto-propagate through the whole patch. They only stop at Pads or Process Nodes, which act kind of like bridges between the operations in that they store values written by one operation and have them available for retrieval by an other operation. 
 
 There are cases though where no Input or Output pin is part of an operation. In that case consider setting an assignment onto a link or Operation Node.
 
 > [!NOTE]
 > Process Nodes cannot be assigned to an operation. Instead you'll see that their Pins can assign to different operations, meaning that different parts (operations) of a Process Node can be executed on different operations in the containing patch. 
+
+### Auto-propagation of assignments
+
+If you place a Process node inside another (or inside a Class or Record) here is what happens automatically:
+
+- InnerProcessNode.Create() is assigned to Create() of the calling patch
+- InnerProcessNode.Dispose() is assigned to Dispose() of the calling patch
+- InnerProcessNode.Update() is assigned to Update() of the calling patch as long as its inputs are not connected!
+- A custom InnerProcessNode.FooBar() is **not** assigned to FooBar() of the calling patch!
+
+If you want one of your inner Process nodes' custom operations to be auto-assigned to the outer Update() operation you can opt in to this like so:
+
+![Default Assignment](../../images/reference/language/defaultassignment.png)
+
+In the patch explorer of your inner Process nodes definition you need to Ctrl + click on the operation to mark it as a "default operation". Like this the operation will be auto-assigned to the outer Update() operation as long as its inputs are not connected!
 
 ### Clearing Operation assignments
 
