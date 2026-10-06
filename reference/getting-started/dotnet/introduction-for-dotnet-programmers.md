@@ -4,6 +4,7 @@ VL is a visual programming language for [.NET](https://en.wikipedia.org/wiki/.NE
 
 - Versions 5.x of vvvv are using .NET6
 - Versions 6.x and 7.x of vvvv are using .NET8
+- Versions 8.x of vvvv is using .NET10
 
 With direct access to all of .NETs libraries you can basically use it as just another .NET language like C# or F#. But since most of those libraries were not created with dataflow in mind, we've curated a library for you that is much more comfortable to use and is the default referenced library when creating a new VL document.
 

@@ -21,6 +21,11 @@ body > main {
     body > main > .toc-offcanvas{
         top: 8rem !important;
     }
+
+    body > main > .content > article [id],
+    body[data-layout="landing"] > main > .content > article [id] {
+        scroll-margin-top: 8.5rem;
+    }
 }
 
 kbd
