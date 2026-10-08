@@ -100,14 +100,19 @@ Next to the application directory you'll also find a `\src` directory. This is a
 > .NET developers may find this interesting though, as it contains a completely valid c# solution of the exported project that can be opened, viewed and modified with Visual Studio.
 
 ## Dependencies
-If your application is referencing VL.Stride, make sure the target PC also has the following dependencies installed:
+By default, apps exported with vvvv require the target system to have a .NET runtime installed in the following versions:
+- vvvv 8.x: [.NET10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
+- vvvv 6.x and 7.x: [.NET8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- vvvv 5.x: [.NET6 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-* Microsoft Visual C++ Redistributables: [64bit](https://aka.ms/vs/17/release/vc_redist.x64.exe) or [32bit](https://aka.ms/vs/17/release/vc_redist.x86.exe)
-* [.NET8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (For FileTexture and FileModel nodes to work)
+In addition: Apps referencing VL.Stride and using the FileTexture or FileModel nodes, also require the following:
+- Microsoft Visual C++ Redistributables: [64bit](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+- vvvv 8.x: [.NET10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
+- vvvv 6.x and 7.x: [.NET8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- vvvv 5.x: [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
 
-### For versions prior to vvvv 5.0
-For applications exported with this older version of vvvv, you'll also have to install:
-* [MSBuild Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)
+> [!NOTE]
+> Since your app can also reference any other [pack](https://vvvv.org/packs), additional dependencies may be required to be installed on the target system. Info about which exact dependencies are required should be listed in the packs readme.
 
 ## Advanced build configuration
 The build process can be customized in many details. Next to your main .vl file, place a .props file with the same name. This is actually an .xml file which you can configure to your needs using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-concepts?view=vs-2022) syntax.
