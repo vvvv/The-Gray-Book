@@ -1,12 +1,12 @@
 # Boygrouping
 
-Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC but have any number of PCs connected that render outputs of individual views [n'sync](https://en.wikipedia.org/wiki/NSYNC).
+Debuted in 2001 with [vvvv beta](https://beta.vvvv.org/using-vvvv/boygrouping/),  Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC and have any number of PCs connected that render outputs of individual views [n'sync](https://en.wikipedia.org/wiki/NSYNC).
 
 Like this, vvvv can drive projections or screens of any size with realtime or video content while the app is being live-edited.
 
 ![](../../images/reference/hde/boygroup.png)
 
-arge led screens, example dataland, Combine this with the stereoscopic rendering feature and building systems like a CAVE or  dome of any size with realtime content.
+Think large-scale, interactive and immersive rooms, like e.g. in [Dataland](https://dataland.art/). Combine boygrouping with the stereoscopic rendering feature and building applications for a [CAVE](https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment) is not more complicated than for a single screen.
 
 ## What it does
 
@@ -27,7 +27,7 @@ The server is your main PC. Here you start vvvv with the "bind" argument to spec
 
 The "working-directory" argument is needed so that vvvv knows which .vl documents to synchronize. Only .vl documents residing in the specified working-directory, will be transferred to the clients!
 
-    --working-directory path/to/working-dir
+    --working-directory path\to\working-dir
 
 Examples:
 
@@ -38,11 +38,11 @@ Examples:
 
 On the render PCs, start vvvv with the "server" argument to specify which server to connect to. If no port is given, it defaults to 5000:
 
-  --server IP:Port
+    --server IP:Port
 
 The "working-directory" argument is also required. The specified directory is the one that vvvv resolves relative paths to. 
 
-    --working-directory path/to/working-dir
+    --working-directory path\to\working-dir
 
 Any assets referenced in a patch need to be available in that path! For mirroring assets, [see below](#mirroring-assets).
 
