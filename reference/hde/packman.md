@@ -11,6 +11,7 @@ The package manager covers two aspects:
 In this section you get an overview of all referenced packs, files and .NET Framework assemblies. 
 
 Click the "Browse" button in the Packs section to switch to the [package browser](#browsing-packs):
+
 ![](../../images/hde/addpacks.png)
 
 Click the "Add..." button in the Files section to add a reference to either:
@@ -23,10 +24,10 @@ Click the "Add..." button in the Files section to add a reference to either:
 ### .NET Framework Assemblies
 If you need to reference an assembly of a .NET Framework, then always prefer that over referencing the same as a .NET NuGet reference.
 
-what about built-in?
-
 ### Node Factories
-If any of the pack or file references has a Node Factory, it will also show up, and can be configured (enabled, forwarded) here.
+If any of the pack or file references has a Node Factory, it will also show up in a "Node Factories" section. For every factory you can then choose:
+- Add/Remove: To see, or not see the nodes of the factory in this document
+- Forward: To see, or not see the nodes of the factory in a document referencing this document
 
 ## Browsing packs
 
