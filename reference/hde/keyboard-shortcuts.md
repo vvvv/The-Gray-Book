@@ -26,9 +26,10 @@ Description|Action
 -|-
 About|<span class="keyseq"><kbd>Shift</kbd><kbd>F1</kbd></span>
 Application Exporter|<span class="keyseq"><kbd>F10</kbd></span>
+Debug Views|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F2</kbd></span>
+Packman|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F3</kbd></span>
 Channel Browser|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F4</kbd></span>
 Console|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F5</kbd></span>
-Debug Views|<span class="keyseq"><kbd>Ctrl</kbd><kbd>F2</kbd></span>
 Help Browser|<span class="keyseq"><kbd>F1</kbd></span>
 Inspector|<span class="keyseq"><kbd>Ctrl</kbd><kbd>I</kbd></span>
 Key & Mouse Display|<span class="keyseq"><kbd>Shift</kbd><kbd>F2</kbd></span>

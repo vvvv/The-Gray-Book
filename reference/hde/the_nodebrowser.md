@@ -96,12 +96,33 @@ The language primitives are written in _italic_:
 
 Many of the primitives can be given a name directly after choosing to create them via the NodeBrowser. For Pins and Pads it also works the other way round: type a name into the NodeBrowser and then click Pin/Pad to create the respective element with already the desired name set.
 
-## Available Nugets
-Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
+## Referencing packs
 
-<img src="../../images/hde/vl-Nodebrowser-Nugets.png" height="460">
+All [available packs](https://vvvv.org/packs/) can directly be referenced via the Node Browser, without having to go via [Packman](packman.md).
 
-If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies.
+Type the name of any pack in the nodebrowser, select it and you're done:
+
+<video width=100% controls autoplay>
+    <source src="../../images/reference/hde/packman-nfc.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+</video>
+
+What does this do exactly? Two things: 
+- Downloads the preferred version (see below) of the pack
+- References this version of the pack with your active VL document
+
+Want to remove the pack again? Same trick:
+
+<video width=100% controls autoplay>
+    <source src="../../images/reference/hde/packman-nfc2.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+</video>
+
+So when do you now still need [Packman](packman.md)? 
+- To search for packs
+- To get more information about a VL pack
+- To adjust versions for referenced packs
+- To search for and reference .NET NuGets (ie. packs that are not specifically made for VL) 
 
 ## Nodes that only differ by Signature
 We typically distinguish nodes by Name, Version or Category.

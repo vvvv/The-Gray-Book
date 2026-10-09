@@ -22,15 +22,17 @@ If you're familiar with visual creative coding environments, like:
 
 ... then the following could be interesting for you:
 
-### Vast, modular, open-source library of nodes
-Browse the [Library](../../libraries/overview.md) section to get an overview of the availability of a vast range of different libraries for vvvv, most of which are open-source (some not yet, but only for organisational reasons). Apart from the [VL.CoreLib](../../libraries/corelib.md) the three biggest to date are:
+### The Node Library
+
+vvvv is built in a very modular way. The initial download is only about 100mb (as of vvvv 8.0). Any additional functionality you want to use can be installed at the click of a button via the built-in [package manager](/reference/hde/packman.md). There is also this [online package browser](https://vvvv.org/packs) to give you an idea of what's available before even installing vvvv. 
+
+Almost all libraries are open-source, including all of the core libraries, like:
 - VL.Stride: for 3d rendering, shader programming, VR,... based on [Stride](http://stride3d.net)
 - VL.Skia: for 2d rendering, vector graphics export,... based on [Skia](https://skia.org)
 - [VL.OpenCV](https://www.nuget.org/packages/VL.OpenCV): for computer vision,... based on [OpenCV](http://opencv.org)
 - [VL.Fuse](https://www.nuget.org/packages/VL.Fuse): a collection of GPU tools and libraries to use with VL.Stride
-- [VL.Elementa](https://www.nuget.org/packages/VL.Elementa): a UI widget library for VL.Skia  
 
-Further there is a big focus on supporting loads of [Devices](https://thegraybook.vvvv.org/reference/libraries/devices.html) and [Protocols](https://thegraybook.vvvv.org/reference/libraries/io.html) out of the box.
+Further there is a big focus on supporting loads of [Devices](https://vvvv.org/packs/?c=Devices) and [Protocols](https://vvvv.org/packs/?c=IO) out of the box.
 
 ### Export Windows applications
 Any program you build with vvvv can be [exported](../../hde/exporting.md) as a proper Windows application. Other platforms are planned. 
