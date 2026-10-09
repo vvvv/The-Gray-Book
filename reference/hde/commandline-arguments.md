@@ -45,4 +45,4 @@ Whether or not the build directory (OutputDirectory/src) should be cleaned befor
 
 For example to build a console app for Linux x64 run:
 
-`vvvvc.exe --rid linux-x64 --output-type Exe`
+    vvvvc.exe --rid linux-x64 --output-type Exe

@@ -22,9 +22,11 @@ Click the "Add..." button in the Files section to add a reference to either:
 ![](../../images/hde/addfiles.png)
 
 ### .NET Framework Assemblies
+
+#### .NET Framework Assemblies
 If you need to reference an assembly of a .NET Framework, then always prefer that over referencing the same as a .NET NuGet reference.
 
-### Node Factories
+#### Node Factories
 If any of the pack or file references has a Node Factory, it will also show up in a "Node Factories" section. For every factory you can then choose:
 - Add/Remove: To see, or not see the nodes of the factory in this document
 - Forward: To see, or not see the nodes of the factory in a document referencing this document
