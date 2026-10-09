@@ -66,6 +66,42 @@ Generally this option is the default for packs that have the "Built-In" tag, as 
 
 The other situation where this is useful, is larger projects with multiple VL documents that reference the same pack. In such scenarios this feature is half of what will allow you to centrally manage the version of packs for multiple documents. The other half of the feature is still work in progress, see "What's missing" below.
 
+## Custom NuGet sources
+[nuget.org](https://nuget.org) is only the default source for NuGets. For in-house development you may want to have your own NuGet feed that serves private packs in addition to the public ones. 
+
+There are 2 ways to specify custom NuGet sources:
+
+### Via nuget.config
+
+Use a [nuget.config](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file) file, placed next to your main .vl document. 
+
+When opening a .vl document, vvvv will look for a nuget.config file in the same folder or one of its ancestors. 
+
+For example, to access a private feed hosted on github, a config like this is can be used:
+
+```xml
+<configuration>
+  <packageSources>
+    <add key="MyPrivateNuGetFeed" value="https://nuget.pkg.github.com/GITHUB_USERNAME/index.json" />
+  </packageSources>
+  <packageSourceCredentials>
+    <MyPrivateNuGetFeed>
+      <add key="Username" value="<GITHUB_USERNAME>" />
+      <add key="ClearTextPassword" value="<TOKEN>" />
+    </MyPrivateNuGetFeed>
+  </packageSourceCredentials>
+</configuration>
+```
+
+For alternatives to using "ClearTextPassword", see the [docs for packageSourceCredentials](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials)!
+
+### Via commandline argument
+Specify it as a commandline argument like this:
+
+  vvvv.exe --package-repositories http://mynugetsource.com
+  
+But beware, this only works for feeds that don't require credentials to access them!
+
 ## Vulnerable packs
 
 nuget.org (the default package repository vvvv gets packs from) maintains a list of packs with [known vulnerabilities](https://learn.microsoft.com/en-us/nuget/api/vulnerability-info) present in individual packs.
