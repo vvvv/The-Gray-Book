@@ -207,7 +207,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@main
     
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
