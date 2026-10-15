@@ -8,7 +8,7 @@ If you're new to vvvv, please start reading in the [Getting Started](reference/g
 
 ## Courses
 ### Beginners
-- From October 19th: [Part I: Playful Patching in vvvv gamma](https://thenodeinstitute.org/courses/vvvv-beginner-class-part1-winter-2026?utm_source=vvvv&utm_medium=blog) - 8 sessions 
+- From November 16th: [Part I: Playful Patching in vvvv gamma](https://thenodeinstitute.org/courses/vvvv-beginner-class-part1-winter-2026?utm_source=vvvv&utm_medium=blog) - 8 sessions 
 - From January 11th: [Part II: Foundations of VL Development ](https://thenodeinstitute.org/courses/vvvv-beginner-class-part2-winter-2026?utm_source=vvvv&utm_medium=blog) - 4 sessions
 
 ### Intermediate
