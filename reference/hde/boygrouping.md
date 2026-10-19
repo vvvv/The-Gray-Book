@@ -1,6 +1,6 @@
 # Boygrouping
 
-Debuted in 2001 with [vvvv beta](https://beta.vvvv.org/using-vvvv/boygrouping/),  Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC and have any number of PCs connected that render outputs of individual views [n'sync](https://en.wikipedia.org/wiki/NSYNC).
+Debuted in 2001 with [vvvv beta](https://beta.vvvv.org/using-vvvv/boygrouping/),  Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC and have any number of PCs connected that render individual views of the same scene [n'sync](https://en.wikipedia.org/wiki/NSYNC).
 
 Like this, vvvv can drive projections or screens of any size with realtime or video content while the app is being live-edited.
 
@@ -14,7 +14,7 @@ Primarily, boygrouping synchronizes your projects patches (ie. the source code),
 
 This also includes any [pack](https://vvvv.org/packs) referenced in patches. Assuming the clients have internet access just like the server, they will automatically download all packs as needed.
 
-In addition to source code changes, Pausing [F6], Stepping [F7], Stopping [F8], Starting [F5] or Restarting [F9] the app on the server will also execute those commands on the clients. 
+In addition to source code changes, Pausing [F6], Stepping [F7], Stopping [F8], Starting [F5] or Restarting [F9] the app on the server will also execute those commands on the clients. And when you close the server vvvv instance, also all connected client instances are closing.
 
 ## Usage
 In order to run a boygroup, you need to start vvvv with the following commandline arguments:
@@ -33,6 +33,12 @@ Examples:
 
     --bind 192.168.0.10 --working-directory C:\MyProject
     --bind 192.168.0.10:34556 --working-directory C:\MyProject
+
+You can verify the command has taken effect when you see the blue boygrouping icon in the top right corner of vvvv's window:
+
+![](../../images/reference/hde/boygroupservericon.png)
+
+The number in the icon shows how many clients there are currently connected. If you see a red "0" it means that the binding address is not available. Hovering the icon shows additional details like a list of all connected clients IPs.
 
 ### Clients
 
@@ -55,6 +61,12 @@ Examples:
 >- The working directory does not have to be the same on Server and Clients!
 >- The order in which you start server and clients, does not matter: The server is always listening for new connections and clients periodically try to connect to their specified server.
 
+You can verify the command has taken effect when you see the blue boygrouping icon in the top right corner of vvvv's window:
+
+![](../../images/reference/hde/boygroupclienticon.png)
+
+If you see a blue circle, the client is connected, if the circle is orange, the connection to the server failed. Hovering the icon shows additional details.
+
 ### Status nodes
 
 The `BoygroupServerStatus` node returns:
@@ -62,6 +74,7 @@ The `BoygroupServerStatus` node returns:
 - Connected Clients: currently connected clients
 - All Clients: a history of connected clients
 - Working Directory
+- . **bind adress**
 
 ![](../../images/reference/hde/boygroupserverstatus.png)
 
