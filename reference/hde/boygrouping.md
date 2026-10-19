@@ -72,9 +72,9 @@ If you see a blue circle, the client is connected, if the circle is orange, the 
 The `BoygroupServerStatus` node returns:
 - Is Server
 - Connected Clients: currently connected clients
-- All Clients: a history of connected clients
+- All Clients: a history of connected clients in the current session
 - Working Directory
-- . **bind adress**
+- Binding Address
 
 ![](../../images/reference/hde/boygroupserverstatus.png)
 
