@@ -105,7 +105,7 @@ In case you want to apply such local change you made on a single client back to 
 
 This transfers the clients' local changes back to the server which subsequently distributes it to all other clients.
 
-### Licensing
+## Licensing
 
 Every client PC dancing along in a vvvv boygroup needs a device license, in addition to the developers licenses. You may still eventually turn to running your app as an [export](exporting.md) but at any period of time the boygrouping feature is in use, it needs to be covered by a device license per client PC. Note that for your financial convenience we offer [monthly](https://store.vvvv.org/products/vvvv-gamma-device-license-monthly) or [annual](https://store.vvvv.org/products/vvvv-gamma-device-license-annual) device licenses.
 
