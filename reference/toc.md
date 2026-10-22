@@ -26,6 +26,7 @@
 ### [Build Result](hde/debugging-buildresult.md)
 ### [App Health](hde/debugging-apphealth.md)
 ### [Log](hde/debugging-log.md)
+## [Boygrouping](hde/boygrouping.md)
 ## [Extensions](hde/extensions.md)
 ## [Managing NuGets](hde/managing-nugets.md)
 ## [Show & Tell](hde/showandtell.md)

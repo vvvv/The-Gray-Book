@@ -1,5 +1,7 @@
 # Boygrouping
 
+Available for testing in **[vvvv gamma 8.0 preview builds](/download)**!
+
 Debuted in 2001 with [vvvv beta](https://beta.vvvv.org/using-vvvv/boygrouping/),  Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC and have any number of PCs connected that render individual views of the same scene [n'sync](https://en.wikipedia.org/wiki/NSYNC).
 
 Like this, vvvv can drive projections or screens of any size with realtime or video content while the app is being live-edited.
@@ -23,16 +25,16 @@ In order to run a boygroup, you need to start vvvv with the following commandlin
 
 The server is your main PC. Here you start vvvv with the "bind" argument to specify which IP to run the server on. If no port is given, it defaults to 5000:
 
-    --bind IP:Port 
+``  --bind IP:Port`` 
 
 The "working-directory" argument is needed so that vvvv knows which .vl documents to synchronize. Only .vl documents residing in the specified working-directory, will be transferred to the clients!
 
-    --working-directory path\to\working-dir
+``  --working-directory path\to\working-dir``
 
 Examples:
 
-    --bind 192.168.0.10 --working-directory C:\MyProject
-    --bind 192.168.0.10:34556 --working-directory C:\MyProject
+``  --bind 192.168.0.10 --working-directory C:\MyProject``
+``  --bind 192.168.0.10:34556 --working-directory C:\MyProject``
 
 You can verify the command has taken effect when you see the blue boygrouping icon in the top right corner of vvvv's window:
 
@@ -44,18 +46,18 @@ The number in the icon shows how many clients there are currently connected. If 
 
 On the render PCs, start vvvv with the "server" argument to specify which server to connect to. If no port is given, it defaults to 5000:
 
-    --server IP:Port
+``  --server IP:Port``
 
 The "working-directory" argument is also required. The specified directory is the one that vvvv resolves relative paths to. 
 
-    --working-directory path\to\working-dir
+``  --working-directory path\to\working-dir``
 
 Any assets referenced in a patch need to be available in that path! For mirroring assets, [see below](#mirroring-assets).
 
 Examples:
 
-    --server 192.168.0.11
-    --server 192.168.0.11:34556
+``  --server 192.168.0.11``
+``  --server 192.168.0.11:34556``
 
 >NOTE
 >- The working directory does not have to be the same on Server and Clients!
@@ -102,6 +104,10 @@ In case you want to apply such local change you made on a single client back to 
 - On the client save the document
 
 This transfers the clients' local changes back to the server which subsequently distributes it to all other clients.
+
+### Licensing
+
+Every client PC dancing along in a vvvv boygroup needs a device license, in addition to the developers licenses. You may still eventually turn to running your app as an [export](exporting.md) but at any period of time the boygrouping feature is in use, it needs to be covered by a device license per client PC. Note that for your financial convenience we offer [monthly](https://store.vvvv.org/products/vvvv-gamma-device-license-monthly) or [annual](https://store.vvvv.org/products/vvvv-gamma-device-license-annual) device licenses.
 
 ## Related topics
 
