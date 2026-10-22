@@ -33,7 +33,7 @@ The "working-directory" argument is needed so that vvvv knows which .vl document
 
 Examples:
 
-``  --bind 192.168.0.10 --working-directory C:\MyProject``
+``  --bind 192.168.0.10 --working-directory C:\MyProject``  
 ``  --bind 192.168.0.10:34556 --working-directory C:\MyProject``
 
 You can verify the command has taken effect when you see the blue boygrouping icon in the top right corner of vvvv's window:
@@ -56,7 +56,7 @@ Any assets referenced in a patch need to be available in that path! For mirrorin
 
 Examples:
 
-``  --server 192.168.0.11``
+``  --server 192.168.0.11``  
 ``  --server 192.168.0.11:34556``
 
 >NOTE
