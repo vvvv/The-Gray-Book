@@ -2,13 +2,11 @@
 
 If you're missing support for a specific device or library, it can most certainly be added on demand. 
 
-> NOTE  
-> We do offer priority support.  
-> Please **[get in touch](mailto:devvvvs@vvvv.org)** and we'll find a solution.
+## Get in touch
+We do offer priority support!  
+Please **[get in touch](mailto:devvvvs@vvvv.org)** and we'll find a solution.
 
-Also: vvvv's libraries are all [open-source](https://github.com/vvvv) and for programmers it is trivial to [extend](../extending/overview.md) them with custom sets of nodes. 
-
-Here some things you might be looking for:
+## Things you might be looking for
 
 - Support for specific protocols
 - Support for specific capture cards
@@ -42,4 +40,5 @@ Here some things you might be looking for:
   - [Pixera](https://pixera.one/en/)
   - [MadMapper](https://madmapper.com/)
  
-So if you're interested in any of the above, please [get in touch](mailto:devvvvs@vvvv.org).
+So if you're interested in any of the above, please [get in touch](mailto:devvvvs@vvvv.org).  
+Also: vvvv's libraries are all [open-source](https://github.com/vvvv) and for programmers it is trivial to [extend](../extending/overview.md) them with custom sets of nodes. 
