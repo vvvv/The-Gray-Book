@@ -132,11 +132,9 @@ Now your imagination is needed...
 When you design your region you might focus on BCPs with a certain data type. Note however: the user might still want some standard behavior for when the data type is different. Consider to implement a fallback mechanism for such a BCP that just channels the untouched data from the outside to inside or the other way around, very much like seen in the `Do [Control]` region.
 
 #### Current Limitiations
-Note that there are still some constraints for your ideas :(
-* It's not possible to define multiple control point kinds (like `Accumulator` and `Splicer`)
+Note that there are still some constraints for your ideas:
+* It's not possible to define multiple control point kinds at the same time (like `Accumulator` + `Splicer`)
 * Pins inside the region patch are not supported. So you currently always need to use BCPs. A workaround for this limitation is to check for a BCP with a certain name or type and treat this differently. 
-
-Please let us know of your needs: https://github.com/vvvv/VL-Language/issues/51
 
 ## `IRegion` API based
 With the release of VL 7.0 we introduced a more generalized region API `IRegion<TInlay>` which no longer suffers from the limitations of `ICustomRegion`.
