@@ -7,10 +7,6 @@ _disableBreadcrumb: true
 If you're new to vvvv, please start reading in the [Getting Started](reference/getting-started/overview.md) section.
 
 ## Courses
-### Beginners
-- From November 16th: [Part I: Playful Patching in vvvv gamma](https://thenodeinstitute.org/courses/vvvv-beginner-class-part1-winter-2026?utm_source=vvvv&utm_medium=blog) - 8 sessions 
-- From February 1st: [Part II: Foundations of VL Development ](https://thenodeinstitute.org/courses/vvvv-beginner-class-part2-winter-2026?utm_source=vvvv&utm_medium=blog) - 4 sessions
-
 ### Intermediate
 - 10 + 17 Nov 2026: [Applied 2D & 3D Math for Creative Coders](https://thenodeinstitute.org/courses/applied-2d-3d-math-for-creative-coders/?v=5f02f0889301) 
 - 24 Nov 2026: [Driving Particle Systems from Geospatial Data](https://thenodeinstitute.org/courses/driving-particle-systems-from-geospatial-data-in-vvvv/?v=5f02f0889301)
