@@ -4,6 +4,7 @@ Here is a list of best-practice articles on various topics:
 ## General
 * [Running vvvv on an Arm CPU](vvvv-on-arm.md)
 * [Running vvvv on a Mac](vvvv-on-mac.md)
+* [Portable vvvv](portable-vvvv.md)
 
 ## 3d Rendering
 * [Text Rendering](text-rendering.md)
