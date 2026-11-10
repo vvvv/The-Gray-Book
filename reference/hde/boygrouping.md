@@ -14,7 +14,7 @@ Primarily, boygrouping synchronizes your projects patches (ie. the source code),
 
 This also includes any [pack](https://vvvv.org/packs) referenced in patches. Assuming the clients have internet access just like the server, they will automatically download all packs as needed.
 
-In addition to source code changes, Pausing [F6], Stepping [F7], Stopping [F8], Starting [F5] or Restarting [F9] the app on the server will also execute those commands on the clients. 
+In addition to source code changes, Pausing [F6], Stepping [F7], Stopping [F8], Starting [F5] or Restarting [F9] the app on the server will also execute those commands on the clients. And when you close the server vvvv instance, also all connected client instances are closing.
 
 ## Usage
 In order to run a boygroup, you need to start vvvv with the following commandline arguments:
@@ -23,45 +23,58 @@ In order to run a boygroup, you need to start vvvv with the following commandlin
 
 The server is your main PC. Here you start vvvv with the "bind" argument to specify which IP to run the server on. If no port is given, it defaults to 5000:
 
-    --bind IP:Port 
+``  --bind IP:Port`` 
 
 The "working-directory" argument is needed so that vvvv knows which .vl documents to synchronize. Only .vl documents residing in the specified working-directory, will be transferred to the clients!
 
-    --working-directory path\to\working-dir
+``  --working-directory path\to\working-dir``
 
 Examples:
 
-    --bind 192.168.0.10 --working-directory C:\MyProject
-    --bind 192.168.0.10:34556 --working-directory C:\MyProject
+``  --bind 192.168.0.10 --working-directory C:\MyProject``  
+``  --bind 192.168.0.10:34556 --working-directory C:\MyProject``
+
+You can verify the command has taken effect when you see the blue boygrouping icon in the top right corner of vvvv's window:
+
+![](../../images/reference/hde/boygroupservericon.png)
+
+The number in the icon shows how many clients there are currently connected. If you see a red "0" it means that the binding address is not available. Hovering the icon shows additional details like a list of all connected clients IPs.
 
 ### Clients
 
 On the render PCs, start vvvv with the "server" argument to specify which server to connect to. If no port is given, it defaults to 5000:
 
-    --server IP:Port
+``  --server IP:Port``
 
 The "working-directory" argument is also required. The specified directory is the one that vvvv resolves relative paths to. 
 
-    --working-directory path\to\working-dir
+``  --working-directory path\to\working-dir``
 
 Any assets referenced in a patch need to be available in that path! For mirroring assets, [see below](#mirroring-assets).
 
 Examples:
 
-    --server 192.168.0.11
-    --server 192.168.0.11:34556
+``  --server 192.168.0.11``  
+``  --server 192.168.0.11:34556``
 
 >NOTE
 >- The working directory does not have to be the same on Server and Clients!
 >- The order in which you start server and clients, does not matter: The server is always listening for new connections and clients periodically try to connect to their specified server.
+
+You can verify the command has taken effect when you see the blue boygrouping icon in the top right corner of vvvv's window:
+
+![](../../images/reference/hde/boygroupclienticon.png)
+
+If you see a blue circle, the client is connected, if the circle is orange, the connection to the server failed. Hovering the icon shows additional details.
 
 ### Status nodes
 
 The `BoygroupServerStatus` node returns:
 - Is Server
 - Connected Clients: currently connected clients
-- All Clients: a history of connected clients
+- All Clients: a history of connected clients in the current session
 - Working Directory
+- Binding Address
 
 ![](../../images/reference/hde/boygroupserverstatus.png)
 
@@ -89,6 +102,10 @@ In case you want to apply such local change you made on a single client back to 
 - On the client save the document
 
 This transfers the clients' local changes back to the server which subsequently distributes it to all other clients.
+
+## Licensing
+
+Every client PC dancing along in a vvvv boygroup needs a device license, in addition to the developers licenses. You may still eventually turn to running your app as an [export](exporting.md) but at any period of time the boygrouping feature is in use, it needs to be covered by a device license per client PC. Note that for your financial convenience we offer [monthly](https://store.vvvv.org/products/vvvv-gamma-device-license-monthly) or [annual](https://store.vvvv.org/products/vvvv-gamma-device-license-annual) device licenses.
 
 ## Related topics
 

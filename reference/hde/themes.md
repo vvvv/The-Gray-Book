@@ -1,6 +1,6 @@
 # Themes
 
-The vvvv editor supports theming. You can quickly switch between a dark and light theme via the Hamburger menu in the top right corner:
+The vvvv editor supports theming. You can quickly switch between a dark and light theme via the ![](../../images/hde/settings-icon.png) menu (<span class="keyseq"><kbd>Ctrl</kbd><kbd>F1</kbd></span>) in the top right corner:
 
 ![](../../images/hde/themes.png)
 

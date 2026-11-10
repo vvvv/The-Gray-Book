@@ -1,5 +1,6 @@
 # Packman
 
+
 The package manager covers two aspects:
 - **Managing references** to packs, files (.vl, .dll, .csproj) and .NET Framework Assemblies
 - **Browsing** for VL and NuGet **Packs**, which are bundles of .vl and .dll files that you can install and reference with a single click, giving you access to all nodes the pack exposes.
@@ -22,6 +23,7 @@ Click the "Add..." button in the Files section to add a reference to either:
 For advanced use: Next to every entry, using the ... menu you can also set two flags per reference:
 - Forward: 
 - Allow access: 
+### .NET Framework Assemblies
 
 #### .NET Framework Assemblies
 If you need to reference an assembly of a .NET Framework, then always prefer that over referencing the same as a .NET NuGet reference.
@@ -46,7 +48,7 @@ For basic usage there is not much you need to know:
   
 If you now save your vl document and open it on another PC, vvvv will automatically download all referenced packs.
 
-Where does vvvv download packs to? The beauty: You don't have to care (somewhere in a system Nuget cache). 
+Where does vvvv download packs to? The beauty: You don't have to care (somewhere in a system NuGet cache). 
 
 That's mostly what you need to know for a start. 
 
@@ -156,7 +158,7 @@ Little caveat: If you've used favorites in the Helpbrowser before, those will no
 
 ## Support developers
 
-Also please pay extra attention to this special listing: 
+Please pay extra attention to this special listing: 
 
 ![](../../images/reference/hde/packman-support.png)
 
