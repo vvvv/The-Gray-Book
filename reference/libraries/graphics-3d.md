@@ -38,4 +38,4 @@ See the [3d Graphics Category](https://vvvv.org/packs/?c=3d%20Graphics) in the p
 ---
 
 For an alternative, very primitive wireframe 3d engine, see VL.Skia3d:
-NuGet: [VL.Skia3d](https://www.nuget.org/packages/VL.Skia3d)
+Pack: [VL.Skia3d](https://www.nuget.org/packages/VL.Skia3d)

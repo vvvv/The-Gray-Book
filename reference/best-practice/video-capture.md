@@ -4,7 +4,7 @@ For capturing video from webcams and capture cards, vvvv offers different soluti
 
 ## VL.Video
 
-This NuGet is shipping with vvvv. Referencing it, gives you the **VideoIn** node which supports all USB cameras that have a [UVC 1.1 driver](https://docs.microsoft.com/en-us/windows-hardware/drivers/stream/usb-video-class-driver-overview).
+Referencing this pack gives you the **VideoIn** node which supports all USB cameras that have a [UVC 1.1 driver](https://docs.microsoft.com/en-us/windows-hardware/drivers/stream/usb-video-class-driver-overview).
 
 ## VL.Devices.Decklink
 

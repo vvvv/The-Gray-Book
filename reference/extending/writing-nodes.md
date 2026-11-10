@@ -32,7 +32,7 @@ The first time a new .csproj file is created, you will see it is automatically r
 <center>A .csproj file referenced in a .vl document</center>
 
 > NOTE
-> Don't use referenced .csproj files when you're working on a library you're going to ship as a NuGet! It would force the whole package and all packages that depend on it editable, meaning you'd lose the benefit of a [read-only package](../language/compilation.md#read-only-packages). 
+> Don't use referenced .csproj files when you're working on a library you're going to ship as a Pack! It would force the whole package and all packages that depend on it editable, meaning you'd lose the benefit of a [read-only package](../language/compilation.md#read-only-packages). 
 
 ## Create the node
 Open the [NodeBrowser](../../hde/the_nodebrowser.md) and find the methods and classes of your c# file by their names.
@@ -370,7 +370,7 @@ Now in order to create a dynamic enum for VL we also need those two elements, th
 * The type needs to implement `IDynamicEnum`
 * The definition needs to implement `IDynamicEnumDefinition`
 
-both of which come with the VL.Core nuget.
+both of which come with the VL.Core NuGet.
 
 To make their use easier there are also baseclass implementations available:
 

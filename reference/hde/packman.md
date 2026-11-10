@@ -1,6 +1,37 @@
 # Packman
 
-Available for testing in **[vvvv gamma 8.0 preview builds](/download)**!
+The package manager covers two aspects:
+- **Managing references** to packs, files (.vl, .dll, .csproj) and .NET Framework Assemblies
+- **Browsing** for VL and NuGet **Packs**, which are bundles of .vl and .dll files that you can install and reference with a single click, giving you access to all nodes the pack exposes.
+
+## Managing References
+
+In this section you get an overview of all referenced packs, files and .NET Framework assemblies. 
+
+Click the "Browse" button in the Packs section to switch to the [package browser](#browsing-packs):
+
+![](../../images/hde/addpacks.png)
+
+Click the "Add..." button in the Files section to add a reference to either:
+- .vl documents
+- .csproj files
+- .dll files
+  
+![](../../images/hde/addfiles.png)
+
+For advanced use: Next to every entry, using the ... menu you can also set two flags per reference:
+- Forward: 
+- Allow access: 
+
+#### .NET Framework Assemblies
+If you need to reference an assembly of a .NET Framework, then always prefer that over referencing the same as a .NET NuGet reference.
+
+#### Node Factories
+If any of the pack or file references has a Node Factory, it will also show up in a "Node Factories" section. For every factory you can then choose:
+- Add/Remove: To see, or not see the nodes of the factory in this document
+- Forward: To see, or not see the nodes of the factory in a document referencing this document
+
+## Browsing packs
 
 ![](../../images/reference/hde/packman.png)
 
@@ -8,14 +39,14 @@ Available for testing in **[vvvv gamma 8.0 preview builds](/download)**!
 
 For basic usage there is not much you need to know:
 - Open Packman using Ctrl + F3
-- Choose the "Browse..." tab
+- Choose the "Browse Packs" tab
 - Find the pack you want to use
 - Click the blue "Add" button to download and reference it to your active document
 - Done
   
 If you now save your vl document and open it on another PC, vvvv will automatically download all referenced packs.
 
-Where does vvvv download packs to? The beauty: You don't have to care (somewhere in a system nuget cache). The \nugets folder you've had to manage in earlier vvvversions does not play any role in vvvv gamma > 8.x anymore. 
+Where does vvvv download packs to? The beauty: You don't have to care (somewhere in a system Nuget cache). 
 
 That's mostly what you need to know for a start. 
 
@@ -64,16 +95,10 @@ In order to reduce "Version mismatch" warnings with built-in packs and help mana
 
 Generally this option is the default for packs that have the "Built-In" tag, as for those, the decision regarding the exact version has already been made for you.
 
-The other situation where this is useful, is larger projects with multiple VL documents that reference the same pack. In such scenarios this feature is half of what will allow you to centrally manage the version of packs for multiple documents. The other half of the feature is still work in progress, see "What's missing" below.
-
 ## Custom NuGet sources
 [nuget.org](https://nuget.org) is only the default source for NuGets. For in-house development you may want to have your own NuGet feed that serves private packs in addition to the public ones. 
 
-There are 2 ways to specify custom NuGet sources:
-
-### Via nuget.config
-
-Use a [nuget.config](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file) file, placed next to your main .vl document. 
+This is possible using a [nuget.config](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file) file, placed next to your main .vl document. 
 
 When opening a .vl document, vvvv will look for a nuget.config file in the same folder or one of its ancestors. 
 
@@ -95,13 +120,6 @@ For example, to access a private feed hosted on github, a config like this is ca
 
 For alternatives to using "ClearTextPassword", see the [docs for packageSourceCredentials](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials)!
 
-### Via commandline argument
-Specify it as a commandline argument like this:
-
-  vvvv.exe --package-repositories http://mynugetsource.com
-  
-But beware, this only works for feeds that don't require credentials to access them!
-
 ## Vulnerable packs
 
 nuget.org (the default package repository vvvv gets packs from) maintains a list of packs with [known vulnerabilities](https://learn.microsoft.com/en-us/nuget/api/vulnerability-info) present in individual packs.
@@ -109,34 +127,6 @@ nuget.org (the default package repository vvvv gets packs from) maintains a list
 When installing a pack, vvvv checks against that list and informs you in case you've chosen a vulnerable version. Keep an eye on the [Log](https://thegraybook.vvvv.org/reference/hde/debugging-log.html) when adding a pack and look out for warnings like the following, to be aware of issues:
 
 ![](../../images/reference/hde/packman-vulnerables.png)
-
-## Quick VL pack reference
-
-The best thing about Packman is that in the end you will not even need it that much! If you already know the name of a VL pack you want to reference, you can now simply add it via the Nodebrowser. Check this: 
-
-<video width=100% controls autoplay>
-    <source src="../../images/reference/hde/packman-nfc.mp4" type="video/mp4">
-    Your browser does not support the video tag.  
-</video>
-
-Type the name of any pack in the nodebrowser, select it and you're done. Any VL pack found in Packman or in the [online packs browser](https://vvvv.org/packs/) can be added like this.
-
-Say what? What does this do exactly? Two things: 
-- Downloads the preferred version (see below) of the pack
-- References this version of the pack with your active VL document
-
-Want to remove the pack again? Same trick:
-
-<video width=100% controls autoplay>
-    <source src="../../images/reference/hde/packman-nfc2.mp4" type="video/mp4">
-    Your browser does not support the video tag.  
-</video>
-
-So when do you now still need Packman? 
-- To search for packs
-- To get more information about a VL pack
-- To adjust versions for referenced packs
-- To search for and reference .NET NuGets (ie. packs that are not specifically made for VL) 
 
 ## Preferred version of a pack
 
@@ -171,21 +161,3 @@ Also please pay extra attention to this special listing:
 ![](../../images/reference/hde/packman-support.png)
 
 Packs don't appear out of thin air. They are made and maintained by your fellow patchers. If a pack is useful to you, please support the creator! 
-
-## Install packs via Helpbrowser
-
-There is more. Remember how previously you'd have to find a pack, install it and only then get access to its help patches via the Helpbrowser?
-
-Now, when searching in the Helpbrowser, it also looks for packs that might fit you term and displays those in a separate section at the very bottom labeled "More Packs". If you find anything here, you can one-click download the pack and get instant access to its helps.
-
-![](../../images/reference/hde/packman-helpbrowser.png)
-
-Note the difference: if you download a pack here, it is simply available offline and you can browse its help patches. It is not yet referenced with any of your documents!
-
-Also you may wonder: The content of which packs does the Helpbrowser show at all and in what version? 
-
-Remember: In versions <= 7.x of vvvv gamma, the packs you'd see in the Helpbrowser would always be the most recent ones found in your nuget folder.
-
-Since that folder does not exist anymore, there are now different rules: 
-- If a specific version of a pack is loaded, the Helpbrowser shows the help content of that particular version
-- Otherwise, the Helpbrowser shows the content of the preferred version (see above) of the pack, but only if it is already available on your system (ie. you have had it referenced/downloaded before)

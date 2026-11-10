@@ -1,3 +1,9 @@
+> [!NOTE]
+> For latest docs regarding **vvvv gamma 8.0 and later**, see [Packman](packman.md).
+>
+> Information below applies to **vvvv gamma < 7.x only**!
+
+
 # Managing NuGets
 
 ![](../../images/libraries/vl-Dependencies-ManageNugets-Commandline.png)

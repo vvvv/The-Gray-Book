@@ -1,6 +1,6 @@
-# Creating a new Library/Package/Nuget
+# Creating a new Pack
 
-The most consistent way to contribute a set of nodes for vvvv is by creating a library and shipping it in form of a [NuGet Package](https://nuget.org).
+The most consistent way to contribute a set of nodes for vvvv is by creating a pack and shipping it in form of a [NuGet Package](https://nuget.org).
 
 ## Source and binary nugets
 NuGet packages are typically installed in binary form. vvvv adds the idea of "source nugets" in that it allows you to directly reference the sources of a package just as if it was already a binary nuget. For vvvv to recognize a directory as a source-nuget it has to be found in a directory specified as a [package-repository](contributing.md#source-package-repositories) and follow these conventions:
@@ -36,7 +36,7 @@ In order for nugets to work with vvvv you have to provide the following structur
 ```
 \* See [Architecture Specific Folders](https://learn.microsoft.com/en-us/nuget/create-packages/supporting-multiple-target-frameworks#architecture-specific-folders)
 
-## Creating and Publishing a NuGet
+## Creating and Publishing a Pack
 Once you're ready to create a NuGet .nupkg from your library, there are different options:
 
 * [Use a build-service like GitHub Actions](publishing.md)

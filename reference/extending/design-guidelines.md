@@ -231,8 +231,8 @@ This forward must not have a side-effect. This may not always be possible/make s
 ### Immutability
 Since in .NET it isn't possible (yet) to mark types as immutable you can do so when importing a type to VL.
 
-## Nugets
-Don't reference your own nuget in any .vl documents that contribute to a nuget other than: help patches
+## Packs
+Don't reference your own pack in any .vl documents that contribute to a pack other than: help patches
 
 ### Tests
 Still to be defined: in what form to provide tests (patches, code,..) that can be run automated

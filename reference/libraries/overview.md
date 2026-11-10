@@ -1,10 +1,10 @@
 # Libraries
 
-VL's functionality is structured into individual libraries, also known as NuGet packages or just "packs". Not all of them are shipping with vvvv, but they can easily be installed. Most of them are open-source and many of them are provided and maintained by your fellow vvvv users. For an overview of what's available, see: 
+VL's functionality is structured into individual libraries, also known as Packs. Not all of them are shipping with vvvv, but they can easily be installed. Most of them are open-source and many of them are provided and maintained by your fellow vvvv users. For an overview of what's available, see: 
 
-The online browser for VL NuGets: **http://vvvv.org/packs**
+The online browser for VL Packs: **http://vvvv.org/packs**
 
-To learn how to use NuGets in vvvv refer to the documentation on [Managing NuGets](../hde/managing-nugets.md) or watch the [HowTo Use NuGets](https://youtu.be/-U_kUQ3VDog) video.
+To learn how to use Packs in vvvv have a look at [Packman](../hde/packman.md).
 
 ## The VL.CoreLib
 

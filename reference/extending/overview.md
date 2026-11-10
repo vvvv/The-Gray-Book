@@ -17,7 +17,7 @@ vvvv makes it easy for you to extend it with your own nodes and libraries. Here 
 * [Aspects](aspects.md)
 * [Design Guidlines](design-guidelines.md)
 * [Providing Help](providing-help.md)
-* [Publishing a NuGet](publishing.md)
+* [Publishing a Pack](publishing.md)
 
 ## Extending the vvvv editor
 * [Creating Editor Extensions](editor-extensions.md)

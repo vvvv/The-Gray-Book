@@ -1,6 +1,6 @@
 # Boygrouping
 
-Debuted in 2001 with [vvvv beta](https://beta.vvvv.org/using-vvvv/boygrouping/),  Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC and have any number of PCs connected that render outputs of individual views [n'sync](https://en.wikipedia.org/wiki/NSYNC).
+Debuted in 2001 with [vvvv beta](https://beta.vvvv.org/using-vvvv/boygrouping/),  Boygrouping is vvvv's distributed rendering system. It allows to run a project from a single PC and have any number of PCs connected that render individual views of the same scene [n'sync](https://en.wikipedia.org/wiki/NSYNC).
 
 Like this, vvvv can drive projections or screens of any size with realtime or video content while the app is being live-edited.
 

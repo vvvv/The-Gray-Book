@@ -1,15 +1,8 @@
 # Editor Extensions
 
-Editor extensions allow you to extend the vvvv editor with your own tools. Examples of such extensions are:
+Editor extensions allow you to extend the vvvv editor with your own tools. They can be entirely patched in vvvv and assigned a shortcut so they can be called by the user at anytime. 
 
-- The Key & Mouse display (shipping with vvvv)
-- TUIO Simulator & Monitor (install via VL.TUIO.HDE nuget)
-- Spout Monitor (install via VL.SpoutMonitor.HDE nuget)
-- Desktop Pipette (install via VL.Pipette.HDE nuget)
-
-Extensions can be entirely patched in vvvv and assigned a shortcut so they can be called by the user at anytime. You can find all currently loaded extensions in the main menu under:
-
-`Quad > Extensions`
+See [Extensions](../hde/extensions.md) for how to find and install them.
 
 ## Creating an extension
 
@@ -17,7 +10,7 @@ Extensions are ordinary VL patches, with the one distinctive feature, that they 
 
 `VL.MyExtension.HDE.vl`
 
-Any such file that you have open in vvvv, is already running as an editor extension. You'll now most likely want to be able to invoke your extension by a shortcut or menu-entry. For this you'll have to register a command which you can do via the `Command` node that is available via referencing the `VL.HDE` nuget. 
+Any such file that you have open in vvvv, is already running as an editor extension. You'll now most likely want to be able to invoke your extension by a shortcut or menu-entry. For this you'll have to register a command which you can do via the `Command` node that is available via referencing the `VL.HDE` NuGet. 
 
 Or simply start from the template:
 
@@ -25,7 +18,7 @@ Or simply start from the template:
 
 From the main menu choose:
 
-`Quad > Extensions > New Extension...`
+`Quad > New > Extension...`
 
 and specify the destination and filename for your new extension .vl document in the file save dialog.
 
@@ -69,18 +62,18 @@ The vvvv API gives you access to hovered and selected nodes and allows you to re
 ## Settings
 For some extensions it will be interesting to have them configurable via the [Settings](../hde/settings.md). This is not yet possible though. 
 
-## Packaging extensions in a NuGet
-### Extension-only NuGet
-If you want to release a nuget that only contains an extension, its ID has to end in `.HDE`, e.g.:
+## Shipping an extension as a Pack
+### Extension-only Pack
+If you want to release a Pack that only contains an extension, its ID has to end in `.HDE`, e.g.:
 
 `VL.MyExtension.HDE`
 
-which in turn requires the .vl document inside that nuget to be following the same naming and be called:
+which in turn requires the .vl document inside that Pack to be following the same naming and be called:
 
 `VL.MyExtension.HDE.vl`
 
-### Extension as part of a NuGet
-Extensions can also be included with any NuGet that primarily offers other functionality. In such a case, the name of the extension document has to be identical to the package ID but with the `.HDE` suffix added. For example a NuGet named `VL.MyPackage` would contain at least these two documents:
+### Extension as part of a Pack
+Extensions can also be included with any Pack that primarily offers other functionality. In such a case, the name of the extension document has to be identical to the package ID but with the `.HDE` suffix added. For example a Pack named `VL.MyPackage` would contain at least these two documents:
 ```c#
 VL.MyPackage.vl // main doc
 VL.MyPackage.HDE.vl // extension doc

@@ -39,13 +39,13 @@ Choose where the exported program and files will be created.
 
 After a successful export, the output directory will contain a directory with the name of your application. Inside this directory you find the executable. To run the program on another PC you need to copy the whole content of this directory.
 
-### Commandline example:
+### Commandline example
     vvvvc.exe MyApp.vl --output-directory C:\temp
 
 ## Icon file
 Choose an .ico file to be associated with the generated executable.
 
-### Commandline example:
+### Commandline example
     vvvvc.exe MyApp.vl --app-icon C:\temp\my.ico
 
 ## Asset behavior
@@ -53,13 +53,13 @@ Choose how assets will be referenced in the exported application:
 * **Relative to document**: This option is most useful during development, to quickly test exports without having to worry about moving assets around. Assets will be referenced from where they are. 
 * **Relative to output**: Use this option for final exports: It requires you to manually place your assets relative to the generated executable as they were relative to your root document during development. Like this the whole output can then be moved around and deployed to other PCs.
 
-### Commandline example:
+### Commandline example
     vvvvc.exe MyApp.vl --asset-behavior  RelativeToDocument
   
 ## Output type
 Choose between a Windows (WinExe) or Console (Exe) application. 
 
-### Commandline example:
+### Commandline example
     vvvvc.exe MyApp.vl --output-type Exe
 
 A Console app will open a Windows Console and run the Update operation for only one frame, then immediately Dispose itself. Use a __KeepAppAlive__ node to prevent this default behavior.
@@ -67,14 +67,22 @@ A Console app will open a Windows Console and run the Update operation for only 
 ## Runtime identifier
 Choose the OS and architecture to build for. Currently supported options are: win-x64 | win-x86 | win-arm64 | osx-x64 | osx-arm64 | linux-x64 | linux-arm | linux-arm64
 
-### Commandline example:
+### Commandline example
     vvvvc.exe MyApp.vl --rid linux-arm64
+
+## .NET Runtime
+
+- **Self-contained**: Bundle the .NET Runtime with the app. Increases the output of the convenience of not having to install the correct .NET Runtime on target PCs.  
+- **Satori GC**: Use the experimental [Satori](https://github.com/dotnet/runtime/discussions/115627#discussioncomment-13162705) Garbage Collector. Requires the Self-contained option to be selected. What this checkbox essentially does, is adding a reference to the [PublishWithSatoriGC](https://www.nuget.org/packages/PublishWithSatoriGC/) NuGet to your project. So if you want to use Satori when exporting using vvvvc, make sure you have this NuGet is referenced.
+
+### Commandline examples
+    vvvvc.exe MyApp.vl --self-contained false //to opt out of the default
 
 ## Error handling
 ### Ignore Compilation Errors
 There are cases where you are aware of errors in your patch that you simply want to ignore for the time being and still be able to export. 
 
-#### Commandline example:
+#### Commandline example
     vvvvc.exe MyApp.vl --ignore-errors true
 
 ### Ignore Unhandled Exceptions
@@ -85,7 +93,7 @@ By default unhandled runtime exceptions result in a popup and the application is
 ### Clean Output
 If active, removes artefacts of previous exports (ie. deletes the \src folder) before exporting. This will cause exports to take longer but also makes sure previous artefacts don't interfere with the new export.
 
-### Commandline example:
+### Commandline example
     vvvvc.exe MyApp.vl --clean false
 
 ## Export
@@ -97,15 +105,17 @@ If active, removes artefacts of previous exports (ie. deletes the \src folder) b
 Next to the application directory you'll also find a `\src` directory. This is an artefact that vvvv creates during export and can be safely deleted.
 
 > [!NOTE]
-> .NET developers may find this interesting though, as it contains a completely valid c# solution of the exported project that can be opened, viewed and modified with Visual Studio.
+> .NET developers may find this interesting though, as it contains a completely valid C# solution of the exported project that can be opened, viewed and modified with Visual Studio.
 
 ## Dependencies
-By default, apps exported with vvvv require the target system to have a .NET runtime installed in the following versions:
+By default (since vvvv 8.0), apps are exported with the "Self-contained" option, meaning they contain the required .NET Runtime.
+
+If you choose to export without the "Self-contained" option, in order to run an app on any PC it, the following .NET Runtime version is required to be installed:
 - vvvv 8.x: [.NET10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 - vvvv 6.x and 7.x: [.NET8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - vvvv 5.x: [.NET6 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-In addition: Apps referencing VL.Stride and using the FileTexture or FileModel nodes, also require the following:
+Independent of the "Self-contained option" the following applies in addition: Apps referencing VL.Stride and using the FileTexture or FileModel nodes, also require the following:
 - Microsoft Visual C++ Redistributables: [64bit](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 - vvvv 8.x: [.NET10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 - vvvv 6.x and 7.x: [.NET8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)

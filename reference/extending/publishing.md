@@ -1,4 +1,4 @@
-# Publishing a NuGet
+# Publishing a Pack
 
 The following guide covers the necessary steps to setup a workflow on your Github repository that will publish your plugin to nuget.org or any feed you like using the [PublishVLNuget](https://github.com/vvvv/PublishVLNuget) Github Action.
 
@@ -31,7 +31,7 @@ An action takes input parameters, listed as key-value pairs. In a workflow scrip
 
 ```
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.43
+    uses: vvvv/PublishVLNuget@1.0.47
     with:
     csproj: src\VL.MyLib.csproj
     nuspec: deployment\VL.MyLib.nuspec
@@ -87,7 +87,7 @@ Please note that you have to set the `icon-dst` input parameter to an already ex
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.43
+    uses: vvvv/PublishVLNuget@1.0.47
     with:
     (...)
     icon-src: https://wwww.url.to/nugeticon.png
@@ -101,7 +101,7 @@ In your action, set the icon destination to the root of the repo :
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.43
+    uses: vvvv/PublishVLNuget@1.0.47
     with:
     (...)
     icon-src: https://wwww.url.to/nugeticon.png
@@ -136,7 +136,7 @@ For instance, your worflow file would look like this:
 ```
 (...)
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.28
+    uses: vvvv/PublishVLNuget@1.0.47
     with:
     csproj: src\Whatever\Whatever.csproj
     icon-src: https://wwww.url.to/nugeticon.png
@@ -210,10 +210,10 @@ jobs:
       uses: actions/checkout@master
     
     - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v2
+      uses: microsoft/setup-msbuild@v3
 
     - name: Setup Nuget.exe
-      uses: nuget/setup-nuget@v2.0.0
+      uses: nuget/setup-nuget@v4.0
 ```
 
 The `on` section describes under which condition the workflow is triggered. Here, we specify that when there's a new commit on `main` *except* if it's on `README.md`, we trigger the workflow.
@@ -229,7 +229,7 @@ Now that everything is setup, we can add our action and fill its parameters acco
 
 ```
 - name: Publish VL Nuget
-    uses: vvvv/PublishVLNuget@1.0.43
+    uses: vvvv/PublishVLNuget@1.0.47
     with:
     csproj: src\VL.MyLib.csproj
     nuspec: deployment\VL.MyLib.nuspec
@@ -253,4 +253,4 @@ Head over to the _Action_ section of your repo to monitor your worflow run in re
 ### Categorize the pack
 In order for your public pack on nuget.org to show up in the [package browser](http://vvvv.org/packs) make sure:
 - Your pack has a tag "VL"
-- You add your pack to the [list of curated libraries](https://github.com/vvvv/PublicContent/blob/master/Libraries.xml), which defines the categories used in the browser. Note: A NuGet can appear in multiple categories!
+- You add your pack to the [list of curated libraries](https://github.com/vvvv/PublicContent/blob/master/Libraries.xml), which defines the categories used in the browser. Note: A Pack can appear in multiple categories!

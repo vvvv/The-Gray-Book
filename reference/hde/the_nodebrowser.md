@@ -4,7 +4,7 @@ When opening the NodeBrowser via a left double-click anywhere on a patch what yo
 
 * Language primitives (Node, Input, IOBox,...)
 * A list of top-level node categories (2D, 3D, Animation,...)
-* A list of available nugets (VL)
+* A list of available Packs
 
 <img src="../../images/hde/vl-Nodebrowser-Nodebrowser.png" height="460">
 
@@ -26,7 +26,7 @@ The circles on the left side are filters that let you quickly include or exclude
 
 The bottom two circles are two more filters:
 - Include internal nodes (those that are only visible inside this document)
-- Include external nodes (from referenced .dlls and NuGets)
+- Include external nodes (from referenced Packs and .dlls)
 
 ![](../../images/hde/vl-Nodebrowser-Filter2.png)
 
@@ -44,7 +44,7 @@ In both cases it helps to be familiar with the icons:
 
 <img src="../../images/hde/vl-Nodebrowser-Icon-Category.png" height="20"> Category
 
-<img src="../../images/hde/vl-Nodebrowser-Icon-Nuget.png" height="20"> NuGet Package
+<img src="../../images/hde/vl-Nodebrowser-Icon-Nuget.png" height="20"> Pack
 
 Nodes:
 
@@ -96,12 +96,15 @@ The language primitives are written in _italic_:
 
 Many of the primitives can be given a name directly after choosing to create them via the NodeBrowser. For Pins and Pads it also works the other way round: type a name into the NodeBrowser and then click Pin/Pad to create the respective element with already the desired name set.
 
-## Available Nugets
-Nugets that are available for VL but not referenced by the active document show up in the NodeBrowser from where you can quickly reference them via a single click. After the nuget is referenced all its nodes show up in the NodeBrowser.
+## Referencing Packs
+
+As an alternative to using [Packman](packman.md) you can simply add a reference to a pack via the Nodebrowser. 
 
 <img src="../../images/hde/vl-Nodebrowser-Nugets.png" height="460">
 
-If you want to get rid of a nuget again you have to uncheck it in the documents list of dependencies.
+Type the name of any pack, select it and you're done. When a pack is referenced all its nodes show up in the NodeBrowser. 
+
+If you want to get rid of a pack again simply click the little "X" next to its entry in the NodeBrowser.#
 
 ## Nodes that only differ by Signature
 We typically distinguish nodes by Name, Version or Category.
